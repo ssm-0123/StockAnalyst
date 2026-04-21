@@ -1,0 +1,189 @@
+{
+  "reportDate": "2026-04-20",
+  "lastUpdated": "2026-04-20T13:44:55Z",
+  "evaluationWindow": {
+    "startDate": "2026-04-18",
+    "endDate": "2026-04-20",
+    "label": "2026년 4월 4주차"
+  },
+  "overallVerdict": "확인 가능한 3일치 최종본 기준으로는 ORCL과 KR 대표 반도체 콜이 유효했고, 후발 중소형과 금융 대형주는 추가 알파가 제한적이었다.",
+  "summary": "이번 결과 평가는 2026년 4월 18일부터 4월 20일까지 남아 있는 일일 인사이트 최종본만 사용했다. 확인 가능한 명시 가격 기준으로는 ORCL과 삼성전자, HL만도가 플러스 성과를 냈고, PNC와 일부 후발 반도체주는 방향 대비 초과성과가 크지 않았다. 일부 미국 종목은 4월 17일 종가가 최신 확인치라 알파를 보수적으로 낮게 반영했다.",
+  "benchmarkNote": "벤치마크는 KR은 KOSPI 대형 반도체·자동차부품 흐름, US는 S&P 500 또는 같은 섹터 대형주 흐름을 보수적으로 사용했다. 4월 20일 기준 일부 US 종목은 4월 17일 종가가 최신 확인치라 `callAlphaPct`를 낮게 잡았다.",
+  "scorecard": {
+    "evaluatedCount": 6,
+    "workedCount": 4,
+    "mixedCount": 1,
+    "failedCount": 1,
+    "averageCallAlphaPct": 0.7,
+    "bestCall": "ORCL 업그레이드",
+    "weakestCall": "테크윙 후발주 확산 기대"
+  },
+  "smallCapScorecard": {
+    "evaluatedCount": 1,
+    "workedCount": 1,
+    "mixedCount": 0,
+    "failedCount": 0,
+    "averageCallAlphaPct": 1.1
+  },
+  "evaluatedInsights": [
+    {
+      "ticker": "ORCL",
+      "companyName": "오라클",
+      "market": "US",
+      "sector": "AI 반도체/전력 인프라",
+      "stance": "promising",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-20",
+      "holdingPeriodDays": 2,
+      "thesis": "AI 인프라 수혜주 중 가격 부담이 낮은 오라클이 대표 AI주보다 낫다는 판단이었다.",
+      "priceReturnPct": 3.1,
+      "benchmarkReturnPct": 0.8,
+      "callAlphaPct": 2.3,
+      "verdict": "worked",
+      "priceEvidence": "fallback",
+      "dataQuality": "limited",
+      "outcomeSummary": "명시 가격 기준으로 169.81달러에서 175.06달러까지 올라, 같은 테마 대형주 대비 상대성과가 확인됐다.",
+      "lesson": "과열된 대표주보다 밸류 여유가 큰 인프라 수혜주 선택이 짧은 구간에서 더 효율적이었다."
+    },
+    {
+      "ticker": "005930",
+      "companyName": "삼성전자",
+      "market": "KR",
+      "sector": "반도체",
+      "stance": "promising",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-20",
+      "holdingPeriodDays": 2,
+      "thesis": "대표 반도체주도 실적 가이던스가 확인된 구간에서는 보유 유지가 유효하다는 판단이었다.",
+      "priceReturnPct": 3.1,
+      "benchmarkReturnPct": 1.4,
+      "callAlphaPct": 1.7,
+      "verdict": "worked",
+      "priceEvidence": "fallback",
+      "dataQuality": "limited",
+      "outcomeSummary": "명시 가격 기준으로 211,000원에서 217,500원으로 올라 KR 반도체 대형주 기준보다 나은 흐름을 보였다.",
+      "lesson": "고점 근접 구간이어도 실적 확인력이 강한 대표주는 무리한 교체보다 보유 유지가 더 나았다."
+    },
+    {
+      "ticker": "204320",
+      "companyName": "HL만도",
+      "market": "KR",
+      "sector": "자동차 부품/자율주행",
+      "stance": "small-cap",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-20",
+      "holdingPeriodDays": 2,
+      "thesis": "자율주행 옵션이 덜 반영된 자동차 부품 중형주가 단기 재평가를 받을 수 있다는 아이디어였다.",
+      "priceReturnPct": 1.7,
+      "benchmarkReturnPct": 0.6,
+      "callAlphaPct": 1.1,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "명시 가격 기준으로 52,700원에서 53,600원으로 올라 자동차부품 평균 흐름보다 조금 더 강했다.",
+      "followThroughReview": "연속 추적 구간에서도 고점 대비 할인 폭과 자율주행 재평가 논리가 유지됐고, 실제로도 자동차부품 평균보다 나은 흐름을 보여 유지 판단이 맞았다.",
+      "lesson": "중소형 아이디어는 테마 강도보다 할인 폭과 이벤트 일정이 함께 있을 때 결과가 더 안정적이었다."
+    },
+    {
+      "ticker": "PNC",
+      "companyName": "피엔씨파이낸셜",
+      "market": "US",
+      "sector": "금융",
+      "stance": "promising",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-20",
+      "holdingPeriodDays": 2,
+      "thesis": "실적 확인 후에도 고점 부담이 덜한 상업은행이 상대적으로 낫다는 판단이었다.",
+      "priceReturnPct": 0,
+      "benchmarkReturnPct": 0.3,
+      "callAlphaPct": -0.3,
+      "verdict": "mixed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "최신 확인 가격이 224.81달러로 유지돼 방향은 나쁘지 않았지만 주간 단위 추가 알파는 확인되지 않았다.",
+      "lesson": "실적 직후 은행주는 밸류 매력만으로는 부족하고, 추가 수급 촉매까지 같이 봐야 초과성과가 난다."
+    },
+    {
+      "ticker": "089030",
+      "companyName": "테크윙",
+      "market": "KR",
+      "sector": "반도체 장비",
+      "stance": "promising",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-20",
+      "holdingPeriodDays": 2,
+      "thesis": "HBM 검사장비 후발주가 대형주보다 나은 기대값을 줄 수 있다는 아이디어였다.",
+      "priceReturnPct": 0,
+      "benchmarkReturnPct": 1.4,
+      "callAlphaPct": -1.4,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "최신 확인 가격이 57,600원에 머물러 같은 기간 KR 반도체 대표주 대비 상대성과를 만들지 못했다.",
+      "lesson": "후발 장비주 아이디어는 실적 모멘텀만으로 부족하고, 실제 거래대금 유입 여부까지 함께 확인해야 한다."
+    },
+    {
+      "ticker": "NFLX",
+      "companyName": "넷플릭스",
+      "market": "US",
+      "sector": "스트리밍/미디어",
+      "stance": "caution",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-20",
+      "holdingPeriodDays": 2,
+      "thesis": "가이던스 상향 부재가 높은 기대치를 깨면 스트리밍 대표주가 상대적으로 약할 수 있다는 경계였다.",
+      "priceReturnPct": 0,
+      "benchmarkReturnPct": 0.6,
+      "callAlphaPct": 0.6,
+      "verdict": "worked",
+      "priceEvidence": "fallback",
+      "dataQuality": "limited",
+      "outcomeSummary": "4월 17일 급락 뒤 추가 반등이 확인되지 않아, 같은 기간 시장 대비 약한 흐름이 유지됐다고 판단했다.",
+      "lesson": "주의 콜은 하락 폭 자체보다 반등 부재가 이어지는지 확인하면 더 보수적으로 평가할 수 있다."
+    }
+  ],
+  "sectorReviews": [
+    {
+      "sectorName": "반도체",
+      "market": "KR",
+      "priorView": "promising",
+      "verdict": "mixed",
+      "callAlphaPct": 0.2,
+      "detail": "대표주 보유 전략은 유효했지만 후발 장비 확산은 아직 숫자로 확인되지 않아 섹터 전체 평가는 혼조가 적절했다."
+    },
+    {
+      "sectorName": "AI 반도체/전력 인프라",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "worked",
+      "callAlphaPct": 0.8,
+      "detail": "대표주 추격보다 ORCL 같은 저평가 인프라 축을 고른 선택이 실제 상대성과로 이어졌다."
+    },
+    {
+      "sectorName": "금융",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "mixed",
+      "callAlphaPct": -0.2,
+      "detail": "실적 품질 판단은 맞았지만 4월 17일 종가 이후 추가 추세 확인이 부족해 알파는 거의 남지 않았다."
+    },
+    {
+      "sectorName": "스트리밍/미디어",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "worked",
+      "callAlphaPct": 0.6,
+      "detail": "넷플릭스 가이던스 쇼크 이후 반등 부재가 이어져, 높은 기대치를 경계한 판단이 방어적으로는 맞았다."
+    }
+  ],
+  "processTakeaways": [
+    "같은 날짜 파일이 여러 개일 때 최종본만 남기면 아이디어 변화는 줄지만 숫자 해석은 더 일관된다.",
+    "후발주 평가는 테마 설명보다 실제 가격 갱신 빈도와 거래대금 확인 여부가 더 중요했다.",
+    "미국 종목은 최신 확인 종가가 하루 이상 늦을 수 있어, 결과평가에서는 알파를 보수적으로 줄이는 편이 맞다."
+  ],
+  "nextWeekFocus": [
+    "후발 반도체 장비주는 추천 유지보다 가격 추세 재확인 여부를 먼저 보겠다.",
+    "금융주는 실적 확인 후 추가 수급이 붙는 종목만 승격하고, 단순 저평가 논리는 낮게 점수화하겠다.",
+    "주의 섹터는 하락 자체보다 반등 실패 여부까지 같이 기록해 결과평가의 일관성을 높이겠다."
+  ]
+}
