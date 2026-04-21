@@ -1,2 +1,2 @@
-`/Users/ssm/Documents/Investment Analyst/RESULTS_AUTOMATION_PROMPT.txt` 파일을 읽고 그 지시를 그대로 수행하세요.  
-프롬프트 파일의 규칙을 우선 적용하고, 결과를 `/Users/ssm/Documents/Investment Analyst/public/data/results/latest.json`에 반영하세요.
+`/Users/ssm/Documents/Investment Analyst/github-pages-root/RESULTS_AUTOMATION_PROMPT.txt` 파일을 읽고 그 지시를 그대로 수행하세요.  
+프롬프트 파일의 규칙을 우선 적용하고, 결과를 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/latest.json`에 반영하세요.

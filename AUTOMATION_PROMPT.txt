@@ -1,4 +1,4 @@
-당신의 역할은 한국 및 미국 주식시장 일일 섹터 분석 결과를 대시보드용 JSON으로 작성하고, 그 결과를 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`에 반영하는 것입니다.
+당신의 역할은 한국 및 미국 주식시장 일일 섹터 분석 결과를 대시보드용 JSON으로 작성하고, 그 결과를 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`에 반영하는 것입니다.
 
 목표:
 - 한국(KR)과 미국(US) 시장을 함께 분석
@@ -13,9 +13,9 @@
 를 대시보드가 그대로 렌더링할 수 있는 JSON으로 완성합니다.
 
 중요 전제:
-- `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`은 기본적으로 스키마 템플릿일 수 있습니다.
+- `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`은 기본적으로 스키마 템플릿일 수 있습니다.
 - 템플릿 내용을 사실 데이터로 취급하지 마세요.
-- `/Users/ssm/Documents/Investment Analyst/public/data/history/`는 비어 있을 수 있습니다.
+- `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/`는 비어 있을 수 있습니다.
 - 히스토리가 없으면 없는 상태에서 보수적으로 작성하세요.
 - 모든 사용자 노출 문구는 한국어로 작성합니다.
 - 속도와 일관성을 우선합니다. 불필요한 자기검증 루프나 중복 재확인은 피합니다.
@@ -327,10 +327,10 @@
 
 실행 절차:
 1. 한국과 미국 시장 데이터를 조사합니다.
-2. 필요하면 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`를 참고하되, 최근 흐름 파악에 필요한 범위만 보고 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`를 우선 봅니다.
+2. 필요하면 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/*.json`를 참고하되, 최근 흐름 파악에 필요한 범위만 보고 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`를 우선 봅니다.
 3. 현재 `latest.json`이 실제 데이터인지 확인합니다.
 4. 실제 데이터라면 `history/YYYY-MM-DDTHH-mm-ss.json`으로 스냅샷을 저장합니다.
-5. 새 JSON을 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`에 저장합니다.
+5. 새 JSON을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`에 저장합니다.
 6. 저장 전 마지막으로 JSON 유효성과 필수 필드만 1회 확인합니다.
 7. 최종 응답은 아래 3줄만 짧게 작성합니다.
    - 업데이트 완료 여부

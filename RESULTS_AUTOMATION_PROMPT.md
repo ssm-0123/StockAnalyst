@@ -3,7 +3,7 @@
 아래 프롬프트를 그대로 자동화에 사용하세요.
 
 ```text
-당신의 역할은 최근 일일 투자 인사이트가 실제로 어떻게 작동했는지 사후 평가하고, 그 결과를 `/Users/ssm/Documents/Investment Analyst/public/data/results/latest.json`에 반영하는 것입니다.
+당신의 역할은 최근 일일 투자 인사이트가 실제로 어떻게 작동했는지 사후 평가하고, 그 결과를 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/latest.json`에 반영하는 것입니다.
 
 목표:
 - 대시보드 `/Results` 페이지가 그대로 렌더링할 수 있는 JSON 작성
@@ -13,13 +13,13 @@
 - 다음 주 반영 포인트 도출
 
 가장 먼저 할 일:
-- `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`과 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`의 실제 스키마를 먼저 확인합니다.
+- `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`과 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/*.json`의 실제 스키마를 먼저 확인합니다.
 - 이 데이터셋의 핵심 필드는 보통 `promisingSectors`, `cautionSectors`, `smallCapIdeas`, 각 섹터의 `stocks`입니다.
 - 존재하지 않는 `promising`, `caution`, `smallCap` 같은 가상 필드를 전제로 작업하지 않습니다.
 - 이 자동화는 로컬 파일만 사용합니다. 웹 검색이나 외부 시세 조회는 하지 않습니다.
 
 중요 전제:
-- 평가 대상 원본은 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`입니다.
+- 평가 대상 원본은 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/*.json`입니다.
 - 같은 날짜 파일이 여러 개 있으면 `lastUpdated`가 가장 늦은 1개만 그 날짜 대표본으로 봅니다.
 - 속도보다 정확성이 중요하지만, 불필요한 중복 검증은 하지 않습니다.
 - 모든 사용자 노출 문구는 한국어로 작성합니다.
@@ -33,8 +33,8 @@
 - 토요일 실행이라도 로컬 데이터가 금요일까지 모두 쌓여 있지 않으면, 억지로 직전 토요일~금요일을 채우지 말고 실제 존재하는 대표본 기간만 사용합니다.
 
 히스토리 저장 규칙:
-- 새 결과를 쓰기 전에 현재 `/Users/ssm/Documents/Investment Analyst/public/data/results/latest.json`이 실제 데이터인지 먼저 확인합니다.
-- 실제 데이터라면 `/Users/ssm/Documents/Investment Analyst/public/data/results/history/YYYY-MM-DDTHH-mm-ss.json` 형식으로 저장합니다.
+- 새 결과를 쓰기 전에 현재 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/latest.json`이 실제 데이터인지 먼저 확인합니다.
+- 실제 데이터라면 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/history/YYYY-MM-DDTHH-mm-ss.json` 형식으로 저장합니다.
 - 파일명 시간은 기존 results `latest.json`의 `lastUpdated` 값을 기준으로 사용합니다.
 - 같은 `lastUpdated` 파일이 이미 있으면 그때만 중복 저장하지 않습니다.
 - 그 다음 새 결과평가 JSON으로 `results/latest.json`을 덮어씁니다.
@@ -144,7 +144,7 @@
 }
 
 실행 절차:
-1. `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`과 `public/data/history/*.json`를 읽고 실제 스키마를 먼저 확인합니다.
+1. `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`과 `public/data/history/*.json`를 읽고 실제 스키마를 먼저 확인합니다.
 2. 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`만 남겨 날짜별 대표본을 만듭니다.
 3. 최신 대표본의 `date`를 기준으로 평가 기간을 계산하고, 데이터가 부족하면 실제 존재하는 기간만 사용합니다.
 4. 평가 기간 대표본에서 종목 후보와 섹터 후보를 고릅니다.
