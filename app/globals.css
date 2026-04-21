@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 160 84% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 22% 94%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 22% 94%;
+    --muted-foreground: 215 16% 42%;
+    --accent: 200 60% 94%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 160 84% 28%;
+    --positive: 160 84% 28%;
+    --caution: 2 74% 52%;
+    --neutral: 215 16% 42%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 28%),
+      radial-gradient(circle at top right, rgba(239, 68, 68, 0.08), transparent 22%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(248, 250, 252, 0.95));
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .dashboard-shell {
+    @apply mx-auto max-w-[1600px] px-4 pb-16 pt-8 sm:px-6 lg:px-8;
+  }
+
+  .section-heading {
+    @apply mb-4 flex items-end justify-between gap-4;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl;
+  }
+
+  .section-caption {
+    @apply text-sm text-muted-foreground;
+  }
+}
