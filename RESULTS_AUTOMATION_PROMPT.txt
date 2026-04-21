@@ -43,8 +43,10 @@
 
 가격/수익률 계산 규칙:
 - 외부 가격 데이터는 사용하지 않습니다.
-- 종목 가격은 로컬 JSON의 `rationale` 또는 `whyNow` 문장 안에 명시적으로 적힌 숫자만 사용합니다.
-- 같은 종목의 가격 문구가 여러 번 나오면 가장 이른 명시 가격을 진입 가격, 가장 늦은 명시 가격을 평가 가격으로 사용합니다.
+- 종목 가격은 로컬 JSON의 `priceSnapshot.currentPrice`를 최우선으로 사용합니다.
+- 같은 종목이 여러 날짜에 반복 등장하면 가장 이른 `priceSnapshot.currentPrice`를 진입 가격, 가장 늦은 `priceSnapshot.currentPrice`를 평가 가격으로 사용합니다.
+- `priceSnapshot.currentPrice`가 없을 때만 `rationale` 또는 `whyNow` 문장 안에 명시적으로 적힌 숫자를 보조 fallback으로 사용합니다.
+- 특히 `smallCapIdeas`는 `whyNow` 문장보다 `smallCapIdeas[].priceSnapshot.currentPrice`를 우선 신뢰합니다.
 - 명시 가격이 2개 이상 확보되지 않으면 해당 종목은 원칙적으로 `evaluatedInsights`에서 제외합니다.
 - 단, 최신 명시 가격이 1개뿐이지만 "추가 상승 부재", "급락 뒤 반등 부재"처럼 결과 방향을 로컬 텍스트로 보수적으로 판단할 수 있을 때만 예외적으로 포함할 수 있습니다.
 - 이 예외를 쓸 때는 `priceReturnPct`를 0.0에 가깝게 두고, `outcomeSummary`에서 왜 보수적으로 썼는지 설명합니다.

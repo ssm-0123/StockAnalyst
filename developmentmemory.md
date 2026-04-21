@@ -22,7 +22,7 @@
   - `RESULTS_AUTOMATION_PROMPT.txt`
   - `RESULTS_AUTOMATION_PROMPT.md`
   - `RESULTS_AUTOMATION_RUN_PROMPT.txt`
-- Home page link now points to lowercase `/results`
+- Home page link points to `/Results`
 
 ## History And Trend Rules
 - Same calendar day can have multiple analysis runs
@@ -37,6 +37,7 @@
 - `SmallCapIdea` now also supports:
   - `quoteSymbol?: string`
   - `priceSnapshot?: StockPriceSnapshot`
+  - `followThroughNote?: string`
 - `StockPriceSnapshot` includes:
   - `currentPrice`
   - `currency`
@@ -53,16 +54,22 @@
   - analysis-time snapshot from saved `priceSnapshot`
   - optional live quote fetched from `/api/quotes`
 - `components/small-cap-panel.tsx` now also shows an analysis-time price snapshot block for `smallCapIdeas`
+- small-cap cards now also show:
+  - recent tracking badges such as consecutive tracked days and 7-day appearances
+  - `followThroughNote` explaining why a name is still worth watching after multiple up days / multiple days of tracking
 - Product decision: analysis snapshot is canonical/default, live API quote is supplementary only
 - This avoids mixing recommendation logic with a later market price
 
 ## Quote API Design
-- `app/api/quotes/route.ts` uses Yahoo-based fallback chain
-- Current intended order:
-  - Yahoo page parse first
+- Main app runtime is split by market
+- KR quotes:
+  - use Naver Finance domestic stock page display data
+  - rationale: Naver is more practical than Yahoo for Korean small/mid caps and reflects KRX-based domestic pricing
+- US quotes:
+  - use Yahoo page parse first
   - fallback to Yahoo `v7/finance/quote`
   - fallback to Yahoo `v8/chart`
-- Reason: some endpoints returned bad values for Korean stocks
+- `github-pages-root` itself is a static deployment target, so live quote fetching may remain disabled there even when the main app supports it
 - Added sanity filters to reject obvious bad data:
   - reject `previousCloseChangePct` when absolute value is greater than 50
   - reject prices obviously inconsistent with 52-week range
@@ -79,16 +86,25 @@
   - check current price, previous-day change, 52-week high, and 52-week low first
   - store them in `priceSnapshot`
   - then write the recommendation / thesis
-- Preferred price source was standardized to Yahoo Finance quote/detail pages
+- Preferred price source is now market-specific:
+  - KR: Naver Finance domestic stock pages
+  - US: Yahoo Finance quote/detail pages
 - Latest rule:
-  - `smallCapIdeas` should usually include 4-6 names when enough valid candidates exist, with 6 as the practical upper bound
-  - all `priceSnapshot` values must come from the latest available Yahoo Finance page data
-  - if a price field cannot be verified on Yahoo Finance, leave it blank rather than guessing or backfilling from another stale source
+  - `smallCapIdeas` should target at least 3 names and usually land in the 4-6 range, with 6 as the practical upper bound
+  - all `priceSnapshot` values must come from the latest available market-specific source page data
+  - `priceDate` must reflect the actual source quote date
+  - if the latest source price is older than 5 calendar days versus the analysis date, treat it as stale and do not use the number in price-based reasoning
+  - if a price field cannot be verified on the chosen source, leave it blank rather than guessing or backfilling from another stale source
+  - small-cap ideas should not churn daily without a clear reason; if the thesis still holds, keep them in the next run so price snapshots accumulate across days
+  - each `smallCapIdeas` item should include a `followThroughNote` that explains why the idea can still work after recent gains or repeated daily tracking
 - If price cannot be found, leave reason in `sourceNote`
 
 ## Prompting Rules For Weekly Results Automation
 - Saturday automation should use `RESULTS_AUTOMATION_RUN_PROMPT.txt`
 - That file tells the automation to read `RESULTS_AUTOMATION_PROMPT.txt` and update `public/data/results/latest.json`
+- Weekly results should use `priceSnapshot.currentPrice` as the primary source for entry/evaluation prices
+- Text in `whyNow` or `rationale` is only a fallback when snapshot data is missing
+- This is especially important for `smallCapIdeas`, where tracking quality depends on repeated daily snapshots
 
 ## Earlier Stability Fixes
 - Duplicate React key warnings were fixed by replacing fragile keys with safer composite keys in list-rendering components
@@ -115,7 +131,7 @@
 - Use live quote only as a comparison aid
 - Keep history for multiple runs on the same day
 - Use the latest snapshot of each day for trend aggregation
-- Keep results evaluation as a separate weekly flow under `/results`
+- Keep results evaluation as a separate weekly flow under `/Results`
 
 ## Immediate Follow-Up
 - Restart dev server cleanly

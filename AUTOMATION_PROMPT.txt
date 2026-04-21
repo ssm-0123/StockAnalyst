@@ -67,32 +67,41 @@
 - `promisingSectors`는 정확히 3개
 - `cautionSectors`는 정확히 3개
 - 각 섹터의 `stocks`는 정확히 3개
-- `smallCapIdeas`는 가능하면 4~6개를 작성하고 최대 6개까지 허용합니다.
-- 적합한 후보가 부족하면 빈 배열 대신 보수적으로 1~3개만 작성합니다.
+- `smallCapIdeas`는 최소 3개를 목표로 하고, 가능하면 4~6개를 작성하며 최대 6개까지 허용합니다.
+- 엄격한 필터를 적용해도 3개를 채우기 어려울 때만 예외적으로 1~2개만 작성합니다.
 - `confidenceScore`는 0~100 정수
 - `biggestChangeToday.label`은 짧게
 - `thesis`, `rationale`, `detail`, `note`는 짧고 구체적으로
 - 각 `stocks` 항목에는 반드시 `priceSnapshot`을 넣습니다.
 - 각 `smallCapIdeas` 항목에도 반드시 `priceSnapshot`을 넣습니다.
 - `priceSnapshot`에는 `priceDate`, `currentPrice`, `previousCloseChangePct`, `week52High`, `week52Low`, `currency`를 우선 채웁니다.
-- `priceSnapshot` 값은 반드시 Yahoo Finance 종목 상세 페이지에서 확인 가능한 가장 최신 가격 정보를 기준으로 채웁니다.
-- 가격 판단과 `priceSnapshot`은 반드시 Yahoo Finance 종목 상세 페이지 기준으로 맞춥니다.
-- 미국 종목은 `https://finance.yahoo.com/quote/{TICKER}/` 기준으로 확인합니다.
-- 한국 종목은 Yahoo Finance의 한국 심볼 체계(`005930.KS`, `035420.KS`, `068270.KQ` 등)를 사용해 같은 기준으로 확인합니다.
+- `priceSnapshot` 값은 시장별 기본 가격 소스에서 확인 가능한 가장 최신 가격 정보를 기준으로 채웁니다.
+- `priceDate`는 해당 가격 소스 페이지에 표시된 실제 기준일로 넣습니다.
+- 가격 판단과 `priceSnapshot`은 시장별 기본 가격 소스 기준으로 맞춥니다.
+- 미국 종목은 Yahoo Finance 종목 상세 페이지 `https://finance.yahoo.com/quote/{TICKER}/` 기준으로 확인합니다.
+- 한국 종목은 Naver Finance 국내 종목 페이지 `https://finance.naver.com/item/main.naver?code={6자리종목코드}` 기준으로 확인합니다.
+- 한국 종목 가격 설명은 Naver Finance가 표시하는 KRX 기준 국내 시세를 우선 사용합니다.
 - 화면의 기본 기준값은 `priceSnapshot`이며, 라이브 가격은 보조 비교용입니다.
 - 분석을 쓰기 전에 각 종목의 현재가, 전거래일 대비 등락률, 52주 최고가, 52주 최저가를 먼저 확인하고 그 값을 `priceSnapshot`에 저장한 뒤 추천 문구를 작성합니다.
-- Yahoo Finance에서 최신 가격 정보를 끝내 찾지 못한 항목은 추정해서 채우지 말고 해당 숫자 필드를 비웁니다.
+- `priceDate`가 분석 기준일보다 5일 이상 오래된 stale 데이터라면, 그 가격은 현재 판단 근거로 사용하지 않습니다.
+- stale 가격만 확인되는 경우 `currentPrice`, `previousCloseChangePct`, `week52High`, `week52Low`는 비우고, 가격 숫자를 근거로 한 문장도 쓰지 않습니다.
+- 시장별 기본 가격 소스에서 최신 가격 정보를 끝내 찾지 못한 항목은 추정해서 채우지 말고 해당 숫자 필드를 비웁니다.
 - 일부 항목만 찾았으면 찾은 값만 넣고, 못 찾은 값은 비운 뒤 `sourceNote`에 누락 이유를 짧게 남깁니다.
 - 중소형주는 시가총액, 거래대금, 커버리지 부족 여부를 감안해 대형주보다 보수적으로 선정합니다.
 - `smallCapIdeas`에는 이미 `promisingSectors`에 넣은 초대형 대표주보다 상대적으로 덜 알려진 종목을 우선 넣습니다.
 - `smallCapIdeas`도 일반 추천 종목과 동일하게 현재가, 전거래일 대비, 52주 최고/최저를 먼저 확인하고 그 값을 `priceSnapshot`에 저장한 뒤 `whyNow`, `valuationNote`, `liquidityNote`를 작성합니다.
+- 각 `smallCapIdeas` 항목에는 `followThroughNote`를 함께 넣습니다.
+- `followThroughNote`는 "며칠째 올랐거나 며칠째 추적 중이어도 왜 아직 보는지", "추가 상승 여지가 남았는지 아니면 추격 리스크가 더 큰지"를 분명하게 설명하는 한두 문장입니다.
+- 전일 `smallCapIdeas`에 있었고 핵심 논리가 아직 유효한 종목은 가급적 하루 만에 교체하지 말고, 다음 실행에서도 다시 포함해 가격 스냅샷이 이어지도록 합니다.
+- 전일 `smallCapIdeas` 종목을 제외할 때는 가격 부담, 실적/수급 변화, 논리 훼손 등 제외 이유가 분명할 때만 교체합니다.
 - `valuationNote`에는 밸류에이션 매력 또는 재평가 여지를 짧게 적습니다.
 - `liquidityNote`에는 거래대금, 변동성, 수급 취약성 등 실행 리스크를 적습니다.
 - 모호한 표현 대신 구체적 드라이버 사용
 - 확신이 낮으면 과장하지 말고 점수를 낮춤
 - `topOpportunity`, `topRisk`는 `"시장 | 섹터명"` 형식 사용
 - 추천은 상대 매력도뿐 아니라 "지금 진입해도 되는지"를 함께 반영합니다.
-- Yahoo Finance 페이지에 노출된 최신 가격을 1회 확인하는 것으로 충분하며, 오래된 값이나 다른 사이트 값으로 대체하지 않습니다.
+- 시장별 기본 가격 소스 페이지에 노출된 최신 가격을 1회 확인하는 것으로 충분하며, 오래된 값이나 다른 사이트 값으로 대체하지 않습니다.
+- 5일 이상 오래된 가격밖에 없다면 "최신값을 확보하지 못한 것"으로 간주하고, 오래된 숫자로 설명 문구를 정당화하지 않습니다.
 - 유망 종목이라도 아래 조건이면 신규 편입이나 상향보다 `hold`, 제외, 교체를 우선합니다.
   - 52주 최고가 대비 5% 이내
   - 최근 20거래일 상승률이 15% 이상
@@ -100,7 +109,7 @@
 - 과열된 종목을 유지해야 한다면 `change`는 가능하면 `hold`로 두고 `rationale`에 가격 부담이나 추격매수 리스크를 짧게 반영합니다.
 - 섹터는 유망하지만 대표주가 과열이면 덜 오른 후발주, 밸류체인 수혜주, 실적 확인 전 가격 부담이 낮은 종목으로 대체합니다.
 - `smallCapIdeas`는 특히 가격 규율을 엄격하게 적용해 최근 1개월 25% 이상 급등했거나 52주 신고가 근처에서 거래되는 종목은 원칙적으로 제외합니다.
-- 엄격한 필터를 적용한 결과 적합한 중소형주가 부족하면 `smallCapIdeas`는 1~3개만 작성해도 됩니다.
+- 엄격한 필터를 적용한 결과 적합한 중소형주가 부족하면 `smallCapIdeas`는 1~2개만 작성해도 됩니다.
 
 분석 기준:
 - 한국과 미국 시장을 함께 비교해서 상대 매력도 기준으로 순위를 매깁니다.
@@ -277,6 +286,7 @@
       "theme": "재평가 테마 한 줄",
       "thesis": "중소형주 투자 논리 한 줄",
       "whyNow": "지금 보는 이유 한 줄",
+      "followThroughNote": "며칠째 추적하거나 최근 반등이 이어져도 왜 아직 보는지 설명",
       "priceSnapshot": {
         "priceDate": "YYYY-MM-DD",
         "currentPrice": 0,

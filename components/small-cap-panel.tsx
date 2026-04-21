@@ -3,7 +3,7 @@ import { Gem, Sparkles, TriangleAlert } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getMarketBadgeVariant, getMarketLabel } from "@/lib/market";
-import { SmallCapIdea } from "@/lib/types";
+import { SmallCapIdea, SmallCapTrackingMeta } from "@/lib/types";
 
 function formatPrice(value?: number, market?: SmallCapIdea["market"], currency?: "KRW" | "USD") {
   if (typeof value !== "number") {
@@ -26,7 +26,13 @@ function formatPercent(value?: number) {
   return `${sign}${value.toFixed(2)}%`;
 }
 
-export function SmallCapPanel({ ideas }: { ideas?: SmallCapIdea[] }) {
+export function SmallCapPanel({
+  ideas,
+  tracking,
+}: {
+  ideas?: SmallCapIdea[];
+  tracking?: Map<string, SmallCapTrackingMeta>;
+}) {
   if (!ideas?.length) {
     return (
       <Card className="border-white/70 bg-white/90">
@@ -46,6 +52,7 @@ export function SmallCapPanel({ ideas }: { ideas?: SmallCapIdea[] }) {
     <div className="grid gap-4 xl:grid-cols-3">
       {ideas.map((idea, index) => {
         const snapshot = idea.priceSnapshot;
+        const trackingMeta = tracking?.get(idea.ticker);
         const hasSnapshot =
           snapshot?.currentPrice != null ||
           snapshot?.previousCloseChangePct != null ||
@@ -64,6 +71,12 @@ export function SmallCapPanel({ ideas }: { ideas?: SmallCapIdea[] }) {
                   <Badge variant="positive">#{idea.rank}</Badge>
                   <Badge variant={getMarketBadgeVariant(idea.market)}>{getMarketLabel(idea.market)}</Badge>
                   <Badge variant="neutral">{idea.sector}</Badge>
+                  {trackingMeta?.consecutiveDays && trackingMeta.consecutiveDays > 1 ? (
+                    <Badge variant="accent">연속 {trackingMeta.consecutiveDays}일 추적</Badge>
+                  ) : null}
+                  {trackingMeta?.appearances7d ? (
+                    <Badge variant="neutral">7일 중 {trackingMeta.appearances7d}회</Badge>
+                  ) : null}
                 </div>
                 <CardTitle className="text-xl text-slate-950">{idea.companyName}</CardTitle>
                 <p className="mt-1 text-sm font-semibold tracking-[0.18em] text-slate-500">{idea.ticker}</p>
@@ -84,6 +97,16 @@ export function SmallCapPanel({ ideas }: { ideas?: SmallCapIdea[] }) {
                 왜 지금 보나
               </div>
               <p className="text-sm leading-6 text-slate-700">{idea.whyNow}</p>
+            </div>
+            <div className="rounded-2xl border border-amber-100 bg-amber-50/70 p-4">
+              <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-amber-800">
+                <Gem className="size-4" />
+                아직 보는 이유
+              </div>
+              <p className="text-sm leading-6 text-slate-700">
+                {idea.followThroughNote ??
+                  "자동화가 다음 실행부터 이 종목을 계속 보는 이유와 추가 상승 여지를 이 영역에 함께 기록합니다."}
+              </p>
             </div>
             <div className="rounded-2xl border border-cyan-100 bg-cyan-50/60 p-4">
               <div className="mb-2 flex items-center justify-between gap-3">
