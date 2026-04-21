@@ -1,0 +1,467 @@
+{
+  "date": "2026-04-18",
+  "lastUpdated": "2026-04-18T14:40:40Z",
+  "marketTone": "2026년 4월 17일 유가 급락 이후 위험선호는 유지됐지만 미국 금융 일부와 AI 전력주는 이미 단기 급등해, 추격매수보다 덜 오른 후발주와 한국 반도체 장비주 중심 접근이 유리하다.",
+  "topOpportunity": "KR | 반도체",
+  "topRisk": "US | 에너지",
+  "newPicksToday": 2,
+  "newCautionsToday": 1,
+  "biggestChangeToday": {
+    "label": "추격매수 필터 적용",
+    "detail": "씨티·골드만·블룸에너지처럼 고점 근접 또는 급등한 종목을 제외하고 덜 오른 후발주만 남겼다."
+  },
+  "promisingSectors": [
+    {
+      "sectorName": "반도체",
+      "market": "KR",
+      "rank": 1,
+      "confidenceScore": 82,
+      "thesis": "업황은 강하지만 SK하이닉스처럼 이미 52주 고점을 넘긴 대표주는 추격보다 2선 장비·후공정으로 확산을 노리는 편이 낫다.",
+      "keyDrivers": [
+        "삼성전자가 1분기 매출 133조원, 영업이익 57.2조원 가이던스를 제시",
+        "3월 한국 ICT 수출이 112% 급증하고 반도체 수출이 151.4% 늘어 사상 최대를 견인",
+        "테크윙이 4월 15일 HBM 검사장비 수주 효과로 1분기 매출 524억원, 영업이익 97억원을 공개"
+      ],
+      "risks": [
+        "SK하이닉스처럼 이미 신고가를 돌파한 대표주 비중이 커 섹터 전체의 단기 과열 신호가 나타남",
+        "원화 약세와 전력비 변동이 밸류 부담을 키울 수 있음"
+      ],
+      "stocks": [
+        {
+          "ticker": "005930",
+          "companyName": "삼성전자",
+          "market": "KR",
+          "rationale": "2026년 4월 15일 종가 211,000원으로 52주 고점 223,000원 대비 약 5% 여유가 있어 대표주 중엔 그나마 가격 부담이 덜하다.",
+          "isNew": false,
+          "change": "hold"
+        },
+        {
+          "ticker": "042700",
+          "companyName": "한미반도체",
+          "market": "KR",
+          "rationale": "2026년 4월 15일 종가 295,000원으로 52주 고점 335,500원보다 낮고 하이브리드 본더 확장 기대를 반영할 여지가 남아 있다.",
+          "isNew": false,
+          "change": "hold"
+        },
+        {
+          "ticker": "089030",
+          "companyName": "테크윙",
+          "market": "KR",
+          "rationale": "2026년 4월 15일 종가 57,600원으로 52주 고점 74,000원 대비 여유가 있고 HBM 검사장비 수주와 1분기 실적 개선이 확인됐다.",
+          "isNew": true,
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "sectorName": "AI 반도체/전력 인프라",
+      "market": "US",
+      "rank": 2,
+      "confidenceScore": 78,
+      "thesis": "AI 투자 사이클은 여전히 강하지만 종목별 과열 정도가 달라, 고점 부담이 작은 오라클과 조정 여력이 남은 대형주만 선별하는 편이 낫다.",
+      "keyDrivers": [
+        "TSMC가 2분기 매출 390억~402억달러 가이던스와 연간 30% 이상 성장 전망 제시",
+        "오라클의 클라우드 인프라 매출이 84% 성장하고 수주잔고가 5,530억달러로 급증",
+        "엔비디아는 4월 중 198.87~201.68달러로 반등했지만 여전히 52주 고점 대비 약 14% 낮은 수준"
+      ],
+      "risks": [
+        "TSMC는 최근 1년 146%, 2026년 들어 23% 올라 기대치가 이미 상당 부분 반영됨",
+        "전력 인프라 테마는 블룸에너지처럼 급등 종목이 많아 변동성이 과도할 수 있음"
+      ],
+      "stocks": [
+        {
+          "ticker": "NVDA",
+          "companyName": "엔비디아",
+          "market": "US",
+          "rationale": "2026년 4월 17일 201.68달러로 마감했지만 52주 고점 대비 약 14% 낮아 대표 AI주 중 상대 가격 부담이 완화됐다.",
+          "isNew": false,
+          "change": "hold"
+        },
+        {
+          "ticker": "TSM",
+          "companyName": "타이완반도체",
+          "market": "US",
+          "rationale": "실적 상향은 강력하지만 2026년 들어 이미 23% 올라 추격보다 조정 대기 관점이 더 적절하다.",
+          "isNew": false,
+          "change": "hold"
+        },
+        {
+          "ticker": "ORCL",
+          "companyName": "오라클",
+          "market": "US",
+          "rationale": "2026년 4월 15일 169.81달러로 52주 고점 345.72달러 대비 50% 낮아 AI 수주잔고 대비 가격 부담이 가장 작다.",
+          "isNew": false,
+          "change": "upgrade"
+        }
+      ]
+    },
+    {
+      "sectorName": "금융",
+      "market": "US",
+      "rank": 3,
+      "confidenceScore": 69,
+      "thesis": "은행 실적 모멘텀은 살아 있지만 4월 17일 기준 씨티와 골드만은 고점 근접이어서, 상대적으로 덜 오른 JPM·PNC·캐피털원만 선별한다.",
+      "keyDrivers": [
+        "JPMorgan의 1분기 매출이 498억달러, 시장부문 매출이 116억달러로 사상 최대권 기록",
+        "뱅크오브아메리카가 주식 트레이딩 매출 30% 증가를 공개하며 업종 실적 신뢰를 높임",
+        "유가 급락이 장기금리 부담을 완화해 경기민감 금융주의 밸류를 지지"
+      ],
+      "risks": [
+        "씨티는 2026년 4월 17일 132.18달러로 52주 고점 132.86달러에 0.5% 차이밖에 나지 않아 추격 리스크가 큼",
+        "골드만은 2026년 4월 17일 925.95달러로 52주 고점 대비 6%만 낮아 실적 호재가 이미 상당 부분 반영됐음"
+      ],
+      "stocks": [
+        {
+          "ticker": "JPM",
+          "companyName": "제이피모건",
+          "market": "US",
+          "rationale": "2026년 4월 17일 310.29달러로 52주 고점 337.25달러 대비 약 8% 낮아 대형은행 중 진입 여지가 남아 있다.",
+          "isNew": false,
+          "change": "hold"
+        },
+        {
+          "ticker": "PNC",
+          "companyName": "피엔씨파이낸셜",
+          "market": "US",
+          "rationale": "2026년 4월 17일 224.81달러로 52주 고점 대비 7.84% 아래에서 상업은행 방어력과 실적 회복을 겸한다.",
+          "isNew": true,
+          "change": "new"
+        },
+        {
+          "ticker": "COF",
+          "companyName": "캐피털원",
+          "market": "US",
+          "rationale": "2026년 4월 17일 206.47달러로 52주 고점 대비 20.48% 낮아 소비금융 레버리지와 가격 여유를 함께 갖췄다.",
+          "isNew": true,
+          "change": "new"
+        }
+      ]
+    }
+  ],
+  "cautionSectors": [
+    {
+      "sectorName": "에너지",
+      "market": "US",
+      "rank": 1,
+      "confidenceScore": 88,
+      "thesis": "호르무즈 재개방과 휴전으로 유가 급등 프리미엄이 빠르게 사라져 이익 추정치 하향 압력이 커졌다.",
+      "headwinds": [
+        "브렌트가 90달러 아래로 밀리며 상류업종 실적 기대가 낮아짐",
+        "중동 헤드라인 민감도가 여전히 높아 단기 변동성이 과도",
+        "연료비 하락의 수혜가 항공·소비로 이동하며 상대 매력 약화"
+      ],
+      "whatCouldImprove": [
+        "휴전이 깨지거나 항로 차질이 재발해 공급 우려가 재확대될 때",
+        "OPEC+ 감산 강화로 유가 하단이 빠르게 확인될 때"
+      ],
+      "stocks": [
+        {
+          "ticker": "XOM",
+          "companyName": "엑슨모빌",
+          "market": "US",
+          "rationale": "상류 비중이 높아 유가 하락이 이익 기대를 가장 직접적으로 훼손한다.",
+          "change": "downgrade"
+        },
+        {
+          "ticker": "CVX",
+          "companyName": "셰브론",
+          "market": "US",
+          "rationale": "브렌트 급락 구간에서 생산부문 마진 기대가 빠르게 낮아진다.",
+          "change": "downgrade"
+        },
+        {
+          "ticker": "OXY",
+          "companyName": "옥시덴털페트롤리엄",
+          "market": "US",
+          "rationale": "원유 레버리지가 높은 구조라 유가 반락 구간의 변동성이 더 크다.",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "sectorName": "석유화학",
+      "market": "KR",
+      "rank": 2,
+      "confidenceScore": 81,
+      "thesis": "정부의 비축 제한까지 나올 정도로 나프타 공급 불안이 남아 있어 스프레드 정상화 가시성이 낮다.",
+      "headwinds": [
+        "2026년 4월 15일부터 7개 나프타 계열 기초유분 사재기 금지가 시행",
+        "원화 약세가 수입 원가 부담을 계속 키움",
+        "중국 공급과잉과 둔한 최종수요로 제품 가격 전가력이 약함"
+      ],
+      "whatCouldImprove": [
+        "중동 항로 정상화로 나프타 조달과 운임이 안정될 때",
+        "중국 감산이나 재고 축소로 스프레드가 회복될 때"
+      ],
+      "stocks": [
+        {
+          "ticker": "011170",
+          "companyName": "롯데케미칼",
+          "market": "KR",
+          "rationale": "나프타 조달 리스크와 구조적 업황 부진이 동시에 남아 있다.",
+          "change": "downgrade"
+        },
+        {
+          "ticker": "051910",
+          "companyName": "LG화학",
+          "market": "KR",
+          "rationale": "석유화학 회복 지연과 배터리 투자 부담이 할인 요인으로 겹친다.",
+          "change": "hold"
+        },
+        {
+          "ticker": "011780",
+          "companyName": "금호석유",
+          "market": "KR",
+          "rationale": "원재료와 제품 가격 변동성이 모두 커져 마진 가시성이 낮다.",
+          "change": "hold"
+        }
+      ]
+    },
+    {
+      "sectorName": "스트리밍/미디어",
+      "market": "US",
+      "rank": 3,
+      "confidenceScore": 72,
+      "thesis": "넷플릭스 실적 자체는 견조했지만 2분기 매출 가이던스와 연간 전망 유지가 고평가 부담을 건드렸다.",
+      "headwinds": [
+        "넷플릭스 2분기 매출 가이던스가 컨센서스를 소폭 하회",
+        "콘텐츠·기술 투자비 상승으로 마진 상향 기대 약화",
+        "스트리밍 업종 전반이 높은 밸류에이션에 묶여 있음"
+      ],
+      "whatCouldImprove": [
+        "광고형 매출과 라이브 이벤트 수익화가 더 빠르게 확대될 때",
+        "콘텐츠 투자 효율화로 현금흐름 가시성이 높아질 때"
+      ],
+      "stocks": [
+        {
+          "ticker": "NFLX",
+          "companyName": "넷플릭스",
+          "market": "US",
+          "rationale": "실적 상회에도 가이던스 상향이 없어서 높은 기대치를 채우지 못했다.",
+          "change": "downgrade"
+        },
+        {
+          "ticker": "DIS",
+          "companyName": "월트디즈니",
+          "market": "US",
+          "rationale": "스트리밍 정상화보다 콘텐츠 투자 경쟁과 선형채널 부담이 더 크다.",
+          "change": "hold"
+        },
+        {
+          "ticker": "WBD",
+          "companyName": "워너브라더스디스커버리",
+          "market": "US",
+          "rationale": "광고와 스트리밍 동시 압박 속에서 부채 축소 속도가 기대를 따라가기 어렵다.",
+          "change": "downgrade"
+        }
+      ]
+    }
+  ],
+  "changesSinceYesterday": [
+    {
+      "type": "upgrade",
+      "title": "오라클 우선순위 상향",
+      "detail": "2026년 4월 15일 169.81달러로 52주 고점 대비 50% 낮아 AI 수주잔고 대비 가격 부담이 가장 작다."
+    },
+    {
+      "type": "downgrade",
+      "title": "미국 금융 추격 경계",
+      "detail": "씨티는 2026년 4월 17일 132.18달러로 52주 고점의 0.5% 아래, 골드만은 925.95달러로 고점의 6% 아래라 신규 매수 우선순위를 낮췄다."
+    },
+    {
+      "type": "new-stock",
+      "title": "PNC 신규 편입",
+      "detail": "2026년 4월 17일 224.81달러로 52주 고점 대비 7.84% 낮아 실적과 가격 여유를 동시에 확보했다."
+    },
+    {
+      "type": "removed-stock",
+      "title": "씨티·골드만 제외",
+      "detail": "실적은 좋지만 가격 레벨이 높아 리스크 대비 기대수익이 둔화돼 추격 대상에서 뺐다."
+    },
+    {
+      "type": "new-theme",
+      "title": "가격 레벨 필터 도입",
+      "detail": "섹터가 강해도 52주 고점 5% 이내 종목은 원칙적으로 제외하거나 보유 의견만 유지한다."
+    },
+    {
+      "type": "fading-theme",
+      "title": "AI 급등 소형주 선호 약화",
+      "detail": "블룸에너지와 아스테라랩스처럼 최근 급등한 중소형 AI주는 관찰 대상으로 한 단계 낮췄다."
+    }
+  ],
+  "reasons": {
+    "macro": {
+      "title": "거시",
+      "summary": [
+        "2026년 4월 17일 이란의 호르무즈 전면 개방 발언 뒤 유가가 급락하며 위험선호가 회복됐지만, 같은 랠리로 일부 금융주와 AI 전력주 가격 부담도 빠르게 커졌다.",
+        "한국은 유가 압력이 일부 완화됐지만 원화가 여전히 약세여서 반도체 외 에너지 민감 업종에는 선별 대응이 필요하다."
+      ],
+      "affectedSectors": ["US AI 반도체/전력 인프라", "US 금융", "KR 석유화학"]
+    },
+    "policy": {
+      "title": "정책 / 규제",
+      "summary": [
+        "한국은행은 2026년 4월 10일 기준금리를 2.50%로 동결하며 중동 변수로 인한 물가 상방과 성장 하방을 동시에 경고했다.",
+        "정부는 2026년 4월 15일부터 7개 나프타 기반 기초유분 사재기를 금지해 석유화학 공급 불안을 직접 관리하기 시작했다."
+      ],
+      "affectedSectors": ["KR 반도체", "KR 석유화학", "US 에너지"]
+    },
+    "earnings": {
+      "title": "실적 / 가이던스",
+      "summary": [
+        "TSMC는 2분기 매출 390억~402억달러를 제시했고, 오라클은 OCI 84% 성장과 5,530억달러 수주잔고를 공개해 AI 투자 가시성을 높였다.",
+        "JPM과 뱅크오브아메리카 실적은 강했지만, 종목별 가격 레벨 차이가 커 금융 내에서도 엔트리 선별이 더 중요해졌다."
+      ],
+      "affectedSectors": ["US AI 반도체/전력 인프라", "KR 반도체", "US 금융"]
+    },
+    "flows": {
+      "title": "수급 / 심리",
+      "summary": [
+        "4월 들어 외국인 매수는 삼성전자와 SK하이닉스에 집중되며 KOSPI 반등을 메모리 중심으로 좁혔다.",
+        "미국에서는 에너지에서 성장주와 금융으로 자금이 이동했지만 씨티와 골드만 거래량이 50일 평균을 웃돌아 crowded trade 신호도 함께 나타났다."
+      ],
+      "affectedSectors": ["KR 반도체", "US 금융", "US 에너지"]
+    }
+  },
+  "checkpoints": [
+    {
+      "category": "earnings",
+      "market": "US",
+      "title": "테슬라 1분기 실적",
+      "date": "2026-04-22",
+      "note": "차량보다 ESS와 가이던스가 배터리·전력 인프라 심리에 더 중요하다."
+    },
+    {
+      "category": "macro",
+      "market": "GLOBAL",
+      "title": "4월 FOMC 결과",
+      "date": "2026-04-29",
+      "note": "유가 급락이 실제 정책 톤 완화로 이어지는지 성장주와 금융주가 함께 확인한다."
+    },
+    {
+      "category": "earnings",
+      "market": "KR",
+      "title": "삼성전자 1Q26 실적 콜",
+      "date": "2026-04-30",
+      "note": "HBM 믹스와 CAPEX 코멘트가 한국 반도체 강세 지속성을 가른다."
+    },
+    {
+      "category": "macro",
+      "market": "KR",
+      "title": "한국 4월 수출 발표",
+      "date": "2026-05-01",
+      "note": "반도체 수출 탄력이 이어지면 메모리 장비·부품주까지 확산 여부를 확인할 수 있다."
+    }
+  ],
+  "smallCapIdeas": [
+    {
+      "rank": 1,
+      "ticker": "204320",
+      "companyName": "HL만도",
+      "market": "KR",
+      "sector": "자동차 부품/자율주행",
+      "theme": "레벨4 자율주행 재평가",
+      "thesis": "실적 모멘텀은 약하지만 자율주행·액추에이터 수주 기대를 감안하면 가격 부담이 크지 않은 후발주다.",
+      "whyNow": "2026년 4월 15일 52,700원으로 52주 고점 75,800원보다 30% 이상 낮고, 4월 7일 HL클레무브의 레벨4 자율주행 협력이 공개됐다.",
+      "valuationNote": "forward PER이 약 11배 수준으로 성장 옵션 대비 부담이 과도하지 않다.",
+      "liquidityNote": "4월 15일 거래대금이 약 129억원 수준이어서 분할 접근이 필요하다.",
+      "catalysts": [
+        "2026년 4월 30일 실적 발표",
+        "레벨4 자율주행 협력 구체화",
+        "글로벌 액추에이터 신규 수주"
+      ],
+      "risks": [
+        "완성차 고객사의 신사업 일정 지연",
+        "자동차 수요 둔화"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RKT",
+      "companyName": "로켓컴퍼니스",
+      "market": "US",
+      "sector": "주택 핀테크",
+      "theme": "금리 안정 수혜 후발주",
+      "thesis": "주택 거래 정상화 기대와 Redfin·Mr. Cooper 통합 시너지가 살아 있는데도 주가는 아직 고점 대비 크게 낮다.",
+      "whyNow": "2026년 4월 17일 16.63달러로 52주 고점 24.36달러 대비 31.73% 낮고, 회사는 1분기 adjusted revenue를 26억~28억달러로 가이던스했다.",
+      "valuationNote": "단기 급등 뒤에도 연초 고점과 괴리가 커 기대 대비 가격 부담이 낮다.",
+      "liquidityNote": "5거래일 연속 상승과 함께 거래량이 50일 평균을 크게 웃돌아 변동성은 높다.",
+      "catalysts": [
+        "2026년 4월 30일 전후 1분기 실적",
+        "Redfin·Mr. Cooper 통합 시너지 가시화",
+        "주택 거래와 리파이낸싱 회복"
+      ],
+      "risks": [
+        "미국 주택 경기 둔화",
+        "통합 비용과 시너지 지연"
+      ]
+    }
+  ],
+  "trendSummary": {
+    "mostFrequentPromisingSector": {
+      "sector": "KR 반도체",
+      "appearances": 1,
+      "trendDirection": "flat"
+    },
+    "mostFrequentCautionSector": {
+      "sector": "US 에너지",
+      "appearances": 1,
+      "trendDirection": "flat"
+    },
+    "repeatedStockIdeas": [
+      {
+        "ticker": "005930",
+        "appearances": 1,
+        "direction": "flat"
+      },
+      {
+        "ticker": "TSM",
+        "appearances": 1,
+        "direction": "flat"
+      },
+      {
+        "ticker": "ORCL",
+        "appearances": 1,
+        "direction": "flat"
+      },
+      {
+        "ticker": "JPM",
+        "appearances": 1,
+        "direction": "flat"
+      },
+      {
+        "ticker": "XOM",
+        "appearances": 1,
+        "direction": "flat"
+      }
+    ],
+    "promisingSectorSeries": [
+      {
+        "sector": "KR 반도체",
+        "count": 1
+      },
+      {
+        "sector": "US AI 반도체/전력 인프라",
+        "count": 1
+      },
+      {
+        "sector": "US 금융",
+        "count": 1
+      }
+    ],
+    "cautionSectorSeries": [
+      {
+        "sector": "US 에너지",
+        "count": 1
+      },
+      {
+        "sector": "KR 석유화학",
+        "count": 1
+      },
+      {
+        "sector": "US 스트리밍/미디어",
+        "count": 1
+      }
+    ]
+  }
+}
