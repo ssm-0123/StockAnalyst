@@ -1,30 +1,30 @@
 {
   "date": "2026-04-21",
-  "lastUpdated": "2026-04-21T07:20:00Z",
-  "marketTone": "한국은 2026년 4월 21일 반도체 수출 급증과 코스피 신고가가 겹치며 반도체 주도력이 더 선명해졌다. 미국은 2026년 4월 20일 유가 재상승에도 러셀2000과 금융이 상대강세를 지켰지만, 항공과 에너지는 여전히 헤드라인 변동성 영향권이다.",
+  "lastUpdated": "2026-04-21T14:32:40Z",
+  "marketTone": "한국은 2026년 4월 21일 반도체 수출 급증과 코스피 신고가가 겹치며 반도체 주도력이 더 선명해졌다. 미국은 2026년 4월 20일 유가가 다시 95달러를 넘었지만 금융과 AI 인프라는 버텼고, 항공과 미디어는 비용·M&A 헤드라인 리스크가 다시 커졌다.",
   "topOpportunity": "KR | 반도체",
   "topRisk": "US | 항공/여행",
-  "newPicksToday": 2,
-  "newCautionsToday": 0,
+  "newPicksToday": 0,
+  "newCautionsToday": 1,
   "biggestChangeToday": {
-    "label": "반도체 본주 상향",
-    "detail": "4월 21일 한국 1~20일 수출이 크게 뛰고 코스피가 신고가를 찍으면서, SK하이닉스 신규 편입과 반도체 본주 중심 전략을 유지할 근거가 더 강해졌다."
+    "label": "미디어 경계 복귀",
+    "detail": "에너지 추격 경계는 한 단계 낮추고, 워너·파라마운트 거래 변수와 스트리밍 가격 인상 피로가 겹친 스트리밍/미디어을 다시 주의 섹터로 올렸다."
   },
   "promisingSectors": [
     {
       "sectorName": "반도체",
       "market": "KR",
       "rank": 1,
-      "confidenceScore": 86,
-      "thesis": "2026년 4월 21일 한국 1~20일 수출이 49.4%, 반도체가 182.5% 급증해 AI 메모리 주도력이 재확인됐지만, 삼성전자와 SK하이닉스는 52주 고점 5% 이내라 신규 추격보다 보유 우선이 합리적이다.",
+      "confidenceScore": 88,
+      "thesis": "2026년 4월 21일 한국 1~20일 수출이 49.4%, 반도체가 182.5% 급증했고 코스피가 사상 최고치를 경신해 업황 확신은 더 강해졌지만, 삼성전자와 SK하이닉스는 이미 고점권이라 신규 추격보다 보유 우선이 맞다.",
       "keyDrivers": [
-        "로이터는 4월 21일 한국 4월 1~20일 수출이 49.4%, 반도체 수출이 182.5% 증가했다고 전했다.",
-        "코스피는 4월 21일 반도체 대형주 주도로 사상 최고치를 다시 경신했다.",
-        "SK하이닉스 1Q26 실적이 4월 29일 예정돼 있어 HBM 가격과 출하 코멘트가 다음 방향을 결정한다."
+        "4월 21일 관세청 잠정치에서 4월 1~20일 반도체 수출이 182.5% 늘며 수출 모멘텀이 재확인됐다.",
+        "코스피는 4월 21일 6,388.47로 마감하며 반도체 주도 record high를 다시 썼다.",
+        "SK하이닉스 1분기 실적이 4월 29일 예정돼 있어 HBM 가격과 출하 코멘트가 다음 방향을 결정한다."
       ],
       "risks": [
-        "삼성전자와 SK하이닉스가 모두 52주 고점과 간격이 매우 좁아 신규 추격매수의 기대수익이 낮다.",
-        "유가와 원달러 환율 변동성이 커지면 외국인 수급이 대형 반도체에서 먼저 흔들릴 수 있다."
+        "삼성전자와 SK하이닉스 모두 52주 최고가 5% 이내라 신규 상향보다 가격 부담 관리가 더 중요하다.",
+        "유가와 원달러 환율이 다시 뛰면 외국인 수급이 대형 반도체에서 먼저 흔들릴 수 있다."
       ],
       "stocks": [
         {
@@ -32,7 +32,7 @@
           "quoteSymbol": "005930.KS",
           "companyName": "삼성전자",
           "market": "KR",
-          "rationale": "1~20일 수출 모멘텀은 강하지만 219,000원은 52주 고점 223,000원과 간격이 2% 안쪽이라 신규 상향보다 보유가 낫다.",
+          "rationale": "219,000원은 52주 최고가 223,000원과 간격이 2% 안쪽이라 실적 개선을 인정해도 지금은 신규 상향보다 보유가 낫다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
@@ -50,9 +50,9 @@
           "quoteSymbol": "000660.KS",
           "companyName": "SK하이닉스",
           "market": "KR",
-          "rationale": "1,224,000원 종가는 52주 고점 1,228,000원과 간격이 1%도 남지 않아 추격보다 4월 29일 실적 전 보유 관점이 적절하다.",
-          "isNew": true,
-          "change": "new",
+          "rationale": "1,224,000원 종가는 52주 최고가 1,228,000원과 사실상 붙어 있어, HBM 실적 기대는 유효하지만 오늘은 신규보다 보유 관점이 더 합리적이다.",
+          "isNew": false,
+          "change": "hold",
           "priceSnapshot": {
             "priceDate": "2026-04-21",
             "currentPrice": 1224000,
@@ -68,7 +68,7 @@
           "quoteSymbol": "042700.KS",
           "companyName": "한미반도체",
           "market": "KR",
-          "rationale": "HBM 후공정 수혜는 유효하지만 295,000원까지 빠르게 반등해 밸류 부담이 커졌으므로 신규 상향보다 보유가 안전하다.",
+          "rationale": "HBM 후공정 수혜는 유지되지만 295,000원까지 회복해 단기 기대가 꽤 반영돼 있으므로 업황 확신 대비 종목 평가는 보유가 적절하다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
@@ -87,16 +87,16 @@
       "sectorName": "금융",
       "market": "US",
       "rank": 2,
-      "confidenceScore": 80,
-      "thesis": "JPMorgan과 Bank of America 실적이 거래와 순이자이익 체력을 확인했고 2026년 4월 20일 러셀2000 상대강세가 이어져, 대형 AI주보다 금융의 진입 부담이 덜하다.",
+      "confidenceScore": 79,
+      "thesis": "1분기 대형은행 실적이 trading과 dealmaking 체력을 확인했고 2026년 4월 20일 Russell 2000이 상대강세를 보였지만, 유가 상승과 지정학 리스크를 감안하면 상향보다 선택적 보유가 맞다.",
       "keyDrivers": [
-        "JPMorgan은 4월 14일 1Q26 managed revenue 505억달러를 발표했다.",
-        "Bank of America는 4월 15일 1Q26 실적을 발표했고 trading과 NII가 예상보다 견조했다.",
-        "AP 집계에서 4월 20일 러셀2000은 0.6% 올라 S&P500(-0.2%)과 나스닥(-0.3%)보다 강했다."
+        "Reuters는 4월 15일 Bank of America의 1분기 sales and trading revenue가 13% 늘어 64억달러를 기록했다고 전했다.",
+        "Reuters는 4월 14일 JPMorgan이 record trading haul과 dealmaking 개선으로 예상치를 웃돌았다고 보도했다.",
+        "AP는 4월 20일 Russell 2000이 0.6% 올라 S&P500(-0.2%)과 Nasdaq(-0.3%)보다 강했다고 전했다."
       ],
       "risks": [
-        "유가 반등이 금리 기대와 경기민감주 심리를 동시에 흔들면 은행주 멀티플이 다시 눌릴 수 있다.",
-        "실적 이벤트 직후라 추가 상향보다 재료 소화 구간이 길어질 수 있다."
+        "Jamie Dimon이 지적한 지정학·에너지 리스크가 길어지면 대손비용과 순이자이익 기대가 다시 흔들릴 수 있다.",
+        "은행주도 종목별로는 실적 직후 반등이 누적돼 신규 상향보다 가격 규율이 더 중요하다."
       ],
       "stocks": [
         {
@@ -104,17 +104,13 @@
           "quoteSymbol": "JPM",
           "companyName": "제이피모건",
           "market": "US",
-          "rationale": "거래와 IB 회복이 확인됐지만 최근 반등 폭이 커 신규 상향보다 핵심 보유주로 접근하는 편이 낫다.",
+          "rationale": "record trading과 dealmaking은 확인됐지만, Yahoo Finance에서 현재 판단에 쓸 만큼 최신 날짜가 명확하지 않아 숫자 추격보다 코어 보유 관점이 적절하다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-17",
-            "currentPrice": 310.29,
-            "previousCloseChangePct": 0.11,
-            "week52High": 337.25,
-            "week52Low": 226.34,
+            "priceDate": "2026-04-01",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "Yahoo Finance에서 4월 1일 값만 명확해 stale 데이터로 판단, 현재 숫자는 비웠다."
           }
         },
         {
@@ -122,7 +118,7 @@
           "quoteSymbol": "BAC",
           "companyName": "뱅크오브아메리카",
           "market": "US",
-          "rationale": "소비와 기업금융 체력이 유지됐고 53달러대는 52주 고점과 간격이 남아 있어 대형은행 중 가격 부담이 덜하다.",
+          "rationale": "53.91달러는 52주 최고가 57.55달러보다 약 6% 낮아 대형은행 중 가격 부담이 덜하고, trading 개선이 실적 방어를 확인했다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
@@ -140,17 +136,17 @@
           "quoteSymbol": "WFC",
           "companyName": "웰스파고",
           "market": "US",
-          "rationale": "실적 직후 변동성은 있었지만 81달러대는 52주 고점보다 15% 이상 낮아 대형은행 중 가격 부담이 비교적 덜하다.",
-          "isNew": true,
-          "change": "new",
+          "rationale": "81달러대는 52주 최고가보다 아직 15% 이상 낮고, trading 개선에도 NII 부담이 남아 있어 공격적 상향보다 보유가 더 맞다.",
+          "isNew": false,
+          "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-17",
-            "currentPrice": 81.25,
-            "previousCloseChangePct": 1.2,
+            "priceDate": "2026-04-21",
+            "currentPrice": 81.97,
+            "previousCloseChangePct": 0.69,
             "week52High": 97.76,
             "week52Low": 63.4,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "Yahoo Finance 4월 21일 장중 표시 기준"
           }
         }
       ]
@@ -159,16 +155,16 @@
       "sectorName": "AI 반도체/전력 인프라",
       "market": "US",
       "rank": 3,
-      "confidenceScore": 76,
-      "thesis": "TSMC와 Oracle이 AI 투자 모멘텀을 재확인했지만 NVDA와 TSM은 이미 고점권에 가까워, 섹터는 유지하되 추격보다 보유가 우선이다.",
+      "confidenceScore": 77,
+      "thesis": "TSMC와 ASML 전망, Oracle의 멀티클라우드 확장이 AI CAPEX 지속을 확인했지만 NVDA와 TSM은 여전히 고점권이라 섹터는 유지하되 추격보다 보유 중심이 낫다.",
       "keyDrivers": [
-        "TSMC는 4월 16일 1Q26 매출 359억달러와 매출총이익률 66.2%를 발표했다.",
-        "Oracle은 3월 10일 OCI 매출 49억달러, 증가율 84%, RPO 5,530억달러를 제시했다.",
-        "AI 서버와 데이터센터 전력 투자는 유지되지만 종목별 가격 규율이 더 중요해졌다."
+        "Reuters는 4월 16일 ASML과 TSMC의 강한 전망이 AI spending boom이 여전히 intact하다는 신호라고 전했다.",
+        "TSMC ADR은 4월 20일 종가 기준으로도 연초 대비 22% 넘게 올라 AI 수요 지속을 반영하고 있다.",
+        "Oracle은 4월 16일 AWS와 OCI 간 multicloud networking 확대를 발표해 AI 데이터베이스 수요를 다시 자극했다."
       ],
       "risks": [
-        "NVDA와 TSM은 52주 고점과 간격이 좁아 좋은 실적도 추가 멀티플 확장 여지가 제한적이다.",
-        "유가와 금리 반등이 재개되면 고밸류 AI 대형주가 먼저 조정받을 수 있다."
+        "엔비디아와 TSM은 52주 고점과의 간격이 좁아 좋은 뉴스가 나와도 추가 멀티플 확장 여지가 제한적이다.",
+        "AI 인프라 투자 회수 논쟁이 다시 커지면 고밸류 종목부터 조정폭이 커질 수 있다."
       ],
       "stocks": [
         {
@@ -176,17 +172,17 @@
           "quoteSymbol": "NVDA",
           "companyName": "엔비디아",
           "market": "US",
-          "rationale": "AI 수요는 강하지만 201.68달러는 52주 고점 212.19달러와 간격이 크지 않아 실적 전 신규 상향보다 보유가 낫다.",
+          "rationale": "202.06달러는 52주 최고가 212.19달러와 간격이 5% 안쪽이라 실적 전 신규 상향보다 보유가 더 방어적이다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-17",
-            "currentPrice": 201.68,
-            "previousCloseChangePct": 1.68,
+            "priceDate": "2026-04-20",
+            "currentPrice": 202.06,
+            "previousCloseChangePct": 0.19,
             "week52High": 212.19,
-            "week52Low": 95.04,
+            "week52Low": 97.28,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "Yahoo Finance 4월 20일 종가 기준"
           }
         },
         {
@@ -194,17 +190,17 @@
           "quoteSymbol": "TSM",
           "companyName": "타이완반도체",
           "market": "US",
-          "rationale": "실적과 가이던스는 강했지만 370.50달러는 이미 기대를 많이 반영해 추격보다 보유가 적절하다.",
+          "rationale": "실적과 가이던스는 강했지만 366.24달러는 이미 기대를 많이 반영해 추가 상향보다 보유가 적절하다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-17",
-            "currentPrice": 370.5,
-            "previousCloseChangePct": 1.97,
+            "priceDate": "2026-04-20",
+            "currentPrice": 366.24,
+            "previousCloseChangePct": -1.15,
             "week52High": 390.21,
-            "week52Low": 145.84,
+            "week52Low": 147.44,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "Yahoo Finance 4월 20일 종가 기준"
           }
         },
         {
@@ -212,7 +208,7 @@
           "quoteSymbol": "ORCL",
           "companyName": "오라클",
           "market": "US",
-          "rationale": "OCI 성장과 수주잔고는 강하지만 주가 변동성이 커 신규 상향보다 보유 관점이 안전하다.",
+          "rationale": "OCI와 AWS 연결 확대는 긍정적이지만 단기 변동성이 커져 지금은 성장 스토리 확인용 보유가 더 안전하다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
@@ -233,16 +229,16 @@
       "sectorName": "항공/여행",
       "market": "US",
       "rank": 1,
-      "confidenceScore": 89,
-      "thesis": "유가 재상승이 실제 연료비 가이던스 훼손으로 번지기 시작해, 수요보다 비용과 가이던스 리스크를 먼저 봐야 하는 구간이다.",
+      "confidenceScore": 90,
+      "thesis": "유가 급등이 실제 guidance 훼손으로 번지기 시작해 수요보다 연료비와 가이던스 리스크를 먼저 봐야 하는 구간이다.",
       "headwinds": [
-        "AP는 4월 20일 브렌트유가가 다시 배럴당 95달러를 넘겼고 미국 증시는 소폭 조정받았다고 전했다.",
-        "로이터는 4월 20일 Alaska Air가 연간 가이던스를 중단하고 4월 연료비 4.75달러, 2Q 평균 4.50달러를 제시했다고 전했다.",
-        "United는 4월 21일, American은 4월 23일 실적을 앞두고 있어 연료비와 운임 가이던스 하향 위험이 남아 있다."
+        "AP는 4월 20일 Brent crude가 95달러를 넘었고 미국 지수는 소폭 밀린 반면 Russell 2000만 강했다고 전했다.",
+        "Alaska Air는 연간 가이던스를 중단하고 2분기 평균 연료비를 갤런당 4.50달러로 제시했다.",
+        "United 실적은 4월 21일, American은 4월 23일 예정돼 있어 운임보다 비용 전가력이 핵심 체크포인트다."
       ],
       "whatCouldImprove": [
-        "호르무즈 통항과 협상 진전으로 유가가 빠르게 되돌려질 때",
-        "실적 발표에서 운임 전가력과 프리미엄 수요가 연료비 부담을 상쇄하는지 확인될 때"
+        "브렌트가 90달러 아래로 빠르게 되돌려지며 연료비 충격이 완화될 때",
+        "이번 주 실적에서 premium demand와 운임 전가력이 비용 부담을 상쇄함이 확인될 때"
       ],
       "stocks": [
         {
@@ -250,12 +246,12 @@
           "quoteSymbol": "DAL",
           "companyName": "델타항공",
           "market": "US",
-          "rationale": "실적 이후에도 유가 민감도가 큰 구간이라 운임보다 연료비 리스크를 먼저 봐야 한다.",
+          "rationale": "실적은 나왔지만 유가 민감도가 큰 구간이라 지금은 수요보다 연료비 재상승 리스크를 먼저 봐야 한다.",
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-02",
+            "priceDate": "2026-04-08",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance에서 4월 2일 값만 명확해 현재 판단용 숫자는 비웠다."
+            "sourceNote": "Yahoo Finance에서 4월 8일 값만 명확해 stale 데이터로 판단, 현재 숫자는 비웠다."
           }
         },
         {
@@ -263,7 +259,7 @@
           "quoteSymbol": "UAL",
           "companyName": "유나이티드항공",
           "market": "US",
-          "rationale": "프리미엄 수요는 버티지만 98.91달러 구간에서도 실적 전 연료비와 가이던스 변동성 노출이 크다.",
+          "rationale": "실적 발표 직전 98.91달러까지 밀렸지만 이벤트 전에는 valuation보다 연료비·가이던스 확인이 우선이다.",
           "change": "hold",
           "priceSnapshot": {
             "priceDate": "2026-04-20",
@@ -276,20 +272,16 @@
           }
         },
         {
-          "ticker": "AAL",
-          "quoteSymbol": "AAL",
-          "companyName": "아메리칸항공",
+          "ticker": "ALK",
+          "quoteSymbol": "ALK",
+          "companyName": "알래스카항공",
           "market": "US",
-          "rationale": "차입 부담이 큰 상태에서 연료비까지 다시 오르고 있어 실적 전 보수적 시각이 필요하다.",
-          "change": "hold",
+          "rationale": "연간 가이던스를 접고 연료비 급등을 직접 숫자로 제시해, 항공 섹터 안에서도 경계 강도를 더 높여야 하는 종목이다.",
+          "change": "downgrade",
           "priceSnapshot": {
             "priceDate": "2026-04-21",
-            "currentPrice": 10.74,
-            "previousCloseChangePct": 2.43,
-            "week52High": 16.5,
-            "week52Low": 8.5,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 장중 기준"
+            "sourceNote": "Yahoo Finance 장중 페이지는 확인했지만 날짜 표기가 불명확해 현재 숫자는 비웠다."
           }
         }
       ]
@@ -299,40 +291,23 @@
       "market": "KR",
       "rank": 2,
       "confidenceScore": 84,
-      "thesis": "유가 재상승과 나프타 수급 불안, 낮은 제품 스프레드가 동시에 남아 있어 하루 반등이 나와도 업황 반전 신뢰는 아직 약하다.",
+      "thesis": "한국 석유화학은 중동발 납사 조달 불안과 중국 공급과잉이 동시에 남아 있어 주가 반등이 나와도 업황 추세 전환으로 보기 어렵다.",
       "headwinds": [
-        "중동 변수로 유가가 다시 오르며 나프타 조달비와 운임 불확실성이 커졌다.",
-        "중국발 공급 부담이 이어져 에틸렌과 합성고무 스프레드 회복 속도가 더디다.",
-        "LG화학과 롯데케미칼 주가가 반등해도 실적 가시성보다 원가 부담이 더 큰 구간이다."
+        "Yonhap은 4월 17일 롯데케미칼이 prolonged industry downturn 속 핵심 석화사업 구조조정을 우선하겠다고 전했다.",
+        "서울경제는 4월 16~17일 납사 공급난으로 PX force majeure와 downstream 비용 전가가 확산되고 있다고 보도했다.",
+        "한화솔루션은 4월 19일 주주 반발 속 증자 계획을 축소했지만 dilution 우려는 아직 남아 있다."
       ],
       "whatCouldImprove": [
-        "호르무즈 통항 정상화와 유가 안정으로 원가 불확실성이 줄어들 때",
-        "중국 감산이나 가동률 조정으로 기초유분 스프레드가 의미 있게 회복될 때"
+        "호르무즈 통항과 납사 조달이 안정되며 원가 급등 압력이 완화될 때",
+        "중국 증설 압박이 줄고 에틸렌·PX 스프레드가 회복되는지 확인될 때"
       ],
       "stocks": [
-        {
-          "ticker": "011170",
-          "quoteSymbol": "011170.KS",
-          "companyName": "롯데케미칼",
-          "market": "KR",
-          "rationale": "주가가 89,900원까지 회복됐어도 1분기 업황보다 원가와 수급 불확실성이 커 반등 추종은 보수적으로 봐야 한다.",
-          "change": "hold",
-          "priceSnapshot": {
-            "priceDate": "2026-04-21",
-            "currentPrice": 89900,
-            "previousCloseChangePct": 0.67,
-            "week52High": 100500,
-            "week52Low": 55400,
-            "currency": "KRW",
-            "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
-          }
-        },
         {
           "ticker": "051910",
           "quoteSymbol": "051910.KS",
           "companyName": "LG화학",
           "market": "KR",
-          "rationale": "하루 급반등이 나왔지만 석유화학 회복 지연과 배터리 투자 부담이 겹쳐 할인 요인이 아직 충분히 해소되지 않았다.",
+          "rationale": "4월 21일 급반등이 나왔어도 본업 석화 마진과 원료 조달 문제가 풀린 것은 아니라 업황 확인 전까지는 경계가 맞다.",
           "change": "hold",
           "priceSnapshot": {
             "priceDate": "2026-04-21",
@@ -345,18 +320,35 @@
           }
         },
         {
-          "ticker": "011780",
-          "quoteSymbol": "011780.KS",
-          "companyName": "금호석유",
+          "ticker": "011170",
+          "quoteSymbol": "011170.KS",
+          "companyName": "롯데케미칼",
           "market": "KR",
-          "rationale": "합성고무 스프레드와 원재료 변동성이 동시에 남아 있어 단기 반등보다 마진 회복 확인이 먼저다.",
+          "rationale": "89,900원은 고점보다 낮지만 회사가 직접 구조조정을 전면화한 만큼 단기 반등보다 본업 체력 회복 여부를 먼저 봐야 한다.",
           "change": "hold",
           "priceSnapshot": {
             "priceDate": "2026-04-21",
-            "currentPrice": 134800,
-            "previousCloseChangePct": -1.46,
-            "week52High": 162300,
-            "week52Low": 102800,
+            "currentPrice": 89900,
+            "previousCloseChangePct": 0.67,
+            "week52High": 100500,
+            "week52Low": 55400,
+            "currency": "KRW",
+            "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
+          }
+        },
+        {
+          "ticker": "009830",
+          "quoteSymbol": "009830.KS",
+          "companyName": "한화솔루션",
+          "market": "KR",
+          "rationale": "기초소재 업황 부담 위에 증자 관련 신뢰 훼손까지 겹쳐 있어 단기 반등이 나와도 보수적으로 봐야 한다.",
+          "change": "downgrade",
+          "priceSnapshot": {
+            "priceDate": "2026-04-21",
+            "currentPrice": 45450,
+            "previousCloseChangePct": 5.7,
+            "week52High": 59300,
+            "week52Low": 22950,
             "currency": "KRW",
             "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
           }
@@ -364,70 +356,70 @@
       ]
     },
     {
-      "sectorName": "에너지",
+      "sectorName": "스트리밍/미디어",
       "market": "US",
       "rank": 3,
-      "confidenceScore": 78,
-      "thesis": "유가가 펀더멘털보다 협상과 봉쇄 헤드라인에 더 크게 반응해, 방향성 베팅보다 이벤트 리스크 관리가 먼저인 구간이다.",
+      "confidenceScore": 73,
+      "thesis": "콘텐츠 가격 인상 피로와 Warner-Paramount 거래 불확실성이 겹쳐, 실적이 나와도 headline risk가 밸류에이션 상단을 막는 구간이다.",
       "headwinds": [
-        "브렌트가 95달러를 다시 넘기며 하루 헤드라인에 따른 변동폭이 커졌다.",
-        "XOM, CVX, OXY는 실적 전 유가 민감도가 높아졌고 특히 OXY는 52주 고점 부근까지 올라왔다.",
-        "정유와 탐사주는 공급 차질보다 협상 뉴스에 더 민감해져 갭 리스크가 확대됐다."
+        "Reuters는 3월 26일 Warner Bros Discovery 주주총회가 4월 23일 Paramount merger 표결을 앞두고 있다고 전했다.",
+        "4월 중순 스트리밍 서비스 가격 인상에 대한 가입자 피로가 다시 부각되며 churn 우려가 재점화됐다.",
+        "Netflix는 4월 17일 실적 이후 하루 -9.72% 급락해 좋은 숫자만으로는 멀티플을 지키기 어렵다는 점을 보여줬다."
       ],
       "whatCouldImprove": [
-        "유가가 안정되고 1분기 실적에서 잉여현금흐름과 배당 여력이 숫자로 확인될 때",
-        "중동 긴장이 완화돼 헤드라인보다 펀더멘털에 주가가 반응하는 장세로 바뀔 때"
+        "WBD 거래 구조와 규제 일정이 명확해져 headline risk가 줄어들 때",
+        "광고형 요금제 확대와 churn 방어가 실적으로 다시 확인될 때"
       ],
       "stocks": [
         {
-          "ticker": "XOM",
-          "quoteSymbol": "XOM",
-          "companyName": "엑슨모빌",
+          "ticker": "NFLX",
+          "quoteSymbol": "NFLX",
+          "companyName": "넷플릭스",
           "market": "US",
-          "rationale": "유가 수혜는 분명하지만 주가가 협상 헤드라인에 크게 흔들려 추세 추종보다 변동성 관리가 우선이다.",
+          "rationale": "광고형 성장 스토리는 남아 있지만 4월 17일 실적 이후 급락은 가격 인상 피로와 기대치 부담이 여전히 크다는 신호다.",
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-21",
-            "currentPrice": 152.3,
-            "previousCloseChangePct": -0.14,
-            "week52High": 176.41,
-            "week52Low": 101.19,
+            "priceDate": "2026-04-17",
+            "currentPrice": 97.31,
+            "previousCloseChangePct": -9.72,
+            "week52High": 134.12,
+            "week52Low": 75.01,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 장중 기준"
+            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
           }
         },
         {
-          "ticker": "CVX",
-          "quoteSymbol": "CVX",
-          "companyName": "셰브론",
+          "ticker": "DIS",
+          "quoteSymbol": "DIS",
+          "companyName": "디즈니",
           "market": "US",
-          "rationale": "고점과 간격은 남아도 유가 방향 하나에 일일 변동폭이 커져 보수적으로 접근해야 한다.",
+          "rationale": "주가가 여전히 52주 고점과 거리가 있지만, 스트리밍 가격·광고·파크 수요가 모두 민감한 구간이라 실적 전 공격적 접근은 이르다.",
           "change": "hold",
           "priceSnapshot": {
             "priceDate": "2026-04-21",
-            "currentPrice": 183.93,
-            "previousCloseChangePct": -2.24,
-            "week52High": 214.71,
-            "week52Low": 132.33,
+            "currentPrice": 95.59,
+            "previousCloseChangePct": -0.72,
+            "week52High": 124.69,
+            "week52Low": 80.85,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 장중 기준"
+            "sourceNote": "Yahoo Finance 4월 21일 장중 표시 기준"
           }
         },
         {
-          "ticker": "OXY",
-          "quoteSymbol": "OXY",
-          "companyName": "옥시덴털페트롤리엄",
+          "ticker": "WBD",
+          "quoteSymbol": "WBD",
+          "companyName": "워너브라더스디스커버리",
           "market": "US",
-          "rationale": "63달러대는 52주 고점과 간격이 거의 없어 실적 전에는 추가 상향보다 차익실현 압력 관리가 중요하다.",
-          "change": "hold",
+          "rationale": "거래 성사·규제·분할 가치가 모두 headline에 좌우되는 종목이라, 4월 23일 표결 전에는 이벤트 리스크가 실적 논리보다 크다.",
+          "change": "new",
           "priceSnapshot": {
             "priceDate": "2026-04-21",
-            "currentPrice": 63.28,
-            "previousCloseChangePct": 2.31,
-            "week52High": 63.33,
-            "week52Low": 34.78,
+            "currentPrice": 27.39,
+            "previousCloseChangePct": 0.7,
+            "week52High": 30,
+            "week52Low": 7.75,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 장중 기준"
+            "sourceNote": "Yahoo Finance 4월 21일 장마감 표시 기준"
           }
         }
       ]
@@ -436,68 +428,66 @@
   "changesSinceYesterday": [
     {
       "type": "upgrade",
-      "title": "반도체 본주 비중 상향",
-      "detail": "4월 21일 수출 가속과 코스피 신고가로 한국 반도체 주력 바스켓의 우선순위를 더 높게 유지했다."
+      "title": "반도체 최선호 유지",
+      "detail": "4월 21일 한국 수출 급증과 코스피 신고가가 겹치며 반도체 최선호 논리를 다시 강화했다."
     },
     {
       "type": "downgrade",
-      "title": "항공 경계 재강조",
-      "detail": "Alaska Air의 가이던스 중단 이후 연료비 충격이 정량화돼 항공/여행 경계 강도를 높게 유지했다."
+      "title": "한화솔루션 경계 강화",
+      "detail": "기초소재 업황 부담 위에 증자 신뢰 훼손이 겹쳐 석유화학 경계 바스켓 안에서도 한 단계 더 보수적으로 봤다."
     },
     {
       "type": "new-stock",
-      "title": "SK하이닉스 신규 편입",
-      "detail": "메모리 본주 확인이 필요해 한국 반도체 메인 추천군에 SK하이닉스를 새로 올렸다."
+      "title": "WBD 주의 편입",
+      "detail": "4월 23일 표결을 앞둔 거래 구조 불확실성이 커져 워너브라더스디스커버리를 주의 목록에 새로 넣었다."
     },
     {
       "type": "removed-stock",
-      "title": "테크윙 메인 바스켓 제외",
-      "detail": "후공정 장비주의 가격 부담이 커져 테크윙은 주력 추천에서 빼고 중소형 관찰군으로만 남겼다."
+      "title": "엑슨모빌 경계 목록 제외",
+      "detail": "유가 급등 자체보다 추격 부담은 일부 둔화된 반면, 더 직접적인 미디어 M&A 리스크가 커져 에너지 경계 목록을 줄였다."
     },
     {
       "type": "new-theme",
-      "title": "수출·신고가 동시 확인",
-      "detail": "한국 4월 1~20일 수출 급증과 코스피 신고가가 반도체 주도력 강화를 숫자로 확인해줬다."
+      "title": "미디어 거래 리스크 부상",
+      "detail": "스트리밍 가격 인상 피로와 Warner-Paramount 거래 표결이 겹치며 스트리밍/미디어을 다시 주의 섹터로 올렸다."
     },
     {
       "type": "fading-theme",
-      "title": "후발 장비주 추격 약화",
-      "detail": "한미반도체와 후공정 장비주가 빠르게 반등한 뒤 밸류 부담이 커져 후발주 추격 매력은 약해졌다."
+      "title": "에너지 추격 경계 완화",
+      "detail": "유가 헤드라인은 여전히 크지만 에너지주는 이미 많이 반영돼, 오늘은 직접 피해 업종인 항공과 미디어 리스크를 더 크게 봤다."
     }
   ],
   "reasons": {
     "macro": {
       "title": "거시",
       "summary": [
-        "AP 집계에서 2026년 4월 20일 미국 증시는 유가 재상승에도 S&P500 -0.2%, 나스닥 -0.3%, 러셀2000 +0.6%로 마감해 대형 기술보다 금융·내수 선호가 확인됐다.",
-        "로이터는 4월 21일 한국 4월 1~20일 수출이 49.4%, 반도체 수출이 182.5% 증가하며 코스피 신고가를 뒷받침했다고 전했다."
+        "4월 20일 Brent crude가 다시 95달러를 넘으면서 항공과 한국 석유화학의 원가 압박이 동시에 커졌다.",
+        "반면 미국 Russell 2000 강세와 한국 코스피 신고가는 성장주 일변도보다는 금융·반도체 중심의 선택적 risk-on을 보여줬다."
       ],
       "affectedSectors": [
-        "KR 반도체",
-        "US 금융",
-        "US 항공/여행"
+        "US 항공/여행",
+        "KR 석유화학",
+        "US 금융"
       ]
     },
     "policy": {
       "title": "정책 / 규제",
       "summary": [
-        "호르무즈 통항과 미·이란 협상 헤드라인이 유가와 운임을 동시에 흔들어 항공·에너지·석유화학 판단을 하루 단위로 바꾸고 있다.",
-        "한국은 반도체 중심 수출 모멘텀이 이어지면서 첨단산업 지원 기대가 대형 기술주 투자심리를 지지하고 있다."
+        "Warner-Paramount 거래는 주주 표결과 반독점 심사 일정이 남아 있어 미디어 밸류에이션의 상단을 눌러두고 있다.",
+        "국내 석화는 제재·물류 제약 속 대체 납사 조달을 늘리고 있지만 공급 정상화 속도는 아직 느리다."
       ],
       "affectedSectors": [
-        "KR 반도체",
-        "KR 석유화학",
-        "US 에너지"
+        "US 스트리밍/미디어",
+        "KR 석유화학"
       ]
     },
     "earnings": {
       "title": "실적 / 가이던스",
       "summary": [
-        "TSMC는 4월 16일 1Q26 매출 359억달러와 매출총이익률 66.2%를, Oracle은 3월 10일 OCI 매출 49억달러와 RPO 5,530억달러를 제시했다.",
-        "JPMorgan 4월 14일 실적과 Bank of America 4월 15일 실적은 금융을 지지했지만, Alaska Air의 4월 20일 가이던스 중단은 항공 마진 압박이 현실화됐음을 보여줬다."
+        "JPMorgan과 Bank of America는 trading과 dealmaking으로 1분기 체력을 보여줘 금융주 하단을 지지했다.",
+        "반면 Alaska Air의 guidance 중단은 유가 상승이 항공 이익모델을 즉시 훼손할 수 있음을 숫자로 확인시켰다."
       ],
       "affectedSectors": [
-        "KR 반도체",
         "US 금융",
         "US 항공/여행"
       ]
@@ -505,44 +495,45 @@
     "flows": {
       "title": "수급 / 심리",
       "summary": [
-        "한국에서는 삼성전자와 SK하이닉스가 코스피 신고가를 주도해 대형 반도체 쏠림이 더 강해졌다.",
-        "미국에서는 소형주와 금융이 상대강세를 보였지만 항공과 에너지는 헤드라인 리스크 때문에 추격 자금이 오래 머물기 어려운 흐름이다."
+        "한국은 반도체 대형주가 지수 신고가를 이끌었고, 미국은 메가캡 기술주 추격보다 금융과 선별 AI 인프라로 수급이 분산됐다.",
+        "반대로 항공과 미디어는 headline risk가 커질수록 매수 주체가 약해져 이벤트 전 관망 심리가 우세하다."
       ],
       "affectedSectors": [
         "KR 반도체",
         "US 금융",
-        "US 에너지"
+        "US AI 반도체/전력 인프라",
+        "US 스트리밍/미디어"
       ]
     }
   },
   "checkpoints": [
     {
       "category": "macro",
+      "market": "GLOBAL",
+      "title": "브렌트유 95달러 안착 여부",
+      "date": "2026-04-22",
+      "note": "항공·석유화학·금융의 밸류 재조정이 동시에 걸린 핵심 변수다."
+    },
+    {
+      "category": "risk",
       "market": "US",
-      "title": "미국 3월 소매판매",
-      "date": "2026-04-21",
-      "note": "소비 체력 확인 결과가 금리 기대와 금융주 상대강도를 바로 흔든다."
+      "title": "Warner-Paramount 주주 표결",
+      "date": "2026-04-23",
+      "note": "미디어/스트리밍 섹터의 headline risk가 거래 구조로 현실화되는지 확인해야 한다."
     },
     {
       "category": "earnings",
       "market": "US",
-      "title": "유나이티드항공 1Q26 실적",
-      "date": "2026-04-21",
-      "note": "연료비와 운임 가이던스가 항공/여행 경계 강도를 결정한다."
+      "title": "American Airlines 1분기 실적",
+      "date": "2026-04-23",
+      "note": "유가 급등을 운임과 수요가 얼마나 상쇄하는지 항공 섹터의 핵심 검증 이벤트다."
     },
     {
       "category": "earnings",
       "market": "KR",
-      "title": "SK하이닉스 1Q26 실적",
+      "title": "SK하이닉스 1분기 실적",
       "date": "2026-04-29",
-      "note": "HBM 가격과 수요 코멘트가 한국 반도체 랠리 지속성을 가른다."
-    },
-    {
-      "category": "risk",
-      "market": "GLOBAL",
-      "title": "호르무즈 통항과 추가 협상 흐름",
-      "date": "2026-04-22",
-      "note": "유가와 물류비 경로가 항공·에너지·석유화학의 상대매력을 다시 바꿀 수 있다."
+      "note": "HBM 수요와 가격 코멘트가 한국 반도체 섹터의 과열/정당화 경계를 가른다."
     }
   ],
   "smallCapIdeas": [
@@ -554,9 +545,9 @@
       "market": "KR",
       "sector": "자동차 부품/자율주행",
       "theme": "자율주행 옵션 재평가",
-      "thesis": "조향·제동과 ADAS 핵심부품을 동시에 가진 중형주로, 완성차 사이클보다 자율주행 옵션 가치가 덜 반영돼 있다.",
-      "whyNow": "54,300원은 52주 고점 75,800원보다 28%가량 낮고, 4월 20일 증권가가 로보틱스 가치 재평가를 다시 언급했다.",
-      "followThroughNote": "최근 며칠 반등이 있었지만 52주 고점과 간격이 여전히 크고, 자율주행 옵션 재평가가 본 실적에 비해 덜 반영됐다고 판단해 아직 추적 가치가 남아 있다.",
+      "thesis": "조향·제동과 ADAS 핵심부품을 동시에 가진 중형주로, 완성차 사이클보다 자율주행 옵션 가치가 아직 덜 반영돼 있다.",
+      "whyNow": "54,300원은 52주 최고가 75,800원보다 약 28% 낮고, 4월 30일 실적 전 자율주행 옵션 재평가를 다시 확인할 수 있다.",
+      "followThroughNote": "며칠째 추적했지만 아직도 52주 고점과 간격이 크고 실적 이벤트가 남아 있어 추격보다 선제 관찰 구간으로 볼 여지가 남아 있다.",
       "priceSnapshot": {
         "priceDate": "2026-04-21",
         "currentPrice": 54300,
@@ -566,11 +557,11 @@
         "currency": "KRW",
         "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
       },
-      "valuationNote": "0.9배대 PBR 구간이라 자율주행 옵션과 실적 개선이 같이 반영될 여지가 남아 있다.",
+      "valuationNote": "PBR 1배 안팎 구간이라 자율주행 옵션이 붙을 때 재평가 여지가 남아 있다.",
       "liquidityNote": "거래대금이 대형주보다 얇아 분할 진입이 필요하고 실적 전후 변동성이 커질 수 있다.",
       "catalysts": [
-        "1Q26 실적",
-        "북미 ADAS 수주 확대",
+        "4월 30일 1분기 실적",
+        "북미 ADAS 수주",
         "로보틱스 가치 재평가"
       ],
       "risks": [
@@ -586,9 +577,9 @@
       "market": "KR",
       "sector": "반도체 검사/후공정",
       "theme": "HBM 검사장비 후발주",
-      "thesis": "HBM 검사·핸들러 노출이 있지만 대표 장비주보다 덜 알려져 있어 가격 과열이 비교적 덜하다.",
-      "whyNow": "57,100원은 52주 고점 74,000원보다 20% 이상 낮아 메모리 본주보다 가격 부담이 상대적으로 적다.",
-      "followThroughNote": "며칠째 관심이 이어졌어도 대표 메모리주 대비 덜 오른 후발 장비주라는 점이 유지되고 있어, 수주 확인이 붙으면 추가 재평가 여지가 남아 있다고 본다.",
+      "thesis": "HBM 검사·핸들러 노출이 있지만 초대형 메모리 본주보다 덜 알려져 있어 가격 과열이 상대적으로 덜하다.",
+      "whyNow": "57,100원은 52주 최고가 74,000원보다 20% 넘게 낮아 메모리 본주보다 가격 부담이 덜한 후발 장비주로 남아 있다.",
+      "followThroughNote": "며칠째 추적해도 대표 메모리주 대비 덜 오른 후발 검사장비주라는 성격이 유지되고 있어, 수주 확인이 붙으면 추가 재평가 여지가 아직 있다.",
       "priceSnapshot": {
         "priceDate": "2026-04-21",
         "currentPrice": 57100,
@@ -599,7 +590,7 @@
         "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
       },
       "valuationNote": "초대형 메모리 본주보다 덜 오른 후발 검사장비주라 재평가 여지가 남아 있다.",
-      "liquidityNote": "코스닥 중형주라 거래 공백 구간에서 변동성이 커질 수 있고 체결 강도도 일정하지 않다.",
+      "liquidityNote": "코스닥 중형주라 수급 공백 구간에서 변동성이 커질 수 있고 체결 강도도 일정하지 않다.",
       "catalysts": [
         "HBM 검사장비 수주",
         "메모리 고객사 증설",
@@ -608,6 +599,38 @@
       "risks": [
         "장비 발주 지연",
         "실적 변동성 확대"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "005850",
+      "quoteSymbol": "005850.KS",
+      "companyName": "에스엘",
+      "market": "KR",
+      "sector": "자동차 조명/ADAS 부품",
+      "theme": "북미 믹스 개선 재평가",
+      "thesis": "북미 조명·ADAS 비중이 높고 주주환원까지 붙어 있어 자동차 부품 중 방어적 중형주 성격이 유지된다.",
+      "whyNow": "64,900원은 52주 최고가 77,400원보다 아직 16%가량 낮고, 1분기 실적 전 북미 믹스 개선 기대를 반영하기 좋은 자리다.",
+      "followThroughNote": "전일 관찰군에서 빠졌지만 핵심 논리는 훼손되지 않았고, 여전히 고점 추격 구간이 아니라서 다시 체크할 가치가 남아 있다.",
+      "priceSnapshot": {
+        "priceDate": "2026-04-21",
+        "currentPrice": 64900,
+        "previousCloseChangePct": 6.39,
+        "week52High": 77400,
+        "week52Low": 29900,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
+      },
+      "valuationNote": "자동차 부품 내에서도 저평가 구간이 길어 선행 PER과 배당 매력이 같이 남아 있다.",
+      "liquidityNote": "거래량이 아주 많지는 않아 이벤트 전후 스프레드가 벌어질 수 있다.",
+      "catalysts": [
+        "1분기 실적",
+        "북미 SUV/EV 램프 믹스 개선",
+        "주주환원 지속"
+      ],
+      "risks": [
+        "완성차 생산 조정",
+        "원재료·환율 변동"
       ]
     }
   ],
@@ -629,22 +652,22 @@
         "direction": "up"
       },
       {
+        "ticker": "011170",
+        "appearances": 4,
+        "direction": "up"
+      },
+      {
         "ticker": "042700",
         "appearances": 4,
         "direction": "up"
       },
       {
+        "ticker": "051910",
+        "appearances": 4,
+        "direction": "up"
+      },
+      {
         "ticker": "JPM",
-        "appearances": 4,
-        "direction": "up"
-      },
-      {
-        "ticker": "NVDA",
-        "appearances": 4,
-        "direction": "up"
-      },
-      {
-        "ticker": "TSM",
         "appearances": 4,
         "direction": "up"
       }
@@ -669,15 +692,15 @@
         "count": 4
       },
       {
+        "sector": "US 스트리밍/미디어",
+        "count": 3
+      },
+      {
         "sector": "US 에너지",
-        "count": 4
+        "count": 3
       },
       {
         "sector": "US 항공/여행",
-        "count": 2
-      },
-      {
-        "sector": "US 스트리밍/미디어",
         "count": 2
       }
     ]

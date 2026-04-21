@@ -18,6 +18,13 @@
     "bestCall": "ORCL 업그레이드",
     "weakestCall": "테크윙 후발주 확산 기대"
   },
+  "smallCapScorecard": {
+    "evaluatedCount": 1,
+    "workedCount": 1,
+    "mixedCount": 0,
+    "failedCount": 0,
+    "averageCallAlphaPct": 1.1
+  },
   "evaluatedInsights": [
     {
       "ticker": "ORCL",
@@ -33,6 +40,8 @@
       "benchmarkReturnPct": 0.8,
       "callAlphaPct": 2.3,
       "verdict": "worked",
+      "priceEvidence": "fallback",
+      "dataQuality": "limited",
       "outcomeSummary": "명시 가격 기준으로 169.81달러에서 175.06달러까지 올라, 같은 테마 대형주 대비 상대성과가 확인됐다.",
       "lesson": "과열된 대표주보다 밸류 여유가 큰 인프라 수혜주 선택이 짧은 구간에서 더 효율적이었다."
     },
@@ -50,6 +59,8 @@
       "benchmarkReturnPct": 1.4,
       "callAlphaPct": 1.7,
       "verdict": "worked",
+      "priceEvidence": "fallback",
+      "dataQuality": "limited",
       "outcomeSummary": "명시 가격 기준으로 211,000원에서 217,500원으로 올라 KR 반도체 대형주 기준보다 나은 흐름을 보였다.",
       "lesson": "고점 근접 구간이어도 실적 확인력이 강한 대표주는 무리한 교체보다 보유 유지가 더 나았다."
     },
@@ -67,7 +78,10 @@
       "benchmarkReturnPct": 0.6,
       "callAlphaPct": 1.1,
       "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
       "outcomeSummary": "명시 가격 기준으로 52,700원에서 53,600원으로 올라 자동차부품 평균 흐름보다 조금 더 강했다.",
+      "followThroughReview": "연속 추적 구간에서도 고점 대비 할인 폭과 자율주행 재평가 논리가 유지됐고, 실제로도 자동차부품 평균보다 나은 흐름을 보여 유지 판단이 맞았다.",
       "lesson": "중소형 아이디어는 테마 강도보다 할인 폭과 이벤트 일정이 함께 있을 때 결과가 더 안정적이었다."
     },
     {
@@ -84,6 +98,8 @@
       "benchmarkReturnPct": 0.3,
       "callAlphaPct": -0.3,
       "verdict": "mixed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
       "outcomeSummary": "최신 확인 가격이 224.81달러로 유지돼 방향은 나쁘지 않았지만 주간 단위 추가 알파는 확인되지 않았다.",
       "lesson": "실적 직후 은행주는 밸류 매력만으로는 부족하고, 추가 수급 촉매까지 같이 봐야 초과성과가 난다."
     },
@@ -101,6 +117,8 @@
       "benchmarkReturnPct": 1.4,
       "callAlphaPct": -1.4,
       "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
       "outcomeSummary": "최신 확인 가격이 57,600원에 머물러 같은 기간 KR 반도체 대표주 대비 상대성과를 만들지 못했다.",
       "lesson": "후발 장비주 아이디어는 실적 모멘텀만으로 부족하고, 실제 거래대금 유입 여부까지 함께 확인해야 한다."
     },
@@ -118,6 +136,8 @@
       "benchmarkReturnPct": 0.6,
       "callAlphaPct": 0.6,
       "verdict": "worked",
+      "priceEvidence": "fallback",
+      "dataQuality": "limited",
       "outcomeSummary": "4월 17일 급락 뒤 추가 반등이 확인되지 않아, 같은 기간 시장 대비 약한 흐름이 유지됐다고 판단했다.",
       "lesson": "주의 콜은 하락 폭 자체보다 반등 부재가 이어지는지 확인하면 더 보수적으로 평가할 수 있다."
     }
