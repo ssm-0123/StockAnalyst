@@ -81,11 +81,18 @@ export interface SmallCapIdea {
   theme: string;
   thesis: string;
   whyNow: string;
+  followThroughNote?: string;
   valuationNote: string;
   liquidityNote: string;
   catalysts: string[];
   risks: string[];
   priceSnapshot?: StockPriceSnapshot;
+}
+
+export interface SmallCapTrackingMeta {
+  ticker: string;
+  consecutiveDays: number;
+  appearances7d: number;
 }
 
 export interface WeeklyResultsScorecard {

@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { DailyAnalysis, TrendSummary, WeeklyResultsReport } from "@/lib/types";
+import { DailyAnalysis, SmallCapTrackingMeta, TrendSummary, WeeklyResultsReport } from "@/lib/types";
 
 const DATA_DIR = path.join(process.cwd(), "public", "data");
 const HISTORY_DIR = path.join(DATA_DIR, "history");
@@ -45,11 +45,13 @@ export async function getLatestAnalysis() {
   const history = await getHistoryAnalyses();
   const dailyEntries = getLatestEntryPerDate([latest, ...history]);
   const previousDay = dailyEntries.find((entry) => entry.date !== latest.date) ?? null;
+  const smallCapTracking = computeSmallCapTracking(dailyEntries.slice(0, 7));
 
   return {
     latest,
     history,
     previousDay,
+    smallCapTracking,
     trendSummary: latest.trendSummary ?? computeTrendSummary(dailyEntries.slice(0, 7)),
   };
 }
@@ -187,6 +189,44 @@ export function computeTrendSummary(window: DailyAnalysis[]): TrendSummary {
     promisingSectorSeries,
     cautionSectorSeries,
   };
+}
+
+export function computeSmallCapTracking(window: DailyAnalysis[]) {
+  const appearances = new Map<string, number>();
+  const consecutive = new Map<string, number>();
+
+  for (const [index, entry] of window.entries()) {
+    const tickers = new Set(entry.smallCapIdeas?.map((idea) => idea.ticker) ?? []);
+
+    for (const ticker of tickers) {
+      appearances.set(ticker, (appearances.get(ticker) ?? 0) + 1);
+    }
+
+    if (index === 0) {
+      for (const ticker of tickers) {
+        consecutive.set(ticker, 1);
+      }
+      continue;
+    }
+
+    for (const [ticker, count] of consecutive.entries()) {
+      if (count === index && tickers.has(ticker)) {
+        consecutive.set(ticker, count + 1);
+      }
+    }
+  }
+
+  const tracking = new Map<string, SmallCapTrackingMeta>();
+
+  for (const [ticker, appearances7d] of appearances.entries()) {
+    tracking.set(ticker, {
+      ticker,
+      appearances7d,
+      consecutiveDays: consecutive.get(ticker) ?? 0,
+    });
+  }
+
+  return tracking;
 }
 
 export function formatTimestamp(timestamp: string) {

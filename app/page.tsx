@@ -14,7 +14,7 @@ import { getLatestAnalysis, formatTimestamp } from "@/lib/dashboard";
 import { withBasePath } from "@/lib/site";
 
 export default async function HomePage() {
-  const { latest, trendSummary, previousDay } = await getLatestAnalysis();
+  const { latest, trendSummary, previousDay, smallCapTracking } = await getLatestAnalysis();
   const biggestChange =
     typeof latest.biggestChangeToday === "string"
       ? {
@@ -199,7 +199,7 @@ export default async function HomePage() {
             리레이팅 후보
           </div>
         </div>
-        <SmallCapPanel ideas={latest.smallCapIdeas} />
+        <SmallCapPanel ideas={latest.smallCapIdeas} tracking={smallCapTracking} />
       </section>
 
       <section className="mt-10">
