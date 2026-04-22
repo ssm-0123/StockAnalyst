@@ -45,7 +45,10 @@ jobs:
           echo "GITHUB_PAGES=true" >> "$GITHUB_ENV"
 
       - name: Disable route handlers for static export
-        run: mv app/api _app_api_disabled
+        run: |
+          if [ -d app/api ]; then
+            mv app/api _app_api_disabled
+          fi
 
       - name: Install dependencies
         run: npm ci
