@@ -50,6 +50,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Clean Next build artifacts
+        run: rm -rf .next out
+
       - name: Build static site
         run: npm run build
 
