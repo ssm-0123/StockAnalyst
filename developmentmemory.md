@@ -9,10 +9,12 @@
 - Home page: `app/page.tsx`
 - Results page: `app/Results/page.tsx`
 - Lowercase alias route: `app/results/page.tsx` imports and renders `../Results/page`
-- Quote API: `app/api/quotes/route.ts`
 - Shared types: `lib/types.ts`
 - Dashboard/history loaders: `lib/dashboard.ts`
+- JSON normalizers: `lib/data-normalizers.ts`
+- Base-path helper: `lib/site.ts`
 - Main stock row UI: `components/stock-row.tsx`
+- Deploy mirror sync script: `scripts/sync-pages-root.mjs`
 
 ## Implemented Features
 - Added small-cap / undervalued idea section via `components/small-cap-panel.tsx`
@@ -50,30 +52,13 @@
 
 ## UI Behavior For Price Info
 - Stock rows are expandable in `components/stock-row.tsx`
-- Expanded view shows:
-  - analysis-time snapshot from saved `priceSnapshot`
-  - optional live quote fetched from `/api/quotes`
+- Expanded view shows only the saved analysis-time `priceSnapshot`
 - `components/small-cap-panel.tsx` now also shows an analysis-time price snapshot block for `smallCapIdeas`
 - small-cap cards now also show:
   - recent tracking badges such as consecutive tracked days and 7-day appearances
   - `followThroughNote` explaining why a name is still worth watching after multiple up days / multiple days of tracking
-- Product decision: analysis snapshot is canonical/default, live API quote is supplementary only
-- This avoids mixing recommendation logic with a later market price
-
-## Quote API Design
-- Main app runtime is split by market
-- KR quotes:
-  - use Naver Finance domestic stock page display data
-  - rationale: Naver is more practical than Yahoo for Korean small/mid caps and reflects KRX-based domestic pricing
-- US quotes:
-  - use Yahoo page parse first
-  - fallback to Yahoo `v7/finance/quote`
-  - fallback to Yahoo `v8/chart`
-- `github-pages-root` itself is a static deployment target, so live quote fetching may remain disabled there even when the main app supports it
-- Added sanity filters to reject obvious bad data:
-  - reject `previousCloseChangePct` when absolute value is greater than 50
-  - reject prices obviously inconsistent with 52-week range
-- Diagnosis already made: weird outputs like `+287.88%` were treated as source anomalies, not a UI formatting bug
+- Product decision: analysis snapshot is canonical/default and the UI no longer requests live quote data
+- This avoids mixing recommendation logic with a later market price and keeps static export simpler
 
 ## Prompting Rules For Daily Automation
 - Main prompt files:
@@ -98,6 +83,7 @@
   - small-cap ideas should not churn daily without a clear reason; if the thesis still holds, keep them in the next run so price snapshots accumulate across days
   - each `smallCapIdeas` item should include a `followThroughNote` that explains why the idea can still work after recent gains or repeated daily tracking
 - If price cannot be found, leave reason in `sourceNote`
+- Because the UI only shows saved snapshots, `priceSnapshot` completeness is now directly user-visible
 
 ## Prompting Rules For Weekly Results Automation
 - Saturday automation should use `RESULTS_AUTOMATION_RUN_PROMPT.txt`
@@ -110,6 +96,8 @@
 - Duplicate React key warnings were fixed by replacing fragile keys with safer composite keys in list-rendering components
 - Next devtools-related runtime issue `__webpack_modules__[moduleId] is not a function` had previously been mitigated by disabling:
   - `experimental.devtoolSegmentExplorer = false` in `next.config.ts`
+- Root `next.config.ts` now supports GitHub Pages export env flags too, so the same codebase can serve local and deploy builds
+- Root JSON loaders now normalize malformed or partial JSON before rendering
 
 ## Current Known Issue
 - Dev build cache has been unstable
@@ -120,6 +108,8 @@
 - `npm run build` had succeeded even while `npm run dev` was failing
 - Root cause is treated as corrupted `.next` dev cache rather than route code
 - If dev server breaks again, first recovery step is to clear `.next` and restart dev server
+- Added helper script: `npm run dev:clean`
+- Root `tsconfig.json` now excludes `github-pages-root/**` so local app builds are not blocked by the separate GitHub Pages copy
 
 ## Results Route Note
 - Do not try to maintain both `app/Results` and `app/results` on this macOS workspace
@@ -128,11 +118,12 @@
 
 ## Working Decisions To Preserve
 - Use saved snapshot data for explanation and default display
-- Use live quote only as a comparison aid
 - Keep history for multiple runs on the same day
 - Use the latest snapshot of each day for trend aggregation
-- Keep results evaluation as a separate weekly flow under `/Results`
+- Keep results evaluation as a separate weekly flow under `/results`
+- Treat the root workspace as source of truth and sync `github-pages-root` from it instead of editing both code trees manually
 
 ## Immediate Follow-Up
+- Run `npm run sync:pages` after root code, prompt, or docs change
 - Restart dev server cleanly
-- If runtime errors continue, wipe `.next` and start `npm run dev` again
+- If runtime errors continue, run `npm run dev:clean`

@@ -3,7 +3,7 @@
 아래 프롬프트를 그대로 자동화에 사용하세요.
 
 ```text
-당신의 역할은 최근 일일 투자 인사이트가 실제로 어떻게 작동했는지 사후 평가하고, 그 결과를 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/latest.json`에 반영하는 것입니다.
+당신의 역할은 최근 일일 투자 인사이트가 실제로 어떻게 작동했는지 사후 평가하고, 그 결과를 `/Users/ssm/Documents/Investment Analyst/public/data/results/latest.json`에 반영한 뒤 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/latest.json`에도 동일하게 동기화하는 것입니다.
 
 목표:
 - 대시보드 `/Results` 페이지가 그대로 렌더링할 수 있는 JSON 작성
@@ -13,13 +13,13 @@
 - 다음 주 반영 포인트 도출
 
 가장 먼저 할 일:
-- `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`과 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/*.json`의 실제 스키마를 먼저 확인합니다.
+- `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`과 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`의 실제 스키마를 먼저 확인합니다.
 - 이 데이터셋의 핵심 필드는 보통 `promisingSectors`, `cautionSectors`, `smallCapIdeas`, 각 섹터의 `stocks`입니다.
 - 존재하지 않는 `promising`, `caution`, `smallCap` 같은 가상 필드를 전제로 작업하지 않습니다.
 - 이 자동화는 로컬 파일만 사용합니다. 웹 검색이나 외부 시세 조회는 하지 않습니다.
 
 중요 전제:
-- 평가 대상 원본은 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/*.json`입니다.
+- 평가 대상 원본은 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`입니다.
 - 같은 날짜 파일이 여러 개 있으면 `lastUpdated`가 가장 늦은 1개만 그 날짜 대표본으로 봅니다.
 - 속도보다 정확성이 중요하지만, 불필요한 중복 검증은 하지 않습니다.
 - 모든 사용자 노출 문구는 한국어로 작성합니다.
@@ -33,11 +33,20 @@
 - 토요일 실행이라도 로컬 데이터가 금요일까지 모두 쌓여 있지 않으면, 억지로 직전 토요일~금요일을 채우지 말고 실제 존재하는 대표본 기간만 사용합니다.
 
 히스토리 저장 규칙:
-- 새 결과를 쓰기 전에 현재 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/latest.json`이 실제 데이터인지 먼저 확인합니다.
-- 실제 데이터라면 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/history/YYYY-MM-DDTHH-mm-ss.json` 형식으로 저장합니다.
+- 새 결과를 쓰기 전에 현재 `/Users/ssm/Documents/Investment Analyst/public/data/results/latest.json`이 실제 데이터인지 먼저 확인합니다.
+- 실제 데이터라면 `/Users/ssm/Documents/Investment Analyst/public/data/results/history/YYYY-MM-DDTHH-mm-ss.json` 형식으로 저장합니다.
 - 파일명 시간은 기존 results `latest.json`의 `lastUpdated` 값을 기준으로 사용합니다.
 - 같은 `lastUpdated` 파일이 이미 있으면 그때만 중복 저장하지 않습니다.
 - 그 다음 새 결과평가 JSON으로 `results/latest.json`을 덮어씁니다.
+
+배포 동기화/커밋 규칙:
+- 로컬 `/Users/ssm/Documents/Investment Analyst/public/data/results/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/public/data/results/history/*.json`이 원본입니다.
+- 새 결과 JSON과 이번 실행에서 생성한 results 히스토리 파일은 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/history/` 대응 경로에 같은 파일명으로 복사합니다.
+- 배포용 결과 JSON은 별도로 다시 계산하지 말고, 로컬 최종 산출물을 그대로 미러링합니다.
+- `github-pages-root` 저장소에서는 이번 실행으로 바뀐 results data 파일만 대상으로 non-interactive git 명령으로 처리합니다.
+- `github-pages-root`에 unrelated change가 있어도 되돌리지 말고, 이번 실행에서 바뀐 results data 파일만 add/commit 합니다.
+- 미러링 결과 results data 파일 변경이 없으면 commit은 생략합니다.
+- `git push`는 시도하지 않습니다.
 
 종목 선정 규칙:
 - 평가 후보는 평가 기간 대표본의 `promisingSectors[].stocks`, `cautionSectors[].stocks`, `smallCapIdeas[]`에서만 고릅니다.
@@ -80,6 +89,17 @@
 작성 규칙:
 - `processTakeaways`는 3개 작성합니다.
 - `nextWeekFocus`는 3개 작성합니다.
+- `smallCapScorecard`를 작성합니다.
+- 각 `evaluatedInsights`에는 `priceEvidence`와 `dataQuality`를 넣습니다.
+- `priceEvidence` 허용값:
+  - `"snapshot"`
+  - `"fallback"`
+  - `"mixed"`
+- `dataQuality` 허용값:
+  - `"verified"`
+  - `"limited"`
+  - `"stale-excluded"`
+- `small-cap` 평가에는 가능하면 `followThroughReview`를 넣어, 며칠째 유지한 판단이 실제로 맞았는지 짧게 복기합니다.
 - 최종 저장 전 JSON 유효성과 필수 필드만 1회 확인합니다.
 
 반드시 아래 구조를 따르세요:
@@ -104,6 +124,13 @@
     "bestCall": "가장 잘 된 콜",
     "weakestCall": "가장 약했던 콜"
   },
+  "smallCapScorecard": {
+    "evaluatedCount": 0,
+    "workedCount": 0,
+    "mixedCount": 0,
+    "failedCount": 0,
+    "averageCallAlphaPct": 0
+  },
   "evaluatedInsights": [
     {
       "ticker": "티커",
@@ -119,7 +146,10 @@
       "benchmarkReturnPct": 0,
       "callAlphaPct": 0,
       "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
       "outcomeSummary": "실제 결과 요약",
+      "followThroughReview": "며칠째 유지한 판단이 실제로 맞았는지 짧게 복기",
       "lesson": "다음에 반영할 교훈"
     }
   ],
@@ -146,16 +176,18 @@
 }
 
 실행 절차:
-1. `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`과 `public/data/history/*.json`를 읽고 실제 스키마를 먼저 확인합니다.
+1. `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`과 `public/data/history/*.json`를 읽고 실제 스키마를 먼저 확인합니다.
 2. 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`만 남겨 날짜별 대표본을 만듭니다.
 3. 최신 대표본의 `date`를 기준으로 평가 기간을 계산하고, 데이터가 부족하면 실제 존재하는 기간만 사용합니다.
 4. 평가 기간 대표본에서 종목 후보와 섹터 후보를 고릅니다.
 5. 로컬 JSON 안의 명시 가격만 이용해 실제 수익률과 보수적 벤치마크 대비 성과를 계산합니다.
 6. 현재 `public/data/results/latest.json`이 실제 데이터라면 `public/data/results/history/YYYY-MM-DDTHH-mm-ss.json`으로 저장합니다.
-7. 새 결과평가 JSON을 `public/data/results/latest.json`에 저장합니다.
-8. 저장 전 마지막으로 JSON 유효성과 필수 필드만 1회 확인합니다.
-9. 최종 응답은 아래 3줄만 짧게 작성합니다.
-   - 업데이트 완료 여부
+7. 저장 전 마지막으로 JSON 유효성과 필수 필드만 1회 확인합니다.
+8. 새 결과평가 JSON을 `public/data/results/latest.json`에 저장합니다.
+9. 이번 실행에서 저장한 로컬 results `latest.json`과 새 히스토리 파일을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/` 대응 경로에 같은 파일명으로 복사합니다.
+10. `github-pages-root` 저장소에서 이번 실행으로 바뀐 results data 파일만 non-interactive git으로 커밋합니다.
+11. 최종 응답은 아래 3줄만 짧게 작성합니다.
+   - 업데이트/동기화 완료 여부
    - 평가 기간
    - 가장 잘 맞은 콜 1줄
 ```

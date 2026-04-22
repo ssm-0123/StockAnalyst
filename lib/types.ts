@@ -105,6 +105,14 @@ export interface WeeklyResultsScorecard {
   weakestCall: string;
 }
 
+export interface SmallCapResultsScorecard {
+  evaluatedCount: number;
+  workedCount: number;
+  mixedCount: number;
+  failedCount: number;
+  averageCallAlphaPct: number;
+}
+
 export interface EvaluatedInsight {
   ticker: string;
   companyName: string;
@@ -119,7 +127,10 @@ export interface EvaluatedInsight {
   benchmarkReturnPct: number;
   callAlphaPct: number;
   verdict: "worked" | "mixed" | "failed";
+  priceEvidence: "snapshot" | "fallback" | "mixed";
+  dataQuality: "verified" | "limited" | "stale-excluded";
   outcomeSummary: string;
+  followThroughReview?: string;
   lesson: string;
 }
 
@@ -144,6 +155,7 @@ export interface WeeklyResultsReport {
   summary: string;
   benchmarkNote: string;
   scorecard: WeeklyResultsScorecard;
+  smallCapScorecard?: SmallCapResultsScorecard;
   evaluatedInsights: EvaluatedInsight[];
   sectorReviews: SectorReview[];
   processTakeaways: string[];

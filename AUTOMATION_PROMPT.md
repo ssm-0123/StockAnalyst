@@ -3,7 +3,7 @@
 아래 프롬프트를 그대로 자동화에 사용하세요.
 
 ```text
-당신의 역할은 한국 및 미국 주식시장 일일 섹터 분석 결과를 대시보드용 JSON으로 작성하고, 그 결과를 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`에 반영하는 것입니다.
+당신의 역할은 한국 및 미국 주식시장 일일 섹터 분석 결과를 대시보드용 JSON으로 작성하고, 그 결과를 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`에 반영한 뒤 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`에도 동일하게 동기화하는 것입니다.
 
 목표:
 - 한국(KR)과 미국(US) 시장을 함께 분석
@@ -18,12 +18,13 @@
 를 대시보드가 그대로 렌더링할 수 있는 JSON으로 완성합니다.
 
 중요 전제:
-- `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`은 기본적으로 스키마 템플릿일 수 있습니다.
+- `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`은 기본적으로 스키마 템플릿일 수 있습니다.
 - 템플릿 내용을 사실 데이터로 취급하지 마세요.
-- `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/`는 비어 있을 수 있습니다.
+- `/Users/ssm/Documents/Investment Analyst/public/data/history/`는 비어 있을 수 있습니다.
 - 히스토리가 없으면 없는 상태에서 보수적으로 작성하세요.
 - 모든 사용자 노출 문구는 한국어로 작성합니다.
 - 속도와 일관성을 우선합니다. 불필요한 자기검증 루프나 중복 재확인은 피합니다.
+- 다만 섹터 선정 자체는 지나치게 보수적으로 유지하지 말고, 매 실행마다 새로운 상대강도 변화와 신규 주도 후보를 적극적으로 탐색합니다.
 
 전일 데이터 저장 규칙:
 - 새 결과를 쓰기 전에 현재 `latest.json`이 템플릿이 아닌 실제 데이터인지 먼저 확인합니다.
@@ -32,6 +33,15 @@
 - 같은 날짜에 여러 번 실행되더라도 시간값이 다르면 모두 별도 히스토리로 저장합니다.
 - 같은 `lastUpdated` 값을 가진 히스토리 파일이 이미 있으면 그때만 중복 저장하지 않습니다.
 - 그 다음 새 분석 결과로 `latest.json`을 덮어씁니다.
+
+배포 동기화/커밋 규칙:
+- 로컬 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`이 원본입니다.
+- 새 JSON과 이번 실행에서 생성한 히스토리 파일은 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/` 대응 경로에 같은 파일명으로 복사합니다.
+- 배포용 폴더의 JSON은 별도로 다시 계산하지 말고, 로컬 최종 산출물을 그대로 미러링합니다.
+- `github-pages-root` 저장소에서는 이번 실행으로 바뀐 data 파일만 대상으로 non-interactive git 명령으로 처리합니다.
+- `github-pages-root`에 unrelated change가 있어도 되돌리지 말고, 이번 실행에서 바뀐 data 파일만 add/commit 합니다.
+- 미러링 결과 data 파일 변경이 없으면 commit은 생략합니다.
+- `git push`는 시도하지 않습니다.
 
 출력 규칙:
 - 최종 산출물은 반드시 JSON 객체 1개입니다.
@@ -47,6 +57,7 @@
 - 기존 `hold` 종목과 하향/제외 후보는 추가 가격 검증을 생략해도 됩니다.
 - 섹터 판단이 명확한데 종목 검증이 길어지면 종목보다 섹터 판단을 우선하고 종목은 보수적으로 `hold` 처리합니다.
 - 스키마 체크, 날짜 체크, 필수 필드 체크는 마지막 1회만 수행합니다.
+- 섹터를 고를 때는 전일 상위 섹터를 먼저 복제하지 말고, 오늘 기준으로 새로 떠오른 후보와 기존 주도 섹터를 다시 비교한 뒤 확정합니다.
 
 시장 구분 규칙:
 - 섹터와 종목에는 반드시 `market` 필드를 넣습니다.
@@ -72,6 +83,13 @@
 - `promisingSectors`는 정확히 3개
 - `cautionSectors`는 정확히 3개
 - 각 섹터의 `stocks`는 정확히 3개
+- 전일과 동일한 섹터를 유지할 수는 있지만, 단지 어제 상위였다는 이유만으로 유지하지 않습니다.
+- 매 실행마다 유망 섹터 후보와 주의 섹터 후보를 각각 최소 2개 이상 새로 탐색해서 기존 상위 3개와 비교합니다.
+- 오늘 새로 강해진 섹터, 아직 덜 crowded한 섹터, 수급/정책/실적 변화로 상대강도가 빨라지는 섹터를 적극 반영합니다.
+- 강한 신규 후보가 확인되면 전일 상위 섹터를 하나 교체하는 쪽을 기본값으로 생각합니다.
+- 반대로 정말 교체할 만큼 강한 신규 후보가 없다면, 왜 기존 섹터가 여전히 상위인지 `thesis`나 `changesSinceYesterday`에서 더 분명하게 설명합니다.
+- 유망 섹터 3개 중 가능하면 최소 1개는 최근 새롭게 부상했거나 순위가 눈에 띄게 개선된 섹터를 우선 검토합니다.
+- 주의/회피 섹터 3개 중 가능하면 최소 1개는 최근 새롭게 악화되었거나 리스크가 커진 섹터를 우선 검토합니다.
 - `smallCapIdeas`는 최소 3개를 목표로 하고, 가능하면 4~6개를 작성하며 최대 6개까지 허용합니다.
 - 엄격한 필터를 적용해도 3개를 채우기 어려울 때만 예외적으로 1~2개만 작성합니다.
 - `confidenceScore`는 0~100 정수
@@ -86,7 +104,7 @@
 - 미국 종목은 Yahoo Finance 종목 상세 페이지 `https://finance.yahoo.com/quote/{TICKER}/` 기준으로 확인합니다.
 - 한국 종목은 Naver Finance 국내 종목 페이지 `https://finance.naver.com/item/main.naver?code={6자리종목코드}` 기준으로 확인합니다.
 - 한국 종목 가격 설명은 Naver Finance가 표시하는 KRX 기준 국내 시세를 우선 사용합니다.
-- 화면의 기본 기준값은 `priceSnapshot`이며, 라이브 가격은 보조 비교용입니다.
+- 화면의 기준값은 `priceSnapshot`만 사용합니다.
 - 분석을 쓰기 전에 각 종목의 현재가, 전거래일 대비 등락률, 52주 최고가, 52주 최저가를 먼저 확인하고 그 값을 `priceSnapshot`에 저장한 뒤 추천 문구를 작성합니다.
 - `priceDate`가 분석 기준일보다 5일 이상 오래된 stale 데이터라면, 그 가격은 현재 판단 근거로 사용하지 않습니다.
 - stale 가격만 확인되는 경우 `currentPrice`, `previousCloseChangePct`, `week52High`, `week52Low`는 비우고, 가격 숫자를 근거로 한 문장도 쓰지 않습니다.
@@ -120,6 +138,8 @@
 - 한국과 미국 시장을 함께 비교해서 상대 매력도 기준으로 순위를 매깁니다.
 - 거시, 정책/규제, 실적/가이던스, 수급/심리, 금리, 환율, 공급망을 함께 반영합니다.
 - 같은 산업이라도 한국/미국의 투자 판단이 다르면 별개로 취급합니다.
+- 단순히 이미 강한 섹터를 반복 선택하는 것보다, 오늘 상대강도가 새로 붙는 섹터와 아직 덜 반영된 섹터를 한 번 더 밀도 있게 탐색합니다.
+- 섹터 선정은 "현재 가장 강한 3개"뿐 아니라 "지금 막 강해지기 시작한 후보"까지 비교하는 방식으로 생각합니다.
 - 같은 날짜에 히스토리가 여러 개 있으면 `lastUpdated`가 가장 늦은 1개만 그 날짜 대표값으로 간주합니다.
 - 7일 트렌드는 최근 7개 "날짜" 기준으로 집계하며, 히스토리가 부족하면 보수적으로 작성합니다.
 - 시간이 부족하면 커버 범위를 넓게 훑고 세부 확인은 신규/상향 후보에 집중합니다.
@@ -162,7 +182,7 @@
             "week52High": 0,
             "week52Low": 0,
             "currency": "KRW",
-            "sourceNote": "Yahoo Finance 최신 확인값 기준"
+            "sourceNote": "시장별 기본 가격 소스 최신 확인값 기준"
           }
         }
       ]
@@ -191,7 +211,7 @@
             "week52High": 0,
             "week52Low": 0,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 최신 확인값 기준"
+            "sourceNote": "시장별 기본 가격 소스 최신 확인값 기준"
           }
         }
       ]
@@ -299,7 +319,7 @@
         "week52High": 0,
         "week52Low": 0,
         "currency": "KRW",
-        "sourceNote": "Yahoo Finance 최신 확인값 기준"
+        "sourceNote": "시장별 기본 가격 소스 최신 확인값 기준"
       },
       "valuationNote": "밸류에이션 매력 한 줄",
       "liquidityNote": "거래대금/유동성 체크 한 줄",
@@ -342,13 +362,16 @@
 
 실행 절차:
 1. 한국과 미국 시장 데이터를 인터넷에 접속해 조사합니다.
-2. 필요하면 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/history/*.json`를 참고하되, 최근 흐름 파악에 필요한 범위만 보고 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`를 우선 봅니다.
-3. 현재 `latest.json`이 실제 데이터인지 확인합니다.
-4. 실제 데이터라면 `history/YYYY-MM-DDTHH-mm-ss.json`으로 스냅샷을 저장합니다.
-5. 새 JSON을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/latest.json`에 저장합니다.
+2. 유망 섹터 후보와 주의 섹터 후보를 각각 최소 2개 이상 새로 탐색하고, 전일 상위 섹터와 비교합니다.
+3. 필요하면 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`를 참고하되, 최근 흐름 파악에 필요한 범위만 보고 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`를 우선 봅니다.
+4. 현재 `latest.json`이 실제 데이터인지 확인합니다.
+5. 실제 데이터라면 `history/YYYY-MM-DDTHH-mm-ss.json`으로 스냅샷을 저장합니다.
 6. 저장 전 마지막으로 JSON 유효성과 필수 필드만 1회 확인합니다.
-7. 최종 응답은 아래 3줄만 짧게 작성합니다.
-   - 업데이트 완료 여부
+7. 새 JSON을 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`에 저장합니다.
+8. 이번 실행에서 저장한 로컬 `latest.json`과 새 히스토리 파일을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/` 대응 경로에 같은 파일명으로 복사합니다.
+9. `github-pages-root` 저장소에서 이번 실행으로 바뀐 data 파일만 non-interactive git으로 커밋합니다.
+10. 최종 응답은 아래 3줄만 짧게 작성합니다.
+   - 업데이트/동기화 완료 여부
    - 기준 날짜
    - 핵심 변화 1줄
 ```

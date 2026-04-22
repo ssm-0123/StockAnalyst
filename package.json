@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:clean": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:pages": "node scripts/sync-pages-root.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",

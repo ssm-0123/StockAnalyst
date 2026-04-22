@@ -15,8 +15,67 @@ function verdictTone(verdict: "worked" | "mixed" | "failed") {
   return "bg-amber-50 text-amber-700";
 }
 
+function evidenceBadgeVariant(evidence: "snapshot" | "fallback" | "mixed") {
+  if (evidence === "snapshot") {
+    return "positive" as const;
+  }
+
+  if (evidence === "fallback") {
+    return "caution" as const;
+  }
+
+  return "accent" as const;
+}
+
+function evidenceLabel(evidence: "snapshot" | "fallback" | "mixed") {
+  if (evidence === "snapshot") {
+    return "snapshot";
+  }
+
+  if (evidence === "fallback") {
+    return "fallback";
+  }
+
+  return "mixed";
+}
+
+function qualityBadgeVariant(quality: "verified" | "limited" | "stale-excluded") {
+  if (quality === "verified") {
+    return "positive" as const;
+  }
+
+  if (quality === "stale-excluded") {
+    return "caution" as const;
+  }
+
+  return "neutral" as const;
+}
+
+function qualityLabel(quality: "verified" | "limited" | "stale-excluded") {
+  if (quality === "verified") {
+    return "검증됨";
+  }
+
+  if (quality === "stale-excluded") {
+    return "stale 제외";
+  }
+
+  return "근거 제한";
+}
+
 export default async function ResultsPage() {
   const { latest } = await getLatestResultsReport();
+  const smallCapInsights = latest.evaluatedInsights.filter((item) => item.stance === "small-cap");
+  const smallCapScorecard = latest.smallCapScorecard ?? {
+    evaluatedCount: smallCapInsights.length,
+    workedCount: smallCapInsights.filter((item) => item.verdict === "worked").length,
+    mixedCount: smallCapInsights.filter((item) => item.verdict === "mixed").length,
+    failedCount: smallCapInsights.filter((item) => item.verdict === "failed").length,
+    averageCallAlphaPct:
+      smallCapInsights.length > 0
+        ? smallCapInsights.reduce((sum, item) => sum + item.callAlphaPct, 0) / smallCapInsights.length
+        : 0,
+  };
 
   return (
     <main className="dashboard-shell">
@@ -102,7 +161,7 @@ export default async function ResultsPage() {
         </div>
       </section>
 
-      <section className="mt-4 grid gap-4 md:grid-cols-3">
+      <section className="mt-4 grid gap-4 md:grid-cols-4">
         <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <TrendingDown className="size-4" />
@@ -121,6 +180,14 @@ export default async function ResultsPage() {
               : 0}
             %
           </p>
+        </div>
+        <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
+            <TrendingUp className="size-4" />
+            중소형 평가
+          </div>
+          <p className="mt-3 text-3xl font-semibold text-slate-950">{smallCapScorecard.evaluatedCount}</p>
+          <p className="mt-1 text-xs text-slate-500">평균 알파 {smallCapScorecard.averageCallAlphaPct.toFixed(1)}%</p>
         </div>
         <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
@@ -149,6 +216,8 @@ export default async function ResultsPage() {
                       </Badge>
                       <Badge variant="neutral">{item.market}</Badge>
                       <Badge variant="neutral">{item.stance}</Badge>
+                      <Badge variant={evidenceBadgeVariant(item.priceEvidence)}>{evidenceLabel(item.priceEvidence)}</Badge>
+                      <Badge variant={qualityBadgeVariant(item.dataQuality)}>{qualityLabel(item.dataQuality)}</Badge>
                       <span className="text-sm font-semibold text-slate-950">{item.companyName}</span>
                       <span className="text-sm text-slate-500">{item.ticker}</span>
                     </div>
@@ -180,6 +249,14 @@ export default async function ResultsPage() {
                   </div>
                 </div>
                 <p className="mt-4 text-sm leading-6 text-slate-700">{item.outcomeSummary}</p>
+                {item.followThroughReview ? (
+                  <div className="mt-3 rounded-2xl border border-amber-100 bg-amber-50/70 p-3">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-800">
+                      유지 판단 복기
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-slate-700">{item.followThroughReview}</p>
+                  </div>
+                ) : null}
                 <p className="mt-2 text-sm leading-6 text-slate-500">교훈: {item.lesson}</p>
               </div>
             ))}
@@ -187,6 +264,63 @@ export default async function ResultsPage() {
         </div>
 
         <div className="space-y-4">
+          <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-6 shadow-panel">
+            <h2 className="text-lg font-semibold text-slate-950">중소형주 전용 점검</h2>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-amber-100 bg-amber-50/70 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-800">평가 수</p>
+                <p className="mt-2 text-2xl font-semibold text-slate-950">{smallCapScorecard.evaluatedCount}</p>
+              </div>
+              <div className="rounded-2xl border border-cyan-100 bg-cyan-50/70 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-800">평균 알파</p>
+                <p className="mt-2 text-2xl font-semibold text-slate-950">
+                  {smallCapScorecard.averageCallAlphaPct.toFixed(1)}%
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-800">Worked</p>
+                <p className="mt-2 text-2xl font-semibold text-slate-950">{smallCapScorecard.workedCount}</p>
+              </div>
+              <div className="rounded-2xl border border-amber-100 bg-amber-50/70 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-800">Mixed</p>
+                <p className="mt-2 text-2xl font-semibold text-slate-950">{smallCapScorecard.mixedCount}</p>
+              </div>
+              <div className="rounded-2xl border border-rose-100 bg-rose-50/70 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rose-800">Failed</p>
+                <p className="mt-2 text-2xl font-semibold text-slate-950">{smallCapScorecard.failedCount}</p>
+              </div>
+            </div>
+            <div className="mt-4 space-y-3">
+              {smallCapInsights.length ? (
+                smallCapInsights.map((item, index) => (
+                  <div
+                    key={`small-cap-review-${item.market}-${item.ticker}-${index}`}
+                    className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-4"
+                  >
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Badge variant={item.verdict === "worked" ? "positive" : item.verdict === "failed" ? "caution" : "neutral"}>
+                        {item.verdict}
+                      </Badge>
+                      <span className="text-sm font-semibold text-slate-950">{item.companyName}</span>
+                      <span className="text-sm text-slate-500">{item.ticker}</span>
+                    </div>
+                    {item.followThroughReview ? (
+                      <p className="mt-2 text-sm leading-6 text-slate-700">{item.followThroughReview}</p>
+                    ) : (
+                      <p className="mt-2 text-sm leading-6 text-slate-700">{item.outcomeSummary}</p>
+                    )}
+                  </div>
+                ))
+              ) : (
+                <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50/70 p-4 text-sm text-slate-500">
+                  이번 평가 구간에는 중소형주 전용 결과가 아직 충분히 쌓이지 않았습니다.
+                </div>
+              )}
+            </div>
+          </div>
+
           <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-6 shadow-panel">
             <h2 className="text-lg font-semibold text-slate-950">섹터 리뷰</h2>
             <div className="mt-4 space-y-3">

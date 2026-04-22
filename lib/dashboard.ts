@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
+import { normalizeDailyAnalysis, normalizeWeeklyResultsReport } from "@/lib/data-normalizers";
 import { DailyAnalysis, SmallCapTrackingMeta, TrendSummary, WeeklyResultsReport } from "@/lib/types";
 
 const DATA_DIR = path.join(process.cwd(), "public", "data");
@@ -8,9 +9,13 @@ const HISTORY_DIR = path.join(DATA_DIR, "history");
 const RESULTS_DIR = path.join(DATA_DIR, "results");
 const RESULTS_HISTORY_DIR = path.join(RESULTS_DIR, "history");
 
-async function readJsonFile<T>(filePath: string): Promise<T> {
-  const raw = await fs.readFile(filePath, "utf-8");
-  return JSON.parse(raw) as T;
+async function readJsonFile<T>(filePath: string, normalize: (value: unknown) => T): Promise<T> {
+  try {
+    const raw = await fs.readFile(filePath, "utf-8");
+    return normalize(JSON.parse(raw) as unknown);
+  } catch {
+    return normalize(null);
+  }
 }
 
 function getTimestampValue(timestamp?: string) {
@@ -41,7 +46,7 @@ function getLatestEntryPerDate(entries: DailyAnalysis[]) {
 }
 
 export async function getLatestAnalysis() {
-  const latest = await readJsonFile<DailyAnalysis>(path.join(DATA_DIR, "latest.json"));
+  const latest = await readJsonFile(path.join(DATA_DIR, "latest.json"), normalizeDailyAnalysis);
   const history = await getHistoryAnalyses();
   const dailyEntries = getLatestEntryPerDate([latest, ...history]);
   const previousDay = dailyEntries.find((entry) => entry.date !== latest.date) ?? null;
@@ -61,7 +66,7 @@ export async function getHistoryAnalyses() {
     const files = await fs.readdir(HISTORY_DIR);
     const jsonFiles = files.filter((file) => file.endsWith(".json")).sort().reverse();
     const results = await Promise.all(
-      jsonFiles.map((file) => readJsonFile<DailyAnalysis>(path.join(HISTORY_DIR, file))),
+      jsonFiles.map((file) => readJsonFile(path.join(HISTORY_DIR, file), normalizeDailyAnalysis)),
     );
 
     return results.sort(sortByLastUpdatedDesc);
@@ -71,7 +76,7 @@ export async function getHistoryAnalyses() {
 }
 
 export async function getLatestResultsReport() {
-  const latest = await readJsonFile<WeeklyResultsReport>(path.join(RESULTS_DIR, "latest.json"));
+  const latest = await readJsonFile(path.join(RESULTS_DIR, "latest.json"), normalizeWeeklyResultsReport);
   const history = await getResultsHistory();
 
   return {
@@ -85,7 +90,7 @@ export async function getResultsHistory() {
     const files = await fs.readdir(RESULTS_HISTORY_DIR);
     const jsonFiles = files.filter((file) => file.endsWith(".json")).sort().reverse();
     const results = await Promise.all(
-      jsonFiles.map((file) => readJsonFile<WeeklyResultsReport>(path.join(RESULTS_HISTORY_DIR, file))),
+      jsonFiles.map((file) => readJsonFile(path.join(RESULTS_HISTORY_DIR, file), normalizeWeeklyResultsReport)),
     );
 
     return results.sort(sortByLastUpdatedDesc);

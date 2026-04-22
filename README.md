@@ -11,25 +11,11 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Publish on GitHub Pages
+If the Next.js dev cache gets unstable, use:
 
-This project can be deployed as a static site on GitHub Pages.
-
-- The dashboard pages are exported as static HTML.
-- The live quote button is disabled on GitHub Pages because route handlers do not run there.
-- Pushes to `main` trigger `.github/workflows/deploy-pages.yml`.
-
-### First-time setup
-
-1. Create a GitHub repository and push this folder.
-2. In GitHub, open `Settings -> Pages`.
-3. Set `Source` to `GitHub Actions`.
-4. Push to `main`.
-
-Your site URL will usually be:
-
-- `https://<github-username>.github.io/<repo-name>/`
-- If the repo name is exactly `<github-username>.github.io`, then the URL is `https://<github-username>.github.io/`
+```bash
+npm run dev:clean
+```
 
 ## Data source
 
@@ -41,6 +27,16 @@ The UI reads:
 - `public/data/results/history/*.json`
 
 Primary rendering is driven by `latest.json`. The repository keeps only a neutral schema sample there, and the automation should overwrite it with real daily output.
+
+## Source Of Truth
+
+- The root workspace is the single source of truth.
+- `github-pages-root/` is a deploy mirror, not a second app to edit manually.
+- When app code, prompts, or docs change, sync the deploy mirror with:
+
+```bash
+npm run sync:pages
+```
 
 ## Expected usage
 
@@ -81,5 +77,5 @@ If `trendSummary` is omitted, the app falls back to a very small aggregation fro
 - No backend
 - No auth
 - JSON-driven daily decision support UI
+- The UI shows saved `priceSnapshot` data only; there is no live quote fetch path
 - Responsive desktop-first layout with mobile support
-- GitHub Pages build disables live quote API calls automatically
