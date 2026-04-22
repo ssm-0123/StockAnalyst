@@ -15,7 +15,6 @@ const nextConfig: NextConfig = {
   basePath: isGitHubPages ? normalizedBasePath : undefined,
   env: {
     NEXT_PUBLIC_BASE_PATH: isGitHubPages ? normalizedBasePath : "",
-    NEXT_PUBLIC_ENABLE_LIVE_QUOTES: isGitHubPages ? "false" : "true",
     NEXT_PUBLIC_STATIC_EXPORT: isGitHubPages ? "true" : "false",
   },
   experimental: {

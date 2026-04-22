@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Activity, AlertCircle, BarChart3, RefreshCw, Shield } from "lucide-react";
 
 import { ChangeList } from "@/components/change-list";
@@ -54,10 +53,10 @@ export default async function HomePage() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Button asChild variant="secondary">
-              <Link href="/Results">
+              <a href={withBasePath("/Results")}>
                 <BarChart3 className="mr-2 size-4" />
                 결과 평가 보기
-              </Link>
+              </a>
             </Button>
             <Button asChild variant="secondary">
               <a href={withBasePath("/data/latest.json")} target="_blank" rel="noreferrer">
