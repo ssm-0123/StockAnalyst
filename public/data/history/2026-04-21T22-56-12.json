@@ -1,7 +1,7 @@
 {
   "date": "2026-04-22",
-  "lastUpdated": "2026-04-22T07:41:18Z",
-  "marketTone": "한국은 2026년 4월 22일 코스피가 6417선에서 또 신고가를 썼지만 메모리 대형주는 숨 고르기에 들어갔고, 한화솔루션·자동차부품 등 후발주로 수급이 확산됐다. 미국은 2026년 4월 21일 휴전 불확실성으로 3대 지수가 0.6% 밀리고 유가가 98달러대로 뛰며 항공이 더 나빠졌지만 금융과 AI 인프라는 실적으로만 버티는 장세였다.",
+  "lastUpdated": "2026-04-21T22:56:12Z",
+  "marketTone": "한국은 2026년 4월 22일 아침 기준 4월 21일 반도체 수출 급증과 코스피 신고가의 여진이 이어지지만 자동차 수출 둔화는 남아 있다. 미국은 2026년 4월 21일 휴전 불확실성으로 지수가 0.6% 밀리고 유가가 98달러대로 뛰며 항공이 더 나빠졌고, 금융과 AI 인프라는 실적으로만 버티는 장세였다.",
   "topOpportunity": "KR | 반도체",
   "topRisk": "US | 항공/여행",
   "newPicksToday": 0,
@@ -16,10 +16,10 @@
       "market": "KR",
       "rank": 1,
       "confidenceScore": 89,
-      "thesis": "2026년 4월 22일 코스피가 6417선 신고가를 다시 썼고 4월 1~20일 반도체 수출이 182.5% 급증해 업황 신뢰는 유지되지만, 삼성전자와 SK하이닉스는 오늘 숨 고르기에 들어가 신규 추격보다 보유 우선이 맞다.",
+      "thesis": "2026년 4월 22일 아침 기준 한국 4월 1~20일 수출이 49.4%, 반도체가 182.5% 급증해 업황 확신은 더 강해졌지만, 삼성전자와 SK하이닉스는 이미 고점권이라 신규 추격보다 보유 우선이 맞다.",
       "keyDrivers": [
         "4월 21일 관세청 잠정치에서 4월 1~20일 반도체 수출이 182.5% 늘며 수출 모멘텀이 재확인됐다.",
-        "코스피는 4월 22일 6417선에서 또 신고가를 썼고, 반도체가 지수 중심축을 계속 맡고 있다.",
+        "코스피는 4월 21일 6,388.47로 마감하며 반도체 주도 신고가를 다시 썼다.",
         "SK하이닉스 1분기 실적이 4월 29일 예정돼 있어 HBM 가격과 출하 코멘트가 다음 방향을 결정한다."
       ],
       "risks": [
@@ -32,17 +32,17 @@
           "quoteSymbol": "005930.KS",
           "companyName": "삼성전자",
           "market": "KR",
-          "rationale": "217,500원은 52주 최고가 223,000원보다 아직 2%대만 낮고 오늘도 고점권 피로가 확인돼, 실적 개선을 인정해도 신규 상향보다 보유가 낫다.",
+          "rationale": "219,000원은 52주 최고가 223,000원과 간격이 2% 안쪽이라 실적 개선을 인정해도 지금은 신규 상향보다 보유가 낫다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-22",
-            "currentPrice": 217500,
-            "previousCloseChangePct": -0.68,
+            "priceDate": "2026-04-21",
+            "currentPrice": 219000,
+            "previousCloseChangePct": 2.1,
             "week52High": 223000,
             "week52Low": 53700,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 4월 22일 KRX 장마감 기준"
+            "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
           }
         },
         {
@@ -50,17 +50,17 @@
           "quoteSymbol": "000660.KS",
           "companyName": "SK하이닉스",
           "market": "KR",
-          "rationale": "1,223,000원은 52주 최고가 1,233,000원과 간격이 1% 안쪽이라 HBM 실적 기대가 유효해도, 지금은 신규보다 보유 관점이 더 합리적이다.",
+          "rationale": "1,224,000원 종가는 52주 최고가 1,228,000원과 사실상 붙어 있어, HBM 실적 기대는 유효하지만 오늘도 신규보다 보유 관점이 더 합리적이다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-22",
-            "currentPrice": 1223000,
-            "previousCloseChangePct": -0.08,
-            "week52High": 1233000,
-            "week52Low": 176700,
+            "priceDate": "2026-04-21",
+            "currentPrice": 1224000,
+            "previousCloseChangePct": 4.97,
+            "week52High": 1228000,
+            "week52Low": 173300,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 4월 22일 KRX 장마감 기준"
+            "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
           }
         },
         {
@@ -68,17 +68,17 @@
           "quoteSymbol": "042700.KS",
           "companyName": "한미반도체",
           "market": "KR",
-          "rationale": "293,500원은 52주 최고가보다 아직 여유가 있지만 HBM 장비 기대가 이미 상당 부분 반영된 구간이라 업황 확신 대비 종목 평가는 보유가 적절하다.",
+          "rationale": "HBM 후공정 수혜는 유지되지만 295,000원까지 회복해 단기 기대가 꽤 반영돼 있으므로 업황 확신 대비 종목 평가는 보유가 적절하다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-22",
-            "currentPrice": 293500,
-            "previousCloseChangePct": -0.51,
+            "priceDate": "2026-04-21",
+            "currentPrice": 295000,
+            "previousCloseChangePct": 2.79,
             "week52High": 335500,
-            "week52Low": 74300,
+            "week52Low": 72000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 4월 22일 KRX 장마감 기준"
+            "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
           }
         }
       ]
@@ -172,17 +172,17 @@
           "quoteSymbol": "JPM",
           "companyName": "제이피모건",
           "market": "US",
-          "rationale": "313.00달러는 52주 최고가 337.25달러보다 약 7% 낮아 실적 체력은 인정되지만, 미국장 조정이 나온 자리라 신규 상향보다 코어 보유가 낫다.",
+          "rationale": "316.99달러는 52주 최고가 337.25달러보다 약 6% 낮아 실적 체력은 인정되지만, 지수 조정이 나온 자리라 신규 상향보다 코어 보유가 낫다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-21",
-            "currentPrice": 313,
-            "previousCloseChangePct": -1.26,
+            "priceDate": "2026-04-20",
+            "currentPrice": 316.99,
+            "previousCloseChangePct": 2.16,
             "week52High": 337.25,
             "week52Low": 231.37,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 종가 기준"
+            "sourceNote": "Yahoo Finance 4월 20일 종가 기준"
           }
         },
         {
@@ -259,16 +259,16 @@
           "quoteSymbol": "UAL",
           "companyName": "유나이티드항공",
           "market": "US",
-          "rationale": "4월 21일 가이던스 midpoint가 시장 예상을 밑돌았고 종가도 97.13달러로 밀려, 실적 beat보다 연료비와 하반기 수익성 둔화가 더 크게 보인다.",
+          "rationale": "4월 21일 가이던스 midpoint가 시장 예상을 밑돌아, 실적 beat보다 연료비와 하반기 수익성 둔화가 더 크게 보인다.",
           "change": "downgrade",
           "priceSnapshot": {
-            "priceDate": "2026-04-21",
-            "currentPrice": 97.13,
-            "previousCloseChangePct": -1.8,
+            "priceDate": "2026-04-20",
+            "currentPrice": 98.91,
+            "previousCloseChangePct": -2.84,
             "week52High": 119.21,
-            "week52Low": 65.66,
+            "week52Low": 63.23,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 종가 기준; 보수적 연간 가이던스 반영"
+            "sourceNote": "Yahoo Finance 4월 20일 종가 기준; 4월 21일 장후 실적 발표 전 마지막 확인값"
           }
         },
         {
@@ -307,16 +307,16 @@
           "quoteSymbol": "051910.KS",
           "companyName": "LG화학",
           "market": "KR",
-          "rationale": "392,000원으로 반등했어도 본업 석화 마진과 원료 조달 문제가 풀린 것은 아니라 업황 확인 전까지는 경계가 맞다.",
+          "rationale": "4월 21일 급반등이 나왔어도 본업 석화 마진과 원료 조달 문제가 풀린 것은 아니라 업황 확인 전까지는 경계가 맞다.",
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-22",
-            "currentPrice": 392000,
-            "previousCloseChangePct": 0.64,
+            "priceDate": "2026-04-21",
+            "currentPrice": 389500,
+            "previousCloseChangePct": 6.57,
             "week52High": 428500,
             "week52Low": 181500,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 4월 22일 KRX 장마감 기준"
+            "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
           }
         },
         {
@@ -324,16 +324,16 @@
           "quoteSymbol": "011170.KS",
           "companyName": "롯데케미칼",
           "market": "KR",
-          "rationale": "90,900원 장중 반등이 나와도 회사가 구조조정을 전면화한 만큼 단기 숏커버보다 본업 체력 회복 여부를 먼저 봐야 한다.",
+          "rationale": "89,900원은 고점보다 낮지만 회사가 구조조정을 전면화한 만큼 단기 반등보다 본업 체력 회복 여부를 먼저 봐야 한다.",
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-22",
-            "currentPrice": 90900,
-            "previousCloseChangePct": 1.11,
+            "priceDate": "2026-04-21",
+            "currentPrice": 89900,
+            "previousCloseChangePct": 0.67,
             "week52High": 100500,
             "week52Low": 55400,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 4월 22일 14:09 KRX 장중 최신 표시 기준"
+            "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
           }
         },
         {
@@ -341,16 +341,16 @@
           "quoteSymbol": "009830.KS",
           "companyName": "한화솔루션",
           "market": "KR",
-          "rationale": "47,550원 급반등은 숏커버 성격이 강하고, 기초소재와 태양광 동시 회복이 숫자로 확인되기 전까지는 보수적으로 봐야 한다.",
+          "rationale": "기초소재 업황 부담 위에 자본정책 신뢰 훼손까지 겹쳐 있어 단기 반등이 나와도 보수적으로 봐야 한다.",
           "change": "hold",
           "priceSnapshot": {
-            "priceDate": "2026-04-22",
-            "currentPrice": 47550,
-            "previousCloseChangePct": 4.62,
+            "priceDate": "2026-04-21",
+            "currentPrice": 45450,
+            "previousCloseChangePct": 5.7,
             "week52High": 59300,
-            "week52Low": 23600,
+            "week52Low": 22950,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 4월 22일 KRX 장마감 기준"
+            "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
           }
         }
       ]
@@ -428,8 +428,8 @@
   "changesSinceYesterday": [
     {
       "type": "upgrade",
-      "title": "코스피 신고가 재확인",
-      "detail": "4월 22일 코스피가 6417선까지 올라 한국 반도체 톤은 유지됐지만, 추격보다 선별 보유 쪽으로 무게가 옮겨갔다."
+      "title": "AI 인프라 상대순위 상향",
+      "detail": "4월 21일 미국장 조정 속에서도 TSMC 가이던스와 Oracle 멀티클라우드 논리가 유지돼 금융보다 한 칸 위로 올렸다."
     },
     {
       "type": "downgrade",
@@ -439,7 +439,7 @@
     {
       "type": "new-stock",
       "title": "신규 편입 없음",
-      "detail": "전일 바스켓을 유지하고 오늘은 한국 4월 22일 가격 스냅샷과 미국 리스크 반영에 집중했다."
+      "detail": "전일 바스켓을 유지하고 오늘은 미국장 반영과 우선순위 조정에 집중했다."
     },
     {
       "type": "removed-stock",
@@ -448,13 +448,13 @@
     },
     {
       "type": "new-theme",
-      "title": "후발주 수급 확산",
-      "detail": "4월 22일 한국장에서는 삼성전자·SK하이닉스가 쉬는 동안 한화솔루션과 자동차부품 등 후발주로 수급이 확산됐다."
+      "title": "미국 risk-off 재확인",
+      "detail": "4월 21일 미국 지수 3대가 0.6% 밀리고 유가가 98달러대로 뛰며 항공과 경기민감 리스크가 다시 커졌다."
     },
     {
       "type": "fading-theme",
-      "title": "메모리 본주 추격 둔화",
-      "detail": "반도체 업황은 강하지만 4월 22일 메모리 대형주가 동반 약세로 마감하며 단기 과열 부담이 다시 확인됐다."
+      "title": "러셀 상대강세 둔화",
+      "detail": "4월 20일 보였던 소형주·금융 상대강세가 4월 21일에는 지수 전반 조정으로 일부 되돌려졌다."
     }
   ],
   "reasons": {
@@ -462,7 +462,7 @@
       "title": "거시",
       "summary": [
         "AP는 2026년 4월 21일 미국 증시가 휴전 불확실성으로 0.6% 하락했고 Brent crude가 98.48달러로 3.1% 뛰었다고 전했다.",
-        "한국은 4월 21일 발표된 1~20일 수출에서 반도체가 182.5% 급증했지만 자동차와 부품은 각각 14.1%, 8.8% 줄었고, 4월 22일 코스피는 6417선 신고가를 다시 썼다."
+        "한국은 4월 21일 발표된 1~20일 수출에서 반도체가 182.5% 급증했지만 자동차와 부품은 각각 14.1%, 8.8% 줄어 업종 격차가 더 선명해졌다."
       ],
       "affectedSectors": [
         "US 항공/여행",
@@ -497,7 +497,7 @@
     "flows": {
       "title": "수급 / 심리",
       "summary": [
-        "한국은 지수 신고가를 유지했지만 4월 22일 장에서는 삼성전자·SK하이닉스가 쉬고 한화솔루션과 자동차 부품으로 시선이 분산됐다.",
+        "한국은 반도체 대형주가 지수 신고가를 이끌었지만, 오늘은 대형 메모리 본주 추격보다 후발 장비주와 중형 부품주로 시선이 옮겨간다.",
         "미국은 메가캡 전반의 broad risk-on이 약해져 금융과 AI 인프라도 선별 보유 관점으로만 접근하는 수급이 더 우세하다."
       ],
       "affectedSectors": [
@@ -548,16 +548,16 @@
       "sector": "자동차 부품/자율주행",
       "theme": "자율주행 옵션 재평가",
       "thesis": "조향·제동과 ADAS 핵심부품을 동시에 가진 중형주로, 완성차 사이클보다 자율주행 옵션 가치가 아직 덜 반영돼 있다.",
-      "whyNow": "54,200원은 52주 최고가 75,800원보다 약 29% 낮고, 4월 30일 실적 전 자율주행 옵션 재평가를 다시 확인할 수 있다.",
+      "whyNow": "54,300원은 52주 최고가 75,800원보다 약 28% 낮고, 4월 30일 실적 전 자율주행 옵션 재평가를 다시 확인할 수 있다.",
       "followThroughNote": "며칠째 추적했지만 아직도 52주 고점과 간격이 크고 실적 이벤트가 남아 있어 추격보다 선제 관찰 구간으로 볼 여지가 남아 있다.",
       "priceSnapshot": {
-        "priceDate": "2026-04-22",
-        "currentPrice": 54200,
-        "previousCloseChangePct": -0.18,
+        "priceDate": "2026-04-21",
+        "currentPrice": 54300,
+        "previousCloseChangePct": 3.23,
         "week52High": 75800,
         "week52Low": 32100,
         "currency": "KRW",
-        "sourceNote": "Naver Finance 4월 22일 14:49 KRX 장중 최신 표시 기준"
+        "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
       },
       "valuationNote": "PBR 1배 안팎 구간이라 자율주행 옵션이 붙을 때 재평가 여지가 남아 있다.",
       "liquidityNote": "거래대금이 대형주보다 얇아 분할 진입이 필요하고 실적 전후 변동성이 커질 수 있다.",
@@ -580,16 +580,16 @@
       "sector": "반도체 검사/후공정",
       "theme": "HBM 검사장비 후발주",
       "thesis": "HBM 검사·핸들러 노출이 있지만 초대형 메모리 본주보다 덜 알려져 있어 가격 과열이 상대적으로 덜하다.",
-      "whyNow": "57,200원은 52주 최고가 74,000원보다 20% 넘게 낮아 메모리 본주보다 가격 부담이 덜한 후발 장비주로 남아 있다.",
+      "whyNow": "57,100원은 52주 최고가 74,000원보다 20% 넘게 낮아 메모리 본주보다 가격 부담이 덜한 후발 장비주로 남아 있다.",
       "followThroughNote": "며칠째 추적해도 대표 메모리주 대비 덜 오른 후발 검사장비주라는 성격이 유지되고 있어, 수주 확인이 붙으면 추가 재평가 여지가 아직 있다.",
       "priceSnapshot": {
-        "priceDate": "2026-04-22",
-        "currentPrice": 57200,
-        "previousCloseChangePct": 0.18,
+        "priceDate": "2026-04-21",
+        "currentPrice": 57100,
+        "previousCloseChangePct": 3.07,
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
-        "sourceNote": "Naver Finance 4월 22일 KRX 장마감 기준"
+        "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
       },
       "valuationNote": "초대형 메모리 본주보다 덜 오른 후발 검사장비주라 재평가 여지가 남아 있다.",
       "liquidityNote": "코스닥 중형주라 수급 공백 구간에서 변동성이 커질 수 있고 체결 강도도 일정하지 않다.",
@@ -612,16 +612,16 @@
       "sector": "자동차 조명/ADAS 부품",
       "theme": "북미 믹스 개선 재평가",
       "thesis": "북미 조명·ADAS 비중이 높고 주주환원까지 붙어 있어 자동차 부품 중 방어적 중형주 성격이 유지된다.",
-      "whyNow": "64,000원은 52주 최고가 77,400원보다 아직 17%가량 낮고, 1분기 실적 전 북미 믹스 개선 기대를 반영하기 좋은 자리다.",
+      "whyNow": "64,900원은 52주 최고가 77,400원보다 아직 16%가량 낮고, 1분기 실적 전 북미 믹스 개선 기대를 반영하기 좋은 자리다.",
       "followThroughNote": "재편입 이후에도 핵심 논리가 훼손되지 않았고, 여전히 고점 추격 구간이 아니라 추가 체크 가치가 남아 있다.",
       "priceSnapshot": {
-        "priceDate": "2026-04-22",
-        "currentPrice": 64000,
-        "previousCloseChangePct": -1.39,
+        "priceDate": "2026-04-21",
+        "currentPrice": 64900,
+        "previousCloseChangePct": 6.39,
         "week52High": 77400,
         "week52Low": 29900,
         "currency": "KRW",
-        "sourceNote": "Naver Finance 4월 22일 KRX 장마감 기준"
+        "sourceNote": "Naver Finance 4월 21일 KRX 장마감 기준"
       },
       "valuationNote": "자동차 부품 내에서도 저평가 구간이 길어 선행 PER과 배당 매력이 같이 남아 있다.",
       "liquidityNote": "거래량이 아주 많지는 않아 이벤트 전후 스프레드가 벌어질 수 있다.",
