@@ -11,6 +11,8 @@
     "sync:pages": "node scripts/sync-pages-root.mjs",
     "check:data": "node --import tsx scripts/check-data-quality.ts",
     "check:data:strict": "node --import tsx scripts/check-data-quality.ts --strict",
+    "check:mirror": "node scripts/check-mirror-status.mjs",
+    "check:mirror:strict": "node scripts/check-mirror-status.mjs --strict",
     "test": "node --import tsx --test tests/*.test.ts"
   },
   "dependencies": {
