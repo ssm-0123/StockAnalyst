@@ -44,14 +44,38 @@ function pct(value: number) {
 
 function formatSummary(summary: ValidationSummary) {
   return [
-    `total=${summary.totalIdeas}`,
-    `fresh=${summary.freshSnapshots}`,
-    `stale=${summary.staleSnapshots}`,
-    `incomplete=${summary.incompleteSnapshots}`,
-    `invalid=${summary.invalidSnapshots}`,
-    `highConfidence=${summary.highConfidenceIdeas}`,
-    `freshRatio=${pct(freshRatio(summary))}`,
+    `전체 ${summary.totalIdeas}개`,
+    `fresh ${summary.freshSnapshots}개`,
+    `stale ${summary.staleSnapshots}개`,
+    `불완전 ${summary.incompleteSnapshots}개`,
+    `이상치 ${summary.invalidSnapshots}개`,
+    `고신뢰 ${summary.highConfidenceIdeas}개`,
+    `fresh 비율 ${pct(freshRatio(summary))}`,
   ].join(" ");
+}
+
+function resultLabel(label: string) {
+  if (label === "daily") {
+    return "Daily 가격";
+  }
+
+  if (label === "results") {
+    return "Results 근거";
+  }
+
+  return label;
+}
+
+function severityLabel(severity: ValidationIssue["severity"]) {
+  if (severity === "critical") {
+    return "치명";
+  }
+
+  if (severity === "warning") {
+    return "경고";
+  }
+
+  return "참고";
 }
 
 function shouldFailDaily(summary: ValidationSummary, strict: boolean) {
@@ -126,7 +150,7 @@ async function checkResultsData(): Promise<CheckResult> {
           code: `results-${item.dataQuality}`,
           label: item.dataQuality,
           severity: item.dataQuality === "stale-excluded" ? "warning" : "info",
-          detail: `Results item uses ${item.dataQuality} data quality with ${item.priceEvidence} price evidence.`,
+          detail: `Results 평가가 ${item.dataQuality} 품질과 ${item.priceEvidence} 가격 근거를 사용합니다.`,
         },
       });
     }
@@ -140,7 +164,7 @@ async function checkResultsData(): Promise<CheckResult> {
           code: "results-fallback-price",
           label: "fallback",
           severity: "info",
-          detail: "Results item uses fallback price evidence instead of saved snapshot evidence.",
+          detail: "Results 평가가 saved snapshot 대신 fallback 가격 근거를 사용합니다.",
         },
       });
     }
@@ -163,22 +187,22 @@ function parseOptions(argv: string[]): CliOptions {
 
 function printText(results: CheckResult[], strict: boolean) {
   for (const result of results) {
-    console.log(`[${result.label}] ${formatSummary(result.summary)}`);
+    console.log(`[${resultLabel(result.label)}] ${formatSummary(result.summary)}`);
     console.log(`  ${result.summary.summary}`);
 
     for (const item of result.issues.slice(0, 12)) {
       const name = item.ticker ? `${item.ticker} ${item.companyName ?? ""}`.trim() : item.scope;
-      console.log(`  - ${item.issue.severity}: ${name} | ${item.issue.label} | ${item.issue.detail}`);
+      console.log(`  - ${severityLabel(item.issue.severity)}: ${name} | ${item.issue.label} | ${item.issue.detail}`);
     }
 
     if (result.issues.length > 12) {
-      console.log(`  - ... ${result.issues.length - 12} more issue(s)`);
+      console.log(`  - 그 외 ${result.issues.length - 12}건`);
     }
   }
 
   if (strict) {
-    console.log("[strict] daily requires no invalid snapshots and at least 80% fresh snapshots.");
-    console.log("[strict] results requires at least 60% verified snapshot-quality evidence.");
+    console.log("[strict] Daily는 이상치 0건, fresh 비율 80% 이상이어야 합니다.");
+    console.log("[strict] Results는 verified/snapshot급 근거 비율 60% 이상이어야 합니다.");
   }
 }
 

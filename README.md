@@ -31,6 +31,12 @@ npm run check:data
 
 Use `npm run check:data:strict` when you want CI-style failure thresholds for invalid or low-freshness data.
 
+Check whether the deploy mirror has uncommitted changes with:
+
+```bash
+npm run check:mirror
+```
+
 ## Data source
 
 The UI reads:
