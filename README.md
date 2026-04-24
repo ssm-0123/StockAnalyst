@@ -23,6 +23,14 @@ Run the logic test suite with:
 npm test
 ```
 
+Check the saved dashboard/result data quality with:
+
+```bash
+npm run check:data
+```
+
+Use `npm run check:data:strict` when you want CI-style failure thresholds for invalid or low-freshness data.
+
 ## Data source
 
 The UI reads:

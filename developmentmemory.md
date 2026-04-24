@@ -206,6 +206,8 @@
 검증/테스트 상태:
 - npm run build 통과
 - npm test 통과
+- npm run check:data 로 saved daily/results 데이터 품질을 요약 확인 가능
+- npm run check:data:strict 는 daily invalid 또는 fresh 비율 저하, results verified 비율 저하를 실패 처리
 - tests/quality.test.ts 존재
 - 테스트 커버 범위:
   - stale snapshot
