@@ -47,6 +47,9 @@
 품질 체크 규칙:
 - 평가 후보를 고르기 전 루트에서 `npm run check:history`를 실행하고 평가 가능 종목 수를 확인합니다.
 - 반복 가격 관측이 부족한 종목은 `evaluatedInsights`에 억지로 넣지 않습니다.
+- `check:history`에서 가격 관측 2회 이상으로 평가 가능한 종목을 `evaluatedInsights` 후보의 1순위로 둡니다.
+- verified/snapshot 후보가 4개 이상 있으면 limited/fallback 후보는 원칙적으로 제외합니다.
+- limited/fallback 후보는 4개 이상 verified 후보를 확보할 수 없거나, 섹터/중소형 대표성 때문에 꼭 필요한 경우에만 포함합니다.
 - 새 Results JSON 저장과 미러링 후 루트에서 `npm run check:data`를 실행합니다.
 - Results 근거 요약의 verified/limited/stale/fallback 상태를 확인합니다.
 - `evaluatedInsights`에 `benchmarkLabel`, `priceEvidence`, `dataQuality`가 빠진 항목이 있으면 저장 전 1회 보정합니다.
@@ -59,6 +62,10 @@
 - 같은 종목이 여러 날짜에 반복 등장하면, 가장 처음 등장한 날짜를 `entryDate`, 가장 최근 대표본 날짜를 `evaluationDate` 후보로 봅니다.
 - `stance`는 `promising`, `caution`, `small-cap` 중 하나만 사용합니다.
 - `evaluatedInsights`는 4~8개를 목표로 하되, 로컬 데이터로 가격 근거가 검증되는 종목만 넣습니다.
+- 후보 우선순위는 1) priceSnapshot 현재가가 2개 이상 있는 종목, 2) 같은 stance로 반복 등장한 종목, 3) 중소형주 중 반복 관측된 종목, 4) mixed/fallback 보조 근거가 필요한 종목 순서입니다.
+- `priceEvidence: "snapshot"`과 `dataQuality: "verified"`를 기본 목표로 삼고, 최소 4개 이상은 verified/snapshot 평가로 채웁니다.
+- `dataQuality: "limited"` 또는 `priceEvidence: "mixed"`인 항목을 넣을 때는 `outcomeSummary`에 왜 제한적 근거로 포함했는지 명시합니다.
+- `priceEvidence: "fallback"`은 원칙적으로 피하고, 사용하면 `lesson`에 다음 자동화에서 반복 스냅샷을 쌓아야 한다는 교훈을 남깁니다.
 - 가격 근거가 충분한 종목이 4개 미만이면 억지로 채우지 말고, 검증 가능한 종목만 넣고 그 사유를 `summary`에 짧게 반영합니다.
 
 가격/수익률 계산 규칙:

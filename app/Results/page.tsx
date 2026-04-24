@@ -87,6 +87,29 @@ function confidenceLabel(level?: "high" | "medium" | "low") {
   return "Medium";
 }
 
+function evidenceLimitNote(item: {
+  priceEvidence: "snapshot" | "fallback" | "mixed";
+  dataQuality: "verified" | "limited" | "stale-excluded";
+}) {
+  if (item.dataQuality === "verified" && item.priceEvidence === "snapshot") {
+    return null;
+  }
+
+  if (item.dataQuality === "stale-excluded") {
+    return "stale 가격은 수익률 계산에서 제외했습니다. 이 평가는 방향성 복기 위주로 봐야 합니다.";
+  }
+
+  if (item.priceEvidence === "fallback") {
+    return "저장된 반복 가격 스냅샷이 부족해 텍스트 fallback 근거를 사용했습니다.";
+  }
+
+  if (item.priceEvidence === "mixed") {
+    return "일부 구간은 저장 스냅샷, 일부 구간은 보조 근거를 함께 사용한 제한적 평가입니다.";
+  }
+
+  return "반복 가격 관측이 충분하지 않아 보수적으로 해석해야 하는 평가입니다.";
+}
+
 export default async function ResultsPage() {
   const { latest } = await getLatestResultsReport();
   const smallCapInsights = latest.evaluatedInsights.filter((item) => item.stance === "small-cap");
@@ -266,6 +289,19 @@ export default async function ResultsPage() {
                 key={`evaluated-${item.market}-${item.ticker}-${index}`}
                 className="rounded-3xl border border-slate-200/80 bg-slate-50/70 p-4"
               >
+                {evidenceLimitNote(item) ? (
+                  <div className="mb-3 rounded-2xl border border-amber-100 bg-amber-50/70 p-3">
+                    <div className="flex items-start gap-2">
+                      <TriangleAlert className="mt-0.5 size-4 shrink-0 text-amber-700" />
+                      <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-800">
+                          근거 제한
+                        </p>
+                        <p className="mt-1 text-sm leading-6 text-slate-700">{evidenceLimitNote(item)}</p>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     <div className="flex flex-wrap items-center gap-2">

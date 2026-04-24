@@ -188,6 +188,8 @@
 - smallCapIdeas는 최소 3개 목표, 보통 4~6개, 최대 6개
 - smallCapIdeas 는 followThroughNote 포함
 - Results prompt는 benchmarkLabel 포함하도록 업데이트됨
+- Results prompt는 `check:history`의 평가 가능 후보를 우선 사용하고 verified/snapshot 평가를 최소 4개 이상 채우도록 강화됨
+- Results UI는 limited/mixed/fallback 평가 항목에 근거 제한 사유 박스를 표시함
 
 자동화 운영:
 - Analyst PM / Analyst AM 자동화가 있음
