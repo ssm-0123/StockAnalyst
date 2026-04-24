@@ -17,6 +17,7 @@
 - 이 데이터셋의 핵심 필드는 보통 `promisingSectors`, `cautionSectors`, `smallCapIdeas`, 각 섹터의 `stocks`입니다.
 - 존재하지 않는 `promising`, `caution`, `smallCap` 같은 가상 필드를 전제로 작업하지 않습니다.
 - 이 자동화는 로컬 파일만 사용합니다. 웹 검색이나 외부 시세 조회는 하지 않습니다.
+- 루트에서 `npm run check:history`를 실행해 최근 대표본 수, 반복 관측 종목 수, 평가 가능 종목 수를 먼저 확인합니다.
 
 중요 전제:
 - 평가 대상 원본은 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json` 및 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`입니다.
@@ -49,6 +50,8 @@
 - `git push`는 시도하지 않습니다.
 
 품질 체크 규칙:
+- 평가 후보를 고르기 전 루트에서 `npm run check:history`를 실행하고 평가 가능 종목 수를 확인합니다.
+- 반복 가격 관측이 부족한 종목은 `evaluatedInsights`에 억지로 넣지 않습니다.
 - 새 Results JSON 저장과 미러링 후 루트에서 `npm run check:data`를 실행합니다.
 - Results 근거 요약의 verified/limited/stale/fallback 상태를 확인합니다.
 - `evaluatedInsights`에 `benchmarkLabel`, `priceEvidence`, `dataQuality`가 빠진 항목이 있으면 저장 전 1회 보정합니다.
@@ -187,18 +190,19 @@
 
 실행 절차:
 1. `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`과 `public/data/history/*.json`를 읽고 실제 스키마를 먼저 확인합니다.
-2. 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`만 남겨 날짜별 대표본을 만듭니다.
-3. 최신 대표본의 `date`를 기준으로 평가 기간을 계산하고, 데이터가 부족하면 실제 존재하는 기간만 사용합니다.
-4. 평가 기간 대표본에서 종목 후보와 섹터 후보를 고릅니다.
-5. 로컬 JSON 안의 명시 가격만 이용해 실제 수익률과 보수적 벤치마크 대비 성과를 계산합니다.
-6. 현재 `public/data/results/latest.json`이 실제 데이터라면 `public/data/results/history/YYYY-MM-DDTHH-mm-ss.json`으로 저장합니다.
-7. 저장 전 마지막으로 JSON 유효성과 필수 필드만 1회 확인합니다.
-8. 새 결과평가 JSON을 `public/data/results/latest.json`에 저장합니다.
-9. 이번 실행에서 저장한 로컬 results `latest.json`과 새 히스토리 파일을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/` 대응 경로에 같은 파일명으로 복사합니다.
-10. 루트에서 `npm run check:data`를 실행하고 Results 근거 품질 요약을 확인합니다.
-11. `github-pages-root` 저장소에서 이번 실행으로 바뀐 results data 파일만 non-interactive git으로 커밋합니다.
-12. 루트에서 `npm run check:mirror`를 실행해 남은 미커밋 변경 여부를 확인합니다.
-13. 최종 응답은 아래 4줄만 짧게 작성합니다.
+2. 루트에서 `npm run check:history`를 실행해 평가 가능한 반복 관측 종목을 확인합니다.
+3. 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`만 남겨 날짜별 대표본을 만듭니다.
+4. 최신 대표본의 `date`를 기준으로 평가 기간을 계산하고, 데이터가 부족하면 실제 존재하는 기간만 사용합니다.
+5. 평가 기간 대표본에서 종목 후보와 섹터 후보를 고릅니다.
+6. 로컬 JSON 안의 명시 가격만 이용해 실제 수익률과 보수적 벤치마크 대비 성과를 계산합니다.
+7. 현재 `public/data/results/latest.json`이 실제 데이터라면 `public/data/results/history/YYYY-MM-DDTHH-mm-ss.json`으로 저장합니다.
+8. 저장 전 마지막으로 JSON 유효성과 필수 필드만 1회 확인합니다.
+9. 새 결과평가 JSON을 `public/data/results/latest.json`에 저장합니다.
+10. 이번 실행에서 저장한 로컬 results `latest.json`과 새 히스토리 파일을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/` 대응 경로에 같은 파일명으로 복사합니다.
+11. 루트에서 `npm run check:data`를 실행하고 Results 근거 품질 요약을 확인합니다.
+12. `github-pages-root` 저장소에서 이번 실행으로 바뀐 results data 파일만 non-interactive git으로 커밋합니다.
+13. 루트에서 `npm run check:mirror`를 실행해 남은 미커밋 변경 여부를 확인합니다.
+14. 최종 응답은 아래 4줄만 짧게 작성합니다.
    - 업데이트/동기화 완료 여부
    - 평가 기간
    - 데이터 품질 요약 1줄

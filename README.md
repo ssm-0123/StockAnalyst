@@ -37,6 +37,12 @@ Check whether the deploy mirror has uncommitted changes with:
 npm run check:mirror
 ```
 
+Check whether recent history has enough repeated snapshots for the Results page with:
+
+```bash
+npm run check:history
+```
+
 ## Data source
 
 The UI reads:
