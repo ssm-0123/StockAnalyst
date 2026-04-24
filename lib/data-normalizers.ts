@@ -308,6 +308,7 @@ function normalizeEvaluatedInsight(value: unknown): EvaluatedInsight {
       typeof input.dataQuality === "string" && DATA_QUALITY.has(input.dataQuality as EvaluatedInsight["dataQuality"])
         ? (input.dataQuality as EvaluatedInsight["dataQuality"])
         : "limited",
+    benchmarkLabel: asOptionalString(input.benchmarkLabel),
     outcomeSummary: asString(input.outcomeSummary, "결과 요약 없음"),
     followThroughReview: asOptionalString(input.followThroughReview),
     lesson: asString(input.lesson, "교훈 없음"),

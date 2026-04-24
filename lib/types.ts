@@ -10,6 +10,26 @@ export type StockStatus =
 
 export type MarketCode = "KR" | "US" | "GLOBAL";
 export type CurrencyCode = "KRW" | "USD";
+export type ConfidenceLevel = "high" | "medium" | "low";
+export type SnapshotHealth = "fresh" | "stale" | "partial" | "missing" | "invalid";
+export type ValidationSeverity = "info" | "warning" | "critical";
+
+export interface ValidationIssue {
+  code: string;
+  label: string;
+  severity: ValidationSeverity;
+  detail: string;
+}
+
+export interface ValidationSummary {
+  totalIdeas: number;
+  freshSnapshots: number;
+  staleSnapshots: number;
+  incompleteSnapshots: number;
+  invalidSnapshots: number;
+  highConfidenceIdeas: number;
+  summary: string;
+}
 
 export interface StockPriceSnapshot {
   priceDate: string;
@@ -30,6 +50,9 @@ export interface StockIdea {
   isNew?: boolean;
   change: StockStatus;
   priceSnapshot?: StockPriceSnapshot;
+  confidenceLevel?: ConfidenceLevel;
+  snapshotHealth?: SnapshotHealth;
+  validationIssues?: ValidationIssue[];
 }
 
 export interface SectorEntry {
@@ -43,6 +66,7 @@ export interface SectorEntry {
   headwinds?: string[];
   whatCouldImprove?: string[];
   stocks: StockIdea[];
+  confidenceLevel?: ConfidenceLevel;
 }
 
 export interface ChangeEvent {
@@ -87,6 +111,9 @@ export interface SmallCapIdea {
   catalysts: string[];
   risks: string[];
   priceSnapshot?: StockPriceSnapshot;
+  confidenceLevel?: ConfidenceLevel;
+  snapshotHealth?: SnapshotHealth;
+  validationIssues?: ValidationIssue[];
 }
 
 export interface SmallCapTrackingMeta {
@@ -129,9 +156,11 @@ export interface EvaluatedInsight {
   verdict: "worked" | "mixed" | "failed";
   priceEvidence: "snapshot" | "fallback" | "mixed";
   dataQuality: "verified" | "limited" | "stale-excluded";
+  benchmarkLabel?: string;
   outcomeSummary: string;
   followThroughReview?: string;
   lesson: string;
+  confidenceLevel?: ConfidenceLevel;
 }
 
 export interface SectorReview {
@@ -160,6 +189,7 @@ export interface WeeklyResultsReport {
   sectorReviews: SectorReview[];
   processTakeaways: string[];
   nextWeekFocus: string[];
+  validationSummary?: ValidationSummary;
 }
 
 export interface DailyAnalysis {
@@ -188,6 +218,7 @@ export interface DailyAnalysis {
   checkpoints: CheckpointItem[];
   smallCapIdeas?: SmallCapIdea[];
   trendSummary?: TrendSummary;
+  validationSummary?: ValidationSummary;
 }
 
 export interface TrendSummary {

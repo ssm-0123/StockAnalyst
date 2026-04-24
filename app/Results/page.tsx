@@ -1,4 +1,4 @@
-import { BarChart3, CheckCircle2, Clock3, TrendingDown, TrendingUp, TriangleAlert } from "lucide-react";
+import { BarChart3, CheckCircle2, Clock3, Shield, TrendingDown, TrendingUp, TriangleAlert } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { getLatestResultsReport, formatTimestamp } from "@/lib/dashboard";
@@ -61,6 +61,30 @@ function qualityLabel(quality: "verified" | "limited" | "stale-excluded") {
   }
 
   return "근거 제한";
+}
+
+function confidenceVariant(level?: "high" | "medium" | "low") {
+  if (level === "high") {
+    return "positive" as const;
+  }
+
+  if (level === "low") {
+    return "caution" as const;
+  }
+
+  return "neutral" as const;
+}
+
+function confidenceLabel(level?: "high" | "medium" | "low") {
+  if (level === "high") {
+    return "High";
+  }
+
+  if (level === "low") {
+    return "Low";
+  }
+
+  return "Medium";
 }
 
 export default async function ResultsPage() {
@@ -198,6 +222,40 @@ export default async function ResultsPage() {
         </div>
       </section>
 
+      {latest.validationSummary ? (
+        <section className="mt-4 grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+              <Shield className="size-4" />
+              평가 근거 검증
+            </div>
+            <p className="mt-3 text-lg font-semibold tracking-tight text-slate-950">{latest.validationSummary.summary}</p>
+            <p className="mt-2 text-sm leading-6 text-slate-500">
+              총 {latest.validationSummary.totalIdeas}개 평가 중 {latest.validationSummary.highConfidenceIdeas}개를
+              고신뢰로 분류했습니다.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Verified</p>
+              <p className="mt-3 text-3xl font-semibold text-emerald-700">{latest.validationSummary.freshSnapshots}</p>
+            </div>
+            <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Stale Excluded</p>
+              <p className="mt-3 text-3xl font-semibold text-rose-700">{latest.validationSummary.staleSnapshots}</p>
+            </div>
+            <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Limited</p>
+              <p className="mt-3 text-3xl font-semibold text-slate-950">{latest.validationSummary.incompleteSnapshots}</p>
+            </div>
+            <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Fallback</p>
+              <p className="mt-3 text-3xl font-semibold text-slate-950">{latest.validationSummary.invalidSnapshots}</p>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="mt-10 grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-6 shadow-panel">
           <h2 className="text-lg font-semibold text-slate-950">평가된 인사이트</h2>
@@ -218,6 +276,7 @@ export default async function ResultsPage() {
                       <Badge variant="neutral">{item.stance}</Badge>
                       <Badge variant={evidenceBadgeVariant(item.priceEvidence)}>{evidenceLabel(item.priceEvidence)}</Badge>
                       <Badge variant={qualityBadgeVariant(item.dataQuality)}>{qualityLabel(item.dataQuality)}</Badge>
+                      <Badge variant={confidenceVariant(item.confidenceLevel)}>{confidenceLabel(item.confidenceLevel)}</Badge>
                       <span className="text-sm font-semibold text-slate-950">{item.companyName}</span>
                       <span className="text-sm text-slate-500">{item.ticker}</span>
                     </div>
@@ -247,6 +306,15 @@ export default async function ResultsPage() {
                     <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500">보유일수</p>
                     <p className="mt-1 text-sm font-semibold text-slate-950">{item.holdingPeriodDays}일</p>
                   </div>
+                </div>
+                <div className="mt-3 rounded-2xl border border-slate-200/80 bg-white/80 p-3">
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500">벤치마크 비교</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-950">{item.benchmarkLabel}</p>
+                  <p className="mt-1 text-sm text-slate-600">
+                    종목 수익률 {item.priceReturnPct > 0 ? "+" : ""}
+                    {item.priceReturnPct.toFixed(1)}% vs 벤치마크 {item.benchmarkReturnPct > 0 ? "+" : ""}
+                    {item.benchmarkReturnPct.toFixed(1)}%
+                  </p>
                 </div>
                 <p className="mt-4 text-sm leading-6 text-slate-700">{item.outcomeSummary}</p>
                 {item.followThroughReview ? (

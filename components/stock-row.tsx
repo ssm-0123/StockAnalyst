@@ -3,7 +3,7 @@ import { ArrowDownRight, ArrowUpRight, ChevronDown, Minus, Sparkles, X } from "l
 import { Badge } from "@/components/ui/badge";
 import { getMarketBadgeVariant, getMarketLabel } from "@/lib/market";
 import { cn } from "@/lib/utils";
-import { StockIdea } from "@/lib/types";
+import { ConfidenceLevel, SnapshotHealth, StockIdea } from "@/lib/types";
 
 const badgeMap = {
   NEW: { label: "신규", icon: Sparkles, className: "bg-emerald-50 text-emerald-700" },
@@ -54,6 +54,32 @@ function formatPercent(value?: number) {
   return `${sign}${value.toFixed(2)}%`;
 }
 
+function confidenceVariant(level?: ConfidenceLevel) {
+  if (level === "high") return "positive" as const;
+  if (level === "low") return "caution" as const;
+  return "neutral" as const;
+}
+
+function confidenceLabel(level?: ConfidenceLevel) {
+  if (level === "high") return "High";
+  if (level === "low") return "Low";
+  return "Medium";
+}
+
+function healthVariant(health?: SnapshotHealth) {
+  if (health === "fresh") return "positive" as const;
+  if (health === "partial" || health === "missing") return "neutral" as const;
+  return "caution" as const;
+}
+
+function healthLabel(health?: SnapshotHealth) {
+  if (health === "fresh") return "fresh";
+  if (health === "stale") return "stale";
+  if (health === "invalid") return "invalid";
+  if (health === "missing") return "missing";
+  return "partial";
+}
+
 export function StockRow({ stock, caution = false }: { stock: StockIdea; caution?: boolean }) {
   const status = normalizeStatus(stock);
   const config = badgeMap[status];
@@ -75,6 +101,9 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
             <span className="text-sm font-semibold tracking-[0.18em] text-slate-900">{stock.ticker}</span>
             <Badge variant={getMarketBadgeVariant(stock.market)} className="px-2 py-0.5 text-[10px]">
               {getMarketLabel(stock.market)}
+            </Badge>
+            <Badge variant={confidenceVariant(stock.confidenceLevel)} className="px-2 py-0.5 text-[10px]">
+              {confidenceLabel(stock.confidenceLevel)}
             </Badge>
             <p className="truncate text-sm font-medium text-slate-500">{stock.companyName}</p>
           </div>
@@ -103,7 +132,12 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
       <div className="border-t border-slate-200/80 px-3 py-3">
         <div className="mb-2 flex items-center justify-between gap-3">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">분석 시점 스냅샷</p>
-          <span className="text-xs text-slate-500">{snapshot?.priceDate || "업데이트 예정"}</span>
+          <div className="flex items-center gap-2">
+            <Badge variant={healthVariant(stock.snapshotHealth)} className="px-2 py-0.5 text-[10px]">
+              {healthLabel(stock.snapshotHealth)}
+            </Badge>
+            <span className="text-xs text-slate-500">{snapshot?.priceDate || "업데이트 예정"}</span>
+          </div>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
@@ -143,6 +177,20 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
         <div className="mt-3 flex flex-wrap gap-3 text-xs text-slate-500">
           <span>{snapshot?.sourceNote ?? "자동화가 저장한 분석 시점 가격입니다."}</span>
         </div>
+        {stock.validationIssues?.length ? (
+          <div className="mt-3 flex flex-wrap gap-2">
+            {stock.validationIssues.map((issue) => (
+              <Badge
+                key={`${stock.ticker}-${issue.code}`}
+                variant={issue.severity === "critical" ? "caution" : "neutral"}
+                className="px-2 py-0.5 text-[10px]"
+                title={issue.detail}
+              >
+                {issue.label}
+              </Badge>
+            ))}
+          </div>
+        ) : null}
         {!hasSnapshotMetrics ? (
           <div className="mt-3 rounded-2xl border border-dashed border-slate-200 bg-white/80 px-3 py-2 text-sm text-slate-500">
             아직 분석 시점 가격 스냅샷 데이터가 없습니다.
