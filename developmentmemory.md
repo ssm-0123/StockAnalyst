@@ -15,6 +15,7 @@
 - Base-path helper: `lib/site.ts`
 - Main stock row UI: `components/stock-row.tsx`
 - Deploy mirror sync script: `scripts/sync-pages-root.mjs`
+- Logic tests: `tests/quality.test.ts`
 
 ## Implemented Features
 - Added small-cap / undervalued idea section via `components/small-cap-panel.tsx`
@@ -74,6 +75,8 @@
 - Preferred price source is now market-specific:
   - KR: Naver Finance domestic stock pages
   - US: Yahoo Finance quote/detail pages
+- If a US price cannot be verified on Yahoo or key fields are blank, automation should check Naver Finance overseas/US pages once more before leaving the field empty
+- If Yahoo and Naver still disagree or both look stale, leave the field blank and explain that both sources were checked in `sourceNote`
 - Latest rule:
   - `smallCapIdeas` should target at least 3 names and usually land in the 4-6 range, with 6 as the practical upper bound
   - all `priceSnapshot` values must come from the latest available market-specific source page data
@@ -125,5 +128,136 @@
 
 ## Immediate Follow-Up
 - Run `npm run sync:pages` after root code, prompt, or docs change
+- Run `npm test` when changing validation, normalizers, or history selection logic
 - Restart dev server cleanly
 - If runtime errors continue, run `npm run dev:clean`
+
+## GPT-5.5 Handoff
+
+### Compressed Context
+
+```text
+프로젝트: /Users/ssm/Documents/Investment Analyst
+목적: KR/US 일일 섹터 분석 대시보드 + 주간 Results 복기 페이지
+스택: Next.js 15 App Router, TypeScript, Tailwind, JSON 기반 렌더링
+로컬 앱 주소: http://localhost:3000
+소스 오브 트루스: 루트 워크스페이스
+배포 구조: github-pages-root 는 별도 앱이 아니라 deploy mirror. 직접 양쪽 수정하지 말고 루트만 수정 후 `npm run sync:pages`.
+배포용 GitHub Pages repo: github-pages-root 내부 git repo. push는 자동화에서 하지 않음.
+중요 파일:
+- /Users/ssm/Documents/Investment Analyst/developmentmemory.md
+- /Users/ssm/Documents/Investment Analyst/README.md
+- /Users/ssm/Documents/Investment Analyst/AUTOMATION_PROMPT.txt
+- /Users/ssm/Documents/Investment Analyst/RESULTS_AUTOMATION_PROMPT.txt
+- /Users/ssm/Documents/Investment Analyst/lib/dashboard.ts
+- /Users/ssm/Documents/Investment Analyst/lib/data-normalizers.ts
+- /Users/ssm/Documents/Investment Analyst/lib/quality.ts
+- /Users/ssm/Documents/Investment Analyst/lib/types.ts
+- /Users/ssm/Documents/Investment Analyst/app/page.tsx
+- /Users/ssm/Documents/Investment Analyst/app/Results/page.tsx
+- /Users/ssm/Documents/Investment Analyst/scripts/sync-pages-root.mjs
+
+현재 제품 상태:
+- 메인 홈: app/page.tsx
+- Results: app/Results/page.tsx
+- 소문자 alias route: app/results/page.tsx 가 Results를 렌더링
+- public/data/latest.json, history/*.json, public/data/results/latest.json 을 읽음
+- 같은 날짜에 여러 번 분석 가능하고, trend는 그 날짜의 가장 늦은 snapshot만 사용
+- UI는 live quote API를 쓰지 않음. 저장된 priceSnapshot만 표시
+- 종목 상세/중소형 카드 모두 priceSnapshot 확장 표시
+- smallCapIdeas 섹션 있음
+- Results 페이지 있음
+- Results에는 benchmark 비교, confidence 배지, validation 요약이 붙음
+
+가격/신뢰도 규칙:
+- 기본 표시값은 항상 analysis-time priceSnapshot
+- KR 가격 기본 소스: Naver Finance
+- US 가격 기본 소스: Yahoo Finance
+- US는 Yahoo에서 최신값 못 찾거나 비면 Naver Finance 해외/미국 종목 페이지 1회 추가 확인
+- 둘 다 불명확하거나 충돌하면 숫자 비우고 sourceNote에 남김
+- stale 기준: analysis date 대비 5일 초과
+- lib/quality.ts 에서 snapshotHealth(fresh/stale/partial/missing/invalid)와 confidenceLevel(high/medium/low) 계산
+- extreme daily move 30% 초과 등은 invalid 처리
+
+자동화/프롬프트 상태:
+- 일간 프롬프트는 review형이 아니라 forward sector rotation형으로 변경됨
+- 핵심 목적: 향후 3~10거래일 동안 어디로 자금이 더 붙고 어디가 약해질지 선행 판단
+- thesis는 최근 사실 1문장 + 앞으로의 촉매/지속성 1~2문장 + 무효화 조건 1문장 흐름
+- 장 리뷰성 문장은 섹터당 1문장 이내
+- challenger sector를 내부적으로 비교하도록 강화
+- smallCapIdeas는 최소 3개 목표, 보통 4~6개, 최대 6개
+- smallCapIdeas 는 followThroughNote 포함
+- Results prompt는 benchmarkLabel 포함하도록 업데이트됨
+
+자동화 운영:
+- Analyst PM / Analyst AM 자동화가 있음
+- 분석 후 local data + github-pages-root/public/data 쪽 sync + commit 까지만 함
+- git push는 자동화에서 제거됨 (DNS/권한 이슈 때문)
+- Results 자동화도 local results + mirror sync + commit 까지만 하도록 바뀜
+- publish-stock-data 별도 자동화는 paused
+- 토요일 Results 평가 유지
+
+배포/워크플로:
+- github-pages-root/.github/workflows/deploy-pages.yml 사용
+- Pages build 실패 원인 중 하나였던 missing app/api 가드 추가됨
+- clean build step(.next/out 삭제) 추가됨
+- GitHub Pages에 남아 있던 “현재 API 기준 가격” 박스는 stale build 문제였고 clean build 방향으로 수정됨
+
+검증/테스트 상태:
+- npm run build 통과
+- npm test 통과
+- tests/quality.test.ts 존재
+- 테스트 커버 범위:
+  - stale snapshot
+  - missing snapshot
+  - extreme move invalid
+  - same-day latest snapshot selection
+  - daily validation summary
+  - results benchmark/confidence enrichment
+
+중요 결정:
+- 루트만 수정
+- github-pages-root는 mirror
+- UI에 live API 다시 넣지 말 것
+- priceSnapshot이 canonical
+- Results는 주간 복기용
+- dev cache 깨지면 npm run dev:clean 우선
+```
+
+### New Chat Prompt
+
+```text
+이 대화는 기존 Investment Analyst 프로젝트의 연속 작업입니다.
+
+먼저 아래 파일들을 읽고 현재 진행 상태를 파악하세요:
+- /Users/ssm/Documents/Investment Analyst/developmentmemory.md
+- /Users/ssm/Documents/Investment Analyst/README.md
+- /Users/ssm/Documents/Investment Analyst/AUTOMATION_PROMPT.txt
+- /Users/ssm/Documents/Investment Analyst/RESULTS_AUTOMATION_PROMPT.txt
+- /Users/ssm/Documents/Investment Analyst/lib/dashboard.ts
+- /Users/ssm/Documents/Investment Analyst/lib/data-normalizers.ts
+- /Users/ssm/Documents/Investment Analyst/lib/quality.ts
+- /Users/ssm/Documents/Investment Analyst/lib/types.ts
+- /Users/ssm/Documents/Investment Analyst/app/page.tsx
+- /Users/ssm/Documents/Investment Analyst/app/Results/page.tsx
+- /Users/ssm/Documents/Investment Analyst/scripts/sync-pages-root.mjs
+- /Users/ssm/Documents/Investment Analyst/github-pages-root/.github/workflows/deploy-pages.yml
+
+중요 운영 규칙:
+- 루트 워크스페이스가 single source of truth
+- github-pages-root는 deploy mirror이므로 직접 양쪽 수정하지 말고 루트 수정 후 `npm run sync:pages`
+- UI는 live quote API를 쓰지 않고 saved `priceSnapshot`만 사용
+- KR 가격은 Naver 우선, US 가격은 Yahoo 우선, Yahoo 실패 시 Naver 해외/미국 페이지 1회 추가 확인
+- stale 가격은 analysis date 대비 5일 초과
+- 일간 프롬프트는 review형이 아니라 forward sector rotation형이어야 함
+- Results는 benchmarkLabel, confidence, validation summary를 포함
+- 자동화는 commit까지만 하고 push는 하지 않음
+
+먼저 답변에서 아래 4가지를 짧게 정리하세요:
+1. 현재 프로젝트가 어디까지 구현됐는지
+2. 최근 중요 결정 5개
+3. 남아 있는 고우선순위 리스크 3개
+4. 지금 바로 이어서 할 만한 다음 작업 3개
+
+그 다음부터 내 요청을 이어서 처리하세요.
+```

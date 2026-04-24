@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sync:pages": "node scripts/sync-pages-root.mjs"
+    "sync:pages": "node scripts/sync-pages-root.mjs",
+    "test": "node --import tsx --test tests/*.test.ts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
@@ -27,6 +28,7 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.21.0",
     "typescript": "^5.7.2"
   }
 }

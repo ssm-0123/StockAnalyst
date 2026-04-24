@@ -17,6 +17,12 @@ If the Next.js dev cache gets unstable, use:
 npm run dev:clean
 ```
 
+Run the logic test suite with:
+
+```bash
+npm test
+```
+
 ## Data source
 
 The UI reads:

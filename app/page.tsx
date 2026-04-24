@@ -109,6 +109,48 @@ export default async function HomePage() {
         />
       </section>
 
+      {latest.validationSummary ? (
+        <section className="mt-4 grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+              <Shield className="size-4" />
+              데이터 검증 상태
+            </div>
+            <p className="mt-3 text-lg font-semibold tracking-tight text-slate-950">{latest.validationSummary.summary}</p>
+            <p className="mt-2 text-sm leading-6 text-slate-500">
+              총 {latest.validationSummary.totalIdeas}개 아이디어 중 {latest.validationSummary.highConfidenceIdeas}개를
+              고신뢰로 분류했습니다.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <SummaryCard
+              label="Fresh"
+              value={String(latest.validationSummary.freshSnapshots)}
+              detail="최신 가격 스냅샷"
+              tone="positive"
+            />
+            <SummaryCard
+              label="Stale"
+              value={String(latest.validationSummary.staleSnapshots)}
+              detail="5일 이상 지난 가격"
+              tone="caution"
+            />
+            <SummaryCard
+              label="Incomplete"
+              value={String(latest.validationSummary.incompleteSnapshots)}
+              detail="일부 수치 누락"
+              tone="neutral"
+            />
+            <SummaryCard
+              label="Invalid"
+              value={String(latest.validationSummary.invalidSnapshots)}
+              detail="이상치 감지"
+              tone="caution"
+            />
+          </div>
+        </section>
+      ) : null}
+
       <section className="mt-4 grid gap-4 xl:grid-cols-[0.8fr_1.2fr]">
         <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">

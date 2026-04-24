@@ -7,6 +7,18 @@ import { getMarketBadgeVariant, getMarketLabel } from "@/lib/market";
 import { SectorEntry } from "@/lib/types";
 import { StockRow } from "@/components/stock-row";
 
+function confidenceVariant(level?: SectorEntry["confidenceLevel"]) {
+  if (level === "high") return "positive" as const;
+  if (level === "low") return "caution" as const;
+  return "neutral" as const;
+}
+
+function confidenceLabel(level?: SectorEntry["confidenceLevel"]) {
+  if (level === "high") return "High";
+  if (level === "low") return "Low";
+  return "Medium";
+}
+
 export function SectorCard({
   sector,
   mode,
@@ -33,6 +45,7 @@ export function SectorCard({
               <Badge variant={positive ? "positive" : "caution"}>#{sector.rank}</Badge>
               <Badge variant={getMarketBadgeVariant(sector.market)}>{getMarketLabel(sector.market)}</Badge>
               <Badge variant="neutral">신뢰도 {sector.confidenceScore}</Badge>
+              <Badge variant={confidenceVariant(sector.confidenceLevel)}>{confidenceLabel(sector.confidenceLevel)}</Badge>
             </div>
             <CardTitle className="text-xl text-slate-950">{sector.sectorName}</CardTitle>
           </div>
