@@ -1,0 +1,203 @@
+{
+  "reportDate": "2026-04-21",
+  "lastUpdated": "2026-04-21T15:12:36Z",
+  "evaluationWindow": {
+    "startDate": "2026-04-18",
+    "endDate": "2026-04-21",
+    "label": "2026년 4월 4주차"
+  },
+  "overallVerdict": "선별형 롱은 맞았지만, 석유화학과 항공 주의 콜이 크게 빗나가 전체 성적은 혼조였다.",
+  "summary": "이번 평가는 최신 대표본 기준 2026년 4월 18일부터 4월 21일까지 4일치 데이터만 사용했다. ORCL과 SL처럼 밸류 여유가 있던 선별형 롱 아이디어는 실제 알파가 확인됐다. 반면 KR 석유화학과 US 항공/여행 주의 콜은 단기 급반등을 놓쳐 결과가 크게 나빴다. 데이터가 7일치보다 부족해 이번 결과 평가는 4일 구간으로 축약했다.",
+  "benchmarkNote": "벤치마크는 KR은 반복 등장한 업종 대표주 흐름, US는 같은 섹터 대형주 평균 흐름을 로컬 데이터로 보수 추정했다. 항공과 스트리밍은 반복 가격이 제한돼 알파를 작게 잡았다.",
+  "scorecard": {
+    "evaluatedCount": 6,
+    "workedCount": 2,
+    "mixedCount": 2,
+    "failedCount": 2,
+    "averageCallAlphaPct": -2.3,
+    "bestCall": "SL 자동차부품 중소형주",
+    "weakestCall": "유나이티드항공 주의 콜"
+  },
+  "smallCapScorecard": {
+    "evaluatedCount": 1,
+    "workedCount": 1,
+    "mixedCount": 0,
+    "failedCount": 0,
+    "averageCallAlphaPct": 5.1
+  },
+  "evaluatedInsights": [
+    {
+      "ticker": "ORCL",
+      "companyName": "오라클",
+      "market": "US",
+      "sector": "AI 반도체/전력 인프라",
+      "stance": "promising",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-21",
+      "holdingPeriodDays": 3,
+      "thesis": "AI 인프라 수혜주 중에서도 가격 부담이 낮은 오라클이 대표 AI 반도체주보다 낫다는 판단이었다.",
+      "priceReturnPct": 3.1,
+      "benchmarkReturnPct": 0.7,
+      "benchmarkLabel": "US AI 인프라 대형주 관찰군",
+      "callAlphaPct": 2.4,
+      "verdict": "worked",
+      "priceEvidence": "mixed",
+      "dataQuality": "limited",
+      "outcomeSummary": "4월 15일 문장형 확인가 169.81달러에서 최신 snapshot 175.06달러까지 올라 NVDA·TSM 평균 흐름보다 나았다.",
+      "lesson": "미국 기술주는 대표주 추격보다 같은 테마 안에서 밸류 여유가 큰 종목을 고를 때 짧은 구간 알파가 더 잘 났다."
+    },
+    {
+      "ticker": "005850",
+      "companyName": "에스엘",
+      "market": "KR",
+      "sector": "자동차 조명/ADAS 부품",
+      "stance": "small-cap",
+      "entryDate": "2026-04-20",
+      "evaluationDate": "2026-04-21",
+      "holdingPeriodDays": 1,
+      "thesis": "북미 조명·ADAS 비중과 저밸류를 함께 가진 자동차 부품 중형주가 실적 전 재평가를 받을 수 있다는 아이디어였다.",
+      "priceReturnPct": 6.4,
+      "benchmarkReturnPct": 1.3,
+      "benchmarkLabel": "KR 자동차부품 관찰군",
+      "callAlphaPct": 5.1,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "snapshot 기준 61,000원에서 64,900원으로 올라 같은 기간 KR 자동차부품 관찰군의 1%대 흐름을 크게 앞섰다.",
+      "followThroughReview": "전일 관찰군에서 빠졌어도 followThroughNote에 적힌 북미 믹스와 저밸류 논리가 훼손되지 않았고, 실제로 하루 만에 가장 큰 알파가 났다.",
+      "lesson": "중소형주는 메인 리스트에서 빠졌더라도 논리와 가격대가 유지되면 결과평가에서 별도로 추적할 가치가 있다."
+    },
+    {
+      "ticker": "005930",
+      "companyName": "삼성전자",
+      "market": "KR",
+      "sector": "반도체",
+      "stance": "promising",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-21",
+      "holdingPeriodDays": 3,
+      "thesis": "KR 대표 반도체주는 신규 상향보다 보유 유지가 낫고, 섹터 중심축 역할은 계속할 것이라는 판단이었다.",
+      "priceReturnPct": 1.2,
+      "benchmarkReturnPct": 0.8,
+      "benchmarkLabel": "KR 반도체 대형주 관찰군",
+      "callAlphaPct": 0.4,
+      "verdict": "mixed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "확인 가능한 snapshot 기준 216,500원에서 219,000원으로 소폭 상승해 방향은 맞았지만 broad-based 알파는 크지 않았다.",
+      "lesson": "대표주는 보유 전략 자체는 유효해도 결과평가에서는 섹터 전체 확산까지 확인돼야 worked로 올릴 수 있다."
+    },
+    {
+      "ticker": "NFLX",
+      "companyName": "넷플릭스",
+      "market": "US",
+      "sector": "스트리밍/미디어",
+      "stance": "caution",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-21",
+      "holdingPeriodDays": 3,
+      "thesis": "실적 이후 높은 기대치를 채우지 못한 스트리밍 대표주는 급락 뒤에도 반등 탄력이 약할 수 있다는 경계였다.",
+      "priceReturnPct": 0,
+      "benchmarkReturnPct": 0.6,
+      "benchmarkLabel": "US 스트리밍 대형주 관찰군",
+      "callAlphaPct": 0.6,
+      "verdict": "mixed",
+      "priceEvidence": "mixed",
+      "dataQuality": "limited",
+      "outcomeSummary": "4월 17일 97.28달러 급락 이후 최신 확인가가 97.31달러에 머물러 반등 부재는 맞았지만 추가 하락까지 이어지진 않았다.",
+      "lesson": "주의 콜은 첫 급락 뒤 반등 실패까지는 잘 잡았어도, 연속 하락이 없으면 알파를 크게 계산하면 안 된다."
+    },
+    {
+      "ticker": "051910",
+      "companyName": "LG화학",
+      "market": "KR",
+      "sector": "석유화학",
+      "stance": "caution",
+      "entryDate": "2026-04-18",
+      "evaluationDate": "2026-04-21",
+      "holdingPeriodDays": 3,
+      "thesis": "석유화학 회복 지연과 배터리 투자 부담이 겹친 LG화학은 업황 확인 전까지 경계가 맞다는 판단이었다.",
+      "priceReturnPct": 20.8,
+      "benchmarkReturnPct": 11.1,
+      "benchmarkLabel": "KR 석유화학 관찰군",
+      "callAlphaPct": -9.7,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "snapshot 기준 322,500원에서 389,500원으로 급반등해 같은 석유화학 관찰주보다도 더 강했고, caution 아이디어는 숫자로 틀렸다.",
+      "lesson": "주의 섹터라도 하루 급반등이 가능한 종목은 업황 논리와 별개로 숏커버 리스크를 따로 관리해야 한다."
+    },
+    {
+      "ticker": "UAL",
+      "companyName": "유나이티드항공",
+      "market": "US",
+      "sector": "항공/여행",
+      "stance": "caution",
+      "entryDate": "2026-04-20",
+      "evaluationDate": "2026-04-21",
+      "holdingPeriodDays": 1,
+      "thesis": "연료비와 가이던스 불확실성이 큰 항공주는 이벤트 전 경계가 우선이라는 판단이었다.",
+      "priceReturnPct": 13.2,
+      "benchmarkReturnPct": 0.8,
+      "benchmarkLabel": "US 항공 대형주 관찰군",
+      "callAlphaPct": -12.4,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "snapshot 기준 87.40달러에서 98.91달러로 하루 만에 급반등해 시장 평균을 크게 웃돌았고, 이벤트 전 caution은 정반대로 흘렀다.",
+      "lesson": "실적 직전 항공주는 펀더멘털 부담만으로 경계하기보다 이벤트 숏커버 가능성을 별도 경고로 분리해야 한다."
+    }
+  ],
+  "sectorReviews": [
+    {
+      "sectorName": "AI 반도체/전력 인프라",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "mixed",
+      "callAlphaPct": 0.7,
+      "detail": "ORCL 선별은 맞았지만 NVDA와 TSM이 사실상 flat-to-down이어서 섹터 전체 상향이 worked라기보다 종목 선택이 좋았던 주간이었다."
+    },
+    {
+      "sectorName": "반도체",
+      "market": "KR",
+      "priorView": "promising",
+      "verdict": "mixed",
+      "callAlphaPct": 0.4,
+      "detail": "삼성전자는 버텼지만 한미반도체 추격은 둔화됐고 후발 장비주는 small-cap 관찰군으로 성격이 옮겨 broad rally 판단으로 보긴 어려웠다."
+    },
+    {
+      "sectorName": "석유화학",
+      "market": "KR",
+      "priorView": "caution",
+      "verdict": "failed",
+      "callAlphaPct": -9.5,
+      "detail": "평가 기간 내내 caution이 유지됐지만 LG화학과 롯데케미칼이 모두 강하게 반등해 단기 방어 콜은 명확히 빗나갔다."
+    },
+    {
+      "sectorName": "항공/여행",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "failed",
+      "callAlphaPct": -12,
+      "detail": "UAL이 하루 만에 13% 넘게 반등했고 다른 항공주 반복 가격은 제한적이었지만, 최소한 단기 결과로는 이벤트 전 경계가 틀렸다."
+    },
+    {
+      "sectorName": "스트리밍/미디어",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "mixed",
+      "callAlphaPct": 0.6,
+      "detail": "넷플릭스 급락 뒤 반등 부재는 확인됐지만 DIS와 WBD의 반복 가격 근거가 부족해 섹터 차원 worked로 단정하긴 어려웠다."
+    }
+  ],
+  "processTakeaways": [
+    "날짜별 대표본을 먼저 고른 뒤 평가하니 같은 날짜 중복 파일이 많아도 해석이 일관됐다.",
+    "주의 콜은 펀더멘털 논리만으로 부족하고, 실적 직전 숏커버 가능성 같은 이벤트 리스크를 별도 체크해야 했다.",
+    "중소형 아이디어는 followThroughNote가 붙은 종목이 실제 결과 복기와 교훈 정리에 가장 유용했다."
+  ],
+  "nextWeekFocus": [
+    "석유화학과 항공처럼 이벤트 민감 업종은 caution 점수와 별도로 반등 리스크 플래그를 추가한다.",
+    "US 종목은 최신 snapshot 날짜가 stale이면 승격보다 관찰로 남겨 결과평가 왜곡을 줄인다.",
+    "중소형 아이디어는 연속된 snapshot이 확인되는 종목만 유지해 follow-through 평가 정확도를 높인다."
+  ]
+}
