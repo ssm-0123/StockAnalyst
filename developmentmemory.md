@@ -190,6 +190,7 @@
 - Results prompt는 benchmarkLabel 포함하도록 업데이트됨
 - Results prompt는 `check:history`의 평가 가능 후보를 우선 사용하고 verified/snapshot 평가를 최소 4개 이상 채우도록 강화됨
 - Results UI는 limited/mixed/fallback 평가 항목에 근거 제한 사유 박스를 표시함
+- Daily automation prompt now reads latest Results lessons (`processTakeaways`, `nextWeekFocus`, `evaluatedInsights[].lesson`) as a secondary checklist before sector/stock selection
 
 자동화 운영:
 - Analyst PM / Analyst AM 자동화가 있음

@@ -27,6 +27,8 @@
 - 템플릿 내용을 사실 데이터로 취급하지 마세요.
 - `/Users/ssm/Documents/Investment Analyst/public/data/history/`는 비어 있을 수 있습니다.
 - 히스토리가 없으면 없는 상태에서 보수적으로 작성하세요.
+- `/Users/ssm/Documents/Investment Analyst/public/data/results/latest.json`에 실제 Results 평가가 있으면 그 안의 `processTakeaways`, `nextWeekFocus`, `evaluatedInsights[].lesson`을 읽고 이번 분석의 보조 체크리스트로 사용합니다.
+- Results 데이터가 템플릿이거나 평가 구간이 현재 시장과 맞지 않으면 무리하게 반영하지 말고 참고용으로만 둡니다.
 - 모든 사용자 노출 문구는 한국어로 작성합니다.
 - 속도와 일관성을 우선합니다. 불필요한 자기검증 루프나 중복 재확인은 피합니다.
 - 다만 섹터 선정 자체는 지나치게 보수적으로 유지하지 말고, 매 실행마다 새로운 상대강도 변화와 신규 주도 후보를 적극적으로 탐색합니다.
@@ -56,6 +58,14 @@
 - 가격 품질 문제 때문에 전체 분석을 중단하지는 않되, 보정 후에도 남는 문제는 최종 응답에 짧게 남깁니다.
 - 커밋 후 루트에서 `npm run check:mirror`를 실행해 `github-pages-root` 미커밋 상태를 확인합니다.
 - 이번 실행 data 파일 외 변경이 남아 있으면 되돌리지 말고 최종 응답에 경고로 표시합니다.
+
+Results 교훈 반영 규칙:
+- 분석 초반에 최신 Results 평가에서 `processTakeaways` 3개, `nextWeekFocus` 3개, 개별 `lesson` 중 반복되거나 중요도가 높은 3~5개를 압축해 내부 체크리스트로 만듭니다.
+- 이 체크리스트는 현재 시장 데이터, 가격 스냅샷, 새 뉴스보다 우선하지 않으며, 섹터/종목 선택의 검증 질문으로만 사용합니다.
+- 예를 들어 "고점권 대표주보다 후발 장비주 알파가 더 선명했다"는 교훈이 있으면 반도체 섹터에서 대형주 추격보다 후공정·검사 장비주 후보를 먼저 비교합니다.
+- "주의 콜은 실적 이벤트와 숏커버 가능성을 별도 체크해야 한다"는 교훈이 있으면 caution sector의 무효화 조건에 실적/가이던스 반전과 숏커버 리스크를 포함합니다.
+- `smallCapIdeas`는 Results에서 반복 스냅샷이 쌓인 종목의 교훈을 우선 반영하고, 단순 저평가만으로 새로 편입하지 않습니다.
+- Results 교훈을 반영해 섹터 순위나 종목 선택을 바꾼 경우 `changesSinceYesterday`, `reasons`, `rationale` 중 자연스러운 위치에 짧게 드러냅니다.
 
 출력 규칙:
 - 최종 산출물은 반드시 JSON 객체 1개입니다.
@@ -404,18 +414,19 @@
 }
 
 실행 절차:
-1. 한국과 미국 시장 데이터를 인터넷에 접속해 조사합니다.
-2. 유망 섹터 후보와 주의 섹터 후보를 각각 최소 2개 이상 새로 탐색하고, 전일 상위 섹터와 비교합니다.
-3. 필요하면 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`를 참고하되, 최근 흐름 파악에 필요한 범위만 보고 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`를 우선 봅니다.
-4. 현재 `latest.json`이 실제 데이터인지 확인합니다.
-5. 실제 데이터라면 `history/YYYY-MM-DDTHH-mm-ss.json`으로 스냅샷을 저장합니다.
-6. 저장 전 마지막으로 JSON 유효성과 필수 필드만 1회 확인합니다.
-7. 새 JSON을 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`에 저장합니다.
-8. 이번 실행에서 저장한 로컬 `latest.json`과 새 히스토리 파일을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/` 대응 경로에 같은 파일명으로 복사합니다.
-9. 루트에서 `npm run check:data`를 실행하고 Daily 가격 품질 요약을 확인합니다.
-10. `github-pages-root` 저장소에서 이번 실행으로 바뀐 data 파일만 non-interactive git으로 커밋합니다.
-11. 루트에서 `npm run check:mirror`를 실행해 남은 미커밋 변경 여부를 확인합니다.
-12. 최종 응답은 아래 4줄만 짧게 작성합니다.
+1. `/Users/ssm/Documents/Investment Analyst/public/data/results/latest.json`의 실제 Results 평가를 읽고 이번 분석에 반영할 교훈 체크리스트를 내부적으로 만듭니다.
+2. 한국과 미국 시장 데이터를 인터넷에 접속해 조사합니다.
+3. 유망 섹터 후보와 주의 섹터 후보를 각각 최소 2개 이상 새로 탐색하고, 전일 상위 섹터 및 Results 교훈 체크리스트와 비교합니다.
+4. 필요하면 `/Users/ssm/Documents/Investment Analyst/public/data/history/*.json`를 참고하되, 최근 흐름 파악에 필요한 범위만 보고 같은 날짜 파일이 여러 개면 가장 늦은 `lastUpdated`를 우선 봅니다.
+5. 현재 `latest.json`이 실제 데이터인지 확인합니다.
+6. 실제 데이터라면 `history/YYYY-MM-DDTHH-mm-ss.json`으로 스냅샷을 저장합니다.
+7. 저장 전 마지막으로 JSON 유효성과 필수 필드만 1회 확인합니다.
+8. 새 JSON을 `/Users/ssm/Documents/Investment Analyst/public/data/latest.json`에 저장합니다.
+9. 이번 실행에서 저장한 로컬 `latest.json`과 새 히스토리 파일을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/` 대응 경로에 같은 파일명으로 복사합니다.
+10. 루트에서 `npm run check:data`를 실행하고 Daily 가격 품질 요약을 확인합니다.
+11. `github-pages-root` 저장소에서 이번 실행으로 바뀐 data 파일만 non-interactive git으로 커밋합니다.
+12. 루트에서 `npm run check:mirror`를 실행해 남은 미커밋 변경 여부를 확인합니다.
+13. 최종 응답은 아래 4줄만 짧게 작성합니다.
    - 업데이트/동기화 완료 여부
    - 기준 날짜
    - 데이터 품질 요약 1줄
