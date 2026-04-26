@@ -1,37 +1,37 @@
 {
-  "date": "2026-04-27",
-  "lastUpdated": "2026-04-26T22:46:02.402Z",
-  "marketTone": "4월 24일 미국장에서는 인텔발 반도체 랠리로 Nasdaq·S&P 500이 신고가를 다시 썼고, 4월 27일 KST 오전에는 새 정규장 가격 없이 유가와 빅테크 실적 대기를 반영해 AI 후공정·방산은 유지, 소프트웨어와 항공은 보수적으로 봅니다.",
+  "date": "2026-04-26",
+  "lastUpdated": "2026-04-26T09:42:02.000Z",
+  "marketTone": "주말에는 새 정규장 가격이 없지만 4월 24일 마감 이후 흐름은 대형주 추격보다 코스닥 반도체 소부장, 조선·방산, AI 컴퓨트 실적 확인 쪽으로 자금이 더 붙는 구도입니다.",
   "topOpportunity": "KR | 반도체 소부장/HBM 후공정",
   "topRisk": "US | 엔터프라이즈 소프트웨어",
   "newPicksToday": 0,
   "newCautionsToday": 0,
   "biggestChangeToday": {
-    "label": "미국장·유가 반영",
-    "detail": "인텔 급등과 Nasdaq 신고가를 AI 후공정 논리에 반영하되, 주말 유가 상승으로 항공 리스크를 한 단계 위로 올립니다."
+    "label": "소부장 1순위 상향",
+    "detail": "코스닥 1200선 회복과 고영·인텍플러스 수급을 반영해 방산 단독 1순위에서 후공정 확산으로 무게를 옮깁니다."
   },
   "promisingSectors": [
     {
       "sectorName": "반도체 소부장/HBM 후공정",
       "market": "KR",
       "rank": 1,
-      "confidenceScore": 81,
-      "thesis": "4월 24일 미국장에서 인텔 급등과 Nvidia 신고가가 확인되며 AI 컴퓨트 수요가 GPU 밖으로 확산되는 그림이 강해졌고, 한국은 대형 반도체보다 후공정·검사·세정 소부장으로 알파가 더 잘 남아 있습니다. 이번 주 빅테크 capex 코멘트가 이어지면 3~10거래일 관점에서 본주 추격보다 코스닥 소부장 수급이 한 번 더 붙을 수 있습니다. 다만 4월 27일 개장 후 고영·테크윙류 급등주가 음봉 전환하거나 빅테크가 capex 속도 조절을 말하면 1순위 판단을 낮춥니다.",
+      "confidenceScore": 80,
+      "thesis": "4월 24일 코스닥은 반도체 소부장과 바이오 중심으로 1200선을 회복했고, 고영 상한가와 후공정 장비주 수급이 본주보다 강했습니다. 다음 3~10거래일은 SK하이닉스 실적 훈풍과 AI 서버 패키징 병목이 검사·세정·비전 장비로 더 확산될 여지가 큽니다. 다만 상한가 추격주가 다음 거래일 음봉으로 꺾이거나 외국인·기관 순매수가 멈추면 1순위 판단을 낮춥니다.",
       "keyDrivers": [
-        "4월 24일 미국장 Intel +23.6%, Nvidia 신고가가 AI 컴퓨트 투자 지속성을 재확인",
-        "Results 교훈상 반도체 알파는 삼성전자·SK하이닉스 추격보다 후공정·검사 장비에서 더 선명",
-        "빅테크 실적 주간을 앞두고 HBM·패키징·검사 병목 확인 기대가 남아 있음"
+        "대형 반도체는 차익실현이 나왔지만 코스닥 소부장에는 외국인·기관 매수가 유입",
+        "Results 교훈상 반도체 알파는 본주보다 반복 가격 근거가 쌓인 후공정·검사 장비에서 더 선명",
+        "AI 서버, HBM, 고부가 패키징 증설이 장비·부품 주문으로 번지는 구간"
       ],
       "risks": [
-        "4월 27일 코스닥 소부장 급등주가 거래대금 감소와 함께 음봉 전환하는 경우",
-        "Alphabet·Microsoft·Meta·Amazon이 AI capex 속도 조절이나 마진 압박을 언급하는 경우"
+        "고영처럼 52주 신고가를 찍은 종목에서 월요일 갭상승 후 차익실현이 커지는 경우",
+        "빅테크 capex 코멘트가 기대에 못 미쳐 AI 패키징 투자 속도 논리가 약해지는 경우"
       ],
       "stocks": [
         {
           "ticker": "089030",
           "companyName": "테크윙",
           "market": "KR",
-          "rationale": "HBM 테스트와 후공정 검사 병목 수혜가 반복 스냅샷으로 검증됐고 미국 반도체 랠리의 후속 수급을 받을 수 있지만, 4월 24일 급등 뒤라 눌림 확인이 필요합니다.",
+          "rationale": "HBM 테스트와 후공정 검사 병목 수혜가 반복 스냅샷으로 확인돼 본주보다 알파 후보로 남기되, 4월 24일 급등 뒤라 추격보다 눌림 확인이 필요합니다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
@@ -48,7 +48,7 @@
           "ticker": "183300",
           "companyName": "코미코",
           "market": "KR",
-          "rationale": "세정·코팅 소모성 부품은 고객사 가동률과 유지보수 수요를 먼저 반영할 수 있어 빅테크 capex 확인 전 후발 대안으로 남깁니다.",
+          "rationale": "세정·코팅 소모성 부품은 고객사 가동률 회복을 먼저 반영할 수 있어 HBM 장비주 급등 이후의 후발 대안입니다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
@@ -65,7 +65,7 @@
           "ticker": "064290",
           "companyName": "인텍플러스",
           "market": "KR",
-          "rationale": "패키징 검사 노출이 있어 인텔발 서버 수요 재평가의 낙수 후보지만 최근 상승폭이 커 보수적 보유 관점입니다.",
+          "rationale": "3D 검사장비와 패키징 검사 노출이 있어 인텔·AI 서버 수요 확산 시 후공정 수급을 받을 수 있지만 최근 상승폭이 커 보수적 보유 관점입니다.",
           "isNew": false,
           "change": "hold",
           "priceSnapshot": {
@@ -84,16 +84,16 @@
       "sectorName": "조선/방산",
       "market": "KR",
       "rank": 2,
-      "confidenceScore": 79,
-      "thesis": "4월 24일 한국장은 방산·조선이 기술주 약세를 방어했고, 주말 미·이란 협상 취소와 유가 상승은 해양 방산·조선 프리미엄을 다음 개장까지 유지시킵니다. 대표주는 고점권이라 1~3거래일은 후발 시스템·부품주 중심의 순환매가 더 현실적입니다. 중동 협상이 재개되거나 외국인 매도가 방산 대형주에서 후발주까지 번지면 순위를 낮춥니다.",
+      "confidenceScore": 78,
+      "thesis": "4월 24일 외국인 매도 속에서도 방산·조선 기자재는 지수 방어 역할을 이어갔고, 중동 리스크와 수주 모멘텀은 다음 개장까지 남아 있습니다. 다만 대표주가 이미 많이 올라 1~3거래일 관점에서는 후발 밸류체인과 조정 매수만 유효합니다. 휴전 협상 진전이나 외국인 매도 지속으로 방산 프리미엄이 빠지면 순위를 낮춥니다.",
       "keyDrivers": [
         "KOSPI 신고가권에서 대형 반도체가 쉬는 동안 산업재 순환매가 방산·조선으로 유지",
-        "주말 유가 상승과 중동 협상 불확실성이 방산·해양 안보 프리미엄을 지지",
-        "대표주 과열 부담에도 한화시스템·SNT다이내믹스 등 후발 밸류체인으로 수급 확산 여지"
+        "중동 긴장, 유럽 재무장, 해양 방산 수요가 수주 잔고 재평가를 지지",
+        "방산 대장주 과열 부담에도 한화시스템처럼 전자·위성 후발주로 수급이 내려올 여지"
       ],
       "risks": [
-        "중동 협상 재개나 유가 급락으로 지정학 프리미엄이 빠르게 줄어드는 경우",
-        "대표 방산주 차익실현이 후발 시스템·부품주까지 확산되는 경우"
+        "지정학 리스크 완화로 방산 프리미엄이 빠르게 줄어드는 경우",
+        "대표주 차익실현이 부품·시스템 후발주까지 번지며 거래대금이 감소하는 경우"
       ],
       "stocks": [
         {
@@ -153,15 +153,15 @@
       "sectorName": "AI 반도체/데이터센터 컴퓨트",
       "market": "US",
       "rank": 3,
-      "confidenceScore": 77,
-      "thesis": "인텔 실적 서프라이즈와 Nvidia 신고가는 AI 컴퓨트 수요가 GPU·CPU·네트워크로 넓어지는 구간임을 재확인했습니다. 이번 주 Alphabet·Microsoft·Meta·Amazon 실적이 남아 있어 섹터 방향성은 살아 있지만, 주요 종목이 52주 고점권이라 신규 매수는 이벤트 후 확인이 낫습니다. capex 가이던스가 기대에 못 미치거나 FOMC 이후 금리가 튀면 바로 방어적으로 낮춥니다.",
+      "confidenceScore": 76,
+      "thesis": "인텔 실적 서프라이즈와 서버 CPU 수요 코멘트는 AI 컴퓨트 수요가 GPU에서 CPU·네트워크까지 넓어지고 있음을 확인했습니다. 다음 주 빅테크 실적과 capex 발언이 남아 있어 방향성은 살아 있지만 NVDA·AMD·INTC가 모두 고점권이어서 신규 매수보다 이벤트 후 눌림 확인이 우선입니다. capex 효율성 우려나 금리 반등이 커지면 이 판단은 빠르게 보수화합니다.",
       "keyDrivers": [
-        "4월 24일 S&P 500·Nasdaq 신고가와 Intel 급등이 반도체 위험선호를 재점화",
-        "빅테크 4개사의 4월 29일 실적·capex 코멘트가 데이터센터 수요를 재확인할 수 있음",
+        "인텔의 Q2 매출 전망과 AI 서버 프로세서 수요가 반도체 심리를 재점화",
+        "Alphabet·Microsoft·Meta·Amazon 실적에서 데이터센터 capex 확인 가능",
         "AI 인프라 수요가 전력·패키징·CPU까지 번지며 단일 GPU 테마보다 폭이 넓어짐"
       ],
       "risks": [
-        "빅테크가 AI capex 효율성이나 마진 압박을 더 강하게 언급하는 경우",
+        "빅테크가 AI capex 속도 조절이나 마진 압박을 언급하는 경우",
         "FOMC와 PCE 이후 금리가 상승해 장기 성장주 멀티플이 압박받는 경우"
       ],
       "stocks": [
@@ -224,16 +224,16 @@
       "sectorName": "엔터프라이즈 소프트웨어",
       "market": "US",
       "rank": 1,
-      "confidenceScore": 78,
-      "thesis": "4월 23일 IBM·ServiceNow발 소프트웨어 매도 이후 4월 24일 지수 반등은 하드웨어와 AI 인프라가 주도해 SaaS의 상대 열위가 남았습니다. 이번 주 빅테크 capex와 FOMC가 같은 구간에 있어 예산이 칩·전력으로 먼저 가는 구도는 더 확인될 수 있습니다. 대형 소프트웨어가 AI 제품 매출 전환과 순유지율 개선을 동시에 보여주면 주의 판단을 낮춥니다.",
+      "confidenceScore": 77,
+      "thesis": "AI 예산이 칩·전력·데이터센터로 먼저 배정되는 동안 소프트웨어는 실적 전까지 멀티플 회복 근거가 약합니다. FOMC와 PCE가 같은 주에 있어 할인율 부담도 다시 커질 수 있습니다. 대형 소프트웨어가 AI 제품 매출 전환과 순유지율 개선을 동시에 보여주면 주의 판단을 낮춥니다.",
       "headwinds": [
-        "AI 수혜 증거가 소프트웨어 구독보다 반도체·데이터센터 capex에 먼저 쌓임",
-        "FOMC·PCE 대기 구간에서 장기 현금흐름 할인율 민감도가 다시 커질 수 있음",
-        "IBM·ServiceNow 실적 반응 이후 SaaS는 좋은 숫자만으로 멀티플 회복이 어렵다는 인식"
+        "AI 수혜 증거가 capex·하드웨어 쪽에 먼저 쌓이며 SaaS 예산 우선순위가 밀림",
+        "FOMC·PCE 대기 구간에서 장기 현금흐름 할인율 민감도가 커질 수 있음",
+        "CRM·NOW는 반등해도 고객 예산 회복 확인 전까지 하드웨어 대비 상대 매력이 낮음"
       ],
       "whatCouldImprove": [
         "대형 소프트웨어 기업의 AI 제품 매출 전환율과 순유지율이 동시에 개선되는 경우",
-        "금리 하락과 빅테크 호실적이 성장주 전반의 멀티플 재평가로 확산되는 경우"
+        "금리 하락과 빅테크 실적 호조가 성장주 전반의 멀티플 재평가로 확산되는 경우"
       ],
       "stocks": [
         {
@@ -287,77 +287,11 @@
       ]
     },
     {
-      "sectorName": "항공/여행",
-      "market": "US",
-      "rank": 2,
-      "confidenceScore": 69,
-      "thesis": "주말 유가가 다시 오르고 중동 협상 불확실성이 커져 항공 마진과 항로 리스크는 4월 27일 개장 전 더 민감해졌습니다. 다만 Results 교훈처럼 예약률과 실적 이벤트가 숏커버를 만들 수 있어 강한 회피보다 짧은 주의로 관리합니다. 유가가 빠르게 안정되고 예약 수요·유류비 가이던스가 같이 개선되면 이 판단은 철회합니다.",
-      "headwinds": [
-        "유가와 제트연료 가격 상승이 연료비 가이던스에 다시 부담",
-        "중동 항로와 보험료 리스크가 운항 효율성 및 투자심리를 압박",
-        "소비 지표와 PCE를 앞두고 여행 수요 둔화 우려가 재가격화될 수 있음"
-      ],
-      "whatCouldImprove": [
-        "예약률과 프리미엄 좌석 수요가 강하게 확인되고 유류비 헤지 효과가 부각되는 경우",
-        "중동 리스크 완화와 유가 하락이 동시에 나타나 숏커버가 이어지는 경우"
-      ],
-      "stocks": [
-        {
-          "ticker": "AAL",
-          "companyName": "아메리칸항공",
-          "market": "US",
-          "rationale": "재무 레버리지와 유가 민감도가 높아 항공 주의 콜에서는 가장 방어력이 약합니다.",
-          "change": "downgrade",
-          "priceSnapshot": {
-            "priceDate": "2026-04-24",
-            "currentPrice": 12.1,
-            "previousCloseChangePct": 2.72,
-            "week52High": 16.5,
-            "week52Low": 8.96,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 FinanceCharts/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
-          }
-        },
-        {
-          "ticker": "UAL",
-          "companyName": "유나이티드항공",
-          "market": "US",
-          "rationale": "예약 수요가 버티면 숏커버가 나올 수 있어 강한 매도보다 이벤트 후 재평가가 필요합니다.",
-          "change": "downgrade",
-          "priceSnapshot": {
-            "priceDate": "2026-04-24",
-            "currentPrice": 93,
-            "previousCloseChangePct": 1.92,
-            "week52High": 119.21,
-            "week52Low": 63.23,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 FinanceCharts/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
-          }
-        },
-        {
-          "ticker": "DAL",
-          "companyName": "델타항공",
-          "market": "US",
-          "rationale": "프리미엄 수요는 상대적으로 견조하지만 유가와 임금 부담이 동시에 커지면 밸류에이션 방어가 어려워집니다.",
-          "change": "downgrade",
-          "priceSnapshot": {
-            "priceDate": "2026-04-24",
-            "currentPrice": 68.45,
-            "previousCloseChangePct": 0.12,
-            "week52High": 76.39,
-            "week52Low": 39.59,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 FinanceCharts/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
-          }
-        }
-      ]
-    },
-    {
       "sectorName": "자동차/부품",
       "market": "KR",
-      "rank": 3,
-      "confidenceScore": 68,
-      "thesis": "4월 24일 현대차·기아·현대모비스가 동반 약세였고, 원화 약세 수혜보다 관세·마진 압박과 글로벌 소비 둔화가 더 크게 거래됐습니다. Results 교훈처럼 부품주는 저평가만으로는 부족해 완성차 수급 개선 확인 전까지 낮춰 봅니다. 북미 가격 방어와 재고 정상화가 실적으로 확인되면 회피 강도를 낮춰야 합니다.",
+      "rank": 2,
+      "confidenceScore": 71,
+      "thesis": "4월 24일 현대차·기아·현대모비스가 동반 약세를 보였고, 원화 약세 수혜보다 관세·마진 압박과 글로벌 수요 둔화가 더 크게 거래됐습니다. Results 교훈처럼 부품주는 저평가만으로 알파가 약해 완성차 수급 개선 확인 전까지 낮춰 봅니다. 북미 가격 방어와 재고 정상화가 실적으로 확인되면 회피 강도를 낮춰야 합니다.",
       "headwinds": [
         "완성차 대형주 약세가 부품주 저평가 논리를 다시 약화",
         "관세와 인센티브 부담이 전기차·내연기관 믹스 모두의 마진 가시성을 낮춤",
@@ -417,36 +351,102 @@
           }
         }
       ]
+    },
+    {
+      "sectorName": "항공/여행",
+      "market": "US",
+      "rank": 3,
+      "confidenceScore": 65,
+      "thesis": "유가와 중동 항로 리스크는 항공 마진 전망을 계속 흔들 수 있지만, Results 교훈처럼 실적·예약률 이벤트가 숏커버를 만들 수 있어 강한 회피보다 짧은 주의가 맞습니다. 예약 수요와 유류비 가이던스가 동시에 개선되면 이 판단은 빠르게 철회해야 합니다.",
+      "headwinds": [
+        "유가 변동성과 지정학 항로 리스크가 연료비와 운항 효율성을 동시에 압박",
+        "경기지표 확인 전 소비 민감주로서 다음 주 PCE·소비심리 이벤트에 취약",
+        "실적 이후 반등이 나와도 비용 가이던스가 따라오지 않으면 지속성이 약함"
+      ],
+      "whatCouldImprove": [
+        "예약률과 프리미엄 좌석 수요가 강하게 확인되고 유류비 헤지 효과가 부각되는 경우",
+        "중동 리스크 완화와 유가 하락이 동시에 나타나 숏커버가 이어지는 경우"
+      ],
+      "stocks": [
+        {
+          "ticker": "AAL",
+          "companyName": "아메리칸항공",
+          "market": "US",
+          "rationale": "재무 레버리지와 유가 민감도가 높아 항공 주의 콜에서는 가장 방어력이 약합니다.",
+          "change": "downgrade",
+          "priceSnapshot": {
+            "priceDate": "2026-04-24",
+            "currentPrice": 12.1,
+            "previousCloseChangePct": 2.72,
+            "week52High": 16.5,
+            "week52Low": 8.96,
+            "currency": "USD",
+            "sourceNote": "Yahoo Finance 접근 제한으로 FinanceCharts/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+          }
+        },
+        {
+          "ticker": "UAL",
+          "companyName": "유나이티드항공",
+          "market": "US",
+          "rationale": "예약 수요가 버티면 숏커버가 나올 수 있어 강한 매도보다 이벤트 후 재평가가 필요합니다.",
+          "change": "downgrade",
+          "priceSnapshot": {
+            "priceDate": "2026-04-24",
+            "currentPrice": 93,
+            "previousCloseChangePct": 1.92,
+            "week52High": 119.21,
+            "week52Low": 63.23,
+            "currency": "USD",
+            "sourceNote": "Yahoo Finance 접근 제한으로 FinanceCharts/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+          }
+        },
+        {
+          "ticker": "DAL",
+          "companyName": "델타항공",
+          "market": "US",
+          "rationale": "프리미엄 수요는 상대적으로 견조하지만 유가와 임금 부담이 동시에 커지면 밸류에이션 방어가 어려워집니다.",
+          "change": "downgrade",
+          "priceSnapshot": {
+            "priceDate": "2026-04-24",
+            "currentPrice": 68.45,
+            "previousCloseChangePct": 0.12,
+            "week52High": 76.39,
+            "week52Low": 39.59,
+            "currency": "USD",
+            "sourceNote": "Yahoo Finance 접근 제한으로 FinanceCharts/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+          }
+        }
+      ]
     }
   ],
   "changesSinceYesterday": [
     {
-      "type": "hold",
-      "title": "미국장 반영 재확인",
-      "detail": "4월 24일 Nasdaq·S&P 500 신고가와 Intel 급등을 반영해 AI 후공정·컴퓨트 노출은 유지합니다."
-    },
-    {
       "type": "upgrade",
-      "title": "항공 리스크 상향",
-      "detail": "주말 유가 상승과 중동 협상 취소를 반영해 항공/여행 주의 섹터를 3위에서 2위로 올립니다."
-    },
-    {
-      "type": "hold",
-      "title": "방산 프리미엄 유지",
-      "detail": "방산 대표주 고점 부담은 있지만 지정학·해양 안보 프리미엄이 남아 조선/방산을 2순위에 둡니다."
+      "title": "소부장 1순위 상향",
+      "detail": "코스닥 1200선 회복과 고영·인텍플러스 기관 수급을 반영해 후공정·검사 장비를 방산보다 앞에 둡니다."
     },
     {
       "type": "downgrade",
-      "title": "자동차는 후순위 회피",
-      "detail": "완성차 수급 개선 전까지 낮춰 보되, 유가 변수 때문에 이번에는 항공보다 한 단계 낮은 위험으로 조정합니다."
+      "title": "전력기기 추격 제한",
+      "detail": "실적 논리는 강하지만 대표주가 52주 고점권이라 이번 상위 3개에서는 보유·후발 후보로만 남깁니다."
+    },
+    {
+      "type": "new-theme",
+      "title": "빅테크 capex 주간",
+      "detail": "다음 주 Alphabet·Microsoft·Meta·Amazon 실적이 AI 컴퓨트와 전력 인프라의 재확인 이벤트입니다."
+    },
+    {
+      "type": "fading-theme",
+      "title": "자동차 부품 보수화",
+      "detail": "완성차 약세와 Results 교훈을 반영해 저평가만으로 부품주를 올리지 않습니다."
     }
   ],
   "reasons": {
     "macro": {
       "title": "거시",
       "summary": [
-        "4월 27일 KST 오전에는 새 KR/US 정규장 종가가 없어 4월 24일 종가를 유지하고 주말 선물·유가·이벤트 변수를 반영합니다.",
-        "FOMC, 미국 Q1 GDP, 3월 PCE가 같은 주에 예정돼 성장주와 소비 민감주의 단기 변동성이 커질 수 있습니다."
+        "다음 주 FOMC, 미국 Q1 GDP, 3월 PCE가 한꺼번에 예정돼 금리 민감 성장주는 실적 확인 전 변동성이 커질 수 있습니다.",
+        "주말에는 새 가격 데이터가 없어 4월 24일 마감 이후 뉴스와 이벤트 캘린더를 기준으로 월요일 포지셔닝을 잡습니다."
       ],
       "affectedSectors": [
         "AI 반도체/데이터센터 컴퓨트",
@@ -457,8 +457,8 @@
     "policy": {
       "title": "정책 / 규제",
       "summary": [
-        "미·이란 협상 취소와 유가 상승은 방산·조선에는 프리미엄을, 항공·여행에는 비용 부담을 남깁니다.",
-        "한국 전략산업·AI 전력망·첨단 패키징 투자 기대는 방산, 소부장, 전력 인프라 순환매를 지지합니다."
+        "중동 긴장과 해상 물류 리스크는 방산·조선에는 프리미엄을, 항공·여행에는 비용 부담을 남깁니다.",
+        "한국은 전략산업, AI 전력망, 첨단 패키징 투자 수혜가 방산·소부장·전력기기 순환매를 지지합니다."
       ],
       "affectedSectors": [
         "조선/방산",
@@ -469,20 +469,20 @@
     "earnings": {
       "title": "실적 / 가이던스",
       "summary": [
-        "Intel 실적 서프라이즈와 Nvidia 신고가는 AI 컴퓨트 수요가 서버 CPU와 검사장비까지 확산된다는 근거를 더했습니다.",
-        "이번 주 Alphabet·Microsoft·Meta·Amazon 실적은 AI capex 지속성과 소프트웨어 상대 열위를 동시에 검증할 이벤트입니다."
+        "인텔 실적 서프라이즈와 고영 1분기 실적 호조는 AI 컴퓨트 수요가 서버 CPU와 검사장비까지 확산된다는 근거를 더했습니다.",
+        "전력기기 실적 논리는 유지되지만 주가가 고점권이라 신규 매수보다 후공정·소부장 쪽 가격 여유를 더 봅니다."
       ],
       "affectedSectors": [
         "반도체 소부장/HBM 후공정",
         "AI 반도체/데이터센터 컴퓨트",
-        "엔터프라이즈 소프트웨어"
+        "전력기기/데이터센터 전원"
       ]
     },
     "flows": {
       "title": "수급 / 심리",
       "summary": [
-        "미국 신고가 랠리는 소프트웨어보다 반도체와 AI 인프라 중심으로 진행돼 섹터 간 격차가 커졌습니다.",
-        "KOSPI 신고가권에서는 대형주 추격보다 코스닥 소부장과 방산·조선 후발 밸류체인 수급 지속 여부가 중요합니다."
+        "KOSPI는 외국인 매도가 부담이지만 코스닥에서는 반도체 소부장과 성장주로 수급이 옮겨 붙었습니다.",
+        "미국은 지수 신고가에도 소프트웨어보다 AI 하드웨어와 인프라 쪽으로 기대가 집중돼 종목 간 격차가 커질 수 있습니다."
       ],
       "affectedSectors": [
         "반도체 소부장/HBM 후공정",
@@ -492,20 +492,6 @@
     }
   },
   "checkpoints": [
-    {
-      "category": "risk",
-      "market": "GLOBAL",
-      "title": "중동 협상과 유가",
-      "date": "2026-04-27",
-      "note": "주말 유가 상승이 이어지면 방산·조선 프리미엄과 항공 비용 부담이 동시에 커집니다."
-    },
-    {
-      "category": "flows",
-      "market": "KR",
-      "title": "코스닥 소부장 수급",
-      "date": "2026-04-27",
-      "note": "4월 24일 급등한 후공정·검사 장비주가 갭상승 뒤 거래대금을 유지하는지 확인해야 합니다."
-    },
     {
       "category": "earnings",
       "market": "US",
@@ -526,6 +512,20 @@
       "title": "미국 Q1 GDP·3월 PCE",
       "date": "2026-04-30",
       "note": "유가 충격이 물가와 소비에 얼마나 반영됐는지가 항공·소비·성장주 로테이션의 기준입니다."
+    },
+    {
+      "category": "risk",
+      "market": "GLOBAL",
+      "title": "중동 협상과 유가",
+      "date": "2026-04-27",
+      "note": "휴전·해상 운송 리스크 변화가 방산 프리미엄과 항공 비용 부담을 동시에 바꿉니다."
+    },
+    {
+      "category": "flows",
+      "market": "KR",
+      "title": "코스닥 소부장 수급",
+      "date": "2026-04-27",
+      "note": "고영 상한가 이후 후공정·검사 장비주로 거래대금이 이어지는지 확인해야 합니다."
     }
   ],
   "smallCapIdeas": [
@@ -537,8 +537,8 @@
       "sector": "반도체 세정/코팅",
       "theme": "HBM·선단공정 소모성 부품 재평가",
       "thesis": "반도체 본주 추격보다 공정 가동률 회복과 소모성 부품 수요를 같이 받는 후발주가 낫습니다.",
-      "whyNow": "AI 컴퓨트 수요가 이어지면 고객사 capex보다 먼저 웨이퍼 투입과 유지보수 수요가 확인될 수 있고, 4월 24일 미국 반도체 랠리가 월요일 후발 수급을 자극할 수 있습니다.",
-      "followThroughNote": "최근 추적이 이어졌지만 52주 고점과 아직 거리가 있어 신고가 추격 리스크는 전력기기 대표주보다 낮습니다. 4월 27일 거래대금이 줄면 바로 보수화합니다.",
+      "whyNow": "AI 컴퓨트 수요가 이어지면 고객사 capex보다 먼저 웨이퍼 투입과 유지보수 수요가 확인될 수 있습니다.",
+      "followThroughNote": "최근 추적이 이어졌지만 52주 고점과 아직 거리가 있어 신고가 추격 리스크는 전력기기 대표주보다 낮습니다. 다만 장중 거래대금이 줄면 바로 보수화해야 합니다.",
       "priceSnapshot": {
         "priceDate": "2026-04-24",
         "currentPrice": 149800,
@@ -568,8 +568,8 @@
       "sector": "방산 파워트레인",
       "theme": "방산 대장주 고점 이후 후발 밸류체인",
       "thesis": "방산 대표주가 고점권일수록 실제 납품 체인에서 가격 부담이 낮은 부품주가 대안이 됩니다.",
-      "whyNow": "중동 리스크와 방산 수주 뉴스가 이어질 때 완성체보다 덜 오른 공급망 종목으로 순환매가 내려올 수 있습니다.",
-      "followThroughNote": "며칠째 방산 테마에 묶여 있지만 52주 고점과 거리가 있어 추격 부담은 상대적으로 낮습니다. 다만 유가·방산 프리미엄이 식으면 거래대금도 빠르게 줄 수 있습니다.",
+      "whyNow": "방산 수주 뉴스가 이어질 때 완성체보다 덜 오른 공급망 종목으로 순환매가 내려올 수 있습니다.",
+      "followThroughNote": "며칠째 방산 테마에 묶여 있지만 52주 고점과 거리가 있어 추격 부담은 상대적으로 낮습니다. 거래대금 확인 없이 큰 비중을 싣기에는 변동성이 큽니다.",
       "priceSnapshot": {
         "priceDate": "2026-04-24",
         "currentPrice": 58300,
@@ -593,37 +593,6 @@
     },
     {
       "rank": 3,
-      "ticker": "089030",
-      "companyName": "테크윙",
-      "market": "KR",
-      "sector": "반도체 검사/후공정",
-      "theme": "HBM 후공정 검사 장비 알파",
-      "thesis": "Results 교훈처럼 반도체 콜의 알파는 본주보다 후공정·검사 장비에서 더 선명하게 확인됐습니다.",
-      "whyNow": "Intel 급등과 Nvidia 신고가 이후 빅테크 capex 확인 기대가 이어지면 HBM 검사 병목 장비 수요 기대가 한 번 더 붙을 수 있습니다.",
-      "followThroughNote": "4월 24일 급등으로 단기 추격 리스크가 커졌지만 52주 고점과는 아직 거리가 있어 완전 제외보다 후속 확인이 낫습니다. 4월 27일 음봉 전환 시 순위를 낮춥니다.",
-      "priceSnapshot": {
-        "priceDate": "2026-04-24",
-        "currentPrice": 61800,
-        "previousCloseChangePct": 12.36,
-        "week52High": 74000,
-        "week52Low": 26050,
-        "currency": "KRW",
-        "sourceNote": "Naver Finance 2026년 4월 24일 KRX 장마감 기준"
-      },
-      "valuationNote": "고객사 투자 재개가 확인되면 장비 피크아웃 할인 축소 여지가 있습니다.",
-      "liquidityNote": "급등일 이후 거래대금이 줄면 변동성이 커져 분할 접근이 필요합니다.",
-      "catalysts": [
-        "HBM 테스트 수요",
-        "후공정 투자 재개",
-        "AI 서버 수요 확인"
-      ],
-      "risks": [
-        "단기 급등 차익실현",
-        "고객사 발주 지연"
-      ]
-    },
-    {
-      "rank": 4,
       "ticker": "009450",
       "companyName": "경동나비엔",
       "market": "KR",
@@ -652,18 +621,49 @@
         "소비 둔화",
         "원재료 가격 재상승"
       ]
+    },
+    {
+      "rank": 4,
+      "ticker": "089030",
+      "companyName": "테크윙",
+      "market": "KR",
+      "sector": "반도체 검사/후공정",
+      "theme": "HBM 후공정 검사 장비 알파",
+      "thesis": "Results 교훈처럼 반도체 콜의 알파는 본주보다 후공정·검사 장비에서 더 선명하게 확인됐습니다.",
+      "whyNow": "빅테크 capex와 HBM 증설 논리가 다시 강해지면 검사 병목 장비 수요 기대가 이어질 수 있습니다.",
+      "followThroughNote": "4월 24일 급등으로 단기 추격 리스크가 커졌지만 52주 고점과는 아직 거리가 있어 완전 제외보다 후속 확인이 낫습니다. 다음 거래일 음봉 전환 시 순위를 낮춥니다.",
+      "priceSnapshot": {
+        "priceDate": "2026-04-24",
+        "currentPrice": 61800,
+        "previousCloseChangePct": 12.36,
+        "week52High": 74000,
+        "week52Low": 26050,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance 2026년 4월 24일 KRX 장마감 기준"
+      },
+      "valuationNote": "고객사 투자 재개가 확인되면 장비 피크아웃 할인 축소 여지가 있습니다.",
+      "liquidityNote": "급등일 이후 거래대금이 줄면 변동성이 커져 분할 접근이 필요합니다.",
+      "catalysts": [
+        "HBM 테스트 수요",
+        "후공정 투자 재개",
+        "AI 서버 수요 확인"
+      ],
+      "risks": [
+        "단기 급등 차익실현",
+        "고객사 발주 지연"
+      ]
     }
   ],
   "trendSummary": {
     "mostFrequentPromisingSector": {
       "sector": "KR 전력기기/데이터센터 전원",
       "appearances": 6,
-      "trendDirection": "down"
+      "trendDirection": "flat"
     },
     "mostFrequentCautionSector": {
       "sector": "US 항공/여행",
       "appearances": 7,
-      "trendDirection": "up"
+      "trendDirection": "flat"
     },
     "repeatedStockIdeas": [
       {
@@ -672,19 +672,19 @@
         "direction": "up"
       },
       {
-        "ticker": "183300",
-        "appearances": 4,
-        "direction": "up"
+        "ticker": "204320",
+        "appearances": 6,
+        "direction": "down"
+      },
+      {
+        "ticker": "005850",
+        "appearances": 6,
+        "direction": "down"
       },
       {
         "ticker": "003570",
-        "appearances": 4,
+        "appearances": 3,
         "direction": "up"
-      },
-      {
-        "ticker": "009450",
-        "appearances": 4,
-        "direction": "flat"
       }
     ],
     "promisingSectorSeries": [
@@ -703,10 +703,6 @@
       {
         "sector": "KR 조선/방산",
         "count": 5
-      },
-      {
-        "sector": "KR 반도체 소부장/HBM 후공정",
-        "count": 2
       }
     ],
     "cautionSectorSeries": [
@@ -719,12 +715,12 @@
         "count": 4
       },
       {
-        "sector": "US 스트리밍/미디어",
-        "count": 4
-      },
-      {
         "sector": "KR 자동차/부품",
         "count": 3
+      },
+      {
+        "sector": "US 스트리밍/미디어",
+        "count": 4
       }
     ]
   }
