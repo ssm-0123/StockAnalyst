@@ -1,4 +1,4 @@
-import { Activity, AlertCircle, BarChart3, RefreshCw, Shield } from "lucide-react";
+import { Activity, AlertCircle, BarChart3, CheckCircle2, RefreshCw, Shield } from "lucide-react";
 
 import { ChangeList } from "@/components/change-list";
 import { CheckpointList } from "@/components/checkpoint-list";
@@ -9,11 +9,16 @@ import { SummaryCard } from "@/components/summary-card";
 import { TrendPanel } from "@/components/trend-panel";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getLatestAnalysis, formatTimestamp } from "@/lib/dashboard";
+import { getLatestAnalysis, getLatestResultsReport, formatTimestamp } from "@/lib/dashboard";
 import { withBasePath } from "@/lib/site";
 
 export default async function HomePage() {
   const { latest, trendSummary, previousDay, smallCapTracking } = await getLatestAnalysis();
+  const { latest: latestResults } = await getLatestResultsReport();
+  const resultsLessons = [
+    ...latestResults.nextWeekFocus.map((item) => ({ label: "포커스", text: item })),
+    ...latestResults.processTakeaways.map((item) => ({ label: "교훈", text: item })),
+  ].slice(0, 5);
   const biggestChange =
     typeof latest.biggestChangeToday === "string"
       ? {
@@ -175,6 +180,29 @@ export default async function HomePage() {
           <ReasonPanel reasons={latest.reasons} />
         </div>
       </section>
+
+      {resultsLessons.length ? (
+        <section className="mt-4 rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+                <CheckCircle2 className="size-4" />
+                최근 Results 교훈
+              </div>
+              <p className="mt-2 text-sm text-slate-500">{latestResults.evaluationWindow.label}</p>
+            </div>
+            <Badge variant="neutral">{latestResults.scorecard.evaluatedCount}개 평가</Badge>
+          </div>
+          <div className="mt-4 grid gap-3 lg:grid-cols-5">
+            {resultsLessons.map((item, index) => (
+              <div key={`results-lesson-${index}`} className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-4">
+                <Badge variant={item.label === "포커스" ? "positive" : "neutral"}>{item.label}</Badge>
+                <p className="mt-3 text-sm leading-6 text-slate-700">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="mt-10">
         <div className="section-heading">

@@ -54,6 +54,7 @@
 - Results 근거 요약의 verified/limited/stale/fallback 상태를 확인합니다.
 - `evaluatedInsights`에 `benchmarkLabel`, `priceEvidence`, `dataQuality`가 빠진 항목이 있으면 저장 전 1회 보정합니다.
 - 가격 근거가 부족해 남는 limited/fallback 항목은 억지로 숫자를 만들지 말고 `summary`와 최종 응답에 짧게 남깁니다.
+- 최종 응답의 데이터 품질 요약은 `Daily 가격 fresh A/B, Results 근거 fresh C/D, mirror clean` 형식으로 씁니다.
 - 커밋 후 루트에서 `npm run check:mirror`를 실행해 `github-pages-root` 미커밋 상태를 확인합니다.
 - 이번 실행 results data 파일 외 변경이 남아 있으면 되돌리지 말고 최종 응답에 경고로 표시합니다.
 
