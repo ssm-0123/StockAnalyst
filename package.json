@@ -15,6 +15,8 @@
     "check:history:strict": "node --import tsx scripts/check-history-coverage.ts --strict",
     "check:mirror": "node scripts/check-mirror-status.mjs",
     "check:mirror:strict": "node scripts/check-mirror-status.mjs --strict",
+    "push:pages": "node scripts/push-pages.mjs",
+    "push:pages:strict": "node scripts/push-pages.mjs --strict",
     "test": "node --import tsx --test tests/*.test.ts"
   },
   "dependencies": {
