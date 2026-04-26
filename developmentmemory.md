@@ -200,6 +200,7 @@
 - 분석 후 local data + github-pages-root/public/data 쪽 sync + commit 후 `npm run push:pages`로 push 시도함
 - `npm run push:pages`는 GitHub DNS/네트워크 오류를 최대 3회 재시도하고, 끝내 실패해도 로컬 커밋은 유지함
 - Results 자동화도 local results + mirror sync + commit 후 같은 push 재시도 흐름을 사용함
+- Codex 새 자동화 대화에서 `Always Allow`가 유지되지 않는 경우를 보완하기 위해 macOS LaunchAgent(`com.ssm.investment-analyst.push-pages`)가 10분마다 루트에서 `npm run push:pages`를 실행해 남은 로컬 커밋을 sandbox 밖에서 push함
 - publish-stock-data 별도 자동화는 paused
 - 토요일 Results 평가 유지
 

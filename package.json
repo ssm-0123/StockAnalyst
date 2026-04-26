@@ -17,6 +17,7 @@
     "check:mirror:strict": "node scripts/check-mirror-status.mjs --strict",
     "push:pages": "node scripts/push-pages.mjs",
     "push:pages:strict": "node scripts/push-pages.mjs --strict",
+    "install:push-agent": "bash scripts/install-push-launchagent.sh",
     "test": "node --import tsx --test tests/*.test.ts"
   },
   "dependencies": {

@@ -10,6 +10,7 @@ const pathsToSync = [
   "app",
   "components",
   "lib",
+  "launchd",
   "public",
   "scripts",
   "tests",

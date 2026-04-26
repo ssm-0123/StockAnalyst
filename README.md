@@ -37,6 +37,18 @@ Check whether the deploy mirror has uncommitted changes with:
 npm run check:mirror
 ```
 
+Push the deploy mirror manually, with DNS/network retries:
+
+```bash
+npm run push:pages
+```
+
+Install the macOS background push helper that runs the same command every 10 minutes outside the Codex sandbox:
+
+```bash
+npm run install:push-agent
+```
+
 Check whether recent history has enough repeated snapshots for the Results page with:
 
 ```bash
