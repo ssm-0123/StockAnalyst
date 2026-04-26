@@ -47,7 +47,8 @@
 - `github-pages-root` 저장소에서는 이번 실행으로 바뀐 results data 파일만 대상으로 non-interactive git 명령으로 처리합니다.
 - `github-pages-root`에 unrelated change가 있어도 되돌리지 말고, 이번 실행에서 바뀐 results data 파일만 add/commit 합니다.
 - 미러링 결과 results data 파일 변경이 없으면 commit은 생략합니다.
-- `git push`는 시도하지 않습니다.
+- 커밋이 생성되면 루트에서 `npm run push:pages`를 실행해 `github-pages-root`의 `main` 브랜치를 `origin`에 push합니다.
+- `npm run push:pages`는 DNS/네트워크 오류를 최대 3회 재시도합니다. 끝내 실패하면 로컬 커밋은 그대로 두고 최종 응답에 push 실패를 짧게 표시합니다.
 
 품질 체크 규칙:
 - 평가 후보를 고르기 전 루트에서 `npm run check:history`를 실행하고 평가 가능 종목 수를 확인합니다.
@@ -62,6 +63,7 @@
 - 최종 응답의 데이터 품질 요약은 `Daily 가격 fresh A/B, Results 근거 fresh C/D, mirror clean` 형식으로 씁니다.
 - 커밋 후 루트에서 `npm run check:mirror`를 실행해 `github-pages-root` 미커밋 상태를 확인합니다.
 - 이번 실행 results data 파일 외 변경이 남아 있으면 되돌리지 말고 최종 응답에 경고로 표시합니다.
+- push 시도 후 성공 여부를 최종 응답에 `push 완료` 또는 `push 실패, 로컬 커밋 유지`로 표시합니다.
 
 종목 선정 규칙:
 - 평가 후보는 평가 기간 대표본의 `promisingSectors[].stocks`, `cautionSectors[].stocks`, `smallCapIdeas[]`에서만 고릅니다.
@@ -209,10 +211,11 @@
 10. 이번 실행에서 저장한 로컬 results `latest.json`과 새 히스토리 파일을 `/Users/ssm/Documents/Investment Analyst/github-pages-root/public/data/results/` 대응 경로에 같은 파일명으로 복사합니다.
 11. 루트에서 `npm run check:data`를 실행하고 Results 근거 품질 요약을 확인합니다.
 12. `github-pages-root` 저장소에서 이번 실행으로 바뀐 results data 파일만 non-interactive git으로 커밋합니다.
-13. 루트에서 `npm run check:mirror`를 실행해 남은 미커밋 변경 여부를 확인합니다.
-14. 최종 응답은 아래 4줄만 짧게 작성합니다.
+13. 커밋이 생성됐으면 루트에서 `npm run push:pages`를 실행합니다.
+14. 루트에서 `npm run check:mirror`를 실행해 남은 미커밋 변경 여부를 확인합니다.
+15. 최종 응답은 아래 4줄만 짧게 작성합니다.
    - 업데이트/동기화 완료 여부
    - 평가 기간
    - 데이터 품질 요약 1줄
-   - 가장 잘 맞은 콜 1줄
+   - push 상태와 가장 잘 맞은 콜 1줄
 ```

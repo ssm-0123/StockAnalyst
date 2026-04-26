@@ -197,9 +197,9 @@
 
 자동화 운영:
 - Analyst PM / Analyst AM 자동화가 있음
-- 분석 후 local data + github-pages-root/public/data 쪽 sync + commit 까지만 함
-- git push는 자동화에서 제거됨 (DNS/권한 이슈 때문)
-- Results 자동화도 local results + mirror sync + commit 까지만 하도록 바뀜
+- 분석 후 local data + github-pages-root/public/data 쪽 sync + commit 후 `npm run push:pages`로 push 시도함
+- `npm run push:pages`는 GitHub DNS/네트워크 오류를 최대 3회 재시도하고, 끝내 실패해도 로컬 커밋은 유지함
+- Results 자동화도 local results + mirror sync + commit 후 같은 push 재시도 흐름을 사용함
 - publish-stock-data 별도 자동화는 paused
 - 토요일 Results 평가 유지
 
