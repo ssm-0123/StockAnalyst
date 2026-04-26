@@ -461,7 +461,10 @@ export default async function ResultsPage() {
               ))}
             </ul>
             <div className="mt-6 rounded-3xl border border-cyan-100 bg-cyan-50/60 p-4">
-              <p className="text-sm font-semibold text-cyan-900">다음 주 포커스</p>
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="text-sm font-semibold text-cyan-900">일간 분석 반영 체크</p>
+                <Badge variant="accent">Daily input</Badge>
+              </div>
               <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-700">
                 {latest.nextWeekFocus.map((item, index) => (
                   <li key={`focus-${index}`} className="flex gap-3">
