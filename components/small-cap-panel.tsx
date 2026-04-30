@@ -52,6 +52,29 @@ function healthLabel(health?: SnapshotHealth) {
   return "partial";
 }
 
+function resolveActionBias(idea: SmallCapIdea) {
+  return idea.actionBias ?? "buy";
+}
+
+function actionBiasVariant(actionBias: ReturnType<typeof resolveActionBias>) {
+  if (actionBias === "buy") return "positive" as const;
+  if (actionBias === "hold") return "neutral" as const;
+  return "caution" as const;
+}
+
+function actionBiasLabel(actionBias: ReturnType<typeof resolveActionBias>) {
+  if (actionBias === "buy") return "매수";
+  if (actionBias === "hold") return "유지";
+  if (actionBias === "reduce") return "축소";
+  return "정리";
+}
+
+function timeHorizonLabel(value?: SmallCapIdea["timeHorizon"]) {
+  if (value === "1-3d") return "1-3일";
+  if (value === "1-3m") return "1-3개월";
+  return "1-3주";
+}
+
 export function SmallCapPanel({
   ideas,
   tracking,
@@ -78,6 +101,7 @@ export function SmallCapPanel({
     <div className="grid gap-4 xl:grid-cols-3">
       {ideas.map((idea, index) => {
         const snapshot = idea.priceSnapshot;
+        const actionBias = resolveActionBias(idea);
         const trackingMeta = tracking?.get(idea.ticker);
         const hasSnapshot =
           snapshot?.currentPrice != null ||
@@ -98,6 +122,8 @@ export function SmallCapPanel({
                     <Badge variant={getMarketBadgeVariant(idea.market)}>{getMarketLabel(idea.market)}</Badge>
                     <Badge variant="neutral">{idea.sector}</Badge>
                     <Badge variant={confidenceVariant(idea.confidenceLevel)}>{confidenceLabel(idea.confidenceLevel)}</Badge>
+                    <Badge variant={actionBiasVariant(actionBias)}>{actionBiasLabel(actionBias)}</Badge>
+                    <Badge variant="neutral">{timeHorizonLabel(idea.timeHorizon)}</Badge>
                     {trackingMeta?.consecutiveDays && trackingMeta.consecutiveDays > 1 ? (
                       <Badge variant="accent">연속 {trackingMeta.consecutiveDays}일 추적</Badge>
                     ) : null}
@@ -147,9 +173,17 @@ export function SmallCapPanel({
                     <span className="text-xs text-slate-500">{snapshot?.priceDate ?? "업데이트 예정"}</span>
                   </div>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-cyan-100 bg-white/80 p-3">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">현재가</p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-cyan-100 bg-white/80 p-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">행동 판단</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-900">{actionBiasLabel(actionBias)}</p>
+                </div>
+                <div className="rounded-2xl border border-cyan-100 bg-white/80 p-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">권장 기간</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-900">{timeHorizonLabel(idea.timeHorizon)}</p>
+                </div>
+                <div className="rounded-2xl border border-cyan-100 bg-white/80 p-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">현재가</p>
                     <p className="mt-1 text-sm font-semibold text-slate-900">
                       {formatPrice(snapshot?.currentPrice, idea.market, snapshot?.currency)}
                     </p>
@@ -197,6 +231,31 @@ export function SmallCapPanel({
                     아직 기대주 가격 스냅샷 데이터가 없습니다.
                   </div>
                 ) : null}
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-4">
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    비중 메모
+                  </p>
+                  <p className="text-sm leading-6 text-slate-700">
+                    {idea.positioningNote ??
+                      (actionBias === "buy"
+                        ? "분할 진입 또는 신규 편입 후보입니다."
+                        : actionBias === "reduce"
+                          ? "기존 보유분 축소를 우선 검토합니다."
+                          : actionBias === "exit"
+                            ? "논리 훼손 시 정리 우선으로 봅니다."
+                            : "기존 관찰 포지션 유지가 기본입니다.")}
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-4">
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    무효화 조건
+                  </p>
+                  <p className="text-sm leading-6 text-slate-700">
+                    {idea.invalidation ?? "실적, 수급, 가격이 핵심 논리와 반대로 가면 즉시 재평가합니다."}
+                  </p>
+                </div>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-4">

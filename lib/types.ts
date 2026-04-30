@@ -13,6 +13,8 @@ export type CurrencyCode = "KRW" | "USD";
 export type ConfidenceLevel = "high" | "medium" | "low";
 export type SnapshotHealth = "fresh" | "stale" | "partial" | "missing" | "invalid";
 export type ValidationSeverity = "info" | "warning" | "critical";
+export type ActionBias = "buy" | "hold" | "reduce" | "exit";
+export type TimeHorizon = "1-3d" | "1-3w" | "1-3m";
 
 export interface ValidationIssue {
   code: string;
@@ -49,6 +51,10 @@ export interface StockIdea {
   rationale: string;
   isNew?: boolean;
   change: StockStatus;
+  actionBias?: ActionBias;
+  timeHorizon?: TimeHorizon;
+  invalidation?: string;
+  positioningNote?: string;
   priceSnapshot?: StockPriceSnapshot;
   confidenceLevel?: ConfidenceLevel;
   snapshotHealth?: SnapshotHealth;
@@ -105,6 +111,18 @@ export interface AnalysisSuggestion {
   priority?: "high" | "medium";
 }
 
+export interface LegacySectorDecision {
+  sectorName: string;
+  market: MarketCode;
+  previousBestRank: number;
+  lastSeenDate: string;
+  appearances14d: number;
+  decision: "hold" | "reduce" | "exit" | "reenter-watch";
+  rationale: string;
+  triggerNote: string;
+  resultsSummary?: string;
+}
+
 export interface SmallCapIdea {
   rank: number;
   ticker: string;
@@ -116,6 +134,10 @@ export interface SmallCapIdea {
   thesis: string;
   whyNow: string;
   followThroughNote?: string;
+  actionBias?: ActionBias;
+  timeHorizon?: TimeHorizon;
+  invalidation?: string;
+  positioningNote?: string;
   valuationNote: string;
   liquidityNote: string;
   catalysts: string[];
@@ -227,6 +249,7 @@ export interface DailyAnalysis {
   };
   checkpoints: CheckpointItem[];
   analysisSuggestions?: AnalysisSuggestion[];
+  legacySectorDecisions?: LegacySectorDecision[];
   smallCapIdeas?: SmallCapIdea[];
   trendSummary?: TrendSummary;
   validationSummary?: ValidationSummary;

@@ -563,6 +563,30 @@
       "priority": "high"
     }
   ],
+  "legacySectorDecisions": [
+    {
+      "sectorName": "전력기기/데이터센터 전원",
+      "market": "KR",
+      "previousBestRank": 1,
+      "lastSeenDate": "2026-04-29",
+      "appearances14d": 6,
+      "decision": "hold",
+      "rationale": "지금 Top 3에서 빠졌더라도 이탈 기간이 짧고 Results 성과가 아직 훼손되지 않아 보유 유지 쪽이 더 타당합니다.",
+      "triggerNote": "다음 1~2회 분석에서 다시 상위권 복귀나 후발 전력 밸류체인 확산 여부를 확인합니다.",
+      "resultsSummary": "최근 2주 Results 평균 알파가 플러스였고 전력 병목 논리가 여전히 유효했습니다."
+    },
+    {
+      "sectorName": "항공/여행",
+      "market": "US",
+      "previousBestRank": 2,
+      "lastSeenDate": "2026-04-26",
+      "appearances14d": 4,
+      "decision": "exit",
+      "rationale": "과거 상위권이었지만 최근에는 caution 전환과 Results 실패가 겹쳐 정리 판단이 더 적절합니다.",
+      "triggerNote": "유가 안정과 예약률 개선이 동시에 확인되기 전까지는 대체 섹터를 우선 검토합니다.",
+      "resultsSummary": "최근 2주 Results에서 항공/여행 관련 콜의 평균 알파가 음수였고 실패 판정이 있었습니다."
+    }
+  ],
   "smallCapIdeas": [
     {
       "rank": 1,

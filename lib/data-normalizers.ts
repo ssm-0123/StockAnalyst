@@ -1,9 +1,11 @@
 import {
+  ActionBias,
   ChangeEvent,
   CheckpointItem,
   DailyAnalysis,
   EvaluatedInsight,
   AnalysisSuggestion,
+  LegacySectorDecision,
   MarketCode,
   ReasonBlock,
   SectorEntry,
@@ -39,6 +41,8 @@ const CHANGE_TYPES = new Set<ChangeEvent["type"]>([
 ]);
 const CHECKPOINT_CATEGORIES = new Set<CheckpointItem["category"]>(["earnings", "macro", "policy", "risk"]);
 const SUGGESTION_ACTIONS = new Set<AnalysisSuggestion["action"]>(["watch", "trim", "rotate", "archive"]);
+const ACTION_BIASES = new Set<ActionBias>(["buy", "hold", "reduce", "exit"]);
+const LEGACY_DECISIONS = new Set<LegacySectorDecision["decision"]>(["hold", "reduce", "exit", "reenter-watch"]);
 const RESULTS_VERDICTS = new Set<EvaluatedInsight["verdict"]>(["worked", "mixed", "failed"]);
 const RESULTS_STANCES = new Set<EvaluatedInsight["stance"]>(["promising", "caution", "small-cap"]);
 const PRICE_EVIDENCE = new Set<EvaluatedInsight["priceEvidence"]>(["snapshot", "fallback", "mixed"]);
@@ -121,6 +125,16 @@ function normalizeStockIdea(value: unknown): StockIdea {
     rationale: asString(input.rationale, "근거가 아직 비어 있습니다."),
     isNew: typeof input.isNew === "boolean" ? input.isNew : undefined,
     change: asStockStatus(input.change),
+    actionBias:
+      typeof input.actionBias === "string" && ACTION_BIASES.has(input.actionBias as ActionBias)
+        ? (input.actionBias as ActionBias)
+        : undefined,
+    timeHorizon:
+      input.timeHorizon === "1-3d" || input.timeHorizon === "1-3w" || input.timeHorizon === "1-3m"
+        ? input.timeHorizon
+        : undefined,
+    invalidation: asOptionalString(input.invalidation),
+    positioningNote: asOptionalString(input.positioningNote),
     priceSnapshot: normalizePriceSnapshot(input.priceSnapshot),
   };
 }
@@ -193,6 +207,24 @@ function normalizeAnalysisSuggestion(value: unknown): AnalysisSuggestion {
   };
 }
 
+function normalizeLegacySectorDecision(value: unknown): LegacySectorDecision {
+  const input = asRecord(value);
+  return {
+    sectorName: asString(input.sectorName, "미분류"),
+    market: asMarketCode(input.market, "GLOBAL"),
+    previousBestRank: asNumber(input.previousBestRank, 0),
+    lastSeenDate: asString(input.lastSeenDate, "미정"),
+    appearances14d: asNumber(input.appearances14d, 0),
+    decision:
+      typeof input.decision === "string" && LEGACY_DECISIONS.has(input.decision as LegacySectorDecision["decision"])
+        ? (input.decision as LegacySectorDecision["decision"])
+        : "reenter-watch",
+    rationale: asString(input.rationale, "후속 판단 근거 없음"),
+    triggerNote: asString(input.triggerNote, "후속 확인 기준 없음"),
+    resultsSummary: asOptionalString(input.resultsSummary),
+  };
+}
+
 function normalizeSmallCapIdea(value: unknown): SmallCapIdea {
   const input = asRecord(value);
   return {
@@ -206,6 +238,16 @@ function normalizeSmallCapIdea(value: unknown): SmallCapIdea {
     thesis: asString(input.thesis, "투자 논리 없음"),
     whyNow: asString(input.whyNow, "근거 없음"),
     followThroughNote: asOptionalString(input.followThroughNote),
+    actionBias:
+      typeof input.actionBias === "string" && ACTION_BIASES.has(input.actionBias as ActionBias)
+        ? (input.actionBias as ActionBias)
+        : undefined,
+    timeHorizon:
+      input.timeHorizon === "1-3d" || input.timeHorizon === "1-3w" || input.timeHorizon === "1-3m"
+        ? input.timeHorizon
+        : undefined,
+    invalidation: asOptionalString(input.invalidation),
+    positioningNote: asOptionalString(input.positioningNote),
     valuationNote: asString(input.valuationNote, "밸류 포인트 없음"),
     liquidityNote: asString(input.liquidityNote, "유동성 메모 없음"),
     catalysts: asStringArray(input.catalysts),
@@ -293,6 +335,7 @@ export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
     },
     checkpoints: asArray(input.checkpoints).map(normalizeCheckpointItem),
     analysisSuggestions: asArray(input.analysisSuggestions).map(normalizeAnalysisSuggestion),
+    legacySectorDecisions: asArray(input.legacySectorDecisions).map(normalizeLegacySectorDecision),
     smallCapIdeas: asArray(input.smallCapIdeas).map(normalizeSmallCapIdea),
     trendSummary: normalizeTrendSummary(input.trendSummary),
   };

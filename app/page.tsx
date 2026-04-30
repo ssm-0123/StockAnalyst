@@ -10,13 +10,16 @@ import { SummaryCard } from "@/components/summary-card";
 import { TrendPanel } from "@/components/trend-panel";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { buildResultsAwareSuggestions, getLatestAnalysis, getLatestResultsReport, formatTimestamp } from "@/lib/dashboard";
+import { buildLegacySectorDecisions, getLatestAnalysis, getLatestResultsReport, formatTimestamp } from "@/lib/dashboard";
 import { withBasePath } from "@/lib/site";
 
 export default async function HomePage() {
-  const { latest, trendSummary, previousDay, smallCapTracking } = await getLatestAnalysis();
+  const { latest, history, trendSummary, previousDay, smallCapTracking } = await getLatestAnalysis();
   const { latest: latestResults, history: resultsHistory } = await getLatestResultsReport();
-  const analysisSuggestions = buildResultsAwareSuggestions(latest.analysisSuggestions, [latestResults, ...resultsHistory]);
+  const legacySectorDecisions =
+    latest.legacySectorDecisions?.length
+      ? latest.legacySectorDecisions
+      : buildLegacySectorDecisions(latest, history, [latestResults, ...resultsHistory]);
   const resultsLessons = [
     ...latestResults.nextWeekFocus.map((item) => ({ label: "포커스", text: item })),
     ...latestResults.processTakeaways.map((item) => ({ label: "교훈", text: item })),
@@ -206,8 +209,6 @@ export default async function HomePage() {
         </section>
       ) : null}
 
-      <AnalysisSuggestionPanel suggestions={analysisSuggestions} />
-
       <section className="mt-10">
         <div className="section-heading">
           <div>
@@ -258,6 +259,8 @@ export default async function HomePage() {
         <ChangeList changes={latest.changesSinceYesterday} />
         <CheckpointList checkpoints={latest.checkpoints} />
       </section>
+
+      <AnalysisSuggestionPanel suggestions={legacySectorDecisions} />
 
       <section className="mt-10">
         <div className="section-heading">

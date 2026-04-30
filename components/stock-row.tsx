@@ -80,10 +80,50 @@ function healthLabel(health?: SnapshotHealth) {
   return "partial";
 }
 
+function resolveActionBias(stock: StockIdea) {
+  if (stock.actionBias) {
+    return stock.actionBias;
+  }
+
+  if (stock.isNew || stock.change === "new" || stock.change === "upgrade") {
+    return "buy" as const;
+  }
+
+  if (stock.change === "downgrade") {
+    return "reduce" as const;
+  }
+
+  if (stock.change === "removed") {
+    return "exit" as const;
+  }
+
+  return "hold" as const;
+}
+
+function actionBiasVariant(actionBias: ReturnType<typeof resolveActionBias>) {
+  if (actionBias === "buy") return "positive" as const;
+  if (actionBias === "hold") return "neutral" as const;
+  return "caution" as const;
+}
+
+function actionBiasLabel(actionBias: ReturnType<typeof resolveActionBias>) {
+  if (actionBias === "buy") return "매수";
+  if (actionBias === "hold") return "유지";
+  if (actionBias === "reduce") return "축소";
+  return "정리";
+}
+
+function timeHorizonLabel(value?: StockIdea["timeHorizon"]) {
+  if (value === "1-3d") return "1-3일";
+  if (value === "1-3m") return "1-3개월";
+  return "1-3주";
+}
+
 export function StockRow({ stock, caution = false }: { stock: StockIdea; caution?: boolean }) {
   const status = normalizeStatus(stock);
   const config = badgeMap[status];
   const Icon = config.icon;
+  const actionBias = resolveActionBias(stock);
 
   const snapshot = stock.priceSnapshot;
   const currency = snapshot?.currency ?? (stock.market === "KR" ? "KRW" : "USD");
@@ -104,6 +144,12 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
             </Badge>
             <Badge variant={confidenceVariant(stock.confidenceLevel)} className="px-2 py-0.5 text-[10px]">
               {confidenceLabel(stock.confidenceLevel)}
+            </Badge>
+            <Badge variant={actionBiasVariant(actionBias)} className="px-2 py-0.5 text-[10px]">
+              {actionBiasLabel(actionBias)}
+            </Badge>
+            <Badge variant="neutral" className="px-2 py-0.5 text-[10px]">
+              {timeHorizonLabel(stock.timeHorizon)}
             </Badge>
             <p className="truncate text-sm font-medium text-slate-500">{stock.companyName}</p>
           </div>
@@ -141,6 +187,14 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
         </div>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">행동 판단</p>
+            <p className="mt-1 text-sm font-semibold text-slate-900">{actionBiasLabel(actionBias)}</p>
+          </div>
+          <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">권장 기간</p>
+            <p className="mt-1 text-sm font-semibold text-slate-900">{timeHorizonLabel(stock.timeHorizon)}</p>
+          </div>
+          <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">현재가</p>
             <p className="mt-1 text-sm font-semibold text-slate-900">
               {formatPrice(snapshot?.currentPrice, stock.market, currency)}
@@ -171,6 +225,27 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">52주 최저</p>
             <p className="mt-1 text-sm font-semibold text-slate-900">
               {formatPrice(snapshot?.week52Low, stock.market, currency)}
+            </p>
+          </div>
+        </div>
+        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">비중 메모</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">
+              {stock.positioningNote ??
+                (actionBias === "buy"
+                  ? "신규 진입 또는 비중 확대 후보입니다."
+                  : actionBias === "reduce"
+                    ? "비중 축소를 먼저 검토합니다."
+                    : actionBias === "exit"
+                      ? "전량 정리 우선으로 봅니다."
+                      : "기존 보유분 유지가 기본입니다.")}
+            </p>
+          </div>
+          <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">무효화 조건</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">
+              {stock.invalidation ?? "핵심 논리를 깨는 실적, 수급, 가격 이탈이 나오면 재평가합니다."}
             </p>
           </div>
         </div>

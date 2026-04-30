@@ -3,7 +3,14 @@ import path from "node:path";
 
 import { normalizeDailyAnalysis, normalizeWeeklyResultsReport } from "@/lib/data-normalizers";
 import { enrichDailyAnalysis, enrichWeeklyResultsReport } from "@/lib/quality";
-import { AnalysisSuggestion, DailyAnalysis, SmallCapTrackingMeta, TrendSummary, WeeklyResultsReport } from "@/lib/types";
+import {
+  AnalysisSuggestion,
+  DailyAnalysis,
+  LegacySectorDecision,
+  SmallCapTrackingMeta,
+  TrendSummary,
+  WeeklyResultsReport,
+} from "@/lib/types";
 
 const DATA_DIR = path.join(process.cwd(), "public", "data");
 const HISTORY_DIR = path.join(DATA_DIR, "history");
@@ -259,6 +266,168 @@ export function buildResultsAwareSuggestions(
       return suggestionActionWeight(b.action) - suggestionActionWeight(a.action);
     })
     .slice(0, 6);
+}
+
+type LegacySectorAggregate = {
+  sectorName: string;
+  market: LegacySectorDecision["market"];
+  previousBestRank: number;
+  lastSeenDate: string;
+  appearances14d: number;
+};
+
+export function buildLegacySectorDecisions(
+  current: DailyAnalysis,
+  history: DailyAnalysis[],
+  reports: WeeklyResultsReport[],
+) {
+  const currentPromising = new Set(current.promisingSectors.map((sector) => `${sector.market}:${sector.sectorName}`));
+  const currentCaution = new Set(current.cautionSectors.map((sector) => `${sector.market}:${sector.sectorName}`));
+  const recentHistory = selectLatestEntriesPerDate(history).slice(0, 14);
+  const sectorMap = new Map<string, LegacySectorAggregate>();
+  const recentReports = recentResultsWindow(reports);
+
+  for (const entry of recentHistory) {
+    for (const sector of entry.promisingSectors) {
+      const key = `${sector.market}:${sector.sectorName}`;
+
+      if (currentPromising.has(key)) {
+        continue;
+      }
+
+      const currentValue = sectorMap.get(key) ?? {
+        sectorName: sector.sectorName,
+        market: sector.market,
+        previousBestRank: sector.rank,
+        lastSeenDate: entry.date,
+        appearances14d: 0,
+      };
+
+      currentValue.previousBestRank = Math.min(currentValue.previousBestRank, sector.rank);
+      currentValue.lastSeenDate =
+        currentValue.lastSeenDate.localeCompare(entry.date) < 0 ? entry.date : currentValue.lastSeenDate;
+      currentValue.appearances14d += 1;
+      sectorMap.set(key, currentValue);
+    }
+  }
+
+  const resultsBySector = new Map<
+    string,
+    {
+      totalAlpha: number;
+      failedCount: number;
+      mixedCount: number;
+      totalReviews: number;
+      lastDetail: string;
+    }
+  >();
+
+  for (const report of recentReports) {
+    for (const review of report.sectorReviews) {
+      const key = `${review.market}:${review.sectorName}`;
+      const currentValue = resultsBySector.get(key) ?? {
+        totalAlpha: 0,
+        failedCount: 0,
+        mixedCount: 0,
+        totalReviews: 0,
+        lastDetail: review.detail,
+      };
+
+      currentValue.totalReviews += 1;
+      currentValue.totalAlpha += review.callAlphaPct;
+      currentValue.lastDetail = review.detail;
+
+      if (review.verdict === "failed") {
+        currentValue.failedCount += 1;
+      } else if (review.verdict === "mixed") {
+        currentValue.mixedCount += 1;
+      }
+
+      resultsBySector.set(key, currentValue);
+    }
+  }
+
+  return Array.from(sectorMap.entries())
+    .map<LegacySectorDecision | null>(([key, aggregate]) => {
+      if (aggregate.appearances14d < 2 && aggregate.previousBestRank > 1) {
+        return null;
+      }
+
+      const result = resultsBySector.get(key);
+      const avgAlpha = result?.totalReviews ? result.totalAlpha / result.totalReviews : 0;
+      const daysSinceLastSeen = Math.max(
+        0,
+        Math.floor((getTimestampValue(current.date) - getTimestampValue(aggregate.lastSeenDate)) / 86_400_000),
+      );
+      const nowCaution = currentCaution.has(key);
+
+      let decision: LegacySectorDecision["decision"];
+
+      if (nowCaution || (result?.failedCount ?? 0) >= 1 || avgAlpha <= -4 || daysSinceLastSeen >= 5) {
+        decision = "exit";
+      } else if ((result?.mixedCount ?? 0) >= 1 || avgAlpha < 0 || daysSinceLastSeen >= 3) {
+        decision = "reduce";
+      } else if (aggregate.previousBestRank === 1 && daysSinceLastSeen <= 2 && avgAlpha >= 0) {
+        decision = "hold";
+      } else {
+        decision = "reenter-watch";
+      }
+
+      const rationale =
+        decision === "hold"
+          ? `${aggregate.sectorName}는 최근 Top 3에서 빠졌지만 이탈 기간이 짧고, 과거 상위 랭크와 최근 성과가 완전히 훼손되지는 않았습니다.`
+          : decision === "reduce"
+            ? `${aggregate.sectorName}는 과거 상위권이었지만 최근 순위 이탈이 이어지거나 성과가 둔화돼 비중 축소가 우선입니다.`
+            : decision === "exit"
+              ? `${aggregate.sectorName}는 과거 상위권 대비 최근 성과와 현재 우선순위가 함께 약해져 정리 판단이 더 적절합니다.`
+              : `${aggregate.sectorName}는 즉시 비중 확대보다 재진입 조건이 다시 생기는지 관찰하는 편이 낫습니다.`;
+
+      const triggerNote =
+        decision === "hold"
+          ? "다음 1~3회 분석에서 다시 Top 3에 복귀하거나 관련 종목 상대강도가 유지되는지 확인합니다."
+          : decision === "reduce"
+            ? "다음 촉매가 확인되기 전까지 비중을 줄이고 Results와 순위 복귀 여부를 다시 봅니다."
+            : decision === "exit"
+              ? "현재는 자금 순환이 다른 섹터로 넘어간 것으로 보고 정리 후 대체 섹터를 우선 검토합니다."
+              : "촉매 재점화나 순위 복귀가 확인되기 전까지는 감시 목록 수준으로만 둡니다.";
+
+      const resultsSummary = result?.totalReviews
+        ? `최근 2주 Results 평균 알파 ${avgAlpha.toFixed(1)}%, 실패 ${result.failedCount}회, mixed ${result.mixedCount}회. ${result.lastDetail}`
+        : undefined;
+
+      return {
+        sectorName: aggregate.sectorName,
+        market: aggregate.market,
+        previousBestRank: aggregate.previousBestRank,
+        lastSeenDate: aggregate.lastSeenDate,
+        appearances14d: aggregate.appearances14d,
+        decision,
+        rationale,
+        triggerNote,
+        resultsSummary,
+      };
+    })
+    .filter((item): item is LegacySectorDecision => Boolean(item))
+    .sort((a, b) => {
+      const decisionWeight = (value: LegacySectorDecision["decision"]) => {
+        if (value === "exit") return 4;
+        if (value === "reduce") return 3;
+        if (value === "hold") return 2;
+        return 1;
+      };
+
+      const decisionDiff = decisionWeight(b.decision) - decisionWeight(a.decision);
+      if (decisionDiff !== 0) {
+        return decisionDiff;
+      }
+
+      if (a.previousBestRank !== b.previousBestRank) {
+        return a.previousBestRank - b.previousBestRank;
+      }
+
+      return b.appearances14d - a.appearances14d;
+    })
+    .slice(0, 4);
 }
 
 export async function getResultsHistory() {
