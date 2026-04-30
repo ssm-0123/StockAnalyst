@@ -1,5 +1,6 @@
 import { Activity, AlertCircle, BarChart3, CheckCircle2, RefreshCw, Shield } from "lucide-react";
 
+import { AnalysisSuggestionPanel } from "@/components/analysis-suggestion-panel";
 import { ChangeList } from "@/components/change-list";
 import { CheckpointList } from "@/components/checkpoint-list";
 import { ReasonPanel } from "@/components/reason-panel";
@@ -9,12 +10,13 @@ import { SummaryCard } from "@/components/summary-card";
 import { TrendPanel } from "@/components/trend-panel";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getLatestAnalysis, getLatestResultsReport, formatTimestamp } from "@/lib/dashboard";
+import { buildResultsAwareSuggestions, getLatestAnalysis, getLatestResultsReport, formatTimestamp } from "@/lib/dashboard";
 import { withBasePath } from "@/lib/site";
 
 export default async function HomePage() {
   const { latest, trendSummary, previousDay, smallCapTracking } = await getLatestAnalysis();
-  const { latest: latestResults } = await getLatestResultsReport();
+  const { latest: latestResults, history: resultsHistory } = await getLatestResultsReport();
+  const analysisSuggestions = buildResultsAwareSuggestions(latest.analysisSuggestions, [latestResults, ...resultsHistory]);
   const resultsLessons = [
     ...latestResults.nextWeekFocus.map((item) => ({ label: "포커스", text: item })),
     ...latestResults.processTakeaways.map((item) => ({ label: "교훈", text: item })),
@@ -203,6 +205,8 @@ export default async function HomePage() {
           </div>
         </section>
       ) : null}
+
+      <AnalysisSuggestionPanel suggestions={analysisSuggestions} />
 
       <section className="mt-10">
         <div className="section-heading">

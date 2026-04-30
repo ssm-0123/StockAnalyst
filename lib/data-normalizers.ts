@@ -3,6 +3,7 @@ import {
   CheckpointItem,
   DailyAnalysis,
   EvaluatedInsight,
+  AnalysisSuggestion,
   MarketCode,
   ReasonBlock,
   SectorEntry,
@@ -37,6 +38,7 @@ const CHANGE_TYPES = new Set<ChangeEvent["type"]>([
   "fading-theme",
 ]);
 const CHECKPOINT_CATEGORIES = new Set<CheckpointItem["category"]>(["earnings", "macro", "policy", "risk"]);
+const SUGGESTION_ACTIONS = new Set<AnalysisSuggestion["action"]>(["watch", "trim", "rotate", "archive"]);
 const RESULTS_VERDICTS = new Set<EvaluatedInsight["verdict"]>(["worked", "mixed", "failed"]);
 const RESULTS_STANCES = new Set<EvaluatedInsight["stance"]>(["promising", "caution", "small-cap"]);
 const PRICE_EVIDENCE = new Set<EvaluatedInsight["priceEvidence"]>(["snapshot", "fallback", "mixed"]);
@@ -174,6 +176,23 @@ function normalizeCheckpointItem(value: unknown): CheckpointItem {
   };
 }
 
+function normalizeAnalysisSuggestion(value: unknown): AnalysisSuggestion {
+  const input = asRecord(value);
+  return {
+    title: asString(input.title, "분석 제안"),
+    action:
+      typeof input.action === "string" && SUGGESTION_ACTIONS.has(input.action as AnalysisSuggestion["action"])
+        ? (input.action as AnalysisSuggestion["action"])
+        : "watch",
+    detail: asString(input.detail, "추가 제안 설명 없음"),
+    rationale: asString(input.rationale, "근거 없음"),
+    affectedSectors: asStringArray(input.affectedSectors),
+    source:
+      input.source === "automation" || input.source === "results-review" ? input.source : "automation",
+    priority: input.priority === "high" || input.priority === "medium" ? input.priority : "medium",
+  };
+}
+
 function normalizeSmallCapIdea(value: unknown): SmallCapIdea {
   const input = asRecord(value);
   return {
@@ -273,6 +292,7 @@ export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
       flows: normalizeReasonBlock(reasons.flows, "수급 / 심리"),
     },
     checkpoints: asArray(input.checkpoints).map(normalizeCheckpointItem),
+    analysisSuggestions: asArray(input.analysisSuggestions).map(normalizeAnalysisSuggestion),
     smallCapIdeas: asArray(input.smallCapIdeas).map(normalizeSmallCapIdea),
     trendSummary: normalizeTrendSummary(input.trendSummary),
   };

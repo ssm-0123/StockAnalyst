@@ -95,6 +95,16 @@ export interface CheckpointItem {
   note: string;
 }
 
+export interface AnalysisSuggestion {
+  title: string;
+  action: "watch" | "trim" | "rotate" | "archive";
+  detail: string;
+  rationale: string;
+  affectedSectors?: string[];
+  source?: "automation" | "results-review";
+  priority?: "high" | "medium";
+}
+
 export interface SmallCapIdea {
   rank: number;
   ticker: string;
@@ -216,6 +226,7 @@ export interface DailyAnalysis {
     flows: ReasonBlock;
   };
   checkpoints: CheckpointItem[];
+  analysisSuggestions?: AnalysisSuggestion[];
   smallCapIdeas?: SmallCapIdea[];
   trendSummary?: TrendSummary;
   validationSummary?: ValidationSummary;

@@ -3,7 +3,7 @@ import path from "node:path";
 
 import { normalizeDailyAnalysis, normalizeWeeklyResultsReport } from "@/lib/data-normalizers";
 import { enrichDailyAnalysis, enrichWeeklyResultsReport } from "@/lib/quality";
-import { DailyAnalysis, SmallCapTrackingMeta, TrendSummary, WeeklyResultsReport } from "@/lib/types";
+import { AnalysisSuggestion, DailyAnalysis, SmallCapTrackingMeta, TrendSummary, WeeklyResultsReport } from "@/lib/types";
 
 const DATA_DIR = path.join(process.cwd(), "public", "data");
 const HISTORY_DIR = path.join(DATA_DIR, "history");
@@ -88,6 +88,177 @@ export async function getLatestResultsReport() {
     latest,
     history,
   };
+}
+
+function suggestionActionWeight(action: AnalysisSuggestion["action"]) {
+  if (action === "trim") return 4;
+  if (action === "rotate") return 3;
+  if (action === "archive") return 2;
+  return 1;
+}
+
+function suggestionPriorityWeight(priority?: AnalysisSuggestion["priority"]) {
+  return priority === "high" ? 2 : 1;
+}
+
+function normalizeSectorToken(value: string) {
+  return value.trim().toLowerCase();
+}
+
+function matchesAffectedSector(suggestion: AnalysisSuggestion, sectorName: string) {
+  const token = normalizeSectorToken(sectorName);
+  const title = normalizeSectorToken(suggestion.title);
+  const detail = normalizeSectorToken(suggestion.detail);
+
+  if (title.includes(token) || detail.includes(token)) {
+    return true;
+  }
+
+  return (suggestion.affectedSectors ?? []).some((sector) => normalizeSectorToken(sector) === token);
+}
+
+function recentResultsWindow(reports: WeeklyResultsReport[]) {
+  if (!reports.length) {
+    return [];
+  }
+
+  const latestTimestamp = getTimestampValue(reports[0].reportDate || reports[0].lastUpdated);
+
+  return reports.filter((report) => {
+    const currentTimestamp = getTimestampValue(report.reportDate || report.lastUpdated);
+    const diffDays = Math.floor((latestTimestamp - currentTimestamp) / 86_400_000);
+    return diffDays <= 14;
+  });
+}
+
+type SectorReviewAggregate = {
+  sectorName: string;
+  market: string;
+  priorView: "promising" | "caution";
+  failedCount: number;
+  mixedCount: number;
+  totalReviews: number;
+  totalAlpha: number;
+  lastDetail: string;
+};
+
+export function buildResultsAwareSuggestions(
+  baseSuggestions: AnalysisSuggestion[] | undefined,
+  reports: WeeklyResultsReport[],
+) {
+  const suggestions: AnalysisSuggestion[] = [...(baseSuggestions ?? [])].map((suggestion) => ({
+    ...suggestion,
+    source: suggestion.source ?? "automation",
+    priority: suggestion.priority ?? "medium",
+  }));
+  const recentReports = recentResultsWindow(reports);
+
+  if (!recentReports.length) {
+    return suggestions;
+  }
+
+  const sectorMap = new Map<string, SectorReviewAggregate>();
+
+  for (const report of recentReports) {
+    for (const review of report.sectorReviews) {
+      const key = `${review.market}:${review.sectorName}`;
+      const current = sectorMap.get(key) ?? {
+        sectorName: review.sectorName,
+        market: review.market,
+        priorView: review.priorView,
+        failedCount: 0,
+        mixedCount: 0,
+        totalReviews: 0,
+        totalAlpha: 0,
+        lastDetail: review.detail,
+      };
+
+      current.totalReviews += 1;
+      current.totalAlpha += review.callAlphaPct;
+      current.lastDetail = review.detail;
+
+      if (review.verdict === "failed") {
+        current.failedCount += 1;
+      } else if (review.verdict === "mixed" && review.callAlphaPct <= 0) {
+        current.mixedCount += 1;
+      }
+
+      sectorMap.set(key, current);
+    }
+  }
+
+  const generatedSuggestions = Array.from(sectorMap.values())
+    .map<AnalysisSuggestion | null>((aggregate) => {
+      const averageAlpha = aggregate.totalReviews ? aggregate.totalAlpha / aggregate.totalReviews : 0;
+      const weaknessScore = aggregate.failedCount * 2 + aggregate.mixedCount;
+
+      if (weaknessScore < 2 || averageAlpha >= 0) {
+        return null;
+      }
+
+      const action: AnalysisSuggestion["action"] =
+        aggregate.priorView === "caution" ? "rotate" : averageAlpha <= -4 ? "trim" : "rotate";
+
+      return {
+        title:
+          action === "trim"
+            ? `${aggregate.sectorName} 비중 정리 검토`
+            : `${aggregate.sectorName} 시각 재정렬 검토`,
+        action,
+        detail:
+          action === "trim"
+            ? `최근 2주 Results에서 ${aggregate.sectorName} 관련 콜의 성과가 약해 반복 추천 비중을 줄일 시점인지 점검합니다.`
+            : `최근 2주 Results에서 ${aggregate.sectorName} 관련 시각이 반복적으로 빗나가 기존 프레임을 교체할지 확인합니다.`,
+        rationale: `최근 2주 sector review ${aggregate.totalReviews}회 중 실패 ${aggregate.failedCount}회, 보수적 mixed ${aggregate.mixedCount}회가 있었고 평균 알파는 ${averageAlpha.toFixed(1)}%입니다. ${aggregate.lastDetail}`,
+        affectedSectors: [aggregate.sectorName],
+        source: "results-review" as const,
+        priority: "high" as const,
+      };
+    })
+    .filter((item): item is AnalysisSuggestion => Boolean(item))
+    .sort((a, b) => {
+      const priorityDiff = suggestionPriorityWeight(b.priority) - suggestionPriorityWeight(a.priority);
+      if (priorityDiff !== 0) {
+        return priorityDiff;
+      }
+
+      return suggestionActionWeight(b.action) - suggestionActionWeight(a.action);
+    })
+    .slice(0, 2);
+
+  for (const generated of generatedSuggestions) {
+    const matchIndex = suggestions.findIndex((suggestion) =>
+      matchesAffectedSector(suggestion, generated.affectedSectors?.[0] ?? ""),
+    );
+
+    if (matchIndex >= 0) {
+      const current = suggestions[matchIndex];
+      suggestions[matchIndex] = {
+        ...current,
+        action:
+          suggestionActionWeight(generated.action) > suggestionActionWeight(current.action)
+            ? generated.action
+            : current.action,
+        source: "results-review",
+        priority: "high",
+        rationale: `${current.rationale} 최근 Results 기준으로도 ${generated.rationale}`,
+      };
+      continue;
+    }
+
+    suggestions.unshift(generated);
+  }
+
+  return suggestions
+    .sort((a, b) => {
+      const priorityDiff = suggestionPriorityWeight(b.priority) - suggestionPriorityWeight(a.priority);
+      if (priorityDiff !== 0) {
+        return priorityDiff;
+      }
+
+      return suggestionActionWeight(b.action) - suggestionActionWeight(a.action);
+    })
+    .slice(0, 6);
 }
 
 export async function getResultsHistory() {
