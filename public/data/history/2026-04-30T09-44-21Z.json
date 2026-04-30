@@ -1,93 +1,24 @@
 {
   "date": "2026-04-30",
-  "lastUpdated": "2026-04-30T10:06:30.384Z",
-  "marketTone": "유가 급등이 인플레이션과 비용 리스크를 다시 키우는 가운데, 미국은 에너지 현금흐름 방어가 앞서고 한국은 전력 인프라와 HBM 후공정의 눌림목 선별이 필요한 장세입니다.",
-  "topOpportunity": "US | 에너지/정유",
+  "lastUpdated": "2026-04-30T09:44:21Z",
+  "marketTone": "고유가가 인플레이션·마진 부담을 다시 키우는 가운데 미국은 에너지 방어와 AI capex 검증이 갈리고, 한국은 전력 인프라 강세와 반도체 후공정 눌림목을 함께 선별해야 하는 장세입니다.",
+  "topOpportunity": "KR | 전력기기/데이터센터 전원",
   "topRisk": "US | 항공/여행",
   "newPicksToday": 0,
-  "newCautionsToday": 0,
+  "newCautionsToday": 1,
   "biggestChangeToday": {
-    "label": "유가 프리미엄 강화",
-    "detail": "Brent 125달러 상회와 공급 차질 우려로 에너지를 1순위 기회로 다시 올리고 항공·자동차 비용 리스크를 유지했습니다."
+    "label": "전력 재상향",
+    "detail": "4월 30일 한국 장에서 전력 인프라 수급이 다시 붙어 에너지 다음 순위에서 전력기기를 최우선 기회로 올렸습니다."
   },
   "promisingSectors": [
     {
-      "sectorName": "에너지/정유",
-      "market": "US",
-      "rank": 1,
-      "confidenceScore": 82,
-      "thesis": "4월 30일 Brent 125달러 상회와 이란·호르무즈 공급 리스크가 다시 확인되며 에너지주는 단순 방어주가 아니라 현금흐름 상향 후보로 재평가받고 있습니다. 향후 3~10거래일은 유가 프리미엄이 쉽게 빠지기 전까지 E&P와 정유의 상대강도가 더 이어질 가능성이 큽니다. 휴전·봉쇄 완화 뉴스와 WTI 100달러 하회가 동시에 나오면 이 판단을 빠르게 낮춥니다.",
-      "keyDrivers": [
-        "Brent 125달러 상회 구간에서는 업스트림 현금흐름과 정제마진 기대가 동시에 재평가됨",
-        "고유가가 인플레이션 우려를 키울수록 배당·현금흐름 방어주 선호가 커짐",
-        "빅테크 capex 이벤트와 달리 에너지는 지정학 뉴스가 단기 촉매를 계속 공급"
-      ],
-      "risks": [
-        "이란·호르무즈 리스크가 완화되며 원유 공급 프리미엄이 빠르게 사라지는 경우",
-        "에너지 실적에서 생산비·CAPEX 증가가 고유가 수혜를 상쇄하는 경우"
-      ],
-      "stocks": [
-        {
-          "ticker": "XOM",
-          "companyName": "엑슨모빌",
-          "market": "US",
-          "rationale": "통합 메이저라 유가 상승 수혜와 방어 배당 성격이 같이 작동해 고유가 국면의 핵심 보유 후보입니다.",
-          "isNew": false,
-          "change": "hold",
-          "priceSnapshot": {
-            "priceDate": "2026-04-29",
-            "currentPrice": 154.67,
-            "previousCloseChangePct": 2.73,
-            "week52High": 176.41,
-            "week52Low": 101.19,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
-          }
-        },
-        {
-          "ticker": "COP",
-          "companyName": "코노코필립스",
-          "market": "US",
-          "rationale": "E&P 레버리지가 커 공급 프리미엄이 이어질 때 단기 상대강도가 빠르지만 52주 고점 접근은 추격 리스크입니다.",
-          "isNew": false,
-          "change": "hold",
-          "priceSnapshot": {
-            "priceDate": "2026-04-29",
-            "currentPrice": 128.25,
-            "previousCloseChangePct": 3.16,
-            "week52High": 135.87,
-            "week52Low": 84.28,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
-          }
-        },
-        {
-          "ticker": "MPC",
-          "companyName": "마라톤페트롤리엄",
-          "market": "US",
-          "rationale": "제품가격 전가와 정제마진 기대가 살아 있어 에너지 내 후속 매수세가 붙기 쉽지만 고점권에서는 보유 우선입니다.",
-          "isNew": false,
-          "change": "hold",
-          "priceSnapshot": {
-            "priceDate": "2026-04-29",
-            "currentPrice": 241.81,
-            "previousCloseChangePct": 3.96,
-            "week52High": 255.77,
-            "week52Low": 122.72,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
-          }
-        }
-      ]
-    },
-    {
       "sectorName": "전력기기/데이터센터 전원",
       "market": "KR",
-      "rank": 2,
-      "confidenceScore": 80,
-      "thesis": "4월 30일 한국 전력기기는 대표주 고점 부담에도 전선·배전 밸류체인으로 매수 폭이 넓어졌습니다. 향후 1~3주는 빅테크 AI capex와 한국 데이터센터 증설이 전원 병목을 다시 부각시켜 눌림목 재편입 수요가 남아 있습니다. 외국인 매도와 음봉 전환이 이틀 이상 이어지거나 북미 수주 마진 피크아웃 코멘트가 나오면 순위를 낮춥니다.",
+      "rank": 1,
+      "confidenceScore": 81,
+      "thesis": "4월 30일 전력기기는 일부 대표주가 고점권 부담을 보였지만 LS 계열과 전선주로 자금이 확산됐습니다. 향후 3~10거래일은 빅테크 AI capex와 HVDC·데이터센터 전원 병목이 동시에 확인되는 구간이라 눌림목마다 재편입 수요가 남아 있습니다. 외국인 매도와 음봉 전환이 이틀 이상 이어지거나 수주 마진 피크아웃 코멘트가 나오면 판단을 낮춥니다.",
       "keyDrivers": [
-        "AI 데이터센터 증설이 변압기·배전·전력망 장비 수요 확인으로 이어짐",
+        "AI 데이터센터 증설이 전력망·변압기·배전 장비 수요 확인으로 이어짐",
         "Results 교훈상 실적 숫자와 전력 병목이 같이 확인된 섹터는 고점 부담에도 후속 성과가 강했음",
         "대표주 과열을 피해 LS·전선 등 후발 밸류체인으로 매수 폭이 넓어짐"
       ],
@@ -150,11 +81,80 @@
       ]
     },
     {
+      "sectorName": "에너지/정유",
+      "market": "US",
+      "rank": 2,
+      "confidenceScore": 80,
+      "thesis": "4월 29일 미국 정규장에서 유가 급등과 중동 공급 리스크가 정유·E&P 상대강도를 다시 밀어 올렸습니다. 향후 3~10거래일은 원유 공급 프리미엄이 쉽게 빠지기 전까지 현금흐름 상향과 방어 수요가 같이 붙을 가능성이 큽니다. 호르무즈·이란 리스크가 완화되고 WTI가 100달러 아래로 빠지면 순위를 낮춥니다.",
+      "keyDrivers": [
+        "고유가가 업스트림 현금흐름과 정제마진 기대를 동시에 자극",
+        "금리 부담이 커질수록 장기 성장주보다 배당·현금흐름 방어주 선호가 커짐",
+        "에너지 대형주는 52주 고점에서 일부 거리도 있어 AI 고점주보다 진입 규율이 명확함"
+      ],
+      "risks": [
+        "원유 공급 차질 프리미엄이 빠르게 되돌려지는 경우",
+        "에너지 대형주 실적에서 생산비·CAPEX 가이던스가 기대를 밑도는 경우"
+      ],
+      "stocks": [
+        {
+          "ticker": "XOM",
+          "companyName": "엑슨모빌",
+          "market": "US",
+          "rationale": "통합 메이저라 유가 상승 수혜와 방어 배당 성격이 같이 작동해 고유가 국면 핵심 보유 후보입니다.",
+          "isNew": false,
+          "change": "hold",
+          "priceSnapshot": {
+            "priceDate": "2026-04-29",
+            "currentPrice": 154.67,
+            "previousCloseChangePct": 2.73,
+            "week52High": 176.41,
+            "week52Low": 101.19,
+            "currency": "USD",
+            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+          }
+        },
+        {
+          "ticker": "COP",
+          "companyName": "코노코필립스",
+          "market": "US",
+          "rationale": "E&P 레버리지가 커 유가 프리미엄이 이어질 때 단기 상대강도가 가장 빠르지만 52주 고점 접근은 추격 리스크입니다.",
+          "isNew": false,
+          "change": "hold",
+          "priceSnapshot": {
+            "priceDate": "2026-04-29",
+            "currentPrice": 128.25,
+            "previousCloseChangePct": 3.16,
+            "week52High": 135.87,
+            "week52Low": 84.28,
+            "currency": "USD",
+            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+          }
+        },
+        {
+          "ticker": "MPC",
+          "companyName": "마라톤페트롤리엄",
+          "market": "US",
+          "rationale": "정제마진과 제품가격 전가 기대가 살아 있어 에너지 안에서도 후속 매수세가 붙기 쉽지만 고점권에서는 보유 우선입니다.",
+          "isNew": false,
+          "change": "hold",
+          "priceSnapshot": {
+            "priceDate": "2026-04-29",
+            "currentPrice": 241.81,
+            "previousCloseChangePct": 3.96,
+            "week52High": 255.77,
+            "week52Low": 122.72,
+            "currency": "USD",
+            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+          }
+        }
+      ]
+    },
+    {
       "sectorName": "반도체 소부장/HBM 후공정",
       "market": "KR",
       "rank": 3,
       "confidenceScore": 76,
-      "thesis": "4월 30일 한국 반도체 본주는 흔들렸지만 HBM 검사·세정·패키징 장비는 빅테크 AI 투자 확인을 기다리는 눌림목 성격이 강합니다. 향후 1~3주는 삼성전자·SK하이닉스 추격보다 Results에서 검증된 후공정 장비주의 반복 스냅샷이 더 유리합니다. 빅테크 capex가 주문 지연으로 해석되거나 HBM 장비 발주가 밀린다는 코멘트가 나오면 판단을 접습니다.",
+      "thesis": "4월 30일 한국 반도체 본주는 흔들렸지만 HBM 검사·세정·패키징 장비는 AI 투자 확인을 기다리는 눌림목 성격이 강합니다. 향후 1~3주는 삼성전자·SK하이닉스 추격보다 Results에서 검증된 후공정 장비주의 반복 스냅샷이 더 유리합니다. 빅테크 capex가 주문 지연으로 해석되거나 HBM 장비 발주가 밀린다는 코멘트가 나오면 판단을 접습니다.",
       "keyDrivers": [
         "미국 빅테크 AI 인프라 투자는 HBM 후공정 수요 확인으로 연결",
         "본주가 고점권일수록 검사·코팅·핸들러 후발주의 알파가 더 선명하다는 Results 교훈 반영",
@@ -422,23 +422,23 @@
   "changesSinceYesterday": [
     {
       "type": "upgrade",
-      "title": "에너지 1순위 재상향",
-      "detail": "고유가가 단기 뉴스가 아니라 공급 프리미엄으로 굳어지며 현금흐름 방어주 선호가 더 강해졌습니다."
-    },
-    {
-      "type": "fading-theme",
-      "title": "전력기기 추격 규율 강화",
-      "detail": "섹터 논리는 유지하지만 대표주가 고점권이라 후발 밸류체인과 눌림목 중심으로 접근 강도를 조절합니다."
+      "title": "전력기기 1순위 상향",
+      "detail": "한국 장에서 전력 인프라 수급이 다시 붙어 고유가 방어보다 더 선명한 단기 기회로 올렸습니다."
     },
     {
       "type": "downgrade",
-      "title": "소프트웨어 주의 유지",
-      "detail": "AI 예산이 데이터센터·반도체·전력 인프라로 먼저 배정되며 전통 SaaS 멀티플 복원이 지연될 수 있습니다."
+      "title": "소프트웨어 주의 재편입",
+      "detail": "AI capex 부담이 메가캡보다 SaaS 예산 지연 리스크로 더 명확해져 엔터프라이즈 소프트웨어를 주의 섹터로 되돌렸습니다."
     },
     {
       "type": "fading-theme",
       "title": "자동차 반등 지연",
       "detail": "고유가와 보호무역 부담이 완성차 수급을 눌러 저평가만으로는 부품주까지 확산되기 어렵다고 봤습니다."
+    },
+    {
+      "type": "new-theme",
+      "title": "고유가 방어 유지",
+      "detail": "유가 급등이 항공·자동차에는 비용 리스크, 에너지에는 현금흐름 상향 요인으로 계속 갈립니다."
     }
   ],
   "reasons": {
@@ -457,7 +457,7 @@
     "policy": {
       "title": "정책 / 규제",
       "summary": [
-        "이란·호르무즈 관련 공급 차질 우려는 원유 가격의 지정학 프리미엄을 유지시키는 핵심 변수입니다.",
+        "미국의 이란 관련 봉쇄 장기화 가능성은 원유 공급 프리미엄을 유지시키는 핵심 변수입니다.",
         "한국 전력망·HVDC 투자와 데이터센터 전원 병목은 전력기기 수주 기대를 계속 지지합니다."
       ],
       "affectedSectors": [
@@ -469,7 +469,7 @@
     "earnings": {
       "title": "실적 / 가이던스",
       "summary": [
-        "Microsoft와 Meta의 AI capex 확대는 반도체 본주보다 후공정·전력 인프라 주문 가시성에 더 직접적인 검증 질문입니다.",
+        "빅테크 AI capex 확인은 반도체 본주보다 후공정·전력 인프라 주문 가시성에 더 직접적인 검증 질문입니다.",
         "소프트웨어는 AI 기능이 순신규 ARR로 전환되는 증거가 약하면 반등이 짧아질 수 있습니다."
       ],
       "affectedSectors": [
@@ -495,16 +495,16 @@
     {
       "category": "earnings",
       "market": "US",
-      "title": "AAPL·AMZN 실적 후 AI capex 코멘트",
-      "date": "2026-04-30",
-      "note": "AI 투자 확대가 전력·HBM 수요 확인인지 소프트웨어 마진 부담인지 가를 이벤트입니다."
+      "title": "XOM·CVX 에너지 실적",
+      "date": "2026-05-01",
+      "note": "고유가가 실제 현금흐름·CAPEX 가이던스 상향으로 이어지는지 확인합니다."
     },
     {
       "category": "earnings",
       "market": "US",
-      "title": "XOM·CVX 에너지 실적",
-      "date": "2026-05-01",
-      "note": "고유가가 실제 현금흐름·CAPEX 가이던스 상향으로 이어지는지 확인합니다."
+      "title": "AAPL·AMZN 실적 후 AI capex 코멘트",
+      "date": "2026-04-30",
+      "note": "AI 투자 확대가 전력·HBM 수요 확인인지 소프트웨어 마진 부담인지 가를 이벤트입니다."
     },
     {
       "category": "macro",
@@ -530,37 +530,31 @@
   ],
   "analysisSuggestions": [
     {
-      "title": "전력기기 대표주는 종목 교체를 먼저 검토",
+      "title": "전력기기 대표주는 일부 정리보다 종목 교체를 먼저 검토",
       "action": "rotate",
-      "detail": "전력기기 강세 자체는 유지하되 다음 분석부터는 고점권 대표주 반복보다 후발 전선·배전 밸류체인으로 옮겨 담을지 같이 점검합니다.",
+      "detail": "전력기기 강세 자체는 유지하되 다음 분석부터는 고점권 대표주를 그대로 반복하기보다 후발 전선·배전 밸류체인으로 옮겨 담을지 같이 점검하는 편이 좋습니다.",
       "rationale": "섹터 논리는 아직 유효하지만 LS ELECTRIC·HD현대일렉트릭·효성중공업은 모두 고점 부담이 커져 섹터 종료보다 포지션 구성 교체가 먼저 필요한 구간입니다.",
       "affectedSectors": [
         "KR | 전력기기/데이터센터 전원"
-      ],
-      "source": "results-review",
-      "priority": "high"
+      ]
     },
     {
-      "title": "에너지/정유는 이벤트형 차익관리 병행",
-      "action": "watch",
-      "detail": "고유가 방어 논리는 살아 있지만 중동 리스크 완화 뉴스가 나오면 빠르게 일부 정리할 수 있도록 다음 분석에서 유가 무효화 조건을 더 엄격히 봅니다.",
-      "rationale": "유가 프리미엄은 강하지만 지정학 뉴스 의존도가 높아 신규 확대보다 보유·눌림목 접근의 규율이 필요합니다.",
+      "title": "에너지/정유는 유지하되 다음 분석부터 일부 차익실현 시점 병행 점검",
+      "action": "trim",
+      "detail": "고유가 방어 논리는 살아 있지만 최근 3거래일 급등으로 단기 과열이 누적돼 다음 분석에서는 추가 상향보다 일부 정리 시점을 같이 제안하는 것이 좋아 보입니다.",
+      "rationale": "XOM·COP·MPC가 모두 유가 프리미엄을 빠르게 반영했고, 중동 리스크 완화 뉴스 하나로 차익실현이 나올 수 있어 신규 확대 일변도는 부담스럽습니다.",
       "affectedSectors": [
         "US | 에너지/정유"
-      ],
-      "source": "automation",
-      "priority": "medium"
+      ]
     },
     {
-      "title": "항공/여행 경고는 상시보다 이벤트 중심으로 축소 검토",
+      "title": "항공/여행 경고는 유지하되 반복 효율이 낮으면 이벤트형 경계로 축소 검토",
       "action": "watch",
-      "detail": "항공/여행은 여전히 주의 섹터지만 다음 Results에서도 경고 효율이 낮다면 실적·유가 이벤트 직전 중심의 경계로 정리합니다.",
-      "rationale": "Results 교훈상 항공은 숏커버 반등 리스크가 반복돼 단순 반복 경고의 효율이 낮았습니다.",
+      "detail": "항공/여행은 여전히 주의 섹터지만, 다음 Results에서도 경고 효율이 낮다면 상시 caution보다 실적·유가 이벤트 직전 중심의 경계로 정리하는 것이 더 적절할 수 있습니다.",
+      "rationale": "Results 교훈상 항공은 숏커버 반등 리스크가 반복돼 단순 반복 경고의 효율이 낮았습니다. 그래서 상시 경고 유지 여부를 다음 분석부터 더 엄격히 판단할 필요가 있습니다.",
       "affectedSectors": [
         "US | 항공/여행"
-      ],
-      "source": "results-review",
-      "priority": "high"
+      ]
     }
   ],
   "smallCapIdeas": [
