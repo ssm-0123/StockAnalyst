@@ -3,22 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:clean": "rm -rf .next && next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "sync:pages": "node scripts/sync-pages-root.mjs",
-    "check:data": "node --import tsx scripts/check-data-quality.ts",
-    "check:data:strict": "node --import tsx scripts/check-data-quality.ts --strict",
-    "check:history": "node --import tsx scripts/check-history-coverage.ts",
-    "check:history:strict": "node --import tsx scripts/check-history-coverage.ts --strict",
-    "check:mirror": "node scripts/check-mirror-status.mjs",
-    "check:mirror:strict": "node scripts/check-mirror-status.mjs --strict",
-    "push:pages": "node scripts/push-pages.mjs",
-    "push:pages:strict": "node scripts/push-pages.mjs --strict",
-    "install:push-agent": "bash scripts/install-push-launchagent.sh",
-    "test": "node --import tsx --test tests/*.test.ts"
+    "build": "next build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
