@@ -1,29 +1,29 @@
 {
-  "date": "2026-05-05",
-  "lastUpdated": "2026-05-05T08:16:03.000Z",
-  "marketTone": "5월 5일 한국은 어린이날 휴장이라 5월 4일 KRX 장마감 가격을 마지막 거래일로 봅니다. 미국은 5월 4일 정규장에서 중동 리스크와 유가 상승이 지수 부담을 키웠지만, 전력망·발전장비·AI 인프라 쪽 상대강도는 아직 무너지지 않았습니다. 앞으로 3~10거래일은 무차별 성장주보다 주문 가시성이 있는 전력 인프라와 HBM 병목 후보를 보유 중심으로 남기고, 유가·금리·실적 이벤트에 취약한 항공과 전통 SaaS는 반등 강도를 확인하며 경계를 유지하는 국면입니다.",
+  "date": "2026-05-04",
+  "lastUpdated": "2026-05-04T14:11:59.000Z",
+  "marketTone": "5월 4일 KRX 장마감에서 한국 전력기기와 HBM 후공정은 갭을 지키며 재확인됐고, 미국은 5월 1일 종가 이후 5월 4일 장중 유가·지정학 리스크와 AI 인프라 모멘텀이 맞서는 국면입니다. 시장은 위험선호가 완전히 꺾인 상태는 아니지만 상승 종목이 병목·실적 확인주로 좁아져, 앞으로 3~10거래일은 전력 인프라와 후공정의 지속성 확인, 항공·SaaS·자동차 경계 강도 조절이 핵심입니다.",
   "topOpportunity": "KR | 전력기기/데이터센터 전원",
   "topRisk": "US | 항공/여행",
-  "newPicksToday": 3,
+  "newPicksToday": 0,
   "newCautionsToday": 0,
   "biggestChangeToday": {
-    "label": "US 인프라 종목 교체",
-    "detail": "미국 산업재/전력 인프라 카드는 한국 전력기기 중복을 제거하고 PWR·GEV·ETN으로 교체해 AI 전력 병목의 미국 직접 수혜만 추적합니다."
+    "label": "KR 전력기기 재확인",
+    "detail": "5월 4일 KRX 장마감에서 LS ELECTRIC, HD현대일렉트릭, 효성중공업이 모두 상승해 전력 병목 수급은 유지됐지만 52주 고점 근접으로 신규 추격은 제한합니다."
   },
   "promisingSectors": [
     {
       "sectorName": "전력기기/데이터센터 전원",
       "market": "KR",
       "rank": 1,
-      "confidenceScore": 78,
-      "thesis": "5월 5일 KRX는 휴장이라 5월 4일 전력기기 대표주의 급등과 고점권 안착을 마지막 확인값으로 둡니다. 유동성은 넓게 퍼지기보다 수주·마진이 보이는 병목주에 붙는 국면이라 3~10거래일 상대강도는 아직 유지될 수 있습니다. 다만 대표주가 52주 고점 1~4% 안쪽이라 거래대금 동반 음봉이나 외국인 매도 전환이 나오면 신규 매수 판단은 접어야 합니다.",
+      "confidenceScore": 79,
+      "thesis": "5월 4일 한국 전력기기는 재개장 갭을 지키며 AI 데이터센터 전력 병목 기대를 다시 확인했습니다. 위험선호는 살아 있지만 시장 폭이 좁아져, 앞으로 3~10거래일 자금은 실적·수주가 보이는 변압기·차단기·배전 병목으로 먼저 붙을 가능성이 큽니다. 다만 효성중공업과 LS ELECTRIC은 52주 고점 1~2% 안쪽이라 장중 음봉이나 외국인 매도 전환이 나오면 신규 매수 논리는 접어야 합니다.",
       "keyDrivers": [
-        "완만한 위험선호가 유지돼도 시장 폭은 좁아져 전력 병목처럼 실적 확인이 쉬운 테마가 우선순위를 갖습니다.",
-        "AI 데이터센터 전력 수요, 노후 전력망 교체, 친환경 차단기 수요가 1~3주 수주 기대를 계속 지지합니다.",
-        "대표주는 고점권이라 신규 진입보다 보유와 눌림 분할이 손익비에 맞습니다."
+        "현재 국면은 완만한 risk-on이지만 군중심리가 고점권 대표주에 몰려 있어 눌림 없는 추격보다 보유 우위입니다.",
+        "AI 전력 수요, 노후 전력망 교체, 친환경 차단기 뉴스가 1~3주 수주 기대를 지지합니다.",
+        "가격 스냅샷상 대표주가 52주 고점권에 붙어 있어 후발 전선·배전주 비교가 다음 알파 후보입니다."
       ],
       "risks": [
-        "52주 고점권에서 거래대금 동반 음봉이 나오면 모멘텀 손익비가 빠르게 나빠집니다.",
+        "52주 고점권에서 거래량 동반 음봉이 나오면 모멘텀 손익비가 빠르게 나빠집니다.",
         "미국 금리 상승이나 AI capex ROI 논란이 커지면 전력기기 프리미엄도 같이 압축될 수 있습니다."
       ],
       "stocks": [
@@ -31,12 +31,12 @@
           "ticker": "010120",
           "companyName": "LS ELECTRIC",
           "market": "KR",
-          "rationale": "배전 자동화와 데이터센터 전원 수요가 실적 가시성을 높이지만 52주 고점 바로 아래라 신규 추격보다 보유가 합리적입니다.",
+          "rationale": "데이터센터 전력 병목과 배전 자동화 수요가 실적 기대를 밀지만 52주 고점 1% 안쪽이라 신규 추격보다 보유가 합리적입니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "294,000원 돌파 구간을 지키지 못하고 외국인 순매도가 붙으면 비중을 줄입니다.",
+          "invalidation": "294,000원 돌파를 지키지 못하고 외국인 순매도가 붙으면 비중을 줄입니다.",
           "positioningNote": "보유 유지, 신규 진입은 눌림 후 소액 분할.",
           "priceSnapshot": {
             "priceDate": "2026-05-04",
@@ -45,7 +45,7 @@
             "week52High": 296500,
             "week52Low": 42100,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         },
         {
@@ -66,14 +66,14 @@
             "week52High": 1350000,
             "week52Low": 326500,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         },
         {
           "ticker": "298040",
           "companyName": "효성중공업",
           "market": "KR",
-          "rationale": "변압기·전력망 수요 레버리지는 크지만 당일 급등 뒤 52주 고점에 붙어 있어 분할 보유와 빠른 축소 기준이 필요합니다.",
+          "rationale": "변압기·전력망 수요 레버리지는 가장 크지만 당일 8% 급등 뒤 52주 고점에 붙어 있어 수익 실현 압력도 같이 큽니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
@@ -87,7 +87,7 @@
             "week52High": 4260000,
             "week52Low": 505000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         }
       ]
@@ -96,12 +96,12 @@
       "sectorName": "산업재/전력 인프라",
       "market": "US",
       "rank": 2,
-      "confidenceScore": 76,
-      "thesis": "미국 5월 4일 장에서는 중동 리스크와 유가 상승에도 전력 시공·발전장비·전력관리주는 시장보다 견조했습니다. 위험선호가 흔들릴수록 앱 소프트웨어보다 백로그와 전력 병목이 보이는 산업재로 자금이 좁혀질 가능성이 큽니다. PWR·GEV는 고점권이라 장기금리 급등이나 AI capex 축소 논쟁이 커지면 이 섹터를 빠르게 낮춥니다.",
+      "confidenceScore": 75,
+      "thesis": "미국은 5월 1일 종가 이후 AI 인프라 기대와 5월 4일 유가·지정학 리스크가 맞서는 장세지만, 전력망·시공·발전장비 병목은 앱 소프트웨어보다 주문 가시성이 높습니다. 다만 PWR·GEV 같은 대표주는 이미 고점권 기대가 커 3~10거래일 포지셔닝은 눌림 후 재상승 확인이 더 낫습니다. 장기금리 급등이나 AI capex 축소 논쟁이 커지면 이 섹터를 1순위에서 낮춥니다.",
       "keyDrivers": [
-        "전통 시장 국면은 위험선호 유지와 유가 충격 경계가 섞여 있어, 실적이 확인되는 인프라 병목으로 선별 유입될 가능성이 큽니다.",
-        "데이터센터 전력 수요와 전력망 시공 백로그는 단기 뉴스보다 주문 지속성으로 멀티플을 방어합니다.",
-        "대표주는 52주 고점 1~10% 이내라 신규 편입은 눌림과 거래대금 확인을 전제로 둡니다."
+        "시장 국면은 위험선호 유지와 유가 충격 경계가 섞여 있어, 자금은 실적이 확인되는 인프라 병목으로 선별 유입될 가능성이 큽니다.",
+        "데이터센터 전력 수요와 장비·시공 백로그는 단기 뉴스보다 주문 지속성으로 멀티플을 방어합니다.",
+        "품질은 높지만 가격이 앞서 있어 신규 추격보다 눌림 분할과 빠른 무효화 조건이 필요합니다."
       ],
       "risks": [
         "52주 고점 부근에서 거래량 동반 음봉이 나오면 모멘텀 손익비가 빠르게 악화됩니다.",
@@ -109,66 +109,66 @@
       ],
       "stocks": [
         {
-          "ticker": "PWR",
-          "companyName": "콴타서비스",
-          "market": "US",
-          "rationale": "전력망 시공과 데이터센터 전력 연결 수요가 직접적이고 5월 4일에도 상대강도가 유지됐지만 52주 고점 바로 아래라 신규 추격은 제한합니다.",
-          "isNew": true,
-          "change": "new",
+          "ticker": "010120",
+          "companyName": "LS ELECTRIC",
+          "market": "KR",
+          "rationale": "데이터센터 전력 병목 수혜가 실적과 수주 기대에 연결되지만 가격은 이미 고점권이라 보유 중심으로만 접근합니다.",
+          "isNew": false,
+          "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "750달러 아래로 되밀리고 산업재 ETF 대비 상대강도가 꺾이면 신규 편입 논리를 낮춥니다.",
-          "positioningNote": "신규 진입은 눌림 확인 후 소액 분할.",
+          "invalidation": "다음 KRX 개장 후 외국인 순매도와 장중 음봉이 동시에 나오면 비중을 줄입니다.",
+          "positioningNote": "보유 유지, 신규 진입은 눌림 후 소액 분할.",
           "priceSnapshot": {
             "priceDate": "2026-05-04",
-            "currentPrice": 757.34,
-            "previousCloseChangePct": 2.04,
-            "week52High": 763.11,
-            "week52Low": 315,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "currentPrice": 294000,
+            "previousCloseChangePct": 5.76,
+            "week52High": 296500,
+            "week52Low": 42100,
+            "currency": "KRW",
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         },
         {
-          "ticker": "GEV",
-          "companyName": "GE 버노바",
-          "market": "US",
-          "rationale": "가스터빈·전력장비 백로그는 AI 전력 병목의 실물 수혜지만 이미 기대가 높아 수주와 마진이 같이 확인돼야 프리미엄이 유지됩니다.",
-          "isNew": true,
-          "change": "new",
+          "ticker": "267260",
+          "companyName": "HD현대일렉트릭",
+          "market": "KR",
+          "rationale": "초고압 전력기기 수주 가시성은 높지만 가격이 기대를 많이 반영해 추가 매수보다 추세 훼손 여부 확인이 우선입니다.",
+          "isNew": false,
+          "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "1,000달러 이탈과 거래량 증가가 겹치면 고점권 프리미엄을 줄입니다.",
-          "positioningNote": "보유 후보 편입, 신규는 분할만 허용.",
+          "invalidation": "1,200,000원 아래에서 거래대금이 늘면 섹터 대표주 프리미엄을 낮춥니다.",
+          "positioningNote": "보유 유지, 과열 구간 추가 금지.",
           "priceSnapshot": {
             "priceDate": "2026-05-04",
-            "currentPrice": 1073.95,
-            "previousCloseChangePct": 1.03,
-            "week52High": 1181.95,
-            "week52Low": 387.03,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "currentPrice": 1299000,
+            "previousCloseChangePct": 3.75,
+            "week52High": 1350000,
+            "week52Low": 326500,
+            "currency": "KRW",
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         },
         {
-          "ticker": "ETN",
-          "companyName": "이튼",
-          "market": "US",
-          "rationale": "전력관리와 데이터센터 전장 수요는 질이 높고 반복성이 있지만 52주 고점권이라 가격보다 실적 상향 확인이 먼저입니다.",
-          "isNew": true,
-          "change": "new",
+          "ticker": "298040",
+          "companyName": "효성중공업",
+          "market": "KR",
+          "rationale": "전력망·변압기 수요의 구조적 스토리는 강하지만 변동성이 커진 만큼 분할 보유와 빠른 손절 기준이 필요합니다.",
+          "isNew": false,
+          "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "420달러 회복 실패가 이어지고 전력장비주 내 상대강도가 밀리면 편입을 낮춥니다.",
-          "positioningNote": "신규 진입 보류, 눌림 후 관찰.",
+          "invalidation": "직전 돌파 구간을 거래량으로 이탈하면 전량보다 일부 축소를 우선합니다.",
+          "positioningNote": "보유 유지, 변동성 확대 시 비중 축소.",
           "priceSnapshot": {
             "priceDate": "2026-05-04",
-            "currentPrice": 422.44,
-            "previousCloseChangePct": -0.73,
-            "week52High": 435.43,
-            "week52Low": 293.07,
-            "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "currentPrice": 4228000,
+            "previousCloseChangePct": 8.08,
+            "week52High": 4260000,
+            "week52Low": 505000,
+            "currency": "KRW",
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         }
       ]
@@ -177,12 +177,12 @@
       "sectorName": "반도체 소부장/HBM 후공정",
       "market": "KR",
       "rank": 3,
-      "confidenceScore": 71,
-      "thesis": "한국 HBM 후공정은 5월 4일 테크윙·인텍플러스 반등으로 미국 AI 가치사슬 기대를 다시 흡수했습니다. 다만 같은 HBM 안에서도 검사 장비와 세정·코팅의 성과가 갈리므로 3~10거래일은 가격 여지와 직접 병목이 있는 후보만 좁혀야 합니다. 후공정주가 거래대금 없이 5일선을 이탈하거나 AMD 실적 이후 AI 반도체 기대가 꺾이면 buy 성격은 hold로 낮춥니다.",
+      "confidenceScore": 72,
+      "thesis": "5월 4일 KRX 장마감에서 HBM 후공정 장비주는 테크윙과 인텍플러스가 반등해 미국 AI 가치사슬 기대를 흡수했습니다. 다만 Results가 보여준 것처럼 같은 HBM 안에서도 검사 장비와 세정·코팅의 성과가 갈리므로 3~10거래일은 가격 여지와 직접 병목이 있는 후보만 좁혀야 합니다. 후공정주가 거래대금 없이 5일선을 이탈하거나 미국 반도체 실적 기대가 꺾이면 buy를 hold로 낮춥니다.",
       "keyDrivers": [
         "HBM·검사·패키징 병목은 AI capex 사이클 안에서 대형 메모리보다 후행 수주 확인 여지가 남아 있습니다.",
         "반복 스냅샷상 같은 후공정 안에서도 검사 장비와 가격 여지가 남은 후보만 알파가 더 선명했습니다.",
-        "표본이 짧아 1~3일 추격보다 1~3주 분할 확인이 낫습니다."
+        "5월 4일 상승은 확인됐지만 표본이 짧아 1~3일 추격보다 1~3주 분할 확인이 낫습니다."
       ],
       "risks": [
         "미국 메모리 sell-the-news가 한국 후공정까지 확산되면 단기 추세가 꺾일 수 있습니다.",
@@ -193,7 +193,7 @@
           "ticker": "064290",
           "companyName": "인텍플러스",
           "market": "KR",
-          "rationale": "HBM 패키징 검사 병목이 직접적이고 52주 고점과 아직 거리가 있어 후공정 안에서는 손익비가 낫지만 숫자 검증 전 포지션 크기는 낮춥니다.",
+          "rationale": "HBM 패키징 검사 병목이 직접적이고 52주 고점과 아직 거리가 있어 후공정 안에서는 손익비가 낫지만, 30,000원 기준은 유지합니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
@@ -207,14 +207,14 @@
             "week52High": 35100,
             "week52Low": 8180,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         },
         {
           "ticker": "089030",
           "companyName": "테크윙",
           "market": "KR",
-          "rationale": "HBM 검사 장비 노출은 유효하지만 5월 4일 급반등 뒤 추격 성과가 흔들릴 수 있어 55,000원 방어 확인 전까지 보유 중심입니다.",
+          "rationale": "HBM 검사 장비 노출은 유효하고 5월 4일 반등도 강했지만 Results상 추격 성과가 약해 55,000원 방어 확인 전까지 보유 중심입니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
@@ -228,7 +228,7 @@
             "week52High": 74000,
             "week52Low": 26050,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         },
         {
@@ -237,7 +237,7 @@
           "market": "KR",
           "rationale": "세정·코팅 수요는 남지만 최근 가격 검증이 약해 성장 스토리보다 실적 상향 확인 전까지 보수적으로 둡니다.",
           "isNew": false,
-          "change": "hold",
+          "change": "downgrade",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "invalidation": "145,000원 안착이 지연되고 후공정 내 상대강도가 계속 밀리면 비중을 줄입니다.",
@@ -249,7 +249,7 @@
             "week52High": 162200,
             "week52Low": 54200,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         }
       ]
@@ -260,8 +260,8 @@
       "sectorName": "항공/여행",
       "market": "US",
       "rank": 1,
-      "confidenceScore": 66,
-      "thesis": "항공/여행은 5월 4일 유가와 중동 리스크가 다시 비용 민감도를 키웠고, 주가는 시장 반등 대비 힘이 약했습니다. 3~10거래일 관점에서는 예약률이 버텨도 제트유와 레버리지가 작은 유가 충격을 크게 증폭시킬 수 있습니다. 유가가 안정되고 예약률·현금흐름 가이던스가 동시에 개선되면 top risk에서 내립니다.",
+      "confidenceScore": 65,
+      "thesis": "항공/여행은 5월 4일 유가 급등과 지정학 리스크가 다시 비용 민감도를 키웠지만, 일부 저가 항공은 경쟁사 공백 기대와 숏커버가 있어 일방적 회피는 위험합니다. 3~10거래일 관점에서는 예약률이 버텨도 제트유와 레버리지가 작은 유가 충격을 크게 증폭시킬 수 있습니다. 유가가 안정되고 예약률·현금흐름 가이던스가 동시에 개선되면 top risk에서 내립니다.",
       "headwinds": [
         "Hormuz 리스크가 남아 유가와 제트유 가격이 재상승하면 비용 민감도가 다시 커집니다.",
         "레버리지와 인건비 부담이 큰 기업은 시장 위험선호가 좋아도 현금흐름 민감도가 높습니다.",
@@ -276,20 +276,20 @@
           "ticker": "UAL",
           "companyName": "유나이티드항공",
           "market": "US",
-          "rationale": "레버리지와 유가 민감도가 커 5월 4일 하락이 비용 리스크를 다시 보여줬지만 숏커버 가능성 때문에 급락 추격보다 소액 축소가 맞습니다.",
+          "rationale": "레버리지와 유가 민감도는 남지만 숏커버가 강해, 신규 공세보다 예약률·가이던스 악화 확인 뒤 축소가 맞습니다.",
           "change": "hold",
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "invalidation": "유가 안정과 예약률 개선이 확인되면 축소 판단을 중단합니다.",
           "positioningNote": "소액 비중 축소, 강한 반등 추격 매도 금지.",
           "priceSnapshot": {
-            "priceDate": "2026-05-04",
-            "currentPrice": 90.07,
-            "previousCloseChangePct": -2.65,
+            "priceDate": "2026-04-30",
+            "currentPrice": 90,
+            "previousCloseChangePct": 1.56,
             "week52High": 119.21,
-            "week52Low": 71.55,
+            "week52Low": 65.66,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
           }
         },
         {
@@ -303,33 +303,33 @@
           "invalidation": "성수기 수요와 프리미엄 운임 유지가 확인되면 경계를 낮춥니다.",
           "positioningNote": "보유 유지, 이벤트 후 재평가.",
           "priceSnapshot": {
-            "priceDate": "2026-05-04",
-            "currentPrice": 68.5,
-            "previousCloseChangePct": -0.7,
+            "priceDate": "2026-05-01",
+            "currentPrice": 68.98,
+            "previousCloseChangePct": 1.46,
             "week52High": 76.39,
             "week52Low": 43.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "sourceNote": "Yahoo Finance 2026년 5월 1일 정규장 종가 기준; 2026-05-04 07:41 KST 장전 마지막 거래일 가격 사용"
           }
         },
         {
           "ticker": "AAL",
           "companyName": "아메리칸항공",
           "market": "US",
-          "rationale": "재무 레버리지와 비용 민감도가 가장 커 유가 재상승 시 취약하지만, 가격이 이미 낮아 강한 회피보다 리스크 예산 축소가 맞습니다.",
+          "rationale": "재무 레버리지와 비용 민감도가 가장 커 유가 재상승 시 취약하지만, 숏커버 가능성 때문에 급락 추격보다 소액 축소가 맞습니다.",
           "change": "hold",
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "invalidation": "부채 부담에도 현금흐름 가이던스가 개선되면 단기 경계를 중단합니다.",
           "positioningNote": "소액 축소, 급락 추격 매도 금지.",
           "priceSnapshot": {
-            "priceDate": "2026-05-04",
-            "currentPrice": 11.81,
-            "previousCloseChangePct": -0.25,
+            "priceDate": "2026-04-30",
+            "currentPrice": 11.71,
+            "previousCloseChangePct": 3.54,
             "week52High": 16.5,
-            "week52Low": 10.09,
+            "week52Low": 9.48,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
           }
         }
       ]
@@ -338,12 +338,12 @@
       "sectorName": "엔터프라이즈 소프트웨어",
       "market": "US",
       "rank": 2,
-      "confidenceScore": 60,
-      "thesis": "AI 예산이 인프라와 전력 병목으로 먼저 이동하면서 전통 SaaS는 매출 재가속보다 AI 기능 투자 비용과 성장률 둔화가 먼저 가격에 남아 있습니다. 5월 4일 일부 반등은 있었지만 산업재·반도체 인프라 대비 상대 매력은 아직 낮습니다. CRM·NOW가 거래량을 동반해 20일선을 회복하고 AI 매출 기여를 제시하면 경계 강도를 낮춥니다.",
+      "confidenceScore": 61,
+      "thesis": "AI 인프라 쪽으로 예산 우선순위가 계속 이동하면서 전통 SaaS는 매출 재가속보다 AI 기능 투자 비용과 성장률 둔화가 먼저 가격에 남아 있습니다. 다만 Results가 확인한 것처럼 품질 SaaS는 자사주와 고객 기반 방어가 있어 강한 회피보다 실적 전 reduce 또는 hold가 맞습니다. CRM·NOW가 거래량을 동반해 20일선을 회복하고 AI 매출 기여를 제시하면 경계 강도를 낮춥니다.",
       "headwinds": [
         "AI 기능 투자가 매출 가속보다 비용과 마진 부담으로 먼저 해석될 위험이 있습니다.",
         "위험선호가 살아도 신규 자금은 전력 인프라·플랫폼 실적주로 우선 이동하고 있습니다.",
-        "품질 SaaS는 고객 기반과 자사주 방어가 있어 단순 멀티플 부담만으로 강한 회피를 걸면 숏커버에 취약합니다."
+        "Results에서 품질 SaaS 경계가 실패한 사례가 있어 단순 멀티플 부담만으로는 강한 회피 근거가 부족합니다."
       ],
       "whatCouldImprove": [
         "대형 SaaS가 신규 AI 매출 기여와 마진 방어를 동시에 제시하면 주의 판단을 낮춥니다.",
@@ -354,20 +354,20 @@
           "ticker": "CRM",
           "companyName": "세일즈포스",
           "market": "US",
-          "rationale": "자사주와 고객 기반 방어력은 인정하지만 AI 매출 재가속 전까지 시장 주도 섹터 대비 비중 확대 우선순위는 낮습니다.",
+          "rationale": "자사주와 고객 기반 방어력은 인정하지만 AI 매출 재가속 전까지 시장 신고가 구간의 비중 확대 우선순위는 낮습니다.",
           "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "invalidation": "AI 제품 매출 기여와 마진 방어가 같이 확인되면 reduce 판단을 중단합니다.",
-          "positioningNote": "보유 유지, 실적 전 추격 보류.",
+          "positioningNote": "비중 축소보다 보유 축소 대기, 실적 전 추격 보류.",
           "priceSnapshot": {
-            "priceDate": "2026-05-04",
-            "currentPrice": 185.48,
-            "previousCloseChangePct": 0.9,
+            "priceDate": "2026-04-30",
+            "currentPrice": 181.32,
+            "previousCloseChangePct": 0.63,
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
           }
         },
         {
@@ -375,39 +375,39 @@
           "companyName": "서비스나우",
           "market": "US",
           "rationale": "품질은 높지만 기대와 AI 전환 비용이 동시에 반영되는 구간이라 반등 시 추격보다 리스크 관리가 우선입니다.",
-          "change": "hold",
+          "change": "downgrade",
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "invalidation": "20일선 회복 후 소프트웨어 ETF 대비 상대강도가 이틀 이상 개선되면 경계를 낮춥니다.",
           "positioningNote": "비중 축소, 반등은 매도 기회로 관리.",
           "priceSnapshot": {
-            "priceDate": "2026-05-04",
-            "currentPrice": 91.97,
-            "previousCloseChangePct": 0.89,
+            "priceDate": "2026-04-30",
+            "currentPrice": 88.31,
+            "previousCloseChangePct": -0.65,
             "week52High": 211.48,
             "week52Low": 81.24,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
           }
         },
         {
           "ticker": "ORCL",
           "companyName": "오라클",
           "market": "US",
-          "rationale": "클라우드 인프라 수요는 남아도 부채와 capex 확대가 동반돼 전력 인프라 순수 수혜주보다 손익비가 덜 깨끗합니다.",
+          "rationale": "클라우드 인프라 수요는 남아도 부채와 capex 확대가 동반돼 전력 인프라주보다 손익비가 덜 깨끗합니다.",
           "change": "hold",
-          "actionBias": "hold",
+          "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "invalidation": "클라우드 수주가 마진 훼손 없이 재가속된다는 가이던스가 나오면 축소 논리를 낮춥니다.",
-          "positioningNote": "보유 유지, 신규 진입은 실적 확인 후.",
+          "positioningNote": "비중 축소, 신규 진입 보류.",
           "priceSnapshot": {
-            "priceDate": "2026-05-04",
-            "currentPrice": 180.29,
-            "previousCloseChangePct": 4.92,
+            "priceDate": "2026-04-30",
+            "currentPrice": 161.39,
+            "previousCloseChangePct": -1.49,
             "week52High": 345.72,
             "week52Low": 134.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준"
+            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
           }
         }
       ]
@@ -416,8 +416,8 @@
       "sectorName": "자동차/부품",
       "market": "KR",
       "rank": 3,
-      "confidenceScore": 55,
-      "thesis": "5월 5일 한국 증시는 휴장이라 5월 4일 현대차·기아·현대모비스 반등을 마지막 확인값으로 둡니다. 관세·수요 둔화 부담은 남지만 저평가, 주주환원, 원화 약세 방어가 있어 3~10거래일은 강한 회피보다 이벤트형 축소와 외국인 수급 확인이 맞습니다. 완성차가 추가 상승으로 4월 고점권을 회복하면 caution에서 제외합니다.",
+      "confidenceScore": 56,
+      "thesis": "5월 4일 한국 자동차·부품은 현대차·기아·현대모비스가 반등해 기존 주의 콜의 확신을 더 낮췄습니다. 관세·수요 둔화 부담은 남지만 저평가, 주주환원, 원화 약세 방어가 있어 3~10거래일은 강한 회피보다 이벤트형 축소와 외국인 수급 확인이 맞습니다. 완성차가 추가 상승으로 4월 고점권을 회복하면 caution에서 제외합니다.",
       "headwinds": [
         "미국 소비와 관세 불확실성이 완성차 마진 기대를 압박합니다.",
         "부품주는 단순 저평가보다 완성차 수급 개선 확인이 먼저 필요합니다.",
@@ -445,7 +445,7 @@
             "week52High": 687000,
             "week52Low": 179300,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         },
         {
@@ -465,7 +465,7 @@
             "week52High": 212500,
             "week52Low": 86200,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         },
         {
@@ -485,7 +485,7 @@
             "week52High": 531000,
             "week52Low": 240000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+            "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
           }
         }
       ]
@@ -493,32 +493,32 @@
   ],
   "changesSinceYesterday": [
     {
-      "type": "rotate",
-      "title": "US 인프라 종목 정상화",
-      "detail": "미국 산업재/전력 인프라의 중복 한국 종목을 제거하고 PWR·GEV·ETN으로 교체해 미국 AI 전력 병목의 직접 수혜를 추적합니다."
+      "type": "upgrade",
+      "title": "KR 전력기기 1순위 상향",
+      "detail": "5월 4일 장마감에서 전력기기 대표주가 갭을 지켜 미국 산업재보다 당장 확인된 가격 근거가 강해졌습니다."
     },
     {
-      "type": "hold",
-      "title": "KR 전력기기 1순위 유지",
-      "detail": "5월 5일 KRX 휴장으로 새 가격은 없지만 5월 4일 고점권 안착과 수주 기대가 유지돼 보유 중심 1순위를 유지합니다."
+      "type": "downgrade",
+      "title": "US 인프라는 2순위로 조정",
+      "detail": "AI 전력 병목은 유지하지만 미국 대표주는 고점권과 유가·금리 변동성에 노출돼 신규 추격보다 눌림 확인으로 낮춥니다."
     },
     {
-      "type": "watch",
-      "title": "HBM은 AMD 이벤트 대기",
-      "detail": "한국 후공정은 검사 장비 중심 논리를 유지하되 AMD·SMCI 실적 이후 AI 반도체 기대가 꺾이면 신규 추가를 낮춥니다."
+      "type": "upgrade",
+      "title": "HBM 후공정 반등 확인",
+      "detail": "테크윙·인텍플러스가 반등했지만 Results 교훈을 반영해 검사 장비 중심 hold로 두고 코미코는 후순위로 유지합니다."
     },
     {
       "type": "fading-theme",
-      "title": "자동차 경계는 약화 유지",
-      "detail": "5월 4일 완성차 반등과 저평가 방어 때문에 강한 회피보다 이벤트형 관찰로 낮춥니다."
+      "title": "자동차 경계 약화",
+      "detail": "현대차·기아가 5월 4일 반등해 기존 caution은 유지하되 강한 축소보다 이벤트형 관찰로 낮춥니다."
     }
   ],
   "reasons": {
     "macro": {
       "title": "거시",
       "summary": [
-        "미국은 5월 4일 중동 리스크와 유가 상승이 지수 부담을 키웠지만 AI 전력 인프라와 발전장비는 상대강도를 지켰습니다.",
-        "한국은 5월 5일 휴장이라 5월 4일 KRX 장마감 가격을 마지막 거래일로 쓰며, 전력기기와 HBM 후공정의 기존 추세 확인이 핵심입니다."
+        "미국은 5월 4일 유가·지정학 리스크와 AI 인프라 모멘텀이 맞서는 혼합 국면이라 무차별 risk-on보다 실적 병목 섹터 선별이 필요합니다.",
+        "한국은 5월 4일 KRX 장마감 가격이 반영됐고, 전력기기와 HBM 후공정이 갭을 지켜 1~3주 상대강도 후보로 남았습니다."
       ],
       "affectedSectors": [
         "KR | 전력기기/데이터센터 전원",
@@ -532,15 +532,15 @@
         "유가와 Hormuz 리스크가 남아 항공 비용 민감주는 작은 뉴스에도 현금흐름 기대가 흔들릴 수 있습니다."
       ],
       "affectedSectors": [
-        "US | 산업재/전력 인프라",
+        "KR | 전력기기/데이터센터 전원",
         "US | 항공/여행"
       ]
     },
     "earnings": {
       "title": "실적 / 가이던스",
       "summary": [
-        "AMD·SMCI·Arm 등 AI 인프라 실적은 이번 주 반도체와 전력 인프라의 지속성을 동시에 시험합니다.",
-        "SaaS는 AI 기능 투자가 매출 재가속보다 비용과 마진 부담으로 해석되는지 확인해야 합니다."
+        "빅테크 AI 투자 지속은 시장 톤을 지지하지만, AMD·Palantir 같은 AI 관련 실적은 이미 높아진 기대를 시험합니다.",
+        "Results 교훈상 후공정은 섹터 일괄 매수보다 검사 장비와 가격 여지가 남은 후보로 좁혀야 합니다."
       ],
       "affectedSectors": [
         "KR | 반도체 소부장/HBM 후공정",
@@ -555,7 +555,7 @@
       ],
       "affectedSectors": [
         "KR | 전력기기/데이터센터 전원",
-        "US | 산업재/전력 인프라"
+        "KR | 반도체 소부장/HBM 후공정"
       ]
     }
   },
@@ -564,22 +564,22 @@
       "category": "macro",
       "market": "US",
       "title": "미국 10년물·유가 동시 방향",
-      "date": "2026-05-05",
+      "date": "2026-05-04",
       "note": "금리와 유가가 같이 오르면 전력 인프라 멀티플과 항공 비용 리스크가 동시에 흔들립니다."
     },
     {
       "category": "earnings",
       "market": "US",
-      "title": "AMD·SMCI 실적 확인",
+      "title": "AMD·Palantir 실적 기대 점검",
       "date": "2026-05-05",
-      "note": "AI 인프라 수요가 반도체와 전력 병목으로 계속 확산되는지 확인합니다."
+      "note": "AI 인프라와 AI 소프트웨어 기대가 실제 매출·마진으로 확인되는지 봅니다."
     },
     {
       "category": "risk",
       "market": "KR",
-      "title": "KRX 휴장 후 전력기기 고점 소화",
-      "date": "2026-05-06",
-      "note": "LS ELECTRIC·효성중공업이 휴장 후 거래대금 음봉 없이 고점권을 버티는지가 신규 추격 제한의 핵심입니다."
+      "title": "전력기기 고점권 소화",
+      "date": "2026-05-05",
+      "note": "LS ELECTRIC·효성중공업이 52주 고점권에서 거래대금 음봉 없이 버티는지가 신규 추격 제한의 핵심입니다."
     },
     {
       "category": "policy",
@@ -644,7 +644,7 @@
       "lastSeenDate": "2026-04-28",
       "appearances14d": 4,
       "decision": "reenter-watch",
-      "rationale": "AI 수요는 유효하지만 AMD·SMCI 실적 기대가 높고 리더 보유 논리와 후발 추격 논리를 분리해야 합니다.",
+      "rationale": "AI 수요는 유효하지만 이번 주 실적 기대가 높고 NVDA식 리더 보유 논리와 후발 추격 논리를 분리해야 합니다.",
       "triggerNote": "NVDA·AMD가 거래량을 동반해 재상승하고 capex ROI 우려가 완화되면 다시 봅니다.",
       "resultsSummary": "Results는 리더 제한 보유는 인정했지만 후발 추격보다 가격 규율을 우선하라고 지적했습니다."
     },
@@ -700,7 +700,7 @@
         "week52High": 95100,
         "week52Low": 53000,
         "currency": "KRW",
-        "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+        "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
       },
       "valuationNote": "화려한 성장주보다 이해 가능한 수요와 현금흐름 방어가 재평가 여지를 만들지만, 거래대금이 얇아 큰 비중은 어렵습니다.",
       "liquidityNote": "거래대금이 반도체 장비주보다 얇아 분할과 작은 비중이 필요합니다.",
@@ -735,7 +735,7 @@
         "week52High": 35100,
         "week52Low": 8180,
         "currency": "KRW",
-        "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+        "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
       },
       "valuationNote": "매출 가시성이 확인되면 재평가 여지가 있지만 아직 숫자 검증은 제한적입니다.",
       "liquidityNote": "중소형 장비주라 호가 공백과 장중 급락 리스크를 감안해야 합니다.",
@@ -770,7 +770,7 @@
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
-        "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+        "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
       },
       "valuationNote": "밸류는 싸다기보다 수주 상향이 계속 나와야 정당화되는 구간입니다.",
       "liquidityNote": "거래대금은 양호하지만 장중 변동성이 커 지정가 분할이 필요합니다.",
@@ -805,7 +805,7 @@
         "week52High": 162200,
         "week52Low": 54200,
         "currency": "KRW",
-        "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준; 2026년 5월 5일 어린이날 휴장으로 마지막 거래일 가격 사용"
+        "sourceNote": "Naver Finance 2026년 5월 4일 KRX 장마감 기준"
       },
       "valuationNote": "성장 스토리는 설득력 있지만 현재 가격은 실적 상향 확인을 요구합니다.",
       "liquidityNote": "거래대금은 충분하나 KOSDAQ 장비주 변동성으로 분할 접근이 필요합니다.",
@@ -868,7 +868,7 @@
       },
       {
         "sector": "US | 산업재/전력 인프라",
-        "count": 6
+        "count": 5
       },
       {
         "sector": "US | 에너지/정유",
