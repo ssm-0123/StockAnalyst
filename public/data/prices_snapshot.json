@@ -1,0 +1,515 @@
+{
+  "generatedAt": "2026-05-10T22:12:33.477Z",
+  "analysisDate": "2026-05-11",
+  "staleThresholdDays": 5,
+  "mode": "analysis_only",
+  "summary": {
+    "total": 23,
+    "fresh": 0,
+    "stale": 0,
+    "partial": 9,
+    "missing": 14,
+    "invalid": 0,
+    "tradable": 9,
+    "noTrade": 14
+  },
+  "entries": [
+    {
+      "ticker": "000660",
+      "companyName": "SK하이닉스",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 1686000,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.810Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "005930",
+      "companyName": "삼성전자",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 268500,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.743Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "036810",
+      "companyName": "에프에스티",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 42200,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.837Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "042660",
+      "companyName": "한화오션",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 126100,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.827Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "042700",
+      "companyName": "한미반도체",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 390000,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.812Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "064350",
+      "companyName": "현대로템",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 223000,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.824Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "089030",
+      "companyName": "테크윙",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 59300,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.835Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "222800",
+      "companyName": "심텍",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 115800,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.836Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "329180",
+      "companyName": "HD현대중공업",
+      "market": "KR",
+      "currency": "KRW",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currentPrice": 658000,
+        "currency": "KRW",
+        "sourceNote": "Naver Finance KR snapshot fetch"
+      },
+      "source": "naver",
+      "health": "partial",
+      "staleDays": 1,
+      "tradable": true,
+      "mode": "normal",
+      "fetchedAt": "2026-05-10T22:12:32.826Z",
+      "issues": [
+        "일부 가격 필드 누락"
+      ]
+    },
+    {
+      "ticker": "ADBE",
+      "companyName": "Adobe",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.834Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "companyName": "Advanced Micro Devices",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.818Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "APLD",
+      "companyName": "Applied Digital",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.838Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "companyName": "Broadcom",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.816Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "CEG",
+      "companyName": "Constellation Energy",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.820Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "CRM",
+      "companyName": "Salesforce",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.833Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "DAL",
+      "companyName": "Delta Air Lines",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.830Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "ETN",
+      "companyName": "Eaton",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.822Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "EXPE",
+      "companyName": "Expedia",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.828Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "FDS",
+      "companyName": "FactSet Research Systems",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.832Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "companyName": "NVIDIA",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.815Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "OKLO",
+      "companyName": "Oklo",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.839Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "UAL",
+      "companyName": "United Airlines",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.831Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    },
+    {
+      "ticker": "VST",
+      "companyName": "Vistra",
+      "market": "US",
+      "currency": "USD",
+      "snapshot": {
+        "priceDate": "2026-05-10",
+        "currency": "USD",
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
+      },
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
+      "health": "missing",
+      "staleDays": 1,
+      "tradable": false,
+      "mode": "analysis_only",
+      "fetchedAt": "2026-05-10T22:12:32.821Z",
+      "issues": [
+        "Yahoo fetch failed: HTTP 401",
+        "가격 스냅샷 확보 실패"
+      ]
+    }
+  ]
+}
