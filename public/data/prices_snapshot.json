@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-11T03:07:01.201Z",
+  "generatedAt": "2026-05-11T04:35:32.233Z",
   "analysisDate": "2026-05-11",
   "staleThresholdDays": 5,
   "mode": "normal",
   "summary": {
     "total": 23,
-    "fresh": 0,
+    "fresh": 23,
     "stale": 0,
-    "partial": 23,
+    "partial": 0,
     "missing": 0,
     "invalid": 0,
     "tradable": 23,
@@ -21,20 +21,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 1874000,
-        "previousCloseChangePct": 11.15,
+        "currentPrice": 1916000,
+        "previousCloseChangePct": 13.64,
+        "week52High": 1920000,
+        "week52Low": 193500,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.187Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.180Z",
+      "issues": []
     },
     {
       "ticker": "005930",
@@ -43,20 +43,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 283500,
-        "previousCloseChangePct": 5.59,
+        "currentPrice": 286000,
+        "previousCloseChangePct": 6.52,
+        "week52High": 288500,
+        "week52Low": 53700,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.147Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.219Z",
+      "issues": []
     },
     {
       "ticker": "036810",
@@ -65,20 +65,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 42650,
-        "previousCloseChangePct": 1.07,
+        "currentPrice": 42350,
+        "previousCloseChangePct": 0.36,
+        "week52High": 51000,
+        "week52Low": 16200,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.188Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.225Z",
+      "issues": []
     },
     {
       "ticker": "042660",
@@ -87,20 +87,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 129900,
-        "previousCloseChangePct": 3.01,
+        "currentPrice": 129800,
+        "previousCloseChangePct": 2.93,
+        "week52High": 154800,
+        "week52Low": 71500,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.194Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.227Z",
+      "issues": []
     },
     {
       "ticker": "042700",
@@ -109,20 +109,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 394500,
-        "previousCloseChangePct": 1.15,
+        "currentPrice": 390500,
+        "previousCloseChangePct": 0.13,
+        "week52High": 413000,
+        "week52Low": 78200,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.188Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.220Z",
+      "issues": []
     },
     {
       "ticker": "064350",
@@ -131,20 +131,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 220500,
-        "previousCloseChangePct": -1.12,
+        "currentPrice": 219000,
+        "previousCloseChangePct": -1.79,
+        "week52High": 282000,
+        "week52Low": 101000,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.193Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.226Z",
+      "issues": []
     },
     {
       "ticker": "089030",
@@ -153,20 +153,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 58700,
-        "previousCloseChangePct": -1.01,
+        "currentPrice": 58600,
+        "previousCloseChangePct": -1.18,
+        "week52High": 74000,
+        "week52Low": 26050,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.188Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.221Z",
+      "issues": []
     },
     {
       "ticker": "222800",
@@ -175,20 +175,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 115800,
-        "previousCloseChangePct": 0,
+        "currentPrice": 114200,
+        "previousCloseChangePct": -1.38,
+        "week52High": 119800,
+        "week52Low": 15600,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.188Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.225Z",
+      "issues": []
     },
     {
       "ticker": "329180",
@@ -197,20 +197,20 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-11",
-        "currentPrice": 678000,
-        "previousCloseChangePct": 3.04,
+        "currentPrice": 688000,
+        "previousCloseChangePct": 4.56,
+        "week52High": 710000,
+        "week52Low": 370000,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.194Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.227Z",
+      "issues": []
     },
     {
       "ticker": "ADBE",
@@ -221,18 +221,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 253.04,
         "previousCloseChangePct": -1.35,
+        "week52High": 422.95,
+        "week52Low": 224.13,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.195Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.226Z",
+      "issues": []
     },
     {
       "ticker": "AMD",
@@ -243,18 +243,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 455.19,
         "previousCloseChangePct": 11.44,
+        "week52High": 456.29,
+        "week52Low": 101.6,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.193Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.220Z",
+      "issues": []
     },
     {
       "ticker": "APLD",
@@ -265,18 +265,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 41.25,
         "previousCloseChangePct": -0.67,
+        "week52High": 44.25,
+        "week52Low": 5.13,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.196Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.228Z",
+      "issues": []
     },
     {
       "ticker": "AVGO",
@@ -287,18 +287,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 430,
         "previousCloseChangePct": 4.23,
+        "week52High": 437.68,
+        "week52Low": 206.52,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.189Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.220Z",
+      "issues": []
     },
     {
       "ticker": "CEG",
@@ -309,18 +309,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 303.63,
         "previousCloseChangePct": -2.46,
+        "week52High": 412.7,
+        "week52Low": 243.3,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.196Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.227Z",
+      "issues": []
     },
     {
       "ticker": "CRM",
@@ -331,18 +331,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 181.82,
         "previousCloseChangePct": -2.43,
+        "week52High": 296.05,
+        "week52Low": 163.52,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.194Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.226Z",
+      "issues": []
     },
     {
       "ticker": "DAL",
@@ -353,18 +353,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 73.33,
         "previousCloseChangePct": 0.3,
+        "week52High": 76.39,
+        "week52Low": 45.28,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.195Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.228Z",
+      "issues": []
     },
     {
       "ticker": "ETN",
@@ -375,18 +375,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 401.51,
         "previousCloseChangePct": 0.87,
+        "week52High": 435.43,
+        "week52Low": 306.77,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.196Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.227Z",
+      "issues": []
     },
     {
       "ticker": "EXPE",
@@ -397,18 +397,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 229.98,
         "previousCloseChangePct": -9.02,
+        "week52High": 303.8,
+        "week52Low": 148.55,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.195Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.228Z",
+      "issues": []
     },
     {
       "ticker": "FDS",
@@ -419,18 +419,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 223.61,
         "previousCloseChangePct": -0.17,
+        "week52High": 474.79,
+        "week52Low": 185,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.194Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.225Z",
+      "issues": []
     },
     {
       "ticker": "NVDA",
@@ -441,18 +441,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 215.2,
         "previousCloseChangePct": 1.75,
+        "week52High": 217.8,
+        "week52Low": 115.21,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.189Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.220Z",
+      "issues": []
     },
     {
       "ticker": "OKLO",
@@ -463,18 +463,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 72.51,
         "previousCloseChangePct": 0.95,
+        "week52High": 193.84,
+        "week52Low": 26.16,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.196Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.229Z",
+      "issues": []
     },
     {
       "ticker": "UAL",
@@ -485,18 +485,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 99.58,
         "previousCloseChangePct": -0.12,
+        "week52High": 119.21,
+        "week52Low": 71.55,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.195Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.233Z",
+      "issues": []
     },
     {
       "ticker": "VST",
@@ -507,18 +507,18 @@
         "priceDate": "2026-05-11",
         "currentPrice": 147.72,
         "previousCloseChangePct": -4.05,
+        "week52High": 219.82,
+        "week52Low": 133.73,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
       "source": "smart-trading",
-      "health": "partial",
+      "health": "fresh",
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-11T03:07:01.197Z",
-      "issues": [
-        "일부 가격 필드 누락"
-      ]
+      "fetchedAt": "2026-05-11T04:35:32.228Z",
+      "issues": []
     }
   ]
 }
