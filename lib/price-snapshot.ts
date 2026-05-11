@@ -1,6 +1,6 @@
 import { CurrencyCode, MarketCode, StockPriceSnapshot } from "@/lib/types";
 
-export type PriceSource = "yahoo" | "naver" | "naver-us" | "cache" | "fallback" | "missing";
+export type PriceSource = "smart-trading" | "yahoo" | "naver" | "naver-us" | "cache" | "fallback" | "missing";
 export type PriceSnapshotMode = "normal" | "analysis_only" | "no_trade";
 export type PriceSnapshotHealth = "fresh" | "stale" | "partial" | "missing" | "invalid";
 

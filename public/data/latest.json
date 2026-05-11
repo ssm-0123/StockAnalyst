@@ -39,10 +39,11 @@
           "invalidation": "260,000원 이탈과 외국인 순매도 전환이 함께 나오면 보유 강도를 낮춥니다.",
           "positioningNote": "기존 보유 유지, 신규 진입은 가격 필드 정상화와 눌림 확인 뒤로 제한합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 284000,
+            "previousCloseChangePct": 5.77,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 268500
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -57,10 +58,11 @@
           "invalidation": "HBM 공급 부족 코멘트가 약해지거나 1,600,000원 아래에서 거래량이 늘면 보유 논리를 낮춥니다.",
           "positioningNote": "핵심 보유 유지, 추가는 가격 스냅샷 정상화 후 분할만 허용합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 1878000,
+            "previousCloseChangePct": 11.39,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 1686000
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -75,10 +77,11 @@
           "invalidation": "375,000원 이탈 또는 장비 발주 기대가 약해지면 비중을 줄입니다.",
           "positioningNote": "보유 유지, 신규 추격은 장비 수주 확인 전까지 보류합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 394500,
+            "previousCloseChangePct": 1.15,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 390000
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         }
       ]
@@ -111,10 +114,11 @@
           "invalidation": "55,000원 이탈 또는 HBM 검사 장비 발주 지연 시 제외합니다.",
           "positioningNote": "보유 유지, 신규는 60,000원 안착과 가격 스냅샷 정상화 뒤로 제한합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 58600,
+            "previousCloseChangePct": -1.18,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 59300
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -129,10 +133,11 @@
           "invalidation": "108,000원 이탈 또는 기판 주문 상향 뉴스 부재 시 관찰 강도를 낮춥니다.",
           "positioningNote": "보유자는 일부 이익 보호, 신규는 110,000원대 재확인 뒤로 미룹니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 115400,
+            "previousCloseChangePct": -0.35,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 115800
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -147,10 +152,11 @@
           "invalidation": "40,000원 이탈 또는 소재주 동반 약세 시 제외합니다.",
           "positioningNote": "소액 관찰 유지, 신규 진입은 상대강도 회복 확인 뒤입니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 42600,
+            "previousCloseChangePct": 0.95,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 42200
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         }
       ]
@@ -183,9 +189,11 @@
           "invalidation": "SOX가 재차 약해지고 데이터센터 주문 둔화 코멘트가 나오면 보유 강도를 낮춥니다.",
           "positioningNote": "기존 보유 유지, 신규 진입은 Yahoo/Naver 가격 정상화 뒤로 제한합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 215.2,
+            "previousCloseChangePct": 1.75,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -200,9 +208,11 @@
           "invalidation": "AI 네트워킹 주문 둔화 또는 칩주 동반 차익실현 시 관찰 강도를 낮춥니다.",
           "positioningNote": "보유 관찰, 신규는 가격 스냅샷 확보와 눌림 확인 뒤입니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 430,
+            "previousCloseChangePct": 4.23,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -217,9 +227,11 @@
           "invalidation": "급등분 follow-through가 실패하거나 실적 기대가 낮아지면 후보에서 내립니다.",
           "positioningNote": "관찰만 유지, 신규 매수 문구는 가격 정상화 전까지 사용하지 않습니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 455.19,
+            "previousCloseChangePct": 11.44,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         }
       ]
@@ -254,10 +266,11 @@
           "invalidation": "240,000원 회복과 거래대금 증가가 같이 나오면 축소를 멈춥니다.",
           "positioningNote": "반등 시 일부 축소, 신규 진입은 보류합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 220500,
+            "previousCloseChangePct": -1.12,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 223000
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -272,10 +285,11 @@
           "invalidation": "690,000원 회복 또는 고부가 수주 확인 시 경계를 낮춥니다.",
           "positioningNote": "기존 비중 일부 축소, 신규는 수주 확인 뒤입니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 679500,
+            "previousCloseChangePct": 3.27,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 658000
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -290,10 +304,11 @@
           "invalidation": "130,000원 회복과 조선주 동반 반등 시 reduce를 중단합니다.",
           "positioningNote": "반등 시 비중 축소, 전량 정리는 수주 공백 지속 때 검토합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 130100,
+            "previousCloseChangePct": 3.17,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-            "currentPrice": 126100
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         }
       ]
@@ -326,9 +341,11 @@
           "invalidation": "신규 계약 지표 개선과 소프트웨어 동반 반등이 확인되면 축소를 멈춥니다.",
           "positioningNote": "가격 미확보로 신규 판단은 보류하되 기존 비중은 반등 시 축소합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 223.61,
+            "previousCloseChangePct": -0.17,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -343,9 +360,11 @@
           "invalidation": "AI 유료 전환 수치와 순증 ARR 반등이 같이 나오면 경계를 낮춥니다.",
           "positioningNote": "반등 시 일부 축소, 실적 전 신규 매수는 피합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 181.82,
+            "previousCloseChangePct": -2.43,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -360,9 +379,11 @@
           "invalidation": "순신규 ARR 반등과 AI 기능 가격 수용이 확인되면 reduce를 중단합니다.",
           "positioningNote": "보유 비중 축소, 신규 매수는 실적 확인 뒤입니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 253.04,
+            "previousCloseChangePct": -1.35,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         }
       ]
@@ -395,9 +416,11 @@
           "invalidation": "예약 지표 반등과 가이던스 상향이 확인되면 reduce를 멈춥니다.",
           "positioningNote": "반등 시 비중 축소, 신규 매수는 가격 정상화 뒤에도 보류합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 229.98,
+            "previousCloseChangePct": -9.02,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -412,9 +435,11 @@
           "invalidation": "유가 하락과 예약 지표 개선이 동시에 나오면 경계를 낮춥니다.",
           "positioningNote": "기존 비중 일부 축소, 신규 진입은 유가 안정 후입니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 73.33,
+            "previousCloseChangePct": 0.3,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         },
         {
@@ -429,9 +454,11 @@
           "invalidation": "예약 지표 개선과 항공주 동반 상대강도 회복 시 축소를 중단합니다.",
           "positioningNote": "반등 시 비중 축소, 단기 매매만 허용합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-10",
+            "priceDate": "2026-05-11",
+            "currentPrice": 99.58,
+            "previousCloseChangePct": -0.12,
             "currency": "USD",
-            "sourceNote": "Yahoo/Naver 기준 최신 가격 미확보; Naver US/worldstock fallback snapshot fetch; Yahoo fetch failed: HTTP 401, 가격 스냅샷 확보 실패; prices_snapshot health=missing, mode=analysis_only"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
           }
         }
       ]
@@ -449,10 +476,11 @@
       "whyNow": "HBM 수요가 테스트 장비 발주로 확산되는지 확인할 수 있는 가장 직접적인 중소형 후보입니다.",
       "followThroughNote": "반복 추적 후보지만 스냅샷이 partial이라 가격 과열 여부를 완전히 검증하지 못했습니다. 가격 필드가 정상화될 때까지 신규보다 보유 관찰입니다.",
       "priceSnapshot": {
-        "priceDate": "2026-05-10",
+        "priceDate": "2026-05-11",
+        "currentPrice": 58600,
+        "previousCloseChangePct": -1.18,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-        "currentPrice": 59300
+        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
       },
       "valuationNote": "실적 확인 전 멀티플 확장은 경계하지만 병목 프리미엄은 남아 있습니다.",
       "liquidityNote": "거래는 가능하지만 급등락일에는 호가 공백이 커질 수 있습니다.",
@@ -481,10 +509,11 @@
       "whyNow": "대표 메모리주 상승 뒤 후방 부품으로 수급이 번지는지 확인할 후보입니다.",
       "followThroughNote": "최근 급등 가능성이 있어 추격 리스크를 먼저 봅니다. 거래대금 유지와 가격 필드 정상화 전에는 비중을 키우지 않습니다.",
       "priceSnapshot": {
-        "priceDate": "2026-05-10",
+        "priceDate": "2026-05-11",
+        "currentPrice": 115400,
+        "previousCloseChangePct": -0.35,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-        "currentPrice": 115800
+        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
       },
       "valuationNote": "저점 대비 재평가는 진행됐지만 실적 턴어라운드 확인 시 추가 리레이팅 여지는 남습니다.",
       "liquidityNote": "코스닥 중형주로 거래대금은 충분하나 급등 뒤 변동성이 큽니다.",
@@ -513,10 +542,11 @@
       "whyNow": "대표 장비주 추격 부담이 커져 소재·부품 내 가격 부담이 낮은 후보를 비교할 필요가 있습니다.",
       "followThroughNote": "상대강도 확인이 아직 부족해 소액 관찰로만 둡니다. 44,000원 회복 전까지는 추격하지 않습니다.",
       "priceSnapshot": {
-        "priceDate": "2026-05-10",
+        "priceDate": "2026-05-11",
+        "currentPrice": 42600,
+        "previousCloseChangePct": 0.95,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; 일부 가격 필드 누락; prices_snapshot health=partial, mode=normal",
-        "currentPrice": 42200
+        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
       },
       "valuationNote": "고점 대비 여유는 있지만 실적 가시성이 대표주보다 약해 할인은 정당합니다.",
       "liquidityNote": "거래대금은 대형 장비주보다 얇아 분할 접근이 필요합니다.",
@@ -792,5 +822,16 @@
       "title": "방산·조선 고점주는 주의 유지",
       "detail": "수주 논리보다 반도체로의 수급 압축과 고점권 매물이 더 중요해 다음 분석에서도 reduce 후보로 먼저 봅니다."
     }
-  ]
+  ],
+  "priceSnapshotGeneratedAt": "2026-05-11T02:59:59.569Z",
+  "priceSnapshotSummary": {
+    "total": 23,
+    "fresh": 0,
+    "stale": 0,
+    "partial": 23,
+    "missing": 0,
+    "invalid": 0,
+    "tradable": 23,
+    "noTrade": 0
+  }
 }
