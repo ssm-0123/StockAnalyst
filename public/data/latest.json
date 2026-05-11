@@ -1,14 +1,14 @@
 {
-  "date": "2026-05-11",
-  "lastUpdated": "2026-05-11T13:40:00.000+09:00",
-  "marketTone": "한국과 미국 모두 넓은 경기민감 확산보다 AI 인프라 병목과 실적 확인 종목으로 자금이 좁게 붙는 국면입니다. 이번 가격 스냅샷은 23개 전부 fresh라 실행 가능성 평가는 이전보다 개선됐지만, 52주 고점 10% 이내 종목이 많아 신규 추격보다 보유·눌림·무효화 조건을 분리합니다. 3~10거래일 관점에서는 HBM 메모리와 미국 AI 반도체를 유지하고, 조선/방산은 caution에서 조건부 재진입 후보로 올리되 후공정 중소형과 전력/원전 고점주는 가격 검증을 더 요구합니다.",
+  "date": "2026-05-12",
+  "lastUpdated": "2026-05-12T02:30:00.000+09:00",
+  "marketTone": "한국과 미국 모두 넓은 위험선호보다 AI 인프라 병목, HBM, 조선 수주처럼 이익 가시성이 보이는 곳으로 자금이 좁게 붙는 국면입니다. 가격 스냅샷은 23개 전부 fresh라 실행 가능성은 확보됐지만, SK하이닉스·삼성전자·NVDA·AMD·한미반도체·심텍처럼 52주 고점 10% 이내 후보가 많아 신규 추격보다 보유와 눌림 진입을 분리합니다. 향후 3~10거래일은 HBM/AI 반도체를 핵심으로 두고, 조선/방산은 재진입 후보로 올리되 전력·원전과 전통 SaaS는 반등이 나와도 기대 재평가가 더 필요합니다.",
   "topOpportunity": "KR | 반도체/HBM 메모리",
   "topRisk": "US | 고점 전력/원전 인프라",
   "newPicksToday": 1,
   "newCautionsToday": 1,
   "biggestChangeToday": {
-    "label": "조선/방산 재진입",
-    "detail": "HD현대중공업과 한화오션의 fresh 가격이 수주주 재평가를 다시 보여 caution에서 유망 3순위로 올렸지만, 52주 고점권이라 신규 추격은 제한합니다."
+    "label": "조선/방산 상향",
+    "detail": "HD현대중공업과 한화오션이 fresh 가격 기준 52주 고점권 재접근을 보이며 caution에서 유망 3순위로 이동했습니다. 다만 가격 반영이 커 신규 매수보다 수주 뉴스 후 눌림 확인을 우선합니다."
   },
   "promisingSectors": [
     {
@@ -16,22 +16,22 @@
       "market": "KR",
       "rank": 1,
       "confidenceScore": 86,
-      "thesis": "삼성전자와 SK하이닉스가 52주 고점권에서 동반 강세를 보이며 한국 지수 수급의 중심이 HBM·DRAM 이익 상향으로 더 압축됐습니다. 향후 3~10거래일은 유동성이 넓게 퍼지기보다 실제 공급 부족과 고객 승인 기대가 있는 메모리 대표주에 먼저 남을 가능성이 큽니다. 외국인 매수 둔화와 HBM 가격 협상력 후퇴가 동시에 나오면 이 판단은 보유 축소로 전환합니다.",
+      "thesis": "삼성전자와 SK하이닉스가 2026-05-12 가격 스냅샷에서도 52주 고점권을 유지하며 한국 시장 주도권이 HBM·DRAM 이익 상향에 남아 있음을 보여줍니다. 유동성이 경기민감 전반으로 넓게 퍼지기보다 공급 병목과 고객 승인 기대가 확인되는 대표주에 먼저 머물 가능성이 큽니다. 외국인 매수 둔화와 HBM 가격 협상력 후퇴가 동시에 나오면 보유 강도를 낮춥니다.",
       "keyDrivers": [
         "AI 서버 CAPEX가 HBM과 고부가 DRAM 부족을 연장시키며 이익 추정 상향을 계속 밀어줄 수 있음",
-        "최근 Results에서 SK하이닉스 콜이 worked로 확인돼 병목 대표주는 가격 부담보다 모멘텀 지속성을 우선 평가",
-        "시장 유동성이 방어주보다 실적 상향이 보이는 대형 반도체로 압축되는 전통적 주도주 국면"
+        "최근 Results에서 병목 대표주 콜이 worked로 확인돼 가격 부담보다 모멘텀 지속성을 우선 평가",
+        "전통적 유동성 국면도 방어주보다 실적 상향이 보이는 대형 반도체에 더 우호적"
       ],
       "risks": [
-        "SK하이닉스와 삼성전자가 52주 고점권이라 신규 추격은 손익비가 낮고, 고점 돌파 실패 시 빠른 차익실현 가능",
-        "HBM 고객 승인 또는 메모리 가격 기대가 지연되면 대표주 쏠림이 지수 변동성으로 되돌아올 수 있음"
+        "대표주 모두 52주 고점권이라 신규 추격은 손익비가 낮고 고점 돌파 실패 시 차익실현이 빠를 수 있음",
+        "HBM 고객 승인 또는 메모리 가격 기대가 지연되면 지수 주도주 쏠림이 변동성으로 돌아올 수 있음"
       ],
       "stocks": [
         {
           "ticker": "000660",
           "companyName": "SK하이닉스",
           "market": "KR",
-          "rationale": "HBM 병목과 실적 추정 상향이 가장 직접적으로 연결되는 대표주라 보유 우위는 유지하지만, 52주 고점 바로 아래라 신규 매수보다 눌림 기준이 필요합니다.",
+          "rationale": "HBM 병목과 실적 추정 상향이 가장 직접적으로 연결되는 대표주라 보유 우위는 유지하지만, 52주 고점 바로 아래라 신규 매수는 눌림 기준이 필요합니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
@@ -39,55 +39,55 @@
           "invalidation": "1,850,000원 이탈과 외국인 순매도 전환이 동시에 나오면 보유 강도를 낮춥니다.",
           "positioningNote": "핵심 보유 유지, 신규 진입은 급등분 소화 뒤 분할만 허용합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 1916000,
-            "previousCloseChangePct": 13.64,
-            "week52High": 1920000,
+            "priceDate": "2026-05-12",
+            "currentPrice": 1880000,
+            "previousCloseChangePct": 11.51,
+            "week52High": 1949000,
             "week52Low": 193500,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         },
         {
           "ticker": "005930",
           "companyName": "삼성전자",
           "market": "KR",
-          "rationale": "HBM4와 DRAM 가격 회복 기대가 지수 수급을 끌지만, SK하이닉스보다 실행 검증이 늦어 추격보다 보유 확인이 맞습니다.",
+          "rationale": "HBM4와 DRAM 가격 회복 기대가 지수 수급을 끌지만 SK하이닉스보다 실행 검증이 늦어 추격보다 확인 매수가 맞습니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "275,000원 이탈 또는 HBM 고객 승인 지연 뉴스가 나오면 비중 확대를 멈춥니다.",
+          "invalidation": "275,000원 이탈 또는 HBM 고객 승인 지연 뉴스가 나오면 추가 매수를 멈춥니다.",
           "positioningNote": "기존 보유 유지, 추가는 52주 고점 안착 확인 뒤로 제한합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 286000,
-            "previousCloseChangePct": 6.52,
+            "priceDate": "2026-05-12",
+            "currentPrice": 285500,
+            "previousCloseChangePct": 6.33,
             "week52High": 288500,
             "week52Low": 53700,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         },
         {
           "ticker": "042700",
           "companyName": "한미반도체",
           "market": "KR",
-          "rationale": "HBM 후공정 장비 대표성이 있어 메모리 강세 확산 때 베타가 크지만 52주 고점 10% 이내라 기대 반영이 높습니다.",
+          "rationale": "HBM 후공정 장비 대표성이 있어 메모리 강세 확산 때 베타가 크지만, 고점권 가격이라 수주 확인 없는 추격은 제한합니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "375,000원 이탈 또는 신규 발주 기대 약화 시 비중을 줄입니다.",
+          "invalidation": "380,000원 이탈 또는 신규 발주 기대 약화 시 비중을 줄입니다.",
           "positioningNote": "보유 유지, 신규 추격은 수주 확인 전까지 보류합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 390500,
-            "previousCloseChangePct": 0.13,
+            "priceDate": "2026-05-12",
+            "currentPrice": 400000,
+            "previousCloseChangePct": 2.56,
             "week52High": 413000,
             "week52Low": 78200,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         }
       ]
@@ -96,79 +96,79 @@
       "sectorName": "AI 반도체/네트워킹",
       "market": "US",
       "rank": 2,
-      "confidenceScore": 82,
-      "thesis": "NVDA·AMD·AVGO가 모두 52주 고점권에 붙어 AI CAPEX 수급이 미국 대형 반도체에 계속 남아 있음을 보여줍니다. 다음 3~10거래일은 1등주 보유와 2등주 대안 수급이 동시에 유효하지만, 급등한 AMD처럼 기대가 앞선 종목은 신규 추격보다 빠른 무효화 조건이 더 중요합니다. 클라우드 CAPEX 코멘트가 식거나 고점 돌파 실패가 반복되면 보유 중심으로 낮춥니다.",
+      "confidenceScore": 83,
+      "thesis": "NVDA·AMD·AVGO가 fresh 스냅샷에서 모두 52주 고점 10% 이내에 머물며 AI CAPEX 수급이 미국 대형 반도체에 남아 있음을 보여줍니다. 다음 3~10거래일은 1등주 보유와 2등주 대안 수급이 동시에 유효하지만, 이미 기대가 큰 종목은 신규 추격보다 빠른 무효화 조건이 더 중요합니다. 클라우드 CAPEX 코멘트가 식거나 고점 돌파 실패가 반복되면 보유 중심으로 낮춥니다.",
       "keyDrivers": [
         "Results에서 AMD와 NVDA가 worked로 확인돼 AI 반도체 내 추정치 상향과 대안 수급이 단기 알파로 연결됨",
         "네트워킹과 커스텀칩 수요가 GPU 단일 스토리에서 AVGO까지 수급을 넓힐 수 있음",
-        "유동성이 고금리 부담 업종보다 매출 가시성이 높은 혁신 인프라로 선별 유입되는 국면"
+        "고금리 부담 업종보다 매출 가시성이 높은 혁신 인프라에 선별 유입되는 국면"
       ],
       "risks": [
-        "NVDA·AMD·AVGO 모두 52주 고점 10% 이내라 실적 전 기대가 조금만 낮아져도 차익실현이 빠를 수 있음",
+        "세 종목 모두 고점권이라 실적 전 기대가 조금만 낮아져도 차익실현이 빠를 수 있음",
         "반도체 지수 고점 돌파 실패 또는 대형 클라우드 CAPEX 둔화 코멘트가 나오면 모멘텀 지속 판단을 접어야 함"
       ],
       "stocks": [
         {
-          "ticker": "AMD",
-          "companyName": "Advanced Micro Devices",
-          "market": "US",
-          "rationale": "NVDA 외 대안 수급과 AI 가속기 매출 기대가 동시에 붙어 단기 탄력은 가장 크지만, 52주 고점 근접으로 신규 추격은 제한합니다.",
-          "isNew": false,
-          "change": "hold",
-          "actionBias": "hold",
-          "timeHorizon": "1-3w",
-          "invalidation": "430달러 이탈 또는 AI 매출 가이던스 둔화가 나오면 보유 강도를 낮춥니다.",
-          "positioningNote": "보유 유지, 신규 진입은 고점 돌파 후 재안착 확인 때만 분할합니다.",
-          "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 455.19,
-            "previousCloseChangePct": 11.44,
-            "week52High": 456.29,
-            "week52Low": 101.6,
-            "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
-          }
-        },
-        {
           "ticker": "NVDA",
           "companyName": "NVIDIA",
           "market": "US",
-          "rationale": "AI CAPEX의 기준 종목으로 복리 품질은 가장 높지만, 이미 고점권이라 새로 크게 사는 구간보다 보유와 축소 기준을 나눌 구간입니다.",
+          "rationale": "AI CAPEX의 기준 종목으로 품질과 수요 가시성은 가장 높지만, 고점권이라 새로 크게 사기보다 보유와 축소 기준을 분리해야 합니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "207달러 이탈 또는 클라우드 CAPEX 둔화 코멘트가 나오면 일부 축소합니다.",
-          "positioningNote": "핵심 보유 유지, 신규 추격은 제한합니다.",
+          "invalidation": "210달러 이탈 또는 대형 고객 CAPEX 둔화 코멘트가 나오면 보유 강도를 낮춥니다.",
+          "positioningNote": "핵심 보유 유지, 신규 진입은 고점 돌파 후 재안착 확인 때만 분할합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 215.2,
-            "previousCloseChangePct": 1.75,
-            "week52High": 217.8,
-            "week52Low": 115.21,
+            "priceDate": "2026-05-12",
+            "currentPrice": 220.13,
+            "previousCloseChangePct": 2.29,
+            "week52High": 222.3,
+            "week52Low": 120.28,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "companyName": "Advanced Micro Devices",
+          "market": "US",
+          "rationale": "NVDA 외 대안 수급과 AI 가속기 매출 기대가 붙어 단기 탄력은 크지만 52주 고점 근접으로 신규 추격은 제한합니다.",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "invalidation": "440달러 이탈 또는 AI 매출 가이던스 둔화가 나오면 보유 강도를 낮춥니다.",
+          "positioningNote": "보유 유지, 신규 진입은 급등분 소화 뒤 분할만 허용합니다.",
+          "priceSnapshot": {
+            "priceDate": "2026-05-12",
+            "currentPrice": 463.31,
+            "previousCloseChangePct": 1.78,
+            "week52High": 467.68,
+            "week52Low": 106.98,
+            "currency": "USD",
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         },
         {
           "ticker": "AVGO",
           "companyName": "Broadcom",
           "market": "US",
-          "rationale": "커스텀 AI 칩과 네트워킹 병목의 수혜가 GPU 외부로 확산될 때 상대적으로 방어적인 AI 인프라 후보입니다.",
+          "rationale": "커스텀 ASIC과 네트워킹 수요가 GPU 병목의 다음 확산 후보지만, 이미 높은 기대가 반영돼 실적 확인 전 공격적 증액은 피합니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "410달러 이탈 또는 AI 네트워킹 주문 둔화가 확인되면 비중을 줄입니다.",
-          "positioningNote": "보유 유지, 추가는 실적 이벤트 전 과도하게 늘리지 않습니다.",
+          "invalidation": "410달러 이탈 또는 AI 네트워킹 주문 둔화 신호가 나오면 비중을 줄입니다.",
+          "positioningNote": "보유 유지, 추가는 실적·수주 코멘트 확인 뒤로 제한합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 430,
-            "previousCloseChangePct": 4.23,
+            "priceDate": "2026-05-12",
+            "currentPrice": 429.08,
+            "previousCloseChangePct": -0.22,
             "week52High": 437.68,
-            "week52Low": 206.52,
+            "week52Low": 215.88,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         }
       ]
@@ -177,79 +177,79 @@
       "sectorName": "조선/방산 수주주",
       "market": "KR",
       "rank": 3,
-      "confidenceScore": 73,
-      "thesis": "조선 대형주가 다시 52주 고점 근처로 붙으며 이전 caution이 단순 고점 부담만으로는 충분하지 않았음을 보여줬습니다. 향후 3~10거래일은 수주잔고, 환율, 방산 수출 기대가 반도체 외 한국 주도 후보로 자금을 다시 끌 수 있지만 가격은 이미 빠르게 반영됐습니다. HD현대중공업 고점 돌파 실패와 현대로템 약세가 계속되면 재진입은 보류합니다.",
+      "confidenceScore": 74,
+      "thesis": "HD현대중공업과 한화오션이 fresh 가격 기준 강세를 보이며 고부가 선박과 방산 수주 프리미엄이 다시 살아났습니다. 반도체 쏠림이 완화될 때 한국 내 대체 주도주가 될 수 있지만, 52주 고점권 수주주는 기대 반영이 커 눌림과 신규 수주 확인이 필요합니다. 수주 뉴스 없이 고점 돌파가 실패하거나 환율·원가 부담이 커지면 재진입 판단을 접습니다.",
       "keyDrivers": [
-        "수주잔고와 선가 개선이 실적 가시성을 높여 전통 경기민감보다 프리미엄을 받을 수 있음",
-        "반도체 쏠림이 부담스러워질 때 한국 내 2순위 주도 후보로 조선·방산 수급이 재부상할 수 있음",
-        "기존 caution에서 빠른 회복이 확인돼 숏커버와 재진입 수급이 단기 탄력을 만들 가능성"
+        "신조선가·방산 수출 기대가 실적 가시성을 제공해 단기 로테이션 대안으로 부상",
+        "반도체 대표주 과열 시 한국 내 수급이 조선·방산으로 일부 분산될 수 있음",
+        "최근 caution에서 보던 고점 부담보다 fresh 가격의 상대강도 회복이 더 뚜렷해짐"
       ],
       "risks": [
-        "HD현대중공업이 52주 고점 10% 이내라 신규 추격은 제한하며, 고점 돌파 실패 시 이전 caution 논리가 다시 작동할 수 있음",
-        "수주 뉴스 부재, 원가 부담, 현대로템 상대약세가 이어지면 섹터 재진입 판단을 낮춰야 함"
+        "HD현대중공업은 52주 고점에 근접해 수주 공백이 생기면 빠른 차익실현 가능",
+        "현대로템은 당일 약세라 방산 확산이 확인되지 않으면 섹터 내 후순위로 낮춰야 함"
       ],
       "stocks": [
         {
           "ticker": "329180",
           "companyName": "HD현대중공업",
           "market": "KR",
-          "rationale": "수주잔고와 선가 기대가 가장 선명한 대표주지만 52주 고점 바로 아래라 신규 매수보다 돌파 후 안착 확인이 우선입니다.",
+          "rationale": "고부가 선박 수주 기대와 조선 대표성은 유효하지만 52주 고점권이라 새로 사기보다 눌림 후 재상승 확인이 필요합니다.",
           "isNew": true,
           "change": "upgrade",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "660,000원 이탈 또는 고점 돌파 실패 후 거래대금 감소가 나오면 재진입 판단을 철회합니다.",
-          "positioningNote": "기존 보유만 유지, 신규 진입은 고점 돌파 후 눌림에서 분할합니다.",
+          "invalidation": "650,000원 이탈 또는 신규 수주 모멘텀 둔화 시 재진입 판단을 철회합니다.",
+          "positioningNote": "관심 상향, 신규 진입은 눌림 분할만 허용합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 688000,
-            "previousCloseChangePct": 4.56,
+            "priceDate": "2026-05-12",
+            "currentPrice": 685000,
+            "previousCloseChangePct": 4.1,
             "week52High": 710000,
             "week52Low": 370000,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         },
         {
           "ticker": "042660",
           "companyName": "한화오션",
           "market": "KR",
-          "rationale": "조선 수주와 방산 기대가 같이 붙을 때 대형주 내 후발 탄력이 가능하지만 고점권 변동성을 감안해야 합니다.",
+          "rationale": "방산·해양 수주 기대가 조선주 내 대안 수급을 만들 수 있지만, 변동성이 커 고점 돌파 확인 전에는 보유 중심이 맞습니다.",
           "isNew": true,
           "change": "upgrade",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "124,000원 이탈 또는 수주 모멘텀 공백이 확인되면 비중을 줄입니다.",
-          "positioningNote": "소규모 보유 유지, 추가는 수주 뉴스와 거래대금 동반 확인 뒤입니다.",
+          "invalidation": "122,000원 이탈 또는 수주 기대가 지연되면 비중 확대를 중단합니다.",
+          "positioningNote": "보유 또는 관찰, 신규 진입은 수주 뉴스 확인 뒤 분할합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 129800,
-            "previousCloseChangePct": 2.93,
+            "priceDate": "2026-05-12",
+            "currentPrice": 130500,
+            "previousCloseChangePct": 3.49,
             "week52High": 154800,
             "week52Low": 71500,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         },
         {
           "ticker": "064350",
           "companyName": "현대로템",
           "market": "KR",
-          "rationale": "방산·철도 수출 스토리는 남지만 당일 약세가 있어 섹터 재진입의 확인 종목이지 공격 매수 후보는 아닙니다.",
+          "rationale": "방산·철도 수출 테마는 살아 있지만 당일 가격은 약해 조선주보다 후순위입니다. 실적 수주 확인 없이는 공격적 확대보다 관찰이 맞습니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "hold",
           "timeHorizon": "1-3w",
-          "invalidation": "210,000원 이탈 또는 방산주 동반 거래대금 둔화 시 제외합니다.",
-          "positioningNote": "관찰 보유, 240,000원 회복 전 신규 진입은 제한합니다.",
+          "invalidation": "210,000원 이탈 또는 수주 뉴스 공백이 이어지면 비중을 줄입니다.",
+          "positioningNote": "보유 유지, 신규 매수는 강도 회복 확인 뒤로 미룹니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 219000,
-            "previousCloseChangePct": -1.79,
+            "priceDate": "2026-05-12",
+            "currentPrice": 219500,
+            "previousCloseChangePct": -1.57,
             "week52High": 282000,
             "week52Low": 101000,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         }
       ]
@@ -257,244 +257,244 @@
   ],
   "cautionSectors": [
     {
-      "sectorName": "고점 전력/원전 인프라",
+      "sectorName": "전통 SaaS/데이터 구독",
       "market": "US",
       "rank": 1,
       "confidenceScore": 78,
-      "thesis": "AI 전력 병목 논리는 유효하지만 VST와 CEG가 약하고 ETN은 최근 Results에서 failed로 확인돼 가격 반영이 먼저 문제가 됐습니다. 향후 3~10거래일에는 전력 계약이나 실적 확인 없이 고점 테마를 다시 사는 수급보다 차익실현과 변동성 관리가 우선입니다. 전력 계약, 실적 가이던스, 금리 안정이 동시에 나오면 caution을 reenter-watch로 낮춥니다.",
+      "thesis": "ADBE·CRM·FDS는 fresh 가격 기준 52주 저점권에 가까워 단순 고평가 숏보다 구조적 재평가 리스크를 보는 구간입니다. 생성형 AI가 가격 결정력과 좌석 확장을 건드리는 동안 반등은 나와도 상대강도 회복에는 실적 가이던스가 필요합니다. 대형 고객 유지율과 AI 수익화가 동시에 개선되면 caution 강도를 낮춥니다.",
       "headwinds": [
-        "전력 인프라 논리는 이미 가격에 많이 반영돼 좋은 사업도 안전마진 없이 모멘텀 콜로만 취급해야 함",
-        "VST와 CEG의 동반 약세가 전력 테마 내부의 차익실현 압력을 보여줌",
-        "금리 부담이 남으면 장기 현금흐름 기대가 높은 인프라 성장주의 할인율 압박이 커질 수 있음"
+        "AI 대체 압력이 데이터·콘텐츠·CRM 워크플로의 가격 결정력을 직접 흔들 수 있음",
+        "낙폭이 커도 성장률 재가속 확인 전까지 밸류에이션 복원 논리가 약함",
+        "Results에서 FDS 경계는 유효했지만 CRM은 방어력이 있어 종목별 차등 축소가 필요"
       ],
       "whatCouldImprove": [
-        "VST·CEG가 전력계약과 실적 가이던스로 동반 회복하면 섹터는 caution에서 관찰로 낮춤",
-        "ETN이 420달러를 회복하고 거래대금이 붙으면 가격 반영 부담이 일부 해소됨"
+        "AI 기능이 실제 업셀과 마진 방어로 연결되는 분기 가이던스가 나오면 경계를 낮춤",
+        "자사주와 고객 유지율이 주가 하방을 막는 종목은 전량 정리보다 reduce로 완화"
       ],
       "stocks": [
         {
-          "ticker": "VST",
-          "companyName": "Vistra",
+          "ticker": "ADBE",
+          "companyName": "Adobe",
           "market": "US",
-          "rationale": "AI 전력 수요 수혜는 크지만 당일 약세와 52주 고점 대비 낙폭이 커져 모멘텀 훼손 여부를 먼저 봐야 합니다.",
-          "isNew": false,
-          "change": "downgrade",
-          "actionBias": "reduce",
-          "timeHorizon": "1-3w",
-          "invalidation": "145달러 이탈 또는 전력주 동반 약세 지속 시 일부 축소합니다.",
-          "positioningNote": "비중 축소 우선, 신규 진입은 계약 뉴스 전까지 보류합니다.",
-          "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 147.72,
-            "previousCloseChangePct": -4.05,
-            "week52High": 219.82,
-            "week52Low": 133.73,
-            "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
-          }
-        },
-        {
-          "ticker": "CEG",
-          "companyName": "Constellation Energy",
-          "market": "US",
-          "rationale": "원전 전력 프리미엄은 남지만 52주 고점에서 멀어진 상태라 주도 복귀 전 확인 시간이 필요합니다.",
-          "isNew": false,
-          "change": "hold",
-          "actionBias": "hold",
-          "timeHorizon": "1-3w",
-          "invalidation": "295달러 이탈 또는 원전 전력계약 기대 후퇴 시 축소합니다.",
-          "positioningNote": "보유만 유지, 신규 진입은 320달러 회복 뒤 검토합니다.",
-          "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 303.63,
-            "previousCloseChangePct": -2.46,
-            "week52High": 412.7,
-            "week52Low": 243.3,
-            "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
-          }
-        },
-        {
-          "ticker": "ETN",
-          "companyName": "Eaton",
-          "market": "US",
-          "rationale": "전력관리 품질주는 맞지만 Results에서 진입 가격 실패가 확인돼 실적 확인 전에는 고점 추격을 피해야 합니다.",
-          "isNew": false,
-          "change": "downgrade",
-          "actionBias": "reduce",
-          "timeHorizon": "1-3w",
-          "invalidation": "390달러 이탈 또는 데이터센터 전력 주문 둔화 시 축소합니다.",
-          "positioningNote": "일부 축소, 재매수는 420달러 회복과 가이던스 확인 뒤입니다.",
-          "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 401.51,
-            "previousCloseChangePct": 0.87,
-            "week52High": 435.43,
-            "week52Low": 306.77,
-            "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
-          }
-        }
-      ]
-    },
-    {
-      "sectorName": "반도체 후공정/기판 추격매수",
-      "market": "KR",
-      "rank": 2,
-      "confidenceScore": 74,
-      "thesis": "HBM 메모리 대표주는 강하지만 후공정·기판 중소형은 테크윙과 심텍 가격이 쉬며 국면과 종목 실행이 갈리고 있습니다. 다음 3~10거래일에는 대표주 강세가 후발주로 확산될 수 있으나, 반복 Results가 보여준 것처럼 가격 안착 없는 추격은 알파보다 변동성을 키웁니다. 2회 이상 반등 안착과 거래대금 회복이 확인되면 caution을 watch로 낮춥니다.",
-      "headwinds": [
-        "후공정 중소형은 좋은 테마보다 체결 강도와 가격 안착이 먼저 확인돼야 성과로 연결됨",
-        "심텍과 한미반도체는 52주 고점권 부담이 있어 발주 확인 전 기대만으로 상향하기 어려움",
-        "대형 메모리로 수급이 압축되면 중소형 장비·기판주는 상대강도가 뒤처질 수 있음"
-      ],
-      "whatCouldImprove": [
-        "테크윙·심텍이 이틀 이상 반등을 유지하고 거래대금이 회복되면 신규 경계는 완화",
-        "HBM 장비 발주 또는 기판 가격 개선 뉴스가 확인되면 종목별로 보유 강도를 재평가"
-      ],
-      "stocks": [
-        {
-          "ticker": "089030",
-          "companyName": "테크윙",
-          "market": "KR",
-          "rationale": "HBM 테스트 장비 레버리지는 있지만 최근 Results에서 failed가 확인돼 상승 추세 회복 전 신규 매수는 맞지 않습니다.",
-          "isNew": false,
-          "change": "downgrade",
-          "actionBias": "hold",
-          "timeHorizon": "1-3w",
-          "invalidation": "56,000원 이탈 또는 반등 거래대금 부재 시 제외합니다.",
-          "positioningNote": "관찰 보유, 신규 진입은 60,000원 재안착 뒤로 제한합니다.",
-          "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 58600,
-            "previousCloseChangePct": -1.18,
-            "week52High": 74000,
-            "week52Low": 26050,
-            "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
-          }
-        },
-        {
-          "ticker": "222800",
-          "companyName": "심텍",
-          "market": "KR",
-          "rationale": "기판 수요 회복 기대는 남지만 52주 고점권에서 쉬고 있어 안전마진보다 추격 리스크가 더 큽니다.",
-          "isNew": false,
-          "change": "downgrade",
-          "actionBias": "hold",
-          "timeHorizon": "1-3w",
-          "invalidation": "110,000원 이탈 또는 기판주 동반 약세 시 제외합니다.",
-          "positioningNote": "소액 보유만 유지, 신규 매수는 118,000원 회복 뒤 검토합니다.",
-          "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 114200,
-            "previousCloseChangePct": -1.38,
-            "week52High": 119800,
-            "week52Low": 15600,
-            "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
-          }
-        },
-        {
-          "ticker": "042700",
-          "companyName": "한미반도체",
-          "market": "KR",
-          "rationale": "대표 장비주라 섹터 확산 때 유리하지만 고점 근접과 발주 확인 전 기대 반영이 부담입니다.",
-          "isNew": false,
-          "change": "hold",
-          "actionBias": "hold",
-          "timeHorizon": "1-3w",
-          "invalidation": "375,000원 이탈 또는 수주 기대 약화 시 축소합니다.",
-          "positioningNote": "보유 유지, 신규 추격은 제한합니다.",
-          "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 390500,
-            "previousCloseChangePct": 0.13,
-            "week52High": 413000,
-            "week52Low": 78200,
-            "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
-          }
-        }
-      ]
-    },
-    {
-      "sectorName": "전통 SaaS/데이터 구독",
-      "market": "US",
-      "rank": 3,
-      "confidenceScore": 71,
-      "thesis": "FDS caution은 최근 Results에서 worked였고 CRM·ADBE도 신선한 가격 스냅샷에서 약세가 이어져 AI 대체와 예산 압박이 아직 해소되지 않았습니다. 향후 3~10거래일에는 실적 전 비용 절감과 AI 전환 투자 부담이 밸류에이션 반등을 제한할 수 있습니다. 다만 자사주, 마진 방어, AI 제품 매출 전환이 확인되면 일괄 회피는 줄여야 합니다.",
-      "headwinds": [
-        "AI 검색·분석 대체가 일부 데이터 구독 모델의 가격 결정력을 직접 건드릴 수 있음",
-        "CRM과 ADBE는 대형 고객 기반이 방어막이지만 성장 재가속 숫자 없이는 멀티플 회복이 제한됨",
-        "소프트웨어 예산이 AI 인프라로 이동하면 전통 SaaS의 상대 매력도가 낮아짐"
-      ],
-      "whatCouldImprove": [
-        "실적에서 순매출유지율과 AI 제품 매출 전환이 동시에 개선되면 reduce를 hold로 낮춤",
-        "FDS가 240달러를 회복하고 구독 해지 우려가 완화되면 극단적 caution은 종료"
-      ],
-      "stocks": [
-        {
-          "ticker": "FDS",
-          "companyName": "FactSet Research Systems",
-          "market": "US",
-          "rationale": "AI 대체 압력에 취약한 금융 데이터 구독 모델이라 최근 하락 뒤에도 반등 확인 전 방어주로 보기는 어렵습니다.",
+          "rationale": "창작 도구 지배력은 남아 있지만 생성형 AI의 가격 압박이 직접적이라 실적 전까지 상대강도 회복을 확인해야 합니다.",
           "isNew": false,
           "change": "hold",
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
-          "invalidation": "240달러 회복과 구독 지표 안정이 확인되면 reduce를 중단합니다.",
-          "positioningNote": "반등 시 비중 축소, 신규 매수는 금지합니다.",
+          "invalidation": "260달러 회복과 AI 수익화 지표 개선이 동시에 나오면 경계를 낮춥니다.",
+          "positioningNote": "비중 축소 우선, 신규 진입은 가이던스 확인 전까지 보류합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 223.61,
-            "previousCloseChangePct": -0.17,
-            "week52High": 474.79,
-            "week52Low": 185,
+            "priceDate": "2026-05-12",
+            "currentPrice": 245.64,
+            "previousCloseChangePct": -2.93,
+            "week52High": 422.95,
+            "week52Low": 224.13,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         },
         {
           "ticker": "CRM",
           "companyName": "Salesforce",
           "market": "US",
-          "rationale": "고객 기반과 자사주 방어는 있지만 성장 재가속 숫자 전에는 AI 인프라 대비 상대 매력이 낮습니다.",
+          "rationale": "고객 기반과 자사주 방어는 있지만 성장 재가속 확인 전에는 AI 예산 전환의 수혜보다 방어 논리가 앞섭니다.",
           "isNew": false,
           "change": "hold",
-          "actionBias": "hold",
+          "actionBias": "reduce",
           "timeHorizon": "1-3w",
-          "invalidation": "190달러 회복과 가이던스 상향이 나오면 caution을 낮춥니다.",
-          "positioningNote": "기존 보유만 유지, 신규 진입은 실적 확인 뒤입니다.",
+          "invalidation": "185달러 회복과 마진 가이던스 상향이 확인되면 reduce를 중단합니다.",
+          "positioningNote": "일부 축소, 전량 정리는 실적 훼손 확인 때로 제한합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 181.82,
-            "previousCloseChangePct": -2.43,
+            "priceDate": "2026-05-12",
+            "currentPrice": 176.9,
+            "previousCloseChangePct": -2.71,
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         },
         {
-          "ticker": "ADBE",
-          "companyName": "Adobe",
+          "ticker": "FDS",
+          "companyName": "FactSet Research Systems",
           "market": "US",
-          "rationale": "생성형 AI 전환 스토리는 있으나 가격 결정력과 성장률 둔화 우려가 남아 단기 반등의 신뢰도가 낮습니다.",
+          "rationale": "품질 구독 모델이지만 AI와 대체 데이터 도구가 가격 결정력을 건드리는 구간이라 저점권이어도 방어주로 보기 어렵습니다.",
           "isNew": false,
           "change": "hold",
-          "actionBias": "hold",
+          "actionBias": "reduce",
           "timeHorizon": "1-3w",
-          "invalidation": "270달러 회복 또는 AI ARR 가속 확인 시 경계를 낮춥니다.",
-          "positioningNote": "보유만 유지, 신규 진입은 숫자 확인 뒤로 미룹니다.",
+          "invalidation": "235달러 회복 또는 신규 매출 유지율 개선이 나오면 경계를 낮춥니다.",
+          "positioningNote": "비중 축소 유지, 신규 매수는 가격 안정 2회 확인 뒤 검토합니다.",
           "priceSnapshot": {
-            "priceDate": "2026-05-11",
-            "currentPrice": 253.04,
-            "previousCloseChangePct": -1.35,
-            "week52High": 422.95,
-            "week52Low": 224.13,
+            "priceDate": "2026-05-12",
+            "currentPrice": 219.84,
+            "previousCloseChangePct": -1.69,
+            "week52High": 474.79,
+            "week52Low": 185,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
+          }
+        }
+      ]
+    },
+    {
+      "sectorName": "항공/온라인 여행",
+      "market": "US",
+      "rank": 2,
+      "confidenceScore": 63,
+      "thesis": "DAL·UAL·EXPE는 fresh 가격에서 약세지만 최근 Results가 보여준 것처럼 단순 caution은 숏커버와 여행 수요 반등에 취약했습니다. 유가·임금·소비 둔화 부담은 남아도 낙폭이 이미 반영된 종목은 전량 회피보다 이벤트형 경계가 맞습니다. 예약률과 운임이 반등하거나 유가가 안정되면 caution을 빠르게 낮춥니다.",
+      "headwinds": [
+        "유가와 임금 부담이 마진 기대를 누르고 소비 둔화 시 여행 지출 민감도가 커짐",
+        "EXPE는 온라인 여행 경쟁과 마케팅비 부담이 재평가를 제한",
+        "기존 caution 실패 교훈 때문에 신규 숏보다 보유 축소와 이벤트 확인 중심으로 접근"
+      ],
+      "whatCouldImprove": [
+        "예약률과 운임 지표가 개선되면 반등 convexity가 커져 caution을 낮춤",
+        "유가 안정과 가이던스 유지가 동시에 나오면 reduce보다 watch로 전환"
+      ],
+      "stocks": [
+        {
+          "ticker": "DAL",
+          "companyName": "Delta Air Lines",
+          "market": "US",
+          "rationale": "프리미엄 수요는 버티지만 비용 민감도가 커 단기 상대강도는 약합니다. 다만 가격이 이미 눌려 있어 공격적 회피보다 축소가 맞습니다.",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "invalidation": "75달러 회복과 유가 안정이 동시에 나오면 경계를 낮춥니다.",
+          "positioningNote": "일부 축소, 신규 숏 성격의 대응은 피합니다.",
+          "priceSnapshot": {
+            "priceDate": "2026-05-12",
+            "currentPrice": 71.82,
+            "previousCloseChangePct": -2.06,
+            "week52High": 76.39,
+            "week52Low": 45.28,
+            "currency": "USD",
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
+          }
+        },
+        {
+          "ticker": "UAL",
+          "companyName": "United Airlines",
+          "market": "US",
+          "rationale": "최근 caution 실패처럼 숏커버 리스크가 큰 종목이라 약세에도 전량 정리보다 운임 지표 확인이 우선입니다.",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "invalidation": "102달러 회복 또는 예약률 개선 확인 시 reduce를 중단합니다.",
+          "positioningNote": "비중 축소만 검토, 추격 매도는 피합니다.",
+          "priceSnapshot": {
+            "priceDate": "2026-05-12",
+            "currentPrice": 96.98,
+            "previousCloseChangePct": -2.62,
+            "week52High": 119.21,
+            "week52Low": 71.55,
+            "currency": "USD",
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
+          }
+        },
+        {
+          "ticker": "EXPE",
+          "companyName": "Expedia",
+          "market": "US",
+          "rationale": "여행 수요 둔화와 경쟁비 부담이 동시에 반영되는 종목이라 반등 전까지 상대 매력은 낮습니다.",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "invalidation": "235달러 회복과 예약 성장 개선이 나오면 경계를 낮춥니다.",
+          "positioningNote": "비중 축소 유지, 신규 진입은 실적 확인 전까지 보류합니다.",
+          "priceSnapshot": {
+            "priceDate": "2026-05-12",
+            "currentPrice": 221.64,
+            "previousCloseChangePct": -3.63,
+            "week52High": 303.8,
+            "week52Low": 156.05,
+            "currency": "USD",
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
+          }
+        }
+      ]
+    },
+    {
+      "sectorName": "고점 전력/원전 인프라",
+      "market": "US",
+      "rank": 3,
+      "confidenceScore": 71,
+      "thesis": "VST·CEG·OKLO는 AI 전력 수요 스토리가 여전히 강하지만 fresh 가격은 종목별 변동성이 커졌고 OKLO처럼 반등이 큰 후보도 52주 고점 대비 훼손이 남아 있습니다. 전력 부족이라는 장기 논리는 유효해도 3~10거래일에는 기대 반영과 정책 뉴스 공백이 더 큰 리스크입니다. 신규 장기 계약이나 규제 승인 뉴스가 나오면 caution을 watch로 낮춥니다.",
+      "headwinds": [
+        "AI 전력 수요 기대가 이미 가격에 많이 반영돼 뉴스 공백 시 차익실현이 빠름",
+        "원전·SMR 후보는 정책과 인허가 이벤트가 지연되면 밸류에이션 공백이 커짐",
+        "Results 교훈상 훌륭한 사업도 안전마진 없는 가격에서는 모멘텀 콜로만 취급해야 함"
+      ],
+      "whatCouldImprove": [
+        "대형 데이터센터 전력 계약이나 원전 정책 지원이 확인되면 보유 관점으로 완화",
+        "52주 고점 재돌파와 거래량 동반 안착이 나오면 reduce를 중단"
+      ],
+      "stocks": [
+        {
+          "ticker": "VST",
+          "companyName": "Vistra",
+          "market": "US",
+          "rationale": "전력 수요 수혜는 분명하지만 고점 대비 낙폭이 커 모멘텀 훼손 여부를 먼저 봐야 합니다.",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "invalidation": "160달러 회복과 전력주 동반 강세가 나오면 reduce를 중단합니다.",
+          "positioningNote": "비중 축소 우선, 신규 진입은 계약 뉴스 전까지 보류합니다.",
+          "priceSnapshot": {
+            "priceDate": "2026-05-12",
+            "currentPrice": 150.04,
+            "previousCloseChangePct": 1.57,
+            "week52High": 219.82,
+            "week52Low": 138.53,
+            "currency": "USD",
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
+          }
+        },
+        {
+          "ticker": "CEG",
+          "companyName": "Constellation Energy",
+          "market": "US",
+          "rationale": "원전 전력 프리미엄은 유효하지만 가격이 고점에서 멀어져 정책·계약 확인 전까지는 방어보다 관찰이 맞습니다.",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "invalidation": "315달러 회복 또는 장기 전력계약 확인 시 경계를 낮춥니다.",
+          "positioningNote": "일부 축소, 신규 진입은 이벤트 확인 뒤로 미룹니다.",
+          "priceSnapshot": {
+            "priceDate": "2026-05-12",
+            "currentPrice": 296.02,
+            "previousCloseChangePct": -2.51,
+            "week52High": 412.7,
+            "week52Low": 243.3,
+            "currency": "USD",
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
+          }
+        },
+        {
+          "ticker": "OKLO",
+          "companyName": "Oklo",
+          "market": "US",
+          "rationale": "SMR 성장 스토리는 크지만 숫자 검증과 인허가 리스크가 커 급등일에도 포지션 크기를 낮춰야 합니다.",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "invalidation": "70달러 이탈 또는 인허가 일정 지연 시 전량 정리 우선입니다.",
+          "positioningNote": "비중 축소, 신규 추격은 금지합니다.",
+          "priceSnapshot": {
+            "priceDate": "2026-05-12",
+            "currentPrice": 77.69,
+            "previousCloseChangePct": 7.15,
+            "week52High": 193.84,
+            "week52Low": 28.16,
+            "currency": "USD",
+            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
           }
         }
       ]
@@ -506,72 +506,70 @@
       "ticker": "036810",
       "companyName": "에프에스티",
       "market": "KR",
-      "sector": "반도체 소재/EUV",
-      "theme": "HBM 확산 후발 소재",
-      "thesis": "대표 메모리 강세가 소재주로 확산될 때 후발 재평가 여지가 있지만 아직 확인 종목입니다.",
-      "whyNow": "대형 장비주 고점 부담이 커질수록 덜 crowded한 소재 후보를 선별할 필요가 있습니다.",
-      "followThroughNote": "전일 후보 논리는 유지하지만 가격은 고점보다 충분히 낮아 과열은 덜합니다. 다만 거래대금 확인 전에는 buy가 아니라 소액 관찰이 맞습니다.",
+      "sector": "반도체 소부장",
+      "theme": "EUV·펠리클/공정 소모품",
+      "thesis": "대형 HBM 랠리가 장비·소모품으로 확산될 때 후발 알파 후보입니다.",
+      "whyNow": "가격은 52주 고점보다 여유가 있어 한미반도체·심텍보다 추격 부담이 낮고, 반도체 수급이 유지되면 후공정 밖 소부장으로 관심이 넓어질 수 있습니다.",
+      "followThroughNote": "반복 스냅샷은 아직 대표주보다 짧아 공격적 buy는 낮춥니다. 41,000원대 안착이 이어지면 다음 분석에서 상향 여지가 있습니다.",
       "priceSnapshot": {
-        "priceDate": "2026-05-11",
-        "currentPrice": 42350,
-        "previousCloseChangePct": 0.36,
+        "priceDate": "2026-05-12",
+        "currentPrice": 41700,
+        "previousCloseChangePct": -1.18,
         "week52High": 51000,
         "week52Low": 16200,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
       },
-      "valuationNote": "EUV·소재 기대는 있지만 실적 가시성이 대표주보다 약해 할인은 정당합니다.",
-      "liquidityNote": "대형주보다 거래대금이 얇아 분할 접근과 손절 기준이 필요합니다.",
+      "valuationNote": "품질 소부장으로 재평가 여지는 있지만 고객사 투자 확인 전 밸류 프리미엄은 제한합니다.",
+      "liquidityNote": "중소형 변동성이 커 거래대금 둔화 시 체결 리스크가 커질 수 있습니다.",
       "catalysts": [
-        "EUV 소재 기대",
-        "반도체 소재 수급 개선",
-        "대표 장비주 부담 완화"
+        "HBM·EUV 투자 확산",
+        "국내 반도체 소부장 순환매",
+        "고객사 투자 계획 확인"
       ],
       "risks": [
-        "40,000원 이탈",
-        "거래대금 감소",
-        "소재주 동반 약세"
+        "반도체 대표주 쏠림이 완화되지 않으면 후발주 확산이 지연",
+        "41,000원 이탈 시 단기 안착 실패"
       ],
       "actionBias": "hold",
       "timeHorizon": "1-3w",
-      "invalidation": "40,000원 이탈 또는 소재주 동반 약세 시 제외합니다.",
-      "positioningNote": "소액 관찰 유지, 신규 진입은 44,000원 회복 뒤로 제한합니다."
+      "invalidation": "39,500원 이탈 또는 거래대금 급감 시 후보 강도를 낮춥니다.",
+      "positioningNote": "관찰 보유, 신규 진입은 2회 이상 가격 안착 확인 뒤 분할합니다."
     },
     {
       "rank": 2,
       "ticker": "089030",
       "companyName": "테크윙",
       "market": "KR",
-      "sector": "반도체 검사/핸들러",
-      "theme": "HBM 테스트 장비",
-      "thesis": "HBM 테스트 장비 발주 확산의 레버리지는 남지만 최근 반복 평가에서는 가격 안착이 부족했습니다.",
-      "whyNow": "메모리 대표주 강세가 후공정으로 확산되는지 확인할 핵심 관찰 종목입니다.",
-      "followThroughNote": "여러 날 추적됐지만 failed 교훈 때문에 buy로 올리지 않습니다. 60,000원 재안착 전에는 추가 상승보다 추격 리스크가 더 큽니다.",
+      "sector": "HBM 후공정 장비",
+      "theme": "테스트 핸들러/후공정 장비",
+      "thesis": "HBM 후공정 수요의 방향성은 유효하지만 최근 Results 교훈상 상승 추세 확인 없이는 buy보다 hold가 맞습니다.",
+      "whyNow": "52주 고점 대비 여유는 생겼지만 당일 약세라 신규 편입보다 가격 안정 확인이 우선입니다.",
+      "followThroughNote": "며칠째 추적 중인 후보지만 대표주 랠리를 따라가지 못해 추격 논리는 약합니다. 60,000원 회복 후 거래량이 붙어야 재상향합니다.",
       "priceSnapshot": {
-        "priceDate": "2026-05-11",
-        "currentPrice": 58600,
-        "previousCloseChangePct": -1.18,
+        "priceDate": "2026-05-12",
+        "currentPrice": 58200,
+        "previousCloseChangePct": -1.85,
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
       },
-      "valuationNote": "성장성은 있으나 발주 확인 전 밸류에이션 프리미엄을 정당화하기 어렵습니다.",
-      "liquidityNote": "중소형 장비주로 변동성이 커 가격 이탈 시 체결 리스크가 커질 수 있습니다.",
+      "valuationNote": "장비 발주가 재개되면 재평가 여지는 있으나 기대만으로 멀티플을 높이기 어렵습니다.",
+      "liquidityNote": "중소형 장비주는 수주 뉴스 공백 때 변동성이 커질 수 있습니다.",
       "catalysts": [
-        "HBM 테스트 발주",
-        "거래대금 회복",
-        "대형 메모리 강세 확산"
+        "HBM 후공정 발주 확인",
+        "대형 메모리 강세 확산",
+        "거래량 동반 60,000원 회복"
       ],
       "risks": [
-        "56,000원 이탈",
-        "발주 지연",
-        "후공정주 동반 약세"
+        "58,000원대 안착 실패",
+        "대표 장비주로 수급이 계속 쏠릴 가능성"
       ],
       "actionBias": "hold",
       "timeHorizon": "1-3w",
-      "invalidation": "56,000원 이탈 또는 반등 거래대금 부재 시 제외합니다.",
-      "positioningNote": "관찰 보유, 신규 진입은 60,000원 재안착 후입니다."
+      "invalidation": "55,000원 이탈 시 후공정 중소형 후보에서 낮춥니다.",
+      "positioningNote": "보유만 유지, 신규 진입은 강도 회복 전까지 보류합니다."
     },
     {
       "rank": 3,
@@ -579,160 +577,141 @@
       "companyName": "심텍",
       "market": "KR",
       "sector": "반도체 기판",
-      "theme": "고부가 기판 회복",
-      "thesis": "AI 서버와 HBM 확산은 기판 수요를 지지하지만 현재 가격은 52주 고점권이라 안전마진이 얇습니다.",
-      "whyNow": "기판 가격과 수요 회복이 확인되면 대표 메모리 다음의 후발 후보가 될 수 있습니다.",
-      "followThroughNote": "전일 후보를 유지하되 추격은 낮춥니다. 118,000원 회복 전에는 기대보다 가격 부담을 먼저 봅니다.",
+      "theme": "고부가 패키지 기판",
+      "thesis": "메모리 업황 회복이 기판 주문으로 이어질 때 후발 수혜가 가능하지만 52주 고점권이라 신규 추격은 제한합니다.",
+      "whyNow": "가격은 고점 10% 이내라 상대강도는 확인됐지만 기대 반영도도 높습니다.",
+      "followThroughNote": "강한 가격 흐름은 유지됐으나 손익비는 낮아졌습니다. 추가 상승보다 눌림 후 재상승 확인이 필요합니다.",
       "priceSnapshot": {
-        "priceDate": "2026-05-11",
-        "currentPrice": 114200,
-        "previousCloseChangePct": -1.38,
+        "priceDate": "2026-05-12",
+        "currentPrice": 114100,
+        "previousCloseChangePct": -1.47,
         "week52High": 119800,
         "week52Low": 15600,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
       },
-      "valuationNote": "고부가 기판 믹스 개선은 재평가 요인이지만 고점권에서는 실적 확인이 필요합니다.",
-      "liquidityNote": "거래는 가능하지만 급락 시 호가 공백이 커질 수 있어 분할만 허용합니다.",
+      "valuationNote": "업황 회복 시 실적 레버리지는 있으나 고점권 가격은 안전마진을 줄입니다.",
+      "liquidityNote": "거래는 가능하지만 고점권에서 변동성 확대 시 체결 리스크가 커질 수 있습니다.",
       "catalysts": [
-        "기판 가격 개선",
-        "AI 서버 수요",
-        "메모리 대표주 강세 확산"
+        "메모리 주문 회복",
+        "패키지 기판 가격 개선",
+        "대형 반도체 강세 확산"
       ],
       "risks": [
-        "110,000원 이탈",
-        "기판 업황 둔화",
-        "거래대금 감소"
+        "고점권 차익실현",
+        "기판 업황 회복 지연"
       ],
       "actionBias": "hold",
       "timeHorizon": "1-3w",
-      "invalidation": "110,000원 이탈 또는 기판주 동반 약세 시 제외합니다.",
-      "positioningNote": "소액 보유 유지, 신규 진입은 118,000원 회복 뒤 검토합니다."
+      "invalidation": "108,000원 이탈 시 신규 후보에서 제외합니다.",
+      "positioningNote": "보유 유지, 신규 진입은 눌림 분할만 허용합니다."
     },
     {
       "rank": 4,
       "ticker": "APLD",
       "companyName": "Applied Digital",
       "market": "US",
-      "sector": "AI 데이터센터 인프라",
-      "theme": "AI 클라우드 전력·랙 수요",
-      "thesis": "AI 데이터센터 구축 수요가 소형 인프라주까지 확산될 때 레버리지가 크지만 변동성도 큽니다.",
-      "whyNow": "반도체 강세가 실제 데이터센터 실행과 계약으로 이어지는지 확인할 미국 소형 후보입니다.",
-      "followThroughNote": "52주 고점 10% 이내라 신규 추격은 위험합니다. 계약 확인 없이 주가만 따라붙는 구간은 포지션 크기를 낮춰야 합니다.",
+      "sector": "AI 데이터센터",
+      "theme": "AI 클라우드 인프라",
+      "thesis": "AI 인프라 병목이 데이터센터 운영주로 확산될 때 고베타 알파가 가능하지만 52주 고점 바로 아래라 포지션 크기 제한이 필요합니다.",
+      "whyNow": "fresh 가격 기준 급등과 고점 근접이 동시에 나타나 관심은 높지만 추격 리스크도 큽니다.",
+      "followThroughNote": "10%대 급등 이후라 추가 상승 여지는 뉴스에 의존합니다. 다음 1~2회 스냅샷에서 고점 안착이 확인돼야 buy로 올릴 수 있습니다.",
       "priceSnapshot": {
-        "priceDate": "2026-05-11",
-        "currentPrice": 41.25,
-        "previousCloseChangePct": -0.67,
-        "week52High": 44.25,
-        "week52Low": 5.13,
+        "priceDate": "2026-05-12",
+        "currentPrice": 45.74,
+        "previousCloseChangePct": 10.88,
+        "week52High": 46.26,
+        "week52Low": 5.24,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
       },
-      "valuationNote": "성장 스토리는 크지만 현금흐름 검증이 약해 높은 할인율을 적용해야 합니다.",
-      "liquidityNote": "미국 소형 성장주로 갭 리스크와 자금 조달 변동성이 큽니다.",
+      "valuationNote": "성장 스토리는 크지만 현금흐름 검증 전에는 밸류에이션 민감도가 큽니다.",
+      "liquidityNote": "미국 중소형 성장주는 장중 변동성과 갭 리스크가 큽니다.",
       "catalysts": [
         "AI 데이터센터 계약",
-        "전력 조달 진전",
-        "대형 클라우드 CAPEX 유지"
+        "GPU 클라우드 수요 확대",
+        "고점 돌파 후 거래량 안착"
       ],
       "risks": [
-        "40달러 이탈",
-        "계약 지연",
-        "자금 조달 부담"
+        "고점 돌파 실패",
+        "자금조달 또는 마진 우려"
       ],
       "actionBias": "hold",
       "timeHorizon": "1-3w",
-      "invalidation": "40달러 이탈 또는 데이터센터 계약 지연 뉴스가 나오면 제외합니다.",
-      "positioningNote": "소액 관찰만 유지, 신규 진입은 계약 확인 뒤입니다."
+      "invalidation": "42달러 이탈 시 단기 후보에서 낮춥니다.",
+      "positioningNote": "관찰 보유, 신규 추격은 금지하고 눌림만 검토합니다."
     },
     {
       "rank": 5,
       "ticker": "OKLO",
       "companyName": "Oklo",
       "market": "US",
-      "sector": "차세대 원전",
-      "theme": "AI 전력 옵션",
-      "thesis": "AI 전력 병목의 장기 옵션이지만 아직 숫자보다 기대가 큰 후보입니다.",
-      "whyNow": "전력/원전 대형주가 흔들릴 때 더 작은 옵션형 종목으로 자금이 이동하는지 관찰합니다.",
-      "followThroughNote": "고점 대비 여유는 있지만 사업 검증이 약해 단기 트레이딩 외 확신도를 높이기 어렵습니다. 전력 계약이나 규제 진전 없이는 hold 이하입니다.",
+      "sector": "SMR/원전",
+      "theme": "소형모듈원전",
+      "thesis": "장기 원전 전력 스토리는 크지만 단기 가격 변동성과 인허가 불확실성이 더 큽니다.",
+      "whyNow": "전력/원전 테마 내 관심은 유지하되 급등일에도 52주 고점 대비 훼손이 커 실행형 신규 매수는 제한합니다.",
+      "followThroughNote": "반등이 나와도 아직 검증된 매출과 정책 일정이 필요합니다. 고점 추격보다 이벤트 확인 후 재평가 후보로 둡니다.",
       "priceSnapshot": {
-        "priceDate": "2026-05-11",
-        "currentPrice": 72.51,
-        "previousCloseChangePct": 0.95,
+        "priceDate": "2026-05-12",
+        "currentPrice": 77.69,
+        "previousCloseChangePct": 7.15,
         "week52High": 193.84,
-        "week52Low": 26.16,
+        "week52Low": 28.16,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T04:35:32.233Z"
+        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=fresh, mode=normal, generatedAt=2026-05-11T17:17:24.014Z"
       },
-      "valuationNote": "미래 현금흐름 불확실성이 커 밸류에이션은 내러티브 민감도가 높습니다.",
-      "liquidityNote": "변동성과 뉴스 민감도가 커 작은 포지션만 허용해야 합니다.",
+      "valuationNote": "혁신 프리미엄은 있으나 숫자 검증 전에는 안전마진이 낮습니다.",
+      "liquidityNote": "뉴스 민감도가 높아 장중 변동성과 갭 리스크가 큽니다.",
       "catalysts": [
-        "규제 진전",
+        "인허가 일정 진전",
         "전력 구매 계약",
-        "원전 테마 재점화"
+        "원전 정책 지원"
       ],
       "risks": [
-        "68달러 이탈",
-        "규제 지연",
-        "원전주 동반 약세"
+        "인허가 지연",
+        "테마 차익실현",
+        "자금조달 우려"
       ],
       "actionBias": "hold",
       "timeHorizon": "1-3w",
-      "invalidation": "68달러 이탈 또는 규제 일정 지연 시 제외합니다.",
-      "positioningNote": "소액 관찰, 신규 진입은 이벤트 확인 뒤입니다."
+      "invalidation": "70달러 이탈 또는 인허가 지연 뉴스 시 후보에서 제외합니다.",
+      "positioningNote": "소액 관찰만 허용, 신규 추격은 하지 않습니다."
     }
   ],
   "changesSinceYesterday": [
     {
-      "type": "quality",
-      "title": "가격 품질 정상화",
-      "detail": "이전 partial 스냅샷과 달리 이번 23개 가격 입력은 모두 fresh라 52주 고점 근접과 실행 가능성을 직접 반영했습니다."
+      "type": "upgrade",
+      "title": "조선/방산을 유망 3순위로 재상향",
+      "detail": "HD현대중공업과 한화오션의 fresh 가격이 고점권 상대강도 회복을 보여 caution보다 조건부 재진입 후보가 맞다고 판단했습니다."
     },
     {
-      "type": "rotation",
-      "title": "조선/방산을 caution에서 유망 3순위로 이동",
-      "detail": "HD현대중공업과 한화오션의 수급 회복이 확인돼 반도체 외 한국 주도 후보로 재검토하되 고점권 추격은 막았습니다."
+      "type": "hold",
+      "title": "HBM과 AI 반도체는 유지하되 추격 제한",
+      "detail": "대표주는 계속 주도하지만 다수 종목이 52주 고점 10% 이내라 신규 buy 대신 보유·눌림 기준으로 낮췄습니다."
     },
     {
-      "type": "risk-control",
-      "title": "후공정 중소형은 유망에서 caution으로 낮춤",
-      "detail": "테크윙 failed와 심텍 고점 부담을 반영해 대표 메모리 강세와 중소형 신규 진입을 분리했습니다."
-    },
-    {
-      "type": "discipline",
-      "title": "전력/원전은 논리보다 가격 반영을 우선",
-      "detail": "ETN 실패와 VST·CEG 약세를 반영해 AI 전력 병목을 인정하되 신규 매수보다 reduce/watch 기준을 앞세웠습니다."
+      "type": "downgrade",
+      "title": "전력/원전은 반등에도 caution 유지",
+      "detail": "OKLO와 VST의 장기 스토리는 유효하지만 변동성과 정책 공백이 커 3~10거래일 손익비는 낮게 봅니다."
     }
   ],
   "analysisSuggestions": [
     {
-      "title": "HBM 대표주는 유지, 후공정은 별도 필터 적용",
-      "action": "rotate",
-      "detail": "SK하이닉스·삼성전자는 보유 중심으로 두고 테크윙·심텍·한미반도체는 2회 이상 가격 안착과 발주 확인 전 상향하지 않습니다.",
-      "rationale": "Results에서 AI 반도체 국면은 맞았지만 후공정 중소형의 진입 가격 규율이 성과를 갈랐습니다.",
-      "affectedSectors": [
-        "KR | 반도체/HBM 메모리",
-        "KR | 반도체 후공정/기판 추격매수"
-      ],
-      "source": "results-review",
-      "priority": "high"
-    },
-    {
-      "title": "전력 인프라 반복 추천은 축소 유지",
+      "title": "후공정 중소형 buy 반복을 줄이기",
       "action": "trim",
-      "detail": "AI 전력 병목은 유지하되 VST·CEG·ETN은 계약과 실적 확인 전 신규 추천에서 제외합니다.",
-      "rationale": "최근 Results는 좋은 사업도 기대가 앞선 가격에서는 안전마진 없는 모멘텀 콜이라고 보여줬습니다.",
+      "detail": "테크윙처럼 반복 스냅샷이 있어도 가격 안착이 약하면 promising이 아니라 smallCap hold로 낮춥니다.",
+      "rationale": "최근 Results에서 후공정 중소형은 국면보다 진입 가격 규율이 성과를 갈랐습니다.",
       "affectedSectors": [
-        "US | 고점 전력/원전 인프라"
+        "KR | 반도체 소부장/HBM 후공정"
       ],
       "source": "results-review",
       "priority": "high"
     },
     {
-      "title": "항공 caution은 반복 경계에서 제외",
-      "action": "archive",
-      "detail": "UAL 실패를 반영해 유가만으로 항공 회피를 반복하지 않고 예약률·실적 가이던스 악화가 같이 보일 때만 다시 올립니다.",
-      "rationale": "낮은 가격과 숏커버 convexity를 차감하지 않은 caution은 손익비가 약했습니다.",
+      "title": "항공/여행 caution은 이벤트형으로 축소",
+      "action": "trim",
+      "detail": "DAL·UAL은 비용 부담이 있어도 숏커버와 예약률 반등 리스크가 커 반복 경계 강도를 낮춥니다.",
+      "rationale": "최근 Results에서 항공/여행 caution이 failed였으므로 신규 회피보다 가이던스 전후 확인이 필요합니다.",
       "affectedSectors": [
         "US | 항공/온라인 여행"
       ],
@@ -740,12 +719,23 @@
       "priority": "high"
     },
     {
-      "title": "조선/방산은 재진입하되 고점 돌파 실패를 빠르게 반영",
-      "action": "watch",
-      "detail": "HD현대중공업·한화오션은 유망 3순위로 올렸지만 52주 고점권이라 다음 실행에서 돌파 실패 시 바로 reduce 후보로 되돌립니다.",
-      "rationale": "수주주 수급 회복은 새 주도 후보지만 이미 기대가 많이 반영돼 포지션 크기 규율이 필요합니다.",
+      "title": "조선/방산은 섹터 유지보다 종목 교체로 대응",
+      "action": "rotate",
+      "detail": "HD현대중공업·한화오션은 상대강도 회복이 있어 재진입 관찰, 현대로템은 가격 강도 확인 전 후순위로 둡니다.",
+      "rationale": "수주주 강세는 살아 있지만 고점권이라 대표주와 후발주를 같은 강도로 볼 수 없습니다.",
       "affectedSectors": [
         "KR | 조선/방산 수주주"
+      ],
+      "source": "automation",
+      "priority": "medium"
+    },
+    {
+      "title": "전력/원전은 장기 테마와 단기 실행을 분리",
+      "action": "watch",
+      "detail": "VST·CEG·OKLO는 장기 스토리 유지, 단기 신규 매수는 계약·정책 뉴스 확인 뒤로 늦춥니다.",
+      "rationale": "가격 반영이 큰 테마는 뉴스 공백 구간에서 기대가 먼저 빠질 수 있습니다.",
+      "affectedSectors": [
+        "US | 고점 전력/원전 인프라"
       ],
       "source": "automation",
       "priority": "medium"
@@ -753,186 +743,181 @@
   ],
   "legacySectorDecisions": [
     {
-      "sectorName": "데이터센터 전력/원전",
-      "market": "US",
-      "previousBestRank": 3,
-      "lastSeenDate": "2026-05-10",
-      "appearances14d": 4,
-      "decision": "reduce",
-      "rationale": "AI 전력 수요는 남아 있지만 ETN 실패와 VST·CEG 약세가 가격 반영 부담을 보여 Top 3 유망보다 축소가 낫습니다.",
-      "triggerNote": "CEG·VST가 전력계약과 실적 가이던스로 동반 회복하면 reenter-watch로 올립니다.",
-      "resultsSummary": "전력 테마는 논리보다 가격 반영 정도가 성과를 갈랐고 ETN은 failed였습니다."
-    },
-    {
       "sectorName": "반도체 소부장/HBM 후공정·기판",
       "market": "KR",
       "previousBestRank": 2,
       "lastSeenDate": "2026-05-11",
       "appearances14d": 5,
       "decision": "reduce",
-      "rationale": "대표 메모리 강세와 후공정 중소형 성과가 갈려 신규 매수보다 가격 안착 확인이 필요합니다.",
-      "triggerNote": "테크윙·심텍이 이틀 이상 반등을 유지하고 발주 뉴스가 확인되면 hold로 올립니다.",
-      "resultsSummary": "테크윙은 failed, 인텍플러스는 mixed로 후공정 중소형의 실행 품질이 부족했습니다."
+      "rationale": "대형 HBM 주도는 맞았지만 후공정 중소형은 가격 안착이 약해 Top 3에서 제외하고 smallCap hold로 낮춥니다.",
+      "triggerNote": "테크윙 60,000원 회복과 심텍 고점 안착이 동시에 확인되면 재상향합니다.",
+      "resultsSummary": "최근 Results는 HBM 후공정 중소형을 mixed로 평가해 진입 가격 규율을 요구했습니다."
+    },
+    {
+      "sectorName": "데이터센터 전력/원전",
+      "market": "US",
+      "previousBestRank": 3,
+      "lastSeenDate": "2026-05-10",
+      "appearances14d": 3,
+      "decision": "reenter-watch",
+      "rationale": "장기 전력 수요 논리는 유지되지만 VST·CEG·OKLO의 변동성이 커 당장 Top 3 재진입보다 이벤트 확인이 필요합니다.",
+      "triggerNote": "대형 전력계약 또는 정책 지원과 52주 고점 재돌파가 함께 나오면 재진입을 검토합니다.",
+      "resultsSummary": "Results는 ETN 사례를 통해 좋은 사업도 가격 반영이 크면 안전마진을 먼저 보라고 지적했습니다."
     },
     {
       "sectorName": "항공/온라인 여행",
       "market": "US",
-      "previousBestRank": 2,
-      "lastSeenDate": "2026-05-10",
-      "appearances14d": 4,
-      "decision": "exit",
-      "rationale": "항공 caution은 최근 UAL 실패로 반복 경계 효율이 떨어졌고, EXPE 같은 개별 이벤트형 경계만 남기는 편이 낫습니다.",
-      "triggerNote": "예약률 악화와 가이던스 하향이 함께 확인될 때만 다시 caution 후보로 올립니다.",
-      "resultsSummary": "UAL caution은 숏커버와 여행 반등을 과소평가해 failed였습니다."
+      "previousBestRank": 1,
+      "lastSeenDate": "2026-05-11",
+      "appearances14d": 5,
+      "decision": "reduce",
+      "rationale": "비용 부담은 남아도 최근 caution 실패와 숏커버 리스크가 커 반복 회피 콜은 줄입니다.",
+      "triggerNote": "예약률 둔화와 유가 재상승이 동시에 확인될 때만 caution 강도를 다시 높입니다.",
+      "resultsSummary": "최근 Results에서 항공/여행 caution은 failed, callAlphaPct -8.1%로 평가됐습니다."
     }
   ],
   "reasons": {
     "macro": {
-      "title": "압축된 위험선호",
-      "summary": "위험선호는 넓게 퍼지기보다 AI CAPEX와 실적 상향이 확인되는 업종에 남아 있습니다. 고점권 종목은 신선한 가격에도 신규 추격보다 무효화 조건이 먼저입니다.",
+      "title": "좁은 주도주 장세",
+      "summary": "유동성은 넓은 경기민감 확산보다 AI 인프라와 실적 상향이 확인되는 병목 자산에 남아 있습니다.",
       "affectedSectors": [
         "KR | 반도체/HBM 메모리",
         "US | AI 반도체/네트워킹"
       ]
     },
     "policy": {
-      "title": "수주·전력 정책 기대의 선별",
-      "summary": "한국 조선/방산은 수주와 수출 기대가 다시 주도 후보로 떠오르지만, 미국 전력/원전은 계약 확인 전 가격 반영 부담이 더 큽니다.",
+      "title": "전력·원전은 뉴스 의존도 상승",
+      "summary": "AI 전력 수요 정책 기대는 유효하지만 계약·인허가 뉴스가 비는 구간에서는 가격 반영 부담이 더 커집니다.",
       "affectedSectors": [
-        "KR | 조선/방산 수주주",
         "US | 고점 전력/원전 인프라"
       ]
     },
     "earnings": {
-      "title": "실적 상향과 가격 반영 분리",
-      "summary": "메모리와 AI 반도체는 실적 상향의 가시성이 높지만 후공정 중소형과 전력주는 같은 테마 안에서도 진입 가격이 성과를 갈랐습니다.",
+      "title": "실적 확인 종목으로 압축",
+      "summary": "HBM, AI 가속기, 조선 수주처럼 매출·마진 연결이 보이는 종목은 유지하고, SaaS처럼 AI 수익화가 불명확한 업종은 경계합니다.",
       "affectedSectors": [
-        "KR | 반도체 후공정/기판 추격매수",
-        "US | 고점 전력/원전 인프라"
+        "KR | 조선/방산 수주주",
+        "US | 전통 SaaS/데이터 구독"
       ]
     },
     "flows": {
-      "title": "대표주 우선, 후발주는 확인 후",
-      "summary": "자금은 대표 메모리와 미국 AI 반도체에 먼저 붙고 있습니다. 후발 중소형은 반복 스냅샷과 거래대금 안착이 없으면 hold 이하로 둡니다.",
+      "title": "고점권 추격 제한",
+      "summary": "fresh 가격은 실행 가능성을 높였지만 52주 고점권 종목이 많아 신규 buy보다 보유, 눌림, 무효화 조건을 분리합니다.",
       "affectedSectors": [
         "KR | 반도체/HBM 메모리",
-        "KR | 반도체 후공정/기판 추격매수"
+        "US | AI 반도체/네트워킹",
+        "KR | 조선/방산 수주주"
       ]
     }
   },
   "trendSummary": {
     "mostFrequentPromisingSector": {
       "sector": "반도체/HBM 메모리",
-      "appearances": 7,
+      "appearances": 5,
       "trendDirection": "strengthening"
     },
     "mostFrequentCautionSector": {
-      "sector": "전통 SaaS/데이터 구독",
+      "sector": "항공/온라인 여행",
       "appearances": 5,
-      "trendDirection": "steady"
+      "trendDirection": "weakening"
     },
     "repeatedStockIdeas": [
       {
         "ticker": "000660",
-        "appearances": 7,
+        "appearances": 5,
         "direction": "strengthening"
       },
       {
         "ticker": "NVDA",
-        "appearances": 5,
-        "direction": "steady"
+        "appearances": 4,
+        "direction": "strengthening"
+      },
+      {
+        "ticker": "AMD",
+        "appearances": 4,
+        "direction": "strengthening"
       },
       {
         "ticker": "089030",
-        "appearances": 7,
-        "direction": "weakening"
-      },
-      {
-        "ticker": "222800",
-        "appearances": 4,
-        "direction": "watch"
-      },
-      {
-        "ticker": "036810",
         "appearances": 4,
         "direction": "watch"
       }
     ],
     "promisingSectorSeries": [
       {
-        "sector": "KR | 반도체/HBM 메모리",
-        "count": 7
-      },
-      {
-        "sector": "US | AI 반도체/네트워킹",
+        "sector": "반도체/HBM 메모리",
         "count": 5
       },
       {
-        "sector": "US | 데이터센터 전력/원전",
+        "sector": "AI 반도체/네트워킹",
         "count": 4
       },
       {
-        "sector": "KR | 조선/방산 수주주",
-        "count": 2
+        "sector": "반도체 소부장/HBM 후공정·기판",
+        "count": 4
+      },
+      {
+        "sector": "조선/방산 수주주",
+        "count": 1
       }
     ],
     "cautionSectorSeries": [
       {
-        "sector": "US | 전통 SaaS/데이터 구독",
+        "sector": "항공/온라인 여행",
         "count": 5
       },
       {
-        "sector": "US | 항공/온라인 여행",
-        "count": 4
+        "sector": "전통 SaaS/데이터 구독",
+        "count": 5
       },
       {
-        "sector": "KR | 방산/조선 고점 수주주",
-        "count": 3
-      },
-      {
-        "sector": "US | 고점 전력/원전 인프라",
+        "sector": "고점 전력/원전 인프라",
         "count": 2
+      },
+      {
+        "sector": "방산/조선 고점 수주주",
+        "count": 3
       }
     ]
   },
   "checkpoints": [
     {
-      "category": "price",
-      "market": "KR",
-      "title": "SK하이닉스 1,850,000원 방어와 삼성전자 52주 고점 안착",
-      "date": "2026-05-12",
-      "note": "둘 중 하나라도 실패하면 HBM 대표주 신규 진입은 보류합니다."
-    },
-    {
-      "category": "flow",
+      "category": "earnings",
       "market": "US",
-      "title": "NVDA·AMD·AVGO 고점권 거래대금 유지",
-      "date": "2026-05-12",
-      "note": "AMD가 430달러를 깨면 AI 반도체 2등주 대안 수급 판단을 낮춥니다."
+      "title": "대형 클라우드 CAPEX와 AI 반도체 주문 코멘트",
+      "date": "2026-05-13",
+      "note": "NVDA·AMD·AVGO 고점권 보유 판단의 핵심 무효화 조건입니다."
     },
     {
-      "category": "rotation",
+      "category": "flows",
       "market": "KR",
-      "title": "HD현대중공업 710,000원 돌파 여부",
+      "title": "외국인 반도체 순매수 지속 여부",
       "date": "2026-05-13",
-      "note": "돌파 실패와 거래대금 감소가 같이 나오면 조선/방산 재진입은 watch로 낮춥니다."
+      "note": "SK하이닉스·삼성전자 고점권 안착 여부를 확인합니다."
     },
     {
-      "category": "risk",
+      "category": "industry",
+      "market": "KR",
+      "title": "조선 신규 수주 및 원가 코멘트",
+      "date": "2026-05-17",
+      "note": "조선/방산 재상향이 단순 반등인지 새 주도 후보인지 가르는 체크포인트입니다."
+    },
+    {
+      "category": "policy",
       "market": "US",
-      "title": "VST·CEG·ETN 전력주 동반 회복 여부",
-      "date": "2026-05-13",
-      "note": "계약 뉴스 없이 반등하지 못하면 전력/원전은 reduce 판단을 유지합니다."
+      "title": "전력·원전 계약 및 인허가 뉴스",
+      "date": "2026-05-17",
+      "note": "VST·CEG·OKLO caution을 watch로 낮출 수 있는 조건입니다."
     },
     {
-      "category": "data",
+      "category": "macro",
       "market": "GLOBAL",
-      "title": "후공정 중소형 2회 연속 가격 안착 확인",
-      "date": "2026-05-14",
-      "note": "테크윙·심텍이 기준 가격을 회복하지 못하면 smallCapIdeas에서도 축소합니다."
+      "title": "금리와 달러 방향",
+      "date": "2026-05-15",
+      "note": "고점 성장주 추격 가능성과 SaaS 저점 반등 리스크를 함께 점검합니다."
     }
   ],
-  "priceSnapshotGeneratedAt": "2026-05-11T04:35:32.233Z",
+  "priceSnapshotGeneratedAt": "2026-05-11T17:17:24.014Z",
   "priceSnapshotSummary": {
     "total": 23,
     "fresh": 23,
