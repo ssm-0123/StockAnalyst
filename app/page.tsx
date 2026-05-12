@@ -12,6 +12,32 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { buildLegacySectorDecisions, getLatestAnalysis, getLatestResultsReport, formatTimestamp } from "@/lib/dashboard";
 import { withBasePath } from "@/lib/site";
+import { ActionBias, SmallCapIdea, StockIdea } from "@/lib/types";
+
+function resolveStockActionBias(stock: StockIdea): ActionBias {
+  if (stock.actionBias) return stock.actionBias;
+  if (stock.isNew || stock.change === "new" || stock.change === "upgrade") return "buy";
+  if (stock.change === "downgrade") return "reduce";
+  if (stock.change === "removed") return "exit";
+  return "hold";
+}
+
+function resolveSmallCapActionBias(idea: SmallCapIdea): ActionBias {
+  return idea.actionBias ?? "buy";
+}
+
+function actionBiasLabel(actionBias: ActionBias) {
+  if (actionBias === "buy") return "매수";
+  if (actionBias === "hold") return "유지";
+  if (actionBias === "reduce") return "축소";
+  return "정리";
+}
+
+function timeHorizonLabel(value?: StockIdea["timeHorizon"] | SmallCapIdea["timeHorizon"]) {
+  if (value === "1-3d") return "1-3일";
+  if (value === "1-3m") return "1-3개월";
+  return "1-3주";
+}
 
 export default async function HomePage() {
   const { latest, history, trendSummary, previousDay, smallCapTracking } = await getLatestAnalysis();
@@ -38,6 +64,39 @@ export default async function HomePage() {
   const cautionPreviousRanks = new Map(
     previousDay?.cautionSectors.map((sector) => [sector.sectorName, sector.rank]) ?? [],
   );
+  const rawBuyCandidates = [
+    ...latest.promisingSectors.flatMap((sector) =>
+      sector.stocks
+        .filter((stock) => resolveStockActionBias(stock) === "buy")
+        .map((stock) => ({
+          key: `stock-${sector.market}-${sector.sectorName}-${stock.ticker}`,
+          ticker: stock.ticker,
+          companyName: stock.companyName,
+          market: stock.market,
+          sector: sector.sectorName,
+          actionBias: resolveStockActionBias(stock),
+          timeHorizon: stock.timeHorizon,
+          rationale: stock.positioningNote ?? stock.rationale,
+          invalidation: stock.invalidation,
+        })),
+    ),
+    ...(latest.smallCapIdeas ?? [])
+      .filter((idea) => resolveSmallCapActionBias(idea) === "buy")
+      .map((idea) => ({
+        key: `smallcap-${idea.market}-${idea.ticker}`,
+        ticker: idea.ticker,
+        companyName: idea.companyName,
+        market: idea.market,
+        sector: idea.sector,
+        actionBias: resolveSmallCapActionBias(idea),
+        timeHorizon: idea.timeHorizon,
+        rationale: idea.positioningNote ?? idea.whyNow,
+        invalidation: idea.invalidation,
+      })),
+  ];
+  const buyCandidates = Array.from(
+    new Map(rawBuyCandidates.map((candidate) => [`${candidate.market}-${candidate.ticker}`, candidate])).values(),
+  ).slice(0, 8);
 
   return (
     <main className="dashboard-shell">
@@ -160,6 +219,45 @@ export default async function HomePage() {
           </div>
         </section>
       ) : null}
+
+      <section className="mt-4 rounded-[1.75rem] border border-emerald-100 bg-emerald-50/70 p-5 shadow-panel">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-700">
+              <Activity className="size-4" />
+              매수 후보
+            </div>
+            <p className="mt-2 text-lg font-semibold tracking-tight text-slate-950">
+              오늘 바로 검토할 후보 {buyCandidates.length}개
+            </p>
+          </div>
+          <Badge variant="positive">actionBias=buy</Badge>
+        </div>
+        {buyCandidates.length ? (
+          <div className="mt-4 grid gap-3 lg:grid-cols-4">
+            {buyCandidates.map((candidate) => (
+              <div key={candidate.key} className="rounded-2xl border border-emerald-100 bg-white/90 p-4">
+                <div className="mb-2 flex flex-wrap items-center gap-2">
+                  <Badge variant="positive">{actionBiasLabel(candidate.actionBias)}</Badge>
+                  <Badge variant="neutral">{candidate.market}</Badge>
+                  <Badge variant="neutral">{timeHorizonLabel(candidate.timeHorizon)}</Badge>
+                </div>
+                <p className="text-sm font-semibold tracking-[0.16em] text-slate-900">{candidate.ticker}</p>
+                <p className="mt-1 text-sm font-medium text-slate-700">{candidate.companyName}</p>
+                <p className="mt-2 text-xs text-slate-500">{candidate.sector}</p>
+                <p className="mt-3 text-sm leading-6 text-slate-700">{candidate.rationale}</p>
+                <p className="mt-3 text-xs leading-5 text-slate-500">
+                  무효화: {candidate.invalidation ?? "가격, 수급, 실적 논리가 깨지면 제외"}
+                </p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-4 rounded-2xl border border-dashed border-emerald-200 bg-white/80 p-4 text-sm text-slate-600">
+            이번 JSON에는 `actionBias=buy` 후보가 없습니다. 다음 A1 실행부터 최소 후보 발굴 규칙을 적용합니다.
+          </div>
+        )}
+      </section>
 
       <section className="mt-4 grid gap-4 xl:grid-cols-[0.8fr_1.2fr]">
         <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">
