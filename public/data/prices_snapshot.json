@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-12T14:55:22.892Z",
-  "analysisDate": "2026-05-12",
+  "generatedAt": "2026-05-12T21:43:44.936Z",
+  "analysisDate": "2026-05-13",
   "staleThresholdDays": 5,
   "mode": "normal",
   "summary": {
@@ -20,10 +20,10 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 1835000,
-        "previousCloseChangePct": -2.39,
-        "week52High": 1967000,
+        "previousCloseChangePct": 0,
+        "week52High": 1949000,
         "week52Low": 193500,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
@@ -33,7 +33,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.843Z",
+      "fetchedAt": "2026-05-12T21:43:44.887Z",
       "issues": []
     },
     {
@@ -42,10 +42,10 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 279000,
-        "previousCloseChangePct": -2.28,
-        "week52High": 291500,
+        "previousCloseChangePct": 0,
+        "week52High": 288500,
         "week52Low": 53700,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
@@ -55,7 +55,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.882Z",
+      "fetchedAt": "2026-05-12T21:43:44.926Z",
       "issues": []
     },
     {
@@ -64,9 +64,9 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 37900,
-        "previousCloseChangePct": -9.11,
+        "previousCloseChangePct": 0,
         "week52High": 51000,
         "week52Low": 16200,
         "currency": "KRW",
@@ -77,7 +77,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.890Z",
+      "fetchedAt": "2026-05-12T21:43:44.935Z",
       "issues": []
     },
     {
@@ -86,9 +86,9 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 122000,
-        "previousCloseChangePct": -6.51,
+        "previousCloseChangePct": 0,
         "week52High": 154800,
         "week52Low": 71500,
         "currency": "KRW",
@@ -99,7 +99,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.891Z",
+      "fetchedAt": "2026-05-12T21:43:44.935Z",
       "issues": []
     },
     {
@@ -108,10 +108,10 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 377500,
-        "previousCloseChangePct": -5.62,
-        "week52High": 426000,
+        "previousCloseChangePct": 0,
+        "week52High": 413000,
         "week52Low": 78200,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
@@ -121,7 +121,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.883Z",
+      "fetchedAt": "2026-05-12T21:43:44.927Z",
       "issues": []
     },
     {
@@ -130,9 +130,9 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 215000,
-        "previousCloseChangePct": -2.05,
+        "previousCloseChangePct": 0,
         "week52High": 282000,
         "week52Low": 101000,
         "currency": "KRW",
@@ -143,7 +143,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.891Z",
+      "fetchedAt": "2026-05-12T21:43:44.935Z",
       "issues": []
     },
     {
@@ -152,9 +152,9 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 53500,
-        "previousCloseChangePct": -8.08,
+        "previousCloseChangePct": 0,
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
@@ -165,7 +165,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.890Z",
+      "fetchedAt": "2026-05-12T21:43:44.936Z",
       "issues": []
     },
     {
@@ -174,9 +174,9 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 111500,
-        "previousCloseChangePct": -2.28,
+        "previousCloseChangePct": 0,
         "week52High": 119800,
         "week52Low": 15600,
         "currency": "KRW",
@@ -187,7 +187,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.890Z",
+      "fetchedAt": "2026-05-12T21:43:44.936Z",
       "issues": []
     },
     {
@@ -196,10 +196,10 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-12",
+        "priceDate": "2026-05-13",
         "currentPrice": 707000,
-        "previousCloseChangePct": 3.21,
-        "week52High": 734000,
+        "previousCloseChangePct": 0,
+        "week52High": 710000,
         "week52Low": 370000,
         "currency": "KRW",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
@@ -209,7 +209,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.892Z",
+      "fetchedAt": "2026-05-12T21:43:44.934Z",
       "issues": []
     },
     {
@@ -218,9 +218,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 243.82,
-        "previousCloseChangePct": -0.95,
+        "priceDate": "2026-05-13",
+        "currentPrice": 240.7,
+        "previousCloseChangePct": -2.21,
         "week52High": 422.95,
         "week52Low": 224.13,
         "currency": "USD",
@@ -231,7 +231,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.885Z",
+      "fetchedAt": "2026-05-12T21:43:44.929Z",
       "issues": []
     },
     {
@@ -240,11 +240,11 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 447.37,
-        "previousCloseChangePct": -2.49,
+        "priceDate": "2026-05-13",
+        "currentPrice": 449.68,
+        "previousCloseChangePct": -1.99,
         "week52High": 469.22,
-        "week52Low": 106.98,
+        "week52Low": 107.67,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
@@ -253,7 +253,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.883Z",
+      "fetchedAt": "2026-05-12T21:43:44.927Z",
       "issues": []
     },
     {
@@ -262,9 +262,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 42.93,
-        "previousCloseChangePct": -3.72,
+        "priceDate": "2026-05-13",
+        "currentPrice": 43.81,
+        "previousCloseChangePct": -1.75,
         "week52High": 46.64,
         "week52Low": 5.24,
         "currency": "USD",
@@ -275,7 +275,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.891Z",
+      "fetchedAt": "2026-05-12T21:43:44.935Z",
       "issues": []
     },
     {
@@ -284,11 +284,11 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 421.3,
-        "previousCloseChangePct": -1.67,
+        "priceDate": "2026-05-13",
+        "currentPrice": 417.21,
+        "previousCloseChangePct": -2.62,
         "week52High": 437.68,
-        "week52Low": 215.88,
+        "week52Low": 221.6,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
@@ -297,7 +297,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.883Z",
+      "fetchedAt": "2026-05-12T21:43:44.927Z",
       "issues": []
     },
     {
@@ -306,9 +306,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 289.35,
-        "previousCloseChangePct": -3.45,
+        "priceDate": "2026-05-13",
+        "currentPrice": 293.2,
+        "previousCloseChangePct": -2.17,
         "week52High": 412.7,
         "week52Low": 243.3,
         "currency": "USD",
@@ -319,7 +319,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.884Z",
+      "fetchedAt": "2026-05-12T21:43:44.928Z",
       "issues": []
     },
     {
@@ -328,9 +328,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 174.74,
-        "previousCloseChangePct": -1.55,
+        "priceDate": "2026-05-13",
+        "currentPrice": 171.5,
+        "previousCloseChangePct": -3.38,
         "week52High": 296.05,
         "week52Low": 163.52,
         "currency": "USD",
@@ -341,7 +341,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.885Z",
+      "fetchedAt": "2026-05-12T21:43:44.929Z",
       "issues": []
     },
     {
@@ -350,9 +350,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 70.3,
-        "previousCloseChangePct": -1.26,
+        "priceDate": "2026-05-13",
+        "currentPrice": 70.99,
+        "previousCloseChangePct": -0.3,
         "week52High": 76.39,
         "week52Low": 45.28,
         "currency": "USD",
@@ -363,7 +363,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.889Z",
+      "fetchedAt": "2026-05-12T21:43:44.933Z",
       "issues": []
     },
     {
@@ -372,9 +372,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 400.89,
-        "previousCloseChangePct": -4.32,
+        "priceDate": "2026-05-13",
+        "currentPrice": 405.43,
+        "previousCloseChangePct": -3.24,
         "week52High": 435.43,
         "week52Low": 311.9,
         "currency": "USD",
@@ -385,7 +385,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.884Z",
+      "fetchedAt": "2026-05-12T21:43:44.928Z",
       "issues": []
     },
     {
@@ -394,9 +394,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 223.61,
-        "previousCloseChangePct": 0.97,
+        "priceDate": "2026-05-13",
+        "currentPrice": 221.48,
+        "previousCloseChangePct": 0.01,
         "week52High": 303.8,
         "week52Low": 156.05,
         "currency": "USD",
@@ -407,7 +407,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.890Z",
+      "fetchedAt": "2026-05-12T21:43:44.934Z",
       "issues": []
     },
     {
@@ -416,9 +416,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 219.75,
-        "previousCloseChangePct": 0.25,
+        "priceDate": "2026-05-13",
+        "currentPrice": 215.92,
+        "previousCloseChangePct": -1.49,
         "week52High": 474.79,
         "week52Low": 185,
         "currency": "USD",
@@ -429,7 +429,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.884Z",
+      "fetchedAt": "2026-05-12T21:43:44.928Z",
       "issues": []
     },
     {
@@ -438,11 +438,11 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 218.59,
-        "previousCloseChangePct": -0.39,
+        "priceDate": "2026-05-13",
+        "currentPrice": 220.09,
+        "previousCloseChangePct": 0.29,
         "week52High": 223.75,
-        "week52Low": 120.28,
+        "week52Low": 124.47,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
@@ -451,7 +451,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.883Z",
+      "fetchedAt": "2026-05-12T21:43:44.927Z",
       "issues": []
     },
     {
@@ -460,11 +460,11 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 72.56,
-        "previousCloseChangePct": -7.13,
+        "priceDate": "2026-05-13",
+        "currentPrice": 71.9,
+        "previousCloseChangePct": -7.97,
         "week52High": 193.84,
-        "week52Low": 28.16,
+        "week52Low": 29.17,
         "currency": "USD",
         "sourceNote": "Smart Trading KIS quote API snapshot fetch"
       },
@@ -473,7 +473,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.891Z",
+      "fetchedAt": "2026-05-12T21:43:44.936Z",
       "issues": []
     },
     {
@@ -482,9 +482,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 94.55,
-        "previousCloseChangePct": -2.14,
+        "priceDate": "2026-05-13",
+        "currentPrice": 95.84,
+        "previousCloseChangePct": -0.81,
         "week52High": 119.21,
         "week52Low": 71.55,
         "currency": "USD",
@@ -495,7 +495,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.889Z",
+      "fetchedAt": "2026-05-12T21:43:44.933Z",
       "issues": []
     },
     {
@@ -504,9 +504,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-12",
-        "currentPrice": 146.38,
-        "previousCloseChangePct": -3.73,
+        "priceDate": "2026-05-13",
+        "currentPrice": 146.87,
+        "previousCloseChangePct": -3.41,
         "week52High": 219.82,
         "week52Low": 138.53,
         "currency": "USD",
@@ -517,7 +517,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-12T14:55:22.884Z",
+      "fetchedAt": "2026-05-12T21:43:44.928Z",
       "issues": []
     }
   ]
