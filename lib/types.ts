@@ -15,6 +15,20 @@ export type SnapshotHealth = "fresh" | "stale" | "partial" | "missing" | "invali
 export type ValidationSeverity = "info" | "warning" | "critical";
 export type ActionBias = "buy" | "hold" | "reduce" | "exit";
 export type TimeHorizon = "1-3d" | "1-3w" | "1-3m";
+export type MarketCycleStage = "early" | "mid" | "late";
+
+export interface MarketRegimeAssessment {
+  stage: MarketCycleStage;
+  regime: string;
+  crowdedness: number;
+  riskReward: number;
+  rotationProbability: number;
+  fragilityScore: number;
+  breadth: string;
+  positioning: string;
+  nextRotation: string[];
+  summary: string;
+}
 
 export interface ValidationIssue {
   code: string;
@@ -228,6 +242,7 @@ export interface DailyAnalysis {
   date: string;
   lastUpdated: string;
   marketTone?: string;
+  marketRegime?: MarketRegimeAssessment;
   topOpportunity: string;
   topRisk: string;
   newPicksToday: number;

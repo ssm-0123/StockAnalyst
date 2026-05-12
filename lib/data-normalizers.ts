@@ -6,6 +6,7 @@ import {
   EvaluatedInsight,
   AnalysisSuggestion,
   LegacySectorDecision,
+  MarketRegimeAssessment,
   MarketCode,
   ReasonBlock,
   SectorEntry,
@@ -48,6 +49,7 @@ const RESULTS_STANCES = new Set<EvaluatedInsight["stance"]>(["promising", "cauti
 const PRICE_EVIDENCE = new Set<EvaluatedInsight["priceEvidence"]>(["snapshot", "fallback", "mixed"]);
 const DATA_QUALITY = new Set<EvaluatedInsight["dataQuality"]>(["verified", "limited", "stale-excluded"]);
 const TREND_DIRECTIONS = new Set<TrendSummary["mostFrequentPromisingSector"]["trendDirection"]>(["up", "down", "flat"]);
+const MARKET_CYCLE_STAGES = new Set<MarketRegimeAssessment["stage"]>(["early", "mid", "late"]);
 
 function isRecord(value: unknown): value is JsonRecord {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -71,6 +73,11 @@ function asNumber(value: unknown, fallback = 0) {
 
 function asOptionalNumber(value: unknown) {
   return typeof value === "number" && Number.isFinite(value) ? value : undefined;
+}
+
+function asBoundedNumber(value: unknown, fallback = 0) {
+  const number = asNumber(value, fallback);
+  return Math.min(100, Math.max(0, number));
 }
 
 function asArray(value: unknown) {
@@ -306,6 +313,29 @@ function normalizeTrendSummary(value: unknown): TrendSummary | undefined {
   };
 }
 
+function normalizeMarketRegime(value: unknown): MarketRegimeAssessment | undefined {
+  const input = asRecord(value);
+  if (!Object.keys(input).length) {
+    return undefined;
+  }
+
+  return {
+    stage:
+      typeof input.stage === "string" && MARKET_CYCLE_STAGES.has(input.stage as MarketRegimeAssessment["stage"])
+        ? (input.stage as MarketRegimeAssessment["stage"])
+        : "mid",
+    regime: asString(input.regime, "선별적 risk-on"),
+    crowdedness: asBoundedNumber(input.crowdedness),
+    riskReward: asBoundedNumber(input.riskReward),
+    rotationProbability: asBoundedNumber(input.rotationProbability),
+    fragilityScore: asBoundedNumber(input.fragilityScore),
+    breadth: asString(input.breadth, "시장 breadth 평가 없음"),
+    positioning: asString(input.positioning, "기관/외국인 포지셔닝 평가 없음"),
+    nextRotation: asStringArray(input.nextRotation),
+    summary: asString(input.summary, "시장 국면 평가 없음"),
+  };
+}
+
 export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
   const input = asRecord(value);
   const reasons = asRecord(input.reasons);
@@ -314,6 +344,7 @@ export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
     date: asString(input.date, "업데이트 예정"),
     lastUpdated: asString(input.lastUpdated, new Date(0).toISOString()),
     marketTone: asOptionalString(input.marketTone),
+    marketRegime: normalizeMarketRegime(input.marketRegime),
     topOpportunity: asString(input.topOpportunity, "데이터 준비 중"),
     topRisk: asString(input.topRisk, "데이터 준비 중"),
     newPicksToday: asNumber(input.newPicksToday, 0),

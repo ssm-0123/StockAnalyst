@@ -83,6 +83,12 @@ function formatRangePosition(current?: number, low?: number, high?: number) {
   return `${position.toFixed(0)}%`;
 }
 
+function stageLabel(stage?: "early" | "mid" | "late") {
+  if (stage === "early") return "초기";
+  if (stage === "late") return "후기";
+  return "중기";
+}
+
 export default async function HomePage() {
   const { latest, history, trendSummary, previousDay, smallCapTracking } = await getLatestAnalysis();
   const { latest: latestResults, history: resultsHistory } = await getLatestResultsReport();
@@ -443,6 +449,60 @@ export default async function HomePage() {
             {latest.marketTone ?? "선별적 강세: 기회는 집중되고 리스크는 엇갈립니다."}
           </p>
         </div>
+        {latest.marketRegime ? (
+          <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+                <Shield className="size-4" />
+                시장 국면
+              </div>
+              <Badge variant={latest.marketRegime.stage === "late" ? "caution" : "neutral"}>
+                {stageLabel(latest.marketRegime.stage)}
+              </Badge>
+            </div>
+            <p className="mt-3 text-lg font-semibold tracking-tight text-slate-950">{latest.marketRegime.regime}</p>
+            <p className="mt-2 text-sm leading-6 text-slate-600">{latest.marketRegime.summary}</p>
+            <div className="mt-4 grid grid-cols-2 gap-2 text-xs sm:grid-cols-4">
+              <div className="rounded-2xl bg-slate-50 px-3 py-2">
+                <p className="text-slate-500">crowdedness</p>
+                <p className="mt-1 text-lg font-semibold text-slate-950">{latest.marketRegime.crowdedness}</p>
+              </div>
+              <div className="rounded-2xl bg-slate-50 px-3 py-2">
+                <p className="text-slate-500">risk_reward</p>
+                <p className="mt-1 text-lg font-semibold text-slate-950">{latest.marketRegime.riskReward}</p>
+              </div>
+              <div className="rounded-2xl bg-slate-50 px-3 py-2">
+                <p className="text-slate-500">rotation</p>
+                <p className="mt-1 text-lg font-semibold text-slate-950">
+                  {latest.marketRegime.rotationProbability}
+                </p>
+              </div>
+              <div className="rounded-2xl bg-slate-50 px-3 py-2">
+                <p className="text-slate-500">fragility</p>
+                <p className="mt-1 text-lg font-semibold text-slate-950">{latest.marketRegime.fragilityScore}</p>
+              </div>
+            </div>
+            <div className="mt-3 grid gap-2 text-xs leading-5 text-slate-600 sm:grid-cols-2">
+              <p>
+                <span className="font-semibold text-slate-900">breadth: </span>
+                {latest.marketRegime.breadth}
+              </p>
+              <p>
+                <span className="font-semibold text-slate-900">positioning: </span>
+                {latest.marketRegime.positioning}
+              </p>
+            </div>
+            {latest.marketRegime.nextRotation.length ? (
+              <p className="mt-2 text-xs leading-5 text-slate-600">
+                <span className="font-semibold text-slate-900">다음 순환 후보: </span>
+                {latest.marketRegime.nextRotation.join(" / ")}
+              </p>
+            ) : null}
+          </div>
+        ) : null}
+      </section>
+
+      <section className="mt-4 grid gap-4 xl:grid-cols-[0.8fr_1.2fr]">
         <div className="space-y-4">
           <div className="section-heading mb-0">
             <div>
