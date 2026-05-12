@@ -39,6 +39,50 @@ function timeHorizonLabel(value?: StockIdea["timeHorizon"] | SmallCapIdea["timeH
   return "1-3주";
 }
 
+function formatPrice(value?: number, market?: StockIdea["market"] | SmallCapIdea["market"], currency?: "KRW" | "USD") {
+  if (typeof value !== "number") {
+    return "업데이트 예정";
+  }
+
+  return new Intl.NumberFormat(market === "KR" ? "ko-KR" : "en-US", {
+    style: "currency",
+    currency: currency ?? (market === "KR" ? "KRW" : "USD"),
+    maximumFractionDigits: market === "KR" ? 0 : 2,
+  }).format(value);
+}
+
+function formatPercent(value?: number) {
+  if (typeof value !== "number") {
+    return "업데이트 예정";
+  }
+
+  const sign = value > 0 ? "+" : "";
+  return `${sign}${value.toFixed(2)}%`;
+}
+
+function formatRelativeToHigh(current?: number, high?: number) {
+  if (typeof current !== "number" || typeof high !== "number" || high <= 0) {
+    return "업데이트 예정";
+  }
+
+  const value = (current / high - 1) * 100;
+  return `${value.toFixed(1)}%`;
+}
+
+function formatRangePosition(current?: number, low?: number, high?: number) {
+  if (
+    typeof current !== "number" ||
+    typeof low !== "number" ||
+    typeof high !== "number" ||
+    high <= low
+  ) {
+    return "업데이트 예정";
+  }
+
+  const position = Math.min(100, Math.max(0, ((current - low) / (high - low)) * 100));
+  return `${position.toFixed(0)}%`;
+}
+
 export default async function HomePage() {
   const { latest, history, trendSummary, previousDay, smallCapTracking } = await getLatestAnalysis();
   const { latest: latestResults, history: resultsHistory } = await getLatestResultsReport();
@@ -76,8 +120,18 @@ export default async function HomePage() {
           sector: sector.sectorName,
           actionBias: resolveStockActionBias(stock),
           timeHorizon: stock.timeHorizon,
-          rationale: stock.positioningNote ?? stock.rationale,
+          rationale: stock.rationale,
+          positioningNote: stock.positioningNote,
           invalidation: stock.invalidation,
+          priceSnapshot: stock.priceSnapshot,
+          confidenceLevel: stock.confidenceLevel,
+          snapshotHealth: stock.snapshotHealth,
+          thesis: sector.thesis,
+          keyDrivers: sector.keyDrivers ?? [],
+          valuationNote: undefined,
+          liquidityNote: undefined,
+          catalysts: [],
+          risks: sector.risks ?? sector.headwinds ?? [],
         })),
     ),
     ...(latest.smallCapIdeas ?? [])
@@ -90,8 +144,18 @@ export default async function HomePage() {
         sector: idea.sector,
         actionBias: resolveSmallCapActionBias(idea),
         timeHorizon: idea.timeHorizon,
-        rationale: idea.positioningNote ?? idea.whyNow,
+        rationale: idea.whyNow,
+        positioningNote: idea.positioningNote,
         invalidation: idea.invalidation,
+        priceSnapshot: idea.priceSnapshot,
+        confidenceLevel: idea.confidenceLevel,
+        snapshotHealth: idea.snapshotHealth,
+        thesis: idea.thesis,
+        keyDrivers: [idea.followThroughNote].filter(Boolean),
+        valuationNote: idea.valuationNote,
+        liquidityNote: idea.liquidityNote,
+        catalysts: idea.catalysts ?? [],
+        risks: idea.risks ?? [],
       })),
   ];
   const buyCandidates = Array.from(
@@ -234,23 +298,133 @@ export default async function HomePage() {
           <Badge variant="positive">actionBias=buy</Badge>
         </div>
         {buyCandidates.length ? (
-          <div className="mt-4 grid gap-3 lg:grid-cols-4">
-            {buyCandidates.map((candidate) => (
+          <div className="mt-4 grid gap-3 xl:grid-cols-2 2xl:grid-cols-4">
+            {buyCandidates.map((candidate) => {
+              const snapshot = candidate.priceSnapshot;
+              const changePct = snapshot?.previousCloseChangePct;
+              const changeTone =
+                typeof changePct === "number" && changePct > 0
+                  ? "text-emerald-700"
+                  : typeof changePct === "number" && changePct < 0
+                    ? "text-rose-700"
+                    : "text-slate-600";
+
+              return (
               <div key={candidate.key} className="rounded-2xl border border-emerald-100 bg-white/90 p-4">
                 <div className="mb-2 flex flex-wrap items-center gap-2">
                   <Badge variant="positive">{actionBiasLabel(candidate.actionBias)}</Badge>
                   <Badge variant="neutral">{candidate.market}</Badge>
                   <Badge variant="neutral">{timeHorizonLabel(candidate.timeHorizon)}</Badge>
+                  {candidate.snapshotHealth ? <Badge variant="neutral">{candidate.snapshotHealth}</Badge> : null}
                 </div>
                 <p className="text-sm font-semibold tracking-[0.16em] text-slate-900">{candidate.ticker}</p>
                 <p className="mt-1 text-sm font-medium text-slate-700">{candidate.companyName}</p>
                 <p className="mt-2 text-xs text-slate-500">{candidate.sector}</p>
-                <p className="mt-3 text-sm leading-6 text-slate-700">{candidate.rationale}</p>
+                <div className="mt-3 rounded-2xl border border-slate-200 bg-slate-50/80 p-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-slate-500">현재가</p>
+                      <p className="mt-1 text-lg font-semibold text-slate-950">
+                        {formatPrice(snapshot?.currentPrice, candidate.market, snapshot?.currency)}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-slate-500">전일대비</p>
+                      <p className={`mt-1 text-sm font-semibold ${changeTone}`}>{formatPercent(changePct)}</p>
+                    </div>
+                  </div>
+                  <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+                    <div className="rounded-xl bg-white px-3 py-2">
+                      <p className="text-slate-500">52주 고점</p>
+                      <p className="mt-1 font-semibold text-slate-800">
+                        {formatPrice(snapshot?.week52High, candidate.market, snapshot?.currency)}
+                      </p>
+                    </div>
+                    <div className="rounded-xl bg-white px-3 py-2">
+                      <p className="text-slate-500">고점 대비</p>
+                      <p className="mt-1 font-semibold text-slate-800">
+                        {formatRelativeToHigh(snapshot?.currentPrice, snapshot?.week52High)}
+                      </p>
+                    </div>
+                    <div className="rounded-xl bg-white px-3 py-2">
+                      <p className="text-slate-500">52주 저점</p>
+                      <p className="mt-1 font-semibold text-slate-800">
+                        {formatPrice(snapshot?.week52Low, candidate.market, snapshot?.currency)}
+                      </p>
+                    </div>
+                    <div className="rounded-xl bg-white px-3 py-2">
+                      <p className="text-slate-500">52주 위치</p>
+                      <p className="mt-1 font-semibold text-slate-800">
+                        {formatRangePosition(snapshot?.currentPrice, snapshot?.week52Low, snapshot?.week52High)}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-2 text-[11px] text-slate-500">
+                    가격 기준일: {snapshot?.priceDate ?? "업데이트 예정"}
+                  </p>
+                </div>
+                <div className="mt-3 space-y-3 text-sm leading-6 text-slate-700">
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-700">매수 논리</p>
+                    <p className="mt-1">{candidate.rationale}</p>
+                  </div>
+                  {candidate.thesis ? (
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">상위 논리</p>
+                      <p className="mt-1">{candidate.thesis}</p>
+                    </div>
+                  ) : null}
+                  {candidate.keyDrivers.length ? (
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">핵심 동인</p>
+                      <ul className="mt-1 space-y-1">
+                        {candidate.keyDrivers.slice(0, 2).map((driver, index) => (
+                          <li key={`driver-${candidate.key}-${index}`}>- {driver}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                  {candidate.valuationNote || candidate.liquidityNote ? (
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      {candidate.valuationNote ? (
+                        <div className="rounded-xl bg-emerald-50 px-3 py-2 text-xs leading-5 text-emerald-900">
+                          <span className="font-semibold">밸류/가격: </span>
+                          {candidate.valuationNote}
+                        </div>
+                      ) : null}
+                      {candidate.liquidityNote ? (
+                        <div className="rounded-xl bg-slate-50 px-3 py-2 text-xs leading-5 text-slate-700">
+                          <span className="font-semibold">유동성: </span>
+                          {candidate.liquidityNote}
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : null}
+                  {candidate.catalysts.length ? (
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">촉매</p>
+                      <p className="mt-1">{candidate.catalysts.slice(0, 2).join(" / ")}</p>
+                    </div>
+                  ) : null}
+                  {candidate.positioningNote ? (
+                    <div className="rounded-xl bg-white px-3 py-2 text-xs leading-5 text-slate-700">
+                      <span className="font-semibold text-slate-900">진입 메모: </span>
+                      {candidate.positioningNote}
+                    </div>
+                  ) : null}
+                  {candidate.risks.length ? (
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-600">주요 리스크</p>
+                      <p className="mt-1">{candidate.risks.slice(0, 2).join(" / ")}</p>
+                    </div>
+                  ) : null}
+                </div>
                 <p className="mt-3 text-xs leading-5 text-slate-500">
                   무효화: {candidate.invalidation ?? "가격, 수급, 실적 논리가 깨지면 제외"}
                 </p>
               </div>
-            ))}
+              );
+            })}
           </div>
         ) : (
           <div className="mt-4 rounded-2xl border border-dashed border-emerald-200 bg-white/80 p-4 text-sm text-slate-600">
