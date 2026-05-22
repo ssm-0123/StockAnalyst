@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T01:51:19.044Z",
+  "generatedAt": "2026-05-22T13:11:03.313Z",
   "analysisDate": "2026-05-22",
   "staleThresholdDays": 5,
   "mode": "normal",
@@ -21,8 +21,8 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-22",
-        "currentPrice": 1945000,
-        "previousCloseChangePct": -0.26,
+        "currentPrice": 1941000,
+        "previousCloseChangePct": -0.05,
         "week52High": 1995000,
         "week52Low": 196900,
         "currency": "KRW",
@@ -33,7 +33,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:16.018Z",
+      "fetchedAt": "2026-05-22T13:11:00.163Z",
       "issues": []
     },
     {
@@ -43,8 +43,8 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-22",
-        "currentPrice": 295750,
-        "previousCloseChangePct": -1.25,
+        "currentPrice": 292500,
+        "previousCloseChangePct": -2.34,
         "week52High": 300500,
         "week52Low": 53700,
         "currency": "KRW",
@@ -55,7 +55,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:15.919Z",
+      "fetchedAt": "2026-05-22T13:11:00.236Z",
       "issues": []
     },
     {
@@ -65,8 +65,8 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-22",
-        "currentPrice": 36950,
-        "previousCloseChangePct": -5.72,
+        "currentPrice": 36150,
+        "previousCloseChangePct": -3.43,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
       },
@@ -75,7 +75,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:18.537Z",
+      "fetchedAt": "2026-05-22T13:11:02.688Z",
       "issues": [
         "일부 가격 필드 누락"
       ]
@@ -87,8 +87,8 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-22",
-        "currentPrice": 122800,
-        "previousCloseChangePct": -8.1,
+        "currentPrice": 122200,
+        "previousCloseChangePct": -7.57,
         "week52High": 154800,
         "week52Low": 71500,
         "currency": "KRW",
@@ -99,7 +99,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:16.778Z",
+      "fetchedAt": "2026-05-22T13:11:02.433Z",
       "issues": []
     },
     {
@@ -109,8 +109,8 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-22",
-        "currentPrice": 320000,
-        "previousCloseChangePct": -3.76,
+        "currentPrice": 320500,
+        "previousCloseChangePct": -3.61,
         "week52High": 426000,
         "week52Low": 78200,
         "currency": "KRW",
@@ -121,7 +121,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:16.195Z",
+      "fetchedAt": "2026-05-22T13:11:00.426Z",
       "issues": []
     },
     {
@@ -131,8 +131,8 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-22",
-        "currentPrice": 204500,
-        "previousCloseChangePct": -4.6,
+        "currentPrice": 206000,
+        "previousCloseChangePct": -5.37,
         "week52High": 282000,
         "week52Low": 117800,
         "currency": "KRW",
@@ -143,7 +143,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:16.941Z",
+      "fetchedAt": "2026-05-22T13:11:02.537Z",
       "issues": []
     },
     {
@@ -153,8 +153,8 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-22",
-        "currentPrice": 54100,
-        "previousCloseChangePct": -2.66,
+        "currentPrice": 53700,
+        "previousCloseChangePct": -1.9,
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
@@ -165,7 +165,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:18.614Z",
+      "fetchedAt": "2026-05-22T13:11:02.841Z",
       "issues": []
     },
     {
@@ -175,9 +175,9 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-22",
-        "currentPrice": 129000,
-        "previousCloseChangePct": -2.79,
-        "week52High": 129500,
+        "currentPrice": 131800,
+        "previousCloseChangePct": -5.02,
+        "week52High": 135000,
         "week52Low": 17660,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
@@ -187,7 +187,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:18.389Z",
+      "fetchedAt": "2026-05-22T13:11:02.816Z",
       "issues": []
     },
     {
@@ -209,7 +209,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:17.015Z",
+      "fetchedAt": "2026-05-22T13:11:02.275Z",
       "issues": []
     },
     {
@@ -230,7 +230,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:16.206Z",
+      "fetchedAt": "2026-05-22T13:11:01.725Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -254,7 +254,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:17.307Z",
+      "fetchedAt": "2026-05-22T13:11:00.448Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -278,7 +278,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:17.427Z",
+      "fetchedAt": "2026-05-22T13:11:02.560Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -302,7 +302,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:17.194Z",
+      "fetchedAt": "2026-05-22T13:11:00.870Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -326,7 +326,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:18.687Z",
+      "fetchedAt": "2026-05-22T13:11:01.110Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -350,7 +350,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:16.336Z",
+      "fetchedAt": "2026-05-22T13:11:01.583Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -374,7 +374,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:17.976Z",
+      "fetchedAt": "2026-05-22T13:11:01.960Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -398,7 +398,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:18.771Z",
+      "fetchedAt": "2026-05-22T13:11:01.246Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -422,7 +422,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:18.294Z",
+      "fetchedAt": "2026-05-22T13:11:02.127Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -446,7 +446,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:16.594Z",
+      "fetchedAt": "2026-05-22T13:11:01.371Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -470,7 +470,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:17.077Z",
+      "fetchedAt": "2026-05-22T13:11:00.559Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -494,7 +494,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:17.624Z",
+      "fetchedAt": "2026-05-22T13:11:02.972Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -518,7 +518,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:18.082Z",
+      "fetchedAt": "2026-05-22T13:11:01.886Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -542,7 +542,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T01:51:17.769Z",
+      "fetchedAt": "2026-05-22T13:11:00.925Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
