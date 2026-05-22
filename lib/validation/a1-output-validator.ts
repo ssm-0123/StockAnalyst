@@ -22,6 +22,7 @@ const REQUIRED_MARKET_REGIME_FIELDS = [
   "rotationProbability",
   "fragilityScore",
 ] as const;
+const MAX_PRICE_SOURCE_AGE_HOURS = 6;
 
 const WEAK_TEXT = new Set(["", "n/a", "na", "none", "tbd", "todo", "미정", "없음", "근거 없음"]);
 const EVIDENCE_CONFIDENCE_LEVELS = new Set(["verified", "inferred", "weak"]);
@@ -59,6 +60,10 @@ function parseDate(value: unknown): Date | null {
 
 function wholeDaysBetween(older: Date, newer: Date) {
   return Math.floor((newer.getTime() - older.getTime()) / 86_400_000);
+}
+
+function hoursBetween(older: Date, newer: Date) {
+  return (newer.getTime() - older.getTime()) / 3_600_000;
 }
 
 function issue(
@@ -181,6 +186,7 @@ function validatePriceSnapshot(
   snapshot: unknown,
   path: string,
   analysisDate: Date | null,
+  referenceTimestamp: Date | null,
   issues: A1ValidationIssue[],
 ) {
   if (!isRecord(snapshot)) {
@@ -219,6 +225,15 @@ function validatePriceSnapshot(
         "warn",
         `${path}.priceSnapshot.sourceNote`,
         "Price source timing is missing from the saved source note.",
+      ),
+    );
+  } else if (referenceTimestamp && hoursBetween(sourceTimestamp, referenceTimestamp) > MAX_PRICE_SOURCE_AGE_HOURS) {
+    issues.push(
+      issue(
+        "stale-price-source-timing",
+        "fail",
+        `${path}.priceSnapshot.sourceNote`,
+        `Price source timestamp is older than ${MAX_PRICE_SOURCE_AGE_HOURS} hours versus output lastUpdated.`,
       ),
     );
   } else if (analysisDate && wholeDaysBetween(sourceTimestamp, analysisDate) > 2) {
@@ -278,9 +293,10 @@ function validateBuyCandidate(
   path: string,
   contextText: string,
   analysisDate: Date | null,
+  referenceTimestamp: Date | null,
   issues: A1ValidationIssue[],
 ) {
-  validatePriceSnapshot(candidate.priceSnapshot, path, analysisDate, issues);
+  validatePriceSnapshot(candidate.priceSnapshot, path, analysisDate, referenceTimestamp, issues);
 
   const thesisText = [candidate.thesis, candidate.rationale, candidate.whyNow].map(asString).filter(Boolean).join(" ");
   if (!hasText(thesisText)) {
@@ -322,7 +338,12 @@ function validateBuyCandidate(
   }
 }
 
-function validateSectors(input: JsonRecord, analysisDate: Date | null, issues: A1ValidationIssue[]) {
+function validateSectors(
+  input: JsonRecord,
+  analysisDate: Date | null,
+  referenceTimestamp: Date | null,
+  issues: A1ValidationIssue[],
+) {
   for (const group of ["promisingSectors", "cautionSectors"] as const) {
     asArray(input[group]).forEach((sectorValue, sectorIndex) => {
       const sectorPath = `${group}[${sectorIndex}]`;
@@ -351,14 +372,19 @@ function validateSectors(input: JsonRecord, analysisDate: Date | null, issues: A
         validateEvidenceArray(stockValue.evidence, `${stockPath}.evidence`, issues);
 
         if (stockValue.actionBias === "buy" || stockValue.isNew === true) {
-          validateBuyCandidate(stockValue, stockPath, contextText, analysisDate, issues);
+          validateBuyCandidate(stockValue, stockPath, contextText, analysisDate, referenceTimestamp, issues);
         }
       });
     });
   }
 }
 
-function validateSmallCaps(input: JsonRecord, analysisDate: Date | null, issues: A1ValidationIssue[]) {
+function validateSmallCaps(
+  input: JsonRecord,
+  analysisDate: Date | null,
+  referenceTimestamp: Date | null,
+  issues: A1ValidationIssue[],
+) {
   asArray(input.smallCapIdeas).forEach((ideaValue, index) => {
     const ideaPath = `smallCapIdeas[${index}]`;
     if (!isRecord(ideaValue)) {
@@ -366,7 +392,7 @@ function validateSmallCaps(input: JsonRecord, analysisDate: Date | null, issues:
     }
 
     validateEvidenceArray(ideaValue.evidence, `${ideaPath}.evidence`, issues);
-    validateBuyCandidate(ideaValue, ideaPath, asString(ideaValue.theme), analysisDate, issues);
+    validateBuyCandidate(ideaValue, ideaPath, asString(ideaValue.theme), analysisDate, referenceTimestamp, issues);
   });
 }
 
@@ -380,11 +406,12 @@ export function validateA1Output(value: unknown): A1ValidationResult {
   }
 
   const analysisDate = parseDate(value.date) ?? parseDate(value.lastUpdated);
+  const referenceTimestamp = parseDate(value.lastUpdated) ?? analysisDate;
 
   validateMarketRegime(value, issues);
   validateEvidenceArray(value.evidence, "evidence", issues);
-  validateSectors(value, analysisDate, issues);
-  validateSmallCaps(value, analysisDate, issues);
+  validateSectors(value, analysisDate, referenceTimestamp, issues);
+  validateSmallCaps(value, analysisDate, referenceTimestamp, issues);
 
   return resultFromIssues(issues);
 }
