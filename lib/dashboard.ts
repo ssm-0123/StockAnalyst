@@ -591,6 +591,7 @@ export function formatTimestamp(timestamp: string) {
   }
 
   return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
     dateStyle: "medium",
     timeStyle: "short",
   }).format(date);
