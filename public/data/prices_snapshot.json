@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-22T13:11:03.313Z",
-  "analysisDate": "2026-05-22",
+  "generatedAt": "2026-05-22T16:04:52.333Z",
+  "analysisDate": "2026-05-23",
   "staleThresholdDays": 5,
   "mode": "normal",
   "summary": {
@@ -20,7 +20,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 1941000,
         "previousCloseChangePct": -0.05,
         "week52High": 1995000,
@@ -33,7 +33,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:00.163Z",
+      "fetchedAt": "2026-05-22T16:04:50.001Z",
       "issues": []
     },
     {
@@ -42,7 +42,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 292500,
         "previousCloseChangePct": -2.34,
         "week52High": 300500,
@@ -55,7 +55,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:00.236Z",
+      "fetchedAt": "2026-05-22T16:04:49.908Z",
       "issues": []
     },
     {
@@ -64,7 +64,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 36150,
         "previousCloseChangePct": -3.43,
         "currency": "KRW",
@@ -75,7 +75,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.688Z",
+      "fetchedAt": "2026-05-22T16:04:51.372Z",
       "issues": [
         "일부 가격 필드 누락"
       ]
@@ -86,7 +86,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 122200,
         "previousCloseChangePct": -7.57,
         "week52High": 154800,
@@ -99,7 +99,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.433Z",
+      "fetchedAt": "2026-05-22T16:04:50.215Z",
       "issues": []
     },
     {
@@ -108,7 +108,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 320500,
         "previousCloseChangePct": -3.61,
         "week52High": 426000,
@@ -121,7 +121,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:00.426Z",
+      "fetchedAt": "2026-05-22T16:04:50.087Z",
       "issues": []
     },
     {
@@ -130,7 +130,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 206000,
         "previousCloseChangePct": -5.37,
         "week52High": 282000,
@@ -143,7 +143,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.537Z",
+      "fetchedAt": "2026-05-22T16:04:50.221Z",
       "issues": []
     },
     {
@@ -152,7 +152,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 53700,
         "previousCloseChangePct": -1.9,
         "week52High": 74000,
@@ -165,7 +165,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.841Z",
+      "fetchedAt": "2026-05-22T16:04:51.363Z",
       "issues": []
     },
     {
@@ -174,7 +174,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 131800,
         "previousCloseChangePct": -5.02,
         "week52High": 135000,
@@ -187,7 +187,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.816Z",
+      "fetchedAt": "2026-05-22T16:04:51.212Z",
       "issues": []
     },
     {
@@ -196,7 +196,7 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-05-22",
+        "priceDate": "2026-05-23",
         "currentPrice": 680000,
         "previousCloseChangePct": -1.19,
         "week52High": 734000,
@@ -209,7 +209,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.275Z",
+      "fetchedAt": "2026-05-22T16:04:50.373Z",
       "issues": []
     },
     {
@@ -218,9 +218,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
+        "priceDate": "2026-05-22",
         "currentPrice": 244.1,
-        "previousCloseChangePct": -3.66,
+        "previousCloseChangePct": 0,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -230,7 +230,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:01.725Z",
+      "fetchedAt": "2026-05-22T16:04:49.227Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -242,9 +242,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 449.59,
-        "previousCloseChangePct": 0.45,
+        "priceDate": "2026-05-22",
+        "currentPrice": 470.48,
+        "previousCloseChangePct": 4.65,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -254,7 +254,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:00.448Z",
+      "fetchedAt": "2026-05-22T16:04:51.012Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -266,9 +266,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 48.02,
-        "previousCloseChangePct": 21.51,
+        "priceDate": "2026-05-22",
+        "currentPrice": 46.22,
+        "previousCloseChangePct": -3.75,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -278,7 +278,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.560Z",
+      "fetchedAt": "2026-05-22T16:04:50.377Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -290,9 +290,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 414.57,
-        "previousCloseChangePct": -0.76,
+        "priceDate": "2026-05-22",
+        "currentPrice": 412.57,
+        "previousCloseChangePct": -0.48,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -302,7 +302,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:00.870Z",
+      "fetchedAt": "2026-05-22T16:04:50.975Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -314,9 +314,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 285.83,
-        "previousCloseChangePct": 1.62,
+        "priceDate": "2026-05-22",
+        "currentPrice": 296.36,
+        "previousCloseChangePct": 3.68,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -326,7 +326,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:01.110Z",
+      "fetchedAt": "2026-05-22T16:04:51.513Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -338,9 +338,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 176.31,
-        "previousCloseChangePct": -2.1,
+        "priceDate": "2026-05-22",
+        "currentPrice": 179.15,
+        "previousCloseChangePct": 1.61,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -350,7 +350,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:01.583Z",
+      "fetchedAt": "2026-05-22T16:04:49.281Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -362,9 +362,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 75.65,
-        "previousCloseChangePct": 2.06,
+        "priceDate": "2026-05-22",
+        "currentPrice": 76.24,
+        "previousCloseChangePct": 0.78,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -374,7 +374,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:01.960Z",
+      "fetchedAt": "2026-05-22T16:04:51.518Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -386,9 +386,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 381.51,
-        "previousCloseChangePct": 0.48,
+        "priceDate": "2026-05-22",
+        "currentPrice": 390.12,
+        "previousCloseChangePct": 2.26,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -398,7 +398,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:01.246Z",
+      "fetchedAt": "2026-05-22T16:04:51.794Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -410,9 +410,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 218.12,
-        "previousCloseChangePct": 0.24,
+        "priceDate": "2026-05-22",
+        "currentPrice": 212.25,
+        "previousCloseChangePct": -2.69,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -422,7 +422,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.127Z",
+      "fetchedAt": "2026-05-22T16:04:51.833Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -434,9 +434,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 225.01,
-        "previousCloseChangePct": 0.59,
+        "priceDate": "2026-05-22",
+        "currentPrice": 231.63,
+        "previousCloseChangePct": 2.94,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -446,7 +446,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:01.371Z",
+      "fetchedAt": "2026-05-22T16:04:49.898Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -458,9 +458,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 219.51,
-        "previousCloseChangePct": -1.77,
+        "priceDate": "2026-05-22",
+        "currentPrice": 217.03,
+        "previousCloseChangePct": -1.13,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -470,7 +470,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:00.559Z",
+      "fetchedAt": "2026-05-22T16:04:50.784Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -482,9 +482,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 65.09,
-        "previousCloseChangePct": 4.01,
+        "priceDate": "2026-05-22",
+        "currentPrice": 66.5,
+        "previousCloseChangePct": 2.17,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -494,7 +494,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:02.972Z",
+      "fetchedAt": "2026-05-22T16:04:50.446Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -506,9 +506,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 99.64,
-        "previousCloseChangePct": 1.65,
+        "priceDate": "2026-05-22",
+        "currentPrice": 99.72,
+        "previousCloseChangePct": 0.08,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -518,7 +518,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:01.886Z",
+      "fetchedAt": "2026-05-22T16:04:52.084Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
@@ -530,9 +530,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-05-21",
-        "currentPrice": 149.08,
-        "previousCloseChangePct": 3.53,
+        "priceDate": "2026-05-22",
+        "currentPrice": 156.85,
+        "previousCloseChangePct": 5.21,
         "currency": "USD",
         "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
@@ -542,7 +542,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-22T13:11:00.925Z",
+      "fetchedAt": "2026-05-22T16:04:50.692Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "일부 가격 필드 누락"
