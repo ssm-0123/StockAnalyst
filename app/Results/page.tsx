@@ -87,6 +87,20 @@ function confidenceLabel(level?: "high" | "medium" | "low") {
   return "Medium";
 }
 
+function lessonStatusVariant(status?: "active" | "softened" | "contradicted" | "retired") {
+  if (status === "active") return "positive" as const;
+  if (status === "contradicted" || status === "retired") return "caution" as const;
+  return "neutral" as const;
+}
+
+function lessonStatusLabel(status?: "active" | "softened" | "contradicted" | "retired") {
+  if (status === "active") return "교훈 active";
+  if (status === "softened") return "교훈 softened";
+  if (status === "contradicted") return "교훈 contradicted";
+  if (status === "retired") return "교훈 retired";
+  return "교훈 pending";
+}
+
 function evidenceLimitNote(item: {
   priceEvidence: "snapshot" | "fallback" | "mixed";
   dataQuality: "verified" | "limited" | "stale-excluded";
@@ -313,6 +327,7 @@ export default async function ResultsPage() {
                       <Badge variant={evidenceBadgeVariant(item.priceEvidence)}>{evidenceLabel(item.priceEvidence)}</Badge>
                       <Badge variant={qualityBadgeVariant(item.dataQuality)}>{qualityLabel(item.dataQuality)}</Badge>
                       <Badge variant={confidenceVariant(item.confidenceLevel)}>{confidenceLabel(item.confidenceLevel)}</Badge>
+                      <Badge variant={lessonStatusVariant(item.lessonStatus)}>{lessonStatusLabel(item.lessonStatus)}</Badge>
                       <span className="text-sm font-semibold text-slate-950">{item.companyName}</span>
                       <span className="text-sm text-slate-500">{item.ticker}</span>
                     </div>
@@ -361,7 +376,27 @@ export default async function ResultsPage() {
                     <p className="mt-1 text-sm leading-6 text-slate-700">{item.followThroughReview}</p>
                   </div>
                 ) : null}
-                <p className="mt-2 text-sm leading-6 text-slate-500">교훈: {item.lesson}</p>
+                <div className="mt-3 rounded-2xl border border-slate-200/80 bg-white/80 p-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">교훈</p>
+                    <Badge variant={lessonStatusVariant(item.lessonStatus)}>{item.lessonStatus ?? "pending"}</Badge>
+                    {typeof item.lessonConfidence === "number" ? (
+                      <Badge variant="neutral">신뢰도 {(item.lessonConfidence * 100).toFixed(0)}%</Badge>
+                    ) : null}
+                    {item.lessonValidUntil ? <Badge variant="neutral">{item.lessonValidUntil}까지</Badge> : null}
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.lesson}</p>
+                  {item.lessonConditions?.length ? (
+                    <ul className="mt-2 space-y-1 text-sm leading-6 text-slate-500">
+                      {item.lessonConditions.map((condition, conditionIndex) => (
+                        <li key={`condition-${item.ticker}-${conditionIndex}`}>- {condition}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  {item.lessonUpdateReason ? (
+                    <p className="mt-2 text-xs leading-5 text-slate-500">{item.lessonUpdateReason}</p>
+                  ) : null}
+                </div>
               </div>
             ))}
           </div>

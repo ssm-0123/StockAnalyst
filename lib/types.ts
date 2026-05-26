@@ -186,6 +186,8 @@ export interface SmallCapResultsScorecard {
   averageCallAlphaPct: number;
 }
 
+export type LessonLifecycleStatus = "active" | "softened" | "contradicted" | "retired";
+
 export interface EvaluatedInsight {
   ticker: string;
   companyName: string;
@@ -206,6 +208,13 @@ export interface EvaluatedInsight {
   outcomeSummary: string;
   followThroughReview?: string;
   lesson: string;
+  lessonId?: string;
+  lessonStatus?: LessonLifecycleStatus;
+  lessonConfidence?: number;
+  lessonValidUntil?: string;
+  lessonConditions?: string[];
+  lessonSupersedes?: string[];
+  lessonUpdateReason?: string;
   confidenceLevel?: ConfidenceLevel;
 }
 

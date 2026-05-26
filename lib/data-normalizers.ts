@@ -6,6 +6,7 @@ import {
   EvaluatedInsight,
   AnalysisSuggestion,
   LegacySectorDecision,
+  LessonLifecycleStatus,
   MarketRegimeAssessment,
   MarketCode,
   ReasonBlock,
@@ -48,6 +49,7 @@ const RESULTS_VERDICTS = new Set<EvaluatedInsight["verdict"]>(["worked", "mixed"
 const RESULTS_STANCES = new Set<EvaluatedInsight["stance"]>(["promising", "caution", "small-cap"]);
 const PRICE_EVIDENCE = new Set<EvaluatedInsight["priceEvidence"]>(["snapshot", "fallback", "mixed"]);
 const DATA_QUALITY = new Set<EvaluatedInsight["dataQuality"]>(["verified", "limited", "stale-excluded"]);
+const LESSON_LIFECYCLE_STATUSES = new Set<LessonLifecycleStatus>(["active", "softened", "contradicted", "retired"]);
 const TREND_DIRECTIONS = new Set<TrendSummary["mostFrequentPromisingSector"]["trendDirection"]>(["up", "down", "flat"]);
 const MARKET_CYCLE_STAGES = new Set<MarketRegimeAssessment["stage"]>(["early", "mid", "late"]);
 
@@ -374,6 +376,10 @@ export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
 
 function normalizeEvaluatedInsight(value: unknown): EvaluatedInsight {
   const input = asRecord(value);
+  const lessonStatus =
+    typeof input.lessonStatus === "string" && LESSON_LIFECYCLE_STATUSES.has(input.lessonStatus as LessonLifecycleStatus)
+      ? (input.lessonStatus as LessonLifecycleStatus)
+      : undefined;
   return {
     ticker: asString(input.ticker, "N/A"),
     companyName: asString(input.companyName, "이름 미확인"),
@@ -406,6 +412,13 @@ function normalizeEvaluatedInsight(value: unknown): EvaluatedInsight {
     outcomeSummary: asString(input.outcomeSummary, "결과 요약 없음"),
     followThroughReview: asOptionalString(input.followThroughReview),
     lesson: asString(input.lesson, "교훈 없음"),
+    lessonId: asOptionalString(input.lessonId),
+    lessonStatus,
+    lessonConfidence: asOptionalNumber(input.lessonConfidence),
+    lessonValidUntil: asOptionalString(input.lessonValidUntil),
+    lessonConditions: asStringArray(input.lessonConditions),
+    lessonSupersedes: asStringArray(input.lessonSupersedes),
+    lessonUpdateReason: asOptionalString(input.lessonUpdateReason),
   };
 }
 

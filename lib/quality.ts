@@ -305,10 +305,27 @@ function fallbackBenchmarkLabel(item: EvaluatedInsight) {
   return `${item.sector} 관찰군`;
 }
 
+function fallbackLessonStatus(item: EvaluatedInsight): EvaluatedInsight["lessonStatus"] {
+  if (item.dataQuality === "stale-excluded" || item.priceEvidence === "fallback") return "softened";
+  return "active";
+}
+
+function fallbackLessonConfidence(item: EvaluatedInsight) {
+  if (item.dataQuality === "verified" && item.priceEvidence === "snapshot") {
+    if (Math.abs(item.callAlphaPct) >= 5) return 0.78;
+    return 0.68;
+  }
+
+  if (item.dataQuality === "limited" || item.priceEvidence === "mixed") return 0.52;
+  return 0.38;
+}
+
 export function enrichWeeklyResultsReport(report: WeeklyResultsReport): WeeklyResultsReport {
   const evaluatedInsights = report.evaluatedInsights.map((item) => ({
     ...item,
     benchmarkLabel: item.benchmarkLabel ?? fallbackBenchmarkLabel(item),
+    lessonStatus: item.lessonStatus ?? fallbackLessonStatus(item),
+    lessonConfidence: item.lessonConfidence ?? fallbackLessonConfidence(item),
     confidenceLevel: resultsConfidence(item),
   }));
 
