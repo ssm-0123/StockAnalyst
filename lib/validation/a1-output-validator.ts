@@ -14,6 +14,29 @@ export type A1ValidationResult = {
 };
 
 type JsonRecord = Record<string, unknown>;
+type CanonicalPriceSnapshot = {
+  priceDate?: string;
+  currentPrice?: number;
+  previousCloseChangePct?: number;
+  week52High?: number;
+  week52Low?: number;
+  currency?: string;
+  sourceNote?: string;
+};
+
+type CanonicalPriceEntry = {
+  ticker?: string;
+  market?: string;
+  source?: string;
+  snapshot?: CanonicalPriceSnapshot;
+};
+
+export type A1ValidationOptions = {
+  pricesSnapshot?: {
+    generatedAt?: string;
+    entries?: CanonicalPriceEntry[];
+  } | null;
+};
 
 const REQUIRED_MARKET_REGIME_FIELDS = [
   "stage",
@@ -39,12 +62,26 @@ function asString(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function normalizeTicker(value: unknown) {
+  const raw = asString(value).toUpperCase();
+  if (!raw) return "";
+  const alnum = raw.replace(/[^A-Z0-9]/g, "");
+  if (/^\d+$/.test(alnum)) return alnum.padStart(6, "0").slice(-6);
+  return alnum;
+}
+
+function priceSnapshotKey(market: unknown, ticker: unknown) {
+  const normalizedMarket = asString(market).toUpperCase();
+  const normalizedTicker = normalizeTicker(ticker);
+  return normalizedMarket && normalizedTicker ? `${normalizedMarket}:${normalizedTicker}` : "";
+}
+
 function hasText(value: unknown) {
   const text = asString(value).toLowerCase();
   return text.length > 0 && !WEAK_TEXT.has(text);
 }
 
-function hasFiniteNumber(value: unknown) {
+function hasFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
 }
 
@@ -93,6 +130,140 @@ function extractSourceTimestamp(sourceNote: unknown): Date | null {
   const note = asString(sourceNote);
   const generatedAt = note.match(/generatedAt=([^,;\s]+)/i)?.[1];
   return parseDate(generatedAt);
+}
+
+function buildCanonicalPriceMap(pricesSnapshot: A1ValidationOptions["pricesSnapshot"]) {
+  const entries = pricesSnapshot?.entries ?? [];
+  const map = new Map<string, CanonicalPriceEntry>();
+  for (const entry of entries) {
+    const key = priceSnapshotKey(entry.market, entry.ticker);
+    if (key && entry.snapshot) {
+      map.set(key, entry);
+    }
+  }
+  return map;
+}
+
+function numberDiffers(actual: unknown, expected: unknown, tolerance: number) {
+  if (!hasFiniteNumber(expected)) {
+    return false;
+  }
+
+  return !hasFiniteNumber(actual) || Math.abs(actual - expected) > tolerance;
+}
+
+function priceTolerance(expected: number) {
+  return Math.max(0.01, Math.abs(expected) * 0.0001);
+}
+
+function validateCanonicalPriceSnapshot(
+  candidate: JsonRecord,
+  path: string,
+  canonicalPrices: Map<string, CanonicalPriceEntry>,
+  pricesGeneratedAt: string | undefined,
+  issues: A1ValidationIssue[],
+) {
+  const key = priceSnapshotKey(candidate.market, candidate.ticker);
+  if (!key) {
+    return;
+  }
+
+  const canonical = canonicalPrices.get(key);
+  const expected = canonical?.snapshot;
+  if (!expected) {
+    return;
+  }
+
+  const actual = candidate.priceSnapshot;
+  if (!isRecord(actual)) {
+    issues.push(
+      issue(
+        "missing-canonical-price-snapshot",
+        "fail",
+        `${path}.priceSnapshot`,
+        "Candidate is present in prices_snapshot.json but Agent #1 did not embed the canonical priceSnapshot.",
+      ),
+    );
+    return;
+  }
+
+  if (expected.priceDate && asString(actual.priceDate) !== expected.priceDate) {
+    issues.push(
+      issue(
+        "canonical-price-date-mismatch",
+        "fail",
+        `${path}.priceSnapshot.priceDate`,
+        `Agent #1 priceDate must match prices_snapshot.json (${expected.priceDate}).`,
+      ),
+    );
+  }
+
+  if (numberDiffers(actual.currentPrice, expected.currentPrice, priceTolerance(expected.currentPrice ?? 0))) {
+    issues.push(
+      issue(
+        "canonical-current-price-mismatch",
+        "fail",
+        `${path}.priceSnapshot.currentPrice`,
+        `Agent #1 currentPrice must match prices_snapshot.json (${expected.currentPrice}).`,
+      ),
+    );
+  }
+
+  if (numberDiffers(actual.previousCloseChangePct, expected.previousCloseChangePct, 0.05)) {
+    issues.push(
+      issue(
+        "canonical-change-pct-mismatch",
+        "fail",
+        `${path}.priceSnapshot.previousCloseChangePct`,
+        `Agent #1 previousCloseChangePct must match prices_snapshot.json (${expected.previousCloseChangePct}).`,
+      ),
+    );
+  }
+
+  if (numberDiffers(actual.week52High, expected.week52High, priceTolerance(expected.week52High ?? 0))) {
+    issues.push(
+      issue(
+        "canonical-week52-high-mismatch",
+        "fail",
+        `${path}.priceSnapshot.week52High`,
+        `Agent #1 week52High must match prices_snapshot.json (${expected.week52High}).`,
+      ),
+    );
+  }
+
+  if (numberDiffers(actual.week52Low, expected.week52Low, priceTolerance(expected.week52Low ?? 0))) {
+    issues.push(
+      issue(
+        "canonical-week52-low-mismatch",
+        "fail",
+        `${path}.priceSnapshot.week52Low`,
+        `Agent #1 week52Low must match prices_snapshot.json (${expected.week52Low}).`,
+      ),
+    );
+  }
+
+  if (expected.currency && asString(actual.currency) !== expected.currency) {
+    issues.push(
+      issue(
+        "canonical-currency-mismatch",
+        "fail",
+        `${path}.priceSnapshot.currency`,
+        `Agent #1 currency must match prices_snapshot.json (${expected.currency}).`,
+      ),
+    );
+  }
+
+  const sourceNote = asString(actual.sourceNote);
+  if (pricesGeneratedAt && !sourceNote.includes(pricesGeneratedAt)) {
+    issues.push(
+      issue(
+        "canonical-price-source-generation-mismatch",
+        "fail",
+        `${path}.priceSnapshot.sourceNote`,
+        `Agent #1 sourceNote must reference prices_snapshot generatedAt=${pricesGeneratedAt}.`,
+      ),
+    );
+  }
 }
 
 function textIncludesAny(text: string, tokens: string[]) {
@@ -342,6 +513,8 @@ function validateSectors(
   input: JsonRecord,
   analysisDate: Date | null,
   referenceTimestamp: Date | null,
+  canonicalPrices: Map<string, CanonicalPriceEntry>,
+  pricesGeneratedAt: string | undefined,
   issues: A1ValidationIssue[],
 ) {
   for (const group of ["promisingSectors", "cautionSectors"] as const) {
@@ -369,6 +542,7 @@ function validateSectors(
           return;
         }
 
+        validateCanonicalPriceSnapshot(stockValue, stockPath, canonicalPrices, pricesGeneratedAt, issues);
         validateEvidenceArray(stockValue.evidence, `${stockPath}.evidence`, issues);
 
         if (stockValue.actionBias === "buy" || stockValue.isNew === true) {
@@ -383,6 +557,8 @@ function validateSmallCaps(
   input: JsonRecord,
   analysisDate: Date | null,
   referenceTimestamp: Date | null,
+  canonicalPrices: Map<string, CanonicalPriceEntry>,
+  pricesGeneratedAt: string | undefined,
   issues: A1ValidationIssue[],
 ) {
   asArray(input.smallCapIdeas).forEach((ideaValue, index) => {
@@ -391,12 +567,13 @@ function validateSmallCaps(
       return;
     }
 
+    validateCanonicalPriceSnapshot(ideaValue, ideaPath, canonicalPrices, pricesGeneratedAt, issues);
     validateEvidenceArray(ideaValue.evidence, `${ideaPath}.evidence`, issues);
     validateBuyCandidate(ideaValue, ideaPath, asString(ideaValue.theme), analysisDate, referenceTimestamp, issues);
   });
 }
 
-export function validateA1Output(value: unknown): A1ValidationResult {
+export function validateA1Output(value: unknown, options: A1ValidationOptions = {}): A1ValidationResult {
   const issues: A1ValidationIssue[] = [];
 
   if (!isRecord(value)) {
@@ -407,11 +584,13 @@ export function validateA1Output(value: unknown): A1ValidationResult {
 
   const analysisDate = parseDate(value.date) ?? parseDate(value.lastUpdated);
   const referenceTimestamp = parseDate(value.lastUpdated) ?? analysisDate;
+  const canonicalPrices = buildCanonicalPriceMap(options.pricesSnapshot);
+  const pricesGeneratedAt = options.pricesSnapshot?.generatedAt;
 
   validateMarketRegime(value, issues);
   validateEvidenceArray(value.evidence, "evidence", issues);
-  validateSectors(value, analysisDate, referenceTimestamp, issues);
-  validateSmallCaps(value, analysisDate, referenceTimestamp, issues);
+  validateSectors(value, analysisDate, referenceTimestamp, canonicalPrices, pricesGeneratedAt, issues);
+  validateSmallCaps(value, analysisDate, referenceTimestamp, canonicalPrices, pricesGeneratedAt, issues);
 
   return resultFromIssues(issues);
 }
