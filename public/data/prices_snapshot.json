@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T04:34:32.323Z",
+  "generatedAt": "2026-05-27T04:38:07.301Z",
   "analysisDate": "2026-05-27",
   "staleThresholdDays": 5,
   "mode": "normal",
@@ -21,10 +21,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 2281000,
+        "currentPrice": 2292000,
         "previousClose": 2052000,
-        "previousCloseChangeAmount": 229000,
-        "previousCloseChangePct": 11.16,
+        "previousCloseChangeAmount": 240000,
+        "previousCloseChangePct": 11.7,
         "priceSession": "intraday",
         "week52High": 2358000,
         "week52Low": 203000,
@@ -36,7 +36,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:29.809Z",
+      "fetchedAt": "2026-05-27T04:37:55.339Z",
       "issues": []
     },
     {
@@ -46,10 +46,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 314500,
+        "currentPrice": 315500,
         "previousClose": 299000,
-        "previousCloseChangeAmount": 15500,
-        "previousCloseChangePct": 5.18,
+        "previousCloseChangeAmount": 16500,
+        "previousCloseChangePct": 5.52,
         "priceSession": "intraday",
         "week52High": 323000,
         "week52Low": 54200,
@@ -61,7 +61,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:29.730Z",
+      "fetchedAt": "2026-05-27T04:37:54.702Z",
       "issues": []
     },
     {
@@ -71,10 +71,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 33800,
+        "currentPrice": 33750,
         "previousClose": 36000,
-        "previousCloseChangeAmount": -2200,
-        "previousCloseChangePct": -6.11,
+        "previousCloseChangeAmount": -2250,
+        "previousCloseChangePct": -6.25,
         "priceSession": "intraday",
         "week52High": 51000,
         "week52Low": 16065,
@@ -86,7 +86,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:28.728Z",
+      "fetchedAt": "2026-05-27T04:37:51.637Z",
       "issues": []
     },
     {
@@ -96,10 +96,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 135000,
+        "currentPrice": 136900,
         "previousClose": 134700,
-        "previousCloseChangeAmount": 300,
-        "previousCloseChangePct": 0.22,
+        "previousCloseChangeAmount": 2200,
+        "previousCloseChangePct": 1.63,
         "priceSession": "intraday",
         "week52High": 154800,
         "week52Low": 71500,
@@ -111,7 +111,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:28.751Z",
+      "fetchedAt": "2026-05-27T04:37:51.855Z",
       "issues": []
     },
     {
@@ -121,10 +121,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 316000,
+        "currentPrice": 316500,
         "previousClose": 329000,
-        "previousCloseChangeAmount": -13000,
-        "previousCloseChangePct": -3.95,
+        "previousCloseChangeAmount": -12500,
+        "previousCloseChangePct": -3.8,
         "priceSession": "intraday",
         "week52High": 426000,
         "week52Low": 79800,
@@ -136,7 +136,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:28.436Z",
+      "fetchedAt": "2026-05-27T04:37:51.360Z",
       "issues": []
     },
     {
@@ -146,10 +146,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 205500,
+        "currentPrice": 206500,
         "previousClose": 214000,
-        "previousCloseChangeAmount": -8500,
-        "previousCloseChangePct": -3.97,
+        "previousCloseChangeAmount": -7500,
+        "previousCloseChangePct": -3.5,
         "priceSession": "intraday",
         "week52High": 282000,
         "week52Low": 136000,
@@ -161,7 +161,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:28.829Z",
+      "fetchedAt": "2026-05-27T04:37:52.195Z",
       "issues": []
     },
     {
@@ -171,10 +171,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 54300,
+        "currentPrice": 54200,
         "previousClose": 57500,
-        "previousCloseChangeAmount": -3200,
-        "previousCloseChangePct": -5.57,
+        "previousCloseChangeAmount": -3300,
+        "previousCloseChangePct": -5.74,
         "priceSession": "intraday",
         "week52High": 74000,
         "week52Low": 26050,
@@ -186,7 +186,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:28.489Z",
+      "fetchedAt": "2026-05-27T04:37:51.361Z",
       "issues": []
     },
     {
@@ -196,10 +196,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 165710,
+        "currentPrice": 166300,
         "previousClose": 162660,
-        "previousCloseChangeAmount": 3050,
-        "previousCloseChangePct": 1.88,
+        "previousCloseChangeAmount": 3640,
+        "previousCloseChangePct": 2.24,
         "priceSession": "intraday",
         "week52High": 170790,
         "week52Low": 30825,
@@ -211,7 +211,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:29.878Z",
+      "fetchedAt": "2026-05-27T04:37:55.695Z",
       "issues": []
     },
     {
@@ -236,7 +236,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.287Z",
+      "fetchedAt": "2026-05-27T04:38:02.378Z",
       "issues": []
     },
     {
@@ -246,10 +246,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 125300,
+        "currentPrice": 126200,
         "previousClose": 132800,
-        "previousCloseChangeAmount": -7500,
-        "previousCloseChangePct": -5.65,
+        "previousCloseChangeAmount": -6600,
+        "previousCloseChangePct": -4.97,
         "priceSession": "intraday",
         "week52High": 141000,
         "week52Low": 17720,
@@ -261,7 +261,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.671Z",
+      "fetchedAt": "2026-05-27T04:38:00.437Z",
       "issues": []
     },
     {
@@ -286,7 +286,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.118Z",
+      "fetchedAt": "2026-05-27T04:38:02.040Z",
       "issues": []
     },
     {
@@ -296,10 +296,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 735000,
+        "currentPrice": 741000,
         "previousClose": 745000,
-        "previousCloseChangeAmount": -10000,
-        "previousCloseChangePct": -1.34,
+        "previousCloseChangeAmount": -4000,
+        "previousCloseChangePct": -0.54,
         "priceSession": "intraday",
         "week52High": 765000,
         "week52Low": 370000,
@@ -311,7 +311,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:28.881Z",
+      "fetchedAt": "2026-05-27T04:37:52.492Z",
       "issues": []
     },
     {
@@ -336,7 +336,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.054Z",
+      "fetchedAt": "2026-05-27T04:38:01.695Z",
       "issues": []
     },
     {
@@ -346,10 +346,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 29837,
+        "currentPrice": 29845,
         "previousClose": 29670,
-        "previousCloseChangeAmount": 167,
-        "previousCloseChangePct": 0.56,
+        "previousCloseChangeAmount": 175,
+        "previousCloseChangePct": 0.59,
         "priceSession": "intraday",
         "week52High": 29925,
         "week52Low": 19400,
@@ -361,7 +361,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.962Z",
+      "fetchedAt": "2026-05-27T04:38:01.331Z",
       "issues": []
     },
     {
@@ -371,12 +371,12 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 50750,
+        "currentPrice": 50785,
         "previousClose": 49175,
-        "previousCloseChangeAmount": 1575,
-        "previousCloseChangePct": 3.2,
+        "previousCloseChangeAmount": 1610,
+        "previousCloseChangePct": 3.27,
         "priceSession": "intraday",
-        "week52High": 50750,
+        "week52High": 50785,
         "week52Low": 17010,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
@@ -386,7 +386,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.907Z",
+      "fetchedAt": "2026-05-27T04:38:00.981Z",
       "issues": []
     },
     {
@@ -411,7 +411,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.364Z",
+      "fetchedAt": "2026-05-27T04:38:02.731Z",
       "issues": []
     },
     {
@@ -421,10 +421,10 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 51295,
+        "currentPrice": 51465,
         "previousClose": 54565,
-        "previousCloseChangeAmount": -3270,
-        "previousCloseChangePct": -5.99,
+        "previousCloseChangeAmount": -3100,
+        "previousCloseChangePct": -5.68,
         "priceSession": "intraday",
         "week52High": 64630,
         "week52Low": 11650,
@@ -436,7 +436,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.804Z",
+      "fetchedAt": "2026-05-27T04:38:00.695Z",
       "issues": []
     },
     {
@@ -446,12 +446,12 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 104457,
+        "currentPrice": 104460,
         "previousClose": 104450,
-        "previousCloseChangeAmount": 7,
+        "previousCloseChangeAmount": 10,
         "previousCloseChangePct": 0.01,
         "priceSession": "intraday",
-        "week52High": 104457,
+        "week52High": 104460,
         "week52Low": 102905,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
@@ -461,7 +461,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.441Z",
+      "fetchedAt": "2026-05-27T04:38:03.094Z",
       "issues": []
     },
     {
@@ -484,7 +484,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:29.641Z",
+      "fetchedAt": "2026-05-27T04:37:54.438Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -510,7 +510,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.031Z",
+      "fetchedAt": "2026-05-27T04:37:56.640Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -536,7 +536,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.281Z",
+      "fetchedAt": "2026-05-27T04:37:57.780Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -562,7 +562,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.108Z",
+      "fetchedAt": "2026-05-27T04:37:57.420Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -588,7 +588,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.534Z",
+      "fetchedAt": "2026-05-27T04:38:03.459Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -614,7 +614,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:28.984Z",
+      "fetchedAt": "2026-05-27T04:37:52.919Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -640,7 +640,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.603Z",
+      "fetchedAt": "2026-05-27T04:38:03.792Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -666,7 +666,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.775Z",
+      "fetchedAt": "2026-05-27T04:38:04.921Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -692,7 +692,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:31.916Z",
+      "fetchedAt": "2026-05-27T04:38:05.235Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -718,7 +718,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:29.029Z",
+      "fetchedAt": "2026-05-27T04:37:53.258Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -744,7 +744,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:29.892Z",
+      "fetchedAt": "2026-05-27T04:37:55.994Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -770,7 +770,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.353Z",
+      "fetchedAt": "2026-05-27T04:37:58.858Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -796,7 +796,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:32.096Z",
+      "fetchedAt": "2026-05-27T04:38:06.284Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
@@ -822,7 +822,7 @@
       "staleDays": 1,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-27T04:34:30.599Z",
+      "fetchedAt": "2026-05-27T04:37:59.313Z",
       "issues": [
         "Yahoo fetch failed: HTTP 401",
         "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
