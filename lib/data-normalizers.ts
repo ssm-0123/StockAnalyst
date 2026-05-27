@@ -52,6 +52,11 @@ const DATA_QUALITY = new Set<EvaluatedInsight["dataQuality"]>(["verified", "limi
 const LESSON_LIFECYCLE_STATUSES = new Set<LessonLifecycleStatus>(["active", "softened", "contradicted", "retired"]);
 const TREND_DIRECTIONS = new Set<TrendSummary["mostFrequentPromisingSector"]["trendDirection"]>(["up", "down", "flat"]);
 const MARKET_CYCLE_STAGES = new Set<MarketRegimeAssessment["stage"]>(["early", "mid", "late"]);
+const PRICE_SESSIONS = new Set<NonNullable<StockPriceSnapshot["priceSession"]>>([
+  "previous_close",
+  "intraday",
+  "close",
+]);
 
 function isRecord(value: unknown): value is JsonRecord {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -107,7 +112,13 @@ function normalizePriceSnapshot(value: unknown): StockPriceSnapshot | undefined 
   const snapshot: StockPriceSnapshot = {
     priceDate: asString(input.priceDate, "업데이트 예정"),
     currentPrice: asOptionalNumber(input.currentPrice),
+    previousClose: asOptionalNumber(input.previousClose),
+    previousCloseChangeAmount: asOptionalNumber(input.previousCloseChangeAmount),
     previousCloseChangePct: asOptionalNumber(input.previousCloseChangePct),
+    priceSession:
+      typeof input.priceSession === "string" && PRICE_SESSIONS.has(input.priceSession as NonNullable<StockPriceSnapshot["priceSession"]>)
+        ? (input.priceSession as NonNullable<StockPriceSnapshot["priceSession"]>)
+        : undefined,
     week52High: asOptionalNumber(input.week52High),
     week52Low: asOptionalNumber(input.week52Low),
     currency: input.currency === "KRW" || input.currency === "USD" ? input.currency : undefined,
@@ -116,9 +127,12 @@ function normalizePriceSnapshot(value: unknown): StockPriceSnapshot | undefined 
 
   const hasAnyValue =
     snapshot.currentPrice != null ||
+    snapshot.previousClose != null ||
+    snapshot.previousCloseChangeAmount != null ||
     snapshot.previousCloseChangePct != null ||
     snapshot.week52High != null ||
     snapshot.week52Low != null ||
+    Boolean(snapshot.priceSession) ||
     Boolean(snapshot.sourceNote);
 
   return hasAnyValue ? snapshot : undefined;

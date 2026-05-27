@@ -50,7 +50,10 @@ export interface ValidationSummary {
 export interface StockPriceSnapshot {
   priceDate: string;
   currentPrice?: number;
+  previousClose?: number;
+  previousCloseChangeAmount?: number;
   previousCloseChangePct?: number;
+  priceSession?: "previous_close" | "intraday" | "close";
   week52High?: number;
   week52Low?: number;
   currency?: CurrencyCode;

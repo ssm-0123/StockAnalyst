@@ -17,7 +17,10 @@ type JsonRecord = Record<string, unknown>;
 type CanonicalPriceSnapshot = {
   priceDate?: string;
   currentPrice?: number;
+  previousClose?: number;
+  previousCloseChangeAmount?: number;
   previousCloseChangePct?: number;
+  priceSession?: string;
   week52High?: number;
   week52Low?: number;
   currency?: string;
@@ -209,6 +212,28 @@ function validateCanonicalPriceSnapshot(
     );
   }
 
+  if (numberDiffers(actual.previousClose, expected.previousClose, priceTolerance(expected.previousClose ?? 0))) {
+    issues.push(
+      issue(
+        "canonical-previous-close-mismatch",
+        "fail",
+        `${path}.priceSnapshot.previousClose`,
+        `Agent #1 previousClose must match prices_snapshot.json (${expected.previousClose}).`,
+      ),
+    );
+  }
+
+  if (numberDiffers(actual.previousCloseChangeAmount, expected.previousCloseChangeAmount, priceTolerance(expected.previousCloseChangeAmount ?? 0))) {
+    issues.push(
+      issue(
+        "canonical-change-amount-mismatch",
+        "fail",
+        `${path}.priceSnapshot.previousCloseChangeAmount`,
+        `Agent #1 previousCloseChangeAmount must match prices_snapshot.json (${expected.previousCloseChangeAmount}).`,
+      ),
+    );
+  }
+
   if (numberDiffers(actual.previousCloseChangePct, expected.previousCloseChangePct, 0.05)) {
     issues.push(
       issue(
@@ -216,6 +241,17 @@ function validateCanonicalPriceSnapshot(
         "fail",
         `${path}.priceSnapshot.previousCloseChangePct`,
         `Agent #1 previousCloseChangePct must match prices_snapshot.json (${expected.previousCloseChangePct}).`,
+      ),
+    );
+  }
+
+  if (expected.priceSession && asString(actual.priceSession) !== expected.priceSession) {
+    issues.push(
+      issue(
+        "canonical-price-session-mismatch",
+        "fail",
+        `${path}.priceSnapshot.priceSession`,
+        `Agent #1 priceSession must match prices_snapshot.json (${expected.priceSession}).`,
       ),
     );
   }
