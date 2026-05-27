@@ -1,16 +1,16 @@
 {
   "date": "2026-05-27",
   "lastUpdated": "2026-05-27T12:06:37+09:00",
-  "priceSnapshotGeneratedAt": "2026-05-27T02:58:28.360Z",
+  "priceSnapshotGeneratedAt": "2026-05-27T03:20:28.504Z",
   "priceSnapshotSummary": {
     "total": 32,
-    "fresh": 16,
+    "fresh": 32,
     "stale": 0,
-    "partial": 15,
+    "partial": 0,
     "missing": 0,
-    "invalid": 1,
-    "tradable": 31,
-    "noTrade": 1
+    "invalid": 0,
+    "tradable": 32,
+    "noTrade": 0
   },
   "marketTone": "AI/HBM 리더가 지수를 끌어올린 late risk-on이지만 신규 진입은 신고가 추격보다 조선/방산, 반도체 후공정 눌림, SaaS 실적 이벤트처럼 가격·촉매가 남은 후발 순환으로 제한합니다.",
   "marketRegime": {
@@ -73,7 +73,7 @@
             "week52High": 426000,
             "week52Low": 79800,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         },
         {
@@ -94,7 +94,7 @@
             "week52High": 74000,
             "week52Low": 26050,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         },
         {
@@ -110,12 +110,12 @@
           "positioningNote": "가격 정보가 일부 누락된 후보라 1차 소액 분할매수만 허용합니다.",
           "priceSnapshot": {
             "priceDate": "2026-05-27",
-            "currentPrice": 34600,
-            "previousCloseChangePct": -3.89,
-            "week52High": null,
-            "week52Low": null,
+            "currentPrice": 34500,
+            "previousCloseChangePct": -4.17,
+            "week52High": 51000,
+            "week52Low": 16065,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=일부 가격 필드 누락"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         }
       ]
@@ -149,12 +149,12 @@
           "positioningNote": "신규 진입은 1차 분할매수 가능, HD현대중공업 추격보다 우선합니다.",
           "priceSnapshot": {
             "priceDate": "2026-05-27",
-            "currentPrice": 132700,
-            "previousCloseChangePct": -1.48,
+            "currentPrice": 134700,
+            "previousCloseChangePct": 0,
             "week52High": 154800,
             "week52Low": 71500,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         },
         {
@@ -170,12 +170,12 @@
           "positioningNote": "눌림 시 1차 진입 후보이며 수주 확인 전에는 비중을 단계적으로만 늘립니다.",
           "priceSnapshot": {
             "priceDate": "2026-05-27",
-            "currentPrice": 208500,
-            "previousCloseChangePct": -2.57,
+            "currentPrice": 209000,
+            "previousCloseChangePct": -2.34,
             "week52High": 282000,
             "week52Low": 136000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         },
         {
@@ -191,12 +191,12 @@
           "positioningNote": "보유 유지 중심이며 신규 진입은 한화오션·현대로템보다 후순위입니다.",
           "priceSnapshot": {
             "priceDate": "2026-05-27",
-            "currentPrice": 726000,
-            "previousCloseChangePct": -2.55,
+            "currentPrice": 737000,
+            "previousCloseChangePct": -1.07,
             "week52High": 765000,
             "week52Low": 370000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         }
       ]
@@ -232,10 +232,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 179.08,
             "previousCloseChangePct": -0.55,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 280.74,
+            "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         },
         {
@@ -253,10 +253,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 230.92,
             "previousCloseChangePct": -0.47,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 469.44,
+            "week52Low": 185,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         },
         {
@@ -274,10 +274,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 240.49,
             "previousCloseChangePct": -1.74,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 421.48,
+            "week52Low": 224.13,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         }
       ]
@@ -313,12 +313,12 @@
           "positioningNote": "신규 매수 금지, 보유분은 일부 축소 또는 추격 중단이 우선입니다.",
           "priceSnapshot": {
             "priceDate": "2026-05-27",
-            "currentPrice": 320500,
-            "previousCloseChangePct": 7.19,
+            "currentPrice": 320000,
+            "previousCloseChangePct": 7.02,
             "week52High": 323000,
             "week52Low": 54200,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         },
         {
@@ -334,12 +334,12 @@
           "positioningNote": "보유자는 차익 관리, 신규 진입자는 후공정 눌림을 먼저 봅니다.",
           "priceSnapshot": {
             "priceDate": "2026-05-27",
-            "currentPrice": 2339000,
-            "previousCloseChangePct": 13.99,
+            "currentPrice": 2326000,
+            "previousCloseChangePct": 13.35,
             "week52High": 2358000,
             "week52Low": 203000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         },
         {
@@ -355,12 +355,12 @@
           "positioningNote": "신규 매수보다 보유 베타 축소, 재진입은 눌림 후 확인입니다.",
           "priceSnapshot": {
             "priceDate": "2026-05-27",
-            "currentPrice": 168820,
-            "previousCloseChangePct": 3.79,
+            "currentPrice": 168500,
+            "previousCloseChangePct": 3.59,
             "week52High": 170790,
             "week52Low": 30825,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
           }
         }
       ]
@@ -396,10 +396,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 214.86,
             "previousCloseChangePct": -0.22,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 236.54,
+            "week52Low": 129.16,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         },
         {
@@ -417,10 +417,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 503.89,
             "previousCloseChangePct": 7.78,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 503.89,
+            "week52Low": 107.67,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         },
         {
@@ -438,10 +438,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 422.01,
             "previousCloseChangePct": 1.9,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 442.36,
+            "week52Low": 226.18,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         }
       ]
@@ -477,10 +477,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 45.14,
             "previousCloseChangePct": -1.59,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 48.57,
+            "week52Low": 6.68,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         },
         {
@@ -498,10 +498,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 68.7,
             "previousCloseChangePct": 4.28,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 193.84,
+            "week52Low": 43.63,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         },
         {
@@ -519,10 +519,10 @@
             "priceDate": "2026-05-26",
             "currentPrice": 164.56,
             "previousCloseChangePct": 5.3,
-            "week52High": null,
-            "week52Low": null,
+            "week52High": 219.82,
+            "week52Low": 132.66,
             "currency": "USD",
-            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false|일부 가격 필드 누락"
+            "sourceNote": "Naver US/worldstock fallback snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z; issues=Yahoo fetch failed: HTTP 401|Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
           }
         }
       ]
@@ -740,7 +740,7 @@
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
       },
       "valuationNote": "저점 26,050원 대비 이미 크게 올랐지만, HBM 검사장비 수주가 확인되면 성장 스토리를 실적 레버리지로 연결할 여지가 남아 있습니다.",
       "liquidityNote": "중소형 장비주는 거래대금이 줄면 호가 공백이 커지므로 분할 주문과 54,000원 손절 기준을 먼저 정해야 합니다.",
@@ -770,12 +770,12 @@
       "followThroughNote": "전일 후보를 유지하되 급등 추격이 아니라 38,000원 회복과 거래대금 증가를 확인하는 조건부 매수입니다. 34,000원을 지키면 1~3주 후공정 순환 후보로 남깁니다.",
       "priceSnapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 34600,
-        "previousCloseChangePct": -3.89,
-        "week52High": null,
-        "week52Low": null,
+        "currentPrice": 34500,
+        "previousCloseChangePct": -4.17,
+        "week52High": 51000,
+        "week52Low": 16065,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=partial; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z; issues=일부 가격 필드 누락"
+        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
       },
       "valuationNote": "실적 레버리지는 수주 확인 전까지 넓은 범위지만, 대형 HBM 리더보다 기대가 덜 반영된 후발 옵션입니다.",
       "liquidityNote": "커버리지와 거래대금이 대형주보다 얕고 이번 가격 스냅샷도 일부 필드가 비어 있어 비중을 크게 싣기 어렵습니다.",
@@ -805,12 +805,12 @@
       "followThroughNote": "며칠째 강한 후보라 완전히 제외하지는 않지만, 추가 상승 여지보다 추격 리스크가 커졌습니다. 125,000원 부근 지지 또는 실적 확인이 나오기 전에는 후속 매수를 제한합니다.",
       "priceSnapshot": {
         "priceDate": "2026-05-27",
-        "currentPrice": 128050,
-        "previousCloseChangePct": -3.58,
+        "currentPrice": 128100,
+        "previousCloseChangePct": -3.54,
         "week52High": 141000,
         "week52Low": 17720,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T02:58:28.360Z"
+        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T03:20:28.504Z"
       },
       "valuationNote": "HBM 기판 성장 스토리는 유효하지만 가격이 기대를 먼저 반영해 안전마진은 얇습니다.",
       "liquidityNote": "거래대금이 늘 때는 탄력이 크지만 고점권에서는 체결 변동성과 차익실현 압력이 동시에 커집니다.",
