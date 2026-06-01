@@ -1,337 +1,369 @@
 {
-  "reportDate": "2026-06-01",
-  "lastUpdated": "2026-06-01T06:57:10+09:00",
+  "reportDate": "2026-06-02",
+  "lastUpdated": "2026-06-02T06:56:05+09:00",
   "evaluationWindow": {
-    "startDate": "2026-05-26",
-    "endDate": "2026-06-01",
-    "label": "2026년 5월 마지막 주~6월 1일"
+    "startDate": "2026-05-27",
+    "endDate": "2026-06-02",
+    "label": "2026년 6월 1주차"
   },
-  "overallVerdict": "대표본 7일은 충분했지만, 리더 모멘텀은 과소평가했고 중소형 확산은 과대평가했습니다.",
-  "summary": "2026-05-26부터 2026-06-01까지 날짜별 최신 대표본 7개를 사용했고, 외부 시세 없이 로컬 priceSnapshot 반복 관측만으로 평가했습니다. 전통 SaaS와 조선 리더는 기대가 낮았던 구간에서 실제 가격 반응이 확인됐지만, AMD와 SK하이닉스처럼 모멘텀이 살아 있던 리더·후발주는 과밀 경계가 너무 빨랐습니다. 중소형 후공정·PCB는 대형 HBM 강세 국면 판단 자체는 맞았지만 테크윙·에프에스티·심텍의 종목 follow-through가 부족해 실행 성과가 약했습니다.",
-  "benchmarkNote": "벤치마크는 외부 지수 조회 없이 같은 평가 기간 로컬 JSON의 시장·섹터 반복 관측 평균을 보수적으로 사용했습니다.",
+  "overallVerdict": "SaaS 재평가는 맞았지만 AI 리더 추격 경계와 KR 중소형 follow-through는 종목 선택이 갈렸습니다.",
+  "summary": "2026-05-27부터 2026-06-02까지 7개 날짜 대표본을 모두 확보했고, 같은 날짜 중복본은 가장 늦은 lastUpdated만 사용했습니다. 반복 가격 스냅샷이 있는 24개 종목 중 8개를 평가했으며, 전통 SaaS/데이터 구독주는 숫자로 확인된 반복매출 덕분에 초과성과가 컸습니다. 반면 AVGO caution은 이벤트 모멘텀을 과소평가했고, 심텍·테크윙 small-cap 반복 관찰은 지지선 훼손 뒤에도 늦게 약화되어 실패했습니다.",
+  "benchmarkNote": "외부 시세 없이 평가 기간 대표본의 priceSnapshot.currentPrice만 사용했고, US 관찰군 평균 +3.8%, KR 중소형 관찰군 -7.4%, US AI 반도체 관찰군 +6.1%를 보수적 비교 기준으로 삼았습니다.",
   "scorecard": {
     "evaluatedCount": 8,
-    "workedCount": 3,
-    "mixedCount": 2,
-    "failedCount": 3,
-    "averageCallAlphaPct": 0.2,
-    "bestCall": "NVDA 신규 추격 회피: -1.9%로 US AI 반도체 관찰군 대비 +7.4%p",
-    "weakestCall": "SK하이닉스 과밀 경계: +20.2% 상승을 놓쳐 KR HBM 대형주 관찰군 대비 -9.5%p"
+    "workedCount": 4,
+    "mixedCount": 0,
+    "failedCount": 4,
+    "averageCallAlphaPct": 2.2,
+    "bestCall": "FDS SaaS 평균회귀: +16.9%로 US 관찰군 평균 대비 +13.1%p",
+    "weakestCall": "심텍 small-cap 반복 관찰: -20.6%로 KR 중소형 관찰군 대비 -13.2%p"
   },
   "smallCapScorecard": {
     "evaluatedCount": 3,
-    "workedCount": 0,
-    "mixedCount": 2,
-    "failedCount": 1,
-    "averageCallAlphaPct": 0.6
+    "workedCount": 1,
+    "mixedCount": 0,
+    "failedCount": 2,
+    "averageCallAlphaPct": -1.2
   },
   "evaluatedInsights": [
+    {
+      "ticker": "FDS",
+      "companyName": "FactSet Research Systems",
+      "market": "US",
+      "sector": "전통 SaaS/데이터 구독 실적 확인주",
+      "stance": "promising",
+      "entryDate": "2026-05-27",
+      "evaluationDate": "2026-06-02",
+      "holdingPeriodDays": 6,
+      "thesis": "반복 데이터 구독 매출과 낮아진 소프트웨어 기대가 SaaS 평균회귀를 만들 수 있다는 아이디어였습니다.",
+      "priceReturnPct": 16.9,
+      "benchmarkReturnPct": 3.8,
+      "benchmarkLabel": "US 평가 관찰군 평균",
+      "callAlphaPct": 13.1,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "230.92달러에서 270.00달러로 올라 US 관찰군 평균을 크게 웃돌았습니다. 전환비용이 있는 데이터 구독주가 AI 잠식 공포 뒤 숫자 확인 구간에서 더 빠르게 리레이팅됐습니다.",
+      "lesson": "반복매출과 고객 전환비용이 실제 가격 반응으로 확인될 때는 싼 주식보다 방어 가능한 매출 품질을 우선해야 합니다.",
+      "lessonId": "US-FDS-data-subscription-quality-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.82,
+      "lessonValidUntil": "2026-06-16",
+      "lessonConditions": [
+        "FDS가 260달러 위에서 머물고 데이터 구독 갱신 둔화 문구가 없으면 SaaS 평균회귀 후보로 유지합니다.",
+        "260달러 이탈 또는 ASV·마진 둔화가 함께 확인되면 방어적 구독주 교훈을 철회합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "이번 기간 7회 반복 스냅샷에서 가장 큰 verified 알파가 확인되어 데이터 구독주 품질 교훈을 새로 활성화했습니다.",
+      "attribution": {
+        "category": "sector-selection",
+        "primaryCause": "낮아진 소프트웨어 기대와 확인 가능한 반복매출이 동시에 작동해 섹터 선택이 성과의 핵심 원인이었습니다.",
+        "whatToChange": "다음 A1은 SaaS 후보를 ARR·cRPO·구독 갱신 같은 숫자 확인 후보와 단순 저가 후보로 분리해 우선순위를 정합니다."
+      }
+    },
     {
       "ticker": "CRM",
       "companyName": "Salesforce",
       "market": "US",
-      "sector": "전통 SaaS/데이터 구독",
+      "sector": "전통 SaaS/데이터 구독 실적 확인주",
       "stance": "promising",
-      "entryDate": "2026-05-26",
-      "evaluationDate": "2026-06-01",
+      "entryDate": "2026-05-27",
+      "evaluationDate": "2026-06-02",
       "holdingPeriodDays": 6,
-      "thesis": "실적과 Agentforce 수익화 확인이 낮아진 기대를 재평가시킬 수 있다는 SaaS 평균회귀 아이디어였습니다.",
-      "priceReturnPct": 6.1,
-      "benchmarkReturnPct": 2.9,
+      "thesis": "Agentforce·Data 360 ARR와 cRPO 확인이 AI 소프트웨어 공포를 평균회귀로 바꿀 수 있다는 아이디어였습니다.",
+      "priceReturnPct": 16.2,
+      "benchmarkReturnPct": 3.8,
       "benchmarkLabel": "US 평가 관찰군 평균",
-      "callAlphaPct": 3.2,
+      "callAlphaPct": 12.4,
       "verdict": "worked",
       "priceEvidence": "snapshot",
       "dataQuality": "verified",
-      "outcomeSummary": "180.07달러에서 191.10달러로 상승해 같은 기간 US 관찰군 평균을 웃돌았습니다. 갭 상승 뒤에는 185달러 방어 조건을 붙여야 하지만, 낮은 기대와 확인된 수주 지표를 함께 본 판단은 맞았습니다.",
-      "lesson": "성장 소프트웨어는 이야기보다 cRPO·ARR 같은 숫자가 확인될 때 가격 반응이 커지며, 확인 뒤 추격은 지지 가격을 분리해야 합니다.",
+      "outcomeSummary": "179.08달러에서 208.15달러로 상승해 200달러 방어 조건을 새로 볼 수 있는 구간까지 올라왔습니다. 실적 확인형 SaaS 판단은 맞았지만 갭 상승 뒤 추격은 지지선 분리가 필요합니다.",
+      "lesson": "품질 소프트웨어는 이야기보다 ARR·cRPO처럼 재현 가능한 숫자가 확인될 때만 가격과 가치의 간격이 좁아집니다.",
       "lessonId": "US-CRM-agentforce-monetization-proof-2026-05",
       "lessonStatus": "active",
-      "lessonConfidence": 0.68,
-      "lessonValidUntil": "2026-06-12",
+      "lessonConfidence": 0.8,
+      "lessonValidUntil": "2026-06-16",
       "lessonConditions": [
-        "CRM이 185달러 위에서 머물고 cRPO·AI ARR 논리가 유지되면 SaaS 평균회귀 교훈을 적용합니다.",
-        "185달러 이탈 또는 Agentforce 수익화 둔화 문구가 나오면 신규 추격 교훈은 철회합니다."
+        "CRM이 200달러 위에서 머물고 Agentforce·Data 360 ARR 논리가 유지되면 평균회귀 교훈을 적용합니다.",
+        "200달러 이탈 또는 cRPO 둔화 해석이 재부각되면 신규 추격은 중단합니다."
       ],
       "lessonSupersedes": [],
-      "lessonUpdateReason": "직전 mixed 교훈 이후 191달러 회복이 확인되어 실적 확인형 SaaS 판단을 강화했습니다."
+      "lessonUpdateReason": "직전 active 교훈 이후 208달러까지 follow-through가 확인되어 실적 확인형 SaaS 교훈을 강화했습니다.",
+      "attribution": {
+        "category": "event-risk",
+        "primaryCause": "실적 이벤트가 막연한 AI 소프트웨어 기대를 실제 ARR·cRPO 숫자로 바꾸며 가격 재평가를 만들었습니다.",
+        "whatToChange": "다음 A1은 이벤트 직후 상승 종목을 무조건 추격하지 말고 지지 가격과 수주 지표 재확인 조건을 함께 기록합니다."
+      }
     },
     {
-      "ticker": "329180",
-      "companyName": "HD현대중공업",
-      "market": "KR",
-      "sector": "조선/방산 수주주",
+      "ticker": "ADBE",
+      "companyName": "Adobe",
+      "market": "US",
+      "sector": "전통 SaaS/데이터 구독 실적 확인주",
       "stance": "promising",
-      "entryDate": "2026-05-26",
-      "evaluationDate": "2026-05-29",
-      "holdingPeriodDays": 3,
-      "thesis": "수주잔고와 가격 전가력이 확인된 조선 리더가 로테이션 안에서 먼저 기관 자금을 받을 수 있다는 판단이었습니다.",
-      "priceReturnPct": 3.5,
-      "benchmarkReturnPct": -0.4,
-      "benchmarkLabel": "KR 평가 관찰군 평균",
-      "callAlphaPct": 3.9,
+      "entryDate": "2026-05-27",
+      "evaluationDate": "2026-06-02",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 잠식 우려가 가격에 남아 있는 고품질 소프트웨어가 SaaS 순환의 후발 재평가를 받을 수 있다는 아이디어였습니다.",
+      "priceReturnPct": 13.6,
+      "benchmarkReturnPct": 3.8,
+      "benchmarkLabel": "US 평가 관찰군 평균",
+      "callAlphaPct": 9.8,
       "verdict": "worked",
       "priceEvidence": "snapshot",
       "dataQuality": "verified",
-      "outcomeSummary": "680,000원에서 704,000원으로 상승했고 KR 관찰군 평균이 약보합인 구간에서 상대 알파가 확인됐습니다. 5월 29일 이후 대표본에서는 빠졌으므로 추격보다 680,000원 방어 조건을 다시 확인해야 합니다.",
-      "lesson": "사이클주는 싼 가격보다 수주 가시성과 리더 프리미엄이 가격으로 재확인될 때만 눌림 매수가 보상됩니다.",
-      "lessonId": "KR-329180-shipbuilding-leader-quality-2026-05",
+      "outcomeSummary": "240.49달러에서 273.25달러로 올랐고, CRM 확인 뒤 소프트웨어 후발주로 자금이 넓어지는 흐름이 확인됐습니다. 다만 ADBE 자체의 AI 수익화 숫자는 아직 다음 실적 확인이 남아 있습니다.",
+      "lesson": "좋은 브랜드도 낮은 가격만으로 충분하지 않으며, 후발 재평가는 섹터 순환과 자체 수익화 확인 조건을 함께 둬야 합니다.",
+      "lessonId": "US-ADBE-ai-monetization-follow-through-2026-06",
       "lessonStatus": "active",
-      "lessonConfidence": 0.7,
-      "lessonValidUntil": "2026-06-15",
+      "lessonConfidence": 0.74,
+      "lessonValidUntil": "2026-06-16",
       "lessonConditions": [
-        "680,000원 위에서 수주 뉴스나 기관 수급이 유지되면 리더 중심 교훈을 적용합니다.",
-        "680,000원 이탈 또는 동종 조선주 대비 상대강도 훼손이 나오면 리더 프리미엄을 낮춥니다."
+        "ADBE가 260달러 위에서 머물고 6월 실적 전 AI 수익화 기대가 유지되면 후발 SaaS 후보로 둡니다.",
+        "260달러 이탈 또는 AI 기능이 비용 부담으로 해석되면 낮은 가격 교훈을 약화합니다."
       ],
-      "lessonSupersedes": [
-        "KR-329180-shipbuilding-leader-premium-2026-05"
-      ],
-      "lessonUpdateReason": "직전 리더 프리미엄 교훈과 같은 방향이며, 이번 주에도 KR 관찰군 대비 방어가 확인됐습니다."
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "반복 스냅샷 가격 성과는 강했지만 자체 수익화 증거는 아직 이벤트 전이라 신뢰도를 CRM·FDS보다 낮게 두었습니다.",
+      "attribution": {
+        "category": "timing",
+        "primaryCause": "CRM 실적 확인 뒤 소프트웨어 후발주로 자금이 이동한 타이밍을 포착한 점이 성과를 만들었습니다.",
+        "whatToChange": "다음 A1은 후발 재평가 후보를 넣을 때 자체 실적 확인일과 지지 가격을 함께 기록해 이벤트 전후 판단을 분리합니다."
+      }
     },
     {
-      "ticker": "NVDA",
-      "companyName": "NVIDIA",
+      "ticker": "AVGO",
+      "companyName": "Broadcom",
       "market": "US",
-      "sector": "AI 반도체/네트워킹",
+      "sector": "AI 반도체/네트워킹 신고가권 추격",
       "stance": "caution",
-      "entryDate": "2026-05-26",
-      "evaluationDate": "2026-06-01",
+      "entryDate": "2026-05-27",
+      "evaluationDate": "2026-06-02",
       "holdingPeriodDays": 6,
-      "thesis": "기록적인 실적에도 이벤트 후 상대강도가 약해 220달러 회복 전 신규 추격을 피하자는 콜이었습니다.",
-      "priceReturnPct": -1.9,
-      "benchmarkReturnPct": 5.5,
+      "thesis": "AI 네트워킹 기대가 신고가권에 선반영되어 신규 추격 손익비가 좁다는 caution 아이디어였습니다.",
+      "priceReturnPct": 12.5,
+      "benchmarkReturnPct": 6.1,
       "benchmarkLabel": "US AI 반도체 관찰군 평균",
-      "callAlphaPct": 7.4,
-      "verdict": "worked",
-      "priceEvidence": "snapshot",
-      "dataQuality": "verified",
-      "outcomeSummary": "215.33달러에서 211.14달러로 밀려 AMD·AVGO가 끌어올린 AI 반도체 관찰군 평균을 크게 밑돌았습니다. 품질주 보유와 신규 추격을 분리하자는 판단은 꼬리위험 관리 측면에서 유효했습니다.",
-      "lesson": "최고 품질 리더도 이벤트 후 상대강도가 피어보다 약하면 보유와 신규 추격을 분리하고, 220달러 회복 전에는 가격 규율을 우선해야 합니다.",
-      "lessonId": "US-NVDA-relative-strength-caution-2026-05",
-      "lessonStatus": "active",
-      "lessonConfidence": 0.8,
-      "lessonValidUntil": "2026-06-15",
-      "lessonConditions": [
-        "220달러 회복 전에는 신규 추격보다 보유 관찰로 제한합니다.",
-        "236달러 돌파와 AMD·AVGO 대비 상대강도 회복이 동시에 나오면 caution 교훈을 완화합니다."
-      ],
-      "lessonSupersedes": [
-        "US-NVDA-ai-leader-crowding-discipline-2026-05"
-      ],
-      "lessonUpdateReason": "직전 active 교훈과 일치하며, 이번 주에도 피어 대비 약한 상대성과가 반복 확인됐습니다."
-    },
-    {
-      "ticker": "AMD",
-      "companyName": "Advanced Micro Devices",
-      "market": "US",
-      "sector": "AI 반도체/네트워킹",
-      "stance": "caution",
-      "entryDate": "2026-05-26",
-      "evaluationDate": "2026-06-01",
-      "holdingPeriodDays": 6,
-      "thesis": "52주 고점 근처의 후발 AI 반도체 숏커버가 crowded trade라 신규 추격을 경계하자는 판단이었습니다.",
-      "priceReturnPct": 10.4,
-      "benchmarkReturnPct": 5.5,
-      "benchmarkLabel": "US AI 반도체 관찰군 평균",
-      "callAlphaPct": -4.9,
+      "callAlphaPct": -6.4,
       "verdict": "failed",
       "priceEvidence": "snapshot",
       "dataQuality": "verified",
-      "outcomeSummary": "467.51달러에서 516.10달러로 상승해 AI 반도체 관찰군 평균을 웃돌았습니다. 과열 경고는 맞았을 수 있지만 500달러 위 숏커버와 breadth 확산을 먼저 인정하지 못해 caution 실행은 실패했습니다.",
-      "lesson": "후발 AI 반도체는 검증 부족만 보지 말고 가격이 신고가권에서 버티면 변동성 자체가 옵션성 모멘텀으로 바뀌는지 먼저 확인해야 합니다.",
-      "lessonId": "US-AMD-catchup-momentum-risk-2026-05",
-      "lessonStatus": "active",
+      "outcomeSummary": "422.01달러에서 474.79달러로 올라 AI 반도체 관찰군 평균보다도 강했습니다. caution은 숏콜이 아니라 추격 제한이었지만, 실적 이벤트와 ASIC 모멘텀의 비대칭성을 과소평가했습니다.",
+      "lesson": "리더가 신고가권에 있어도 실적 이벤트와 구조적 수요가 같이 있으면 과열보다 모멘텀 지속 가능성을 먼저 검증해야 합니다.",
+      "lessonId": "US-AVGO-ai-asic-event-convexity-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.76,
+      "lessonValidUntil": "2026-06-09",
+      "lessonConditions": [
+        "AVGO가 480달러 위에 안착하고 AI 매출 가이던스가 상향되면 단순 신고가권 caution을 철회합니다.",
+        "460달러 이탈 또는 실적 후 가이던스 실망이 나오면 이벤트 선반영 경계를 다시 적용합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "이번 verified 가격 결과가 신고가권 추격 경계 논리를 직접 반박해 caution 교훈을 contradicted로 표시했습니다.",
+      "attribution": {
+        "category": "event-risk",
+        "primaryCause": "실적 전 AI ASIC 기대와 리더 모멘텀이 tail upside를 만들며 과열 경계보다 강하게 작동했습니다.",
+        "whatToChange": "다음 A1은 caution 종목도 이벤트 전 리더·후발·단순 과열을 분리하고, 상방 무효화 가격을 명시합니다."
+      }
+    },
+    {
+      "ticker": "VST",
+      "companyName": "Vistra",
+      "market": "US",
+      "sector": "전력 인프라 품질주",
+      "stance": "promising",
+      "entryDate": "2026-05-29",
+      "evaluationDate": "2026-06-02",
+      "holdingPeriodDays": 4,
+      "thesis": "AI 전력 수요 스토리 안에서 VST가 고점 대비 할인과 품질주 재진입 여지를 동시에 가졌다는 아이디어였습니다.",
+      "priceReturnPct": -3.9,
+      "benchmarkReturnPct": 3.8,
+      "benchmarkLabel": "US 평가 관찰군 평균",
+      "callAlphaPct": -7.7,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "160.69달러에서 154.50달러로 하락해 US 관찰군 평균을 크게 밑돌았습니다. 장기 전력 수요 스토리는 남아도 155달러 이탈 위험이 드러난 구간에서는 fragile한 고베타 노출로 봐야 했습니다.",
+      "lesson": "구조적 성장 스토리라도 가격이 핵심 지지선을 잃으면 평균회귀가 아니라 포지션 축소 압력으로 해석해야 합니다.",
+      "lessonId": "US-VST-power-quality-support-break-2026-06",
+      "lessonStatus": "contradicted",
       "lessonConfidence": 0.72,
-      "lessonValidUntil": "2026-06-10",
+      "lessonValidUntil": "2026-06-16",
       "lessonConditions": [
-        "AMD가 500달러 위를 지키면 과밀 경고보다 모멘텀 지속 가능성을 먼저 반영합니다.",
-        "500달러 이탈 또는 527달러 돌파 실패 뒤 거래대금 감소가 나오면 caution을 다시 강화합니다."
+        "VST가 160달러를 회복하고 전력주 관찰군 대비 상대강도가 돌아오면 품질주 재진입을 다시 검토합니다.",
+        "150달러 이탈 또는 고베타 전력주 동반 약세가 이어지면 AI 전력 수요 스토리를 신규 매수 근거로 쓰지 않습니다."
       ],
-      "lessonSupersedes": [
-        "US-AMD-ai-breadth-short-cover-risk-2026-05"
-      ],
-      "lessonUpdateReason": "직전 실패 교훈과 같은 방향으로, 신고가권 숏커버를 과소평가한 문제가 반복됐습니다."
-    },
-    {
-      "ticker": "000660",
-      "companyName": "SK하이닉스",
-      "market": "KR",
-      "sector": "HBM 대형주",
-      "stance": "caution",
-      "entryDate": "2026-05-26",
-      "evaluationDate": "2026-06-01",
-      "holdingPeriodDays": 6,
-      "thesis": "HBM 리더십은 인정하지만 52주 고점 근처라 신규 추격 손익비가 낮다는 과밀 경계 콜이었습니다.",
-      "priceReturnPct": 20.2,
-      "benchmarkReturnPct": 10.7,
-      "benchmarkLabel": "KR HBM 대형주 관찰군 평균",
-      "callAlphaPct": -9.5,
-      "verdict": "failed",
-      "priceEvidence": "snapshot",
-      "dataQuality": "verified",
-      "outcomeSummary": "1,941,000원에서 2,333,000원으로 급등해 HBM 대형주 관찰군 평균도 웃돌았습니다. 과밀이라는 말만으로 리더 추세를 낮춘 판단은 틀렸고, 5월 30일부터 promising으로 바꾼 대응은 늦었습니다.",
-      "lesson": "진짜 리더의 가격 추세와 수급이 살아 있을 때는 과밀만으로 매도 논리를 세우지 말고, 먼저 추세 훼손 가격을 요구해야 합니다.",
-      "lessonId": "KR-000660-hbm-leader-crowding-2026-05",
-      "lessonStatus": "active",
-      "lessonConfidence": 0.82,
-      "lessonValidUntil": "2026-06-15",
-      "lessonConditions": [
-        "2,250,000원 위에서는 HBM 리더 보유 논리를 유지하고 신규 caution을 낮춥니다.",
-        "2,250,000원 이탈과 삼성전자·KODEX 반도체 동반 약세가 나오면 과밀 경계를 되살립니다."
-      ],
-      "lessonSupersedes": [
-        "KR-000660-hbm-leader-crowding-risk-2026-05"
-      ],
-      "lessonUpdateReason": "직전 실패 교훈이 다시 확인됐고, 과밀 경계보다 리더 추세 훼손 조건이 먼저라는 결론이 강화됐습니다."
-    },
-    {
-      "ticker": "089030",
-      "companyName": "테크윙",
-      "market": "KR",
-      "sector": "반도체 테스트 장비",
-      "stance": "small-cap",
-      "entryDate": "2026-05-26",
-      "evaluationDate": "2026-06-01",
-      "holdingPeriodDays": 6,
-      "thesis": "HBM 검사 병목이 대형 메모리보다 후공정 장비 알파를 만들 수 있다는 중소형 follow-through 아이디어였습니다.",
-      "priceReturnPct": -7.2,
-      "benchmarkReturnPct": -10.3,
-      "benchmarkLabel": "KR 중소형 반도체 관찰군 평균",
-      "callAlphaPct": 3.1,
-      "verdict": "mixed",
-      "priceEvidence": "snapshot",
-      "dataQuality": "verified",
-      "outcomeSummary": "53,700원에서 49,850원으로 하락했지만, KR 중소형 반도체 관찰군 평균보다는 덜 빠졌습니다. 절대 성과는 실패였고 상대 방어만 확인된 제한적 mixed라 54,000원 회복 전 매수 후보로 쓰면 안 됩니다.",
-      "followThroughReview": "며칠째 추적했지만 54,000원 방어와 60,000원 위 거래대금 조건이 끝내 확인되지 않아 follow-through 판단은 약했습니다.",
-      "lesson": "중소형 장비주는 52주 고점 대비 할인보다 지지선 회복과 거래대금이 먼저이며, 상대 방어만으로 성장 옵션을 크게 보면 안 됩니다.",
-      "lessonId": "KR-089030-hbm-smallcap-followthrough-2026-05",
-      "lessonStatus": "softened",
-      "lessonConfidence": 0.66,
-      "lessonValidUntil": "2026-06-10",
-      "lessonConditions": [
-        "54,000원 회복 전에는 small-cap 매수 후보가 아니라 관찰 후보로만 둡니다.",
-        "60,000원 위 거래대금 증가와 HBM 장비 동반 반등이 나오면 교훈을 다시 강화합니다."
-      ],
-      "lessonSupersedes": [
-        "KR-089030-hbm-test-equipment-price-confirmation-2026-05"
-      ],
-      "lessonUpdateReason": "직전 failed 교훈 대비 상대 성과는 조금 나아졌지만, 절대 가격 follow-through가 없어 조건부로만 완화했습니다."
-    },
-    {
-      "ticker": "036810",
-      "companyName": "에프에스티",
-      "market": "KR",
-      "sector": "반도체 공정 소재/장비",
-      "stance": "small-cap",
-      "entryDate": "2026-05-26",
-      "evaluationDate": "2026-06-01",
-      "holdingPeriodDays": 6,
-      "thesis": "HBM·첨단공정 투자가 소재·장비 후발주로 확산될 때 덜 crowded한 재평가가 가능하다는 아이디어였습니다.",
-      "priceReturnPct": -15.6,
-      "benchmarkReturnPct": -10.3,
-      "benchmarkLabel": "KR 중소형 반도체 관찰군 평균",
-      "callAlphaPct": -5.3,
-      "verdict": "failed",
-      "priceEvidence": "snapshot",
-      "dataQuality": "verified",
-      "outcomeSummary": "36,150원에서 30,500원으로 하락해 KR 중소형 반도체 관찰군 평균보다도 부진했습니다. 34,000원 회복 조건을 지키지 못했는데도 반복 관찰을 오래 끌어 실행 품질이 약했습니다.",
-      "followThroughReview": "초기 38,000원 안착 조건은 한 번도 충족되지 않았고, 34,000원 회복 실패 뒤에는 매수 후보에서 더 빨리 제외했어야 합니다.",
-      "lesson": "기술 옵션이 있어도 지지선과 상대강도가 동시에 무너지면 싼 후발주가 아니라 검증되지 않은 가치 함정으로 낮춰야 합니다.",
-      "lessonId": "KR-036810-hbm-smallcap-support-break-2026-05",
-      "lessonStatus": "active",
-      "lessonConfidence": 0.78,
-      "lessonValidUntil": "2026-06-10",
-      "lessonConditions": [
-        "34,000원 회복 전에는 후공정 소재·장비 매수 후보에서 제외합니다.",
-        "34,000원 회복과 거래대금 증가, 테크윙·심텍 동반 반등이 나오면 관찰 후보로만 복귀시킵니다."
-      ],
-      "lessonSupersedes": [
-        "KR-036810-hbm-equipment-relative-strength-2026-05"
-      ],
-      "lessonUpdateReason": "직전 failed 교훈과 같은 방향으로 지지선 훼손과 상대강도 부재가 반복 확인됐습니다."
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "가격 지지선이 훼손되며 전력 인프라 재진입 교훈이 이번 기간 결과와 충돌했습니다.",
+      "attribution": {
+        "category": "market-regime",
+        "primaryCause": "시장 자금이 전력 고베타보다 실적 확인 SaaS로 이동해 장기 테마보다 단기 상대강도가 약했습니다.",
+        "whatToChange": "다음 A1은 구조적 테마를 재진입할 때 지지선 회복과 같은 기간 리더십 회복을 모두 확인합니다."
+      }
     },
     {
       "ticker": "222800",
       "companyName": "심텍",
       "market": "KR",
-      "sector": "반도체 PCB",
+      "sector": "PCB/반도체 기판",
       "stance": "small-cap",
       "entryDate": "2026-05-27",
-      "evaluationDate": "2026-06-01",
-      "holdingPeriodDays": 5,
-      "thesis": "HBM·고성능 기판 수요 기대는 남아 있지만 125,000원 회복 전에는 관찰이 우선이라는 중소형 PCB 아이디어였습니다.",
-      "priceReturnPct": -6.4,
-      "benchmarkReturnPct": -10.3,
-      "benchmarkLabel": "KR 중소형 반도체 관찰군 평균",
-      "callAlphaPct": 3.9,
-      "verdict": "mixed",
+      "evaluationDate": "2026-06-02",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 서버 PCB 병목과 52주 고점 대비 여지를 보되, 125,000원 지지 확인 전에는 추격을 제한한다는 중소형 아이디어였습니다.",
+      "priceReturnPct": -20.6,
+      "benchmarkReturnPct": -7.4,
+      "benchmarkLabel": "KR 중소형 관찰군 평균",
+      "callAlphaPct": -13.2,
+      "verdict": "failed",
       "priceEvidence": "snapshot",
       "dataQuality": "verified",
-      "outcomeSummary": "126,200원에서 118,100원으로 하락했지만, KR 중소형 반도체 관찰군 평균보다는 덜 부진했습니다. 125,000원 회복이 없어서 매수 콜은 아니었고, 관찰 유지 판단만 부분적으로 맞았습니다.",
-      "followThroughReview": "며칠째 회복 조건을 확인했지만 125,000원 회복과 거래대금 증가가 나오지 않아 병목 스토리를 적극 매수로 올릴 근거는 부족했습니다.",
-      "lesson": "중소형 기판주는 병목 스토리보다 지지선과 거래대금이 먼저이며, 회복 조건 없는 상대 방어는 관찰 등급에만 쓸 수 있습니다.",
-      "lessonId": "KR-222800-hbm-substrate-follow-through-2026-05",
-      "lessonStatus": "softened",
-      "lessonConfidence": 0.64,
-      "lessonValidUntil": "2026-06-10",
+      "outcomeSummary": "126,200원에서 100,200원으로 급락해 KR 중소형 관찰군보다 훨씬 약했습니다. 125,000원 회복 조건을 반복해서 충족하지 못한 뒤에도 small-cap 관찰을 오래 유지한 점이 손실 제한 실패로 이어졌습니다.",
+      "followThroughReview": "여러 날 추적했지만 125,000원 회복이 나오지 않았고, 112,000원마저 깨지며 follow-through 판단은 실패했습니다.",
+      "lesson": "고점 대비 할인은 안전마진이 아니며, 중소형주는 지지선 회복 전에는 병목 스토리보다 손실 제한을 먼저 적용해야 합니다.",
+      "lessonId": "KR-222800-pcb-support-discipline-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.82,
+      "lessonValidUntil": "2026-06-16",
       "lessonConditions": [
-        "125,000원 회복 전에는 매수 후보가 아니라 관찰 후보로만 유지합니다.",
-        "112,000원 이탈 시 PCB 병목 스토리보다 중소형 수급 약화를 우선합니다."
+        "심텍이 112,000원을 회복하고 거래대금이 늘기 전에는 small-cap Top 후보로 재진입시키지 않습니다.",
+        "125,000원 회복과 AI 서버 PCB 동반 강세가 동시에 나오면 기존 실패 교훈을 완화합니다."
+      ],
+      "lessonSupersedes": [
+        "KR-222800-hbm-substrate-follow-through-2026-05"
+      ],
+      "lessonUpdateReason": "직전 softened 교훈과 달리 이번에는 -20.6% 가격 훼손이 확인되어 follow-through 교훈을 반박했습니다.",
+      "attribution": {
+        "category": "risk-management",
+        "primaryCause": "진입 논리보다 지지선 훼손 신호가 먼저였는데도 반복 관찰을 늦게 약화한 점이 실패 원인이었습니다.",
+        "whatToChange": "다음 A1은 중소형 반복 후보가 핵심 지지선을 이탈하면 같은 날 small-cap 후보에서 제외하고 caution으로만 추적합니다."
+      }
+    },
+    {
+      "ticker": "089030",
+      "companyName": "테크윙",
+      "market": "KR",
+      "sector": "HBM 테스트 장비",
+      "stance": "small-cap",
+      "entryDate": "2026-05-27",
+      "evaluationDate": "2026-06-02",
+      "holdingPeriodDays": 6,
+      "thesis": "HBM 검사 병목과 52주 고점 대비 할인으로 대형 HBM 리더에서 장비주로 breadth가 넓어질 수 있다는 아이디어였습니다.",
+      "priceReturnPct": -9.2,
+      "benchmarkReturnPct": -7.4,
+      "benchmarkLabel": "KR 중소형 관찰군 평균",
+      "callAlphaPct": -1.8,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "54,200원에서 49,200원으로 하락했고 54,000원 회복 조건을 계속 충족하지 못했습니다. 상대 알파 손실은 심텍보다 작았지만, buy 성격의 small-cap 후보로 유지하기에는 가격 방향이 틀렸습니다.",
+      "followThroughReview": "며칠째 반복 관찰했지만 54,000원 회복과 거래대금 증가가 나오지 않아 후발 장비주 확산 신호가 확인되지 않았습니다.",
+      "lesson": "후발 장비주는 대형주 강세만으로 사지 말고, 핵심 지지선 회복과 거래대금 확인을 안전마진의 일부로 봐야 합니다.",
+      "lessonId": "KR-089030-hbm-test-followthrough-filter-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.7,
+      "lessonValidUntil": "2026-06-16",
+      "lessonConditions": [
+        "테크윙이 54,000원을 회복하고 60,000원 방향 거래대금이 붙기 전에는 small-cap 매수 후보로 올리지 않습니다.",
+        "49,000원 이탈이 이어지면 HBM 테스트 장비 할인 논리를 caution으로만 유지합니다."
+      ],
+      "lessonSupersedes": [
+        "KR-089030-hbm-smallcap-followthrough-2026-05"
+      ],
+      "lessonUpdateReason": "직전 softened 교훈 이후 가격 회복이 나오지 않아 후발 장비주 follow-through 교훈을 반박했습니다.",
+      "attribution": {
+        "category": "timing",
+        "primaryCause": "섹터 내 후발 확산을 기다리는 타이밍이 빨랐고, 지지선 회복 전 진입 후보 유지가 성과를 깎았습니다.",
+        "whatToChange": "다음 A1은 후발 장비주를 대형주 대체재로 쓰기 전에 1거래일 이상 지지선 회복을 확인합니다."
+      }
+    },
+    {
+      "ticker": "042700",
+      "companyName": "한미반도체",
+      "market": "KR",
+      "sector": "HBM 장비",
+      "stance": "small-cap",
+      "entryDate": "2026-05-30",
+      "evaluationDate": "2026-06-02",
+      "holdingPeriodDays": 3,
+      "thesis": "대형 HBM 리더가 유지되는 동안 280,000원 방어가 확인되면 장비주로 breadth가 넓어질 수 있다는 아이디어였습니다.",
+      "priceReturnPct": 3.9,
+      "benchmarkReturnPct": -7.4,
+      "benchmarkLabel": "KR 중소형 관찰군 평균",
+      "callAlphaPct": 11.3,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "282,000원에서 293,000원으로 상승해 KR 중소형 관찰군 약세와 달리 방어가 확인됐습니다. 280,000원 방어 조건을 붙인 점이 심텍·테크윙과 다른 결과를 만들었습니다.",
+      "followThroughReview": "3일 관찰 동안 강한 추세 추격은 아니지만 280,000원 방어와 293,000원 회복이 이어져 장비주 breadth 확인은 부분적으로 맞았습니다.",
+      "lesson": "후발 HBM 장비주는 가격 할인보다 명확한 방어선과 리더 섹터 유지가 동시에 있을 때만 소액 탐색 가치가 생깁니다.",
+      "lessonId": "KR-042700-hbm-equipment-support-breadth-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.78,
+      "lessonValidUntil": "2026-06-16",
+      "lessonConditions": [
+        "한미반도체가 280,000원을 지키고 300,000원 회복을 시도하면 HBM 장비 breadth 후보로 유지합니다.",
+        "280,000원 이탈 또는 대형 HBM 리더 동반 약세가 나오면 small-cap 교훈을 철회합니다."
       ],
       "lessonSupersedes": [],
-      "lessonUpdateReason": "직전 failed 교훈 대비 상대 방어는 개선됐지만, 절대 가격 회복 조건이 없어 교훈을 완화 수준에 둡니다."
+      "lessonUpdateReason": "같은 KR 중소형 안에서도 가격 방어 조건을 둔 후보가 확인되어 지지선 기반 선별 교훈을 활성화했습니다.",
+      "attribution": {
+        "category": "stock-selection",
+        "primaryCause": "섹터 전체보다 280,000원 방어가 가능한 장비주를 고른 종목 선택이 성과 원인이었습니다.",
+        "whatToChange": "다음 A1은 HBM 중소형을 한 묶음으로 보지 말고 지지선이 살아 있는 장비주와 훼손된 PCB·테스트 후보를 분리합니다."
+      }
     }
   ],
   "sectorReviews": [
     {
-      "sectorName": "전통 SaaS/데이터 구독",
+      "sectorName": "전통 SaaS/데이터 구독 실적 확인주",
       "market": "US",
       "priorView": "promising",
       "verdict": "worked",
-      "callAlphaPct": 3,
-      "detail": "CRM·ADBE·FDS 반복 관측 평균이 +5.9%로 US 관찰군 평균 +2.9%를 웃돌았습니다. 낮아진 기대에 실적 확인이 붙는 구간을 고른 판단은 맞았지만, 갭 상승 뒤에는 새 진입과 보유를 분리해야 합니다."
+      "callAlphaPct": 11.8,
+      "detail": "CRM·FDS·ADBE가 모두 US 관찰군 평균을 크게 웃돌아 낮아진 소프트웨어 기대와 실적 확인을 함께 본 섹터 판단은 맞았습니다. 다만 ADBE는 자체 수익화 증거가 아직 이벤트 전이라 다음 평가는 가격 추세보다 숫자 확인을 우선해야 합니다."
     },
     {
-      "sectorName": "KR HBM 대형주",
-      "market": "KR",
+      "sectorName": "AI 반도체/네트워킹 신고가권 추격",
+      "market": "US",
       "priorView": "caution",
       "verdict": "failed",
-      "callAlphaPct": -11.1,
-      "detail": "SK하이닉스·삼성전자·KODEX 반도체 평균이 +10.7%로 KR 관찰군 평균 -0.4%를 크게 웃돌았습니다. 국면 판단 자체가 틀렸고, 과밀 경계보다 리더 추세 훼손 가격을 먼저 요구했어야 합니다."
+      "callAlphaPct": -2.3,
+      "detail": "AVGO가 +12.5%로 강하게 치고 나가며 신고가권 추격 경계가 섹터 리더에는 맞지 않았습니다. 국면 판단 자체가 틀림: 실적 이벤트와 AI ASIC 모멘텀이 있는 리더는 과열보다 상방 비대칭이 더 컸습니다."
     },
     {
-      "sectorName": "KR 후공정/PCB 중소형",
+      "sectorName": "후공정/PCB 중소형 상대강도 훼손",
       "market": "KR",
-      "priorView": "promising",
-      "verdict": "failed",
-      "callAlphaPct": -9.9,
-      "detail": "대형 HBM 강세가 후공정으로 확산될 수 있다는 국면 판단은 맞았지만 종목 선택이 틀림. 테크윙·에프에스티·심텍은 지지선과 거래대금 조건을 충족하지 못해 섹터 평균이 -10.3%까지 밀렸습니다."
-    },
-    {
-      "sectorName": "US AI 반도체/네트워킹",
-      "market": "US",
       "priorView": "caution",
       "verdict": "mixed",
-      "callAlphaPct": -2.6,
-      "detail": "NVDA 신규 추격 회피는 맞았지만 AMD·AVGO가 강해 섹터 관찰군 평균은 +5.5%로 US 관찰군 평균을 웃돌았습니다. 꼬리위험 경계는 종목별 상대강도와 분리해야 했습니다."
+      "callAlphaPct": 1,
+      "detail": "심텍 급락을 caution으로 돌린 판단은 맞았지만 테크윙·에프에스티는 이미 많이 빠진 뒤라 섹터 전체 caution의 알파는 제한적이었습니다. 국면 판단은 맞았지만 종목 선택이 틀림: 지지선 훼손을 본 뒤에는 small-cap 후보를 즉시 제외했어야 합니다."
     },
     {
-      "sectorName": "조선/방산 수주주",
+      "sectorName": "전력 인프라 품질주",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "failed",
+      "callAlphaPct": -7.7,
+      "detail": "VST는 155달러 부근까지 밀렸고, 같은 기간 자금은 전력 고베타보다 SaaS 실적 확인주로 이동했습니다. 장기 AI 전력 수요 스토리를 단기 재진입 신호로 해석한 점이 약했습니다."
+    },
+    {
+      "sectorName": "조선/방산 KDDX 재진입",
       "market": "KR",
       "priorView": "promising",
-      "verdict": "worked",
-      "callAlphaPct": 2.1,
-      "detail": "HD현대중공업·한화오션·현대로템 평균은 +1.7%로 KR 관찰군 평균을 웃돌았습니다. 리더 중심 선택은 유효했지만, 5월 말 이후 대표본에서 빠졌으므로 다음 주에는 추격보다 눌림 조건을 확인해야 합니다."
+      "verdict": "mixed",
+      "callAlphaPct": -0.1,
+      "detail": "현대로템은 +3.1%로 방어했지만 한화오션과 HD현대중공업은 각각 -8%대, -7%대로 약했습니다. 수주 스토리는 유지됐지만 섹터 안에서도 리더·방산·조선 변동성을 나눠야 했습니다."
     }
   ],
   "processTakeaways": [
-    "반복 가격 관측은 충분했지만, 같은 섹터 안에서도 NVDA와 AMD처럼 상대강도 분화가 컸으므로 섹터 caution을 종목별 가격 조건으로 쪼개야 합니다.",
-    "중소형주는 가격 할인보다 지지선·거래대금·동반 확산을 우선해야 하며, 조건 불충족 종목은 다음 daily에서 빠르게 관찰 등급으로 낮춰야 합니다.",
-    "리더 모멘텀이 살아 있는 구간에서는 과밀·고점권이라는 정성 문구보다 추세 훼손 가격을 먼저 체크리스트에 넣어야 합니다."
+    "반복 스냅샷 2회 이상 후보만 평가하니 성과 귀인이 명확해졌고, 이번 결과는 숫자 확인형 SaaS와 지지선 훼손 중소형을 분리해야 한다는 점을 보여줬습니다.",
+    "신고가권 caution은 무조건 회피가 아니라 이벤트 상방 비대칭과 하방 무효화 가격을 함께 써야 하며, AVGO처럼 리더 모멘텀이 강한 종목은 별도 판정해야 합니다.",
+    "중소형주는 52주 고점 대비 할인보다 지지선 회복과 거래대금 follow-through가 먼저이며, 조건이 깨지면 같은 날 small-cap 후보에서 제외해야 합니다."
   ],
   "nextWeekFocus": [
-    "SK하이닉스는 2,250,000원 방어와 삼성전자·KODEX 반도체 동반 강세 여부를 HBM 대형주 판단의 1차 조건으로 둡니다.",
-    "테크윙 54,000원, 에프에스티 34,000원, 심텍 125,000원 회복 전에는 후공정 중소형을 매수 후보가 아니라 관찰 후보로만 유지합니다.",
-    "US AI 반도체는 NVDA 220달러 회복 여부와 AMD 500달러 방어 여부를 분리해, 품질 리더 경계와 후발 모멘텀 인정을 동시에 관리합니다."
+    "CRM 200달러, FDS 260달러, ADBE 260달러 방어와 ARR·cRPO·구독 갱신 확인을 같이 보며 SaaS 평균회귀를 추격이 아니라 지지선 확인형으로 관리합니다.",
+    "AVGO는 480달러 안착과 460달러 이탈, AMD는 527달러 돌파와 500달러 방어를 나눠 AI 반도체 caution을 리더 모멘텀과 후발 과열로 분리합니다.",
+    "KR 중소형은 한미반도체 280,000원 방어·300,000원 회복, 테크윙 54,000원 회복, 심텍 112,000원 회복 전까지 후보 복귀를 제한합니다."
   ]
 }
