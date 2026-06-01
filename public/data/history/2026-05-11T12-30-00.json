@@ -45,7 +45,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -66,7 +66,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -87,7 +87,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -126,7 +126,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -147,7 +147,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -168,7 +168,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -207,7 +207,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -228,7 +228,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -249,7 +249,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -290,7 +290,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -311,7 +311,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -332,7 +332,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -371,7 +371,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -392,7 +392,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -413,7 +413,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -452,7 +452,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -473,7 +473,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -494,7 +494,7 @@
             "week52High": null,
             "week52Low": null,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -518,7 +518,7 @@
         "week52High": null,
         "week52Low": null,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "실적 확인 전 멀티플 확장은 경계하지만 병목 프리미엄은 남아 있습니다.",
       "liquidityNote": "거래는 가능하지만 급등락일에는 호가 공백이 커져 분할 접근이 필요합니다.",
@@ -554,7 +554,7 @@
         "week52High": null,
         "week52Low": null,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "저점 대비 재평가는 진행됐지만 실적 턴어라운드 확인 시 추가 리레이팅 여지는 남습니다.",
       "liquidityNote": "코스닥 중형주로 거래대금은 충분하나 급등 뒤 변동성이 큽니다.",
@@ -590,7 +590,7 @@
         "week52High": null,
         "week52Low": null,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "고점 대비 여유는 있지만 실적 가시성이 대표주보다 약해 할인은 정당합니다.",
       "liquidityNote": "거래대금은 대형 장비주보다 얇아 분할 접근이 필요합니다.",
@@ -626,7 +626,7 @@
         "week52High": null,
         "week52Low": null,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, mode=normal, generatedAt=2026-05-11T03:07:01.201Z, 52주 고저가 누락으로 추격 판단 제한"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "성장 스토리는 크지만 현금흐름 검증이 약해 높은 할인율을 적용해야 합니다.",
       "liquidityNote": "미국 소형 성장주로 변동성과 갭 리스크가 커 포지션 크기를 낮춰야 합니다.",

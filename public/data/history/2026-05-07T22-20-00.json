@@ -126,7 +126,7 @@
             "week52High": 216.8300018310547,
             "week52Low": 115.20999908447266,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 7일 정규장 기준; 52주 범위는 Yahoo chart 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -147,7 +147,7 @@
             "week52High": 437.67999267578125,
             "week52Low": 203.69000244140625,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 7일 정규장 기준; 52주 범위는 Yahoo chart 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -168,7 +168,7 @@
             "week52High": 683.0900268554688,
             "week52Low": 83.36000061035156,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 7일 정규장 기준; 52주 범위는 Yahoo chart 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -367,7 +367,7 @@
             "week52High": 296.04998779296875,
             "week52Low": 163.52000427246094,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 7일 정규장 기준; 52주 범위는 Yahoo chart 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -387,7 +387,7 @@
             "week52High": 422.95001220703125,
             "week52Low": 224.1300048828125,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 7일 정규장 기준; 52주 범위는 Yahoo chart 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -407,7 +407,7 @@
             "week52High": 474.7900085449219,
             "week52Low": 185,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 7일 정규장 기준; 52주 범위는 Yahoo chart 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

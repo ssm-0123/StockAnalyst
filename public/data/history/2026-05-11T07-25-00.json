@@ -43,7 +43,7 @@
             "currentPrice": 284000,
             "previousCloseChangePct": 5.77,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -62,7 +62,7 @@
             "currentPrice": 1878000,
             "previousCloseChangePct": 11.39,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -81,7 +81,7 @@
             "currentPrice": 394500,
             "previousCloseChangePct": 1.15,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -118,7 +118,7 @@
             "currentPrice": 58600,
             "previousCloseChangePct": -1.18,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -137,7 +137,7 @@
             "currentPrice": 115400,
             "previousCloseChangePct": -0.35,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -156,7 +156,7 @@
             "currentPrice": 42600,
             "previousCloseChangePct": 0.95,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -193,7 +193,7 @@
             "currentPrice": 215.2,
             "previousCloseChangePct": 1.75,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -212,7 +212,7 @@
             "currentPrice": 430,
             "previousCloseChangePct": 4.23,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -231,7 +231,7 @@
             "currentPrice": 455.19,
             "previousCloseChangePct": 11.44,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -270,7 +270,7 @@
             "currentPrice": 220500,
             "previousCloseChangePct": -1.12,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -289,7 +289,7 @@
             "currentPrice": 679500,
             "previousCloseChangePct": 3.27,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -308,7 +308,7 @@
             "currentPrice": 130100,
             "previousCloseChangePct": 3.17,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -345,7 +345,7 @@
             "currentPrice": 223.61,
             "previousCloseChangePct": -0.17,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -364,7 +364,7 @@
             "currentPrice": 181.82,
             "previousCloseChangePct": -2.43,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -383,7 +383,7 @@
             "currentPrice": 253.04,
             "previousCloseChangePct": -1.35,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -420,7 +420,7 @@
             "currentPrice": 229.98,
             "previousCloseChangePct": -9.02,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -439,7 +439,7 @@
             "currentPrice": 73.33,
             "previousCloseChangePct": 0.3,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -458,7 +458,7 @@
             "currentPrice": 99.58,
             "previousCloseChangePct": -0.12,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -480,7 +480,7 @@
         "currentPrice": 58600,
         "previousCloseChangePct": -1.18,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "실적 확인 전 멀티플 확장은 경계하지만 병목 프리미엄은 남아 있습니다.",
       "liquidityNote": "거래는 가능하지만 급등락일에는 호가 공백이 커질 수 있습니다.",
@@ -513,7 +513,7 @@
         "currentPrice": 115400,
         "previousCloseChangePct": -0.35,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "저점 대비 재평가는 진행됐지만 실적 턴어라운드 확인 시 추가 리레이팅 여지는 남습니다.",
       "liquidityNote": "코스닥 중형주로 거래대금은 충분하나 급등 뒤 변동성이 큽니다.",
@@ -546,7 +546,7 @@
         "currentPrice": 42600,
         "previousCloseChangePct": 0.95,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch ; prices_snapshot source=smart-trading, health=partial, generatedAt=2026-05-11T02:59:59.569Z"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "고점 대비 여유는 있지만 실적 가시성이 대표주보다 약해 할인은 정당합니다.",
       "liquidityNote": "거래대금은 대형 장비주보다 얇아 분할 접근이 필요합니다.",

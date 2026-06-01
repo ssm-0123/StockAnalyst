@@ -45,7 +45,7 @@
             "week52High": 896.98,
             "week52Low": 311.02,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -66,7 +66,7 @@
             "week52High": 1181.95,
             "week52Low": 357.64,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -87,7 +87,7 @@
             "week52High": 727,
             "week52Low": 312.3,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -289,7 +289,7 @@
             "week52High": 119.21,
             "week52Low": 65.66,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -309,7 +309,7 @@
             "week52High": 76.39,
             "week52Low": 43.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 1일 정규장 종가 기준; 2026-05-04 07:41 KST 장전 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -329,7 +329,7 @@
             "week52High": 16.5,
             "week52Low": 9.48,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -367,7 +367,7 @@
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -387,7 +387,7 @@
             "week52High": 211.48,
             "week52Low": 81.24,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -407,7 +407,7 @@
             "week52High": 345.72,
             "week52Low": 134.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 기준 안정 확인값; 2026-05-04 07:41 KST 조회에서 일부 quote 지연으로 5일 이내 마지막 안정 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

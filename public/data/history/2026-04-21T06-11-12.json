@@ -42,7 +42,7 @@
             "week52High": 223000,
             "week52Low": 53700,
             "currency": "KRW",
-            "sourceNote": "Yahoo Finance 4월 21일 장중 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -60,7 +60,7 @@
             "week52High": 1173000,
             "week52Low": 171800,
             "currency": "KRW",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -78,7 +78,7 @@
             "week52High": 201000,
             "week52Low": 58200,
             "currency": "KRW",
-            "sourceNote": "Yahoo Finance 최신 장마감 페이지 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -114,7 +114,7 @@
             "week52High": 337.25,
             "week52Low": 226.34,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -132,7 +132,7 @@
             "week52High": 57.55,
             "week52Low": 36.49,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -150,7 +150,7 @@
             "week52High": 97.76,
             "week52Low": 63.4,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 최근 확인 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -186,7 +186,7 @@
             "week52High": 212.19,
             "week52Low": 95.04,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -204,7 +204,7 @@
             "week52High": 390.21,
             "week52Low": 145.84,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -220,7 +220,7 @@
             "currentPrice": 175.06,
             "previousCloseChangePct": -1.84,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준; 52주 범위 확인이 불완전해 숫자 필드를 일부 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -257,7 +257,7 @@
             "week52High": 76.39,
             "week52Low": 38.8,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 10일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -274,7 +274,7 @@
             "week52High": 119.21,
             "week52Low": 65.26,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 20일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -291,7 +291,7 @@
             "week52High": 16.5,
             "week52Low": 8.5,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 1일 최근 확인 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -326,7 +326,7 @@
             "week52High": 89500,
             "week52Low": 53800,
             "currency": "KRW",
-            "sourceNote": "Yahoo Finance 최신 장중 페이지 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -343,7 +343,7 @@
             "week52High": 428500,
             "week52Low": 181500,
             "currency": "KRW",
-            "sourceNote": "Yahoo Finance 2월 13일 최근 확인 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -356,7 +356,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-21",
             "currency": "KRW",
-            "sourceNote": "Yahoo Finance 한국 심볼 최신 스냅샷에서 가격 수치를 안정적으로 확인하지 못해 숫자 필드를 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -391,7 +391,7 @@
             "week52High": 176.41,
             "week52Low": 101.19,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -408,7 +408,7 @@
             "week52High": 214.71,
             "week52Low": 132.04,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 1일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -425,7 +425,7 @@
             "week52High": 67.45,
             "week52Low": 34.78,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 1일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -561,7 +561,7 @@
         "week52High": 75800,
         "week52Low": 32100,
         "currency": "KRW",
-        "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+        "sourceNote": "가격 출처: Yahoo Finance"
       },
       "valuationNote": "고점 대비 할인 폭이 아직 크고, 자율주행 노출을 감안한 재평가 여지가 남아 있다.",
       "liquidityNote": "거래대금이 대형주보다 얇아 분할 진입이 필요하고 실적 전후 변동성이 커질 수 있다.",
@@ -591,7 +591,7 @@
         "previousCloseChangePct": 1.4,
         "week52High": 74000,
         "currency": "KRW",
-        "sourceNote": "Yahoo Finance 4월 7일 종가 기준; 52주 저점은 페이지 노출값이 불완전해 비웠다."
+        "sourceNote": "가격 출처: Yahoo Finance"
       },
       "valuationNote": "대형 HBM 장비주보다 덜 오른 후발 검사장비주라 재평가 여지가 남아 있다.",
       "liquidityNote": "KOSDAQ 중형주라 거래 공백 구간에서 변동성이 커질 수 있고 체결 강도도 일정하지 않다.",

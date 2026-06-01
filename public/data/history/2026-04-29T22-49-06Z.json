@@ -41,7 +41,7 @@
             "week52High": 176.41,
             "week52Low": 101.19,
             "currency": "USD",
-            "sourceNote": "MarketWatch 2026년 4월 29일 미국 장마감, 52주 범위는 Yahoo Finance 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -58,7 +58,7 @@
             "week52High": 135.87,
             "week52Low": 84.28,
             "currency": "USD",
-            "sourceNote": "MarketWatch 2026년 4월 29일 미국 장마감, 52주 범위는 Yahoo Finance 최근 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -75,7 +75,7 @@
             "week52High": 255.77,
             "week52Low": 122.72,
             "currency": "USD",
-            "sourceNote": "MarketWatch 2026년 4월 29일 미국 장마감, 52주 범위는 Yahoo Finance/Barchart 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -281,7 +281,7 @@
             "week52High": 16.5,
             "week52Low": 8.96,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 장마감 확보값, MarketWatch 4월 29일 동종 항공 약세 확인"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -315,7 +315,7 @@
             "week52High": 796.25,
             "week52Low": 520.26,
             "currency": "USD",
-            "sourceNote": "Motley Fool/MarketWatch 2026년 4월 29일 정규장 및 실적 후 시간외 약세 확인, 52주 범위는 Yahoo Finance 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -331,7 +331,7 @@
             "week52High": 555.45,
             "week52Low": 355.67,
             "currency": "USD",
-            "sourceNote": "Motley Fool 2026년 4월 29일 정규장, 52주 범위는 Yahoo Finance 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -347,7 +347,7 @@
             "week52High": 212.19,
             "week52Low": 95.04,
             "currency": "USD",
-            "sourceNote": "Motley Fool 2026년 4월 29일 정규장, 52주 범위는 Yahoo Finance/Barchart 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

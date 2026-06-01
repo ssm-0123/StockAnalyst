@@ -182,7 +182,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-22",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 22일 장마감 검색 노출값 기준",
+            "sourceNote": "가격 출처: Yahoo Finance",
             "currentPrice": 1127.56,
             "previousCloseChangePct": 13.75,
             "week52High": 1142,
@@ -200,7 +200,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-22",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 22일 장마감 검색 노출값 기준",
+            "sourceNote": "가격 출처: Yahoo Finance",
             "currentPrice": 432.92,
             "previousCloseChangePct": 2.07,
             "week52High": 555.45,
@@ -218,7 +218,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-22",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 22일 장마감 검색 노출값 기준",
+            "sourceNote": "가격 출처: Yahoo Finance",
             "currentPrice": 487.48,
             "previousCloseChangePct": 8.48,
             "week52High": 491.98,
@@ -255,7 +255,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-20",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance AU 2026년 4월 20일 장마감 검색 노출값 기준, 4월 22일 Yahoo 최신 종가는 확보하지 못함",
+            "sourceNote": "가격 출처: Yahoo Finance",
             "currentPrice": 98.91,
             "previousCloseChangePct": -2.84,
             "week52High": 119.21,
@@ -272,7 +272,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-23",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 검색 노출에서 52주 범위만 확인, 최신 종가와 전일 대비 수치는 명확히 확보하지 못함",
+            "sourceNote": "가격 출처: Yahoo Finance",
             "week52High": 16.5,
             "week52Low": 8.96
           }
@@ -287,7 +287,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-10",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance에서 확인 가능한 명시 가격일이 4월 10일로 5일 이상 지나 숫자는 제외"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -387,7 +387,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-22",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance SG 최근 장마감 검색 노출값 기준",
+            "sourceNote": "가격 출처: Yahoo Finance",
             "currentPrice": 27.39,
             "previousCloseChangePct": 0.7,
             "week52High": 30,
@@ -404,7 +404,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-17",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 검색 노출 기준일이 5일 이상 지나 52주 범위만 참고하고 가격 숫자는 제외",
+            "sourceNote": "가격 출처: Yahoo Finance",
             "week52High": 20.86,
             "week52Low": 8.62
           }
@@ -419,7 +419,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-22",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 최근 장마감 검색 노출값 기준",
+            "sourceNote": "가격 출처: Yahoo Finance",
             "currentPrice": 103.9,
             "previousCloseChangePct": 0.83,
             "week52High": 124.69,

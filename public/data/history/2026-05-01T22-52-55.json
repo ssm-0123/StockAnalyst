@@ -45,7 +45,7 @@
             "week52High": 896.98,
             "week52Low": 311.02,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -66,7 +66,7 @@
             "week52High": 1181.95,
             "week52Low": 357.64,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -87,7 +87,7 @@
             "week52High": 727,
             "week52Low": 312.3,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -289,7 +289,7 @@
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -309,7 +309,7 @@
             "week52High": 211.48,
             "week52Low": 81.24,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -329,7 +329,7 @@
             "week52High": 345.72,
             "week52Low": 134.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -445,7 +445,7 @@
             "week52High": 119.21,
             "week52Low": 65.66,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -465,7 +465,7 @@
             "week52High": 76.39,
             "week52Low": 39.94,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -485,7 +485,7 @@
             "week52High": 16.5,
             "week52Low": 9.48,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 상세 페이지 검색 인덱스 기준 최신 확인값; 5월 1일 미국장 반영은 섹터 판단에 반영하되 일부 quote는 공식 페이지 지연으로 4월 30일 확인값 유지"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

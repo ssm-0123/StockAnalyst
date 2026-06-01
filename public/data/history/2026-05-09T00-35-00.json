@@ -45,7 +45,7 @@
             "week52High": 216.61,
             "week52Low": 116.65,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -66,7 +66,7 @@
             "week52High": 430,
             "week52Low": 208.2,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -87,7 +87,7 @@
             "week52High": 455.19,
             "week52Low": 102.84,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -207,7 +207,7 @@
             "week52High": 403.95,
             "week52Low": 247.06,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -228,7 +228,7 @@
             "week52High": 217.92,
             "week52Low": 135.75,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -249,7 +249,7 @@
             "week52High": 433.01,
             "week52Low": 309.87,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -371,7 +371,7 @@
             "week52High": 301.31,
             "week52Low": 156.66,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -392,7 +392,7 @@
             "week52High": 75.35,
             "week52Low": 47.04,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -413,7 +413,7 @@
             "week52High": 117.53,
             "week52Low": 73.33,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -452,7 +452,7 @@
             "week52High": 473.32,
             "week52Low": 190.06,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -473,7 +473,7 @@
             "week52High": 291.15,
             "week52Low": 164.96,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -494,7 +494,7 @@
             "week52High": 420.68,
             "week52Low": 225.35,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -803,7 +803,7 @@
         "week52High": 44.24,
         "week52Low": 5.31,
         "currency": "USD",
-        "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+        "sourceNote": "가격 출처: Yahoo Finance"
       },
       "valuationNote": "성장 스토리는 크지만 현금흐름 검증이 약해 낮은 포지션 크기가 맞습니다.",
       "liquidityNote": "미국 중소형 성장주로 변동성과 공매도성 흔들림이 큽니다.",
@@ -838,7 +838,7 @@
         "week52High": 174.14,
         "week52Low": 28.09,
         "currency": "USD",
-        "sourceNote": "Yahoo Finance 2026년 5월 8일 미국 정규장 종가 기준; 주말 분석으로 마지막 거래일 가격 사용"
+        "sourceNote": "가격 출처: Yahoo Finance"
       },
       "valuationNote": "현재 가격은 먼 미래 상업화 기대를 크게 반영해 안전마진은 낮습니다.",
       "liquidityNote": "뉴스 민감도가 높고 일중 변동성이 커 손절 기준이 필요합니다.",

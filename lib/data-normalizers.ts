@@ -21,6 +21,7 @@ import {
   ThemeTradability,
   TrendSummary,
   WeeklyResultsReport,
+  ResultsAttribution,
 } from "@/lib/types";
 
 type JsonRecord = Record<string, unknown>;
@@ -53,6 +54,15 @@ const RESULTS_STANCES = new Set<EvaluatedInsight["stance"]>(["promising", "cauti
 const PRICE_EVIDENCE = new Set<EvaluatedInsight["priceEvidence"]>(["snapshot", "fallback", "mixed"]);
 const DATA_QUALITY = new Set<EvaluatedInsight["dataQuality"]>(["verified", "limited", "stale-excluded"]);
 const LESSON_LIFECYCLE_STATUSES = new Set<LessonLifecycleStatus>(["active", "softened", "contradicted", "retired"]);
+const RESULTS_ATTRIBUTION_CATEGORIES = new Set<ResultsAttribution["category"]>([
+  "market-regime",
+  "sector-selection",
+  "stock-selection",
+  "timing",
+  "price-data",
+  "event-risk",
+  "risk-management",
+]);
 const TREND_DIRECTIONS = new Set<TrendSummary["mostFrequentPromisingSector"]["trendDirection"]>(["up", "down", "flat"]);
 const MARKET_CYCLE_STAGES = new Set<MarketRegimeAssessment["stage"]>(["early", "mid", "late"]);
 const THEME_EVENT_TYPES = new Set<ThemeEventType>([
@@ -444,6 +454,12 @@ export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
 
 function normalizeEvaluatedInsight(value: unknown): EvaluatedInsight {
   const input = asRecord(value);
+  const attribution = asRecord(input.attribution);
+  const attributionCategory =
+    typeof attribution.category === "string" &&
+    RESULTS_ATTRIBUTION_CATEGORIES.has(attribution.category as ResultsAttribution["category"])
+      ? (attribution.category as ResultsAttribution["category"])
+      : undefined;
   const lessonStatus =
     typeof input.lessonStatus === "string" && LESSON_LIFECYCLE_STATUSES.has(input.lessonStatus as LessonLifecycleStatus)
       ? (input.lessonStatus as LessonLifecycleStatus)
@@ -487,6 +503,13 @@ function normalizeEvaluatedInsight(value: unknown): EvaluatedInsight {
     lessonConditions: asStringArray(input.lessonConditions),
     lessonSupersedes: asStringArray(input.lessonSupersedes),
     lessonUpdateReason: asOptionalString(input.lessonUpdateReason),
+    attribution: attributionCategory
+      ? {
+          category: attributionCategory,
+          primaryCause: asString(attribution.primaryCause, "원인 미분류"),
+          whatToChange: asString(attribution.whatToChange, "다음 평가에서 보완 필요"),
+        }
+      : undefined,
   };
 }
 

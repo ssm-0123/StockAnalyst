@@ -62,7 +62,7 @@
             "week52High": 278.81,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -83,7 +83,7 @@
             "week52High": 468.6,
             "week52Low": 185,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -104,7 +104,7 @@
             "week52High": 421.48,
             "week52Low": 224.13,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -146,7 +146,7 @@
             "week52High": 154800,
             "week52Low": 71500,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         },
         {
@@ -170,7 +170,7 @@
             "week52High": 282000,
             "week52Low": 136000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         },
         {
@@ -194,7 +194,7 @@
             "week52High": 765000,
             "week52Low": 370000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         }
       ]
@@ -236,7 +236,7 @@
             "week52High": 426000,
             "week52Low": 79800,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         },
         {
@@ -260,7 +260,7 @@
             "week52High": 74000,
             "week52Low": 26050,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         },
         {
@@ -284,7 +284,7 @@
             "week52High": 51000,
             "week52Low": 16065,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         }
       ]
@@ -328,7 +328,7 @@
             "week52High": 323000,
             "week52Low": 54200,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         },
         {
@@ -352,7 +352,7 @@
             "week52High": 2358000,
             "week52Low": 203000,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         },
         {
@@ -376,7 +376,7 @@
             "week52High": 170790,
             "week52Low": 30825,
             "currency": "KRW",
-            "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
           }
         }
       ]
@@ -415,7 +415,7 @@
             "week52High": 236.54,
             "week52Low": 132.92,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -436,7 +436,7 @@
             "week52High": 510.21,
             "week52Low": 108.62,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -457,7 +457,7 @@
             "week52High": 442.36,
             "week52Low": 234.43,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -496,7 +496,7 @@
             "week52High": 49.35,
             "week52Low": 6.68,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -517,7 +517,7 @@
             "week52High": 193.84,
             "week52Low": 44.88,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -538,7 +538,7 @@
             "week52High": 219.82,
             "week52Low": 132.66,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z; issues=Yahoo fetch failed: HTTP 401"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -760,7 +760,7 @@
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+        "sourceNote": "가격 출처: Naver Finance 국내 시세"
       },
       "valuationNote": "저점 26,050원 대비 이미 크게 올랐지만, HBM 검사장비 수주가 확인되면 성장 스토리를 실적 레버리지로 연결할 여지가 남아 있습니다.",
       "liquidityNote": "중소형 장비주는 거래대금이 줄면 호가 공백이 커지므로 분할 주문과 54,000원 손절 기준을 먼저 정해야 합니다.",
@@ -798,7 +798,7 @@
         "week52High": 51000,
         "week52Low": 16065,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+        "sourceNote": "가격 출처: Naver Finance 국내 시세"
       },
       "valuationNote": "대형 HBM 리더보다 기대가 덜 반영된 후발 옵션이지만, 가격 지지 실패가 먼저 나와 밸류에이션 매력을 행동으로 연결하기에는 이릅니다.",
       "liquidityNote": "커버리지와 거래대금이 대형주보다 얕아 지지선 아래에서는 호가 공백과 추가 매도 압력이 커질 수 있습니다.",
@@ -836,7 +836,7 @@
         "week52High": 141000,
         "week52Low": 17720,
         "currency": "KRW",
-        "sourceNote": "Naver Finance KR snapshot fetch; public/data/prices_snapshot.json canonical input; health=fresh; mode=normal; tradable=true; generatedAt=2026-05-27T21:44:08.880Z"
+        "sourceNote": "가격 출처: Naver Finance 국내 시세"
       },
       "valuationNote": "HBM 기판 성장 스토리는 유효하지만 가격 변동성이 커져 안전마진은 회복 확인 뒤에만 인정합니다.",
       "liquidityNote": "거래대금이 늘 때 탄력은 크지만 급락 구간에서는 체결 변동성과 차익실현 압력이 동시에 커집니다.",

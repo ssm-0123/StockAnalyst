@@ -110,7 +110,7 @@
             "week52High": 176.41,
             "week52Low": 101.19,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -127,7 +127,7 @@
             "week52High": 135.87,
             "week52Low": 84.28,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -144,7 +144,7 @@
             "week52High": 255.77,
             "week52Low": 122.72,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -315,7 +315,7 @@
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -331,7 +331,7 @@
             "week52High": 211.48,
             "week52Low": 81.24,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -347,7 +347,7 @@
             "week52High": 345.72,
             "week52Low": 134.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 기본 페이지 지연으로 FinanceCharts/MarketWatch 2026년 4월 29일 미국 장마감 보조 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

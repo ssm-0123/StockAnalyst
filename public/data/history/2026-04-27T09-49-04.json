@@ -110,7 +110,7 @@
             "week52High": 212.19,
             "week52Low": 104.08,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 Reuters/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -127,7 +127,7 @@
             "week52High": 352.99,
             "week52Low": 90.37,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 Reuters/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -144,7 +144,7 @@
             "week52High": 85.22,
             "week52Low": 18.97,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 Reuters/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -249,7 +249,7 @@
             "week52High": 16.5,
             "week52Low": 8.96,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 Reuters/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -265,7 +265,7 @@
             "week52High": 119.21,
             "week52Low": 63.23,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 Reuters/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -281,7 +281,7 @@
             "week52High": 76.39,
             "week52Low": 39.59,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 Reuters/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -315,7 +315,7 @@
             "week52High": 211.48,
             "week52Low": 81.24,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 Reuters/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -331,7 +331,7 @@
             "week52High": 324.9,
             "week52Low": 220.72,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 MarketWatch/보조 시세 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -347,7 +347,7 @@
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 접근 제한으로 Reuters/MarketWatch/Investors.com 2026년 4월 24일 미국 장마감 노출값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

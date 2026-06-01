@@ -72,7 +72,7 @@
             "week52High": 219.82,
             "week52Low": 138.53,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -93,7 +93,7 @@
             "week52High": 412.7,
             "week52Low": 243.3,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -114,7 +114,7 @@
             "week52High": 435.43,
             "week52Low": 311.9,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -153,7 +153,7 @@
             "week52High": 1995000,
             "week52Low": 196500,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -174,7 +174,7 @@
             "week52High": 299500,
             "week52Low": 53700,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -195,7 +195,7 @@
             "week52High": 426000,
             "week52Low": 78200,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -234,7 +234,7 @@
             "week52High": 236.54,
             "week52Low": 129.16,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -255,7 +255,7 @@
             "week52High": 442.36,
             "week52Low": 221.6,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -276,7 +276,7 @@
             "week52High": 469.22,
             "week52Low": 107.67,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -317,7 +317,7 @@
             "week52High": 474.79,
             "week52Low": 185,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -338,7 +338,7 @@
             "week52High": 292.17,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -359,7 +359,7 @@
             "week52High": 422.95,
             "week52Low": 224.13,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -398,7 +398,7 @@
             "week52High": 734000,
             "week52Low": 370000,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -419,7 +419,7 @@
             "week52High": 154800,
             "week52Low": 71500,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -440,7 +440,7 @@
             "week52High": 282000,
             "week52Low": 103300,
             "currency": "KRW",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -479,7 +479,7 @@
             "week52High": 76.39,
             "week52Low": 45.28,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -500,7 +500,7 @@
             "week52High": 119.21,
             "week52Low": 71.55,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         },
         {
@@ -521,7 +521,7 @@
             "week52High": 303.8,
             "week52Low": 156.05,
             "currency": "USD",
-            "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
           }
         }
       ]
@@ -717,7 +717,7 @@
         "week52High": 119800,
         "week52Low": 16160,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "고점 대비 할인은 생겼지만 업황 민감도가 커 실적 확인 전 밸류 프리미엄은 제한합니다.",
       "liquidityNote": "중소형 기판주는 거래대금이 급감하면 손절 체결 리스크가 커 비중을 작게 둡니다.",
@@ -753,7 +753,7 @@
         "week52High": 47.79,
         "week52Low": 5.51,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "성장 옵션은 크지만 52주 고점권이라 가격이 이미 높은 기대를 반영합니다.",
       "liquidityNote": "고베타 소형 인프라라 변동성과 갭 리스크가 크며 손절 가격을 미리 둬야 합니다.",
@@ -789,7 +789,7 @@
         "week52High": 193.84,
         "week52Low": 34.45,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "현재 가격은 고점 대비 크게 낮지만 내재가치보다 장기 옵션성 의존도가 높아 확신도를 낮춥니다.",
       "liquidityNote": "소형 원전 테마주는 뉴스 공백과 변동성 확대에 취약해 주문 크기를 제한해야 합니다.",
@@ -825,7 +825,7 @@
         "week52High": 51000,
         "week52Low": 16200,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "고점 대비 할인은 있으나 실적 민감도와 기대 선반영이 커 단순 저평가로 보지 않습니다.",
       "liquidityNote": "중소형 장비주는 급락일 유동성이 얇아질 수 있어 손절 실행 리스크가 큽니다.",
@@ -861,7 +861,7 @@
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch; prices_snapshot health=fresh, mode=normal, generatedAt=2026-05-15T08:46:50.776Z"
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
       "valuationNote": "고점 대비 조정은 크지만 기대 선반영과 실적 확인 부족 때문에 할인만으로 매수하지 않습니다.",
       "liquidityNote": "변동성이 큰 중소형 장비주라 분할 진입 전 체결 유동성과 손절 범위를 확인해야 합니다.",

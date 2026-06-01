@@ -217,6 +217,20 @@ export interface SmallCapResultsScorecard {
 }
 
 export type LessonLifecycleStatus = "active" | "softened" | "contradicted" | "retired";
+export type ResultsAttributionCategory =
+  | "market-regime"
+  | "sector-selection"
+  | "stock-selection"
+  | "timing"
+  | "price-data"
+  | "event-risk"
+  | "risk-management";
+
+export interface ResultsAttribution {
+  category: ResultsAttributionCategory;
+  primaryCause: string;
+  whatToChange: string;
+}
 
 export interface EvaluatedInsight {
   ticker: string;
@@ -245,6 +259,7 @@ export interface EvaluatedInsight {
   lessonConditions?: string[];
   lessonSupersedes?: string[];
   lessonUpdateReason?: string;
+  attribution?: ResultsAttribution;
   confidenceLevel?: ConfidenceLevel;
 }
 

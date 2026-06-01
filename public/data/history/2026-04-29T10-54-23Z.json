@@ -41,7 +41,7 @@
             "week52High": 176.41,
             "week52Low": 101.19,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -58,7 +58,7 @@
             "week52High": 135.87,
             "week52Low": 84.28,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -75,7 +75,7 @@
             "week52High": 255.77,
             "week52Low": 122.72,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -249,7 +249,7 @@
             "week52High": 16.5,
             "week52Low": 8.96,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 및 4월 29일 지연 시세 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -265,7 +265,7 @@
             "week52High": 119.21,
             "week52Low": 65.66,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -281,7 +281,7 @@
             "week52High": 76.39,
             "week52Low": 39.94,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 및 4월 29일 지연 시세 확인값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -315,7 +315,7 @@
             "week52High": 345.72,
             "week52Low": 134.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -331,7 +331,7 @@
             "week52High": 324.9,
             "week52Low": 220.72,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -347,7 +347,7 @@
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 4월 28일 미국 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

@@ -124,6 +124,17 @@ function evidenceLimitNote(item: {
   return "반복 가격 관측이 충분하지 않아 보수적으로 해석해야 하는 평가입니다.";
 }
 
+function attributionLabel(category?: string) {
+  if (category === "market-regime") return "국면 판단";
+  if (category === "sector-selection") return "섹터 선택";
+  if (category === "stock-selection") return "종목 선택";
+  if (category === "timing") return "타이밍";
+  if (category === "price-data") return "가격 데이터";
+  if (category === "event-risk") return "이벤트 리스크";
+  if (category === "risk-management") return "리스크 관리";
+  return "귀인 미분류";
+}
+
 export default async function ResultsPage() {
   const { latest } = await getLatestResultsReport();
   const smallCapInsights = latest.evaluatedInsights.filter((item) => item.stance === "small-cap");
@@ -374,6 +385,18 @@ export default async function ResultsPage() {
                       유지 판단 복기
                     </p>
                     <p className="mt-1 text-sm leading-6 text-slate-700">{item.followThroughReview}</p>
+                  </div>
+                ) : null}
+                {item.attribution ? (
+                  <div className="mt-3 rounded-2xl border border-cyan-100 bg-cyan-50/70 p-3">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-800">
+                        성과 귀인
+                      </p>
+                      <Badge variant="neutral">{attributionLabel(item.attribution.category)}</Badge>
+                    </div>
+                    <p className="mt-2 text-sm leading-6 text-slate-700">{item.attribution.primaryCause}</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">{item.attribution.whatToChange}</p>
                   </div>
                 ) : null}
                 <div className="mt-3 rounded-2xl border border-slate-200/80 bg-white/80 p-3">

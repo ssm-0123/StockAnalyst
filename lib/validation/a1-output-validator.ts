@@ -66,6 +66,8 @@ const THEME_EVENT_TYPES = new Set([
 ]);
 const THEME_SOURCE_FRESHNESS = new Set(["today", "1-3d", "stale", "unverified"]);
 const THEME_TRADABILITY = new Set(["actionable", "watch_after_spike", "wait_for_confirmation", "avoid_chase"]);
+const ACTION_BIASES = new Set(["buy", "hold", "reduce", "exit"]);
+const TIME_HORIZONS = new Set(["1-3d", "1-3w", "1-3m"]);
 
 function isRecord(value: unknown): value is JsonRecord {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -378,6 +380,64 @@ function isStrongSectorOnly(text: string) {
   ]);
 }
 
+function hasPricePositionText(text: string) {
+  return textIncludesAny(text, [
+    "current price",
+    "52-week",
+    "52 week",
+    "high",
+    "low",
+    "pullback",
+    "premium",
+    "discount",
+    "price",
+    "현재가",
+    "52주",
+    "고점",
+    "저점",
+    "눌림",
+    "할인",
+    "프리미엄",
+    "가격",
+    "전일 대비",
+  ]);
+}
+
+function validateResearchFrame(candidate: JsonRecord, path: string, issues: A1ValidationIssue[]) {
+  const actionBias = asString(candidate.actionBias);
+  if (!ACTION_BIASES.has(actionBias)) {
+    issues.push(issue("missing-action-bias", "warn", `${path}.actionBias`, "Every public stock idea needs an actionBias analysis signal."));
+  }
+
+  const timeHorizon = asString(candidate.timeHorizon);
+  if (!TIME_HORIZONS.has(timeHorizon)) {
+    issues.push(issue("missing-time-horizon", "warn", `${path}.timeHorizon`, "Every public stock idea needs a concrete time horizon."));
+  }
+
+  if (!hasText(candidate.invalidation)) {
+    issues.push(issue("missing-invalidation", "warn", `${path}.invalidation`, "Every public stock idea needs an invalidation condition."));
+  }
+
+  if (!hasText(candidate.positioningNote)) {
+    issues.push(issue("missing-positioning-note", "warn", `${path}.positioningNote`, "Every public stock idea needs a concise observation note."));
+  }
+
+  const decisionText = [candidate.rationale, candidate.whyNow, candidate.thesis, candidate.positioningNote]
+    .map(asString)
+    .filter(Boolean)
+    .join(" ");
+  if ((candidate.actionBias === "buy" || candidate.isNew === true) && !hasPricePositionText(decisionText)) {
+    issues.push(
+      issue(
+        "missing-price-position-frame",
+        "warn",
+        path,
+        "Interest-expansion candidates should explain price position, not only story or sector strength.",
+      ),
+    );
+  }
+}
+
 function validateMarketRegime(input: JsonRecord, issues: A1ValidationIssue[]) {
   const marketRegime = input.marketRegime;
 
@@ -594,6 +654,7 @@ function validateSectors(
 
         validateCanonicalPriceSnapshot(stockValue, stockPath, canonicalPrices, pricesGeneratedAt, issues);
         validateEvidenceArray(stockValue.evidence, `${stockPath}.evidence`, issues);
+        validateResearchFrame(stockValue, stockPath, issues);
 
         if (stockValue.actionBias === "buy" || stockValue.isNew === true) {
           validateBuyCandidate(stockValue, stockPath, contextText, analysisDate, referenceTimestamp, issues);
@@ -619,6 +680,7 @@ function validateSmallCaps(
 
     validateCanonicalPriceSnapshot(ideaValue, ideaPath, canonicalPrices, pricesGeneratedAt, issues);
     validateEvidenceArray(ideaValue.evidence, `${ideaPath}.evidence`, issues);
+    validateResearchFrame(ideaValue, ideaPath, issues);
     validateBuyCandidate(ideaValue, ideaPath, asString(ideaValue.theme), analysisDate, referenceTimestamp, issues);
   });
 }
@@ -661,6 +723,31 @@ function validateThemeRadar(
       issues.push(issue("invalid-theme-tradability", "warn", `${themePath}.tradability`, "Theme radar tradability is not in the allowed set."));
     }
 
+    if (themeValue.tradability === "actionable" && hasFiniteNumber(themeValue.signalStrength) && themeValue.signalStrength < 70) {
+      issues.push(
+        issue(
+          "weak-actionable-theme-signal",
+          "warn",
+          themePath,
+          "Actionable theme radar items should have signalStrength of at least 70 or be downgraded to wait_for_confirmation.",
+        ),
+      );
+    }
+
+    if (
+      themeValue.tradability === "actionable" &&
+      (themeValue.sourceFreshness === "stale" || themeValue.sourceFreshness === "unverified")
+    ) {
+      issues.push(
+        issue(
+          "unverified-actionable-theme",
+          "warn",
+          themePath,
+          "Actionable theme radar items need fresh sources; stale or unverified themes should wait for confirmation.",
+        ),
+      );
+    }
+
     const contextText = [
       themeValue.theme,
       themeValue.narrative,
@@ -685,6 +772,7 @@ function validateThemeRadar(
 
       validateCanonicalPriceSnapshot(stockValue, stockPath, canonicalPrices, pricesGeneratedAt, issues);
       validateEvidenceArray(stockValue.evidence, `${stockPath}.evidence`, issues);
+      validateResearchFrame(stockValue, stockPath, issues);
 
       if (stockValue.actionBias === "buy" || stockValue.isNew === true) {
         validateBuyCandidate(stockValue, stockPath, contextText, analysisDate, referenceTimestamp, issues);

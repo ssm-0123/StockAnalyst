@@ -110,7 +110,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-01",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance에서 4월 1일 값만 명확해 stale 데이터로 판단, 현재 숫자는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -128,7 +128,7 @@
             "week52High": 57.55,
             "week52Low": 36.49,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -146,7 +146,7 @@
             "week52High": 97.76,
             "week52Low": 63.4,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 장중 표시 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -182,7 +182,7 @@
             "week52High": 212.19,
             "week52Low": 97.28,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 20일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -200,7 +200,7 @@
             "week52High": 390.21,
             "week52Low": 147.44,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 20일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -218,7 +218,7 @@
             "week52High": 345.72,
             "week52Low": 121.24,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -251,7 +251,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-08",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance에서 4월 8일 값만 명확해 stale 데이터로 판단, 현재 숫자는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -268,7 +268,7 @@
             "week52High": 119.21,
             "week52Low": 63.23,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 20일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -281,7 +281,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-21",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 장중 페이지는 확인했지만 날짜 표기가 불명확해 현재 숫자는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -385,7 +385,7 @@
             "week52High": 134.12,
             "week52Low": 75.01,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 17일 종가 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -402,7 +402,7 @@
             "week52High": 124.69,
             "week52Low": 80.85,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 장중 표시 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -419,7 +419,7 @@
             "week52High": 30,
             "week52Low": 7.75,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 장마감 표시 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

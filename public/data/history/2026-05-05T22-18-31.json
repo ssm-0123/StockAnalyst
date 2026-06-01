@@ -126,7 +126,7 @@
             "week52High": 763.11,
             "week52Low": 315,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -147,7 +147,7 @@
             "week52High": 1181.95,
             "week52Low": 387.03,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -168,7 +168,7 @@
             "week52High": 435.43,
             "week52Low": 293.07,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -288,7 +288,7 @@
             "week52High": 16.5,
             "week52Low": 10.09,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -308,7 +308,7 @@
             "week52High": 119.21,
             "week52Low": 71.55,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -328,7 +328,7 @@
             "week52High": 76.39,
             "week52Low": 43.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -444,7 +444,7 @@
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -464,7 +464,7 @@
             "week52High": 211.48,
             "week52Low": 81.24,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -484,7 +484,7 @@
             "week52High": 345.72,
             "week52Low": 134.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 2026년 5월 5일 장중 이후 Yahoo/Naver 최신값은 자동 조회 불안정으로 재계산하지 않음"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

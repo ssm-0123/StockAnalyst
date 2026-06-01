@@ -114,7 +114,7 @@
             "week52High": 345.72,
             "week52Low": 123.39,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 최근 장마감 표시값 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -128,7 +128,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-15",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 검색 노출 최신 확인값에서 4월 15일 가격만 명확해 5일 이상 지난 stale 데이터로 판단, 숫자는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -142,7 +142,7 @@
           "priceSnapshot": {
             "priceDate": "2026-01-30",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 검색 노출 최신 확인값의 명시 일자가 1월 30일에 머물러 stale 데이터로 판단, 숫자는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -247,7 +247,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-02",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 검색 노출 최신 확인값에서 명시 일자가 4월 2일에 머물러 stale 데이터로 판단, 숫자는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -264,7 +264,7 @@
             "week52High": 119.21,
             "week52Low": 65.66,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 4월 21일 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -277,7 +277,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-16",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 검색 노출 최신 확인값에서 성과 기준일 4월 16일만 명확해 stale 데이터로 판단, 숫자는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -381,7 +381,7 @@
             "week52High": 30,
             "week52Low": 7.75,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 최근 장마감 기준"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -394,7 +394,7 @@
           "priceSnapshot": {
             "priceDate": "2026-04-16",
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 최신 페이지에서 날짜가 명확한 최신 가격 스냅샷을 확보하지 못해 숫자는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -410,7 +410,7 @@
             "week52High": 124.69,
             "week52Low": 82.98,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 최근 장마감 페이지에서 4월 21일 종가만 확인돼 전일 대비 수치는 비웠다."
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]

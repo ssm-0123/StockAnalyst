@@ -126,7 +126,7 @@
             "week52High": 430.57,
             "week52Low": 96.45,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 6일 정규장 기준; 52주 범위는 Yahoo quote 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -147,7 +147,7 @@
             "week52High": 216.83,
             "week52Low": 112.28,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 6일 정규장 기준; 52주 범위는 Yahoo quote 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -168,7 +168,7 @@
             "week52High": 680,
             "week52Low": 73.5,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 6일 정규장 기준; 52주 범위는 Yahoo quote 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -289,7 +289,7 @@
             "week52High": 296.05,
             "week52Low": 163.52,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 6일 정규장 기준; 52주 범위는 Yahoo quote 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -309,7 +309,7 @@
             "week52High": 422.95,
             "week52Low": 224.13,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 6일 정규장 기준; 52주 범위는 Yahoo quote 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -329,7 +329,7 @@
             "week52High": 499,
             "week52Low": 295,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 6일 정규장 기준; 52주 범위는 Yahoo quote 노출값 사용"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
@@ -445,7 +445,7 @@
             "week52High": 16.5,
             "week52Low": 10.09,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 5월 6일 유가 급락 후 가격은 다음 확인 때 갱신"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -465,7 +465,7 @@
             "week52High": 119.21,
             "week52Low": 71.55,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 5월 6일 유가 급락 후 가격은 다음 확인 때 갱신"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         },
         {
@@ -485,7 +485,7 @@
             "week52High": 76.39,
             "week52Low": 43.57,
             "currency": "USD",
-            "sourceNote": "Yahoo Finance 2026년 5월 4일 정규장 종가 기준; 5월 6일 유가 급락 후 가격은 다음 확인 때 갱신"
+            "sourceNote": "가격 출처: Yahoo Finance"
           }
         }
       ]
