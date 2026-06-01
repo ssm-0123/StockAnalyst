@@ -1,8 +1,7 @@
 import { RadioTower, ShieldAlert } from "lucide-react";
 
-import { ThemeRadarItem } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { ThemeRadarItem } from "@/lib/types";
 
 function eventTypeLabel(value: ThemeRadarItem["eventType"]) {
   const labels: Record<ThemeRadarItem["eventType"], string> = {
@@ -45,33 +44,45 @@ export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
   }
 
   return (
-    <section className="mt-4 rounded-[1.75rem] border border-sky-100 bg-sky-50/70 p-5 shadow-panel">
+    <section className="mt-4 rounded-[1.75rem] border border-sky-100 bg-sky-50/70 p-4 shadow-panel">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
             <RadioTower className="size-4" />
             테마 레이더
           </div>
-          <p className="mt-2 text-lg font-semibold tracking-tight text-slate-950">
-            뉴스·정책·사회 이슈 기반 단기 테마 {items.length}개
+          <p className="mt-2 text-base font-semibold tracking-tight text-slate-950">
+            단기 테마 신호 {items.length}개
           </p>
         </div>
         <Badge variant="neutral">A2 최종 검증 필요</Badge>
       </div>
 
-      <div className="mt-4 grid gap-3 xl:grid-cols-2">
+      <div className="mt-3 grid gap-2">
         {items.map((theme, index) => (
-          <Card key={`${theme.market}-${theme.theme}-${index}`} className="border-sky-100 bg-white/90">
-            <CardHeader className="space-y-3">
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="neutral">{theme.market}</Badge>
-                <Badge variant="neutral">{eventTypeLabel(theme.eventType)}</Badge>
-                <Badge variant={tradabilityVariant(theme.tradability)}>{tradabilityLabel(theme.tradability)}</Badge>
-                <Badge variant="neutral">신호 {formatSignal(theme.signalStrength)}</Badge>
+          <details
+            key={`${theme.market}-${theme.theme}-${index}`}
+            className="group rounded-2xl border border-sky-100 bg-white/90 px-3 py-2"
+          >
+            <summary className="grid cursor-pointer list-none gap-2 md:grid-cols-[1fr_auto] md:items-center">
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <Badge variant="neutral">{theme.market}</Badge>
+                  <Badge variant="neutral">{eventTypeLabel(theme.eventType)}</Badge>
+                  <Badge variant={tradabilityVariant(theme.tradability)}>{tradabilityLabel(theme.tradability)}</Badge>
+                  <Badge variant="neutral">신호 {formatSignal(theme.signalStrength)}</Badge>
+                </div>
+                <p className="mt-2 truncate text-sm font-semibold text-slate-950">{theme.theme}</p>
               </div>
-              <CardTitle className="text-lg text-slate-950">{theme.theme}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3 text-sm leading-6 text-slate-700">
+              <div className="flex flex-wrap gap-1.5 md:justify-end">
+                {theme.affectedStocks.slice(0, 4).map((stock) => (
+                  <Badge key={`${theme.theme}-${stock.market}-${stock.ticker}-summary`} variant="neutral">
+                    {stock.ticker}
+                  </Badge>
+                ))}
+              </div>
+            </summary>
+            <div className="mt-3 space-y-3 border-t border-sky-50 pt-3 text-sm leading-6 text-slate-700">
               <p>{theme.narrative}</p>
               <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-3">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">시장 반응</p>
@@ -100,8 +111,8 @@ export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
               {theme.evidence?.length ? (
                 <p className="text-xs leading-5 text-slate-500">근거: {theme.evidence.slice(0, 3).join(" / ")}</p>
               ) : null}
-            </CardContent>
-          </Card>
+            </div>
+          </details>
         ))}
       </div>
     </section>
