@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T21:42:08.554Z",
+  "generatedAt": "2026-06-01T06:06:05.176Z",
   "analysisDate": "2026-06-01",
   "staleThresholdDays": 5,
   "mode": "normal",
@@ -21,12 +21,12 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 2333000,
-        "previousClose": 2289000,
-        "previousCloseChangeAmount": 44000,
-        "previousCloseChangePct": 1.92,
-        "priceSession": "previous_close",
-        "week52High": 2379000,
+        "currentPrice": 2367000,
+        "previousClose": 2333000,
+        "previousCloseChangeAmount": 34000,
+        "previousCloseChangePct": 1.46,
+        "priceSession": "intraday",
+        "week52High": 2398000,
         "week52Low": 203000,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
@@ -36,7 +36,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:58.654Z",
+      "fetchedAt": "2026-06-01T06:05:49.566Z",
       "issues": []
     },
     {
@@ -46,13 +46,13 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 317000,
-        "previousClose": 299500,
-        "previousCloseChangeAmount": 17500,
-        "previousCloseChangePct": 5.84,
-        "priceSession": "previous_close",
-        "week52High": 323000,
-        "week52Low": 55800,
+        "currentPrice": 353000,
+        "previousClose": 317000,
+        "previousCloseChangeAmount": 36000,
+        "previousCloseChangePct": 11.36,
+        "priceSession": "intraday",
+        "week52High": 353500,
+        "week52Low": 56200,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
       },
@@ -61,7 +61,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:58.239Z",
+      "fetchedAt": "2026-06-01T06:05:49.251Z",
       "issues": []
     },
     {
@@ -71,11 +71,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 30500,
-        "previousClose": 32050,
-        "previousCloseChangeAmount": -1550,
-        "previousCloseChangePct": -4.84,
-        "priceSession": "previous_close",
+        "currentPrice": 30900,
+        "previousClose": 30500,
+        "previousCloseChangeAmount": 400,
+        "previousCloseChangePct": 1.31,
+        "priceSession": "intraday",
         "week52High": 51000,
         "week52Low": 16065,
         "currency": "KRW",
@@ -86,7 +86,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:01.392Z",
+      "fetchedAt": "2026-06-01T06:05:56.420Z",
       "issues": []
     },
     {
@@ -96,11 +96,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 123300,
-        "previousClose": 124200,
-        "previousCloseChangeAmount": -900,
-        "previousCloseChangePct": -0.72,
-        "priceSession": "previous_close",
+        "currentPrice": 125200,
+        "previousClose": 123300,
+        "previousCloseChangeAmount": 1900,
+        "previousCloseChangePct": 1.54,
+        "priceSession": "intraday",
         "week52High": 154800,
         "week52Low": 71500,
         "currency": "KRW",
@@ -111,7 +111,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:06.678Z",
+      "fetchedAt": "2026-06-01T06:06:03.776Z",
       "issues": []
     },
     {
@@ -121,11 +121,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 282000,
-        "previousClose": 292500,
-        "previousCloseChangeAmount": -10500,
-        "previousCloseChangePct": -3.59,
-        "priceSession": "previous_close",
+        "currentPrice": 292000,
+        "previousClose": 282000,
+        "previousCloseChangeAmount": 10000,
+        "previousCloseChangePct": 3.55,
+        "priceSession": "intraday",
         "week52High": 426000,
         "week52Low": 79800,
         "currency": "KRW",
@@ -136,7 +136,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:03.143Z",
+      "fetchedAt": "2026-06-01T06:05:58.867Z",
       "issues": []
     },
     {
@@ -146,13 +146,13 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 200500,
-        "previousClose": 206000,
-        "previousCloseChangeAmount": -5500,
-        "previousCloseChangePct": -2.67,
-        "priceSession": "previous_close",
+        "currentPrice": 212500,
+        "previousClose": 200500,
+        "previousCloseChangeAmount": 12000,
+        "previousCloseChangePct": 5.99,
+        "priceSession": "intraday",
         "week52High": 282000,
-        "week52Low": 143300,
+        "week52Low": 147300,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
       },
@@ -161,7 +161,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:07.027Z",
+      "fetchedAt": "2026-06-01T06:06:04.139Z",
       "issues": []
     },
     {
@@ -171,11 +171,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 49850,
-        "previousClose": 51300,
-        "previousCloseChangeAmount": -1450,
-        "previousCloseChangePct": -2.83,
-        "priceSession": "previous_close",
+        "currentPrice": 49050,
+        "previousClose": 49850,
+        "previousCloseChangeAmount": -800,
+        "previousCloseChangePct": -1.6,
+        "priceSession": "intraday",
         "week52High": 74000,
         "week52Low": 26050,
         "currency": "KRW",
@@ -186,7 +186,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:01.046Z",
+      "fetchedAt": "2026-06-01T06:05:55.693Z",
       "issues": []
     },
     {
@@ -196,11 +196,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 160980,
-        "previousClose": 160810,
-        "previousCloseChangeAmount": 170,
-        "previousCloseChangePct": 0.11,
-        "priceSession": "previous_close",
+        "currentPrice": 165680,
+        "previousClose": 160980,
+        "previousCloseChangeAmount": 4700,
+        "previousCloseChangePct": 2.92,
+        "priceSession": "intraday",
         "week52High": 170790,
         "week52Low": 30825,
         "currency": "KRW",
@@ -211,7 +211,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:57.888Z",
+      "fetchedAt": "2026-06-01T06:05:49.250Z",
       "issues": []
     },
     {
@@ -221,11 +221,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 114660,
-        "previousClose": 114655,
-        "previousCloseChangeAmount": 5,
-        "previousCloseChangePct": 0,
-        "priceSession": "previous_close",
+        "currentPrice": 114650,
+        "previousClose": 114660,
+        "previousCloseChangeAmount": -10,
+        "previousCloseChangePct": -0.01,
+        "priceSession": "intraday",
         "week52High": 117000,
         "week52Low": 114585,
         "currency": "KRW",
@@ -236,7 +236,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:05.581Z",
+      "fetchedAt": "2026-06-01T06:06:02.738Z",
       "issues": []
     },
     {
@@ -246,11 +246,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 118100,
-        "previousClose": 116200,
-        "previousCloseChangeAmount": 1900,
-        "previousCloseChangePct": 1.64,
-        "priceSession": "previous_close",
+        "currentPrice": 101500,
+        "previousClose": 118100,
+        "previousCloseChangeAmount": -16600,
+        "previousCloseChangePct": -14.06,
+        "priceSession": "intraday",
         "week52High": 141000,
         "week52Low": 17720,
         "currency": "KRW",
@@ -261,7 +261,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:01.763Z",
+      "fetchedAt": "2026-06-01T06:05:56.768Z",
       "issues": []
     },
     {
@@ -271,13 +271,13 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 56685,
-        "previousClose": 56675,
-        "previousCloseChangeAmount": 10,
-        "previousCloseChangePct": 0.02,
-        "priceSession": "previous_close",
+        "currentPrice": 56675,
+        "previousClose": 56685,
+        "previousCloseChangeAmount": -10,
+        "previousCloseChangePct": -0.02,
+        "priceSession": "intraday",
         "week52High": 56700,
-        "week52Low": 55740,
+        "week52Low": 55760,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
       },
@@ -286,7 +286,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:05.272Z",
+      "fetchedAt": "2026-06-01T06:06:02.386Z",
       "issues": []
     },
     {
@@ -296,11 +296,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 696000,
-        "previousClose": 704000,
-        "previousCloseChangeAmount": -8000,
-        "previousCloseChangePct": -1.14,
-        "priceSession": "previous_close",
+        "currentPrice": 687000,
+        "previousClose": 696000,
+        "previousCloseChangeAmount": -9000,
+        "previousCloseChangePct": -1.29,
+        "priceSession": "intraday",
         "week52High": 765000,
         "week52Low": 370000,
         "currency": "KRW",
@@ -311,7 +311,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:07.343Z",
+      "fetchedAt": "2026-06-01T06:06:04.473Z",
       "issues": []
     },
     {
@@ -321,12 +321,12 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 28300,
-        "previousClose": 28000,
-        "previousCloseChangeAmount": 300,
-        "previousCloseChangePct": 1.07,
-        "priceSession": "previous_close",
-        "week52High": 28300,
+        "currentPrice": 28375,
+        "previousClose": 28300,
+        "previousCloseChangeAmount": 75,
+        "previousCloseChangePct": 0.27,
+        "priceSession": "intraday",
+        "week52High": 28375,
         "week52Low": 20020,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
@@ -336,7 +336,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:04.936Z",
+      "fetchedAt": "2026-06-01T06:06:02.024Z",
       "issues": []
     },
     {
@@ -346,12 +346,12 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 30250,
-        "previousClose": 29760,
-        "previousCloseChangeAmount": 490,
-        "previousCloseChangePct": 1.65,
-        "priceSession": "previous_close",
-        "week52High": 30250,
+        "currentPrice": 30450,
+        "previousClose": 30250,
+        "previousCloseChangeAmount": 200,
+        "previousCloseChangePct": 0.66,
+        "priceSession": "intraday",
+        "week52High": 30450,
         "week52Low": 19400,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
@@ -361,7 +361,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:04.591Z",
+      "fetchedAt": "2026-06-01T06:06:01.681Z",
       "issues": []
     },
     {
@@ -371,11 +371,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 50825,
-        "previousClose": 49355,
-        "previousCloseChangeAmount": 1470,
-        "previousCloseChangePct": 2.98,
-        "priceSession": "previous_close",
+        "currentPrice": 51120,
+        "previousClose": 50825,
+        "previousCloseChangeAmount": 295,
+        "previousCloseChangePct": 0.58,
+        "priceSession": "intraday",
         "week52High": 51247,
         "week52Low": 17010,
         "currency": "KRW",
@@ -386,7 +386,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:04.194Z",
+      "fetchedAt": "2026-06-01T06:06:01.386Z",
       "issues": []
     },
     {
@@ -396,13 +396,13 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 110645,
-        "previousClose": 110630,
-        "previousCloseChangeAmount": 15,
+        "currentPrice": 110655,
+        "previousClose": 110645,
+        "previousCloseChangeAmount": 10,
         "previousCloseChangePct": 0.01,
-        "priceSession": "previous_close",
+        "priceSession": "intraday",
         "week52High": 110875,
-        "week52Low": 110405,
+        "week52Low": 110417,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
       },
@@ -411,7 +411,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:05.997Z",
+      "fetchedAt": "2026-06-01T06:06:03.183Z",
       "issues": []
     },
     {
@@ -421,11 +421,11 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 47220,
-        "previousClose": 48565,
-        "previousCloseChangeAmount": -1345,
-        "previousCloseChangePct": -2.77,
-        "priceSession": "previous_close",
+        "currentPrice": 49755,
+        "previousClose": 47220,
+        "previousCloseChangeAmount": 2535,
+        "previousCloseChangePct": 5.37,
+        "priceSession": "intraday",
         "week52High": 64630,
         "week52Low": 11675,
         "currency": "KRW",
@@ -436,7 +436,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:03.846Z",
+      "fetchedAt": "2026-06-01T06:06:00.950Z",
       "issues": []
     },
     {
@@ -446,12 +446,12 @@
       "currency": "KRW",
       "snapshot": {
         "priceDate": "2026-06-01",
-        "currentPrice": 104490,
-        "previousClose": 104470,
-        "previousCloseChangeAmount": 20,
-        "previousCloseChangePct": 0.02,
-        "priceSession": "previous_close",
-        "week52High": 104490,
+        "currentPrice": 104500,
+        "previousClose": 104490,
+        "previousCloseChangeAmount": 10,
+        "previousCloseChangePct": 0.01,
+        "priceSession": "intraday",
+        "week52High": 104500,
         "week52Low": 102925,
         "currency": "KRW",
         "sourceNote": "Naver Finance KR snapshot fetch"
@@ -461,7 +461,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:06.311Z",
+      "fetchedAt": "2026-06-01T06:06:03.483Z",
       "issues": []
     },
     {
@@ -470,22 +470,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 259.21,
         "previousCloseChangePct": 7.36,
         "week52High": 421.48,
         "week52Low": 224.13,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:57.738Z",
+      "fetchedAt": "2026-06-01T06:05:51.332Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -494,22 +496,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 516.1,
         "previousCloseChangePct": -0.38,
         "week52High": 527.2,
         "week52Low": 108.62,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:00.341Z",
+      "fetchedAt": "2026-06-01T06:05:54.416Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -518,22 +522,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 47.28,
         "previousCloseChangePct": -4.77,
-        "week52High": 50.72,
+        "week52High": 50.73,
         "week52Low": 6.68,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:03.492Z",
+      "fetchedAt": "2026-06-01T06:05:59.657Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -542,22 +548,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 446.77,
         "previousCloseChangePct": 4.73,
-        "week52High": 448.9,
+        "week52High": 446.77,
         "week52Low": 234.9,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:59.991Z",
+      "fetchedAt": "2026-06-01T06:05:53.919Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -566,22 +574,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 287.75,
         "previousCloseChangePct": 0.5,
         "week52High": 412.7,
         "week52Low": 243.3,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:59.243Z",
+      "fetchedAt": "2026-06-01T06:05:52.544Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -590,22 +600,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 191.1,
         "previousCloseChangePct": 8.47,
         "week52High": 276.8,
         "week52Low": 163.52,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:57.417Z",
+      "fetchedAt": "2026-06-01T06:05:49.688Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -614,22 +626,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 82.48,
         "previousCloseChangePct": -0.01,
-        "week52High": 83.83,
+        "week52High": 83.76,
         "week52Low": 45.28,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:02.111Z",
+      "fetchedAt": "2026-06-01T06:05:57.121Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -638,22 +652,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 400.6,
         "previousCloseChangePct": -0.33,
         "week52High": 435.43,
         "week52Low": 311.9,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:58.899Z",
+      "fetchedAt": "2026-06-01T06:05:51.593Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -662,22 +678,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 225.79,
         "previousCloseChangePct": -0.77,
         "week52High": 303.8,
         "week52Low": 160,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:02.795Z",
+      "fetchedAt": "2026-06-01T06:05:58.568Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -686,22 +704,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 245.47,
         "previousCloseChangePct": 3.25,
-        "week52High": 464.56,
+        "week52High": 465.81,
         "week52Low": 185,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:57.417Z",
+      "fetchedAt": "2026-06-01T06:05:50.026Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -710,22 +730,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 211.14,
         "previousCloseChangePct": -1.45,
         "week52High": 236.54,
         "week52Low": 132.92,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:00.693Z",
+      "fetchedAt": "2026-06-01T06:05:55.364Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -734,22 +756,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 66.88,
         "previousCloseChangePct": -1.78,
         "week52High": 193.84,
         "week52Low": 44.88,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:07.718Z",
+      "fetchedAt": "2026-06-01T06:05:59.904Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -758,22 +782,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 114.8,
         "previousCloseChangePct": -0.23,
         "week52High": 119.21,
         "week52Low": 71.55,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:42:02.435Z",
+      "fetchedAt": "2026-06-01T06:05:57.471Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     },
     {
@@ -782,22 +808,24 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-01",
+        "priceDate": "2026-05-29",
         "currentPrice": 160.23,
         "previousCloseChangePct": -0.03,
         "week52High": 219.82,
         "week52Low": 132.66,
         "currency": "USD",
-        "sourceNote": "Smart Trading KIS quote API snapshot fetch"
+        "sourceNote": "Naver US/worldstock fallback snapshot fetch"
       },
-      "source": "smart-trading",
+      "source": "naver-us",
+      "fallbackSource": "naver-us",
       "health": "fresh",
-      "staleDays": 0,
+      "staleDays": 3,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-05-31T21:41:59.641Z",
+      "fetchedAt": "2026-06-01T06:05:53.058Z",
       "issues": [
-        "Yahoo fetch failed: HTTP 401"
+        "Yahoo fetch failed: HTTP 401",
+        "Smart Trading API fetch failed: SMART_TRADING_PRICE_API_ENABLED=false"
       ]
     }
   ]

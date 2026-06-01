@@ -7,6 +7,7 @@ import { ReasonPanel } from "@/components/reason-panel";
 import { SectorCard } from "@/components/sector-card";
 import { SmallCapPanel } from "@/components/small-cap-panel";
 import { SummaryCard } from "@/components/summary-card";
+import { ThemeRadarPanel } from "@/components/theme-radar-panel";
 import { TrendPanel } from "@/components/trend-panel";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -501,6 +502,8 @@ export default async function HomePage() {
           </div>
         ) : null}
       </section>
+
+      <ThemeRadarPanel themes={latest.themeRadar} />
 
       <section className="mt-4 grid gap-4 xl:grid-cols-[0.8fr_1.2fr]">
         <div className="space-y-4">

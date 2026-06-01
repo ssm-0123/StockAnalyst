@@ -16,6 +16,18 @@ export type ValidationSeverity = "info" | "warning" | "critical";
 export type ActionBias = "buy" | "hold" | "reduce" | "exit";
 export type TimeHorizon = "1-3d" | "1-3w" | "1-3m";
 export type MarketCycleStage = "early" | "mid" | "late";
+export type ThemeEventType =
+  | "person_visit"
+  | "policy"
+  | "regulation"
+  | "earnings_event"
+  | "corporate_action"
+  | "geopolitics"
+  | "social_issue"
+  | "product_launch"
+  | "conference"
+  | "other";
+export type ThemeTradability = "actionable" | "watch_after_spike" | "wait_for_confirmation" | "avoid_chase";
 
 export interface MarketRegimeAssessment {
   stage: MarketCycleStage;
@@ -165,6 +177,21 @@ export interface SmallCapIdea {
   validationIssues?: ValidationIssue[];
 }
 
+export interface ThemeRadarItem {
+  theme: string;
+  market: MarketCode;
+  eventType: ThemeEventType;
+  signalStrength: number;
+  sourceFreshness: "today" | "1-3d" | "stale" | "unverified";
+  narrative: string;
+  affectedStocks: StockIdea[];
+  marketReaction: string;
+  tradability: ThemeTradability;
+  risk: string;
+  whatToWatch: string;
+  evidence?: string[];
+}
+
 export interface SmallCapTrackingMeta {
   ticker: string;
   consecutiveDays: number;
@@ -277,6 +304,7 @@ export interface DailyAnalysis {
   checkpoints: CheckpointItem[];
   analysisSuggestions?: AnalysisSuggestion[];
   legacySectorDecisions?: LegacySectorDecision[];
+  themeRadar?: ThemeRadarItem[];
   smallCapIdeas?: SmallCapIdea[];
   trendSummary?: TrendSummary;
   validationSummary?: ValidationSummary;

@@ -16,6 +16,9 @@ import {
   StockIdea,
   StockPriceSnapshot,
   StockStatus,
+  ThemeEventType,
+  ThemeRadarItem,
+  ThemeTradability,
   TrendSummary,
   WeeklyResultsReport,
 } from "@/lib/types";
@@ -52,6 +55,24 @@ const DATA_QUALITY = new Set<EvaluatedInsight["dataQuality"]>(["verified", "limi
 const LESSON_LIFECYCLE_STATUSES = new Set<LessonLifecycleStatus>(["active", "softened", "contradicted", "retired"]);
 const TREND_DIRECTIONS = new Set<TrendSummary["mostFrequentPromisingSector"]["trendDirection"]>(["up", "down", "flat"]);
 const MARKET_CYCLE_STAGES = new Set<MarketRegimeAssessment["stage"]>(["early", "mid", "late"]);
+const THEME_EVENT_TYPES = new Set<ThemeEventType>([
+  "person_visit",
+  "policy",
+  "regulation",
+  "earnings_event",
+  "corporate_action",
+  "geopolitics",
+  "social_issue",
+  "product_launch",
+  "conference",
+  "other",
+]);
+const THEME_TRADABILITY = new Set<ThemeTradability>([
+  "actionable",
+  "watch_after_spike",
+  "wait_for_confirmation",
+  "avoid_chase",
+]);
 const PRICE_SESSIONS = new Set<NonNullable<StockPriceSnapshot["priceSession"]>>([
   "previous_close",
   "intraday",
@@ -279,6 +300,38 @@ function normalizeSmallCapIdea(value: unknown): SmallCapIdea {
   };
 }
 
+function normalizeThemeRadarItem(value: unknown): ThemeRadarItem {
+  const input = asRecord(value);
+  const sourceFreshness =
+    input.sourceFreshness === "today" ||
+    input.sourceFreshness === "1-3d" ||
+    input.sourceFreshness === "stale" ||
+    input.sourceFreshness === "unverified"
+      ? input.sourceFreshness
+      : "unverified";
+
+  return {
+    theme: asString(input.theme, "테마 미입력"),
+    market: asMarketCode(input.market, "GLOBAL"),
+    eventType:
+      typeof input.eventType === "string" && THEME_EVENT_TYPES.has(input.eventType as ThemeEventType)
+        ? (input.eventType as ThemeEventType)
+        : "other",
+    signalStrength: asBoundedNumber(input.signalStrength),
+    sourceFreshness,
+    narrative: asString(input.narrative, "테마 설명 없음"),
+    affectedStocks: asArray(input.affectedStocks).map(normalizeStockIdea),
+    marketReaction: asString(input.marketReaction, "가격 반응 확인 필요"),
+    tradability:
+      typeof input.tradability === "string" && THEME_TRADABILITY.has(input.tradability as ThemeTradability)
+        ? (input.tradability as ThemeTradability)
+        : "wait_for_confirmation",
+    risk: asString(input.risk, "테마 과열과 뉴스 소멸 리스크를 확인해야 합니다."),
+    whatToWatch: asString(input.whatToWatch, "후속 보도, 공시, 거래대금 지속 여부를 확인합니다."),
+    evidence: asStringArray(input.evidence),
+  };
+}
+
 function normalizeTrendSummary(value: unknown): TrendSummary | undefined {
   const input = asRecord(value);
   if (!Object.keys(input).length) {
@@ -383,6 +436,7 @@ export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
     checkpoints: asArray(input.checkpoints).map(normalizeCheckpointItem),
     analysisSuggestions: asArray(input.analysisSuggestions).map(normalizeAnalysisSuggestion),
     legacySectorDecisions: asArray(input.legacySectorDecisions).map(normalizeLegacySectorDecision),
+    themeRadar: asArray(input.themeRadar).map(normalizeThemeRadarItem),
     smallCapIdeas: asArray(input.smallCapIdeas).map(normalizeSmallCapIdea),
     trendSummary: normalizeTrendSummary(input.trendSummary),
   };

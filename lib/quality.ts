@@ -7,6 +7,7 @@ import {
   SnapshotHealth,
   StockIdea,
   StockPriceSnapshot,
+  ThemeRadarItem,
   ValidationIssue,
   ValidationSummary,
   WeeklyResultsReport,
@@ -204,6 +205,13 @@ export function enrichSmallCapIdea(idea: SmallCapIdea, analysisDate: string): Sm
   };
 }
 
+export function enrichThemeRadarItem(item: ThemeRadarItem, analysisDate: string): ThemeRadarItem {
+  return {
+    ...item,
+    affectedStocks: item.affectedStocks.map((stock) => enrichStockIdea(stock, analysisDate)),
+  };
+}
+
 export function enrichSectorEntry(sector: SectorEntry, analysisDate: string): SectorEntry {
   const stocks = sector.stocks.map((stock) => enrichStockIdea(stock, analysisDate));
   const highConfidenceStocks = stocks.filter((stock) => stock.confidenceLevel === "high").length;
@@ -262,9 +270,11 @@ export function enrichDailyAnalysis(analysis: DailyAnalysis): DailyAnalysis {
   const promisingSectors = analysis.promisingSectors.map((sector) => enrichSectorEntry(sector, analysis.date));
   const cautionSectors = analysis.cautionSectors.map((sector) => enrichSectorEntry(sector, analysis.date));
   const smallCapIdeas = analysis.smallCapIdeas?.map((idea) => enrichSmallCapIdea(idea, analysis.date)) ?? [];
+  const themeRadar = analysis.themeRadar?.map((item) => enrichThemeRadarItem(item, analysis.date)) ?? [];
   const counts = countHealth([
     ...promisingSectors.flatMap((sector) => sector.stocks),
     ...cautionSectors.flatMap((sector) => sector.stocks),
+    ...themeRadar.flatMap((item) => item.affectedStocks),
     ...smallCapIdeas,
   ]);
 
@@ -272,6 +282,7 @@ export function enrichDailyAnalysis(analysis: DailyAnalysis): DailyAnalysis {
     ...analysis,
     promisingSectors,
     cautionSectors,
+    themeRadar,
     smallCapIdeas,
     validationSummary: buildValidationSummary(counts),
   };

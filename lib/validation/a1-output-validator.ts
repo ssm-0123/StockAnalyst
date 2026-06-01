@@ -52,6 +52,20 @@ const MAX_PRICE_SOURCE_AGE_HOURS = 6;
 
 const WEAK_TEXT = new Set(["", "n/a", "na", "none", "tbd", "todo", "미정", "없음", "근거 없음"]);
 const EVIDENCE_CONFIDENCE_LEVELS = new Set(["verified", "inferred", "weak"]);
+const THEME_EVENT_TYPES = new Set([
+  "person_visit",
+  "policy",
+  "regulation",
+  "earnings_event",
+  "corporate_action",
+  "geopolitics",
+  "social_issue",
+  "product_launch",
+  "conference",
+  "other",
+]);
+const THEME_SOURCE_FRESHNESS = new Set(["today", "1-3d", "stale", "unverified"]);
+const THEME_TRADABILITY = new Set(["actionable", "watch_after_spike", "wait_for_confirmation", "avoid_chase"]);
 
 function isRecord(value: unknown): value is JsonRecord {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -609,6 +623,76 @@ function validateSmallCaps(
   });
 }
 
+function validateThemeRadar(
+  input: JsonRecord,
+  analysisDate: Date | null,
+  referenceTimestamp: Date | null,
+  canonicalPrices: Map<string, CanonicalPriceEntry>,
+  pricesGeneratedAt: string | undefined,
+  issues: A1ValidationIssue[],
+) {
+  asArray(input.themeRadar).forEach((themeValue, themeIndex) => {
+    const themePath = `themeRadar[${themeIndex}]`;
+    if (!isRecord(themeValue)) {
+      return;
+    }
+
+    for (const field of ["theme", "eventType", "narrative", "marketReaction", "tradability", "risk", "whatToWatch"] as const) {
+      if (!hasText(themeValue[field])) {
+        issues.push(issue("incomplete-theme-radar", "warn", `${themePath}.${field}`, `Theme radar item is missing ${field}.`));
+      }
+    }
+
+    if (!hasFiniteNumber(themeValue.signalStrength)) {
+      issues.push(issue("missing-theme-signal-strength", "warn", `${themePath}.signalStrength`, "Theme radar needs a 0-100 signalStrength."));
+    } else if (themeValue.signalStrength < 0 || themeValue.signalStrength > 100) {
+      issues.push(issue("invalid-theme-signal-strength", "warn", `${themePath}.signalStrength`, "Theme radar signalStrength must be between 0 and 100."));
+    }
+
+    if (hasText(themeValue.eventType) && !THEME_EVENT_TYPES.has(asString(themeValue.eventType))) {
+      issues.push(issue("invalid-theme-event-type", "warn", `${themePath}.eventType`, "Theme radar eventType is not in the allowed set."));
+    }
+
+    if (hasText(themeValue.sourceFreshness) && !THEME_SOURCE_FRESHNESS.has(asString(themeValue.sourceFreshness))) {
+      issues.push(issue("invalid-theme-source-freshness", "warn", `${themePath}.sourceFreshness`, "Theme radar sourceFreshness is not in the allowed set."));
+    }
+
+    if (hasText(themeValue.tradability) && !THEME_TRADABILITY.has(asString(themeValue.tradability))) {
+      issues.push(issue("invalid-theme-tradability", "warn", `${themePath}.tradability`, "Theme radar tradability is not in the allowed set."));
+    }
+
+    const contextText = [
+      themeValue.theme,
+      themeValue.narrative,
+      themeValue.marketReaction,
+      themeValue.whatToWatch,
+      ...asArray(themeValue.evidence).map(asString),
+    ]
+      .map(asString)
+      .filter(Boolean)
+      .join(" ");
+
+    if (!Array.isArray(themeValue.affectedStocks) || themeValue.affectedStocks.length === 0) {
+      issues.push(issue("missing-theme-affected-stocks", "warn", `${themePath}.affectedStocks`, "Theme radar should name affected stocks."));
+      return;
+    }
+
+    asArray(themeValue.affectedStocks).forEach((stockValue, stockIndex) => {
+      const stockPath = `${themePath}.affectedStocks[${stockIndex}]`;
+      if (!isRecord(stockValue)) {
+        return;
+      }
+
+      validateCanonicalPriceSnapshot(stockValue, stockPath, canonicalPrices, pricesGeneratedAt, issues);
+      validateEvidenceArray(stockValue.evidence, `${stockPath}.evidence`, issues);
+
+      if (stockValue.actionBias === "buy" || stockValue.isNew === true) {
+        validateBuyCandidate(stockValue, stockPath, contextText, analysisDate, referenceTimestamp, issues);
+      }
+    });
+  });
+}
+
 export function validateA1Output(value: unknown, options: A1ValidationOptions = {}): A1ValidationResult {
   const issues: A1ValidationIssue[] = [];
 
@@ -627,6 +711,7 @@ export function validateA1Output(value: unknown, options: A1ValidationOptions = 
   validateEvidenceArray(value.evidence, "evidence", issues);
   validateSectors(value, analysisDate, referenceTimestamp, canonicalPrices, pricesGeneratedAt, issues);
   validateSmallCaps(value, analysisDate, referenceTimestamp, canonicalPrices, pricesGeneratedAt, issues);
+  validateThemeRadar(value, analysisDate, referenceTimestamp, canonicalPrices, pricesGeneratedAt, issues);
 
   return resultFromIssues(issues);
 }
