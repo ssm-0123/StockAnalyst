@@ -2,6 +2,7 @@ import { AlertTriangle, CheckCircle2, Clock, Shield, Target } from "lucide-react
 
 import { Badge } from "@/components/ui/badge";
 import { getMarketBadgeVariant, getMarketLabel } from "@/lib/market";
+import { actionBiasLabel } from "@/lib/public-display";
 import type { ActionBias, DailyAnalysis, SmallCapIdea, StockIdea, StockPriceSnapshot } from "@/lib/types";
 
 export type DashboardActionCandidate = {
@@ -18,13 +19,6 @@ export type DashboardActionCandidate = {
   priceSnapshot?: StockPriceSnapshot;
   snapshotHealth?: StockIdea["snapshotHealth"] | SmallCapIdea["snapshotHealth"];
 };
-
-function actionBiasLabel(actionBias: ActionBias) {
-  if (actionBias === "buy") return "관심확대";
-  if (actionBias === "hold") return "관찰";
-  if (actionBias === "reduce") return "주의축소";
-  return "제외";
-}
 
 function actionBiasVariant(actionBias: ActionBias) {
   if (actionBias === "buy") return "positive" as const;
@@ -190,9 +184,9 @@ export function ActionCommandPanel({
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Badge variant="positive">Buy {buyCandidates.length}</Badge>
-          <Badge variant="caution">Risk {riskCandidates.length}</Badge>
-          <Badge variant="neutral">Fresh {freshText}</Badge>
+          <Badge variant="positive">관심 {buyCandidates.length}</Badge>
+          <Badge variant="caution">주의 {riskCandidates.length}</Badge>
+          <Badge variant="neutral">가격 {freshText}</Badge>
         </div>
       </div>
 

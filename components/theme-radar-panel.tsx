@@ -1,6 +1,7 @@
 import { RadioTower, ShieldAlert } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
+import { actionBiasLabel } from "@/lib/public-display";
 import type { ThemeRadarItem } from "@/lib/types";
 
 function eventTypeLabel(value: ThemeRadarItem["eventType"]) {
@@ -90,7 +91,7 @@ export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
               <div className="flex flex-wrap gap-2">
                 {theme.affectedStocks.slice(0, 6).map((stock) => (
                   <Badge key={`${theme.theme}-${stock.market}-${stock.ticker}`} variant="neutral">
-                    {stock.ticker} {stock.actionBias ? `/${stock.actionBias}` : ""}
+                    {stock.ticker} {stock.actionBias ? `· ${actionBiasLabel(stock.actionBias)}` : ""}
                   </Badge>
                 ))}
               </div>

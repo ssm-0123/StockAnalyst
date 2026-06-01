@@ -3,6 +3,7 @@ import { Gem, Sparkles, TriangleAlert } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getMarketBadgeVariant, getMarketLabel } from "@/lib/market";
+import { actionBiasLabel, priceSourceLabel } from "@/lib/public-display";
 import { ConfidenceLevel, SmallCapIdea, SmallCapTrackingMeta, SnapshotHealth } from "@/lib/types";
 
 function formatPrice(value?: number, market?: SmallCapIdea["market"], currency?: "KRW" | "USD") {
@@ -60,13 +61,6 @@ function actionBiasVariant(actionBias: ReturnType<typeof resolveActionBias>) {
   if (actionBias === "buy") return "positive" as const;
   if (actionBias === "hold") return "neutral" as const;
   return "caution" as const;
-}
-
-function actionBiasLabel(actionBias: ReturnType<typeof resolveActionBias>) {
-  if (actionBias === "buy") return "관심확대";
-  if (actionBias === "hold") return "관찰";
-  if (actionBias === "reduce") return "주의축소";
-  return "제외";
 }
 
 function timeHorizonLabel(value?: SmallCapIdea["timeHorizon"]) {
@@ -210,7 +204,7 @@ export function SmallCapPanel({
                   </div>
                 </div>
                 <div className="mt-3 text-xs text-slate-500">
-                  {snapshot?.sourceNote ?? "자동화가 저장한 기대주 분석 시점 가격입니다."}
+                  {priceSourceLabel(snapshot, "자동화가 저장한 기대주 분석 시점 가격입니다.")}
                 </div>
                 {idea.validationIssues?.length ? (
                   <div className="mt-3 flex flex-wrap gap-2">

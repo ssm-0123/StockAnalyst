@@ -2,6 +2,7 @@ import { ArrowDownRight, ArrowUpRight, ChevronDown, Minus, Sparkles, X } from "l
 
 import { Badge } from "@/components/ui/badge";
 import { getMarketBadgeVariant, getMarketLabel } from "@/lib/market";
+import { actionBiasLabel, priceSourceLabel } from "@/lib/public-display";
 import { cn } from "@/lib/utils";
 import { ConfidenceLevel, SnapshotHealth, StockIdea } from "@/lib/types";
 
@@ -104,13 +105,6 @@ function actionBiasVariant(actionBias: ReturnType<typeof resolveActionBias>) {
   if (actionBias === "buy") return "positive" as const;
   if (actionBias === "hold") return "neutral" as const;
   return "caution" as const;
-}
-
-function actionBiasLabel(actionBias: ReturnType<typeof resolveActionBias>) {
-  if (actionBias === "buy") return "관심확대";
-  if (actionBias === "hold") return "관찰";
-  if (actionBias === "reduce") return "주의축소";
-  return "제외";
 }
 
 function timeHorizonLabel(value?: StockIdea["timeHorizon"]) {
@@ -250,7 +244,7 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
           </div>
         </div>
         <div className="mt-3 flex flex-wrap gap-3 text-xs text-slate-500">
-          <span>{snapshot?.sourceNote ?? "자동화가 저장한 분석 시점 가격입니다."}</span>
+          <span>{priceSourceLabel(snapshot, "자동화가 저장한 분석 시점 가격입니다.")}</span>
         </div>
         {stock.validationIssues?.length ? (
           <div className="mt-3 flex flex-wrap gap-2">
