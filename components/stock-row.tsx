@@ -222,9 +222,13 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
             </p>
           </div>
         </div>
-        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+        <div className="mt-3 grid gap-3 lg:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200/80 bg-white p-3 lg:col-span-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Thesis</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">{stock.rationale}</p>
+          </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">관찰 메모</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Price Position</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">
               {stock.positioningNote ??
                 (actionBias === "buy"
@@ -233,13 +237,29 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
                     ? "관심 축소를 먼저 검토합니다."
                     : actionBias === "exit"
                       ? "관찰 종료 우선으로 봅니다."
-                      : "기존 관찰 유지가 기본입니다.")}
+                  : "기존 관찰 유지가 기본입니다.")}
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">무효화 조건</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Invalidation</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">
               {stock.invalidation ?? "핵심 논리를 깨는 실적, 수급, 가격 이탈이 나오면 재평가합니다."}
+            </p>
+          </div>
+          <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Confidence</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">
+              {confidenceLabel(stock.confidenceLevel)} research confidence. 가격 스냅샷은 {healthLabel(stock.snapshotHealth)} 상태입니다.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Risk</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">
+              {actionBias === "buy"
+                ? "가격 추격, 촉매 지연, 주도 섹터 차익실현이 핵심 리스크입니다."
+                : actionBias === "hold"
+                  ? "기존 논리는 유지하되 신규 진입 보상은 제한적일 수 있습니다."
+                  : "약세 신호가 유지되는 동안 회복 확인 전까지 보수적으로 봅니다."}
             </p>
           </div>
         </div>

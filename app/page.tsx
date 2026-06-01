@@ -1,18 +1,22 @@
-import { Activity, AlertCircle, BarChart3, CheckCircle2, RefreshCw, Shield } from "lucide-react";
+import { Activity, AlertCircle, CheckCircle2, Shield } from "lucide-react";
 
 import { ActionCommandPanel, type DashboardActionCandidate } from "@/components/action-command-panel";
 import { AnalysisSuggestionPanel } from "@/components/analysis-suggestion-panel";
 import { ChangeList } from "@/components/change-list";
 import { CheckpointList } from "@/components/checkpoint-list";
+import { MarketRegimeConsole } from "@/components/market-regime-console";
 import { ReasonPanel } from "@/components/reason-panel";
+import { ResearchMethodology } from "@/components/research-methodology";
+import { ResearchOpportunities } from "@/components/research-opportunities";
+import { RiskRadar } from "@/components/risk-radar";
+import { RotationMap } from "@/components/rotation-map";
 import { SectorCard } from "@/components/sector-card";
 import { SmallCapPanel } from "@/components/small-cap-panel";
 import { ThemeRadarPanel } from "@/components/theme-radar-panel";
+import { TrackRecordPreview } from "@/components/track-record-preview";
 import { TrendPanel } from "@/components/trend-panel";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { buildLegacySectorDecisions, getLatestAnalysis, getLatestResultsReport } from "@/lib/dashboard";
-import { withBasePath } from "@/lib/site";
 import { ActionBias, SmallCapIdea, StockIdea } from "@/lib/types";
 
 function resolveStockActionBias(stock: StockIdea): ActionBias {
@@ -87,7 +91,7 @@ export default async function HomePage() {
         confidenceLevel: idea.confidenceLevel,
         snapshotHealth: idea.snapshotHealth,
         thesis: idea.thesis,
-        keyDrivers: [idea.followThroughNote].filter(Boolean),
+        keyDrivers: [idea.followThroughNote].filter((item): item is string => Boolean(item)),
         valuationNote: idea.valuationNote,
         liquidityNote: idea.liquidityNote,
         catalysts: idea.catalysts ?? [],
@@ -124,52 +128,21 @@ export default async function HomePage() {
 
   return (
     <main className="dashboard-shell">
-      <section className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-slate-950 px-6 py-8 text-white shadow-panel sm:px-8">
-        <div className="absolute inset-0 bg-grid bg-[size:44px_44px] opacity-10" />
-        <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-emerald-500/20 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-rose-500/10 blur-3xl" />
-        <div className="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-3xl">
-            <div className="mb-4 flex flex-wrap items-center gap-2">
-              <Badge variant="positive">일일 섹터 분석</Badge>
-              <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
-                JSON 기반 UI
-              </Badge>
-            </div>
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl">
-              오늘 중요한 내용을 한눈에 확인합니다.
-            </h1>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
-              이 대시보드는 `public/data/latest.json`에 기록된 자동화 분석 결과를 그대로 표시하며,
-              빠른 스캔과 일일 시장 점검에 맞춰 정보를 간결하게 정리합니다.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Button asChild variant="secondary">
-              <a href={withBasePath("/Results")}>
-                <BarChart3 className="mr-2 size-4" />
-                결과 평가 보기
-              </a>
-            </Button>
-            <Button asChild variant="secondary">
-              <a href={withBasePath("/data/latest.json")} target="_blank" rel="noreferrer">
-                <RefreshCw className="mr-2 size-4" />
-                최신 JSON 열기
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <MarketRegimeConsole latest={latest} />
 
+      <RotationMap latest={latest} />
       <ActionCommandPanel latest={latest} buyCandidates={buyCandidates} riskCandidates={riskCandidates} />
-
       <ThemeRadarPanel themes={latest.themeRadar} />
+      <ResearchOpportunities candidates={buyCandidates} />
+      <RiskRadar latest={latest} />
+      <TrackRecordPreview report={latestResults} />
+      <ResearchMethodology latest={latest} />
 
       <details className="group mt-4 rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">
         <summary className="flex cursor-pointer list-none flex-wrap items-center justify-between gap-3">
           <div>
-            <h2 className="section-title">상세 분석 전체 보기</h2>
-            <p className="section-caption">섹터 카드, 판단 근거, Results 교훈, 체크포인트, 중소형주, 7일 트렌드를 접어서 보관합니다.</p>
+            <h2 className="section-title">Supporting Detail Archive</h2>
+            <p className="section-caption">섹터 카드, 원문 근거, 체크포인트, 중소형주, 7일 트렌드는 보조 자료로 접어둡니다.</p>
           </div>
           <Badge variant="neutral">펼치기</Badge>
         </summary>
