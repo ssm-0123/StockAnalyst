@@ -20,10 +20,10 @@ export type DashboardActionCandidate = {
 };
 
 function actionBiasLabel(actionBias: ActionBias) {
-  if (actionBias === "buy") return "매수";
-  if (actionBias === "hold") return "유지";
-  if (actionBias === "reduce") return "축소";
-  return "정리";
+  if (actionBias === "buy") return "관심확대";
+  if (actionBias === "hold") return "관찰";
+  if (actionBias === "reduce") return "주의축소";
+  return "제외";
 }
 
 function actionBiasVariant(actionBias: ActionBias) {
@@ -144,7 +144,7 @@ function ActionList({
                       </span>
                     </div>
                     <div className="rounded-xl bg-white px-3 py-2">
-                      <span className="text-slate-500">진입 메모 </span>
+                      <span className="text-slate-500">관찰 메모 </span>
                       <span className="font-semibold text-slate-900">
                         {candidate.positioningNote ?? "상세 조건 확인"}
                       </span>
@@ -183,10 +183,10 @@ export function ActionCommandPanel({
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
             <CheckCircle2 className="size-4" />
-            오늘의 운용판
+            오늘의 분석판
           </div>
           <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
-            행동 후보를 먼저 보고, 상세 논리는 펼쳐서 확인합니다.
+            핵심 분석 신호를 먼저 보고, 상세 논리는 펼쳐서 확인합니다.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -222,17 +222,17 @@ export function ActionCommandPanel({
 
       <div className="mt-5 grid gap-4 xl:grid-cols-2">
         <ActionList
-          title="새로 살 후보"
+          title="관심 확대 후보"
           countLabel={`${buyCandidates.length}개`}
           candidates={buyCandidates}
-          emptyText="이번 결과에는 즉시 매수 후보가 없습니다."
+          emptyText="이번 결과에는 즉시 관심 확대 후보가 없습니다."
           tone="positive"
         />
         <ActionList
-          title="줄이거나 피할 후보"
+          title="주의/축소 신호"
           countLabel={`${riskCandidates.length}개`}
           candidates={riskCandidates}
-          emptyText="이번 결과에는 명시적인 축소/정리 후보가 없습니다."
+          emptyText="이번 결과에는 명시적인 주의/축소 신호가 없습니다."
           tone="caution"
         />
       </div>

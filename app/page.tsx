@@ -141,7 +141,7 @@ export default async function HomePage() {
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
               이 대시보드는 `public/data/latest.json`에 기록된 자동화 분석 결과를 그대로 표시하며,
-              빠른 스캔과 일일 의사결정에 맞춰 정보를 간결하게 정리합니다.
+              빠른 스캔과 일일 시장 점검에 맞춰 정보를 간결하게 정리합니다.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">

@@ -55,7 +55,7 @@ export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
             단기 테마 신호 {items.length}개
           </p>
         </div>
-        <Badge variant="neutral">A2 최종 검증 필요</Badge>
+        <Badge variant="neutral">추가 확인 필요</Badge>
       </div>
 
       <div className="mt-3 grid gap-2">

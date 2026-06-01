@@ -107,10 +107,10 @@ function actionBiasVariant(actionBias: ReturnType<typeof resolveActionBias>) {
 }
 
 function actionBiasLabel(actionBias: ReturnType<typeof resolveActionBias>) {
-  if (actionBias === "buy") return "매수";
-  if (actionBias === "hold") return "유지";
-  if (actionBias === "reduce") return "축소";
-  return "정리";
+  if (actionBias === "buy") return "관심확대";
+  if (actionBias === "hold") return "관찰";
+  if (actionBias === "reduce") return "주의축소";
+  return "제외";
 }
 
 function timeHorizonLabel(value?: StockIdea["timeHorizon"]) {
@@ -187,11 +187,11 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
         </div>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">행동 판단</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">분석 신호</p>
             <p className="mt-1 text-sm font-semibold text-slate-900">{actionBiasLabel(actionBias)}</p>
           </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">권장 기간</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">관찰 기간</p>
             <p className="mt-1 text-sm font-semibold text-slate-900">{timeHorizonLabel(stock.timeHorizon)}</p>
           </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
@@ -230,16 +230,16 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
         </div>
         <div className="mt-3 grid gap-3 sm:grid-cols-2">
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">비중 메모</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">관찰 메모</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">
               {stock.positioningNote ??
                 (actionBias === "buy"
-                  ? "신규 진입 또는 비중 확대 후보입니다."
+                  ? "신규 관심 또는 관찰 확대 후보입니다."
                   : actionBias === "reduce"
-                    ? "비중 축소를 먼저 검토합니다."
+                    ? "관심 축소를 먼저 검토합니다."
                     : actionBias === "exit"
-                      ? "전량 정리 우선으로 봅니다."
-                      : "기존 보유분 유지가 기본입니다.")}
+                      ? "관찰 종료 우선으로 봅니다."
+                      : "기존 관찰 유지가 기본입니다.")}
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
