@@ -59,8 +59,13 @@ const RESULTS_ATTRIBUTION_CATEGORIES = new Set<ResultsAttribution["category"]>([
   "sector-selection",
   "stock-selection",
   "timing",
+  "late-entry",
+  "crowded-trade",
+  "weak-catalyst",
   "price-data",
+  "macro-headwind",
   "event-risk",
+  "thesis-invalidated",
   "risk-management",
 ]);
 const TREND_DIRECTIONS = new Set<TrendSummary["mostFrequentPromisingSector"]["trendDirection"]>(["up", "down", "flat"]);

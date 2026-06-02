@@ -14,8 +14,13 @@ function attributionLabel(category?: ResultsAttributionCategory) {
   if (category === "sector-selection") return "섹터 선택";
   if (category === "stock-selection") return "종목 선택";
   if (category === "timing") return "타이밍";
+  if (category === "late-entry") return "후행 진입";
+  if (category === "crowded-trade") return "혼잡 거래";
+  if (category === "weak-catalyst") return "약한 촉매";
   if (category === "price-data") return "가격 데이터";
+  if (category === "macro-headwind") return "매크로 역풍";
   if (category === "event-risk") return "이벤트 리스크";
+  if (category === "thesis-invalidated") return "논리 훼손";
   if (category === "risk-management") return "리스크 관리";
   return "미분류";
 }

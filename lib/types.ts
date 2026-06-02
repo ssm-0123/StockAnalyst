@@ -237,8 +237,13 @@ export type ResultsAttributionCategory =
   | "sector-selection"
   | "stock-selection"
   | "timing"
+  | "late-entry"
+  | "crowded-trade"
+  | "weak-catalyst"
   | "price-data"
+  | "macro-headwind"
   | "event-risk"
+  | "thesis-invalidated"
   | "risk-management";
 
 export interface ResultsAttribution {

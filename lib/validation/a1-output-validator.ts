@@ -436,6 +436,32 @@ function validateResearchFrame(candidate: JsonRecord, path: string, issues: A1Va
       ),
     );
   }
+
+  if (candidate.actionBias === "buy" || candidate.isNew === true) {
+    const requiredResearchFields = [
+      ["thesis", "missing-research-thesis", "Interest-expansion candidates need a concise thesis."],
+      ["catalyst", "missing-research-catalyst", "Interest-expansion candidates need a catalyst, not only a broad theme."],
+      ["alreadyPriced", "missing-already-priced", "Interest-expansion candidates should say how much of the idea is already priced in."],
+      ["confidenceReason", "missing-confidence-reason", "Interest-expansion candidates should explain the confidence level."],
+    ] as const;
+
+    for (const [field, code, message] of requiredResearchFields) {
+      if (!hasText(candidate[field])) {
+        issues.push(issue(code, "warn", `${path}.${field}`, message));
+      }
+    }
+
+    if (!hasText(candidate.watchDate) && !hasText(candidate.watchCondition)) {
+      issues.push(
+        issue(
+          "missing-watch-condition",
+          "warn",
+          `${path}.watchCondition`,
+          "Interest-expansion candidates need a watchDate or watchCondition for follow-up validation.",
+        ),
+      );
+    }
+  }
 }
 
 function validateMarketRegime(input: JsonRecord, issues: A1ValidationIssue[]) {
@@ -703,6 +729,27 @@ function validateThemeRadar(
       if (!hasText(themeValue[field])) {
         issues.push(issue("incomplete-theme-radar", "warn", `${themePath}.${field}`, `Theme radar item is missing ${field}.`));
       }
+    }
+
+    const researchSignals = [
+      hasText(themeValue.eventType) || hasText(themeValue.narrative),
+      Array.isArray(themeValue.affectedStocks) && themeValue.affectedStocks.length > 0,
+      hasText(themeValue.risk),
+      hasText(themeValue.whatToWatch) || hasText(themeValue.watchDate),
+      hasText(themeValue.alreadyPriced),
+      hasText(themeValue.invalidation),
+      asArray(themeValue.evidence).length > 0,
+    ].filter(Boolean).length;
+
+    if (researchSignals < 4) {
+      issues.push(
+        issue(
+          "weak-theme-research-frame",
+          "warn",
+          themePath,
+          "Theme radar should connect catalyst, beneficiaries, risk, watch condition, pricing, invalidation, and evidence before it reads as research.",
+        ),
+      );
     }
 
     if (!hasFiniteNumber(themeValue.signalStrength)) {
