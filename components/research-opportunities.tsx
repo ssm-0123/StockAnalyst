@@ -32,7 +32,7 @@ function timeHorizonLabel(value?: DashboardActionCandidate["timeHorizon"]) {
 }
 
 function pickCatalyst(candidate: DashboardActionCandidate) {
-  return candidate.catalysts?.[0] ?? candidate.keyDrivers?.[0] ?? candidate.positioningNote ?? candidate.rationale;
+  return candidate.catalysts?.[0] ?? candidate.keyDrivers?.[0] ?? candidate.watchCondition ?? candidate.positioningNote ?? candidate.rationale;
 }
 
 function pickRisk(candidate: DashboardActionCandidate) {
@@ -84,15 +84,17 @@ export function ResearchOpportunities({ candidates }: { candidates: DashboardAct
 
               <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-3">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Thesis</p>
-                <p className="mt-1 text-sm leading-6 text-slate-700">{candidate.thesis ?? candidate.rationale}</p>
+                <p className="mt-1 line-clamp-4 text-sm leading-6 text-slate-700">
+                  {candidate.stockThesis ?? candidate.thesis ?? candidate.rationale}
+                </p>
               </div>
 
               <div className="mt-3 grid gap-3">
                 <div className="rounded-xl border border-slate-200 bg-white p-3">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Catalyst</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-700">{pickCatalyst(candidate)}</p>
+                  <p className="mt-1 line-clamp-3 text-sm leading-6 text-slate-700">{pickCatalyst(candidate)}</p>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2">
+                <div className="grid gap-3 sm:grid-cols-3">
                   <div className="rounded-xl border border-slate-200 bg-white p-3">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Price Position</p>
                     <p className="mt-1 text-sm font-semibold text-slate-950">
@@ -101,12 +103,19 @@ export function ResearchOpportunities({ candidates }: { candidates: DashboardAct
                     <p className="mt-1 text-xs text-slate-500">52주 고점 대비 {formatRelativeToHigh(snapshot?.currentPrice, snapshot?.week52High)}</p>
                   </div>
                   <div className="rounded-xl border border-slate-200 bg-white p-3">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Already Priced?</p>
+                    <p className="mt-1 text-sm font-semibold text-slate-950">{candidate.alreadyPriced ?? "가격 반영도 확인 중"}</p>
+                    <p className="mt-1 text-xs text-slate-500">{candidate.watchDate ?? candidate.watchCondition ?? "다음 A1에서 재확인"}</p>
+                  </div>
+                  <div className="rounded-xl border border-slate-200 bg-white p-3">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Confidence</p>
                     <p className="mt-1 flex items-center gap-2 text-sm font-semibold text-slate-950">
                       <BadgeCheck className="size-4 text-emerald-700" />
                       {confidenceLabel(candidate.confidenceLevel)}
                     </p>
-                    <p className="mt-1 text-xs text-slate-500">{candidate.snapshotHealth ?? "snapshot"} data</p>
+                    <p className="mt-1 line-clamp-2 text-xs text-slate-500">
+                      {candidate.confidenceReason ?? `${candidate.snapshotHealth ?? "snapshot"} data`}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -117,15 +126,26 @@ export function ResearchOpportunities({ candidates }: { candidates: DashboardAct
                     <ShieldAlert className="size-4" />
                     Risk
                   </div>
-                  <p className="mt-1 text-sm leading-6 text-slate-700">{pickRisk(candidate)}</p>
+                  <p className="mt-1 line-clamp-3 text-sm leading-6 text-slate-700">{pickRisk(candidate)}</p>
                 </div>
                 <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Invalidation</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-700">
+                  <p className="mt-1 line-clamp-3 text-sm leading-6 text-slate-700">
                     {candidate.invalidation ?? "핵심 논리를 깨는 가격, 수급, 실적 변화가 나오면 재평가합니다."}
                   </p>
                 </div>
               </div>
+              <details className="mt-3 rounded-xl border border-slate-200 bg-white px-3 py-2">
+                <summary className="cursor-pointer list-none text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                  Full Research Note
+                </summary>
+                <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
+                  <p>{candidate.rationale}</p>
+                  {candidate.positioningNote ? <p><span className="font-semibold text-slate-950">Positioning: </span>{candidate.positioningNote}</p> : null}
+                  {candidate.valuationNote ? <p><span className="font-semibold text-slate-950">Valuation: </span>{candidate.valuationNote}</p> : null}
+                  {candidate.liquidityNote ? <p><span className="font-semibold text-slate-950">Liquidity: </span>{candidate.liquidityNote}</p> : null}
+                </div>
+              </details>
             </article>
           );
         })}

@@ -15,8 +15,13 @@ export type DashboardActionCandidate = {
   actionBias: ActionBias;
   timeHorizon?: StockIdea["timeHorizon"] | SmallCapIdea["timeHorizon"];
   rationale: string;
+  stockThesis?: string;
   positioningNote?: string;
   invalidation?: string;
+  alreadyPriced?: string;
+  watchDate?: string;
+  watchCondition?: string;
+  confidenceReason?: string;
   priceSnapshot?: StockPriceSnapshot;
   snapshotHealth?: StockIdea["snapshotHealth"] | SmallCapIdea["snapshotHealth"];
   confidenceLevel?: ConfidenceLevel;

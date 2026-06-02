@@ -61,8 +61,13 @@ export default async function HomePage() {
           actionBias: resolveStockActionBias(stock),
           timeHorizon: stock.timeHorizon,
           rationale: stock.rationale,
+          stockThesis: stock.thesis,
           positioningNote: stock.positioningNote,
           invalidation: stock.invalidation,
+          alreadyPriced: stock.alreadyPriced,
+          watchDate: stock.watchDate,
+          watchCondition: stock.watchCondition,
+          confidenceReason: stock.confidenceReason,
           priceSnapshot: stock.priceSnapshot,
           confidenceLevel: stock.confidenceLevel,
           snapshotHealth: stock.snapshotHealth,
@@ -70,8 +75,8 @@ export default async function HomePage() {
           keyDrivers: sector.keyDrivers ?? [],
           valuationNote: undefined,
           liquidityNote: undefined,
-          catalysts: [],
-          risks: sector.risks ?? sector.headwinds ?? [],
+          catalysts: [stock.catalyst, ...(stock.catalysts ?? [])].filter((item): item is string => Boolean(item)),
+          risks: [...(stock.risks ?? []), ...(sector.risks ?? sector.headwinds ?? [])],
         })),
     ),
     ...(latest.smallCapIdeas ?? [])
@@ -85,8 +90,13 @@ export default async function HomePage() {
         actionBias: resolveSmallCapActionBias(idea),
         timeHorizon: idea.timeHorizon,
         rationale: idea.whyNow,
+        stockThesis: idea.thesis,
         positioningNote: idea.positioningNote,
         invalidation: idea.invalidation,
+        alreadyPriced: idea.alreadyPriced,
+        watchDate: idea.watchDate,
+        watchCondition: idea.watchCondition,
+        confidenceReason: idea.confidenceReason,
         priceSnapshot: idea.priceSnapshot,
         confidenceLevel: idea.confidenceLevel,
         snapshotHealth: idea.snapshotHealth,
@@ -135,7 +145,7 @@ export default async function HomePage() {
       <ThemeRadarPanel themes={latest.themeRadar} />
       <ResearchOpportunities candidates={buyCandidates} />
       <RiskRadar latest={latest} />
-      <TrackRecordPreview report={latestResults} />
+      <TrackRecordPreview report={latestResults} history={resultsHistory} />
       <ResearchMethodology latest={latest} />
 
       <details className="group mt-4 rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">

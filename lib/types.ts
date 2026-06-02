@@ -78,10 +78,18 @@ export interface StockIdea {
   companyName: string;
   market: MarketCode;
   rationale: string;
+  thesis?: string;
+  catalyst?: string;
+  catalysts?: string[];
+  risks?: string[];
   isNew?: boolean;
   change: StockStatus;
   actionBias?: ActionBias;
   timeHorizon?: TimeHorizon;
+  alreadyPriced?: string;
+  watchDate?: string;
+  watchCondition?: string;
+  confidenceReason?: string;
   invalidation?: string;
   positioningNote?: string;
   priceSnapshot?: StockPriceSnapshot;
@@ -171,6 +179,10 @@ export interface SmallCapIdea {
   liquidityNote: string;
   catalysts: string[];
   risks: string[];
+  alreadyPriced?: string;
+  watchDate?: string;
+  watchCondition?: string;
+  confidenceReason?: string;
   priceSnapshot?: StockPriceSnapshot;
   confidenceLevel?: ConfidenceLevel;
   snapshotHealth?: SnapshotHealth;
@@ -189,6 +201,9 @@ export interface ThemeRadarItem {
   tradability: ThemeTradability;
   risk: string;
   whatToWatch: string;
+  watchDate?: string;
+  alreadyPriced?: string;
+  invalidation?: string;
   evidence?: string[];
 }
 

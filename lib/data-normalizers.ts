@@ -177,6 +177,10 @@ function normalizeStockIdea(value: unknown): StockIdea {
     companyName: asString(input.companyName, "이름 미확인"),
     market: asMarketCode(input.market, "GLOBAL"),
     rationale: asString(input.rationale, "근거가 아직 비어 있습니다."),
+    thesis: asOptionalString(input.thesis),
+    catalyst: asOptionalString(input.catalyst),
+    catalysts: asStringArray(input.catalysts),
+    risks: asStringArray(input.risks),
     isNew: typeof input.isNew === "boolean" ? input.isNew : undefined,
     change: asStockStatus(input.change),
     actionBias:
@@ -187,6 +191,10 @@ function normalizeStockIdea(value: unknown): StockIdea {
       input.timeHorizon === "1-3d" || input.timeHorizon === "1-3w" || input.timeHorizon === "1-3m"
         ? input.timeHorizon
         : undefined,
+    alreadyPriced: asOptionalString(input.alreadyPriced),
+    watchDate: asOptionalString(input.watchDate),
+    watchCondition: asOptionalString(input.watchCondition),
+    confidenceReason: asOptionalString(input.confidenceReason),
     invalidation: asOptionalString(input.invalidation),
     positioningNote: asOptionalString(input.positioningNote),
     priceSnapshot: normalizePriceSnapshot(input.priceSnapshot),
@@ -306,6 +314,10 @@ function normalizeSmallCapIdea(value: unknown): SmallCapIdea {
     liquidityNote: asString(input.liquidityNote, "유동성 메모 없음"),
     catalysts: asStringArray(input.catalysts),
     risks: asStringArray(input.risks),
+    alreadyPriced: asOptionalString(input.alreadyPriced),
+    watchDate: asOptionalString(input.watchDate),
+    watchCondition: asOptionalString(input.watchCondition),
+    confidenceReason: asOptionalString(input.confidenceReason),
     priceSnapshot: normalizePriceSnapshot(input.priceSnapshot),
   };
 }
@@ -338,6 +350,9 @@ function normalizeThemeRadarItem(value: unknown): ThemeRadarItem {
         : "wait_for_confirmation",
     risk: asString(input.risk, "테마 과열과 뉴스 소멸 리스크를 확인해야 합니다."),
     whatToWatch: asString(input.whatToWatch, "후속 보도, 공시, 거래대금 지속 여부를 확인합니다."),
+    watchDate: asOptionalString(input.watchDate),
+    alreadyPriced: asOptionalString(input.alreadyPriced),
+    invalidation: asOptionalString(input.invalidation),
     evidence: asStringArray(input.evidence),
   };
 }
