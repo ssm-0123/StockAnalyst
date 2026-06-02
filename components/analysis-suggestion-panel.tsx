@@ -36,9 +36,9 @@ export function AnalysisSuggestionPanel({ suggestions }: { suggestions?: LegacyS
     <section className="mt-4 rounded-[1.75rem] border border-white/70 bg-white/90 p-5 shadow-panel">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h2 className="section-title">과거 추천 섹터 후속 판단</h2>
+          <h2 className="section-title">Previous Leader Review</h2>
           <p className="section-caption">
-            예전에 상위 추천이었지만 지금 Top 3에서 빠진 섹터를 계속 들고 갈지, 줄일지, 정리할지 판단합니다.
+            과거 상위 리더가 아직 유효한지, 줄여야 하는지, 재진입 조건만 남았는지 보조 근거로 확인합니다.
           </p>
         </div>
         <Badge variant="neutral">{suggestions.length}개 판단</Badge>
@@ -71,7 +71,7 @@ export function AnalysisSuggestionPanel({ suggestions }: { suggestions?: LegacyS
               </div>
               <p className="mt-3 text-sm leading-6 text-slate-700">{item.rationale}</p>
               <div className="mt-4 rounded-2xl border border-slate-200/80 bg-white/80 p-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">후속 기준</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Revival Condition</p>
                 <p className="mt-1 text-sm leading-6 text-slate-700">{item.triggerNote}</p>
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -79,7 +79,7 @@ export function AnalysisSuggestionPanel({ suggestions }: { suggestions?: LegacyS
               </div>
               {item.resultsSummary ? (
                 <div className="mt-3 rounded-2xl border border-slate-200/80 bg-white/80 p-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Results 근거</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Why</p>
                   <p className="mt-1 text-sm leading-6 text-slate-700">{item.resultsSummary}</p>
                 </div>
               ) : null}

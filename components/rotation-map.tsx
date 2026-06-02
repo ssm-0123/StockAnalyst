@@ -23,11 +23,11 @@ export function RotationMap({ latest }: { latest: DailyAnalysis }) {
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <GitBranch className="size-4" />
-            Rotation Map
+            Forward View
           </div>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">자금 이동 방향</h2>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Expected Rotation</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-            현재 강한 주도 섹터와 다음 순환 후보를 분리해서 봅니다.
+            현재 주도 섹터를 복기하는 데서 멈추지 않고, 다음 자금 이동 가설을 분리해서 봅니다.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -53,7 +53,7 @@ export function RotationMap({ latest }: { latest: DailyAnalysis }) {
         </div>
 
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Next Rotation Candidates</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Forward Rotation Candidates</p>
           <div className="mt-3 grid gap-2">
             {rotations.map((item, index) => {
               const { market, label } = splitRotationLabel(item);

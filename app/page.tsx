@@ -6,6 +6,7 @@ import { ChangeList } from "@/components/change-list";
 import { CheckpointList } from "@/components/checkpoint-list";
 import { MarketRegimeConsole } from "@/components/market-regime-console";
 import { ReasonPanel } from "@/components/reason-panel";
+import { RegimeChangePanel } from "@/components/regime-change-panel";
 import { ResearchMethodology } from "@/components/research-methodology";
 import { ResearchOpportunities } from "@/components/research-opportunities";
 import { RiskRadar } from "@/components/risk-radar";
@@ -140,6 +141,7 @@ export default async function HomePage() {
     <main className="dashboard-shell">
       <MarketRegimeConsole latest={latest} />
 
+      <RegimeChangePanel latest={latest} previousDay={previousDay} />
       <RotationMap latest={latest} />
       <ActionCommandPanel latest={latest} buyCandidates={buyCandidates} riskCandidates={riskCandidates} />
       <ThemeRadarPanel themes={latest.themeRadar} />
