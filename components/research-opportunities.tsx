@@ -82,7 +82,7 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
           <div className="rounded-xl border border-slate-200 bg-white p-3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Already Priced?</p>
             <p className="mt-1 text-sm font-semibold text-slate-950">{candidate.alreadyPriced ?? "가격 반영도 확인 중"}</p>
-            <p className="mt-1 text-xs text-slate-500">{candidate.watchDate ?? candidate.watchCondition ?? "다음 A1에서 재확인"}</p>
+            <p className="mt-1 text-xs text-slate-500">{candidate.watchDate ?? candidate.watchCondition ?? "다음 Market Intelligence에서 재확인"}</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Confidence</p>

@@ -1,16 +1,16 @@
-export type A1ValidationSeverity = "pass" | "warn" | "fail";
+export type MarketIntelligenceValidationSeverity = "pass" | "warn" | "fail";
 
-export type A1ValidationIssue = {
+export type MarketIntelligenceValidationIssue = {
   code: string;
-  severity: Exclude<A1ValidationSeverity, "pass">;
+  severity: Exclude<MarketIntelligenceValidationSeverity, "pass">;
   path: string;
   message: string;
 };
 
-export type A1ValidationResult = {
+export type MarketIntelligenceValidationResult = {
   valid: boolean;
-  severity: A1ValidationSeverity;
-  issues: A1ValidationIssue[];
+  severity: MarketIntelligenceValidationSeverity;
+  issues: MarketIntelligenceValidationIssue[];
 };
 
 type JsonRecord = Record<string, unknown>;
@@ -34,12 +34,17 @@ type CanonicalPriceEntry = {
   snapshot?: CanonicalPriceSnapshot;
 };
 
-export type A1ValidationOptions = {
+export type MarketIntelligenceValidationOptions = {
   pricesSnapshot?: {
     generatedAt?: string;
     entries?: CanonicalPriceEntry[];
   } | null;
 };
+
+export type A1ValidationSeverity = MarketIntelligenceValidationSeverity;
+export type A1ValidationIssue = MarketIntelligenceValidationIssue;
+export type A1ValidationResult = MarketIntelligenceValidationResult;
+export type A1ValidationOptions = MarketIntelligenceValidationOptions;
 
 const REQUIRED_MARKET_REGIME_FIELDS = [
   "stage",
@@ -124,14 +129,14 @@ function hoursBetween(older: Date, newer: Date) {
 
 function issue(
   code: string,
-  severity: A1ValidationIssue["severity"],
+  severity: MarketIntelligenceValidationIssue["severity"],
   path: string,
   message: string,
-): A1ValidationIssue {
+): MarketIntelligenceValidationIssue {
   return { code, severity, path, message };
 }
 
-function resultFromIssues(issues: A1ValidationIssue[]): A1ValidationResult {
+function resultFromIssues(issues: MarketIntelligenceValidationIssue[]): MarketIntelligenceValidationResult {
   const severity = issues.some((item) => item.severity === "fail")
     ? "fail"
     : issues.some((item) => item.severity === "warn")
@@ -151,7 +156,7 @@ function extractSourceTimestamp(sourceNote: unknown): Date | null {
   return parseDate(generatedAt);
 }
 
-function buildCanonicalPriceMap(pricesSnapshot: A1ValidationOptions["pricesSnapshot"]) {
+function buildCanonicalPriceMap(pricesSnapshot: MarketIntelligenceValidationOptions["pricesSnapshot"]) {
   const entries = pricesSnapshot?.entries ?? [];
   const map = new Map<string, CanonicalPriceEntry>();
   for (const entry of entries) {
@@ -180,7 +185,7 @@ function validateCanonicalPriceSnapshot(
   path: string,
   canonicalPrices: Map<string, CanonicalPriceEntry>,
   pricesGeneratedAt: string | undefined,
-  issues: A1ValidationIssue[],
+  issues: MarketIntelligenceValidationIssue[],
 ) {
   const key = priceSnapshotKey(candidate.market, candidate.ticker);
   if (!key) {
@@ -200,7 +205,7 @@ function validateCanonicalPriceSnapshot(
         "missing-canonical-price-snapshot",
         "fail",
         `${path}.priceSnapshot`,
-        "Candidate is present in prices_snapshot.json but Agent #1 did not embed the canonical priceSnapshot.",
+        "Candidate is present in prices_snapshot.json but Market Intelligence did not embed the canonical priceSnapshot.",
       ),
     );
     return;
@@ -212,7 +217,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-price-date-mismatch",
         "fail",
         `${path}.priceSnapshot.priceDate`,
-        `Agent #1 priceDate must match prices_snapshot.json (${expected.priceDate}).`,
+        `Market Intelligence priceDate must match prices_snapshot.json (${expected.priceDate}).`,
       ),
     );
   }
@@ -223,7 +228,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-current-price-mismatch",
         "fail",
         `${path}.priceSnapshot.currentPrice`,
-        `Agent #1 currentPrice must match prices_snapshot.json (${expected.currentPrice}).`,
+        `Market Intelligence currentPrice must match prices_snapshot.json (${expected.currentPrice}).`,
       ),
     );
   }
@@ -234,7 +239,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-previous-close-mismatch",
         "fail",
         `${path}.priceSnapshot.previousClose`,
-        `Agent #1 previousClose must match prices_snapshot.json (${expected.previousClose}).`,
+        `Market Intelligence previousClose must match prices_snapshot.json (${expected.previousClose}).`,
       ),
     );
   }
@@ -245,7 +250,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-change-amount-mismatch",
         "fail",
         `${path}.priceSnapshot.previousCloseChangeAmount`,
-        `Agent #1 previousCloseChangeAmount must match prices_snapshot.json (${expected.previousCloseChangeAmount}).`,
+        `Market Intelligence previousCloseChangeAmount must match prices_snapshot.json (${expected.previousCloseChangeAmount}).`,
       ),
     );
   }
@@ -256,7 +261,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-change-pct-mismatch",
         "fail",
         `${path}.priceSnapshot.previousCloseChangePct`,
-        `Agent #1 previousCloseChangePct must match prices_snapshot.json (${expected.previousCloseChangePct}).`,
+        `Market Intelligence previousCloseChangePct must match prices_snapshot.json (${expected.previousCloseChangePct}).`,
       ),
     );
   }
@@ -267,7 +272,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-price-session-mismatch",
         "fail",
         `${path}.priceSnapshot.priceSession`,
-        `Agent #1 priceSession must match prices_snapshot.json (${expected.priceSession}).`,
+        `Market Intelligence priceSession must match prices_snapshot.json (${expected.priceSession}).`,
       ),
     );
   }
@@ -278,7 +283,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-week52-high-mismatch",
         "fail",
         `${path}.priceSnapshot.week52High`,
-        `Agent #1 week52High must match prices_snapshot.json (${expected.week52High}).`,
+        `Market Intelligence week52High must match prices_snapshot.json (${expected.week52High}).`,
       ),
     );
   }
@@ -289,7 +294,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-week52-low-mismatch",
         "fail",
         `${path}.priceSnapshot.week52Low`,
-        `Agent #1 week52Low must match prices_snapshot.json (${expected.week52Low}).`,
+        `Market Intelligence week52Low must match prices_snapshot.json (${expected.week52Low}).`,
       ),
     );
   }
@@ -300,7 +305,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-currency-mismatch",
         "fail",
         `${path}.priceSnapshot.currency`,
-        `Agent #1 currency must match prices_snapshot.json (${expected.currency}).`,
+        `Market Intelligence currency must match prices_snapshot.json (${expected.currency}).`,
       ),
     );
   }
@@ -312,7 +317,7 @@ function validateCanonicalPriceSnapshot(
         "canonical-price-source-generation-mismatch",
         "fail",
         `${path}.priceSnapshot.sourceNote`,
-        `Agent #1 sourceNote must reference prices_snapshot generatedAt=${pricesGeneratedAt}.`,
+        `Market Intelligence sourceNote must reference prices_snapshot generatedAt=${pricesGeneratedAt}.`,
       ),
     );
   }
@@ -403,7 +408,7 @@ function hasPricePositionText(text: string) {
   ]);
 }
 
-function validateResearchFrame(candidate: JsonRecord, path: string, issues: A1ValidationIssue[]) {
+function validateResearchFrame(candidate: JsonRecord, path: string, issues: MarketIntelligenceValidationIssue[]) {
   const actionBias = asString(candidate.actionBias);
   if (!ACTION_BIASES.has(actionBias)) {
     issues.push(issue("missing-action-bias", "warn", `${path}.actionBias`, "Every public stock idea needs an actionBias analysis signal."));
@@ -464,7 +469,7 @@ function validateResearchFrame(candidate: JsonRecord, path: string, issues: A1Va
   }
 }
 
-function validateMarketRegime(input: JsonRecord, issues: A1ValidationIssue[]) {
+function validateMarketRegime(input: JsonRecord, issues: MarketIntelligenceValidationIssue[]) {
   const marketRegime = input.marketRegime;
 
   if (!isRecord(marketRegime)) {
@@ -482,7 +487,7 @@ function validateMarketRegime(input: JsonRecord, issues: A1ValidationIssue[]) {
           `missing-market-regime-${field}`,
           "fail",
           `marketRegime.${field}`,
-          `marketRegime.${field} is required for publishable Agent #1 output.`,
+          `marketRegime.${field} is required for publishable Market Intelligence output.`,
         ),
       );
     }
@@ -494,7 +499,7 @@ function validatePriceSnapshot(
   path: string,
   analysisDate: Date | null,
   referenceTimestamp: Date | null,
-  issues: A1ValidationIssue[],
+  issues: MarketIntelligenceValidationIssue[],
 ) {
   if (!isRecord(snapshot)) {
     issues.push(issue("missing-price-snapshot", "fail", `${path}.priceSnapshot`, "Buy candidate needs a saved price snapshot."));
@@ -555,7 +560,7 @@ function validatePriceSnapshot(
   }
 }
 
-function validateEvidenceArray(value: unknown, path: string, issues: A1ValidationIssue[]) {
+function validateEvidenceArray(value: unknown, path: string, issues: MarketIntelligenceValidationIssue[]) {
   if (value === undefined) {
     return;
   }
@@ -601,7 +606,7 @@ function validateBuyCandidate(
   contextText: string,
   analysisDate: Date | null,
   referenceTimestamp: Date | null,
-  issues: A1ValidationIssue[],
+  issues: MarketIntelligenceValidationIssue[],
 ) {
   validatePriceSnapshot(candidate.priceSnapshot, path, analysisDate, referenceTimestamp, issues);
 
@@ -651,7 +656,7 @@ function validateSectors(
   referenceTimestamp: Date | null,
   canonicalPrices: Map<string, CanonicalPriceEntry>,
   pricesGeneratedAt: string | undefined,
-  issues: A1ValidationIssue[],
+  issues: MarketIntelligenceValidationIssue[],
 ) {
   for (const group of ["promisingSectors", "cautionSectors"] as const) {
     asArray(input[group]).forEach((sectorValue, sectorIndex) => {
@@ -696,7 +701,7 @@ function validateSmallCaps(
   referenceTimestamp: Date | null,
   canonicalPrices: Map<string, CanonicalPriceEntry>,
   pricesGeneratedAt: string | undefined,
-  issues: A1ValidationIssue[],
+  issues: MarketIntelligenceValidationIssue[],
 ) {
   asArray(input.smallCapIdeas).forEach((ideaValue, index) => {
     const ideaPath = `smallCapIdeas[${index}]`;
@@ -717,7 +722,7 @@ function validateThemeRadar(
   referenceTimestamp: Date | null,
   canonicalPrices: Map<string, CanonicalPriceEntry>,
   pricesGeneratedAt: string | undefined,
-  issues: A1ValidationIssue[],
+  issues: MarketIntelligenceValidationIssue[],
 ) {
   asArray(input.themeRadar).forEach((themeValue, themeIndex) => {
     const themePath = `themeRadar[${themeIndex}]`;
@@ -828,12 +833,12 @@ function validateThemeRadar(
   });
 }
 
-export function validateA1Output(value: unknown, options: A1ValidationOptions = {}): A1ValidationResult {
-  const issues: A1ValidationIssue[] = [];
+export function validateMarketIntelligenceOutput(value: unknown, options: MarketIntelligenceValidationOptions = {}): MarketIntelligenceValidationResult {
+  const issues: MarketIntelligenceValidationIssue[] = [];
 
   if (!isRecord(value)) {
     return resultFromIssues([
-      issue("malformed-output", "fail", "$", "Agent #1 output must be a JSON object."),
+      issue("malformed-output", "fail", "$", "Market Intelligence output must be a JSON object."),
     ]);
   }
 
@@ -850,3 +855,5 @@ export function validateA1Output(value: unknown, options: A1ValidationOptions = 
 
   return resultFromIssues(issues);
 }
+
+export const validateA1Output = validateMarketIntelligenceOutput;
