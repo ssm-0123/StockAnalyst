@@ -23,11 +23,11 @@ export function RotationMap({ latest }: { latest: DailyAnalysis }) {
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <GitBranch className="size-4" />
-            Forward View
+            Money Flow Detail
           </div>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Expected Rotation</h2>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Rotation Map</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-            현재 주도 섹터를 복기하는 데서 멈추지 않고, 다음 자금 이동 가설을 분리해서 봅니다.
+            상단 Forward View의 자금 이동 가설을 현재 리더와 다음 후보로 나눠 다시 확인합니다.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">

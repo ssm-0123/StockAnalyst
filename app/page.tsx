@@ -4,6 +4,8 @@ import { ActionCommandPanel, type DashboardActionCandidate } from "@/components/
 import { AnalysisSuggestionPanel } from "@/components/analysis-suggestion-panel";
 import { ChangeList } from "@/components/change-list";
 import { CheckpointList } from "@/components/checkpoint-list";
+import { ForwardViewPanel } from "@/components/forward-view-panel";
+import { MarketMemoryPanel } from "@/components/market-memory-panel";
 import { MarketRegimeConsole } from "@/components/market-regime-console";
 import { ReasonPanel } from "@/components/reason-panel";
 import { RegimeChangePanel } from "@/components/regime-change-panel";
@@ -139,9 +141,10 @@ export default async function HomePage() {
 
   return (
     <main className="dashboard-shell">
-      <MarketRegimeConsole latest={latest} />
-
+      <ForwardViewPanel latest={latest} />
+      <MarketRegimeConsole latest={latest} history={history} />
       <RegimeChangePanel latest={latest} previousDay={previousDay} />
+      <MarketMemoryPanel report={latestResults} legacyDecisions={legacySectorDecisions} />
       <RotationMap latest={latest} />
       <ActionCommandPanel latest={latest} buyCandidates={buyCandidates} riskCandidates={riskCandidates} />
       <ThemeRadarPanel themes={latest.themeRadar} />

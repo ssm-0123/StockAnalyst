@@ -42,6 +42,10 @@ function rotationChanges(current: string[] = [], previous: string[] = []) {
   };
 }
 
+function splitLabel(value: string) {
+  return value.includes("|") ? value.split("|").map((part) => part.trim()).filter(Boolean).at(-1) ?? value : value;
+}
+
 function interpretation(current: MarketRegimeAssessment, previous?: MarketRegimeAssessment) {
   if (!previous) {
     return "이전 리포트가 충분하지 않아 이번 리포트의 현재 국면을 기준점으로 저장합니다.";
@@ -85,6 +89,69 @@ function MetricChange({ label, current, previous }: { label: string; current?: n
   );
 }
 
+function changeItems(latest: DailyAnalysis, current: MarketRegimeAssessment, previous?: MarketRegimeAssessment) {
+  if (!previous) {
+    return [
+      {
+        change: "이번 리포트를 새 기준점으로 저장합니다.",
+        impact: `Bullish/Watch for ${splitLabel(current.nextRotation?.[0] ?? latest.topOpportunity)}`,
+      },
+    ];
+  }
+
+  const items: Array<{ change: string; impact: string }> = [];
+  const crowdedness = metricDelta(current.crowdedness, previous.crowdedness) ?? 0;
+  const riskReward = metricDelta(current.riskReward, previous.riskReward) ?? 0;
+  const fragility = metricDelta(current.fragilityScore, previous.fragilityScore) ?? 0;
+  const rotation = metricDelta(current.rotationProbability, previous.rotationProbability) ?? 0;
+  const firstRotation = splitLabel(current.nextRotation?.[0] ?? latest.topOpportunity);
+
+  if (current.stage !== previous.stage) {
+    items.push({
+      change: `Market stage moved from ${stageLabel(previous.stage)} to ${stageLabel(current.stage)}.`,
+      impact: `Re-price exposure toward ${firstRotation}`,
+    });
+  }
+  if (rotation >= 3) {
+    items.push({
+      change: "Rotation pressure strengthened versus the previous report.",
+      impact: `Bullish for ${firstRotation}`,
+    });
+  }
+  if (crowdedness >= 3) {
+    items.push({
+      change: "Crowdedness increased in current leadership.",
+      impact: `Avoid chasing ${splitLabel(latest.topRisk)}`,
+    });
+  }
+  if (riskReward <= -3) {
+    items.push({
+      change: "Risk/reward deteriorated from the previous report.",
+      impact: "Favor price discipline and pullback entries",
+    });
+  } else if (riskReward >= 3) {
+    items.push({
+      change: "Risk/reward improved from the previous report.",
+      impact: `Constructive for ${firstRotation}`,
+    });
+  }
+  if (fragility >= 3) {
+    items.push({
+      change: "Fragility rose, making weak follow-through more expensive.",
+      impact: "Bearish for overcrowded leaders",
+    });
+  }
+
+  if (!items.length) {
+    items.push({
+      change: "The broad regime is stable, but rotation candidates changed at the margin.",
+      impact: `Neutral-to-constructive for ${firstRotation}`,
+    });
+  }
+
+  return items.slice(0, 3);
+}
+
 export function RegimeChangePanel({
   latest,
   previousDay,
@@ -98,6 +165,7 @@ export function RegimeChangePanel({
   if (!current) return null;
 
   const rotations = rotationChanges(current.nextRotation, previous?.nextRotation);
+  const changes = changeItems(latest, current, previous);
 
   return (
     <section className="mt-4 rounded-2xl border border-white/70 bg-white/90 p-5 shadow-panel">
@@ -115,6 +183,19 @@ export function RegimeChangePanel({
           <ArrowRight className="size-4 text-slate-400" />
           <Badge variant="positive">{latest.date}</Badge>
         </div>
+      </div>
+
+      <div className="mt-5 grid gap-3 lg:grid-cols-3">
+        {changes.map((item, index) => (
+          <div key={`regime-change-${index}`} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Change {index + 1}</p>
+            <p className="mt-2 text-sm font-semibold leading-6 text-slate-950">{item.change}</p>
+            <div className="mt-3 rounded-xl border border-white bg-white p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Market Impact</p>
+              <p className="mt-1 text-sm leading-6 text-slate-700">{item.impact}</p>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="mt-5 grid gap-3 lg:grid-cols-[0.9fr_1.1fr]">
