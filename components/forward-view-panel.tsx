@@ -1,6 +1,7 @@
 import { ArrowRight, Compass, Gauge, MoveRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
+import { withBasePath } from "@/lib/site";
 import type { DailyAnalysis } from "@/lib/types";
 
 function clampScore(value: number) {
@@ -11,8 +12,27 @@ function splitLabel(value: string) {
   return value.includes("|") ? value.split("|").map((part) => part.trim()).filter(Boolean).at(-1) ?? value : value;
 }
 
+function compactLabel(value: string) {
+  const label = splitLabel(value).replace(/^(KR|US)\s+/, "").trim();
+  const rules: Array<[RegExp, string]> = [
+    [/조선\/방산|KDDX|캐나다 방산/, "KDDX/방산"],
+    [/후공정|검사장비/, "후공정 검사장비"],
+    [/전력 인프라|전력 품질|전력 장비|데이터센터 capex/i, "AI 전력 인프라"],
+    [/AI 반도체|반도체\/네트워킹|HBM 대형주|반도체 ETF/i, "AI/HBM 리더"],
+    [/고베타 원전|데이터센터 옵션/i, "고베타 원전/데이터센터"],
+    [/현금성 대기|충격 후 현금성/, "현금성 대기"],
+    [/SaaS|데이터 구독/i, "SaaS/데이터 구독"],
+    [/항공|온라인 여행/, "항공/여행"],
+    [/Jensen Huang|physical AI/i, "Physical AI 협력"],
+    [/미국 고용|AI 리더 재가격/, "AI 리더 재가격"],
+  ];
+  const matched = rules.find(([pattern]) => pattern.test(label));
+  if (matched) return matched[1];
+  return label.length > 18 ? `${label.slice(0, 18).trim()}...` : label;
+}
+
 function unique(items: string[]) {
-  return Array.from(new Set(items.map((item) => splitLabel(item).trim()).filter(Boolean)));
+  return Array.from(new Set(items.map((item) => compactLabel(item).trim()).filter(Boolean)));
 }
 
 function sentence(value?: string) {
@@ -84,6 +104,14 @@ function moneyFlows(latest: DailyAnalysis) {
   return flows.slice(0, 3);
 }
 
+function actionSummary(latest: DailyAnalysis) {
+  const buckets = viewBuckets(latest);
+  const favor = buckets.favor.slice(0, 2).join(", ") || "clearer rotation candidates";
+  const neutral = buckets.neutral[0] ?? "confirmation-only themes";
+  const avoid = buckets.avoid.slice(0, 2).join(", ") || "crowded trades";
+  return `우선 관찰: ${favor}. ${neutral}은 확인 대기, ${avoid}는 회복 조건 전 추격 금지.`;
+}
+
 function Bucket({
   title,
   items,
@@ -118,16 +146,25 @@ export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
   const confidence = forwardConfidence(latest);
   const reasons = rationale(latest);
   const flows = moneyFlows(latest);
+  const summary = actionSummary(latest);
 
   return (
     <section className="rounded-2xl border border-slate-900 bg-slate-950 p-5 text-white shadow-panel sm:p-6">
       <div className="grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
         <div>
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="positive">Forward View</Badge>
-            <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
-              Next 1-2 Weeks
-            </Badge>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="positive">Forward View</Badge>
+              <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
+                Next 1-2 Weeks
+              </Badge>
+            </div>
+            <a
+              href={withBasePath("/Results")}
+              className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:bg-white/15"
+            >
+              Track Record
+            </a>
           </div>
           <h1 className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl">
             다음 자금 이동은 어디로 향하는가
@@ -135,6 +172,11 @@ export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-200">
             뉴스 요약이 아니라 현재 국면, 변화, 테마 반응을 묶어 다음 1-2주 리서치 우선순위를 제시합니다.
           </p>
+
+          <div className="mt-5 rounded-xl border border-emerald-300/30 bg-emerald-300/10 p-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Action Summary</p>
+            <p className="mt-2 text-base font-semibold leading-7 text-white">{summary}</p>
+          </div>
 
           <div className="mt-6 rounded-xl border border-white/10 bg-white/10 p-4">
             <div className="flex items-center justify-between gap-3">

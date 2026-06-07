@@ -148,6 +148,8 @@ function ThemeCard({ theme, featured }: { theme: ThemeRadarItem; featured?: bool
 
 export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
   const items = (themes ?? []).slice(0, 5);
+  const visibleItems = items.slice(0, 2);
+  const hiddenItems = items.slice(2);
 
   if (!items.length) {
     return null;
@@ -168,21 +170,26 @@ export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
             접힌 목록이 아니라 바로 읽을 수 있는 리서치 카드로 핵심 테마를 보여줍니다.
           </p>
         </div>
-        <Badge variant="neutral">{items.length} themes</Badge>
+        <Badge variant="neutral">{visibleItems.length}/{items.length} shown</Badge>
       </div>
 
       <div className="mt-5 grid gap-4">
-        {items.slice(0, 2).map((theme, index) => (
+        {visibleItems.map((theme, index) => (
           <ThemeCard key={`${theme.market}-${theme.theme}-${index}`} theme={theme} featured />
         ))}
       </div>
 
-      {items.length > 2 ? (
-        <div className="mt-4 grid gap-4 xl:grid-cols-3">
-          {items.slice(2).map((theme, index) => (
-            <ThemeCard key={`${theme.market}-${theme.theme}-${index + 2}`} theme={theme} />
-          ))}
-        </div>
+      {hiddenItems.length ? (
+        <details className="mt-4 rounded-2xl border border-sky-100 bg-white/70 p-4">
+          <summary className="cursor-pointer list-none text-sm font-semibold text-sky-800">
+            Show {hiddenItems.length} more theme signals
+          </summary>
+          <div className="mt-4 grid gap-4 xl:grid-cols-3">
+            {hiddenItems.map((theme, index) => (
+              <ThemeCard key={`${theme.market}-${theme.theme}-${index + 2}`} theme={theme} />
+            ))}
+          </div>
+        </details>
       ) : null}
     </section>
   );

@@ -76,15 +76,17 @@ function Metric({
   label,
   value,
   inverse,
+  help,
 }: {
   label: string;
   value?: number;
   inverse?: boolean;
+  help: string;
 }) {
   const score = clampScore(value);
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3" title={help}>
       <div className="flex items-center justify-between gap-3">
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">{label}</p>
         <p className="text-sm font-semibold text-slate-950">{score}</p>
@@ -153,10 +155,10 @@ export function MarketRegimeConsole({
 
         <div className="grid gap-3">
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            <Metric label="Crowdedness" value={regime.crowdedness} inverse />
-            <Metric label="Risk Reward" value={regime.riskReward} />
-            <Metric label="Rotation" value={regime.rotationProbability} />
-            <Metric label="Fragility" value={regime.fragilityScore} inverse />
+            <Metric label="Crowdedness" value={regime.crowdedness} inverse help="주도 테마에 가격과 관심이 얼마나 몰려 있는지 봅니다. 높을수록 추격 부담이 큽니다." />
+            <Metric label="Risk Reward" value={regime.riskReward} help="현재 가격에서 남은 보상 대비 위험을 봅니다. 높을수록 관찰 자리가 낫습니다." />
+            <Metric label="Rotation" value={regime.rotationProbability} help="다음 섹터나 테마로 자금이 이동할 가능성입니다." />
+            <Metric label="Fragility" value={regime.fragilityScore} inverse help="작은 충격에 시장이 흔들릴 가능성입니다. 높을수록 무효화 조건이 중요합니다." />
           </div>
           <div className="grid gap-3 lg:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
