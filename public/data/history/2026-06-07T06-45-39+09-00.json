@@ -1,14 +1,14 @@
 {
-  "date": "2026-06-08",
-  "lastUpdated": "2026-06-08T06:49:27+09:00",
-  "marketTone": "2026-06-08 가격 스냅샷 기준 AI 구조 수요는 유지되지만 미국 고용 서프라이즈와 Broadcom발 기대치 재설정이 late-crowded 충격을 계속 압박합니다. 3~10거래일 관점에서는 조선/방산 이벤트 방어, 테크윙 중심 후공정 생존주, ETN형 전력 품질주처럼 가격 방어 조건이 있는 후보만 신규 관심으로 선별합니다.",
+  "date": "2026-06-07",
+  "lastUpdated": "2026-06-07T06:45:39+09:00",
+  "marketTone": "2026-06-07 가격 스냅샷 기준 AI 구조 수요는 유지되지만 미국 고용 서프라이즈와 Broadcom발 기대치 재설정이 late-crowded 충격을 키웠습니다. 3~10거래일 관점에서는 조선/방산 이벤트 방어, 후공정 상대강도 생존주, ETN형 전력 품질주처럼 가격 방어 조건이 있는 후보만 선별합니다.",
   "marketRegime": {
     "stage": "late",
-    "regime": "미국은 5월 고용 서프라이즈와 AI 칩 기대치 재설정이 겹친 late risk-on 균열 국면입니다. 한국은 Jensen Huang 방한·physical AI 기대가 실제 회동으로 확인됐지만 KOSPI 반도체 집중 포지셔닝이 먼저 흔들려, 뉴스 추격보다 방어선 확인이 우선입니다.",
-    "crowdedness": 88,
-    "riskReward": 58,
-    "rotationProbability": 84,
-    "fragilityScore": 82,
+    "regime": "미국은 5월 고용 서프라이즈와 AI 칩 기대치 재설정이 겹친 late risk-on 균열 국면입니다. 한국은 Jensen Huang 방한·physical AI 기대가 실제 이벤트로 확인됐지만 KOSPI 반도체 집중 포지셔닝이 먼저 흔들려, 뉴스 추격보다 방어선 확인이 우선입니다.",
+    "crowdedness": 89,
+    "riskReward": 56,
+    "rotationProbability": 86,
+    "fragilityScore": 84,
     "breadth": "가격 스냅샷 기준 SK하이닉스 -9.92%, 삼성전자 -6.40%, KODEX 반도체 -6.61%, AVGO -7.92%, AMD -10.86%, NVDA -6.20%로 AI 리더 breadth가 동반 훼손됐습니다. 반면 HD현대중공업 +2.00%, 현대로템 -0.67%, 테크윙 +1.86%처럼 조선/방산과 후공정 일부만 상대 방어가 확인됐습니다.",
     "positioning": "AI/HBM 포지셔닝은 여전히 크지만 강한 뉴스가 가격 방어로 이어지지 못해 crowded trade의 손절 민감도가 커졌습니다. 신규 관심은 52주 고점 추격보다 지지선, 거래대금, 수주·정책 확인을 동시에 요구하는 관찰 후보로 제한합니다.",
     "nextRotation": [
@@ -24,8 +24,8 @@
   "newPicksToday": 4,
   "newCautionsToday": 7,
   "biggestChangeToday": {
-    "label": "AI 추격보다 방어선 선별",
-    "detail": "2026-06-08 스냅샷에서도 SK하이닉스 -9.92%, 삼성전자 -6.40%, AVGO -7.92%, AMD -10.86%, NVDA -6.20%로 AI 리더 가격 훼손이 핵심입니다. 신규 관심은 한화오션·현대로템·테크윙·ETN처럼 fresh 가격과 방어선이 동시에 있는 후보로 제한합니다."
+    "label": "방한 기대보다 가격 방어가 우선",
+    "detail": "Jensen Huang 방한과 physical AI 협력 뉴스는 강하지만 SK하이닉스 -9.92%, 삼성전자 -6.40%, NVDA -6.20%로 가격은 기대를 확인하지 못했습니다. 신규 관심은 한화오션·현대로템·테크윙·ETN처럼 fresh 가격과 방어선이 동시에 있는 후보로 제한합니다."
   },
   "promisingSectors": [
     {
@@ -78,7 +78,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 664000,
             "previousClose": 651000,
             "previousCloseChangeAmount": 13000,
@@ -119,7 +119,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 112200,
             "previousClose": 115100,
             "previousCloseChangeAmount": -2900,
@@ -160,7 +160,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 191400,
             "previousClose": 192700,
             "previousCloseChangeAmount": -1300,
@@ -224,7 +224,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 54700,
             "previousClose": 53700,
             "previousCloseChangeAmount": 1000,
@@ -265,7 +265,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 283000,
             "previousClose": 304000,
             "previousCloseChangeAmount": -21000,
@@ -306,7 +306,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 29100,
             "previousClose": 31700,
             "previousCloseChangeAmount": -2600,
@@ -370,7 +370,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 395.94,
             "previousCloseChangePct": -5.42,
             "week52High": 435.43,
@@ -408,7 +408,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 254.83,
             "previousCloseChangePct": -3.69,
             "week52High": 412.7,
@@ -446,7 +446,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 43355,
             "previousClose": 45680,
             "previousCloseChangeAmount": -2325,
@@ -512,7 +512,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 385.73,
             "previousCloseChangePct": -7.92,
             "week52High": 495,
@@ -550,7 +550,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 466.38,
             "previousCloseChangePct": -10.86,
             "week52High": 546.44,
@@ -588,7 +588,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 205.1,
             "previousCloseChangePct": -6.2,
             "week52High": 236.54,
@@ -649,7 +649,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 2070000,
             "previousClose": 2298000,
             "previousCloseChangeAmount": -228000,
@@ -690,7 +690,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 329000,
             "previousClose": 351500,
             "previousCloseChangeAmount": -22500,
@@ -731,7 +731,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 157180,
             "previousClose": 168300,
             "previousCloseChangeAmount": -11120,
@@ -795,7 +795,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 58.09,
             "previousCloseChangePct": -11.16,
             "week52High": 193.84,
@@ -833,7 +833,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 39.62,
             "previousCloseChangePct": -10.26,
             "week52High": 50.72,
@@ -871,7 +871,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 148.76,
             "previousCloseChangePct": -3.21,
             "week52High": 219.82,
@@ -885,9 +885,9 @@
   ],
   "changesSinceYesterday": [
     {
-      "type": "hold",
-      "title": "KDDX·캐나다 방산은 Top 1 유지하되 추격 금지",
-      "detail": "KDDX 입찰 경쟁과 한국·캐나다 방산·에너지 협력 보도는 한화오션의 이벤트 선택지를 넓혔습니다. 다만 확정 수주가 아니므로 HD현대중공업 추격보다 한화오션 110,000원, 현대로템 190,000원 방어 확인을 우선합니다."
+      "type": "upgrade",
+      "title": "KDDX에 캐나다 방산 패키지를 더해 Top 1 유지",
+      "detail": "KDDX 입찰 경쟁에 더해 한국·캐나다 방산·에너지 협력 보도가 나오며 한화오션의 이벤트 선택지가 넓어졌습니다. 다만 확정 수주가 아니므로 HD현대중공업 추격보다 한화오션 110,000원, 현대로템 190,000원 방어 확인을 우선합니다."
     },
     {
       "type": "downgrade",
@@ -921,7 +921,7 @@
     "policy": {
       "title": "KDDX·캐나다 방산·physical AI가 단기 이벤트",
       "summary": [
-        "KDDX 7조원대 경쟁과 보안감점 해석은 조선/방산 상대강도를 바꿀 수 있는 가까운 정책·법원 이벤트입니다.",
+        "KDDX 7조원대 경쟁과 보안감점 해석은 조선/방산 상대강도를 바꿀 수 있는 가까운 정책/법원 이벤트입니다.",
         "Jensen Huang 방한은 HBM·LPDDR·로봇·AI 연구센터 기대를 키웠지만, 가격이 확인되지 않은 대형 HBM주는 신규 상향에서 제외합니다."
       ],
       "affectedSectors": [
@@ -1115,7 +1115,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 385.73,
             "previousCloseChangePct": -7.92,
             "week52High": 495,
@@ -1153,7 +1153,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 466.38,
             "previousCloseChangePct": -10.86,
             "week52High": 546.44,
@@ -1191,7 +1191,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 205.1,
             "previousCloseChangePct": -6.2,
             "week52High": 236.54,
@@ -1227,7 +1227,7 @@
           "type": "price",
           "claim": "AVGO -7.92%, AMD -10.86%, NVDA -6.20%",
           "source": "public/data/prices_snapshot.json",
-          "asOf": "2026-06-08",
+          "asOf": "2026-06-07",
           "confidence": "verified"
         }
       ]
@@ -1236,7 +1236,7 @@
       "theme": "Jensen Huang 방한과 한국 physical AI 협력 기대",
       "market": "KR",
       "eventType": "person_visit",
-      "signalStrength": 76,
+      "signalStrength": 78,
       "sourceFreshness": "1-3d",
       "narrative": "Nvidia CEO의 방한은 HBM, LPDDR, 로봇, 자율주행, AI 연구센터 기대를 동시에 만들었지만, 가격은 HBM 대형주 추격보다 확인 대기 신호를 냈습니다.",
       "affectedStocks": [
@@ -1269,7 +1269,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 205.1,
             "previousCloseChangePct": -6.2,
             "week52High": 236.54,
@@ -1307,7 +1307,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 2070000,
             "previousClose": 2298000,
             "previousCloseChangeAmount": -228000,
@@ -1348,7 +1348,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 329000,
             "previousClose": 351500,
             "previousCloseChangeAmount": -22500,
@@ -1389,7 +1389,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 54700,
             "previousClose": 53700,
             "previousCloseChangeAmount": 1000,
@@ -1404,10 +1404,10 @@
       ],
       "marketReaction": "Korea JoongAng Daily는 Huang이 한국 메모리 수요와 현대차 로봇 파트너십, 서울 AI 연구센터 채용을 언급했다고 보도했습니다. 그러나 스냅샷상 SK하이닉스·삼성전자·NVDA는 모두 하락했습니다.",
       "tradability": "wait_for_confirmation",
-      "risk": "실제 회동은 확인됐지만 HBM 대형주 가격이 급락해, 계약·발주 확인 전에는 뉴스 추격보다 가격 회복 조건을 우선합니다.",
-      "whatToWatch": "SK하이닉스 2,150,000원, 삼성전자 340,000원 회복과 AI 연구센터·로봇 파트너십의 실제 계약화 여부",
+      "risk": "방문·회동은 강한 이야기지만 가격이 먼저 무너지면 단순 사진 이벤트는 이미 반영된 기대일 수 있습니다.",
+      "whatToWatch": "HBM 공급 계약, AI 연구센터 채용 후속, 현대차 로봇 파트너십의 실제 발주 여부",
       "watchDate": "2026-06-09 이후 후속 보도",
-      "alreadyPriced": "기대는 일부 반영, 가격은 미확인",
+      "alreadyPriced": "일부 반영, 대형주는 추격 부담 큼",
       "invalidation": "SK하이닉스 2,150,000원과 삼성전자 340,000원 회복 없이 후속 계약도 없으면 테마를 관찰로 낮춥니다.",
       "evidence": [
         {
@@ -1421,7 +1421,7 @@
           "type": "price",
           "claim": "SK하이닉스 -9.92%, 삼성전자 -6.40%, NVDA -6.20%",
           "source": "public/data/prices_snapshot.json",
-          "asOf": "2026-06-08",
+          "asOf": "2026-06-07",
           "confidence": "verified"
         }
       ]
@@ -1430,7 +1430,7 @@
       "theme": "KDDX·캐나다 방산 패키지 이벤트",
       "market": "KR",
       "eventType": "policy",
-      "signalStrength": 79,
+      "signalStrength": 78,
       "sourceFreshness": "1-3d",
       "narrative": "KDDX 입찰 경쟁은 국내 정책·법원 이벤트이고, 캐나다 방산·에너지 패키지는 한화오션 중심의 해외 선택지를 넓히는 이야기입니다. AI 리더 매도와 상관관계가 낮아 3~10거래일 상대강도 후보로 봅니다.",
       "affectedStocks": [
@@ -1463,7 +1463,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 664000,
             "previousClose": 651000,
             "previousCloseChangeAmount": 13000,
@@ -1504,7 +1504,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 112200,
             "previousClose": 115100,
             "previousCloseChangeAmount": -2900,
@@ -1545,7 +1545,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 191400,
             "previousClose": 192700,
             "previousCloseChangeAmount": -1300,
@@ -1584,7 +1584,7 @@
           "type": "price",
           "claim": "HD현대중공업 +2.00%, 한화오션 -2.52%, 현대로템 -0.67%",
           "source": "public/data/prices_snapshot.json",
-          "asOf": "2026-06-08",
+          "asOf": "2026-06-07",
           "confidence": "verified"
         }
       ]
@@ -1626,7 +1626,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 395.94,
             "previousCloseChangePct": -5.42,
             "week52High": 435.43,
@@ -1664,7 +1664,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 254.83,
             "previousCloseChangePct": -3.69,
             "week52High": 412.7,
@@ -1702,7 +1702,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "high",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 39.62,
             "previousCloseChangePct": -10.26,
             "week52High": 50.72,
@@ -1740,7 +1740,7 @@
           "timeHorizon": "1-3w",
           "confidenceLevel": "medium",
           "priceSnapshot": {
-            "priceDate": "2026-06-08",
+            "priceDate": "2026-06-07",
             "currentPrice": 43355,
             "previousClose": 45680,
             "previousCloseChangeAmount": -2325,
@@ -1772,7 +1772,7 @@
           "type": "price",
           "claim": "ETN -5.42%, CEG -3.69%, APLD -10.26%, KODEX 미국AI전력핵심인프라 -5.09%",
           "source": "public/data/prices_snapshot.json",
-          "asOf": "2026-06-08",
+          "asOf": "2026-06-07",
           "confidence": "verified"
         }
       ]
@@ -1811,7 +1811,7 @@
       "watchCondition": "54,000원 위에서 거래대금이 유지되고 한미반도체가 280,000원을 지키는지 확인합니다.",
       "confidenceReason": "fresh 가격과 상대강도는 긍정이나 대형 반도체 충격 때문에 medium입니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-08",
+        "priceDate": "2026-06-07",
         "currentPrice": 54700,
         "previousClose": 53700,
         "previousCloseChangeAmount": 1000,
@@ -1856,7 +1856,7 @@
       "watchCondition": "108,000원 회복과 거래대금 동반 증가가 필요합니다.",
       "confidenceReason": "fresh 가격이지만 핵심 조건 미달이라 hold입니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-08",
+        "priceDate": "2026-06-07",
         "currentPrice": 103000,
         "previousClose": 113400,
         "previousCloseChangeAmount": -10400,
@@ -1901,7 +1901,7 @@
       "watchCondition": "28,500원을 지키고 30,000원 위에서 거래대금이 늘어나는지 봅니다.",
       "confidenceReason": "fresh 가격이지만 상대강도 확인이 부족해 medium-low입니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-08",
+        "priceDate": "2026-06-07",
         "currentPrice": 29100,
         "previousClose": 31700,
         "previousCloseChangeAmount": -2600,
@@ -1946,7 +1946,7 @@
       "watchCondition": "45달러를 회복하고 계약 뉴스가 거래대금과 같이 나오는지 확인합니다.",
       "confidenceReason": "fresh 가격이나 조건 미달로 buy가 아닌 hold입니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-08",
+        "priceDate": "2026-06-07",
         "currentPrice": 39.62,
         "previousCloseChangePct": -10.26,
         "week52High": 50.72,
@@ -2027,7 +2027,7 @@
       }
     ]
   },
-  "priceSnapshotGeneratedAt": "2026-06-07T21:45:02.971Z",
+  "priceSnapshotGeneratedAt": "2026-06-06T21:43:53.979Z",
   "priceSnapshotSummary": {
     "total": 32,
     "fresh": 32,
