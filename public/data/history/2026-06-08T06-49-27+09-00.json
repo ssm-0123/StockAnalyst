@@ -1,0 +1,2041 @@
+{
+  "date": "2026-06-08",
+  "lastUpdated": "2026-06-08T06:49:27+09:00",
+  "marketTone": "2026-06-08 가격 스냅샷 기준 AI 구조 수요는 유지되지만 미국 고용 서프라이즈와 Broadcom발 기대치 재설정이 late-crowded 충격을 계속 압박합니다. 3~10거래일 관점에서는 조선/방산 이벤트 방어, 테크윙 중심 후공정 생존주, ETN형 전력 품질주처럼 가격 방어 조건이 있는 후보만 신규 관심으로 선별합니다.",
+  "marketRegime": {
+    "stage": "late",
+    "regime": "미국은 5월 고용 서프라이즈와 AI 칩 기대치 재설정이 겹친 late risk-on 균열 국면입니다. 한국은 Jensen Huang 방한·physical AI 기대가 실제 회동으로 확인됐지만 KOSPI 반도체 집중 포지셔닝이 먼저 흔들려, 뉴스 추격보다 방어선 확인이 우선입니다.",
+    "crowdedness": 88,
+    "riskReward": 58,
+    "rotationProbability": 84,
+    "fragilityScore": 82,
+    "breadth": "가격 스냅샷 기준 SK하이닉스 -9.92%, 삼성전자 -6.40%, KODEX 반도체 -6.61%, AVGO -7.92%, AMD -10.86%, NVDA -6.20%로 AI 리더 breadth가 동반 훼손됐습니다. 반면 HD현대중공업 +2.00%, 현대로템 -0.67%, 테크윙 +1.86%처럼 조선/방산과 후공정 일부만 상대 방어가 확인됐습니다.",
+    "positioning": "AI/HBM 포지셔닝은 여전히 크지만 강한 뉴스가 가격 방어로 이어지지 못해 crowded trade의 손절 민감도가 커졌습니다. 신규 관심은 52주 고점 추격보다 지지선, 거래대금, 수주·정책 확인을 동시에 요구하는 관찰 후보로 제한합니다.",
+    "nextRotation": [
+      "KR | KDDX·캐나다 방산 이벤트 방어",
+      "KR | 후공정 검사장비 상대강도 생존주",
+      "US | 전력 장비 품질주 눌림 확인",
+      "KR/US | AI 리더 충격 후 현금성 대기"
+    ],
+    "summary": "강한 구조 내러티브와 좋은 관찰 자리를 분리합니다. AI 리더는 회복 조건을 기다리고, 새 관심 확대는 가격이 먼저 버틴 조선/방산·후공정 선별주·전력 품질주에만 둡니다."
+  },
+  "topOpportunity": "KR 조선/방산 KDDX·캐나다 방산 이벤트 방어",
+  "topRisk": "AI 반도체 리더 기대치 과밀과 금리 재가격",
+  "newPicksToday": 4,
+  "newCautionsToday": 7,
+  "biggestChangeToday": {
+    "label": "AI 추격보다 방어선 선별",
+    "detail": "2026-06-08 스냅샷에서도 SK하이닉스 -9.92%, 삼성전자 -6.40%, AVGO -7.92%, AMD -10.86%, NVDA -6.20%로 AI 리더 가격 훼손이 핵심입니다. 신규 관심은 한화오션·현대로템·테크윙·ETN처럼 fresh 가격과 방어선이 동시에 있는 후보로 제한합니다."
+  },
+  "promisingSectors": [
+    {
+      "sectorName": "KR 조선/방산 KDDX·캐나다 방산 이벤트 방어",
+      "market": "KR",
+      "rank": 1,
+      "confidenceScore": 76,
+      "confidenceLevel": "medium",
+      "thesis": "KDDX 7조원대 입찰 경쟁과 캐나다 방산·에너지 패키지 뉴스가 AI 리더 매도와 다른 이벤트 흐름을 만들었습니다. 3~10거래일은 HD현대중공업 650,000원, 한화오션 110,000원, 현대로템 190,000원 방어가 확인되면 비AI 순환 후보로 더 관심을 받을 수 있습니다. 법원·방사청 일정 지연 또는 세 종목 동반 방어선 이탈 시 이 섹터 상향은 철회합니다.",
+      "keyDrivers": [
+        "KDDX 사업은 수주 규모와 보안감점 해석이 가까운 촉매라 AI 리더 매도와 다른 가격 반응을 만들 수 있습니다.",
+        "캐나다 CPSP·Project Beaver 보도는 한화오션 중심의 해외 방산 선택지를 넓히지만 아직 확정 수주가 아니어서 가격 방어가 먼저입니다.",
+        "HD현대중공업은 52주 고점에 가까워 추격보다 방어 확인, 한화오션과 현대로템은 고점 대비 여유가 있어 소액 탐색 후보입니다."
+      ],
+      "risks": [
+        "KDDX 일정 지연이나 감점 해석 불확실성이 커지면 이벤트 프리미엄이 빠르게 식을 수 있습니다.",
+        "AI 매도 후 시장 전체 위험회피가 심해지면 방산 방어주도 유동성 축소를 피하기 어렵습니다."
+      ],
+      "whatCouldImprove": [
+        "방사청 평가 일정 또는 법원 판단이 구체화되고 한화오션 110,000원, 현대로템 190,000원이 동시에 지켜지는 경우",
+        "캐나다 CPSP·Project Beaver 후속이 단순 MOU를 넘어 계약 일정으로 구체화되는 경우"
+      ],
+      "stocks": [
+        {
+          "ticker": "329180",
+          "companyName": "HD현대중공업",
+          "market": "KR",
+          "rationale": "현재가 664,000원은 전일 대비 +2.00%로 AI 매도일에 방어가 확인됐지만 52주 고점 대비 86.8%라 리더 추격 여지는 좁습니다. KDDX 입찰 참여와 캐나다 방산 논의는 품질 프리미엄을 지지하지만 650,000원 이탈 시 이벤트 방어 논리를 낮춥니다.",
+          "thesis": "KDDX와 고부가 함정 수주 기대가 겹친 리더지만 현재 가격은 품질을 상당 부분 반영했습니다.",
+          "catalyst": "KDDX 평가 일정과 650,000원 방어",
+          "catalysts": [
+            "KDDX 평가 일정 구체화",
+            "650,000원 방어",
+            "캐나다 방산 패키지 후속"
+          ],
+          "risks": [
+            "고점권 밸류 부담",
+            "KDDX 법원·방사청 일정 지연",
+            "시장 위험회피 확산"
+          ],
+          "alreadyPriced": "상당 부분 반영",
+          "watchDate": "KDDX 평가/법원 판단",
+          "watchCondition": "650,000원을 지키고 한화오션·현대로템이 동반 방어되는지 확인합니다.",
+          "confidenceReason": "fresh 가격과 상대 방어는 긍정이나 52주 고점권이라 신규 관심 확신은 medium입니다.",
+          "invalidation": "650,000원 이탈 또는 KDDX 일정 지연 뉴스가 나오면 신규 관심을 낮춥니다.",
+          "positioningNote": "관찰 유지, 리더 추격보다 방어선 확인",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 664000,
+            "previousClose": 651000,
+            "previousCloseChangeAmount": 13000,
+            "previousCloseChangePct": 2,
+            "priceSession": "previous_close",
+            "week52High": 765000,
+            "week52Low": 370000,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "042660",
+          "companyName": "한화오션",
+          "market": "KR",
+          "rationale": "현재가 112,200원은 전일 대비 -2.52%지만 52주 고점 대비 72.5%로 리더보다 가격 여유가 남아 있습니다. KDDX 경쟁과 캐나다 CPSP 패키지 뉴스가 직접 촉매이고, 110,000원 방어가 이어질 때만 분할 관찰 후보로 둡니다.",
+          "thesis": "KDDX와 해외 잠수함 패키지 모두에서 이벤트 민감도가 높은 조선·방산 후발 후보입니다.",
+          "catalyst": "KDDX 보안감점 해석과 캐나다 CPSP 후속",
+          "catalysts": [
+            "110,000원 방어",
+            "KDDX 평가 일정",
+            "캐나다 CPSP·Project Beaver 후속"
+          ],
+          "risks": [
+            "입찰 결과 불확실성",
+            "이벤트 지연",
+            "110,000원 이탈"
+          ],
+          "alreadyPriced": "일부 반영",
+          "watchDate": "KDDX 법원 판단/캐나다 CPSP 일정",
+          "watchCondition": "110,000원을 지키고 HD현대중공업 대비 상대강도가 유지되는지 봅니다.",
+          "confidenceReason": "fresh 가격과 고점 대비 여유는 있지만 이벤트 의존도가 높아 medium입니다.",
+          "invalidation": "110,000원 이탈 또는 KDDX·캐나다 일정 지연 시 buy를 hold로 낮춥니다.",
+          "positioningNote": "소액 탐색 관찰, 이벤트 확인 전 분할 관찰",
+          "isNew": false,
+          "change": "upgrade",
+          "actionBias": "buy",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 112200,
+            "previousClose": 115100,
+            "previousCloseChangeAmount": -2900,
+            "previousCloseChangePct": -2.52,
+            "priceSession": "previous_close",
+            "week52High": 154800,
+            "week52Low": 71500,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "064350",
+          "companyName": "현대로템",
+          "market": "KR",
+          "rationale": "현재가 191,400원은 전일 대비 -0.67%로 시장 충격 대비 낙폭이 작고 52주 고점 대비 67.9%라 방산 후발 순환 여지가 있습니다. KDDX 직접 수혜는 약하지만 방산 수주주 안에서 덜 crowded한 방어 후보이며 190,000원 이탈 시 상대강도 논리를 접습니다.",
+          "thesis": "AI 매도와 상관관계가 낮고 가격 방어선이 가까운 방산 후발 관찰 후보입니다.",
+          "catalyst": "방산 수주 뉴스와 190,000원 방어",
+          "catalysts": [
+            "190,000원 방어",
+            "방산 수주/정책 뉴스",
+            "조선방산 동반 상대강도"
+          ],
+          "risks": [
+            "방산 테마 수급 둔화",
+            "수주 뉴스 부재",
+            "시장 위험회피 확산"
+          ],
+          "alreadyPriced": "일부 반영",
+          "watchDate": "방산 수주/정책 뉴스",
+          "watchCondition": "190,000원을 지키며 한화오션과 같이 낙폭을 제한하는지 확인합니다.",
+          "confidenceReason": "fresh 가격과 방어력은 긍정이나 직접 촉매가 KDDX보다 약해 medium입니다.",
+          "invalidation": "190,000원 이탈과 방산주 동반 약세가 나오면 신규 관심에서 제외합니다.",
+          "positioningNote": "분할 관찰, 비AI 방어 순환 후보",
+          "isNew": false,
+          "change": "upgrade",
+          "actionBias": "buy",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 191400,
+            "previousClose": 192700,
+            "previousCloseChangeAmount": -1300,
+            "previousCloseChangePct": -0.67,
+            "priceSession": "previous_close",
+            "week52High": 282000,
+            "week52Low": 148700,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        }
+      ]
+    },
+    {
+      "sectorName": "KR 후공정 검사장비 상대강도 생존주",
+      "market": "KR",
+      "rank": 2,
+      "confidenceScore": 70,
+      "confidenceLevel": "medium",
+      "thesis": "대형 HBM 리더와 반도체 ETF가 동반 급락했지만 테크윙은 전일 대비 플러스를 유지해 후공정 내부 선별 신호가 남았습니다. 3~10거래일은 breadth 확산보다 테크윙 54,000원, 한미반도체 280,000원 방어가 먼저이며, 회복 조건을 못 지킨 심텍·에프에스티는 보류합니다. 테크윙이 54,000원을 잃으면 후공정 상향 논리도 낮춥니다.",
+      "keyDrivers": [
+        "Results 교훈상 중소형 후공정은 낮은 가격보다 반복 가격 지지와 상대강도 생존이 먼저입니다.",
+        "테크윙은 대형 HBM 급락일에도 가격이 버텼고 52주 고점 대비 여유가 남아 있습니다.",
+        "한미반도체와 에프에스티는 촉매는 있지만 이번 스냅샷에서는 회복 확인 전 신규 관심을 낮춥니다."
+      ],
+      "risks": [
+        "AI 리더 하락이 계속되면 후공정 생존주도 거래대금이 빠질 수 있습니다.",
+        "중소형 장비주는 단기 표본이 작아 한두 거래일 반등만으로 확신을 높이면 과최적화 위험이 큽니다."
+      ],
+      "whatCouldImprove": [
+        "테크윙 54,000원 위 거래대금 유지와 한미반도체 280,000원 방어가 동시에 확인되는 경우",
+        "심텍 108,000원, 에프에스티 30,000원 회복으로 breadth가 다시 넓어지는 경우"
+      ],
+      "stocks": [
+        {
+          "ticker": "089030",
+          "companyName": "테크윙",
+          "market": "KR",
+          "rationale": "현재가 54,700원은 전일 대비 +1.86%이고 52주 고점 대비 73.9%라 대형 HBM 급락일에 상대강도 생존이 확인됐습니다. 후공정 안에서도 심텍·에프에스티보다 가격 방어가 낫지만 54,000원 이탈 시 중소형 알파 논리를 접습니다.",
+          "thesis": "대형 HBM이 흔들릴 때도 가격이 버틴 후공정 검사장비 생존주입니다.",
+          "catalyst": "54,000원 방어와 후공정 거래대금 유지",
+          "catalysts": [
+            "54,000원 방어",
+            "후공정 거래대금 증가",
+            "한미반도체 280,000원 방어"
+          ],
+          "risks": [
+            "중소형 유동성",
+            "대형 반도체 추가 급락",
+            "후공정 수주 확인 부족"
+          ],
+          "alreadyPriced": "일부 반영",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "54,000원 위에서 거래대금이 유지되고 한미반도체가 280,000원을 지키는지 확인합니다.",
+          "confidenceReason": "fresh 가격과 상대강도는 긍정이나 표본이 짧고 대형 반도체 충격이 커 medium입니다.",
+          "invalidation": "54,000원 이탈 또는 후공정주 동반 약세가 나오면 buy를 hold로 낮춥니다.",
+          "positioningNote": "신규 관심, 소액 탐색 관찰",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "buy",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 54700,
+            "previousClose": 53700,
+            "previousCloseChangeAmount": 1000,
+            "previousCloseChangePct": 1.86,
+            "priceSession": "previous_close",
+            "week52High": 74000,
+            "week52Low": 26050,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "042700",
+          "companyName": "한미반도체",
+          "market": "KR",
+          "rationale": "현재가 283,000원은 전일 대비 -6.91%이고 52주 고점 대비 66.4%로 280,000원 방어 여부가 핵심입니다. 본더 리더십은 유지되지만 최근 낙폭은 crowded trade 청산을 보여줘 회복 확인 전 신규 관심은 테크윙보다 낮춥니다.",
+          "thesis": "후공정 리더십은 있지만 현재는 좋은 기업과 좋은 관찰 자리를 분리해야 합니다.",
+          "catalyst": "280,000원 방어와 후공정 동반 반등",
+          "catalysts": [
+            "280,000원 방어",
+            "거래대금 회복",
+            "HBM 대형주 안정"
+          ],
+          "risks": [
+            "고점권 포지셔닝",
+            "대형 반도체 추가 매도",
+            "280,000원 이탈"
+          ],
+          "alreadyPriced": "상당 부분 반영",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "280,000원을 지키고 테크윙 대비 낙폭이 줄어드는지 봅니다.",
+          "confidenceReason": "fresh 가격이나 당일 낙폭이 커 신규 buy 확신은 낮춥니다.",
+          "invalidation": "280,000원 이탈 시 후공정 리더 관찰도 낮춥니다.",
+          "positioningNote": "관찰 유지, 회복 확인 전 추격 제한",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 283000,
+            "previousClose": 304000,
+            "previousCloseChangeAmount": -21000,
+            "previousCloseChangePct": -6.91,
+            "priceSession": "previous_close",
+            "week52High": 426000,
+            "week52Low": 81400,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "036810",
+          "companyName": "에프에스티",
+          "market": "KR",
+          "rationale": "현재가 29,100원은 전일 대비 -8.20%이고 52주 고점 대비 57.1%로 가격 여유는 있지만 30,000원 회복 전에는 단순 저가 논리입니다. 소재·장비 옵션성은 남아도 반복 지지 확인 전 신규 상향은 보류합니다.",
+          "thesis": "가격 여유는 있으나 이번 스냅샷에서는 상대강도보다 낙폭 관리가 먼저입니다.",
+          "catalyst": "30,000원 회복과 거래대금 증가",
+          "catalysts": [
+            "30,000원 회복",
+            "28,500원 방어",
+            "후공정 섹터 안정"
+          ],
+          "risks": [
+            "유동성 축소",
+            "HBM 대형주 추가 하락",
+            "30,000원 미회복 장기화"
+          ],
+          "alreadyPriced": "일부 반영",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "28,500원을 지키고 30,000원 위에서 거래대금이 늘어나는지 봅니다.",
+          "confidenceReason": "fresh 가격이나 추세 확인이 부족해 confidence를 medium-low로 둡니다.",
+          "invalidation": "28,500원 이탈 시 small-cap 관찰에서도 제외합니다.",
+          "positioningNote": "관망, 가격 지지 재확인 전 신규 관심 제한",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 29100,
+            "previousClose": 31700,
+            "previousCloseChangeAmount": -2600,
+            "previousCloseChangePct": -8.2,
+            "priceSession": "previous_close",
+            "week52High": 51000,
+            "week52Low": 16065,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        }
+      ]
+    },
+    {
+      "sectorName": "US 전력 인프라 품질주와 AI capex 검증",
+      "market": "US",
+      "rank": 3,
+      "confidenceScore": 68,
+      "confidenceLevel": "medium",
+      "thesis": "AI 데이터센터 전력 병목은 구조적으로 남아 있지만 금리 재가격일에는 전력주도 절대수익 방어가 쉽지 않았습니다. 3~10거래일은 ETN 390달러 방어처럼 주문·마진 품질이 있는 장비주만 신규 관심 후보로 두고, CEG·ETF형 노출은 회복 확인 전 hold로 제한합니다. ETN이 390달러를 잃으면 전력 품질주도 promising에서 내려갑니다.",
+      "keyDrivers": [
+        "전력 병목 내러티브는 유효하지만 Results 교훈상 품질 장비주와 고베타 발전·원전 옵션을 분리해야 합니다.",
+        "ETN은 390달러 위를 지켜 buy 관찰 조건이 남았지만 52주 고점권이라 분할 관찰만 가능합니다.",
+        "CEG와 KODEX 전력 ETF는 가격 회복 조건 미달로 sector view 안에서도 후순위입니다."
+      ],
+      "risks": [
+        "금리 상승이 이어지면 AI capex와 전력 설비주 밸류에이션이 동시에 눌릴 수 있습니다.",
+        "AI 지출 효율성 논쟁이 커지면 전력 병목 내러티브가 주문 가시성으로 연결되기 전까지 흔들릴 수 있습니다."
+      ],
+      "whatCouldImprove": [
+        "ETN 390달러 방어와 400달러 회복, CEG 265달러 회복이 동시에 나오는 경우",
+        "데이터센터 전력 계약이나 장비 주문이 실적 가시성으로 연결되는 경우"
+      ],
+      "stocks": [
+        {
+          "ticker": "ETN",
+          "companyName": "Eaton",
+          "market": "US",
+          "rationale": "현재가 395.94달러은 전일 대비 -5.42%지만 390달러 방어선 위이고 52주 고점 대비 90.9%입니다. 전력 장비 품질주는 발전·원전 고베타보다 사업 품질이 낫지만 고점권이므로 390달러 방어와 주문 가시성이 같이 필요합니다.",
+          "thesis": "AI 전력 병목 내러티브 안에서 규제·발전 베타보다 품질 장비주로 볼 수 있는 후보입니다.",
+          "catalyst": "390달러 방어와 AI 데이터센터 전력 주문 확인",
+          "catalysts": [
+            "390달러 방어",
+            "전력 장비 주문",
+            "AI capex 안정"
+          ],
+          "risks": [
+            "고점권 밸류",
+            "금리 추가 상승",
+            "AI capex 둔화"
+          ],
+          "alreadyPriced": "일부 반영, 고점권 부담 존재",
+          "watchDate": "다음 US 거래일",
+          "watchCondition": "390달러를 지키고 CEG·VST 대비 상대강도가 우위인지 확인합니다.",
+          "confidenceReason": "fresh 가격과 품질 프레임은 긍정이나 52주 고점권이라 medium입니다.",
+          "invalidation": "390달러 이탈 또는 AI 전력주 동반 약세 시 buy를 hold로 낮춥니다.",
+          "positioningNote": "눌림 시 1차 확인, 품질주 한정 신규 관심",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "buy",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 395.94,
+            "previousCloseChangePct": -5.42,
+            "week52High": 435.43,
+            "week52Low": 311.92,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "CEG",
+          "companyName": "Constellation Energy",
+          "market": "US",
+          "rationale": "현재가 254.83달러은 전일 대비 -3.69%이고 52주 고점 대비 61.7%로 고점 부담은 줄었지만 Results 조건인 265달러를 잃었습니다. 원전 전력 스토리는 유효해도 규제·금리 베타가 커서 ETN보다 후순위 관찰입니다.",
+          "thesis": "전력 수요 수혜주는 맞지만 현재는 품질 장비주보다 고베타 정책 민감도가 큽니다.",
+          "catalyst": "265달러 회복과 전력 계약 확인",
+          "catalysts": [
+            "265달러 회복",
+            "전력 계약 뉴스",
+            "ETN 대비 상대강도 개선"
+          ],
+          "risks": [
+            "규제 리스크",
+            "금리 상승",
+            "원전 베타 변동성"
+          ],
+          "alreadyPriced": "일부 반영 후 재가격",
+          "watchDate": "다음 US 거래일",
+          "watchCondition": "265달러 회복과 ETN 대비 2거래일 상대강도 개선이 필요합니다.",
+          "confidenceReason": "fresh 가격이나 핵심 회복 조건 미달로 hold입니다.",
+          "invalidation": "250달러 이탈 또는 전력 고베타주 동반 약세 시 reduce로 낮춥니다.",
+          "positioningNote": "관찰 유지, 품질주와 분리",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 254.83,
+            "previousCloseChangePct": -3.69,
+            "week52High": 412.7,
+            "week52Low": 243.3,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "487240",
+          "companyName": "KODEX 미국AI전력핵심인프라",
+          "market": "KR",
+          "rationale": "현재가 43,355원은 전일 대비 -5.09%이고 52주 고점 대비 67.1%로 과열은 완화됐지만 ETF 내부가 고베타 전력주를 함께 담을 수 있습니다. 43,000원 방어와 미국 전력주 breadth 회복 전까지 신규 관심보다 관찰로 둡니다.",
+          "thesis": "AI 전력 병목을 분산해 볼 수 있지만 현재는 품질주와 고베타가 섞인 바스켓입니다.",
+          "catalyst": "43,000원 방어와 미국 전력주 안정",
+          "catalysts": [
+            "43,000원 방어",
+            "ETN 상대강도",
+            "AI 전력 정책 후속"
+          ],
+          "risks": [
+            "고베타 구성 종목 약세",
+            "원화·환율 변동",
+            "AI capex 재가격"
+          ],
+          "alreadyPriced": "일부 반영 후 재가격",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "43,000원을 지키고 ETN이 390달러를 유지하는지 봅니다.",
+          "confidenceReason": "fresh 가격이나 바스켓 혼합 리스크 때문에 hold입니다.",
+          "invalidation": "43,000원 이탈 또는 ETN 390달러 이탈 시 관찰 강도를 낮춥니다.",
+          "positioningNote": "관찰 유지, ETF 분산 확인용",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 43355,
+            "previousClose": 45680,
+            "previousCloseChangeAmount": -2325,
+            "previousCloseChangePct": -5.09,
+            "priceSession": "previous_close",
+            "week52High": 64630,
+            "week52Low": 12840,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        }
+      ]
+    }
+  ],
+  "cautionSectors": [
+    {
+      "sectorName": "US AI 반도체/네트워킹 기대치 과밀",
+      "market": "US",
+      "rank": 1,
+      "confidenceScore": 89,
+      "confidenceLevel": "high",
+      "thesis": "Broadcom발 AI 칩 기대치 재설정과 강한 미국 고용에 따른 금리 상승이 동시에 나오며 AI 반도체 리더가 가장 먼저 매도됐습니다. 3~10거래일은 실적이 나쁘다기보다 가격이 완벽한 성장을 요구했다는 점이 핵심이므로, AVGO 400달러, AMD 500달러, NVDA 210달러 회복 전 신규 추격은 손익비가 나쁩니다. 세 종목이 위 조건을 빠르게 회복하면 caution 강도를 낮춥니다.",
+      "keyDrivers": [
+        "BLS 5월 고용 +172,000명과 금리 재가격은 duration이 긴 AI 성장주의 할인율 부담을 키웠습니다.",
+        "가격 스냅샷에서 AVGO -7.92%, AMD -10.86%, NVDA -6.20%로 리더가 동시에 흔들렸습니다.",
+        "강한 구조 수요와 crowded trade는 다르며, 현재는 이벤트 후 지지선 회복이 먼저입니다."
+      ],
+      "risks": [
+        "AI 수요와 공급 계약이 추가 확인되면 숏커버 반등이 빠를 수 있습니다.",
+        "NVDA가 210달러와 AMD가 500달러를 빠르게 회복하면 단기 caution은 과도해집니다."
+      ],
+      "whatCouldImprove": [
+        "AVGO 400달러, AMD 500달러, NVDA 210달러 회복이 동시에 나오고 SOX/KR 반도체 ETF가 안정되는 경우",
+        "차기 가이던스나 공급 계약이 기대치 과밀 우려를 숫자로 반박하는 경우"
+      ],
+      "stocks": [
+        {
+          "ticker": "AVGO",
+          "companyName": "Broadcom",
+          "market": "US",
+          "rationale": "현재가 385.73달러은 전일 대비 -7.92%이고 52주 고점 대비 77.9%로 내려왔지만 실적 이벤트 후 가격이 먼저 무너져 기대치 과밀 신호가 우선입니다. 400달러 회복 전에는 AI 네트워킹 리더십보다 할인율·포지셔닝 리스크를 먼저 봅니다.",
+          "thesis": "AI 커스텀 실리콘 리더지만 현재는 좋은 회사와 좋은 진입 시점이 분리된 상태입니다.",
+          "catalyst": "400달러 회복과 AI 매출 가이던스 신뢰 회복",
+          "catalysts": [
+            "400달러 회복",
+            "AI 매출 가이던스 재평가",
+            "SOX 지수 안정"
+          ],
+          "risks": [
+            "숏커버 반등",
+            "대형 고객 수주 확인",
+            "가이던스 해석 반전"
+          ],
+          "alreadyPriced": "기대치 재조정 중",
+          "watchDate": "다음 US 거래일",
+          "watchCondition": "400달러 회복과 NVDA·AMD 동반 안정 여부를 봅니다.",
+          "confidenceReason": "fresh 가격과 실적 후 매도 반응이 caution을 강하게 뒷받침합니다.",
+          "invalidation": "400달러 회복과 AI 반도체 동반 반등이 나오면 reduce를 hold로 낮춥니다.",
+          "positioningNote": "신규 추격 제한, 이벤트 후 회복 확인",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 385.73,
+            "previousCloseChangePct": -7.92,
+            "week52High": 495,
+            "week52Low": 241.11,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "companyName": "Advanced Micro Devices",
+          "market": "US",
+          "rationale": "현재가 466.38달러은 전일 대비 -10.86%이고 52주 고점 대비 85.3%지만 여전히 AI 가속기 기대가 가격에 남아 있습니다. 500달러 회복 전에는 공급 계약 기대보다 고점권 포지셔닝 청산 리스크가 큽니다.",
+          "thesis": "AI 가속기 경쟁 스토리는 살아 있으나 현재는 가격이 먼저 기대를 낮추는 구간입니다.",
+          "catalyst": "500달러 회복과 신규 공급 계약 확인",
+          "catalysts": [
+            "500달러 회복",
+            "AI 가속기 공급 계약",
+            "NVDA 대비 상대강도 회복"
+          ],
+          "risks": [
+            "계약 뉴스 숏커버",
+            "AI 수요 재확인",
+            "낙폭 과대 반등"
+          ],
+          "alreadyPriced": "상당 부분 반영 후 재가격",
+          "watchDate": "공급 계약/가이던스",
+          "watchCondition": "500달러 회복 전까지 신규 추격을 제한합니다.",
+          "confidenceReason": "fresh 가격과 -10%대 하락이 과밀 청산 신호를 보여줍니다.",
+          "invalidation": "500달러 회복과 신규 계약 확인 시 caution을 낮춥니다.",
+          "positioningNote": "추격 금지, 회복 확인 전 reduce",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 466.38,
+            "previousCloseChangePct": -10.86,
+            "week52High": 546.44,
+            "week52Low": 115.06,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "NVDA",
+          "companyName": "NVIDIA",
+          "market": "US",
+          "rationale": "현재가 205.10달러은 전일 대비 -6.20%이고 52주 고점 대비 86.7%라 리더십만으로 신규 진입을 정당화하기 어렵습니다. 방한·RTX Spark·로봇 뉴스는 구조적으로 긍정이나 210달러 회복 전에는 crowded trade 방어가 우선입니다.",
+          "thesis": "AI 리더십은 유지되지만 현재 가격에서는 제품·방한 뉴스보다 지지선 회복이 먼저입니다.",
+          "catalyst": "210달러 회복과 AI PC·physical AI 밸류체인 동반 안정",
+          "catalysts": [
+            "210달러 회복",
+            "RTX Spark 후속 수요 확인",
+            "AI 반도체 breadth 안정"
+          ],
+          "risks": [
+            "제품 뉴스 재평가",
+            "기관 저가 매수",
+            "AI capex 전망 상향"
+          ],
+          "alreadyPriced": "일부 반영, 추격 부담 존재",
+          "watchDate": "방한/Computex 후속",
+          "watchCondition": "210달러 회복과 AMD·AVGO 낙폭 축소를 함께 확인합니다.",
+          "confidenceReason": "fresh 가격이나 리더 프리미엄이 남아 reduce보다 hold로 둡니다.",
+          "invalidation": "210달러 회복과 AI PC 관련주 동반 반등 시 caution을 낮춥니다.",
+          "positioningNote": "관찰 유지, 신규 추격 제한",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 205.1,
+            "previousCloseChangePct": -6.2,
+            "week52High": 236.54,
+            "week52Low": 140.85,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        }
+      ]
+    },
+    {
+      "sectorName": "KR HBM 대형주·반도체 ETF 고점권 재가격",
+      "market": "KR",
+      "rank": 2,
+      "confidenceScore": 87,
+      "confidenceLevel": "high",
+      "thesis": "Jensen Huang 방한과 HBM 수요 발언은 긍정적이지만, 가격은 SK하이닉스·삼성전자·반도체 ETF 동반 급락으로 먼저 기대를 낮췄습니다. 3~10거래일은 2,150,000원, 340,000원, 160,000원 회복 전까지 구조 성장보다 crowded trade 청산 리스크가 우선입니다. 세 가격 조건이 회복되면 caution을 추격 제한 수준으로 낮춥니다.",
+      "keyDrivers": [
+        "강한 뉴스가 가격 방어로 이어지지 못하면 기대는 이미 상당 부분 선반영됐다고 봐야 합니다.",
+        "KOSPI 반도체 집중도가 높아 외국인·기관 포지셔닝 변화가 지수 전체 변동성을 키웁니다.",
+        "Results 교훈상 HBM 리더가 고점권이면 후공정 가격 확인을 먼저 봅니다."
+      ],
+      "risks": [
+        "HBM4 공급 인증이나 Nvidia 추가 발언으로 숏커버가 빠르게 나올 수 있습니다.",
+        "외국인 매도가 둔화되고 KODEX 반도체 160,000원이 회복되면 caution은 과도해집니다."
+      ],
+      "whatCouldImprove": [
+        "SK하이닉스 2,150,000원, 삼성전자 340,000원, KODEX 반도체 160,000원 동반 회복",
+        "방한 뉴스가 실제 공급 계약·데이터센터 투자로 확인되는 경우"
+      ],
+      "stocks": [
+        {
+          "ticker": "000660",
+          "companyName": "SK하이닉스",
+          "market": "KR",
+          "rationale": "현재가 2,070,000원은 전일 대비 -9.92%이고 52주 고점 대비 86.0%로 HBM 리더 프리미엄이 아직 남아 있습니다. Jensen Huang의 메모리 수요 발언은 긍정이나 2,150,000원 회복 전에는 좋은 수요와 좋은 관찰 자리를 분리합니다.",
+          "thesis": "HBM 구조 수요는 강하지만 현재는 포지셔닝 충격이 먼저 확인된 리더입니다.",
+          "catalyst": "2,150,000원 회복과 KODEX 반도체 안정",
+          "catalysts": [
+            "2,150,000원 회복",
+            "HBM4 공급 확인",
+            "외국인 매도 둔화"
+          ],
+          "risks": [
+            "고점권 집중 포지션",
+            "외국인 매도 지속",
+            "미국 AI 리더 추가 하락"
+          ],
+          "alreadyPriced": "상당 부분 반영",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "2,150,000원 회복과 KODEX 반도체 160,000원 회복을 같이 봅니다.",
+          "confidenceReason": "fresh 가격과 급락이 caution을 지지하지만 장기 수요는 남아 high가 아닌 medium-high입니다.",
+          "invalidation": "2,150,000원 회복과 반도체 ETF 안정 시 reduce를 hold로 낮춥니다.",
+          "positioningNote": "신규 추격 제한, 회복 확인 전 reduce",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 2070000,
+            "previousClose": 2298000,
+            "previousCloseChangeAmount": -228000,
+            "previousCloseChangePct": -9.92,
+            "priceSession": "previous_close",
+            "week52High": 2407000,
+            "week52Low": 227500,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "005930",
+          "companyName": "삼성전자",
+          "market": "KR",
+          "rationale": "현재가 329,000원은 전일 대비 -6.40%이고 52주 고점 대비 88.9%로 고점권 프리미엄이 남아 있습니다. HBM·foundry 회복 스토리는 크지만 340,000원 회복 전에는 방한 기대를 신규 상향 근거로 쓰지 않습니다.",
+          "thesis": "메모리·AI 공급망 옵션은 있으나 현재는 가격 방어 실패가 먼저입니다.",
+          "catalyst": "340,000원 회복과 HBM 공급 뉴스의 가격 반응",
+          "catalysts": [
+            "340,000원 회복",
+            "HBM 공급 확인",
+            "외국인 매도 둔화"
+          ],
+          "risks": [
+            "HBM 경쟁력 검증 지연",
+            "고점권 집중 포지션",
+            "KOSPI 변동성"
+          ],
+          "alreadyPriced": "상당 부분 반영",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "340,000원 회복과 SK하이닉스 낙폭 축소를 확인합니다.",
+          "confidenceReason": "fresh 가격과 동반 급락이 caution 근거지만 구조 수요 때문에 exit가 아닌 reduce입니다.",
+          "invalidation": "340,000원 회복과 반도체 ETF 안정 시 reduce를 hold로 낮춥니다.",
+          "positioningNote": "신규 추격 제한, 고점권 회복 확인",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 329000,
+            "previousClose": 351500,
+            "previousCloseChangeAmount": -22500,
+            "previousCloseChangePct": -6.4,
+            "priceSession": "previous_close",
+            "week52High": 370000,
+            "week52Low": 56900,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "091160",
+          "companyName": "KODEX 반도체",
+          "market": "KR",
+          "rationale": "현재가 157,180원은 전일 대비 -6.61%이고 52주 고점 대비 92.0%라 단일종목 충격을 분산해도 섹터 고점 부담은 남아 있습니다. 160,000원 회복 전에는 ETF 분산보다 반도체 전체 breadth 훼손을 먼저 봅니다.",
+          "thesis": "반도체 분산 노출이지만 현재는 섹터 전체의 포지셔닝 청산을 반영합니다.",
+          "catalyst": "160,000원 회복과 SK하이닉스·삼성전자 안정",
+          "catalysts": [
+            "160,000원 회복",
+            "대형 반도체 낙폭 축소",
+            "외국인 매도 둔화"
+          ],
+          "risks": [
+            "대형주 집중도",
+            "AI 반도체 미국 약세 전이",
+            "KOSPI 변동성"
+          ],
+          "alreadyPriced": "추격 부담 큼",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "160,000원 회복과 대형주 동반 안정이 필요합니다.",
+          "confidenceReason": "fresh 가격과 ETF 급락이 caution을 확인합니다.",
+          "invalidation": "160,000원 회복과 대형주 동반 반등 시 reduce를 hold로 낮춥니다.",
+          "positioningNote": "ETF 신규 추격 제한",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 157180,
+            "previousClose": 168300,
+            "previousCloseChangeAmount": -11120,
+            "previousCloseChangePct": -6.61,
+            "priceSession": "previous_close",
+            "week52High": 170900,
+            "week52Low": 33180,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        }
+      ]
+    },
+    {
+      "sectorName": "US 고베타 원전/AI 데이터센터 옵션주",
+      "market": "US",
+      "rank": 3,
+      "confidenceScore": 82,
+      "confidenceLevel": "high",
+      "thesis": "AI 전력 병목은 맞지만 OKLO·APLD 같은 고베타 옵션주는 금리와 자금조달 충격에 먼저 취약성을 보였습니다. 3~10거래일은 ETN형 품질주와 분리해 OKLO 62달러, APLD 45달러, VST 155달러 회복 전까지 신규 긍정 판단을 피합니다. 계약·규제 뉴스가 가격 회복과 함께 나오면 caution을 완화합니다.",
+      "keyDrivers": [
+        "고베타 전력주는 전력 수요보다 할인율, 규제, 자금조달 조건에 더 민감하게 반응했습니다.",
+        "APLD와 OKLO는 낙폭이 커도 fresh 가격 조건이 무너져 small-cap buy가 아니라 fragility 점검 대상입니다.",
+        "VST는 상대적으로 방어적이지만 155달러 회복 전에는 품질주 대체가 아닙니다."
+      ],
+      "risks": [
+        "원전·데이터센터 계약 뉴스가 나오면 숏커버 반등이 빠를 수 있습니다.",
+        "정책 승인이나 대형 고객 계약이 확인되면 고베타 caution은 짧아질 수 있습니다."
+      ],
+      "whatCouldImprove": [
+        "OKLO 62달러, APLD 45달러, VST 155달러 회복과 거래대금 증가",
+        "전력 계약이 단순 기대가 아니라 수익성 있는 backlog로 확인되는 경우"
+      ],
+      "stocks": [
+        {
+          "ticker": "OKLO",
+          "companyName": "Oklo",
+          "market": "US",
+          "rationale": "현재가 58.09달러은 전일 대비 -11.16%이고 52주 고점 대비 30.0%까지 낮아졌지만, 하락폭이 큰 이유는 고베타 원전 옵션의 자금조달·규제 fragility입니다. 62달러 회복 전에는 낙폭보다 꼬리위험을 먼저 봅니다.",
+          "thesis": "원전 옵션성은 크지만 현재 시장에서는 변동성이 우호가 아니라 취약성을 드러냅니다.",
+          "catalyst": "62달러 회복과 규제·계약 뉴스",
+          "catalysts": [
+            "62달러 회복",
+            "규제 승인 뉴스",
+            "전력주 breadth 안정"
+          ],
+          "risks": [
+            "규제 지연",
+            "자금조달 부담",
+            "고베타 청산"
+          ],
+          "alreadyPriced": "재가격 중",
+          "watchDate": "다음 US 거래일",
+          "watchCondition": "62달러 회복과 거래대금 안정 전까지 신규 관심을 제한합니다.",
+          "confidenceReason": "fresh 가격과 -11%대 하락이 tail-risk caution을 지지합니다.",
+          "invalidation": "62달러 회복과 원전주 동반 안정 시 reduce를 hold로 낮춥니다.",
+          "positioningNote": "고베타 축소, 회복 확인 전 reduce",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 58.09,
+            "previousCloseChangePct": -11.16,
+            "week52High": 193.84,
+            "week52Low": 44.88,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "APLD",
+          "companyName": "Applied Digital",
+          "market": "US",
+          "rationale": "현재가 39.62달러은 전일 대비 -10.26%이고 52주 고점 대비 78.1%지만 Results 조건인 45달러를 크게 밑돕니다. 데이터센터 옵션성보다 자금조달·고베타 fragility가 앞서므로 회복 전 신규 관심을 배제합니다.",
+          "thesis": "AI 데이터센터 옵션주는 촉매가 가격 방어로 확인되기 전까지 하방 fragility가 큽니다.",
+          "catalyst": "45달러 회복과 계약 뉴스",
+          "catalysts": [
+            "45달러 회복",
+            "계약 뉴스",
+            "거래대금 증가"
+          ],
+          "risks": [
+            "자금조달 리스크",
+            "계약 지연",
+            "고베타 청산"
+          ],
+          "alreadyPriced": "재가격 중",
+          "watchDate": "계약/자금조달 뉴스",
+          "watchCondition": "45달러 회복과 거래대금 증가 전까지 buy 후보에서 제외합니다.",
+          "confidenceReason": "fresh 가격과 Results 조건 미달이 caution을 지지합니다.",
+          "invalidation": "45달러 회복과 계약 뉴스가 동시에 나오면 reduce를 hold로 낮춥니다.",
+          "positioningNote": "고베타 축소, 관찰만 유지",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 39.62,
+            "previousCloseChangePct": -10.26,
+            "week52High": 50.72,
+            "week52Low": 9.02,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "VST",
+          "companyName": "Vistra",
+          "market": "US",
+          "rationale": "현재가 148.76달러은 전일 대비 -3.21%이고 52주 고점 대비 67.7%로 OKLO·APLD보다 방어적입니다. 다만 155달러 회복 전에는 전력 수요보다 고베타 발전주 할인율 부담을 먼저 봅니다.",
+          "thesis": "전력 수요 수혜는 남아도 현재는 품질 장비주보다 베타 관리가 먼저입니다.",
+          "catalyst": "155달러 회복과 전력주 breadth 안정",
+          "catalysts": [
+            "155달러 회복",
+            "전력 가격 안정",
+            "AI capex 뉴스"
+          ],
+          "risks": [
+            "금리 상승",
+            "전력 가격 변동성",
+            "고베타 섹터 청산"
+          ],
+          "alreadyPriced": "일부 반영",
+          "watchDate": "다음 US 거래일",
+          "watchCondition": "155달러 회복과 ETN 대비 상대강도 개선이 필요합니다.",
+          "confidenceReason": "fresh 가격과 방어력은 있으나 회복 조건 미달로 hold입니다.",
+          "invalidation": "145달러 이탈 시 reduce로 낮춥니다.",
+          "positioningNote": "관찰 유지, 고베타 축소 우선",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 148.76,
+            "previousCloseChangePct": -3.21,
+            "week52High": 219.82,
+            "week52Low": 132.66,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        }
+      ]
+    }
+  ],
+  "changesSinceYesterday": [
+    {
+      "type": "hold",
+      "title": "KDDX·캐나다 방산은 Top 1 유지하되 추격 금지",
+      "detail": "KDDX 입찰 경쟁과 한국·캐나다 방산·에너지 협력 보도는 한화오션의 이벤트 선택지를 넓혔습니다. 다만 확정 수주가 아니므로 HD현대중공업 추격보다 한화오션 110,000원, 현대로템 190,000원 방어 확인을 우선합니다."
+    },
+    {
+      "type": "downgrade",
+      "title": "Jensen 방한은 HBM 추격 근거가 아니라 확인 조건",
+      "detail": "방한 뉴스는 강하지만 SK하이닉스 -9.92%, 삼성전자 -6.40%로 가격이 기대를 확인하지 못했습니다. HBM 대형주는 회복 조건 전까지 reduce를 유지합니다."
+    },
+    {
+      "type": "rotate",
+      "title": "후공정은 breadth가 아니라 테크윙 생존주 테스트",
+      "detail": "테크윙은 +1.86%로 54,000원 조건을 지켰지만 한미반도체 -6.91%, 심텍 -9.17%, 에프에스티 -8.20%라 광범위 후공정 상향은 보류합니다."
+    },
+    {
+      "type": "downgrade",
+      "title": "전력 고베타는 품질주와 분리",
+      "detail": "ETN은 390달러 위라 buy 관찰이 가능하지만 CEG 254.83달러, APLD 39.62달러, OKLO 58.09달러는 Results 조건 미달이라 고베타 전력은 caution으로 분리합니다."
+    }
+  ],
+  "reasons": {
+    "macro": {
+      "title": "강한 고용이 AI/rate trade를 재가격",
+      "summary": [
+        "BLS는 2026-06-05 발표에서 5월 비농업 고용 +172,000명, 실업률 4.3%를 제시했고, 시장은 금리 인하보다 금리 상승 가능성을 더 반영했습니다.",
+        "Axios는 강한 고용과 AI 지출 부담 속에 Nasdaq이 4.2% 하락하고 반도체 지수가 10% 넘게 밀렸다고 보도했습니다."
+      ],
+      "affectedSectors": [
+        "US AI 반도체/네트워킹",
+        "US 전력 인프라",
+        "US 고베타 원전/AI 데이터센터"
+      ]
+    },
+    "policy": {
+      "title": "KDDX·캐나다 방산·physical AI가 단기 이벤트",
+      "summary": [
+        "KDDX 7조원대 경쟁과 보안감점 해석은 조선/방산 상대강도를 바꿀 수 있는 가까운 정책·법원 이벤트입니다.",
+        "Jensen Huang 방한은 HBM·LPDDR·로봇·AI 연구센터 기대를 키웠지만, 가격이 확인되지 않은 대형 HBM주는 신규 상향에서 제외합니다."
+      ],
+      "affectedSectors": [
+        "KR 조선/방산 KDDX",
+        "KR HBM 대형주",
+        "KR 후공정 검사장비"
+      ]
+    },
+    "earnings": {
+      "title": "AI 실적보다 기대치 허들이 문제",
+      "summary": [
+        "Broadcom 이후 AVGO -7.92%, AMD -10.86%, NVDA -6.20%로 실적·제품 뉴스보다 기대치 과밀과 금리 민감도가 먼저 가격에 반영됐습니다.",
+        "SaaS와 데이터 구독주는 할인율 부담이 커져 CRM 200달러, ADBE 260달러 회복 전까지 평균회귀 재상향을 보류합니다."
+      ],
+      "affectedSectors": [
+        "US AI 반도체/네트워킹",
+        "US SaaS/데이터 구독"
+      ]
+    },
+    "flows": {
+      "title": "포지셔닝은 AI 리더에서 방어 이벤트로 이동",
+      "summary": [
+        "KOSPI 반도체 대형주 급락은 AI/HBM 리더 포지셔닝 집중도가 높았음을 시사하며, breadth는 테크윙·조선/방산처럼 일부 방어 후보로만 남았습니다.",
+        "crowdedness가 높은 섹터는 유지와 신규 관심을 분리하고, buy 후보는 지지선과 후속 촉매가 모두 있는 한화오션·현대로템·ETN·테크윙으로 제한합니다."
+      ],
+      "affectedSectors": [
+        "KR HBM 대형주",
+        "KR 조선/방산",
+        "KR 후공정 검사장비",
+        "US 전력 인프라"
+      ]
+    }
+  },
+  "checkpoints": [
+    {
+      "category": "risk",
+      "market": "KR",
+      "title": "조선/방산 방어선",
+      "date": "다음 KR 거래일",
+      "note": "HD현대중공업 650,000원, 한화오션 110,000원, 현대로템 190,000원을 동시에 확인합니다."
+    },
+    {
+      "category": "risk",
+      "market": "US",
+      "title": "AI 리더 회복 조건",
+      "date": "다음 US 거래일",
+      "note": "AVGO 400달러, AMD 500달러, NVDA 210달러 회복 전까지 신규 추격을 제한합니다."
+    },
+    {
+      "category": "policy",
+      "market": "KR",
+      "title": "Nvidia 방한 후속",
+      "date": "2026-06-09 이후",
+      "note": "AI 연구센터 채용, HBM·LPDDR 공급, 현대차 로봇 파트너십이 실제 계약·발주로 연결되는지 확인합니다."
+    },
+    {
+      "category": "policy",
+      "market": "KR",
+      "title": "KDDX·캐나다 CPSP 일정",
+      "date": "KDDX 평가/캐나다 CPSP 후속",
+      "note": "KDDX 보안감점 해석과 캐나다 preferred bidder 일정이 한화오션·HD현대중공업 가격 방어로 연결되는지 봅니다."
+    },
+    {
+      "category": "macro",
+      "market": "US",
+      "title": "10년물 금리와 AI capex",
+      "date": "다음 미국 거래일",
+      "note": "금리 재상승이 이어지면 전력·SaaS·AI 반도체의 duration 리스크를 다시 낮춥니다."
+    }
+  ],
+  "analysisSuggestions": [
+    {
+      "title": "HBM 대형주 반복 상향은 Jensen 후속 계약 전까지 중단",
+      "action": "trim",
+      "detail": "SK하이닉스·삼성전자·반도체 ETF는 방한 기대에도 급락했으므로 Top 3 복귀보다 가격 회복 조건을 먼저 둡니다.",
+      "rationale": "Results 교훈상 HBM 리더가 고점권이면 후공정 가격 확인을 먼저 보아야 하며, 이번 스냅샷은 대형주와 ETF가 동시에 훼손됐습니다.",
+      "affectedSectors": [
+        "KR HBM 대형주",
+        "KR 반도체 ETF"
+      ],
+      "source": "results-review",
+      "priority": "high"
+    },
+    {
+      "title": "KDDX는 리더 추격보다 후발 방어선 중심",
+      "action": "rotate",
+      "detail": "HD현대중공업은 고점권이라 hold로 두고, 한화오션 110,000원·현대로템 190,000원 방어를 buy 관찰 조건으로 둡니다.",
+      "rationale": "이벤트형 방산은 섹터 전체 추격보다 리더의 방어선과 후발 가격 여유를 분리해야 손익비가 좋아집니다.",
+      "affectedSectors": [
+        "KR 조선/방산 KDDX",
+        "KR 방산 후발주"
+      ],
+      "source": "automation",
+      "priority": "high"
+    },
+    {
+      "title": "전력 섹터는 ETN형 품질주만 남기기",
+      "action": "rotate",
+      "detail": "CEG·VST·OKLO·APLD는 고베타/규제/자금조달 버킷으로 분리하고 ETN 390달러 방어만 신규 관심 조건으로 둡니다.",
+      "rationale": "전력 병목 내러티브가 맞아도 주문 가시성과 마진 품질이 있는 장비주가 발전·원전 베타보다 방어력이 좋습니다.",
+      "affectedSectors": [
+        "US 전력 인프라",
+        "US 고베타 원전/AI 데이터센터"
+      ],
+      "source": "results-review",
+      "priority": "high"
+    },
+    {
+      "title": "후공정은 breadth가 아니라 생존주 테스트",
+      "action": "watch",
+      "detail": "테크윙만 buy 관찰로 남기고 한미반도체·심텍·에프에스티는 지지선 회복 전까지 hold 이하로 낮춥니다.",
+      "rationale": "중소형 후공정은 낮은 가격보다 반복 지지와 상대강도가 먼저라는 Results 교훈과 이번 가격이 일치합니다.",
+      "affectedSectors": [
+        "KR 후공정 검사장비",
+        "KR PCB/패키징"
+      ],
+      "source": "automation",
+      "priority": "medium"
+    }
+  ],
+  "legacySectorDecisions": [
+    {
+      "sectorName": "US 전통 SaaS/데이터 구독",
+      "market": "US",
+      "previousBestRank": 1,
+      "lastSeenDate": "2026-06-03",
+      "appearances14d": 8,
+      "decision": "reduce",
+      "rationale": "CRM 185.66달러와 ADBE 251.44달러가 회복 조건을 못 지켰고 강한 고용 후 금리 재가격이 평균회귀 타이밍을 늦춥니다.",
+      "triggerNote": "CRM 200달러, ADBE 260달러 회복과 실적 수익화 지표 확인 전까지 Top 3 재진입 보류",
+      "resultsSummary": "최근 Results에서 일부 성공했지만 반복 추천 효율은 낮아졌고 숫자 확인 전 재상향은 피로도가 큽니다."
+    },
+    {
+      "sectorName": "KR HBM 대형주 분산 노출",
+      "market": "KR",
+      "previousBestRank": 1,
+      "lastSeenDate": "2026-06-01",
+      "appearances14d": 5,
+      "decision": "reduce",
+      "rationale": "Nvidia 방한 기대가 있었는데도 SK하이닉스 -9.92%, 삼성전자 -6.40%로 고점권 포지셔닝 충격이 확인됐습니다.",
+      "triggerNote": "SK하이닉스 2,150,000원, 삼성전자 340,000원, KODEX 반도체 160,000원 회복 없이는 신규 상향 금지",
+      "resultsSummary": "HBM 리더 고점권에서는 후공정 가격 확인을 먼저 보라는 교훈을 유지합니다."
+    },
+    {
+      "sectorName": "US 항공/온라인 여행",
+      "market": "US",
+      "previousBestRank": 3,
+      "lastSeenDate": "2026-05-27",
+      "appearances14d": 5,
+      "decision": "reenter-watch",
+      "rationale": "UAL 105.73달러는 110달러 조건 미달이고 DAL 79.42달러는 52주 고점권이라 여름 수요보다 유가·금리 리스크가 먼저입니다.",
+      "triggerNote": "UAL 110달러 회복, DAL 80달러 방어, 유가 안정이 같이 나올 때만 재진입 검토",
+      "resultsSummary": "경기민감 레버리지 주식은 외생 충격에 취약하면 고점권 신규 추격을 줄이라는 교훈을 반영합니다."
+    }
+  ],
+  "themeRadar": [
+    {
+      "theme": "미국 고용 서프라이즈와 AI 리더 재가격",
+      "market": "US",
+      "eventType": "other",
+      "signalStrength": 88,
+      "sourceFreshness": "1-3d",
+      "narrative": "BLS의 5월 고용 +172,000명과 4.3% 실업률은 금리 인하보다 금리 재상승 위험을 키웠고, AI 반도체 리더는 이 할인율 충격을 가장 먼저 반영했습니다.",
+      "affectedStocks": [
+        {
+          "ticker": "AVGO",
+          "companyName": "Broadcom",
+          "market": "US",
+          "rationale": "현재가 385.73달러은 전일 대비 -7.92%이고 52주 고점 대비 77.9%로 내려왔지만 실적 이벤트 후 가격이 먼저 무너져 기대치 과밀 신호가 우선입니다. 400달러 회복 전에는 AI 네트워킹 리더십보다 할인율·포지셔닝 리스크를 먼저 봅니다.",
+          "thesis": "AI 커스텀 실리콘 리더지만 현재는 좋은 회사와 좋은 진입 시점이 분리된 상태입니다.",
+          "catalyst": "400달러 회복과 AI 매출 가이던스 신뢰 회복",
+          "catalysts": [
+            "400달러 회복",
+            "AI 매출 가이던스 재평가",
+            "SOX 지수 안정"
+          ],
+          "risks": [
+            "숏커버 반등",
+            "대형 고객 수주 확인",
+            "가이던스 해석 반전"
+          ],
+          "alreadyPriced": "기대치 재조정 중",
+          "watchDate": "다음 US 거래일",
+          "watchCondition": "400달러 회복과 NVDA·AMD 동반 안정 여부를 봅니다.",
+          "confidenceReason": "fresh 가격과 실적 후 매도 반응이 caution을 강하게 뒷받침합니다.",
+          "invalidation": "400달러 회복과 AI 반도체 동반 반등이 나오면 reduce를 hold로 낮춥니다.",
+          "positioningNote": "신규 추격 제한, 이벤트 후 회복 확인",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 385.73,
+            "previousCloseChangePct": -7.92,
+            "week52High": 495,
+            "week52Low": 241.11,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "companyName": "Advanced Micro Devices",
+          "market": "US",
+          "rationale": "현재가 466.38달러은 전일 대비 -10.86%이고 52주 고점 대비 85.3%지만 여전히 AI 가속기 기대가 가격에 남아 있습니다. 500달러 회복 전에는 공급 계약 기대보다 고점권 포지셔닝 청산 리스크가 큽니다.",
+          "thesis": "AI 가속기 경쟁 스토리는 살아 있으나 현재는 가격이 먼저 기대를 낮추는 구간입니다.",
+          "catalyst": "500달러 회복과 신규 공급 계약 확인",
+          "catalysts": [
+            "500달러 회복",
+            "AI 가속기 공급 계약",
+            "NVDA 대비 상대강도 회복"
+          ],
+          "risks": [
+            "계약 뉴스 숏커버",
+            "AI 수요 재확인",
+            "낙폭 과대 반등"
+          ],
+          "alreadyPriced": "상당 부분 반영 후 재가격",
+          "watchDate": "공급 계약/가이던스",
+          "watchCondition": "500달러 회복 전까지 신규 추격을 제한합니다.",
+          "confidenceReason": "fresh 가격과 -10%대 하락이 과밀 청산 신호를 보여줍니다.",
+          "invalidation": "500달러 회복과 신규 계약 확인 시 caution을 낮춥니다.",
+          "positioningNote": "추격 금지, 회복 확인 전 reduce",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 466.38,
+            "previousCloseChangePct": -10.86,
+            "week52High": 546.44,
+            "week52Low": 115.06,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "NVDA",
+          "companyName": "NVIDIA",
+          "market": "US",
+          "rationale": "현재가 205.10달러은 전일 대비 -6.20%이고 52주 고점 대비 86.7%라 리더십만으로 신규 진입을 정당화하기 어렵습니다. 방한·RTX Spark·로봇 뉴스는 구조적으로 긍정이나 210달러 회복 전에는 crowded trade 방어가 우선입니다.",
+          "thesis": "AI 리더십은 유지되지만 현재 가격에서는 제품·방한 뉴스보다 지지선 회복이 먼저입니다.",
+          "catalyst": "210달러 회복과 AI PC·physical AI 밸류체인 동반 안정",
+          "catalysts": [
+            "210달러 회복",
+            "RTX Spark 후속 수요 확인",
+            "AI 반도체 breadth 안정"
+          ],
+          "risks": [
+            "제품 뉴스 재평가",
+            "기관 저가 매수",
+            "AI capex 전망 상향"
+          ],
+          "alreadyPriced": "일부 반영, 추격 부담 존재",
+          "watchDate": "방한/Computex 후속",
+          "watchCondition": "210달러 회복과 AMD·AVGO 낙폭 축소를 함께 확인합니다.",
+          "confidenceReason": "fresh 가격이나 리더 프리미엄이 남아 reduce보다 hold로 둡니다.",
+          "invalidation": "210달러 회복과 AI PC 관련주 동반 반등 시 caution을 낮춥니다.",
+          "positioningNote": "관찰 유지, 신규 추격 제한",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 205.1,
+            "previousCloseChangePct": -6.2,
+            "week52High": 236.54,
+            "week52Low": 140.85,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        }
+      ],
+      "marketReaction": "Axios는 강한 고용과 수익성 기대 부담 속에 Nasdaq이 4.2% 하락했고 반도체 지수가 10% 넘게 밀렸다고 보도했습니다. 스냅샷도 AVGO·AMD·NVDA 동반 하락을 보여줍니다.",
+      "tradability": "wait_for_confirmation",
+      "risk": "AI 수요가 아니라 할인율과 포지셔닝 문제라 회복도 빠를 수 있지만, 지지선 회복 전 추격은 손익비가 낮습니다.",
+      "whatToWatch": "AVGO 400달러, AMD 500달러, NVDA 210달러 회복과 10년물 금리 안정 여부",
+      "watchDate": "다음 US 거래일",
+      "alreadyPriced": "상당 부분 재가격 중",
+      "invalidation": "세 종목이 동시에 회복 조건을 되찾고 SOX/KR 반도체 ETF가 안정되면 테마 caution을 낮춥니다.",
+      "evidence": [
+        {
+          "type": "macro",
+          "claim": "미국 5월 비농업 고용 +172,000명, 실업률 4.3%",
+          "source": "BLS 2026-06-05 https://www.bls.gov/news.release/archives/empsit_06052026.htm",
+          "asOf": "2026-06-05",
+          "confidence": "verified"
+        },
+        {
+          "type": "market",
+          "claim": "강한 고용과 AI 기대 부담 속 Nasdaq 4.2% 하락, 반도체 지수 10% 이상 하락",
+          "source": "Axios 2026-06-05 https://www.axios.com/2026/06/05/stocks-nasdaq-tech-stocks",
+          "asOf": "2026-06-05",
+          "confidence": "verified"
+        },
+        {
+          "type": "price",
+          "claim": "AVGO -7.92%, AMD -10.86%, NVDA -6.20%",
+          "source": "public/data/prices_snapshot.json",
+          "asOf": "2026-06-08",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "theme": "Jensen Huang 방한과 한국 physical AI 협력 기대",
+      "market": "KR",
+      "eventType": "person_visit",
+      "signalStrength": 76,
+      "sourceFreshness": "1-3d",
+      "narrative": "Nvidia CEO의 방한은 HBM, LPDDR, 로봇, 자율주행, AI 연구센터 기대를 동시에 만들었지만, 가격은 HBM 대형주 추격보다 확인 대기 신호를 냈습니다.",
+      "affectedStocks": [
+        {
+          "ticker": "NVDA",
+          "companyName": "NVIDIA",
+          "market": "US",
+          "rationale": "현재가 205.10달러은 전일 대비 -6.20%이고 52주 고점 대비 86.7%라 리더십만으로 신규 진입을 정당화하기 어렵습니다. 방한·RTX Spark·로봇 뉴스는 구조적으로 긍정이나 210달러 회복 전에는 crowded trade 방어가 우선입니다.",
+          "thesis": "AI 리더십은 유지되지만 현재 가격에서는 제품·방한 뉴스보다 지지선 회복이 먼저입니다.",
+          "catalyst": "210달러 회복과 AI PC·physical AI 밸류체인 동반 안정",
+          "catalysts": [
+            "210달러 회복",
+            "RTX Spark 후속 수요 확인",
+            "AI 반도체 breadth 안정"
+          ],
+          "risks": [
+            "제품 뉴스 재평가",
+            "기관 저가 매수",
+            "AI capex 전망 상향"
+          ],
+          "alreadyPriced": "일부 반영, 추격 부담 존재",
+          "watchDate": "방한/Computex 후속",
+          "watchCondition": "210달러 회복과 AMD·AVGO 낙폭 축소를 함께 확인합니다.",
+          "confidenceReason": "fresh 가격이나 리더 프리미엄이 남아 reduce보다 hold로 둡니다.",
+          "invalidation": "210달러 회복과 AI PC 관련주 동반 반등 시 caution을 낮춥니다.",
+          "positioningNote": "관찰 유지, 신규 추격 제한",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 205.1,
+            "previousCloseChangePct": -6.2,
+            "week52High": 236.54,
+            "week52Low": 140.85,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "000660",
+          "companyName": "SK하이닉스",
+          "market": "KR",
+          "rationale": "현재가 2,070,000원은 전일 대비 -9.92%이고 52주 고점 대비 86.0%로 HBM 리더 프리미엄이 아직 남아 있습니다. Jensen Huang의 메모리 수요 발언은 긍정이나 2,150,000원 회복 전에는 좋은 수요와 좋은 관찰 자리를 분리합니다.",
+          "thesis": "HBM 구조 수요는 강하지만 현재는 포지셔닝 충격이 먼저 확인된 리더입니다.",
+          "catalyst": "2,150,000원 회복과 KODEX 반도체 안정",
+          "catalysts": [
+            "2,150,000원 회복",
+            "HBM4 공급 확인",
+            "외국인 매도 둔화"
+          ],
+          "risks": [
+            "고점권 집중 포지션",
+            "외국인 매도 지속",
+            "미국 AI 리더 추가 하락"
+          ],
+          "alreadyPriced": "상당 부분 반영",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "2,150,000원 회복과 KODEX 반도체 160,000원 회복을 같이 봅니다.",
+          "confidenceReason": "fresh 가격과 급락이 caution을 지지하지만 장기 수요는 남아 high가 아닌 medium-high입니다.",
+          "invalidation": "2,150,000원 회복과 반도체 ETF 안정 시 reduce를 hold로 낮춥니다.",
+          "positioningNote": "신규 추격 제한, 회복 확인 전 reduce",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 2070000,
+            "previousClose": 2298000,
+            "previousCloseChangeAmount": -228000,
+            "previousCloseChangePct": -9.92,
+            "priceSession": "previous_close",
+            "week52High": 2407000,
+            "week52Low": 227500,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "005930",
+          "companyName": "삼성전자",
+          "market": "KR",
+          "rationale": "현재가 329,000원은 전일 대비 -6.40%이고 52주 고점 대비 88.9%로 고점권 프리미엄이 남아 있습니다. HBM·foundry 회복 스토리는 크지만 340,000원 회복 전에는 방한 기대를 신규 상향 근거로 쓰지 않습니다.",
+          "thesis": "메모리·AI 공급망 옵션은 있으나 현재는 가격 방어 실패가 먼저입니다.",
+          "catalyst": "340,000원 회복과 HBM 공급 뉴스의 가격 반응",
+          "catalysts": [
+            "340,000원 회복",
+            "HBM 공급 확인",
+            "외국인 매도 둔화"
+          ],
+          "risks": [
+            "HBM 경쟁력 검증 지연",
+            "고점권 집중 포지션",
+            "KOSPI 변동성"
+          ],
+          "alreadyPriced": "상당 부분 반영",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "340,000원 회복과 SK하이닉스 낙폭 축소를 확인합니다.",
+          "confidenceReason": "fresh 가격과 동반 급락이 caution 근거지만 구조 수요 때문에 exit가 아닌 reduce입니다.",
+          "invalidation": "340,000원 회복과 반도체 ETF 안정 시 reduce를 hold로 낮춥니다.",
+          "positioningNote": "신규 추격 제한, 고점권 회복 확인",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 329000,
+            "previousClose": 351500,
+            "previousCloseChangeAmount": -22500,
+            "previousCloseChangePct": -6.4,
+            "priceSession": "previous_close",
+            "week52High": 370000,
+            "week52Low": 56900,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "089030",
+          "companyName": "테크윙",
+          "market": "KR",
+          "rationale": "현재가 54,700원은 전일 대비 +1.86%이고 52주 고점 대비 73.9%라 대형 HBM 급락일에 상대강도 생존이 확인됐습니다. 후공정 안에서도 심텍·에프에스티보다 가격 방어가 낫지만 54,000원 이탈 시 중소형 알파 논리를 접습니다.",
+          "thesis": "대형 HBM이 흔들릴 때도 가격이 버틴 후공정 검사장비 생존주입니다.",
+          "catalyst": "54,000원 방어와 후공정 거래대금 유지",
+          "catalysts": [
+            "54,000원 방어",
+            "후공정 거래대금 증가",
+            "한미반도체 280,000원 방어"
+          ],
+          "risks": [
+            "중소형 유동성",
+            "대형 반도체 추가 급락",
+            "후공정 수주 확인 부족"
+          ],
+          "alreadyPriced": "일부 반영",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "54,000원 위에서 거래대금이 유지되고 한미반도체가 280,000원을 지키는지 확인합니다.",
+          "confidenceReason": "fresh 가격과 상대강도는 긍정이나 표본이 짧고 대형 반도체 충격이 커 medium입니다.",
+          "invalidation": "54,000원 이탈 또는 후공정주 동반 약세가 나오면 buy를 hold로 낮춥니다.",
+          "positioningNote": "신규 관심, 소액 탐색 관찰",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "buy",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 54700,
+            "previousClose": 53700,
+            "previousCloseChangeAmount": 1000,
+            "previousCloseChangePct": 1.86,
+            "priceSession": "previous_close",
+            "week52High": 74000,
+            "week52Low": 26050,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        }
+      ],
+      "marketReaction": "Korea JoongAng Daily는 Huang이 한국 메모리 수요와 현대차 로봇 파트너십, 서울 AI 연구센터 채용을 언급했다고 보도했습니다. 그러나 스냅샷상 SK하이닉스·삼성전자·NVDA는 모두 하락했습니다.",
+      "tradability": "wait_for_confirmation",
+      "risk": "실제 회동은 확인됐지만 HBM 대형주 가격이 급락해, 계약·발주 확인 전에는 뉴스 추격보다 가격 회복 조건을 우선합니다.",
+      "whatToWatch": "SK하이닉스 2,150,000원, 삼성전자 340,000원 회복과 AI 연구센터·로봇 파트너십의 실제 계약화 여부",
+      "watchDate": "2026-06-09 이후 후속 보도",
+      "alreadyPriced": "기대는 일부 반영, 가격은 미확인",
+      "invalidation": "SK하이닉스 2,150,000원과 삼성전자 340,000원 회복 없이 후속 계약도 없으면 테마를 관찰로 낮춥니다.",
+      "evidence": [
+        {
+          "type": "news",
+          "claim": "Huang이 한국 메모리 수요, 현대차 로봇 파트너십, AI 연구센터를 언급",
+          "source": "Korea JoongAng Daily 2026-06-05 https://koreajoongangdaily.joins.com/news/2026-06-05/business/industry/Jensen-Huang-returns-to-Korea-wanting-more--chips-robots-and-a-research-hub/2609838",
+          "asOf": "2026-06-05",
+          "confidence": "verified"
+        },
+        {
+          "type": "price",
+          "claim": "SK하이닉스 -9.92%, 삼성전자 -6.40%, NVDA -6.20%",
+          "source": "public/data/prices_snapshot.json",
+          "asOf": "2026-06-08",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "theme": "KDDX·캐나다 방산 패키지 이벤트",
+      "market": "KR",
+      "eventType": "policy",
+      "signalStrength": 79,
+      "sourceFreshness": "1-3d",
+      "narrative": "KDDX 입찰 경쟁은 국내 정책·법원 이벤트이고, 캐나다 방산·에너지 패키지는 한화오션 중심의 해외 선택지를 넓히는 이야기입니다. AI 리더 매도와 상관관계가 낮아 3~10거래일 상대강도 후보로 봅니다.",
+      "affectedStocks": [
+        {
+          "ticker": "329180",
+          "companyName": "HD현대중공업",
+          "market": "KR",
+          "rationale": "현재가 664,000원은 전일 대비 +2.00%로 AI 매도일에 방어가 확인됐지만 52주 고점 대비 86.8%라 리더 추격 여지는 좁습니다. KDDX 입찰 참여와 캐나다 방산 논의는 품질 프리미엄을 지지하지만 650,000원 이탈 시 이벤트 방어 논리를 낮춥니다.",
+          "thesis": "KDDX와 고부가 함정 수주 기대가 겹친 리더지만 현재 가격은 품질을 상당 부분 반영했습니다.",
+          "catalyst": "KDDX 평가 일정과 650,000원 방어",
+          "catalysts": [
+            "KDDX 평가 일정 구체화",
+            "650,000원 방어",
+            "캐나다 방산 패키지 후속"
+          ],
+          "risks": [
+            "고점권 밸류 부담",
+            "KDDX 법원·방사청 일정 지연",
+            "시장 위험회피 확산"
+          ],
+          "alreadyPriced": "상당 부분 반영",
+          "watchDate": "KDDX 평가/법원 판단",
+          "watchCondition": "650,000원을 지키고 한화오션·현대로템이 동반 방어되는지 확인합니다.",
+          "confidenceReason": "fresh 가격과 상대 방어는 긍정이나 52주 고점권이라 신규 관심 확신은 medium입니다.",
+          "invalidation": "650,000원 이탈 또는 KDDX 일정 지연 뉴스가 나오면 신규 관심을 낮춥니다.",
+          "positioningNote": "관찰 유지, 리더 추격보다 방어선 확인",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 664000,
+            "previousClose": 651000,
+            "previousCloseChangeAmount": 13000,
+            "previousCloseChangePct": 2,
+            "priceSession": "previous_close",
+            "week52High": 765000,
+            "week52Low": 370000,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "042660",
+          "companyName": "한화오션",
+          "market": "KR",
+          "rationale": "현재가 112,200원은 전일 대비 -2.52%지만 52주 고점 대비 72.5%로 리더보다 가격 여유가 남아 있습니다. KDDX 경쟁과 캐나다 CPSP 패키지 뉴스가 직접 촉매이고, 110,000원 방어가 이어질 때만 분할 관찰 후보로 둡니다.",
+          "thesis": "KDDX와 해외 잠수함 패키지 모두에서 이벤트 민감도가 높은 조선·방산 후발 후보입니다.",
+          "catalyst": "KDDX 보안감점 해석과 캐나다 CPSP 후속",
+          "catalysts": [
+            "110,000원 방어",
+            "KDDX 평가 일정",
+            "캐나다 CPSP·Project Beaver 후속"
+          ],
+          "risks": [
+            "입찰 결과 불확실성",
+            "이벤트 지연",
+            "110,000원 이탈"
+          ],
+          "alreadyPriced": "일부 반영",
+          "watchDate": "KDDX 법원 판단/캐나다 CPSP 일정",
+          "watchCondition": "110,000원을 지키고 HD현대중공업 대비 상대강도가 유지되는지 봅니다.",
+          "confidenceReason": "fresh 가격과 고점 대비 여유는 있지만 이벤트 의존도가 높아 medium입니다.",
+          "invalidation": "110,000원 이탈 또는 KDDX·캐나다 일정 지연 시 buy를 hold로 낮춥니다.",
+          "positioningNote": "소액 탐색 관찰, 이벤트 확인 전 분할 관찰",
+          "isNew": false,
+          "change": "upgrade",
+          "actionBias": "buy",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 112200,
+            "previousClose": 115100,
+            "previousCloseChangeAmount": -2900,
+            "previousCloseChangePct": -2.52,
+            "priceSession": "previous_close",
+            "week52High": 154800,
+            "week52Low": 71500,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        },
+        {
+          "ticker": "064350",
+          "companyName": "현대로템",
+          "market": "KR",
+          "rationale": "현재가 191,400원은 전일 대비 -0.67%로 시장 충격 대비 낙폭이 작고 52주 고점 대비 67.9%라 방산 후발 순환 여지가 있습니다. KDDX 직접 수혜는 약하지만 방산 수주주 안에서 덜 crowded한 방어 후보이며 190,000원 이탈 시 상대강도 논리를 접습니다.",
+          "thesis": "AI 매도와 상관관계가 낮고 가격 방어선이 가까운 방산 후발 관찰 후보입니다.",
+          "catalyst": "방산 수주 뉴스와 190,000원 방어",
+          "catalysts": [
+            "190,000원 방어",
+            "방산 수주/정책 뉴스",
+            "조선방산 동반 상대강도"
+          ],
+          "risks": [
+            "방산 테마 수급 둔화",
+            "수주 뉴스 부재",
+            "시장 위험회피 확산"
+          ],
+          "alreadyPriced": "일부 반영",
+          "watchDate": "방산 수주/정책 뉴스",
+          "watchCondition": "190,000원을 지키며 한화오션과 같이 낙폭을 제한하는지 확인합니다.",
+          "confidenceReason": "fresh 가격과 방어력은 긍정이나 직접 촉매가 KDDX보다 약해 medium입니다.",
+          "invalidation": "190,000원 이탈과 방산주 동반 약세가 나오면 신규 관심에서 제외합니다.",
+          "positioningNote": "분할 관찰, 비AI 방어 순환 후보",
+          "isNew": false,
+          "change": "upgrade",
+          "actionBias": "buy",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 191400,
+            "previousClose": 192700,
+            "previousCloseChangeAmount": -1300,
+            "previousCloseChangePct": -0.67,
+            "priceSession": "previous_close",
+            "week52High": 282000,
+            "week52Low": 148700,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        }
+      ],
+      "marketReaction": "HD현대중공업은 +2.00%로 방어했고 한화오션·현대로템도 핵심 방어선 근처를 유지했습니다. 확정 수주가 아니므로 리더 추격보다 한화오션·현대로템 분할 관찰이 더 나은 자리입니다.",
+      "tradability": "actionable",
+      "risk": "KDDX 감점 해석과 캐나다 CPSP는 일정 지연과 정치·규제 변수가 커서 단기 급등 추격은 피해야 합니다.",
+      "whatToWatch": "KDDX 평가 일정, 보안감점 법원 판단, 캐나다 CPSP preferred bidder 일정",
+      "watchDate": "KDDX 평가/캐나다 CPSP 후속",
+      "alreadyPriced": "일부 반영",
+      "invalidation": "HD현대중공업 650,000원, 한화오션 110,000원, 현대로템 190,000원 동반 이탈 시 테마를 낮춥니다.",
+      "evidence": [
+        {
+          "type": "news",
+          "claim": "HD현대중공업과 한화오션이 KDDX 사업 입찰 경쟁에 참여",
+          "source": "Korea JoongAng Daily 2026-05-27 https://koreajoongangdaily.joins.com/news/2026-05-27/national/defense/HD-HHI-submits-bid-for-7-trillion-won-nextgen-destroyer-project/2602297",
+          "asOf": "2026-05-27",
+          "confidence": "verified"
+        },
+        {
+          "type": "news",
+          "claim": "한국·캐나다 에너지·방산 협력과 한화 중심 CPSP 패키지 보도",
+          "source": "Korea JoongAng Daily 2026-06-05 https://koreajoongangdaily.joins.com/news/2026-06-05/business/industry/Korea-and-Canada-announce-broad-range-of-energy-mineral-and-defense-deals-with-Hanwha-at-the-center/2609669",
+          "asOf": "2026-06-05",
+          "confidence": "verified"
+        },
+        {
+          "type": "price",
+          "claim": "HD현대중공업 +2.00%, 한화오션 -2.52%, 현대로템 -0.67%",
+          "source": "public/data/prices_snapshot.json",
+          "asOf": "2026-06-08",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "theme": "AI 데이터센터 capex와 전력 품질/고베타 분리",
+      "market": "US",
+      "eventType": "other",
+      "signalStrength": 72,
+      "sourceFreshness": "1-3d",
+      "narrative": "AI 지출은 전력 장비 수요를 지지하지만, 금리 상승과 capex 효율성 논쟁은 고베타 원전·데이터센터 옵션주를 먼저 흔듭니다. 전력 테마 안에서도 ETN형 품질주와 APLD·OKLO형 옵션을 분리해야 합니다.",
+      "affectedStocks": [
+        {
+          "ticker": "ETN",
+          "companyName": "Eaton",
+          "market": "US",
+          "rationale": "현재가 395.94달러은 전일 대비 -5.42%지만 390달러 방어선 위이고 52주 고점 대비 90.9%입니다. 전력 장비 품질주는 발전·원전 고베타보다 사업 품질이 낫지만 고점권이므로 390달러 방어와 주문 가시성이 같이 필요합니다.",
+          "thesis": "AI 전력 병목 내러티브 안에서 규제·발전 베타보다 품질 장비주로 볼 수 있는 후보입니다.",
+          "catalyst": "390달러 방어와 AI 데이터센터 전력 주문 확인",
+          "catalysts": [
+            "390달러 방어",
+            "전력 장비 주문",
+            "AI capex 안정"
+          ],
+          "risks": [
+            "고점권 밸류",
+            "금리 추가 상승",
+            "AI capex 둔화"
+          ],
+          "alreadyPriced": "일부 반영, 고점권 부담 존재",
+          "watchDate": "다음 US 거래일",
+          "watchCondition": "390달러를 지키고 CEG·VST 대비 상대강도가 우위인지 확인합니다.",
+          "confidenceReason": "fresh 가격과 품질 프레임은 긍정이나 52주 고점권이라 medium입니다.",
+          "invalidation": "390달러 이탈 또는 AI 전력주 동반 약세 시 buy를 hold로 낮춥니다.",
+          "positioningNote": "눌림 시 1차 확인, 품질주 한정 신규 관심",
+          "isNew": false,
+          "change": "hold",
+          "actionBias": "buy",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 395.94,
+            "previousCloseChangePct": -5.42,
+            "week52High": 435.43,
+            "week52Low": 311.92,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "CEG",
+          "companyName": "Constellation Energy",
+          "market": "US",
+          "rationale": "현재가 254.83달러은 전일 대비 -3.69%이고 52주 고점 대비 61.7%로 고점 부담은 줄었지만 Results 조건인 265달러를 잃었습니다. 원전 전력 스토리는 유효해도 규제·금리 베타가 커서 ETN보다 후순위 관찰입니다.",
+          "thesis": "전력 수요 수혜주는 맞지만 현재는 품질 장비주보다 고베타 정책 민감도가 큽니다.",
+          "catalyst": "265달러 회복과 전력 계약 확인",
+          "catalysts": [
+            "265달러 회복",
+            "전력 계약 뉴스",
+            "ETN 대비 상대강도 개선"
+          ],
+          "risks": [
+            "규제 리스크",
+            "금리 상승",
+            "원전 베타 변동성"
+          ],
+          "alreadyPriced": "일부 반영 후 재가격",
+          "watchDate": "다음 US 거래일",
+          "watchCondition": "265달러 회복과 ETN 대비 2거래일 상대강도 개선이 필요합니다.",
+          "confidenceReason": "fresh 가격이나 핵심 회복 조건 미달로 hold입니다.",
+          "invalidation": "250달러 이탈 또는 전력 고베타주 동반 약세 시 reduce로 낮춥니다.",
+          "positioningNote": "관찰 유지, 품질주와 분리",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 254.83,
+            "previousCloseChangePct": -3.69,
+            "week52High": 412.7,
+            "week52Low": 243.3,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "APLD",
+          "companyName": "Applied Digital",
+          "market": "US",
+          "rationale": "현재가 39.62달러은 전일 대비 -10.26%이고 52주 고점 대비 78.1%지만 Results 조건인 45달러를 크게 밑돕니다. 데이터센터 옵션성보다 자금조달·고베타 fragility가 앞서므로 회복 전 신규 관심을 배제합니다.",
+          "thesis": "AI 데이터센터 옵션주는 촉매가 가격 방어로 확인되기 전까지 하방 fragility가 큽니다.",
+          "catalyst": "45달러 회복과 계약 뉴스",
+          "catalysts": [
+            "45달러 회복",
+            "계약 뉴스",
+            "거래대금 증가"
+          ],
+          "risks": [
+            "자금조달 리스크",
+            "계약 지연",
+            "고베타 청산"
+          ],
+          "alreadyPriced": "재가격 중",
+          "watchDate": "계약/자금조달 뉴스",
+          "watchCondition": "45달러 회복과 거래대금 증가 전까지 buy 후보에서 제외합니다.",
+          "confidenceReason": "fresh 가격과 Results 조건 미달이 caution을 지지합니다.",
+          "invalidation": "45달러 회복과 계약 뉴스가 동시에 나오면 reduce를 hold로 낮춥니다.",
+          "positioningNote": "고베타 축소, 관찰만 유지",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "reduce",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "high",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 39.62,
+            "previousCloseChangePct": -10.26,
+            "week52High": 50.72,
+            "week52Low": 9.02,
+            "currency": "USD",
+            "sourceNote": "가격 출처: 저장 가격 스냅샷"
+          }
+        },
+        {
+          "ticker": "487240",
+          "companyName": "KODEX 미국AI전력핵심인프라",
+          "market": "KR",
+          "rationale": "현재가 43,355원은 전일 대비 -5.09%이고 52주 고점 대비 67.1%로 과열은 완화됐지만 ETF 내부가 고베타 전력주를 함께 담을 수 있습니다. 43,000원 방어와 미국 전력주 breadth 회복 전까지 신규 관심보다 관찰로 둡니다.",
+          "thesis": "AI 전력 병목을 분산해 볼 수 있지만 현재는 품질주와 고베타가 섞인 바스켓입니다.",
+          "catalyst": "43,000원 방어와 미국 전력주 안정",
+          "catalysts": [
+            "43,000원 방어",
+            "ETN 상대강도",
+            "AI 전력 정책 후속"
+          ],
+          "risks": [
+            "고베타 구성 종목 약세",
+            "원화·환율 변동",
+            "AI capex 재가격"
+          ],
+          "alreadyPriced": "일부 반영 후 재가격",
+          "watchDate": "다음 KR 거래일",
+          "watchCondition": "43,000원을 지키고 ETN이 390달러를 유지하는지 봅니다.",
+          "confidenceReason": "fresh 가격이나 바스켓 혼합 리스크 때문에 hold입니다.",
+          "invalidation": "43,000원 이탈 또는 ETN 390달러 이탈 시 관찰 강도를 낮춥니다.",
+          "positioningNote": "관찰 유지, ETF 분산 확인용",
+          "isNew": false,
+          "change": "downgrade",
+          "actionBias": "hold",
+          "timeHorizon": "1-3w",
+          "confidenceLevel": "medium",
+          "priceSnapshot": {
+            "priceDate": "2026-06-08",
+            "currentPrice": 43355,
+            "previousClose": 45680,
+            "previousCloseChangeAmount": -2325,
+            "previousCloseChangePct": -5.09,
+            "priceSession": "previous_close",
+            "week52High": 64630,
+            "week52Low": 12840,
+            "currency": "KRW",
+            "sourceNote": "가격 출처: Naver Finance 국내 시세"
+          }
+        }
+      ],
+      "marketReaction": "ETN은 390달러 위를 유지해 품질주 관찰 조건이 남았지만 CEG·APLD·KODEX 전력 ETF는 회복 조건이 부족합니다.",
+      "tradability": "wait_for_confirmation",
+      "risk": "AI capex가 실제 주문으로 이어지지 않으면 전력 병목 내러티브도 할인율 충격을 피하기 어렵습니다.",
+      "whatToWatch": "ETN 390달러, CEG 265달러, APLD 45달러, 데이터센터 전력 계약 뉴스",
+      "watchDate": "다음 US/KR 거래일",
+      "alreadyPriced": "일부 반영 후 재가격",
+      "invalidation": "ETN 390달러 이탈 또는 AI 전력주 동반 약세가 이어지면 테마를 관찰로 낮춥니다.",
+      "evidence": [
+        {
+          "type": "market",
+          "claim": "AI 지출이 인플레이션·금리 부담을 키운다는 시장 논쟁이 반도체 급락과 연결",
+          "source": "Axios 2026-06-05 https://www.axios.com/2026/06/05/stocks-nasdaq-tech-stocks",
+          "asOf": "2026-06-05",
+          "confidence": "verified"
+        },
+        {
+          "type": "price",
+          "claim": "ETN -5.42%, CEG -3.69%, APLD -10.26%, KODEX 미국AI전력핵심인프라 -5.09%",
+          "source": "public/data/prices_snapshot.json",
+          "asOf": "2026-06-08",
+          "confidence": "verified"
+        }
+      ]
+    }
+  ],
+  "smallCapIdeas": [
+    {
+      "rank": 1,
+      "ticker": "089030",
+      "companyName": "테크윙",
+      "market": "KR",
+      "sector": "반도체 후공정 검사장비",
+      "theme": "후공정 상대강도 생존주",
+      "thesis": "대형 HBM 리더가 흔들린 날에도 가격이 버틴 검사장비 후보입니다.",
+      "whyNow": "현재가 54,700원은 전일 대비 +1.86%이고 52주 고점 대비 73.9%라 54,000원 방어 시 후발 알파를 볼 수 있습니다.",
+      "followThroughNote": "반복 스냅샷 교훈상 중소형은 낮은 가격보다 54,000원 위 반복 지지와 거래대금 유지가 먼저입니다.",
+      "catalyst": "54,000원 방어와 후공정 장비 거래대금 재유입",
+      "actionBias": "buy",
+      "timeHorizon": "1-3w",
+      "invalidation": "54,000원 이탈 또는 한미반도체 280,000원 이탈 시 buy를 hold로 낮춥니다.",
+      "positioningNote": "소액 탐색 관찰, 신규 관심",
+      "valuationNote": "52주 고점 대비 여유는 있지만 실적 추정 없이 싸다고 단정하지 않고 수주·마진 확인을 요구합니다.",
+      "liquidityNote": "중소형 장비주는 거래대금이 줄면 변동성이 커져 분할 관찰이 필요합니다.",
+      "catalysts": [
+        "54,000원 방어",
+        "후공정 거래대금 증가",
+        "AI 반도체 정책 후속"
+      ],
+      "risks": [
+        "중소형 유동성",
+        "대형 반도체 추가 급락",
+        "정책 수혜 불명확"
+      ],
+      "alreadyPriced": "일부 반영",
+      "watchDate": "다음 KR 거래일",
+      "watchCondition": "54,000원 위에서 거래대금이 유지되고 한미반도체가 280,000원을 지키는지 확인합니다.",
+      "confidenceReason": "fresh 가격과 상대강도는 긍정이나 대형 반도체 충격 때문에 medium입니다.",
+      "priceSnapshot": {
+        "priceDate": "2026-06-08",
+        "currentPrice": 54700,
+        "previousClose": 53700,
+        "previousCloseChangeAmount": 1000,
+        "previousCloseChangePct": 1.86,
+        "priceSession": "previous_close",
+        "week52High": 74000,
+        "week52Low": 26050,
+        "currency": "KRW",
+        "sourceNote": "가격 출처: Naver Finance 국내 시세"
+      },
+      "confidenceLevel": "medium"
+    },
+    {
+      "rank": 2,
+      "ticker": "222800",
+      "companyName": "심텍",
+      "market": "KR",
+      "sector": "반도체 PCB/패키징",
+      "theme": "PCB 회복 대기",
+      "thesis": "PCB 회복 스토리는 남아 있지만 이번 가격은 지지선 확인에 실패했습니다.",
+      "whyNow": "현재가 103,000원은 전일 대비 -9.17%이고 52주 고점 대비 73.0%라 고점 대비 여유는 있으나 108,000원 조건을 잃었습니다.",
+      "followThroughNote": "Results 교훈상 PCB 중소형은 다음 표본에서 지지선 회복을 통과해야 합니다.",
+      "catalyst": "108,000원 회복과 거래대금 증가",
+      "actionBias": "hold",
+      "timeHorizon": "1-3w",
+      "invalidation": "100,000원 이탈 시 small-cap 관찰에서도 제외합니다.",
+      "positioningNote": "관망, 회복 확인 전 신규 관심 제한",
+      "valuationNote": "낮아진 가격만으로 저평가를 단정하지 않고 수주·마진 확인을 요구합니다.",
+      "liquidityNote": "낙폭이 큰 중소형은 거래대금 공백 시 반등 실패가 빠릅니다.",
+      "catalysts": [
+        "108,000원 회복",
+        "PCB 거래대금 회복",
+        "후공정 breadth 확산"
+      ],
+      "risks": [
+        "지지선 이탈",
+        "대형 반도체 추가 약세",
+        "거래대금 감소"
+      ],
+      "alreadyPriced": "재가격 중",
+      "watchDate": "다음 KR 거래일",
+      "watchCondition": "108,000원 회복과 거래대금 동반 증가가 필요합니다.",
+      "confidenceReason": "fresh 가격이지만 핵심 조건 미달이라 hold입니다.",
+      "priceSnapshot": {
+        "priceDate": "2026-06-08",
+        "currentPrice": 103000,
+        "previousClose": 113400,
+        "previousCloseChangeAmount": -10400,
+        "previousCloseChangePct": -9.17,
+        "priceSession": "previous_close",
+        "week52High": 141000,
+        "week52Low": 21100,
+        "currency": "KRW",
+        "sourceNote": "가격 출처: Naver Finance 국내 시세"
+      },
+      "confidenceLevel": "medium"
+    },
+    {
+      "rank": 3,
+      "ticker": "036810",
+      "companyName": "에프에스티",
+      "market": "KR",
+      "sector": "반도체 공정 소재/장비",
+      "theme": "공정 장비 저가 관찰",
+      "thesis": "고점 대비 여유는 크지만 이번 실행에서는 가격 회복 확인이 먼저입니다.",
+      "whyNow": "현재가 29,100원은 전일 대비 -8.20%이고 52주 고점 대비 57.1%까지 낮아졌지만 30,000원 미회복 상태입니다.",
+      "followThroughNote": "반복 스냅샷 없이 저가만으로 상향하면 과최적화 위험이 큽니다.",
+      "catalyst": "30,000원 회복과 후공정 동반 안정",
+      "actionBias": "hold",
+      "timeHorizon": "1-3w",
+      "invalidation": "28,500원 이탈 시 관찰 강도를 낮춥니다.",
+      "positioningNote": "관망, 가격 지지 재확인 대기",
+      "valuationNote": "싸 보이는 가격보다 수주·마진 회복을 확인해야 합니다.",
+      "liquidityNote": "중소형 소재·장비주는 거래대금이 얇아 손절 민감도가 큽니다.",
+      "catalysts": [
+        "30,000원 회복",
+        "28,500원 방어",
+        "후공정 섹터 안정"
+      ],
+      "risks": [
+        "유동성 축소",
+        "HBM 대형주 추가 하락",
+        "30,000원 미회복"
+      ],
+      "alreadyPriced": "일부 반영",
+      "watchDate": "다음 KR 거래일",
+      "watchCondition": "28,500원을 지키고 30,000원 위에서 거래대금이 늘어나는지 봅니다.",
+      "confidenceReason": "fresh 가격이지만 상대강도 확인이 부족해 medium-low입니다.",
+      "priceSnapshot": {
+        "priceDate": "2026-06-08",
+        "currentPrice": 29100,
+        "previousClose": 31700,
+        "previousCloseChangeAmount": -2600,
+        "previousCloseChangePct": -8.2,
+        "priceSession": "previous_close",
+        "week52High": 51000,
+        "week52Low": 16065,
+        "currency": "KRW",
+        "sourceNote": "가격 출처: Naver Finance 국내 시세"
+      },
+      "confidenceLevel": "medium"
+    },
+    {
+      "rank": 4,
+      "ticker": "APLD",
+      "companyName": "Applied Digital",
+      "market": "US",
+      "sector": "AI 데이터센터 인프라",
+      "theme": "고베타 데이터센터 옵션 회복 대기",
+      "thesis": "계약 옵션성은 있지만 현재는 가격 방어 실패와 자금조달 리스크가 먼저입니다.",
+      "whyNow": "현재가 39.62달러은 전일 대비 -10.26%이고 52주 고점 대비 78.1%지만 Results 조건인 45달러를 잃었습니다.",
+      "followThroughNote": "고베타 옵션주는 촉매가 가격 방어로 확인되기 전에는 상승 convexity보다 하방 fragility가 큽니다.",
+      "catalyst": "45달러 회복과 계약 뉴스",
+      "actionBias": "hold",
+      "timeHorizon": "1-3w",
+      "invalidation": "38달러 이탈 또는 자금조달 부담 뉴스가 나오면 관찰에서 제외합니다.",
+      "positioningNote": "관망, 계약 확인 전 신규 관심 제한",
+      "valuationNote": "장기 옵션성보다 현재 가격이 요구하는 자금조달 안정성이 먼저입니다.",
+      "liquidityNote": "고베타 소형주는 변동성 확대 시 거래비용과 슬리피지 위험이 큽니다.",
+      "catalysts": [
+        "45달러 회복",
+        "계약 뉴스",
+        "거래대금 증가"
+      ],
+      "risks": [
+        "자금조달 리스크",
+        "계약 지연",
+        "고베타 청산"
+      ],
+      "alreadyPriced": "재가격 중",
+      "watchDate": "계약/자금조달 뉴스",
+      "watchCondition": "45달러를 회복하고 계약 뉴스가 거래대금과 같이 나오는지 확인합니다.",
+      "confidenceReason": "fresh 가격이나 조건 미달로 buy가 아닌 hold입니다.",
+      "priceSnapshot": {
+        "priceDate": "2026-06-08",
+        "currentPrice": 39.62,
+        "previousCloseChangePct": -10.26,
+        "week52High": 50.72,
+        "week52Low": 9.02,
+        "currency": "USD",
+        "sourceNote": "가격 출처: 저장 가격 스냅샷"
+      },
+      "confidenceLevel": "medium"
+    }
+  ],
+  "trendSummary": {
+    "mostFrequentPromisingSector": {
+      "sector": "US 전통 SaaS/데이터 구독",
+      "appearances": 8,
+      "trendDirection": "down"
+    },
+    "mostFrequentCautionSector": {
+      "sector": "US AI 반도체/네트워킹",
+      "appearances": 12,
+      "trendDirection": "up"
+    },
+    "repeatedStockIdeas": [
+      {
+        "ticker": "089030",
+        "appearances": 9,
+        "direction": "up"
+      },
+      {
+        "ticker": "042660",
+        "appearances": 7,
+        "direction": "up"
+      },
+      {
+        "ticker": "ETN",
+        "appearances": 8,
+        "direction": "flat"
+      },
+      {
+        "ticker": "APLD",
+        "appearances": 6,
+        "direction": "down"
+      }
+    ],
+    "promisingSectorSeries": [
+      {
+        "sector": "US 전통 SaaS/데이터 구독",
+        "count": 8
+      },
+      {
+        "sector": "US 전력 인프라 품질주",
+        "count": 8
+      },
+      {
+        "sector": "KR 조선/방산 KDDX",
+        "count": 8
+      },
+      {
+        "sector": "KR 후공정/검사장비",
+        "count": 6
+      }
+    ],
+    "cautionSectorSeries": [
+      {
+        "sector": "US AI 반도체/네트워킹",
+        "count": 12
+      },
+      {
+        "sector": "KR HBM 대형주",
+        "count": 8
+      },
+      {
+        "sector": "US 항공/온라인 여행",
+        "count": 6
+      },
+      {
+        "sector": "US 고베타 원전/AI 데이터센터",
+        "count": 6
+      }
+    ]
+  },
+  "priceSnapshotGeneratedAt": "2026-06-07T21:45:02.971Z",
+  "priceSnapshotSummary": {
+    "total": 32,
+    "fresh": 32,
+    "stale": 0,
+    "partial": 0,
+    "missing": 0,
+    "invalid": 0,
+    "tradable": 32,
+    "noTrade": 0
+  }
+}
