@@ -1,7 +1,7 @@
 import type { ActionBias, StockPriceSnapshot } from "@/lib/types";
 
 export function actionBiasLabel(actionBias?: ActionBias) {
-  if (actionBias === "buy") return "관심확대";
+  if (actionBias === "buy") return "관심";
   if (actionBias === "hold") return "관찰";
   if (actionBias === "reduce") return "주의축소";
   if (actionBias === "exit") return "제외";
