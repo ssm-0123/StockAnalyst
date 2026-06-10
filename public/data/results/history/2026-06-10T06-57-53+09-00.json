@@ -1,0 +1,366 @@
+{
+  "reportDate": "2026-06-10",
+  "lastUpdated": "2026-06-10T06:57:53+09:00",
+  "evaluationWindow": {
+    "startDate": "2026-06-04",
+    "endDate": "2026-06-10",
+    "label": "2026년 6월 2주차"
+  },
+  "overallVerdict": "과밀 AI/HBM 추격 경고와 후공정·PCB 중소형 선별은 맞았지만, 전력 인프라 promising은 종목 선택이 약했습니다.",
+  "summary": "최근 7개 대표본은 2026-06-04부터 2026-06-10까지 모두 확보됐고, 반복 가격 관측 25개 후보 중 snapshot 근거가 가장 뚜렷한 8개를 평가했습니다. KR 후공정·PCB 중소형은 테크윙과 심텍이 KODEX 반도체를 크게 앞서며 worked였고, AI/HBM·고베타 원전 추격 caution도 가격 하락으로 방어 논리가 확인됐습니다. 반대로 CEG와 APLD는 전력·데이터센터 큰 이야기보다 정책·자금조달 베타와 종목 선택 문제가 더 컸습니다.",
+  "benchmarkNote": "벤치마크는 외부 시세 없이 같은 평가 기간 로컬 JSON의 KODEX 반도체, ETN·CEG·VST, NVDA·AVGO 등 반복 가격 스냅샷으로 보수적으로 계산했습니다.",
+  "scorecard": {
+    "evaluatedCount": 8,
+    "workedCount": 5,
+    "mixedCount": 1,
+    "failedCount": 2,
+    "averageCallAlphaPct": 6.3,
+    "bestCall": "테크윙 후공정 중소형 follow-through 콜",
+    "weakestCall": "CEG 전력 인프라 promising 종목 선택 콜"
+  },
+  "smallCapScorecard": {
+    "evaluatedCount": 4,
+    "workedCount": 2,
+    "mixedCount": 1,
+    "failedCount": 1,
+    "averageCallAlphaPct": 7.9
+  },
+  "evaluatedInsights": [
+    {
+      "ticker": "005930",
+      "companyName": "삼성전자",
+      "market": "KR",
+      "sector": "KR HBM 대형주·반도체 ETF",
+      "stance": "caution",
+      "entryDate": "2026-06-04",
+      "evaluationDate": "2026-06-10",
+      "holdingPeriodDays": 6,
+      "thesis": "HBM·AI 메모리 회복의 후발 대형주이나 52주 고점권 신규 추격은 ETF breadth 확인이 먼저라는 판단이었습니다.",
+      "priceReturnPct": -10.7,
+      "benchmarkReturnPct": -3.2,
+      "benchmarkLabel": "KODEX 반도체 동일 기간",
+      "callAlphaPct": 7.5,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "삼성전자는 360,500원에서 322,000원으로 -10.7% 하락해 KODEX 반도체 -3.2%보다 더 약했습니다. HBM 수요 이야기는 남았지만 대형주 신규 추격을 제한하자는 caution은 숫자로 확인됐습니다.",
+      "lesson": "좋은 사업 스토리도 가격이 완벽한 회복을 선반영한 구간에서는 내재 기대와 ETF breadth를 먼저 낮춰 봐야 합니다.",
+      "lessonId": "KR-005930-hbm-crowded-caution-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.74,
+      "lessonValidUntil": "2026-06-24",
+      "lessonConditions": [
+        "삼성전자가 350,000원 아래이고 KODEX 반도체가 160,000원 안착에 실패하면 대형 HBM 신규 추격을 제한합니다.",
+        "삼성전자·SK하이닉스·KODEX 반도체가 2거래일 이상 동반 상대강도를 회복하면 caution을 추격 제한 수준으로 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 SK하이닉스 중심 HBM crowded 교훈이 삼성전자에도 확장됐고, 7일 반복 가격 관측에서 ETF 대비 부진이 확인됐습니다.",
+      "attribution": {
+        "category": "crowded-trade",
+        "primaryCause": "HBM 수요 논리는 맞았지만 52주 고점권 포지션이 작은 충격에도 ETF보다 더 크게 밀렸습니다.",
+        "whatToChange": "다음 Market Intelligence는 HBM 대형주를 추천하기 전에 반도체 ETF 안착과 후공정 breadth 확산을 함께 요구합니다."
+      }
+    },
+    {
+      "ticker": "AMD",
+      "companyName": "Advanced Micro Devices",
+      "market": "US",
+      "sector": "US AI 반도체/네트워킹",
+      "stance": "caution",
+      "entryDate": "2026-06-04",
+      "evaluationDate": "2026-06-10",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 가속기 옵션은 유효하지만 단기 가격은 성장 기대보다 crowded trade 청산에 더 민감하다는 판단이었습니다.",
+      "priceReturnPct": -11.2,
+      "benchmarkReturnPct": -5.1,
+      "benchmarkLabel": "NVDA·AVGO 동일 기간 평균",
+      "callAlphaPct": 6.1,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "AMD는 530.87달러에서 471.20달러로 -11.2% 하락해 NVDA·AVGO 평균 -5.1%보다 더 크게 약했습니다. 6월 9일 반등 시도는 있었지만 6월 10일 대표본에서 다시 caution 논리가 우세했습니다.",
+      "lesson": "혁신 노출이 크더라도 피어 대비 상대강도가 무너지면 성장 옵션보다 포지션 청산 리스크를 먼저 반영해야 합니다.",
+      "lessonId": "US-AMD-ai-accelerator-crowding-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.73,
+      "lessonValidUntil": "2026-06-24",
+      "lessonConditions": [
+        "AMD가 500달러를 회복하지 못하고 NVDA·AVGO 평균 대비 약하면 AI 가속기 추격을 제한합니다.",
+        "AMD가 510달러 위에서 거래대금과 상대강도를 동시에 회복하면 caution을 완화합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 AVGO 이벤트 과밀 교훈이 AMD에도 적용됐고, 6월 10일 대표본에서 피어 평균 대비 추가 부진이 확인됐습니다.",
+      "attribution": {
+        "category": "crowded-trade",
+        "primaryCause": "AI 가속기 성장 기대가 이미 높은 가격에 들어간 상태에서 이벤트 후 기대치 재설정이 더 크게 작용했습니다.",
+        "whatToChange": "다음 Market Intelligence는 AI 반도체 리더를 한 묶음으로 보지 말고 피어 평균 대비 상대강도 회복 종목만 buy 후보로 남깁니다."
+      }
+    },
+    {
+      "ticker": "OKLO",
+      "companyName": "Oklo",
+      "market": "US",
+      "sector": "US 고베타 원전/AI 데이터센터",
+      "stance": "caution",
+      "entryDate": "2026-06-05",
+      "evaluationDate": "2026-06-08",
+      "holdingPeriodDays": 3,
+      "thesis": "원전 옵션성은 크지만 현재 시장에서는 변동성이 우호가 아니라 취약성을 드러낸다는 판단이었습니다.",
+      "priceReturnPct": -13.1,
+      "benchmarkReturnPct": -6.7,
+      "benchmarkLabel": "VST·APLD 고베타 관찰군 평균",
+      "callAlphaPct": 6.4,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "OKLO는 66.81달러에서 58.09달러로 -13.1% 하락해 같은 고베타 관찰군 평균 -6.7%보다 더 취약했습니다. 전력 병목이라는 큰 주제보다 금리·자금조달·규제 민감도가 단기 가격을 지배했습니다.",
+      "lesson": "큰 원전 옵션도 하방이 열린 자금조달 구조에서는 평균 시나리오보다 꼬리위험과 무효화 가격을 먼저 봐야 합니다.",
+      "lessonId": "US-OKLO-smr-beta-fragility-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.74,
+      "lessonValidUntil": "2026-06-24",
+      "lessonConditions": [
+        "OKLO가 62달러 아래이고 VST·APLD와 동반 약세이면 고베타 원전 테마 추격을 금지합니다.",
+        "규제·계약 뉴스가 가격 회복과 함께 나오고 66달러를 회복하면 caution 강도를 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 APLD fragility 교훈과 같은 방향으로, 고베타 전력 옵션은 품질 전력주와 분리해야 한다는 근거가 강화됐습니다.",
+      "attribution": {
+        "category": "risk-management",
+        "primaryCause": "AI 전력 병목 국면은 맞았지만 고베타 원전 옵션의 손실 꼬리가 더 크게 드러났습니다.",
+        "whatToChange": "다음 Market Intelligence는 전력 테마를 ETN형 품질주와 OKLO형 고베타 옵션으로 분리하고, 후자는 가격 회복 전까지 caution으로 둡니다."
+      }
+    },
+    {
+      "ticker": "089030",
+      "companyName": "테크윙",
+      "market": "KR",
+      "sector": "반도체 후공정 검사장비",
+      "stance": "small-cap",
+      "entryDate": "2026-06-05",
+      "evaluationDate": "2026-06-10",
+      "holdingPeriodDays": 5,
+      "thesis": "후공정 검사장비 교훈은 살아났지만 급등 뒤에는 기준선 방어와 follow-through 확인이 먼저라는 판단이었습니다.",
+      "priceReturnPct": 11.2,
+      "benchmarkReturnPct": -5.8,
+      "benchmarkLabel": "KODEX 반도체 동일 기간",
+      "callAlphaPct": 17,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "테크윙은 53,700원에서 59,700원으로 +11.2% 상승했고, 같은 기간 KODEX 반도체 -5.8%를 크게 앞섰습니다. 6월 9일 기준선 훼손 우려가 있었지만 6월 10일 급반등으로 후공정 상대강도 교훈이 다시 살아났습니다.",
+      "followThroughReview": "6일간 반복 관측에서 54,000원 부근을 여러 차례 확인한 뒤 6월 10일 59,700원으로 회복해 follow-through가 확인됐습니다.",
+      "lesson": "중소형 후공정은 단순 저평가보다 실제 거래대금과 기준선 회복이 붙을 때 성장성과 가격이 동시에 설명됩니다.",
+      "lessonId": "KR-089030-backend-relative-strength-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.8,
+      "lessonValidUntil": "2026-06-24",
+      "lessonConditions": [
+        "테크윙이 54,000원 위에서 후공정 피어보다 2거래일 이상 강하면 small-cap 관심을 유지합니다.",
+        "테크윙이 54,000원을 다시 잃고 거래대금이 줄면 성공 교훈을 softened로 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 Results에서는 6월 9일 약세로 softened였지만, 6월 10일 대표본에서 가격과 상대강도가 모두 회복돼 active로 강화했습니다.",
+      "attribution": {
+        "category": "stock-selection",
+        "primaryCause": "후공정 breadth라는 섹터 방향 안에서도 테크윙의 검사장비 상대강도가 KODEX 반도체를 크게 앞섰습니다.",
+        "whatToChange": "다음 Market Intelligence는 후공정 후보를 가격 여유만으로 고르지 말고 기준선 회복, 거래대금, 피어 대비 상대강도를 함께 순위화합니다."
+      }
+    },
+    {
+      "ticker": "222800",
+      "companyName": "심텍",
+      "market": "KR",
+      "sector": "PCB·기판",
+      "stance": "small-cap",
+      "entryDate": "2026-06-04",
+      "evaluationDate": "2026-06-10",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 서버와 고사양 패키징 수요가 후공정 장비에서 PCB·기판 쪽으로 확산될 때 후발 알파가 날 수 있다는 판단이었습니다.",
+      "priceReturnPct": 10.2,
+      "benchmarkReturnPct": -3.2,
+      "benchmarkLabel": "KODEX 반도체 동일 기간",
+      "callAlphaPct": 13.4,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "심텍은 104,400원에서 115,100원으로 +10.2% 상승해 KODEX 반도체 -3.2%를 크게 상회했습니다. 대형 HBM보다 PCB·기판으로 breadth가 넓어진다는 섹터 실행 판단이 맞았습니다.",
+      "followThroughReview": "7일 반복 관측 중 100,000원 부근을 지킨 뒤 6월 10일 115,100원으로 회복해 중소형 follow-through가 확인됐습니다.",
+      "lesson": "이해 가능한 수요 확산이 실제 가격 follow-through로 이어질 때는 리더 추격보다 밸류체인 후발주의 손익비가 더 낫습니다.",
+      "lessonId": "KR-222800-pcb-breadth-followthrough-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.78,
+      "lessonValidUntil": "2026-06-24",
+      "lessonConditions": [
+        "심텍이 108,000원 위에서 KODEX 반도체 대비 상대강도를 유지하면 PCB·기판 후발주 관심을 유지합니다.",
+        "100,000원을 이탈하거나 후공정·PCB 동반 거래대금이 줄면 breadth 확산 교훈을 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 후공정 교훈이 검사장비 중심이었다면 이번에는 PCB·기판까지 확산돼 같은 섹터 교훈의 적용 범위가 넓어졌습니다.",
+      "attribution": {
+        "category": "sector-selection",
+        "primaryCause": "대형 HBM 추격보다 후공정·PCB breadth 확산을 본 섹터 선택이 실제 알파로 연결됐습니다.",
+        "whatToChange": "다음 Market Intelligence는 반도체가 강한 날에도 대형주와 후발 기판주를 분리해 상대강도 높은 쪽만 상향합니다."
+      }
+    },
+    {
+      "ticker": "036810",
+      "companyName": "에프에스티",
+      "market": "KR",
+      "sector": "후공정·공정 장비",
+      "stance": "small-cap",
+      "entryDate": "2026-06-04",
+      "evaluationDate": "2026-06-10",
+      "holdingPeriodDays": 6,
+      "thesis": "대표 후공정 급등주보다 52주 고점까지 여유가 있어 breadth 확산 시 후발 재평가를 노릴 수 있다는 판단이었습니다.",
+      "priceReturnPct": -1.2,
+      "benchmarkReturnPct": -3.2,
+      "benchmarkLabel": "KODEX 반도체 동일 기간",
+      "callAlphaPct": 2,
+      "verdict": "mixed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "에프에스티는 30,000원에서 29,650원으로 -1.2%였고 KODEX 반도체 -3.2%보다는 나았지만 절대수익은 음수였습니다. 6월 10일 반등은 확인됐으나 테크윙·심텍만큼의 follow-through는 부족했습니다.",
+      "followThroughReview": "7일 반복 관측에서 29,000원 전후 지지는 확인했지만 6월 4일 진입가를 아직 회복하지 못해 교훈은 조건부입니다.",
+      "lesson": "품질이 괜찮아 보여도 52주 고점까지의 거리만으로는 충분하지 않고, 실제 상대강도와 거래대금 회복이 없으면 후발주 교훈은 약하게 적용해야 합니다.",
+      "lessonId": "KR-036810-backend-lagging-followthrough-2026-06",
+      "lessonStatus": "softened",
+      "lessonConfidence": 0.54,
+      "lessonValidUntil": "2026-06-24",
+      "lessonConditions": [
+        "에프에스티가 30,000원을 회복하고 테크윙·심텍과 동반 상승하면 후발 breadth 교훈을 강화합니다.",
+        "29,000원 아래로 다시 밀리거나 거래대금이 줄면 small-cap buy에서 제외합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "후공정 섹터 교훈은 유지되지만 에프에스티는 알파가 작고 절대수익이 음수라 조건부로 낮췄습니다.",
+      "attribution": {
+        "category": "timing",
+        "primaryCause": "섹터 반등은 맞았지만 후발 재평가가 테크윙·심텍보다 늦어 진입 가격 대비 충분한 성과가 나오지 않았습니다.",
+        "whatToChange": "다음 Market Intelligence는 후발 후보라도 당일 상대강도가 약하면 대표 follow-through 종목보다 낮은 순위로 둡니다."
+      }
+    },
+    {
+      "ticker": "CEG",
+      "companyName": "Constellation Energy",
+      "market": "US",
+      "sector": "US 전력 인프라 품질주와 AI capex",
+      "stance": "promising",
+      "entryDate": "2026-06-04",
+      "evaluationDate": "2026-06-10",
+      "holdingPeriodDays": 6,
+      "thesis": "원전·전력 공급 스토리는 유효하지만 품질 장비주보다 규제와 전력가격 변수에 더 민감하다는 판단이었습니다.",
+      "priceReturnPct": -5.5,
+      "benchmarkReturnPct": -4.5,
+      "benchmarkLabel": "ETN·VST 전력 관찰군 평균",
+      "callAlphaPct": -1,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "CEG는 266.50달러에서 251.71달러로 -5.5% 하락했고, ETN·VST 평균 -4.5%보다 약했습니다. AI 전력 병목 국면은 맞았지만 promising 종목으로 CEG를 ETN과 같은 확신으로 둔 선택은 틀렸습니다.",
+      "lesson": "전력 수요라는 큰 이야기가 맞아도 규제·전력가격 베타가 현금흐름 품질을 흐리면 같은 섹터 안에서 할인해 평가해야 합니다.",
+      "lessonId": "US-CEG-power-policy-beta-selection-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.62,
+      "lessonValidUntil": "2026-06-24",
+      "lessonConditions": [
+        "CEG가 255달러 아래이고 ETN보다 약하면 전력 buy는 ETN 중심으로 축소합니다.",
+        "CEG가 265달러를 회복하고 ETN 대비 상대강도를 되찾으면 발전·원전 베타 확장을 재검토합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 CEG 실패 교훈이 6월 10일에도 반복돼, 전력 섹터 안에서 품질 장비주와 발전 베타를 분리해야 한다는 경고를 유지했습니다.",
+      "attribution": {
+        "category": "stock-selection",
+        "primaryCause": "전력 병목 국면 판단은 맞았지만 종목 선택이 틀려 CEG가 ETN형 품질주보다 더 약했습니다.",
+        "whatToChange": "다음 Market Intelligence는 전력 섹터를 품질 장비, 발전 베타, 고베타 옵션으로 나누고 CEG는 가격 회복 전까지 hold 이하로 둡니다."
+      }
+    },
+    {
+      "ticker": "APLD",
+      "companyName": "Applied Digital",
+      "market": "US",
+      "sector": "AI 데이터센터 인프라",
+      "stance": "small-cap",
+      "entryDate": "2026-06-04",
+      "evaluationDate": "2026-06-10",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 데이터센터 수요 옵션은 남아 있지만 품질 전력주 대비 자금조달·변동성 취약성을 먼저 봐야 한다는 판단이었습니다.",
+      "priceReturnPct": -5.7,
+      "benchmarkReturnPct": -4.8,
+      "benchmarkLabel": "ETN·CEG 전력 품질 관찰군 평균",
+      "callAlphaPct": -0.9,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "APLD는 43.90달러에서 41.40달러로 -5.7% 하락해 ETN·CEG 평균 -4.8%보다 약했습니다. 6월 9일 반등이 있었지만 6월 10일 다시 밀려 small-cap buy로 올리기에는 자금조달 fragility가 더 컸습니다.",
+      "followThroughReview": "7일 반복 관측에서 45달러 회복 조건을 지키지 못했고, 6월 10일 41.40달러로 재하락해 follow-through가 실패했습니다.",
+      "lesson": "파괴적 데이터센터 TAM이 커 보여도 외부 자금과 높은 변동성에 기대는 구조는 좋은 이야기보다 생존성과 상대강도를 먼저 검증해야 합니다.",
+      "lessonId": "US-APLD-datacenter-financing-fragility-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.6,
+      "lessonValidUntil": "2026-06-24",
+      "lessonConditions": [
+        "APLD가 45달러 아래이고 ETN 대비 약하면 데이터센터 small-cap 추격을 제한합니다.",
+        "APLD가 48달러를 회복하고 자금조달 또는 임대 계약 가시성이 가격으로 확인되면 실패 교훈을 완화합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 APLD 실패 교훈은 6월 10일에도 반복됐고, 반등이 유지되지 않아 active 경고로 남겼습니다.",
+      "attribution": {
+        "category": "macro-headwind",
+        "primaryCause": "AI 데이터센터 수요 옵션보다 금리와 자금조달 민감도가 단기 가격을 더 크게 눌렀습니다.",
+        "whatToChange": "다음 Market Intelligence는 APLD를 테마 대표주로 쓰지 말고 45달러 회복과 계약 가시성이 동시에 확인될 때만 small-cap 후보로 올립니다."
+      }
+    }
+  ],
+  "sectorReviews": [
+    {
+      "sectorName": "KR 후공정·PCB",
+      "market": "KR",
+      "priorView": "promising",
+      "verdict": "worked",
+      "callAlphaPct": 10.8,
+      "detail": "테크윙과 심텍이 KODEX 반도체를 크게 앞서며 후공정·PCB breadth 회복 판단이 맞았습니다. 다만 에프에스티는 절대수익이 음수라 다음에는 섹터 상향 안에서도 거래대금과 기준선 회복 종목만 선별해야 합니다."
+    },
+    {
+      "sectorName": "US AI 반도체/네트워킹",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "worked",
+      "callAlphaPct": 5.2,
+      "detail": "AMD와 AVGO가 이벤트 후 기대치 과밀에 눌리며 신규 추격 제한 판단이 맞았습니다. 구조 성장주는 맞지만 400~500달러 기준선 회복 전에는 가격에 내장된 기대가 더 중요했습니다."
+    },
+    {
+      "sectorName": "US 전력 인프라",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "failed",
+      "callAlphaPct": -1,
+      "detail": "국면 판단은 맞았지만 종목 선택이 틀림: AI 전력 병목은 계속 언급됐지만 CEG는 ETN형 장비 품질주보다 더 약했고, 발전·정책 베타를 같은 confidence로 둔 것이 실패 원인이었습니다."
+    },
+    {
+      "sectorName": "KR HBM 대형주·반도체 ETF",
+      "market": "KR",
+      "priorView": "caution",
+      "verdict": "worked",
+      "callAlphaPct": 5.4,
+      "detail": "삼성전자와 SK하이닉스가 KODEX 반도체보다 크게 흔들리며 대형 HBM 신규 추격 제한은 유효했습니다. 6월 10일 급반등에도 7일 전체로는 후공정·PCB 후발주가 더 나은 관찰 자리였습니다."
+    },
+    {
+      "sectorName": "US 고베타 원전/AI 데이터센터",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "worked",
+      "callAlphaPct": 6.4,
+      "detail": "OKLO와 APLD의 하락은 전력 병목이라는 구조 테마가 고베타 옵션의 financing fragility를 상쇄하지 못했음을 보여줬습니다. 고베타 테마는 계약·규제·자금조달 가격 확인 전까지 품질주와 분리해야 합니다."
+    }
+  ],
+  "processTakeaways": [
+    "반복 가격 관측이 충분할 때는 서사보다 같은 기간 ETF·피어 대비 상대강도를 먼저 계산해야 선택 편향을 줄일 수 있습니다.",
+    "late risk-on 내부 로테이션에서는 섹터 국면 판단과 종목 실행을 분리해야 하며, 전력 인프라처럼 큰 이야기가 맞아도 CEG 같은 정책 베타는 별도 감점해야 합니다.",
+    "중소형주는 가격 여유만으로 편입하지 말고 기준선 회복, 거래대금, follow-through가 모두 있는 테크윙·심텍형 후보를 우선해야 합니다."
+  ],
+  "nextWeekFocus": [
+    "KR 후공정·PCB는 테크윙 54,000원, 심텍 108,000원, KODEX 반도체 160,000원 안착을 함께 확인합니다.",
+    "US AI 반도체는 AVGO 400달러, AMD 500달러, NVDA 210달러 중 둘 이상 회복하기 전까지 이벤트 추격을 제한합니다.",
+    "US 전력 테마는 ETN형 품질 장비주와 CEG·VST·OKLO·APLD형 베타/옵션주를 분리하고, 자금조달 취약 종목은 계약 확인 전 small-cap 후보에서 낮춥니다."
+  ]
+}
