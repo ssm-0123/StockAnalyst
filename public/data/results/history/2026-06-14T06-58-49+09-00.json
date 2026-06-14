@@ -1,0 +1,386 @@
+{
+  "reportDate": "2026-06-14",
+  "lastUpdated": "2026-06-14T06:58:49+09:00",
+  "evaluationWindow": {
+    "startDate": "2026-06-08",
+    "endDate": "2026-06-14",
+    "label": "2026년 6월 2주차"
+  },
+  "overallVerdict": "KR 후공정·PCB 중소형은 다시 맞았고, 소프트웨어 이벤트·항공·KDDX caution은 가격 반전을 충분히 따라가지 못했습니다.",
+  "summary": "최근 7일 대표본이 모두 존재해 2026-06-08부터 2026-06-14까지 전체 기간을 평가했습니다. 로컬 가격 스냅샷 기준 심텍·테크윙·에프에스티·APLD 중소형 콜은 모두 벤치마크를 앞섰고, 삼성전자 caution도 KODEX 반도체 대비 회피 성과가 있었습니다. 반면 Adobe 실적 재평가 long은 이벤트 뒤 디레이팅으로 실패했고, UAL과 현대로템 caution은 risk-on 반등과 KDDX·방산 재료가 가격을 밀어 올리며 실패했습니다. 이번 Results는 fallback 없이 snapshot/verified 항목만 사용했습니다.",
+  "benchmarkNote": "외부 시세 없이 로컬 반복 스냅샷과 일간 분석 텍스트의 KODEX 반도체, 전력 인프라, 소프트웨어, 항공, 조선·방산 피어 흐름으로 보수 비교했습니다.",
+  "scorecard": {
+    "evaluatedCount": 8,
+    "workedCount": 5,
+    "mixedCount": 0,
+    "failedCount": 3,
+    "averageCallAlphaPct": 3.2,
+    "bestCall": "심텍 PCB·패키징 후발 확산 콜",
+    "weakestCall": "현대로템 KDDX·방산 caution 콜"
+  },
+  "smallCapScorecard": {
+    "evaluatedCount": 4,
+    "workedCount": 4,
+    "mixedCount": 0,
+    "failedCount": 0,
+    "averageCallAlphaPct": 11.6
+  },
+  "evaluatedInsights": [
+    {
+      "ticker": "222800",
+      "companyName": "심텍",
+      "market": "KR",
+      "sector": "반도체 PCB/패키징",
+      "stance": "small-cap",
+      "entryDate": "2026-06-08",
+      "evaluationDate": "2026-06-14",
+      "holdingPeriodDays": 6,
+      "thesis": "HBM 패키징 수요가 기판·PCB 후발주로 확산될 수 있다는 중소형 콜입니다.",
+      "priceReturnPct": 26.3,
+      "benchmarkReturnPct": 7.4,
+      "benchmarkLabel": "KODEX 반도체 로컬 스냅샷·텍스트 기준",
+      "callAlphaPct": 19,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "심텍은 103,000원에서 130,100원으로 26.3% 상승해 KODEX 반도체의 보수 추정 7.4%를 크게 앞섰습니다. 최신 대표본에서도 130,100원을 유지해 PCB 후발 확산 논리가 살아 있었습니다.",
+      "followThroughReview": "7개 대표본 내내 중소형 후보로 남았고, 110,000원 회복 조건을 넘어 125,000원 방어와 거래대금 유지 여부를 보는 단계로 올라왔습니다.",
+      "lesson": "이해하기 쉬운 수요 확산 스토리는 가격 기준선 회복 뒤 신뢰도를 높이되, 급등 뒤에는 성장 여지보다 추격 규율을 먼저 적용해야 합니다.",
+      "lessonId": "KR-222800-pcb-breadth-followthrough-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.84,
+      "lessonValidUntil": "2026-06-28",
+      "lessonConditions": [
+        "125,000원 위에서 거래대금이 유지되면 PCB 후발 확산 교훈을 계속 적용합니다.",
+        "125,000원을 이탈하면 신규 추격을 중단하고 110,000원 회복 확인형으로 낮춥니다.",
+        "테크윙 대비 2개 대표본 연속 약해지면 PCB보다 검사장비를 우선합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 교훈이 6월 14일 대표본에서도 125,000원 위 방어와 가장 큰 알파로 재확인됐습니다.",
+      "attribution": {
+        "category": "stock-selection",
+        "primaryCause": "반도체 대형주보다 PCB 후발주를 분리한 종목 선택이 ETF 대비 초과성과를 만들었습니다.",
+        "whatToChange": "다음 Market Intelligence는 후공정·PCB를 하나로 묶지 말고 검사장비, 소재, 기판을 각각 기준선과 거래대금으로 비교합니다."
+      }
+    },
+    {
+      "ticker": "089030",
+      "companyName": "테크윙",
+      "market": "KR",
+      "sector": "반도체 후공정 검사장비",
+      "stance": "small-cap",
+      "entryDate": "2026-06-08",
+      "evaluationDate": "2026-06-14",
+      "holdingPeriodDays": 6,
+      "thesis": "대형 HBM 추격 대신 후공정 검사장비 상대강도가 살아 있는 중소형을 보자는 콜입니다.",
+      "priceReturnPct": 19.4,
+      "benchmarkReturnPct": 7.4,
+      "benchmarkLabel": "KODEX 반도체 로컬 스냅샷·텍스트 기준",
+      "callAlphaPct": 12,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "테크윙은 54,700원에서 65,300원으로 19.4% 상승했고 KODEX 반도체보다 강했습니다. 반복 스냅샷이 요구한 60,000원 방어 조건이 최신 대표본에서도 작동했습니다.",
+      "followThroughReview": "7일 연속 중소형 후보로 유지됐고, 마지막 대표본에서도 60,000원 위에서 후공정 검사장비 리더십이 이어졌습니다.",
+      "lesson": "좋은 성장 스토리보다 실제 상대강도가 먼저이며, 후공정 안에서도 기준선을 지키는 종목만 우선순위를 유지해야 합니다.",
+      "lessonId": "KR-089030-backend-relative-strength-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.8,
+      "lessonValidUntil": "2026-06-28",
+      "lessonConditions": [
+        "60,000원을 지키고 KODEX 반도체 대비 상대강도가 유지되면 후공정 우선순위를 유지합니다.",
+        "60,000원을 이탈하면 신규 확대를 중단하고 54,000원 방어 확인으로 낮춥니다.",
+        "에프에스티와 심텍이 같이 약해지면 후공정 breadth 점수를 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 교훈이 이번 7일 표본에서도 양의 절대수익과 벤치마크 초과성과로 재확인됐습니다.",
+      "attribution": {
+        "category": "stock-selection",
+        "primaryCause": "대형 HBM보다 후공정 검사장비를 고른 선택이 섹터 ETF보다 나은 손익비를 만들었습니다.",
+        "whatToChange": "다음 Market Intelligence는 반도체 후보를 낼 때 ETF, 대형 HBM, 후공정 장비의 상대강도 순위를 먼저 표시합니다."
+      }
+    },
+    {
+      "ticker": "036810",
+      "companyName": "에프에스티",
+      "market": "KR",
+      "sector": "반도체 공정 소재/장비",
+      "stance": "small-cap",
+      "entryDate": "2026-06-08",
+      "evaluationDate": "2026-06-14",
+      "holdingPeriodDays": 6,
+      "thesis": "대형 HBM 대표주보다 가격 여유가 있는 후공정·공정장비 회복 후보라는 콜입니다.",
+      "priceReturnPct": 14.1,
+      "benchmarkReturnPct": 7.4,
+      "benchmarkLabel": "KODEX 반도체 로컬 스냅샷·텍스트 기준",
+      "callAlphaPct": 6.7,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "에프에스티는 29,100원에서 33,200원으로 14.1% 상승해 KODEX 반도체를 앞섰습니다. 30,000원 회복 전에는 낮은 확신이 맞았지만, 기준선 회복 뒤 후발 장비주 알파가 확인됐습니다.",
+      "followThroughReview": "초반에는 30,000원 미회복으로 조건부였으나 6월 12~14일 대표본에서 30,000원 위에 안착해 교훈을 active로 유지할 수 있습니다.",
+      "lesson": "가격이 싸 보이는 후발주는 기준선을 되찾기 전까지 낮은 확신으로 두고, 기준선 회복 뒤에만 성장 회복 논리를 강화해야 합니다.",
+      "lessonId": "KR-036810-backend-lagging-followthrough-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.75,
+      "lessonValidUntil": "2026-06-28",
+      "lessonConditions": [
+        "30,000원을 지키고 KODEX 반도체가 160,000원 위에 있으면 후발 장비주 교훈을 유지합니다.",
+        "30,000원 종가 이탈 또는 KODEX 반도체 160,000원 재이탈 시 lesson을 softened로 낮춥니다.",
+        "테크윙 대비 거래대금과 상대강도가 약하면 후공정 2순위로만 둡니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 교훈이 6월 14일에도 30,000원 방어와 양의 알파로 유지됐습니다.",
+      "attribution": {
+        "category": "timing",
+        "primaryCause": "후발 장비주 논리는 초반에는 이른 편이었지만 기준선 회복 뒤 성과가 살아났습니다.",
+        "whatToChange": "다음 Market Intelligence는 낮은 가격 자체보다 30,000원 같은 명시 기준선 회복을 관심확대 조건으로 둡니다."
+      }
+    },
+    {
+      "ticker": "APLD",
+      "companyName": "Applied Digital",
+      "market": "US",
+      "sector": "AI 데이터센터 인프라",
+      "stance": "small-cap",
+      "entryDate": "2026-06-08",
+      "evaluationDate": "2026-06-14",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 데이터센터 병목이 소형 인프라 옵션주에도 확산되는지 확인하는 고위험 중소형 콜입니다.",
+      "priceReturnPct": 7.8,
+      "benchmarkReturnPct": -0.9,
+      "benchmarkLabel": "ETN/VST/KODEX 미국AI전력핵심인프라 바스켓",
+      "callAlphaPct": 8.6,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "APLD는 39.62달러에서 42.70달러로 7.8% 상승했고 전력·AI 인프라 피어 바스켓의 보수 추정 -0.9%를 앞섰습니다. 다만 성과는 40달러 기준선 유지와 고베타 확산에 의존해 확신은 조건부입니다.",
+      "followThroughReview": "7개 대표본에서 계속 관찰됐고 최신 대표본에서도 40달러를 지켜 small-cap 확인형 콜은 작동했습니다.",
+      "lesson": "큰 TAM이 있어도 외부 자금 의존 인프라주는 기준선 회복 전에는 피하고, 회복 뒤에도 하방 조건을 짧게 잡아야 합니다.",
+      "lessonId": "US-APLD-datacenter-financing-fragility-2026-06",
+      "lessonStatus": "softened",
+      "lessonConfidence": 0.72,
+      "lessonValidUntil": "2026-06-21",
+      "lessonConditions": [
+        "40달러를 지키고 ETN/VST 대비 상대강도가 양수면 소액 확인형 관찰을 유지합니다.",
+        "40달러 이탈 또는 자금조달 악화 문구가 재등장하면 small-cap buy에서 제외합니다.",
+        "고베타 인프라주는 피어 바스켓보다 강한 날에만 신규 후보로 올립니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 fragility 경고는 완전히 틀린 것은 아니지만 40달러 방어와 양의 알파가 나와 적용 강도를 softened로 유지했습니다.",
+      "attribution": {
+        "category": "market-regime",
+        "primaryCause": "AI 전력·데이터센터 리바운드가 고베타 인프라 옵션주까지 확산됐습니다.",
+        "whatToChange": "다음 Market Intelligence는 APLD를 구조 성장주로 단정하지 말고 40달러 방어, 자금조달 뉴스, 피어 대비 상대강도를 동시에 요구합니다."
+      }
+    },
+    {
+      "ticker": "005930",
+      "companyName": "삼성전자",
+      "market": "KR",
+      "sector": "HBM 대형주·반도체 ETF 고점권 재가격",
+      "stance": "caution",
+      "entryDate": "2026-06-08",
+      "evaluationDate": "2026-06-14",
+      "holdingPeriodDays": 6,
+      "thesis": "HBM 구조 수요는 남아도 대형주 포지셔닝과 가격 방어 실패를 먼저 보자는 caution 콜입니다.",
+      "priceReturnPct": -2,
+      "benchmarkReturnPct": 7.4,
+      "benchmarkLabel": "KODEX 반도체 로컬 스냅샷·텍스트 기준",
+      "callAlphaPct": 9.3,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "삼성전자는 329,000원에서 322,500원으로 2.0% 하락해 KODEX 반도체의 보수 추정 +7.4%보다 약했습니다. caution 자체는 7일 표본에서 맞았지만 최신 대표본의 320,000원 회복으로 새 daily에서는 caution 강도를 낮춰야 합니다.",
+      "followThroughReview": "대형 HBM 회피 교훈은 7일 기준 작동했지만, 최신 대표본에서 320,000원 회복과 ETF 기준선 통과가 나와 active보다 softened가 맞습니다.",
+      "lesson": "품질·브랜드가 있는 대형 반도체라도 가격 방어 실패 때는 회피가 맞지만, 섹터 breadth가 회복되면 caution을 기계적으로 줄여야 합니다.",
+      "lessonId": "KR-005930-hbm-lagging-leader-2026-06",
+      "lessonStatus": "softened",
+      "lessonConfidence": 0.73,
+      "lessonValidUntil": "2026-06-28",
+      "lessonConditions": [
+        "삼성전자가 320,000원과 KODEX 반도체 165,000원 위를 함께 지키면 대형 HBM caution을 낮춥니다.",
+        "300,000원 이탈 또는 ETF 160,000원 재이탈이면 회피 교훈을 active로 되돌립니다.",
+        "후공정 중소형 대비 2개 대표본 연속 약하면 대형주보다 밸류체인을 우선합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "7일 누적 회피 성과는 양호했지만 최신 대표본에서 한국 반도체 breadth가 회복돼 교훈 강도를 낮췄습니다.",
+      "attribution": {
+        "category": "crowded-trade",
+        "primaryCause": "대형 HBM 포지셔닝은 7일 기준 후공정과 ETF 대비 약해 caution 성과를 냈지만 마지막 대표본에서 breadth 회복이 나타났습니다.",
+        "whatToChange": "다음 Market Intelligence는 대형 HBM caution을 유지할 때도 ETF 160,000원·165,000원 회복 조건을 자동 완화 트리거로 둡니다."
+      }
+    },
+    {
+      "ticker": "ADBE",
+      "companyName": "Adobe",
+      "market": "US",
+      "sector": "US 소프트웨어 AI monetization 실적 재평가",
+      "stance": "promising",
+      "entryDate": "2026-06-09",
+      "evaluationDate": "2026-06-14",
+      "holdingPeriodDays": 5,
+      "thesis": "AI monetization이 실적 이후 소프트웨어 방어주 재평가로 이어질 수 있다는 콜입니다.",
+      "priceReturnPct": -16.9,
+      "benchmarkReturnPct": -5.6,
+      "benchmarkLabel": "CRM/FDS 소프트웨어 피어 바스켓",
+      "callAlphaPct": -11.2,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "Adobe는 245.43달러에서 204.02달러로 16.9% 하락해 CRM/FDS 피어 바스켓 -5.6%보다 훨씬 약했습니다. AI monetization 기대가 실적 이벤트 뒤 가격 방어로 이어지지 못했고, 경영진 전환과 경쟁 리스크가 숫자를 이겼습니다.",
+      "followThroughReview": "6월 9일부터 promising으로 올라왔지만 6월 12~14일에는 같은 로컬 데이터가 소프트웨어 디레이팅 caution으로 전환됐습니다.",
+      "lesson": "혁신 내러티브가 있어도 실적 직전에는 제품 스토리보다 가격 반응과 가이던스 리스크를 먼저 검증해야 합니다.",
+      "lessonId": "US-ADBE-ai-monetization-event-risk-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.78,
+      "lessonValidUntil": "2026-06-21",
+      "lessonConditions": [
+        "ADBE가 215달러를 회복하기 전에는 AI monetization long을 보류합니다.",
+        "CRM/FDS 피어보다 2개 대표본 연속 강해질 때만 소프트웨어 방어주 교훈을 재검토합니다.",
+        "실적 이벤트 전후 후보는 가격 확인 없는 promising 편입을 제한합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 경고 교훈이 최신 204.02달러 스냅샷에서도 약세로 유지돼 강화됐습니다.",
+      "attribution": {
+        "category": "event-risk",
+        "primaryCause": "실적 이벤트가 AI monetization 기대를 확인하기보다 디레이팅 촉매로 작동했습니다.",
+        "whatToChange": "다음 Market Intelligence는 실적 직전 소프트웨어 long을 올릴 때 이벤트 후 가격 확인 또는 하방 기준선을 먼저 요구합니다."
+      }
+    },
+    {
+      "ticker": "UAL",
+      "companyName": "United Airlines",
+      "market": "US",
+      "sector": "US 항공·온라인여행 유가 및 월드컵 비용 리스크",
+      "stance": "caution",
+      "entryDate": "2026-06-09",
+      "evaluationDate": "2026-06-14",
+      "holdingPeriodDays": 5,
+      "thesis": "유가와 월드컵 비용 리스크가 항공주 고점권 가격을 흔들 수 있다는 caution 콜입니다.",
+      "priceReturnPct": 9.9,
+      "benchmarkReturnPct": 3,
+      "benchmarkLabel": "DAL/EXPE 항공·온라인여행 피어 바스켓",
+      "callAlphaPct": -6.9,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "UAL은 105.15달러에서 115.52달러로 9.9% 상승해 DAL/EXPE 피어 바스켓의 보수 추정 +3.0%보다 강했습니다. caution 콜은 유가 완화와 위험자산 반등이 항공 베타를 더 크게 밀어 올린 구간을 놓쳤습니다.",
+      "followThroughReview": "6월 9일부터 5개 대표본에서 caution으로 반복됐지만, 최신 대표본에서는 52주 고점권 근접을 이유로 한 회피가 단기 성과와 충돌했습니다.",
+      "lesson": "고점권이라는 이유만으로 항공 베타를 경계하면 위험자산 반등을 놓치므로, 비용 리스크와 함께 실제 유가·가격 이탈 신호를 요구해야 합니다.",
+      "lessonId": "US-UAL-airline-high-beta-caution-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.7,
+      "lessonValidUntil": "2026-06-21",
+      "lessonConditions": [
+        "UAL이 119달러에 안착하면 항공 caution을 낮추고 추격 경계 문구만 유지합니다.",
+        "112달러 이탈 또는 DAL 동반 약세가 나오면 고점권 회피 교훈을 다시 강화합니다.",
+        "유가·금리 리스크가 텍스트에만 있고 가격이 신고가권이면 caution 알파를 작게 잡습니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "항공 caution은 반복 관측에도 실제 가격이 강해 실패 사례 교훈을 유지했습니다.",
+      "attribution": {
+        "category": "macro-headwind",
+        "primaryCause": "유가·비용 리스크보다 위험자산 반등과 고베타 항공 수요 기대가 더 강했습니다.",
+        "whatToChange": "다음 Market Intelligence는 항공 caution을 낼 때 고점권 문구만 쓰지 말고 112달러 이탈 같은 가격 확인을 조건으로 둡니다."
+      }
+    },
+    {
+      "ticker": "064350",
+      "companyName": "현대로템",
+      "market": "KR",
+      "sector": "KR KDDX·방산 급등 후 절차 리스크",
+      "stance": "caution",
+      "entryDate": "2026-06-09",
+      "evaluationDate": "2026-06-14",
+      "holdingPeriodDays": 5,
+      "thesis": "방산 모멘텀은 남아도 KDDX·캐나다 방산 이벤트가 선반영돼 급등 후 절차 리스크를 봐야 한다는 caution 콜입니다.",
+      "priceReturnPct": 19.1,
+      "benchmarkReturnPct": 7,
+      "benchmarkLabel": "한화오션/HD현대중공업 조선·방산 피어 바스켓",
+      "callAlphaPct": -12.2,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "현대로템은 175,000원에서 208,500원으로 19.1% 상승해 한화오션/HD현대중공업 피어 바스켓의 보수 추정 +7.0%보다 훨씬 강했습니다. KDDX 절차 리스크를 본 caution은 방산 모멘텀 확산과 가격 반전을 따라가지 못했습니다.",
+      "followThroughReview": "6월 9일부터 caution으로 반복됐지만 6월 13~14일 200,000원 위로 올라서며 기존 sell-the-news 경계가 최신 가격과 충돌했습니다.",
+      "lesson": "정책·수주 이벤트는 선반영 경계가 필요하지만, 가격이 기준선을 회복하면 절차 리스크보다 모멘텀 확산을 먼저 인정해야 합니다.",
+      "lessonId": "KR-064350-kddx-reversal-risk-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.76,
+      "lessonValidUntil": "2026-06-21",
+      "lessonConditions": [
+        "현대로템이 200,000원 위를 유지하면 KDDX·방산 caution을 적용하지 않습니다.",
+        "195,000원 이탈 또는 한화오션·HD현대중공업 동반 약세가 나오면 절차 리스크 교훈을 다시 검토합니다.",
+        "이벤트 후 급등주는 뉴스 리스크보다 기준선 회복과 피어 상대강도를 먼저 확인합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 KDDX sell-the-news 경계는 현대로템 200,000원 회복과 6월 14일 대표본 유지로 반박됐습니다.",
+      "attribution": {
+        "category": "thesis-invalidated",
+        "primaryCause": "KDDX·방산 이벤트가 절차 리스크보다 강한 가격 모멘텀으로 재평가됐습니다.",
+        "whatToChange": "다음 Market Intelligence는 KDDX caution을 유지하더라도 200,000원 회복 시 reduce에서 reenter-watch로 자동 완화합니다."
+      }
+    }
+  ],
+  "sectorReviews": [
+    {
+      "sectorName": "KR 후공정·PCB 중소형",
+      "market": "KR",
+      "priorView": "promising",
+      "verdict": "worked",
+      "callAlphaPct": 12.6,
+      "detail": "심텍, 테크윙, 에프에스티가 모두 KODEX 반도체를 앞서며 대형 HBM보다 후발 밸류체인 선별이 맞았습니다. 국면 판단과 종목 선택이 모두 맞았지만, 심텍은 급등 뒤 추격보다 125,000원 방어를 먼저 봐야 합니다."
+    },
+    {
+      "sectorName": "US AI 전력 인프라",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "mixed",
+      "callAlphaPct": 2.6,
+      "detail": "AI 전력·데이터센터 국면은 APLD가 보여준 것처럼 맞았지만 ETN·VST·ETF형 노출은 선별적이었습니다. 국면 판단은 맞았지만 종목 선택이 틀림에 가까워 품질주, 고베타 옵션주, ETF형 분산을 분리해야 합니다."
+    },
+    {
+      "sectorName": "KR HBM 대형주·반도체 ETF",
+      "market": "KR",
+      "priorView": "caution",
+      "verdict": "worked",
+      "callAlphaPct": 9.3,
+      "detail": "삼성전자는 7일 누적으로 KODEX 반도체를 크게 밑돌아 대형 HBM 추격 회피가 맞았습니다. 다만 최신 대표본에서 KODEX 반도체와 삼성전자가 동시에 회복했으므로 caution은 active가 아니라 조건부로 낮춰야 합니다."
+    },
+    {
+      "sectorName": "US 소프트웨어 AI monetization",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "failed",
+      "callAlphaPct": -11.2,
+      "detail": "Adobe 실적 이벤트가 AI monetization 재평가가 아니라 디레이팅으로 연결됐습니다. 국면 판단 자체가 틀림에 가까웠고, 제품·AI 스토리보다 이벤트 후 가격 확인을 먼저 요구했어야 했습니다."
+    },
+    {
+      "sectorName": "US 항공·온라인여행",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "failed",
+      "callAlphaPct": -6.9,
+      "detail": "유가·비용 리스크 caution은 UAL의 고베타 반등을 막지 못했습니다. 가격 이탈 없이 고점권만 근거로 한 회피는 risk-on 구간에서 알파를 만들기 어렵습니다."
+    },
+    {
+      "sectorName": "KR KDDX·방산 이벤트",
+      "market": "KR",
+      "priorView": "caution",
+      "verdict": "failed",
+      "callAlphaPct": -12.2,
+      "detail": "현대로템과 한화오션 반등은 절차 리스크보다 이벤트 모멘텀이 더 강했음을 보여줬습니다. 국면 판단 자체가 틀림에 가까웠고, 기준선 회복 후에는 sell-the-news caution을 빠르게 낮췄어야 합니다."
+    }
+  ],
+  "processTakeaways": [
+    "반복 가격 관측이 충분할 때도 stance가 바뀌는 종목은 최초 콜의 성과와 최신 기준선 충족 여부를 분리해 평가합니다.",
+    "late risk-on 내부 로테이션에서는 회피 콜도 고정하지 말고 ETF·피어 기준선 회복이 나오면 바로 softened 또는 contradicted로 낮춥니다.",
+    "실적·정책·수주 이벤트는 뉴스 강도보다 당일과 다음 대표본의 가격 반응이 우선이며, 가격이 반대로 움직이면 교훈 생명주기를 즉시 갱신합니다."
+  ],
+  "nextWeekFocus": [
+    "KR 후공정·PCB는 심텍 125,000원, 테크윙 60,000원, 에프에스티 30,000원과 KODEX 반도체 160,000원 방어를 함께 추적합니다.",
+    "US 소프트웨어·항공은 ADBE 215달러, UAL 119달러·112달러를 기준으로 이벤트 실패와 고점권 caution을 분리합니다.",
+    "AI 전력과 KDDX·방산은 APLD 40달러, ETN 390달러, 현대로템 200,000원처럼 피어별 기준선을 두고 국면 판단과 종목 선택을 따로 검증합니다."
+  ]
+}
