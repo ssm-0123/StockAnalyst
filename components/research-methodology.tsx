@@ -6,7 +6,13 @@ import type { DailyAnalysis } from "@/lib/types";
 function qualityText(latest: DailyAnalysis) {
   const validation = latest.validationSummary;
   if (!validation || validation.totalIdeas === 0) return "가격 검증 대기";
-  return `${validation.freshSnapshots}/${validation.totalIdeas} fresh`;
+  return `${validation.freshSnapshots}/${validation.totalIdeas} 최신`;
+}
+
+function confidenceLabel(value?: string) {
+  if (value === "high") return "높음";
+  if (value === "low") return "낮음";
+  return "보통";
 }
 
 export function ResearchMethodology({ latest }: { latest: DailyAnalysis }) {
@@ -20,11 +26,11 @@ export function ResearchMethodology({ latest }: { latest: DailyAnalysis }) {
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <Info className="size-4" />
-            Methodology / Signal System
+            산출 방식 / 신호 체계
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">숫자는 하나의 매수 점수가 아니라 리서치 맥락입니다.</h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-            산식이 다른 수치를 하나의 Signal Score로 포장하지 않고, 각각의 의미를 분리해서 표시합니다.
+            산식이 다른 수치를 하나의 매수 점수로 포장하지 않고, 각각의 의미를 분리해서 표시합니다.
           </p>
         </div>
         <Badge variant="neutral">{qualityText(latest)}</Badge>
@@ -34,18 +40,18 @@ export function ResearchMethodology({ latest }: { latest: DailyAnalysis }) {
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
             <Gauge className="size-4" />
-            Sector Conviction
+            섹터 확신도
           </div>
           <p className="mt-2 text-3xl font-semibold text-slate-950">{sectorExample?.confidenceScore ?? "-"}</p>
           <p className="mt-2 text-xs leading-5 text-slate-600">
-            섹터 thesis와 가격 위치, 리스크를 종합한 확신도입니다. 종목 매수 점수와 동일하지 않습니다.
+            섹터 투자 가설과 가격 위치, 리스크를 종합한 확신도입니다. 종목 매수 점수와 동일하지 않습니다.
           </p>
         </div>
 
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
             <RadioTower className="size-4" />
-            Theme Signal
+            테마 신호
           </div>
           <p className="mt-2 text-3xl font-semibold text-slate-950">{themeExample?.signalStrength ?? "대기"}</p>
           <p className="mt-2 text-xs leading-5 text-slate-600">
@@ -56,18 +62,18 @@ export function ResearchMethodology({ latest }: { latest: DailyAnalysis }) {
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
             <ShieldCheck className="size-4" />
-            Research Confidence
+            리서치 신뢰도
           </div>
-          <p className="mt-2 text-3xl font-semibold capitalize text-slate-950">{stockExample?.confidenceLevel ?? "medium"}</p>
+          <p className="mt-2 text-3xl font-semibold text-slate-950">{confidenceLabel(stockExample?.confidenceLevel)}</p>
           <p className="mt-2 text-xs leading-5 text-slate-600">
-            개별 아이디어의 논리와 데이터 신뢰도입니다. High라도 무효화 조건이 사라지는 것은 아닙니다.
+            개별 아이디어의 논리와 데이터 신뢰도입니다. 높음이라도 무효화 조건이 사라지는 것은 아닙니다.
           </p>
         </div>
 
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
             <Database className="size-4" />
-            Data Freshness
+            데이터 신선도
           </div>
           <p className="mt-2 text-3xl font-semibold text-slate-950">{qualityText(latest)}</p>
           <p className="mt-2 text-xs leading-5 text-slate-600">

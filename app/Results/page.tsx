@@ -29,14 +29,14 @@ function evidenceBadgeVariant(evidence: "snapshot" | "fallback" | "mixed") {
 
 function evidenceLabel(evidence: "snapshot" | "fallback" | "mixed") {
   if (evidence === "snapshot") {
-    return "snapshot";
+    return "저장 가격";
   }
 
   if (evidence === "fallback") {
-    return "fallback";
+    return "보조 근거";
   }
 
-  return "mixed";
+  return "혼합 근거";
 }
 
 function qualityBadgeVariant(quality: "verified" | "limited" | "stale-excluded") {
@@ -57,7 +57,7 @@ function qualityLabel(quality: "verified" | "limited" | "stale-excluded") {
   }
 
   if (quality === "stale-excluded") {
-    return "stale 제외";
+    return "오래된 가격 제외";
   }
 
   return "근거 제한";
@@ -77,14 +77,14 @@ function confidenceVariant(level?: "high" | "medium" | "low") {
 
 function confidenceLabel(level?: "high" | "medium" | "low") {
   if (level === "high") {
-    return "High";
+    return "신뢰도 높음";
   }
 
   if (level === "low") {
-    return "Low";
+    return "신뢰도 낮음";
   }
 
-  return "Medium";
+  return "신뢰도 보통";
 }
 
 function lessonStatusVariant(status?: "active" | "softened" | "contradicted" | "retired") {
@@ -94,11 +94,24 @@ function lessonStatusVariant(status?: "active" | "softened" | "contradicted" | "
 }
 
 function lessonStatusLabel(status?: "active" | "softened" | "contradicted" | "retired") {
-  if (status === "active") return "교훈 active";
-  if (status === "softened") return "교훈 softened";
-  if (status === "contradicted") return "교훈 contradicted";
-  if (status === "retired") return "교훈 retired";
-  return "교훈 pending";
+  if (status === "active") return "적용 중";
+  if (status === "softened") return "약화됨";
+  if (status === "contradicted") return "반대 근거 발생";
+  if (status === "retired") return "종료됨";
+  return "검토 대기";
+}
+
+function verdictLabel(verdict: "worked" | "mixed" | "failed") {
+  if (verdict === "worked") return "성공";
+  if (verdict === "failed") return "실패";
+  return "혼재";
+}
+
+function stanceLabel(stance: string) {
+  if (stance === "promising") return "유망";
+  if (stance === "caution") return "주의";
+  if (stance === "small-cap") return "중소형";
+  return stance;
 }
 
 function evidenceLimitNote(item: {
@@ -110,11 +123,11 @@ function evidenceLimitNote(item: {
   }
 
   if (item.dataQuality === "stale-excluded") {
-    return "stale 가격은 수익률 계산에서 제외했습니다. 이 평가는 방향성 복기 위주로 봐야 합니다.";
+    return "오래된 가격은 수익률 계산에서 제외했습니다. 이 평가는 방향성 복기 위주로 봐야 합니다.";
   }
 
   if (item.priceEvidence === "fallback") {
-    return "저장된 반복 가격 스냅샷이 부족해 텍스트 fallback 근거를 사용했습니다.";
+    return "저장된 반복 가격 스냅샷이 부족해 텍스트 보조 근거를 사용했습니다.";
   }
 
   if (item.priceEvidence === "mixed") {
@@ -160,7 +173,7 @@ export default async function ResultsPage() {
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <Badge variant="positive">주간 결과 평가</Badge>
               <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
-                Saved Snapshot Review
+                저장 가격 기준 복기
               </Badge>
             </div>
             <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl">과거 인사이트의 실제 결과를 봅니다.</h1>
@@ -205,21 +218,21 @@ export default async function ResultsPage() {
           <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
               <CheckCircle2 className="size-4" />
-              Worked
+              성공
             </div>
             <p className="mt-3 text-3xl font-semibold text-emerald-700">{latest.scorecard.workedCount}</p>
           </div>
           <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
               <Clock3 className="size-4" />
-              Mixed
+              혼재
             </div>
             <p className="mt-3 text-3xl font-semibold text-amber-700">{latest.scorecard.mixedCount}</p>
           </div>
           <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
               <TriangleAlert className="size-4" />
-              Failed
+              실패
             </div>
             <p className="mt-3 text-3xl font-semibold text-rose-700">{latest.scorecard.failedCount}</p>
           </div>
@@ -244,7 +257,7 @@ export default async function ResultsPage() {
         <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <BarChart3 className="size-4" />
-            Worked 비중
+            성공 비중
           </div>
           <p className="mt-3 text-3xl font-semibold text-slate-950">
             {latest.scorecard.evaluatedCount > 0
@@ -285,19 +298,19 @@ export default async function ResultsPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Verified</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">검증됨</p>
               <p className="mt-3 text-3xl font-semibold text-emerald-700">{latest.validationSummary.freshSnapshots}</p>
             </div>
             <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Stale Excluded</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">오래된 가격 제외</p>
               <p className="mt-3 text-3xl font-semibold text-rose-700">{latest.validationSummary.staleSnapshots}</p>
             </div>
             <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Limited</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">근거 제한</p>
               <p className="mt-3 text-3xl font-semibold text-slate-950">{latest.validationSummary.incompleteSnapshots}</p>
             </div>
             <div className="rounded-[1.5rem] border border-white/70 bg-white/90 p-5 shadow-panel">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Fallback</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">보조 근거</p>
               <p className="mt-3 text-3xl font-semibold text-slate-950">{latest.validationSummary.invalidSnapshots}</p>
             </div>
           </div>
@@ -331,10 +344,10 @@ export default async function ResultsPage() {
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge variant={item.verdict === "worked" ? "positive" : item.verdict === "failed" ? "caution" : "neutral"}>
-                        {item.verdict}
+                        {verdictLabel(item.verdict)}
                       </Badge>
                       <Badge variant="neutral">{item.market}</Badge>
-                      <Badge variant="neutral">{item.stance}</Badge>
+                      <Badge variant="neutral">{stanceLabel(item.stance)}</Badge>
                       <Badge variant={evidenceBadgeVariant(item.priceEvidence)}>{evidenceLabel(item.priceEvidence)}</Badge>
                       <Badge variant={qualityBadgeVariant(item.dataQuality)}>{qualityLabel(item.dataQuality)}</Badge>
                       <Badge variant={confidenceVariant(item.confidenceLevel)}>{confidenceLabel(item.confidenceLevel)}</Badge>
@@ -402,7 +415,7 @@ export default async function ResultsPage() {
                 <div className="mt-3 rounded-2xl border border-slate-200/80 bg-white/80 p-3">
                   <div className="flex flex-wrap items-center gap-2">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">교훈</p>
-                    <Badge variant={lessonStatusVariant(item.lessonStatus)}>{item.lessonStatus ?? "pending"}</Badge>
+                    <Badge variant={lessonStatusVariant(item.lessonStatus)}>{lessonStatusLabel(item.lessonStatus)}</Badge>
                     {typeof item.lessonConfidence === "number" ? (
                       <Badge variant="neutral">신뢰도 {(item.lessonConfidence * 100).toFixed(0)}%</Badge>
                     ) : null}
@@ -442,15 +455,15 @@ export default async function ResultsPage() {
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
               <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-800">Worked</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-800">성공</p>
                 <p className="mt-2 text-2xl font-semibold text-slate-950">{smallCapScorecard.workedCount}</p>
               </div>
               <div className="rounded-2xl border border-amber-100 bg-amber-50/70 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-800">Mixed</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-800">혼재</p>
                 <p className="mt-2 text-2xl font-semibold text-slate-950">{smallCapScorecard.mixedCount}</p>
               </div>
               <div className="rounded-2xl border border-rose-100 bg-rose-50/70 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rose-800">Failed</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rose-800">실패</p>
                 <p className="mt-2 text-2xl font-semibold text-slate-950">{smallCapScorecard.failedCount}</p>
               </div>
             </div>
@@ -463,7 +476,7 @@ export default async function ResultsPage() {
                   >
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge variant={item.verdict === "worked" ? "positive" : item.verdict === "failed" ? "caution" : "neutral"}>
-                        {item.verdict}
+                        {verdictLabel(item.verdict)}
                       </Badge>
                       <span className="text-sm font-semibold text-slate-950">{item.companyName}</span>
                       <span className="text-sm text-slate-500">{item.ticker}</span>
@@ -521,7 +534,7 @@ export default async function ResultsPage() {
             <div className="mt-6 rounded-3xl border border-cyan-100 bg-cyan-50/60 p-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="text-sm font-semibold text-cyan-900">일간 분석 반영 체크</p>
-                <Badge variant="accent">Daily input</Badge>
+                <Badge variant="accent">일간 분석 반영</Badge>
               </div>
               <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-700">
                 {latest.nextWeekFocus.map((item, index) => (

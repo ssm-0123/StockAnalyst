@@ -1,5 +1,6 @@
 import { ArrowRight, Compass, Gauge, MoveRight } from "lucide-react";
 
+import { TermHint } from "@/components/term-hint";
 import { Badge } from "@/components/ui/badge";
 import { withBasePath } from "@/lib/site";
 import type { DailyAnalysis } from "@/lib/types";
@@ -154,16 +155,16 @@ export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
         <div>
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-2">
-              <Badge variant="positive">Forward View</Badge>
+              <Badge variant="positive">다음 1-2주 관점</Badge>
               <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
-                Next 1-2 Weeks
+                단기 리서치 기준
               </Badge>
             </div>
             <a
               href={withBasePath("/Results")}
               className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:bg-white/15"
             >
-              Track Record
+              판단 결과
             </a>
           </div>
           <h1 className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl">
@@ -174,7 +175,7 @@ export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
           </p>
 
           <div className="mt-5 rounded-xl border border-emerald-300/30 bg-emerald-300/10 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Action Summary</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">핵심 행동 요약</p>
             <p className="mt-2 text-base font-semibold leading-7 text-white">{summary}</p>
           </div>
 
@@ -182,7 +183,11 @@ export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
                 <Gauge className="size-4" />
-                Confidence
+                <TermHint
+                  label="판단 신뢰도"
+                  description="근거의 신선도, 국면 점수, 테마 강도를 종합한 리서치 확신도입니다. 맞을 확률이나 매수 지시는 아닙니다."
+                  tooltipClassName="border-white/10 bg-slate-900 text-slate-100"
+                />
               </div>
               <p className="text-3xl font-semibold text-white">{confidence}%</p>
             </div>
@@ -197,15 +202,15 @@ export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
 
         <div className="grid gap-3">
           <div className="grid gap-3 lg:grid-cols-3">
-            <Bucket title="Favor" items={buckets.favor} variant="positive" />
-            <Bucket title="Neutral" items={buckets.neutral} variant="neutral" />
-            <Bucket title="Avoid" items={buckets.avoid} variant="caution" />
+            <Bucket title="우선 관찰" items={buckets.favor} variant="positive" />
+            <Bucket title="확인 대기" items={buckets.neutral} variant="neutral" />
+            <Bucket title="추격 금지" items={buckets.avoid} variant="caution" />
           </div>
 
           <div className="rounded-xl border border-white/10 bg-white/10 p-4">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
               <Compass className="size-4" />
-              Rationale
+              핵심 근거
             </div>
             <div className="mt-3 grid gap-2">
               {reasons.map((item, index) => (
@@ -221,7 +226,7 @@ export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
             <div className="rounded-xl border border-white/10 bg-white/10 p-4">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
                 <MoveRight className="size-4" />
-                Money Flow
+                자금 이동 가설
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
                 {flows.map(([from, to]) => (

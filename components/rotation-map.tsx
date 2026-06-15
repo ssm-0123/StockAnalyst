@@ -23,11 +23,11 @@ export function RotationMap({ latest }: { latest: DailyAnalysis }) {
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <GitBranch className="size-4" />
-            Money Flow Detail
+            자금 이동 상세
           </div>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Rotation Map</h2>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">자금 순환 지도</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-            상단 Forward View의 자금 이동 가설을 현재 리더와 다음 후보로 나눠 다시 확인합니다.
+            상단 단기 관점의 자금 이동 가설을 현재 리더와 다음 후보로 나눠 다시 확인합니다.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -41,7 +41,7 @@ export function RotationMap({ latest }: { latest: DailyAnalysis }) {
 
       <div className="mt-5 grid gap-3 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Current Leadership</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">현재 주도 영역</p>
           <div className="mt-3 grid gap-2">
             {sourceSectors.map((sector, index) => (
               <div key={sector} className="flex items-center justify-between rounded-xl bg-white px-3 py-2">
@@ -53,7 +53,7 @@ export function RotationMap({ latest }: { latest: DailyAnalysis }) {
         </div>
 
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Forward Rotation Candidates</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">다음 순환 후보</p>
           <div className="mt-3 grid gap-2">
             {rotations.map((item, index) => {
               const { market, label } = splitRotationLabel(item);

@@ -23,7 +23,7 @@ export function RiskRadar({ latest }: { latest: DailyAnalysis }) {
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-rose-700">
             <Siren className="size-4" />
-            Risk Radar
+            위험 신호
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">틀릴 수 있는 조건을 먼저 봅니다.</h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
@@ -31,7 +31,7 @@ export function RiskRadar({ latest }: { latest: DailyAnalysis }) {
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Badge variant="caution">Fragility {regime?.fragilityScore ?? "-"}</Badge>
+          <Badge variant="caution">취약도 {regime?.fragilityScore ?? "-"}</Badge>
           <Badge variant="neutral">{riskToneLabel(regime?.fragilityScore)}</Badge>
         </div>
       </div>
@@ -40,7 +40,7 @@ export function RiskRadar({ latest }: { latest: DailyAnalysis }) {
         <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-rose-700">
             <AlertTriangle className="size-4" />
-            Key Risk
+            핵심 리스크
           </div>
           <p className="mt-2 text-sm font-semibold leading-6 text-slate-950">{latest.topRisk}</p>
         </div>
@@ -48,7 +48,7 @@ export function RiskRadar({ latest }: { latest: DailyAnalysis }) {
         <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-rose-700">
             <ShieldAlert className="size-4" />
-            Avoid Chasing
+            추격 금지
           </div>
           <div className="mt-3 grid gap-2">
             {avoidThemes.length ? (
@@ -67,7 +67,7 @@ export function RiskRadar({ latest }: { latest: DailyAnalysis }) {
         <div className="rounded-xl border border-rose-100 bg-white/90 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-rose-700">
             <ShieldAlert className="size-4" />
-            Weak Areas
+            약한 영역
           </div>
           <div className="mt-3 grid gap-2">
             {cautionSectors.map((sector) => (

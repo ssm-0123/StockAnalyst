@@ -4,9 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import type { DailyAnalysis, MarketRegimeAssessment } from "@/lib/types";
 
 function stageLabel(stage?: MarketRegimeAssessment["stage"]) {
-  if (stage === "early") return "Early";
-  if (stage === "late") return "Late";
-  return "Mid";
+  if (stage === "early") return "초기";
+  if (stage === "late") return "후기";
+  return "중기";
 }
 
 function metricDelta(current?: number, previous?: number) {
@@ -15,7 +15,7 @@ function metricDelta(current?: number, previous?: number) {
 }
 
 function DeltaBadge({ value }: { value: number | null }) {
-  if (value === null) return <Badge variant="neutral">n/a</Badge>;
+  if (value === null) return <Badge variant="neutral">정보 없음</Badge>;
   if (value > 0) {
     return (
       <Badge variant="caution">
@@ -30,7 +30,7 @@ function DeltaBadge({ value }: { value: number | null }) {
       </Badge>
     );
   }
-  return <Badge variant="neutral">0</Badge>;
+  return <Badge variant="neutral">변화 없음</Badge>;
 }
 
 function rotationChanges(current: string[] = [], previous: string[] = []) {
@@ -84,7 +84,7 @@ function MetricChange({ label, current, previous }: { label: string; current?: n
         <p className="text-lg font-semibold text-slate-950">{typeof current === "number" ? Math.round(current) : "n/a"}</p>
         <DeltaBadge value={delta} />
       </div>
-      <p className="mt-1 text-xs text-slate-500">prev {typeof previous === "number" ? Math.round(previous) : "n/a"}</p>
+      <p className="mt-1 text-xs text-slate-500">이전 {typeof previous === "number" ? Math.round(previous) : "정보 없음"}</p>
     </div>
   );
 }
@@ -94,7 +94,7 @@ function changeItems(latest: DailyAnalysis, current: MarketRegimeAssessment, pre
     return [
       {
         change: "이번 리포트를 새 기준점으로 저장합니다.",
-        impact: `Bullish/Watch for ${splitLabel(current.nextRotation?.[0] ?? latest.topOpportunity)}`,
+        impact: `${splitLabel(current.nextRotation?.[0] ?? latest.topOpportunity)} 우호 또는 관찰`,
       },
     ];
   }
@@ -108,44 +108,44 @@ function changeItems(latest: DailyAnalysis, current: MarketRegimeAssessment, pre
 
   if (current.stage !== previous.stage) {
     items.push({
-      change: `Market stage moved from ${stageLabel(previous.stage)} to ${stageLabel(current.stage)}.`,
-      impact: `Re-price exposure toward ${firstRotation}`,
+      change: `시장 단계가 ${stageLabel(previous.stage)}에서 ${stageLabel(current.stage)}로 이동했습니다.`,
+      impact: `${firstRotation} 쪽 노출을 다시 점검`,
     });
   }
   if (rotation >= 3) {
     items.push({
-      change: "Rotation pressure strengthened versus the previous report.",
-      impact: `Bullish for ${firstRotation}`,
+      change: "지난 리포트보다 자금 이동 압력이 강해졌습니다.",
+      impact: `${firstRotation}에 우호적`,
     });
   }
   if (crowdedness >= 3) {
     items.push({
-      change: "Crowdedness increased in current leadership.",
-      impact: `Avoid chasing ${splitLabel(latest.topRisk)}`,
+      change: "현재 주도 테마의 쏠림도가 높아졌습니다.",
+      impact: `${splitLabel(latest.topRisk)} 추격 금지`,
     });
   }
   if (riskReward <= -3) {
     items.push({
-      change: "Risk/reward deteriorated from the previous report.",
-      impact: "Favor price discipline and pullback entries",
+      change: "위험 대비 보상이 지난 리포트보다 약해졌습니다.",
+      impact: "가격 규율과 눌림 확인이 우선",
     });
   } else if (riskReward >= 3) {
     items.push({
-      change: "Risk/reward improved from the previous report.",
-      impact: `Constructive for ${firstRotation}`,
+      change: "위험 대비 보상이 지난 리포트보다 개선됐습니다.",
+      impact: `${firstRotation}에 건설적`,
     });
   }
   if (fragility >= 3) {
     items.push({
-      change: "Fragility rose, making weak follow-through more expensive.",
-      impact: "Bearish for overcrowded leaders",
+      change: "취약도가 올라 약한 후속 매수의 부담이 커졌습니다.",
+      impact: "과열된 기존 주도주에는 부정적",
     });
   }
 
   if (!items.length) {
     items.push({
-      change: "The broad regime is stable, but rotation candidates changed at the margin.",
-      impact: `Neutral-to-constructive for ${firstRotation}`,
+      change: "큰 국면은 안정적이지만 순환 후보가 일부 바뀌었습니다.",
+      impact: `${firstRotation}에 중립 이상`,
     });
   }
 
@@ -173,13 +173,13 @@ export function RegimeChangePanel({
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <GitCompareArrows className="size-4" />
-            What Changed
+            무엇이 바뀌었나
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">지난 리포트 이후 바뀐 국면</h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">{interpretation(current, previous)}</p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="neutral">{previousDay?.date ?? "no previous"}</Badge>
+          <Badge variant="neutral">{previousDay?.date ?? "이전 리포트 없음"}</Badge>
           <ArrowRight className="size-4 text-slate-400" />
           <Badge variant="positive">{latest.date}</Badge>
         </div>
@@ -188,10 +188,10 @@ export function RegimeChangePanel({
       <div className="mt-5 grid gap-3 lg:grid-cols-3">
         {changes.map((item, index) => (
           <div key={`regime-change-${index}`} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Change {index + 1}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">변화 {index + 1}</p>
             <p className="mt-2 text-sm font-semibold leading-6 text-slate-950">{item.change}</p>
             <div className="mt-3 rounded-xl border border-white bg-white p-3">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Market Impact</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">시장 영향</p>
               <p className="mt-1 text-sm leading-6 text-slate-700">{item.impact}</p>
             </div>
           </div>
@@ -200,9 +200,9 @@ export function RegimeChangePanel({
 
       <div className="mt-5 grid gap-3 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Stage</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">국면 단계</p>
           <div className="mt-3 flex flex-wrap items-center gap-2">
-            <Badge variant="neutral">{previous ? stageLabel(previous.stage) : "n/a"}</Badge>
+            <Badge variant="neutral">{previous ? stageLabel(previous.stage) : "정보 없음"}</Badge>
             <ArrowRight className="size-4 text-slate-400" />
             <Badge variant={previous?.stage === current.stage ? "neutral" : "positive"}>{stageLabel(current.stage)}</Badge>
           </div>
@@ -212,10 +212,10 @@ export function RegimeChangePanel({
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          <MetricChange label="Crowdedness" current={current.crowdedness} previous={previous?.crowdedness} />
-          <MetricChange label="Risk Reward" current={current.riskReward} previous={previous?.riskReward} />
-          <MetricChange label="Rotation" current={current.rotationProbability} previous={previous?.rotationProbability} />
-          <MetricChange label="Fragility" current={current.fragilityScore} previous={previous?.fragilityScore} />
+          <MetricChange label="쏠림도" current={current.crowdedness} previous={previous?.crowdedness} />
+          <MetricChange label="위험 대비 보상" current={current.riskReward} previous={previous?.riskReward} />
+          <MetricChange label="자금 이동 가능성" current={current.rotationProbability} previous={previous?.rotationProbability} />
+          <MetricChange label="취약도" current={current.fragilityScore} previous={previous?.fragilityScore} />
         </div>
       </div>
 

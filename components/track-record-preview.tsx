@@ -58,7 +58,7 @@ export function TrackRecordPreview({
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <BarChart3 className="size-4" />
-            Research Track Record
+            판단 검증 기록
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">최근 판단 검증</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">{report.summary}</p>
@@ -70,33 +70,33 @@ export function TrackRecordPreview({
 
       <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Win Rate</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">성공 비율</p>
           <p className="mt-2 text-3xl font-semibold text-slate-950">{winRate}%</p>
           <p className="mt-1 text-xs text-slate-500">{scorecard.evaluatedCount}개 판단 평가</p>
         </div>
         <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
             <CheckCircle2 className="size-4" />
-            Worked
+            성공
           </div>
           <p className="mt-2 text-3xl font-semibold text-emerald-700">{scorecard.workedCount}</p>
         </div>
         <div className="rounded-xl border border-amber-100 bg-amber-50 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">
             <Clock3 className="size-4" />
-            Mixed
+            혼재
           </div>
           <p className="mt-2 text-3xl font-semibold text-amber-700">{scorecard.mixedCount}</p>
         </div>
         <div className="rounded-xl border border-rose-100 bg-rose-50 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-rose-700">
             <TriangleAlert className="size-4" />
-            Failed
+            실패
           </div>
           <p className="mt-2 text-3xl font-semibold text-rose-700">{scorecard.failedCount}</p>
         </div>
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Average Alpha</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">평균 초과수익</p>
           <p className="mt-2 text-3xl font-semibold text-slate-950">{pct(scorecard.averageCallAlphaPct)}</p>
           <Badge variant="neutral" className="mt-2">
             {report.evaluationWindow.label}
@@ -106,18 +106,18 @@ export function TrackRecordPreview({
 
       <div className="mt-3 grid gap-3 md:grid-cols-2">
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Best Call</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">가장 좋았던 판단</p>
           <p className="mt-2 text-sm font-semibold leading-6 text-slate-900">{scorecard.bestCall}</p>
         </div>
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Weakest Call</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">가장 약했던 판단</p>
           <p className="mt-2 text-sm font-semibold leading-6 text-slate-900">{scorecard.weakestCall}</p>
         </div>
       </div>
 
       <div className="mt-3 grid gap-3 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Recent Trend</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">최근 흐름</p>
           <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
             {recentReports.map((item) => {
               const itemWinRate =
@@ -128,14 +128,14 @@ export function TrackRecordPreview({
                 <div key={item.reportDate} className="rounded-lg bg-white px-3 py-2">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">{item.evaluationWindow.label}</p>
                   <p className="mt-1 text-lg font-semibold text-slate-950">{itemWinRate}%</p>
-                  <p className="text-xs text-slate-500">alpha {pct(item.scorecard.averageCallAlphaPct)}</p>
+                  <p className="text-xs text-slate-500">초과수익 {pct(item.scorecard.averageCallAlphaPct)}</p>
                 </div>
               );
             })}
           </div>
         </div>
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Failure Attribution</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">실패 원인</p>
           <div className="mt-3 grid gap-2">
             {failureAttribution.length ? (
               failureAttribution.map(([label, count]) => (

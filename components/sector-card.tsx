@@ -14,9 +14,9 @@ function confidenceVariant(level?: SectorEntry["confidenceLevel"]) {
 }
 
 function confidenceLabel(level?: SectorEntry["confidenceLevel"]) {
-  if (level === "high") return "High";
-  if (level === "low") return "Low";
-  return "Medium";
+  if (level === "high") return "신뢰도 높음";
+  if (level === "low") return "신뢰도 낮음";
+  return "신뢰도 보통";
 }
 
 export function SectorCard({

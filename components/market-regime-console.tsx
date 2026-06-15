@@ -1,12 +1,13 @@
 import { AlertTriangle, CalendarDays, Gauge, Layers3, Shield } from "lucide-react";
 
+import { TermHint } from "@/components/term-hint";
 import { Badge } from "@/components/ui/badge";
 import type { DailyAnalysis, MarketRegimeAssessment } from "@/lib/types";
 
 function stageLabel(stage?: MarketRegimeAssessment["stage"]) {
-  if (stage === "early") return "Early";
-  if (stage === "late") return "Late";
-  return "Mid";
+  if (stage === "early") return "초기";
+  if (stage === "late") return "후기";
+  return "중기";
 }
 
 function clampScore(value?: number) {
@@ -18,6 +19,12 @@ function riskLevel(regime: MarketRegimeAssessment) {
   if (regime.fragilityScore >= 78 || regime.crowdedness >= 85 || regime.riskReward <= 45) return "High";
   if (regime.fragilityScore >= 60 || regime.crowdedness >= 65 || regime.riskReward <= 60) return "Medium";
   return "Low";
+}
+
+function riskLabel(value: string) {
+  if (value === "High") return "위험 높음";
+  if (value === "Low") return "위험 낮음";
+  return "위험 보통";
 }
 
 function confidenceScore(latest: DailyAnalysis) {
@@ -77,11 +84,13 @@ function Metric({
   value,
   inverse,
   help,
+  direction,
 }: {
   label: string;
   value?: number;
   inverse?: boolean;
   help: string;
+  direction: string;
 }) {
   const score = clampScore(value);
 
@@ -94,6 +103,7 @@ function Metric({
       <div className="mt-3 h-2 rounded-full bg-slate-100">
         <div className={`h-full rounded-full ${scoreTone(score, inverse)}`} style={{ width: `${score}%` }} />
       </div>
+      <p className="mt-2 text-[11px] font-medium leading-4 text-slate-500">{direction}</p>
     </div>
   );
 }
@@ -118,14 +128,14 @@ export function MarketRegimeConsole({
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <Gauge className="size-4" />
-            Current Regime
+            현재 시장 국면
           </div>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950">
-            {stageLabel(regime.stage)} Market Regime
+            {stageLabel(regime.stage)} 시장 국면
           </h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">{regime.summary}</p>
         </div>
-        <Badge variant={risk === "High" ? "caution" : risk === "Low" ? "positive" : "neutral"}>{risk} Risk</Badge>
+        <Badge variant={risk === "High" ? "caution" : risk === "Low" ? "positive" : "neutral"}>{riskLabel(risk)}</Badge>
       </div>
 
       <div className="mt-5 grid gap-3 lg:grid-cols-[0.85fr_1.15fr]">
@@ -133,45 +143,67 @@ export function MarketRegimeConsole({
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
               <Shield className="size-4" />
-              Confidence
+              <TermHint label="판단 신뢰도" description="현재 국면, 상위 섹터, 테마 신호를 함께 본 리서치 확신도입니다. 주문 신호가 아니라 근거 강도입니다." />
             </div>
             <p className="mt-3 text-3xl font-semibold text-slate-950">{confidence}%</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
               <CalendarDays className="size-4" />
-              Duration
+              <TermHint label="국면 지속 기간" description="같은 시장 단계가 며칠째 이어졌는지 보여줍니다. 길수록 피로도와 전환 가능성을 함께 봐야 합니다." />
             </div>
             <p className="mt-3 text-3xl font-semibold text-slate-950">{duration}d</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
               <AlertTriangle className="size-4" />
-              Risk Level
+              <TermHint label="위험 수준" description="쏠림도, 취약도, 위험 대비 보상을 종합한 현재 시장의 흔들림 위험입니다." />
             </div>
-            <p className="mt-3 text-3xl font-semibold text-slate-950">{risk}</p>
+            <p className="mt-3 text-3xl font-semibold text-slate-950">{riskLabel(risk)}</p>
           </div>
         </div>
 
         <div className="grid gap-3">
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            <Metric label="Crowdedness" value={regime.crowdedness} inverse help="주도 테마에 가격과 관심이 얼마나 몰려 있는지 봅니다. 높을수록 추격 부담이 큽니다." />
-            <Metric label="Risk Reward" value={regime.riskReward} help="현재 가격에서 남은 보상 대비 위험을 봅니다. 높을수록 관찰 자리가 낫습니다." />
-            <Metric label="Rotation" value={regime.rotationProbability} help="다음 섹터나 테마로 자금이 이동할 가능성입니다." />
-            <Metric label="Fragility" value={regime.fragilityScore} inverse help="작은 충격에 시장이 흔들릴 가능성입니다. 높을수록 무효화 조건이 중요합니다." />
+            <Metric
+              label="쏠림도"
+              value={regime.crowdedness}
+              inverse
+              help="주도 테마에 가격과 관심이 얼마나 몰려 있는지 봅니다. 높을수록 추격 부담이 큽니다."
+              direction="높을수록 나쁨: 과열·추격 부담"
+            />
+            <Metric
+              label="위험 대비 보상"
+              value={regime.riskReward}
+              help="현재 가격에서 남은 상승 여지와 하락 위험의 균형입니다. 높을수록 관찰 자리가 낫습니다."
+              direction="높을수록 좋음: 보상 여지 우위"
+            />
+            <Metric
+              label="자금 이동 가능성"
+              value={regime.rotationProbability}
+              help="다음 섹터나 테마로 자금이 옮겨갈 가능성입니다."
+              direction="높을수록 전환 신호 강함"
+            />
+            <Metric
+              label="취약도"
+              value={regime.fragilityScore}
+              inverse
+              help="작은 충격에 시장이 흔들릴 가능성입니다. 높을수록 무효화 조건이 중요합니다."
+              direction="높을수록 나쁨: 변동성·훼손 위험"
+            />
           </div>
           <div className="grid gap-3 lg:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
                 <Layers3 className="size-4" />
-                Breadth
+                <TermHint label="참여 폭" description="상승이 일부 종목에만 집중되는지, 여러 섹터로 넓게 퍼지는지 보는 지표입니다." />
               </div>
               <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-700">{regime.breadth}</p>
             </div>
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
                 <Shield className="size-4" />
-                Positioning
+                <TermHint label="포지션 상태" description="시장 참여자들의 관심과 포지션이 어느 쪽으로 기울어 있는지에 대한 해석입니다." />
               </div>
               <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-700">{regime.positioning}</p>
             </div>

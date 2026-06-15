@@ -62,9 +62,9 @@ function confidenceVariant(level?: ConfidenceLevel) {
 }
 
 function confidenceLabel(level?: ConfidenceLevel) {
-  if (level === "high") return "High";
-  if (level === "low") return "Low";
-  return "Medium";
+  if (level === "high") return "신뢰도 높음";
+  if (level === "low") return "신뢰도 낮음";
+  return "신뢰도 보통";
 }
 
 function healthVariant(health?: SnapshotHealth) {
@@ -74,11 +74,11 @@ function healthVariant(health?: SnapshotHealth) {
 }
 
 function healthLabel(health?: SnapshotHealth) {
-  if (health === "fresh") return "fresh";
-  if (health === "stale") return "stale";
-  if (health === "invalid") return "invalid";
-  if (health === "missing") return "missing";
-  return "partial";
+  if (health === "fresh") return "최신";
+  if (health === "stale") return "오래됨";
+  if (health === "invalid") return "무효";
+  if (health === "missing") return "없음";
+  return "부분";
 }
 
 function resolveActionBias(stock: StockIdea) {
@@ -224,11 +224,11 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
         </div>
         <div className="mt-3 grid gap-3 lg:grid-cols-2">
           <div className="rounded-2xl border border-slate-200/80 bg-white p-3 lg:col-span-2">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Thesis</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">투자 가설</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">{stock.rationale}</p>
           </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Price Position</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">가격 위치</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">
               {stock.positioningNote ??
                 (actionBias === "buy"
@@ -241,19 +241,19 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Invalidation</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">무효화 조건</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">
               {stock.invalidation ?? "핵심 논리를 깨는 실적, 수급, 가격 이탈이 나오면 재평가합니다."}
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Confidence</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">판단 신뢰도</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">
-              {confidenceLabel(stock.confidenceLevel)} research confidence. 가격 스냅샷은 {healthLabel(stock.snapshotHealth)} 상태입니다.
+              {confidenceLabel(stock.confidenceLevel)}입니다. 가격 스냅샷은 {healthLabel(stock.snapshotHealth)} 상태입니다.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Risk</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">리스크</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">
               {actionBias === "buy"
                 ? "가격 추격, 촉매 지연, 주도 섹터 차익실현이 핵심 리스크입니다."

@@ -64,7 +64,7 @@ function WatchCard({
           {icon}
           {label}
         </div>
-        <Badge variant={tone}>{tone === "positive" ? "Focus" : tone === "caution" ? "Risk" : "Monitor"}</Badge>
+        <Badge variant={tone}>{tone === "positive" ? "집중" : tone === "caution" ? "주의" : "관찰"}</Badge>
       </div>
       <p className="mt-3 text-base font-semibold leading-6 text-slate-950">{title}</p>
       <p className="mt-2 text-sm leading-6 text-slate-600">{detail}</p>
@@ -94,7 +94,7 @@ export function ActionCommandPanel({
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
             <Eye className="size-4" />
-            What To Watch Now
+            지금 확인할 것
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
             지금 볼 것, 기다릴 것, 피할 것을 분리합니다.
@@ -104,29 +104,29 @@ export function ActionCommandPanel({
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Badge variant="positive">Focus {buyCandidates.length}</Badge>
-          <Badge variant="caution">Avoid {riskCandidates.length}</Badge>
-          <Badge variant="neutral">Data {freshText}</Badge>
+          <Badge variant="positive">집중 {buyCandidates.length}</Badge>
+          <Badge variant="caution">주의 {riskCandidates.length}</Badge>
+          <Badge variant="neutral">데이터 {freshText}</Badge>
         </div>
       </div>
 
       <div className="mt-5 grid gap-3 lg:grid-cols-4">
         <WatchCard
-          label="Focus"
+          label="집중"
           title={latest.topOpportunity}
           detail={topFocus ? `대표 후보: ${primaryTicker(topFocus)} · ${topFocus.sector}` : "관심 확대 후보가 아직 없습니다."}
           tone="positive"
           icon={<Focus className="size-4 text-emerald-700" />}
         />
         <WatchCard
-          label="Avoid"
+          label="피할 것"
           title={latest.topRisk}
           detail={topRisk ? `대표 경고: ${primaryTicker(topRisk)} · ${actionBiasLabel(topRisk.actionBias)}` : "명시적인 축소 신호가 없습니다."}
           tone="caution"
           icon={<ShieldAlert className="size-4 text-rose-700" />}
         />
         <WatchCard
-          label="Monitor"
+          label="관찰"
           title={monitorTheme?.theme ?? "확인할 테마 없음"}
           detail={monitorTheme?.whatToWatch ?? "다음 자동화 결과에서 확인 조건을 갱신합니다."}
           tone="neutral"
@@ -135,10 +135,10 @@ export function ActionCommandPanel({
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
             <Clock className="size-4" />
-            Context
+            현재 맥락
           </div>
           <p className="mt-3 text-base font-semibold leading-6 text-slate-950">
-            {stageLabel(regime?.stage)} · crowd {regime?.crowdedness ?? "-"} · rotation {regime?.rotationProbability ?? "-"}
+            {stageLabel(regime?.stage)} · 쏠림 {regime?.crowdedness ?? "-"} · 순환 {regime?.rotationProbability ?? "-"}
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             {topFocus ? <Badge variant={getMarketBadgeVariant(topFocus.market)}>{getMarketLabel(topFocus.market)}</Badge> : null}

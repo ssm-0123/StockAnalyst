@@ -34,9 +34,9 @@ function confidenceVariant(level?: ConfidenceLevel) {
 }
 
 function confidenceLabel(level?: ConfidenceLevel) {
-  if (level === "high") return "High";
-  if (level === "low") return "Low";
-  return "Medium";
+  if (level === "high") return "신뢰도 높음";
+  if (level === "low") return "신뢰도 낮음";
+  return "신뢰도 보통";
 }
 
 function healthVariant(health?: SnapshotHealth) {
@@ -46,11 +46,11 @@ function healthVariant(health?: SnapshotHealth) {
 }
 
 function healthLabel(health?: SnapshotHealth) {
-  if (health === "fresh") return "fresh";
-  if (health === "stale") return "stale";
-  if (health === "invalid") return "invalid";
-  if (health === "missing") return "missing";
-  return "partial";
+  if (health === "fresh") return "최신";
+  if (health === "stale") return "오래됨";
+  if (health === "invalid") return "무효";
+  if (health === "missing") return "없음";
+  return "부분";
 }
 
 function resolveActionBias(idea: SmallCapIdea) {

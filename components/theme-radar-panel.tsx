@@ -69,7 +69,7 @@ function ThemeCard({ theme, featured }: { theme: ThemeRadarItem; featured?: bool
             <Badge variant="neutral">{theme.market}</Badge>
             <Badge variant="neutral">{eventTypeLabel(theme.eventType)}</Badge>
             <Badge variant={tradabilityVariant(theme.tradability)}>{tradabilityLabel(theme.tradability)}</Badge>
-            <Badge variant="neutral">신호 {formatSignal(theme.signalStrength)}</Badge>
+            <Badge variant="neutral">테마 강도 {formatSignal(theme.signalStrength)}</Badge>
             <Badge variant="neutral">출처 {freshnessLabel(theme.sourceFreshness)}</Badge>
           </div>
           <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950">{theme.theme}</h3>
@@ -81,11 +81,11 @@ function ThemeCard({ theme, featured }: { theme: ThemeRadarItem; featured?: bool
 
       <div className="mt-4 grid gap-3 xl:grid-cols-[1.15fr_0.85fr]">
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Catalyst</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">움직인 이유</p>
           <p className="mt-1 line-clamp-4 text-sm leading-6 text-slate-700">{theme.narrative}</p>
         </div>
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Market Reaction</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">시장 반응</p>
           <p className="mt-1 line-clamp-4 text-sm leading-6 text-slate-700">{theme.marketReaction}</p>
         </div>
       </div>
@@ -93,7 +93,7 @@ function ThemeCard({ theme, featured }: { theme: ThemeRadarItem; featured?: bool
       <div className="mt-3 rounded-xl border border-slate-200 bg-white p-3">
         <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
           <CheckCircle2 className="size-3.5" />
-          Beneficiaries
+          수혜 후보
         </div>
         <div className="flex flex-wrap gap-2">
           {theme.affectedStocks.slice(0, 8).map((stock) => (
@@ -108,38 +108,38 @@ function ThemeCard({ theme, featured }: { theme: ThemeRadarItem; featured?: bool
         <div className="rounded-xl border border-rose-100 bg-rose-50/70 p-3 text-sm leading-6 text-slate-700">
           <div className="mb-1 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-700">
             <ShieldAlert className="size-3.5" />
-            Risk
+            틀릴 수 있는 조건
           </div>
           <p className="line-clamp-4">{theme.risk}</p>
         </div>
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-6 text-slate-700">
           <div className="mb-1 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
             <CalendarClock className="size-3.5" />
-            Watch / Invalidation
+            확인 조건 / 무효화 조건
           </div>
           <p className="line-clamp-4">{watchText(theme)}</p>
         </div>
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-6 text-slate-700">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Already Priced?</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">이미 가격에 반영됐나</p>
           <p className="mt-1 font-semibold text-slate-950">{pricedText(theme)}</p>
         </div>
       </div>
 
       {theme.evidence?.length ? (
         <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Evidence</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">근거</p>
           <p className="mt-1 text-xs leading-5 text-slate-500">{theme.evidence.slice(0, 3).join(" / ")}</p>
         </div>
       ) : null}
       <details className="mt-3 rounded-xl border border-slate-200 bg-white px-3 py-2">
         <summary className="cursor-pointer list-none text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-          Full Theme Note
+          전체 테마 메모
         </summary>
         <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
           <p>{theme.narrative}</p>
-          <p><span className="font-semibold text-slate-950">Reaction: </span>{theme.marketReaction}</p>
-          <p><span className="font-semibold text-slate-950">Risk: </span>{theme.risk}</p>
-          <p><span className="font-semibold text-slate-950">Watch: </span>{watchText(theme)}</p>
+          <p><span className="font-semibold text-slate-950">반응: </span>{theme.marketReaction}</p>
+          <p><span className="font-semibold text-slate-950">리스크: </span>{theme.risk}</p>
+          <p><span className="font-semibold text-slate-950">확인 조건: </span>{watchText(theme)}</p>
         </div>
       </details>
     </article>
@@ -161,7 +161,7 @@ export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
             <RadioTower className="size-4" />
-            Theme Intelligence
+            테마 분석
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
             테마를 사건, 수혜자, 리스크로 해석합니다.
@@ -170,7 +170,7 @@ export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
             접힌 목록이 아니라 바로 읽을 수 있는 리서치 카드로 핵심 테마를 보여줍니다.
           </p>
         </div>
-        <Badge variant="neutral">{visibleItems.length}/{items.length} shown</Badge>
+        <Badge variant="neutral">{visibleItems.length}/{items.length} 표시</Badge>
       </div>
 
       <div className="mt-5 grid gap-4">
@@ -182,7 +182,7 @@ export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
       {hiddenItems.length ? (
         <details className="mt-4 rounded-2xl border border-sky-100 bg-white/70 p-4">
           <summary className="cursor-pointer list-none text-sm font-semibold text-sky-800">
-            Show {hiddenItems.length} more theme signals
+            테마 신호 {hiddenItems.length}개 더 보기
           </summary>
           <div className="mt-4 grid gap-4 xl:grid-cols-3">
             {hiddenItems.map((theme, index) => (

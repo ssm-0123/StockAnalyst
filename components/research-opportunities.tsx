@@ -20,9 +20,9 @@ function formatRelativeToHigh(current?: number, high?: number) {
 }
 
 function confidenceLabel(value?: DashboardActionCandidate["confidenceLevel"]) {
-  if (value === "high") return "High";
-  if (value === "low") return "Low";
-  return "Medium";
+  if (value === "high") return "높음";
+  if (value === "low") return "낮음";
+  return "보통";
 }
 
 function timeHorizonLabel(value?: DashboardActionCandidate["timeHorizon"]) {
@@ -60,7 +60,7 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
       </div>
 
       <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-3">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Thesis</p>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">투자 가설</p>
         <p className="mt-1 line-clamp-4 text-sm leading-6 text-slate-700">
           {candidate.stockThesis ?? candidate.thesis ?? candidate.rationale}
         </p>
@@ -68,24 +68,24 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
 
       <div className="mt-3 grid gap-3">
         <div className="rounded-xl border border-slate-200 bg-white p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Catalyst</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">상승/변화 촉매</p>
           <p className="mt-1 line-clamp-3 text-sm leading-6 text-slate-700">{pickCatalyst(candidate)}</p>
         </div>
         <div className="grid gap-3 sm:grid-cols-3">
           <div className="rounded-xl border border-slate-200 bg-white p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Price Position</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">가격 위치</p>
             <p className="mt-1 text-sm font-semibold text-slate-950">
               {formatPrice(snapshot?.currentPrice, candidate.market, snapshot?.currency)}
             </p>
             <p className="mt-1 text-xs text-slate-500">52주 고점 대비 {formatRelativeToHigh(snapshot?.currentPrice, snapshot?.week52High)}</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Already Priced?</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">가격 반영도</p>
             <p className="mt-1 text-sm font-semibold text-slate-950">{candidate.alreadyPriced ?? "가격 반영도 확인 중"}</p>
             <p className="mt-1 text-xs text-slate-500">{candidate.watchDate ?? candidate.watchCondition ?? "다음 Market Intelligence에서 재확인"}</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Confidence</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">판단 신뢰도</p>
             <p className="mt-1 flex items-center gap-2 text-sm font-semibold text-slate-950">
               <BadgeCheck className="size-4 text-emerald-700" />
               {confidenceLabel(candidate.confidenceLevel)}
@@ -101,12 +101,12 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
         <div className="rounded-xl border border-rose-100 bg-rose-50/70 p-3">
           <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-700">
             <ShieldAlert className="size-4" />
-            Risk
+            리스크
           </div>
           <p className="mt-1 line-clamp-3 text-sm leading-6 text-slate-700">{pickRisk(candidate)}</p>
         </div>
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Invalidation</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">무효화 조건</p>
           <p className="mt-1 line-clamp-3 text-sm leading-6 text-slate-700">
             {candidate.invalidation ?? "핵심 논리를 깨는 가격, 수급, 실적 변화가 나오면 재평가합니다."}
           </p>
@@ -114,13 +114,13 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
       </div>
       <details className="mt-3 rounded-xl border border-slate-200 bg-white px-3 py-2">
         <summary className="cursor-pointer list-none text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-          Full Research Note
+          전체 리서치 메모
         </summary>
         <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
           <p>{candidate.rationale}</p>
-          {candidate.positioningNote ? <p><span className="font-semibold text-slate-950">Positioning: </span>{candidate.positioningNote}</p> : null}
-          {candidate.valuationNote ? <p><span className="font-semibold text-slate-950">Valuation: </span>{candidate.valuationNote}</p> : null}
-          {candidate.liquidityNote ? <p><span className="font-semibold text-slate-950">Liquidity: </span>{candidate.liquidityNote}</p> : null}
+          {candidate.positioningNote ? <p><span className="font-semibold text-slate-950">포지션: </span>{candidate.positioningNote}</p> : null}
+          {candidate.valuationNote ? <p><span className="font-semibold text-slate-950">밸류에이션: </span>{candidate.valuationNote}</p> : null}
+          {candidate.liquidityNote ? <p><span className="font-semibold text-slate-950">유동성: </span>{candidate.liquidityNote}</p> : null}
         </div>
       </details>
     </article>
@@ -142,14 +142,14 @@ export function ResearchOpportunities({ candidates }: { candidates: DashboardAct
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-700">
             <LineChart className="size-4" />
-            Research Opportunities
+            리서치 후보
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">관심 후보를 리서치 카드로 봅니다.</h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-            단순 티커 목록이 아니라 thesis, catalyst, 가격 위치, 무효화 조건을 함께 봅니다.
+            단순 티커 목록이 아니라 투자 가설, 촉매, 가격 위치, 무효화 조건을 함께 봅니다.
           </p>
         </div>
-        <Badge variant="positive">{visibleItems.length}/{items.length} ideas</Badge>
+        <Badge variant="positive">{visibleItems.length}/{items.length} 후보</Badge>
       </div>
 
       <div className="mt-5 grid gap-4 xl:grid-cols-3">
@@ -159,7 +159,7 @@ export function ResearchOpportunities({ candidates }: { candidates: DashboardAct
       {hiddenItems.length ? (
         <details className="mt-4 rounded-2xl border border-emerald-100 bg-white/70 p-4">
           <summary className="cursor-pointer list-none text-sm font-semibold text-emerald-800">
-            Show {hiddenItems.length} more research ideas
+            리서치 후보 {hiddenItems.length}개 더 보기
           </summary>
           <div className="mt-4 grid gap-4 xl:grid-cols-3">
             {hiddenItems.map((candidate) => <OpportunityCard key={candidate.key} candidate={candidate} />)}
