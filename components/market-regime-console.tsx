@@ -2,6 +2,7 @@ import { AlertTriangle, CalendarDays, Gauge, Layers3, Shield } from "lucide-reac
 
 import { TermHint } from "@/components/term-hint";
 import { Badge } from "@/components/ui/badge";
+import { buildRegimeConfidence } from "@/lib/research-confidence";
 import type { DailyAnalysis, MarketRegimeAssessment } from "@/lib/types";
 
 function stageLabel(stage?: MarketRegimeAssessment["stage"]) {
@@ -25,19 +26,6 @@ function riskLabel(value: string) {
   if (value === "High") return "위험 높음";
   if (value === "Low") return "위험 낮음";
   return "위험 보통";
-}
-
-function confidenceScore(latest: DailyAnalysis) {
-  const regime = latest.marketRegime;
-  const topSector = latest.promisingSectors[0];
-  const topTheme = latest.themeRadar?.[0];
-  if (!regime) return topSector?.confidenceScore ?? 0;
-  return clampScore(
-    (topSector?.confidenceScore ?? regime.rotationProbability) * 0.42 +
-      (topTheme?.signalStrength ?? regime.rotationProbability) * 0.28 +
-      regime.rotationProbability * 0.18 +
-      (100 - regime.fragilityScore) * 0.12,
-  );
 }
 
 function parseDate(value: string) {
@@ -118,7 +106,7 @@ export function MarketRegimeConsole({
   const regime = latest.marketRegime;
   if (!regime) return null;
 
-  const confidence = confidenceScore(latest);
+  const confidence = buildRegimeConfidence(latest);
   const duration = regimeDurationDays(latest, history);
   const risk = riskLevel(regime);
 
@@ -145,7 +133,20 @@ export function MarketRegimeConsole({
               <Shield className="size-4" />
               <TermHint label="판단 신뢰도" description="현재 국면, 상위 섹터, 테마 신호를 함께 본 리서치 확신도입니다. 주문 신호가 아니라 근거 강도입니다." />
             </div>
-            <p className="mt-3 text-3xl font-semibold text-slate-950">{confidence}%</p>
+            <div className="mt-3 flex items-end justify-between gap-3">
+              <p className="text-3xl font-semibold text-slate-950">{confidence.score}%</p>
+              <Badge variant={confidence.tone === "weak" ? "caution" : confidence.tone === "watch" ? "neutral" : "positive"}>
+                {confidence.label}
+              </Badge>
+            </div>
+            <div className="mt-3 grid gap-2">
+              <p className="rounded-lg bg-emerald-50 px-2 py-1.5 text-xs leading-5 text-emerald-800">
+                + {confidence.positives.length ? confidence.positives.join(" · ") : "강한 가산 요인 없음"}
+              </p>
+              <p className="rounded-lg bg-rose-50 px-2 py-1.5 text-xs leading-5 text-rose-800">
+                - {confidence.negatives.length ? confidence.negatives.join(" · ") : "큰 감점 요인 없음"}
+              </p>
+            </div>
           </div>
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">

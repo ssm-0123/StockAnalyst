@@ -2,12 +2,9 @@ import { ArrowRight, Compass, Gauge, MoveRight } from "lucide-react";
 
 import { TermHint } from "@/components/term-hint";
 import { Badge } from "@/components/ui/badge";
+import { buildForwardConfidence } from "@/lib/research-confidence";
 import { withBasePath } from "@/lib/site";
 import type { DailyAnalysis } from "@/lib/types";
-
-function clampScore(value: number) {
-  return Math.min(100, Math.max(0, Math.round(value)));
-}
 
 function splitLabel(value: string) {
   return value.includes("|") ? value.split("|").map((part) => part.trim()).filter(Boolean).at(-1) ?? value : value;
@@ -38,22 +35,6 @@ function unique(items: string[]) {
 
 function sentence(value?: string) {
   return value?.split(/(?<=[.!?。]|[다요]\.)\s+/).find(Boolean)?.trim() ?? "";
-}
-
-function forwardConfidence(latest: DailyAnalysis) {
-  const regime = latest.marketRegime;
-  const topSector = latest.promisingSectors[0];
-  const topTheme = latest.themeRadar?.[0];
-  if (!regime) return topSector?.confidenceScore ?? topTheme?.signalStrength ?? 0;
-
-  const base =
-    regime.rotationProbability * 0.36 +
-    regime.riskReward * 0.22 +
-    (topSector?.confidenceScore ?? regime.rotationProbability) * 0.24 +
-    (topTheme?.signalStrength ?? regime.rotationProbability) * 0.18;
-  const fragilityPenalty = Math.max(0, regime.fragilityScore - 70) * 0.12;
-  const crowdedPenalty = Math.max(0, regime.crowdedness - 80) * 0.08;
-  return clampScore(base - fragilityPenalty - crowdedPenalty);
 }
 
 function viewBuckets(latest: DailyAnalysis) {
@@ -144,7 +125,7 @@ function Bucket({
 
 export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
   const buckets = viewBuckets(latest);
-  const confidence = forwardConfidence(latest);
+  const confidence = buildForwardConfidence(latest);
   const reasons = rationale(latest);
   const flows = moneyFlows(latest);
   const summary = actionSummary(latest);
@@ -189,14 +170,31 @@ export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
                   tooltipClassName="border-white/10 bg-slate-900 text-slate-100"
                 />
               </div>
-              <p className="text-3xl font-semibold text-white">{confidence}%</p>
+              <div className="text-right">
+                <p className="text-3xl font-semibold text-white">{confidence.score}%</p>
+                <p className="mt-1 text-xs font-semibold text-emerald-200">{confidence.label}</p>
+              </div>
             </div>
             <div className="mt-3 h-2 rounded-full bg-white/10">
-              <div className="h-full rounded-full bg-emerald-400" style={{ width: `${confidence}%` }} />
+              <div className="h-full rounded-full bg-emerald-400" style={{ width: `${confidence.score}%` }} />
             </div>
             <p className="mt-3 text-xs leading-5 text-slate-300">
               리서치 근거의 강도입니다. 맞을 확률이나 매수 신호가 아닙니다.
             </p>
+            <div className="mt-3 grid gap-2 sm:grid-cols-2">
+              <div className="rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-2">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-200">올린 요인</p>
+                <p className="mt-1 text-xs leading-5 text-slate-200">
+                  {confidence.positives.length ? confidence.positives.join(" · ") : "강한 가산 요인 없음"}
+                </p>
+              </div>
+              <div className="rounded-lg border border-rose-300/20 bg-rose-300/10 p-2">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-200">낮춘 요인</p>
+                <p className="mt-1 text-xs leading-5 text-slate-200">
+                  {confidence.negatives.length ? confidence.negatives.join(" · ") : "큰 감점 요인 없음"}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
