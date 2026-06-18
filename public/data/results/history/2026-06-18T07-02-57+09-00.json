@@ -1,0 +1,370 @@
+{
+  "reportDate": "2026-06-18",
+  "lastUpdated": "2026-06-18T07:02:57+09:00",
+  "evaluationWindow": {
+    "startDate": "2026-06-12",
+    "endDate": "2026-06-18",
+    "label": "2026년 6월 3주차"
+  },
+  "overallVerdict": "섹터 로테이션은 대체로 맞았지만, 고점권 caution 타이밍과 후발주 선별은 더 엄격해야 했습니다.",
+  "summary": "최근 7개 대표본이 모두 확보되어 2026-06-12부터 2026-06-18까지 평가했습니다. AI 전력 인프라와 삼성전자 중심 KR 반도체 대형 방어, US 소프트웨어 caution은 로컬 스냅샷 기준으로 맞았습니다. 반대로 여행 relief trade와 SK하이닉스 crowded caution은 너무 빨랐고, KR 반도체 후발 중소형은 에프에스티만 방어했을 뿐 심텍은 기준선 확인이 부족했습니다. 이번 evaluatedInsights는 모두 priceSnapshot 기반 verified/snapshot 근거만 사용했습니다.",
+  "benchmarkNote": "벤치마크는 외부 시세 없이 같은 평가 기간 로컬 priceSnapshot이 반복된 섹터 peer 바스켓으로 계산했고, caution 콜의 callAlphaPct는 벤치마크 수익률에서 종목 수익률을 뺀 값입니다.",
+  "scorecard": {
+    "evaluatedCount": 8,
+    "workedCount": 4,
+    "mixedCount": 1,
+    "failedCount": 3,
+    "averageCallAlphaPct": 1.5,
+    "bestCall": "삼성전자 대형 방어형 KR 반도체 확산",
+    "weakestCall": "심텍 후발 PCB small-cap follow-through"
+  },
+  "smallCapScorecard": {
+    "evaluatedCount": 3,
+    "workedCount": 1,
+    "mixedCount": 1,
+    "failedCount": 1,
+    "averageCallAlphaPct": 0.6
+  },
+  "evaluatedInsights": [
+    {
+      "ticker": "APLD",
+      "companyName": "Applied Digital",
+      "market": "US",
+      "sector": "AI 데이터센터 인프라",
+      "stance": "small-cap",
+      "entryDate": "2026-06-12",
+      "evaluationDate": "2026-06-18",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 데이터센터 병목이 소형 인프라 옵션주에도 확산되는지 확인할 고위험 후보였습니다.",
+      "priceReturnPct": 10.5,
+      "benchmarkReturnPct": 7.1,
+      "benchmarkLabel": "로컬 US AI 전력 peer 바스켓(ETN·VST)",
+      "callAlphaPct": 3.4,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "41.50달러에서 45.86달러로 +10.5% 상승해 ETN·VST peer 바스켓 +7.1%를 앞섰습니다.",
+      "followThroughReview": "7일 내내 small-cap 후보로 유지됐고 45달러 기준선을 방어해 고베타 옵션주 follow-through가 확인됐습니다.",
+      "lesson": "혁신 옵션주는 현금흐름 검증이 약해도 가격 기준선과 peer 상대강도가 동시에 살아 있으면 너무 일찍 제외하지 않습니다.",
+      "lessonId": "US-APLD-datacenter-option-followthrough-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.68,
+      "lessonValidUntil": "2026-07-02",
+      "lessonConditions": [
+        "45달러 위에서 VST·ETN 대비 2거래일 이상 상대강도를 유지할 때만 적용합니다.",
+        "자금조달 부담 뉴스나 45달러 이탈이 나오면 옵션주 가점을 철회합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 교훈과 방향은 같지만 초과성과가 10.2%p에서 3.4%p로 줄어 적용 조건을 더 좁혔습니다.",
+      "attribution": {
+        "category": "market-regime",
+        "primaryCause": "AI 데이터센터 전력 병목 국면이 대형 전력주를 넘어 고베타 인프라 옵션주로 확산됐습니다.",
+        "whatToChange": "다음 Market Intelligence는 옵션주 제외 전에 45달러 같은 기준선과 peer 상대강도를 함께 확인합니다."
+      }
+    },
+    {
+      "ticker": "VST",
+      "companyName": "Vistra",
+      "market": "US",
+      "sector": "US AI 전력·원전 인프라 품질주",
+      "stance": "promising",
+      "entryDate": "2026-06-12",
+      "evaluationDate": "2026-06-18",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 전력 수요와 발전 자산 베타를 동시에 받는 고탄력 전력 인프라 후보였습니다.",
+      "priceReturnPct": 8.4,
+      "benchmarkReturnPct": 5.8,
+      "benchmarkLabel": "로컬 US AI 전력 품질 peer(ETN)",
+      "callAlphaPct": 2.6,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "147.00달러에서 159.29달러로 +8.4% 상승해 같은 기간 ETN +5.8%보다 탄력이 컸습니다.",
+      "followThroughReview": "7일 내내 promising 전력 인프라 후보로 반복됐고, late risk-on 내부에서도 전력 베타가 유지됐습니다.",
+      "lesson": "품질 전력주 안에서도 narrative inflection이 붙은 고베타 발전주는 벤치마크를 앞설 수 있지만, 변동성 때문에 품질주와 같은 포지션 크기를 주면 안 됩니다.",
+      "lessonId": "US-VST-ai-power-beta-followthrough-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.68,
+      "lessonValidUntil": "2026-07-02",
+      "lessonConditions": [
+        "VST가 150달러 위에서 ETN 대비 상대강도를 유지할 때만 전력 베타 가점을 적용합니다.",
+        "merchant power 가격이나 데이터센터 전력 narrative가 약해지면 품질주 바스켓 안 비중을 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "새 반복 관측에서 전력 인프라 국면 판단과 종목 탄력이 모두 확인됐습니다.",
+      "attribution": {
+        "category": "sector-selection",
+        "primaryCause": "AI capex가 소프트웨어보다 전력 인프라로 먼저 흘러가면서 섹터 선택이 성과를 만들었습니다.",
+        "whatToChange": "다음 Market Intelligence는 전력 인프라 안에서 ETN 같은 품질주와 VST 같은 베타주를 분리해 sizing을 제시합니다."
+      }
+    },
+    {
+      "ticker": "CRM",
+      "companyName": "Salesforce",
+      "market": "US",
+      "sector": "US 소프트웨어 AI monetization 디레이팅",
+      "stance": "caution",
+      "entryDate": "2026-06-12",
+      "evaluationDate": "2026-06-18",
+      "holdingPeriodDays": 6,
+      "thesis": "기업용 AI 소프트웨어 대표주라도 AI 매출 전환 증거가 약하면 단기 자금 유입 우선순위가 낮다는 caution이었습니다.",
+      "priceReturnPct": -6.7,
+      "benchmarkReturnPct": -3.5,
+      "benchmarkLabel": "로컬 US 소프트웨어 peer 바스켓(ADBE·FDS)",
+      "callAlphaPct": 3.2,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "167.00달러에서 155.77달러로 -6.7% 하락해 ADBE·FDS peer 바스켓 -3.5%보다 더 약했습니다.",
+      "followThroughReview": "7일 내내 caution으로 반복됐고 165달러 회복 실패가 실제 약세로 이어졌습니다.",
+      "lesson": "AI 소프트웨어는 좋은 스토리보다 매출·마진으로 이어지는 숫자 다리가 먼저이며, 낮은 가격만으로 디레이팅을 끝났다고 보지 않습니다.",
+      "lessonId": "US-CRM-ai-software-derating-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.69,
+      "lessonValidUntil": "2026-07-02",
+      "lessonConditions": [
+        "165달러 회복 전에는 AI monetization 회복 스토리를 보수적으로 둡니다.",
+        "ADBE 205달러와 FDS 235달러가 함께 회복하면 소프트웨어 caution 강도를 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 교훈과 같이 Salesforce의 상대 약세가 이어졌지만 알파 폭은 4.1%p에서 3.2%p로 작아졌습니다.",
+      "attribution": {
+        "category": "thesis-invalidated",
+        "primaryCause": "AI 기능 스토리가 가격이 요구하는 성장 재가속 증거로 연결되지 못했습니다.",
+        "whatToChange": "다음 Market Intelligence는 소프트웨어를 낮은 가격이 아니라 AI 매출 전환과 기준선 회복으로만 재평가합니다."
+      }
+    },
+    {
+      "ticker": "EXPE",
+      "companyName": "Expedia",
+      "market": "US",
+      "sector": "US 항공·온라인여행 relief trade 피로",
+      "stance": "caution",
+      "entryDate": "2026-06-12",
+      "evaluationDate": "2026-06-18",
+      "holdingPeriodDays": 6,
+      "thesis": "온라인 여행 수요는 남아도 유가와 소비 변동성이 커지는 구간에서는 후순위라는 caution이었습니다.",
+      "priceReturnPct": 4.2,
+      "benchmarkReturnPct": 2.3,
+      "benchmarkLabel": "로컬 US 여행 peer 바스켓(UAL·DAL)",
+      "callAlphaPct": -1.9,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "224.67달러에서 234.00달러로 +4.2% 올라 UAL·DAL peer 바스켓 +2.3%보다 강해 caution 방향이 빗나갔습니다.",
+      "followThroughReview": "후반부에 하루 약세가 있었지만 7일 전체로는 relief trade가 더 길게 이어져 회피 콜을 정당화하지 못했습니다.",
+      "lesson": "소비·유가 부담 caution은 가격이 먼저 꺾이지 않으면 너무 이른 숏 관찰이 되며, 이해하기 쉬운 여행 수요 스토리는 기준선 이탈 전까지 과소평가하지 않습니다.",
+      "lessonId": "US-EXPE-travel-relief-caution-timing-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.66,
+      "lessonValidUntil": "2026-07-02",
+      "lessonConditions": [
+        "EXPE가 230달러 아래로 내려가고 UAL·DAL도 동반 약세일 때만 travel caution을 강화합니다.",
+        "234달러 위에서 예약·소비 기대가 유지되면 travel caution은 기준선형 관찰로 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "고점권 피로 판단은 있었지만 7일 전체 수익률이 peer보다 강해 회피 교훈을 반박했습니다.",
+      "attribution": {
+        "category": "timing",
+        "primaryCause": "유가와 소비 부담보다 relief trade와 예약 기대가 더 오래 가격을 지탱했습니다.",
+        "whatToChange": "다음 Market Intelligence는 여행 caution을 서사로 고정하지 말고 230달러 이탈 같은 가격 확인 뒤에만 강도를 올립니다."
+      }
+    },
+    {
+      "ticker": "005930",
+      "companyName": "삼성전자",
+      "market": "KR",
+      "sector": "KR 반도체 대형 방어·후발 기준선 회복",
+      "stance": "promising",
+      "entryDate": "2026-06-13",
+      "evaluationDate": "2026-06-18",
+      "holdingPeriodDays": 5,
+      "thesis": "KR AI 반도체 반등이 후공정에서 대형주까지 확산되는지 확인할 대표 방어 후보였습니다.",
+      "priceReturnPct": 7.4,
+      "benchmarkReturnPct": -2.5,
+      "benchmarkLabel": "로컬 KR 반도체 후발 peer 바스켓(036810·089030·222800)",
+      "callAlphaPct": 9.9,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "322,500원에서 346,500원으로 +7.4% 상승했고, 후발 반도체 peer 바스켓 -2.5%를 크게 앞섰습니다.",
+      "followThroughReview": "6월 13일부터 18일까지 대형 방어 후보로 반복됐고 후발주가 흔들릴 때 상대적으로 안정적인 알파를 냈습니다.",
+      "lesson": "좋은 사업과 좋은 진입 자리를 분리하면, crowded 대표주 추격보다 덜 오른 대형 품질주가 더 나은 반도체 알파가 될 수 있습니다.",
+      "lessonId": "KR-005930-largecap-semi-defensive-breadth-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.78,
+      "lessonValidUntil": "2026-07-02",
+      "lessonConditions": [
+        "330,000원 위에서 350,000원 재돌파를 시도하고 KODEX 반도체가 170,000원대를 지킬 때 적용합니다.",
+        "SK하이닉스 쏠림이 재강화되거나 삼성전자가 330,000원을 이탈하면 대형 방어 가점을 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "새 평가 기간에 후발주보다 삼성전자 대형 방어 노출이 더 우수한 알파를 만들었습니다.",
+      "attribution": {
+        "category": "stock-selection",
+        "primaryCause": "섹터 국면은 맞았고 후발 중소형보다 덜 crowded한 대형 방어 종목 선택이 성과를 갈랐습니다.",
+        "whatToChange": "다음 Market Intelligence는 반도체 섹터 안에서 대표주, 대형 방어주, 후발주를 따로 비교한 뒤 후보를 정합니다."
+      }
+    },
+    {
+      "ticker": "036810",
+      "companyName": "에프에스티",
+      "market": "KR",
+      "sector": "반도체 공정 소재/장비",
+      "stance": "small-cap",
+      "entryDate": "2026-06-12",
+      "evaluationDate": "2026-06-18",
+      "holdingPeriodDays": 6,
+      "thesis": "대형 HBM 대표주보다 가격 여유가 있는 공정 소재·장비 후발주로 자금 확산을 확인하는 후보였습니다.",
+      "priceReturnPct": 2.5,
+      "benchmarkReturnPct": -0.5,
+      "benchmarkLabel": "로컬 KR 반도체 small-cap peer 바스켓(089030·222800)",
+      "callAlphaPct": 3,
+      "verdict": "mixed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "31,600원에서 32,400원으로 +2.5% 올라 peer 바스켓 -0.5%보다 나았지만, 중간에 32,000원 기준선을 잃어 추세 확신은 제한됐습니다.",
+      "followThroughReview": "7일 내내 small-cap 후보로 유지됐지만 6월 17일 약세 뒤 18일 회복한 구조라 강한 worked보다 조건부 mixed가 맞습니다.",
+      "lesson": "후발 장비주는 가격 여유만으로 충분하지 않고, 기준선 회복과 거래대금 개선이 함께 확인될 때만 small-cap 가점을 줍니다.",
+      "lessonId": "KR-036810-backend-lagging-alpha-2026-06",
+      "lessonStatus": "softened",
+      "lessonConfidence": 0.64,
+      "lessonValidUntil": "2026-07-02",
+      "lessonConditions": [
+        "32,000원 위에서 KODEX 반도체보다 낙폭이 작을 때만 후발주 가점을 유지합니다.",
+        "31,000원 이탈 또는 2거래일 연속 peer 대비 약세가 나오면 small-cap 관찰을 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전에는 음의 알파로 softened였지만 이번에는 peer 대비 초과성과가 생겨 조건부 교훈으로 완화했습니다.",
+      "attribution": {
+        "category": "timing",
+        "primaryCause": "섹터 확산은 맞았지만 기준선 회복이 평가 마지막 날에야 확인돼 진입 타이밍의 확신이 낮았습니다.",
+        "whatToChange": "다음 Market Intelligence는 에프에스티를 가격 여유가 아니라 32,000원 방어와 거래대금 확인 뒤에만 상향합니다."
+      }
+    },
+    {
+      "ticker": "222800",
+      "companyName": "심텍",
+      "market": "KR",
+      "sector": "반도체 PCB",
+      "stance": "small-cap",
+      "entryDate": "2026-06-12",
+      "evaluationDate": "2026-06-18",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 서버·패키징 수요 확산이 PCB 후발주까지 이어지는지 확인하는 반복 후보였습니다.",
+      "priceReturnPct": -2.6,
+      "benchmarkReturnPct": 2.1,
+      "benchmarkLabel": "로컬 KR 반도체 small-cap peer 바스켓(036810·089030)",
+      "callAlphaPct": -4.7,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "133,300원에서 129,900원으로 -2.6% 하락해 에프에스티·테크윙 peer 바스켓 +2.1%를 밑돌았습니다.",
+      "followThroughReview": "7일 반복 관찰에도 130,000원 기준선 안착이 확인되지 않아 PCB 후발 확산 follow-through가 실패했습니다.",
+      "lesson": "이해하기 쉬운 PCB 확산 스토리라도 가격 기준선이 확인되지 않으면 후발 small-cap 성공 교훈을 자동 연장하지 않습니다.",
+      "lessonId": "KR-222800-pcb-breadth-threshold-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.68,
+      "lessonValidUntil": "2026-07-02",
+      "lessonConditions": [
+        "130,000원 위에 안착하고 KODEX 반도체보다 강할 때만 PCB 후발 가점을 재개합니다.",
+        "126,000원 이탈 또는 거래대금 동반 약세가 나오면 후발 PCB 관찰을 중단합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 mixed 교훈과 달리 이번 7일 결과는 peer 대비 음의 알파로 기준선 교훈을 반박했습니다.",
+      "attribution": {
+        "category": "weak-catalyst",
+        "primaryCause": "AI 패키징 확산 스토리는 단순했지만 130,000원 기준선을 가격으로 확인하지 못했습니다.",
+        "whatToChange": "다음 Market Intelligence는 심텍을 스토리형 후보가 아니라 130,000원 안착 확인형 후보로만 둡니다."
+      }
+    },
+    {
+      "ticker": "000660",
+      "companyName": "SK하이닉스",
+      "market": "KR",
+      "sector": "KR HBM 대표주·반도체 ETF 추격 과밀",
+      "stance": "caution",
+      "entryDate": "2026-06-17",
+      "evaluationDate": "2026-06-18",
+      "holdingPeriodDays": 1,
+      "thesis": "AI 메모리 리더십은 유지되지만 52주 고점권 crowded trade라 신규 추격 손익비가 낮다는 caution이었습니다.",
+      "priceReturnPct": 5.8,
+      "benchmarkReturnPct": 2.4,
+      "benchmarkLabel": "로컬 KODEX 반도체(091160)",
+      "callAlphaPct": -3.4,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "2,382,000원에서 2,521,000원으로 +5.8% 올라 KODEX 반도체 +2.4%를 앞섰고, 이틀 관측이지만 caution 타이밍은 실패했습니다.",
+      "followThroughReview": "주의 콜은 2일짜리 짧은 표본이라 tail risk 경고 자체보다 진입 타이밍 실패로 해석해야 합니다.",
+      "lesson": "fragility 경고가 있어도 리더십과 모멘텀이 살아 있는 대표주는 가격 붕괴 확인 전까지 crowded caution을 너무 빨리 강하게 두지 않습니다.",
+      "lessonId": "KR-000660-hbm-crowded-caution-timing-2026-06",
+      "lessonStatus": "softened",
+      "lessonConfidence": 0.62,
+      "lessonValidUntil": "2026-07-02",
+      "lessonConditions": [
+        "SK하이닉스가 52주 고점 부근에서 KODEX 반도체보다 약해질 때만 crowded caution을 강화합니다.",
+        "2,500,000원 위에서 삼성전자·KODEX와 함께 오르면 caution은 추격 제한 문구로 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "새 caution은 꼬리위험 논리는 남지만 반복 가격이 아직 붕괴를 확인하지 않아 강도를 낮춰야 합니다.",
+      "attribution": {
+        "category": "crowded-trade",
+        "primaryCause": "대표 HBM 리더의 crowding은 높았지만 모멘텀이 더 강해 과밀 경고가 가격 약세로 이어지지 않았습니다.",
+        "whatToChange": "다음 Market Intelligence는 crowded leader를 바로 caution으로 내리기보다 ETF 대비 상대약세가 확인될 때 강도를 높입니다."
+      }
+    }
+  ],
+  "sectorReviews": [
+    {
+      "sectorName": "US AI 데이터센터·전력 인프라",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "worked",
+      "callAlphaPct": 3,
+      "detail": "AI capex 자금이 소프트웨어보다 전력 인프라로 먼저 향한다는 국면 판단이 맞았습니다. APLD와 VST가 각각 peer를 앞섰지만, 고베타 옵션주는 기준선과 상대강도를 동시에 요구해야 합니다."
+    },
+    {
+      "sectorName": "US 소프트웨어 AI monetization",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "worked",
+      "callAlphaPct": 3.2,
+      "detail": "CRM이 ADBE·FDS peer보다 더 약해 AI monetization이 숫자로 확인되지 않은 소프트웨어를 낮춰 본 판단이 맞았습니다. 단, 저점권 숏커버 위험 때문에 회복 가격대를 함께 둬야 합니다."
+    },
+    {
+      "sectorName": "KR 반도체 대형·후발 확산",
+      "market": "KR",
+      "priorView": "promising",
+      "verdict": "mixed",
+      "callAlphaPct": 2.7,
+      "detail": "국면 판단은 맞았지만 종목 선택이 틀림: 삼성전자 대형 방어는 후발 peer를 크게 앞섰지만 심텍 PCB follow-through는 실패했고 에프에스티도 조건부에 그쳤습니다."
+    },
+    {
+      "sectorName": "US 항공·온라인여행",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "failed",
+      "callAlphaPct": -1.9,
+      "detail": "고점권 피로와 유가 민감도 caution은 방향이 너무 빨랐습니다. EXPE가 UAL·DAL peer보다 강해 relief trade가 꺾였다는 가격 확인 전까지 회피를 강하게 둘 수 없었습니다."
+    },
+    {
+      "sectorName": "KR HBM 대표주·반도체 ETF 과밀",
+      "market": "KR",
+      "priorView": "caution",
+      "verdict": "failed",
+      "callAlphaPct": -3.4,
+      "detail": "SK하이닉스 과밀 경고는 리스크 관리 논리로는 유효했지만 2일 가격 결과는 실패였습니다. 리더십이 살아 있을 때는 붕괴 확인 없는 caution보다 추격 제한 문구가 더 정확합니다."
+    }
+  ],
+  "processTakeaways": [
+    "반복 관측 수가 충분해도 stance가 바뀐 종목은 국면 판단과 종목 실행을 분리해 lessonStatus를 다시 판정합니다.",
+    "후발 중소형은 가격 여유보다 기준선 유지와 peer 상대강도가 먼저이며, 스토리가 쉬운 종목일수록 기준선 확인을 생략하면 실패 확률이 커집니다.",
+    "주의 콜은 fragility 서사만으로 worked가 되지 않으므로, crowded leader와 relief trade는 실제 상대약세가 확인될 때 caution 강도를 올립니다."
+  ],
+  "nextWeekFocus": [
+    "KR 반도체는 삼성전자 330,000원 방어·350,000원 재돌파와 KODEX 반도체 170,000원대 유지 여부를 먼저 보고, 심텍 130,000원·에프에스티 32,000원은 별도 기준선으로 관리합니다.",
+    "US AI 전력은 APLD 45달러, VST 150달러, ETN·CEG 상대강도를 같이 확인해 품질주와 고베타 옵션주의 sizing을 분리합니다.",
+    "CRM 165달러, ADBE 205달러, FDS 235달러 회복 전에는 소프트웨어 caution을 유지하되, EXPE와 SK하이닉스는 가격 붕괴 확인 전까지 강한 회피보다 추격 제한으로 표현합니다."
+  ]
+}
