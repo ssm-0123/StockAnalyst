@@ -73,6 +73,10 @@ const THEME_SOURCE_FRESHNESS = new Set(["today", "1-3d", "stale", "unverified"])
 const THEME_TRADABILITY = new Set(["actionable", "watch_after_spike", "wait_for_confirmation", "avoid_chase"]);
 const ACTION_BIASES = new Set(["buy", "hold", "reduce", "exit"]);
 const TIME_HORIZONS = new Set(["1-3d", "1-3w", "1-3m"]);
+const SIGNAL_TIMINGS = new Set(["early", "constructive", "extended", "exhausted", "unclear"]);
+const ENTRY_QUALITIES = new Set(["actionable", "wait-for-pullback", "avoid-chase", "insufficient-data"]);
+const THEME_LIFECYCLE_STAGES = new Set(["emerging", "developing", "confirmed", "crowded", "exhausted", "unclear"]);
+const EXHAUSTED_DAILY_MOVE_PCT = 12;
 
 function isRecord(value: unknown): value is JsonRecord {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -419,6 +423,16 @@ function validateResearchFrame(candidate: JsonRecord, path: string, issues: Mark
     issues.push(issue("missing-time-horizon", "warn", `${path}.timeHorizon`, "Every public stock idea needs a concrete time horizon."));
   }
 
+  const signalTiming = asString(candidate.signalTiming);
+  if (signalTiming && !SIGNAL_TIMINGS.has(signalTiming)) {
+    issues.push(issue("invalid-signal-timing", "warn", `${path}.signalTiming`, "signalTiming must be early, constructive, extended, exhausted, or unclear."));
+  }
+
+  const entryQuality = asString(candidate.entryQuality);
+  if (entryQuality && !ENTRY_QUALITIES.has(entryQuality)) {
+    issues.push(issue("invalid-entry-quality", "warn", `${path}.entryQuality`, "entryQuality must describe whether this is actionable, pullback-only, chase-risk, or insufficient-data."));
+  }
+
   if (!hasText(candidate.invalidation)) {
     issues.push(issue("missing-invalidation", "warn", `${path}.invalidation`, "Every public stock idea needs an invalidation condition."));
   }
@@ -463,6 +477,17 @@ function validateResearchFrame(candidate: JsonRecord, path: string, issues: Mark
           "warn",
           `${path}.watchCondition`,
           "Interest-expansion candidates need a watchDate or watchCondition for follow-up validation.",
+        ),
+      );
+    }
+
+    if (entryQuality === "avoid-chase" || signalTiming === "exhausted") {
+      issues.push(
+        issue(
+          "buy-candidate-timing-conflict",
+          "warn",
+          path,
+          "Buy candidate is tagged as exhausted/avoid-chase; downgrade actionBias or make the pullback condition explicit.",
         ),
       );
     }
@@ -515,6 +540,21 @@ function validatePriceSnapshot(
   if (!hasText(snapshot.sourceNote)) {
     issues.push(
       issue("missing-price-source", "fail", `${path}.priceSnapshot.sourceNote`, "Buy candidate price source is missing."),
+    );
+  }
+
+  if (
+    snapshot.priceSession === "previous_close" &&
+    snapshot.previousCloseChangePct === 0 &&
+    snapshot.previousCloseChangeAmount === 0
+  ) {
+    issues.push(
+      issue(
+        "zero-change-previous-close",
+        "warn",
+        `${path}.priceSnapshot.previousCloseChangePct`,
+        "0.0% previous-close snapshot is weak momentum evidence; current thesis needs non-price confirmation.",
+      ),
     );
   }
 
@@ -609,6 +649,22 @@ function validateBuyCandidate(
   issues: MarketIntelligenceValidationIssue[],
 ) {
   validatePriceSnapshot(candidate.priceSnapshot, path, analysisDate, referenceTimestamp, issues);
+
+  const snapshot = isRecord(candidate.priceSnapshot) ? candidate.priceSnapshot : {};
+  const changePct = snapshot.previousCloseChangePct;
+  if (
+    hasFiniteNumber(changePct) &&
+    changePct >= EXHAUSTED_DAILY_MOVE_PCT
+  ) {
+    issues.push(
+      issue(
+        "buy-candidate-exhausted-daily-move",
+        "warn",
+        `${path}.priceSnapshot.previousCloseChangePct`,
+        "Buy candidate moved more than 12% versus previous close; treat this as exhausted unless the plan is explicitly breakout-confirmation only.",
+      ),
+    );
+  }
 
   const thesisText = [candidate.thesis, candidate.rationale, candidate.whyNow].map(asString).filter(Boolean).join(" ");
   if (!hasText(thesisText)) {
@@ -773,6 +829,10 @@ function validateThemeRadar(
 
     if (hasText(themeValue.tradability) && !THEME_TRADABILITY.has(asString(themeValue.tradability))) {
       issues.push(issue("invalid-theme-tradability", "warn", `${themePath}.tradability`, "Theme radar tradability is not in the allowed set."));
+    }
+
+    if (hasText(themeValue.lifecycleStage) && !THEME_LIFECYCLE_STAGES.has(asString(themeValue.lifecycleStage))) {
+      issues.push(issue("invalid-theme-lifecycle-stage", "warn", `${themePath}.lifecycleStage`, "Theme lifecycleStage is not in the allowed set."));
     }
 
     if (themeValue.tradability === "actionable" && hasFiniteNumber(themeValue.signalStrength) && themeValue.signalStrength < 70) {

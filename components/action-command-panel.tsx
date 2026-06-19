@@ -25,6 +25,10 @@ export type DashboardActionCandidate = {
   priceSnapshot?: StockPriceSnapshot;
   snapshotHealth?: StockIdea["snapshotHealth"] | SmallCapIdea["snapshotHealth"];
   confidenceLevel?: ConfidenceLevel;
+  signalTiming?: StockIdea["signalTiming"] | SmallCapIdea["signalTiming"];
+  entryQuality?: StockIdea["entryQuality"] | SmallCapIdea["entryQuality"];
+  moveAlreadyHappenedPct?: number;
+  high52wDistancePct?: number;
   thesis?: string;
   keyDrivers?: string[];
   catalysts?: string[];

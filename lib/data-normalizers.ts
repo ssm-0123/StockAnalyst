@@ -3,6 +3,7 @@ import {
   ChangeEvent,
   CheckpointItem,
   DailyAnalysis,
+  EntryQuality,
   EvaluatedInsight,
   AnalysisSuggestion,
   LegacySectorDecision,
@@ -11,12 +12,14 @@ import {
   MarketCode,
   ReasonBlock,
   SectorEntry,
+  SignalTiming,
   SectorReview,
   SmallCapIdea,
   StockIdea,
   StockPriceSnapshot,
   StockStatus,
   ThemeEventType,
+  ThemeLifecycleStage,
   ThemeRadarItem,
   ThemeTradability,
   TrendSummary,
@@ -87,6 +90,21 @@ const THEME_TRADABILITY = new Set<ThemeTradability>([
   "watch_after_spike",
   "wait_for_confirmation",
   "avoid_chase",
+]);
+const SIGNAL_TIMINGS = new Set<SignalTiming>(["early", "constructive", "extended", "exhausted", "unclear"]);
+const ENTRY_QUALITIES = new Set<EntryQuality>([
+  "actionable",
+  "wait-for-pullback",
+  "avoid-chase",
+  "insufficient-data",
+]);
+const THEME_LIFECYCLE_STAGES = new Set<ThemeLifecycleStage>([
+  "emerging",
+  "developing",
+  "confirmed",
+  "crowded",
+  "exhausted",
+  "unclear",
 ]);
 const PRICE_SESSIONS = new Set<NonNullable<StockPriceSnapshot["priceSession"]>>([
   "previous_close",
@@ -203,6 +221,16 @@ function normalizeStockIdea(value: unknown): StockIdea {
     invalidation: asOptionalString(input.invalidation),
     positioningNote: asOptionalString(input.positioningNote),
     priceSnapshot: normalizePriceSnapshot(input.priceSnapshot),
+    signalTiming:
+      typeof input.signalTiming === "string" && SIGNAL_TIMINGS.has(input.signalTiming as SignalTiming)
+        ? (input.signalTiming as SignalTiming)
+        : undefined,
+    entryQuality:
+      typeof input.entryQuality === "string" && ENTRY_QUALITIES.has(input.entryQuality as EntryQuality)
+        ? (input.entryQuality as EntryQuality)
+        : undefined,
+    moveAlreadyHappenedPct: asOptionalNumber(input.moveAlreadyHappenedPct),
+    high52wDistancePct: asOptionalNumber(input.high52wDistancePct),
   };
 }
 
@@ -324,6 +352,16 @@ function normalizeSmallCapIdea(value: unknown): SmallCapIdea {
     watchCondition: asOptionalString(input.watchCondition),
     confidenceReason: asOptionalString(input.confidenceReason),
     priceSnapshot: normalizePriceSnapshot(input.priceSnapshot),
+    signalTiming:
+      typeof input.signalTiming === "string" && SIGNAL_TIMINGS.has(input.signalTiming as SignalTiming)
+        ? (input.signalTiming as SignalTiming)
+        : undefined,
+    entryQuality:
+      typeof input.entryQuality === "string" && ENTRY_QUALITIES.has(input.entryQuality as EntryQuality)
+        ? (input.entryQuality as EntryQuality)
+        : undefined,
+    moveAlreadyHappenedPct: asOptionalNumber(input.moveAlreadyHappenedPct),
+    high52wDistancePct: asOptionalNumber(input.high52wDistancePct),
   };
 }
 
@@ -359,6 +397,10 @@ function normalizeThemeRadarItem(value: unknown): ThemeRadarItem {
     alreadyPriced: asOptionalString(input.alreadyPriced),
     invalidation: asOptionalString(input.invalidation),
     evidence: asStringArray(input.evidence),
+    lifecycleStage:
+      typeof input.lifecycleStage === "string" && THEME_LIFECYCLE_STAGES.has(input.lifecycleStage as ThemeLifecycleStage)
+        ? (input.lifecycleStage as ThemeLifecycleStage)
+        : undefined,
   };
 }
 

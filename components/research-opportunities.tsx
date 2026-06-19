@@ -25,6 +25,27 @@ function confidenceLabel(value?: DashboardActionCandidate["confidenceLevel"]) {
   return "보통";
 }
 
+function entryQualityLabel(value?: DashboardActionCandidate["entryQuality"]) {
+  if (value === "actionable") return "진입 품질 양호";
+  if (value === "avoid-chase") return "추격 금지";
+  if (value === "wait-for-pullback") return "눌림 대기";
+  return "가격 확인 필요";
+}
+
+function entryQualityVariant(value?: DashboardActionCandidate["entryQuality"]) {
+  if (value === "actionable") return "positive";
+  if (value === "avoid-chase") return "caution";
+  return "neutral";
+}
+
+function signalTimingLabel(value?: DashboardActionCandidate["signalTiming"]) {
+  if (value === "early") return "초기";
+  if (value === "constructive") return "건설적";
+  if (value === "extended") return "이미 확장";
+  if (value === "exhausted") return "피로";
+  return "불명확";
+}
+
 function timeHorizonLabel(value?: DashboardActionCandidate["timeHorizon"]) {
   if (value === "1-3d") return "1-3일";
   if (value === "1-3m") return "1-3개월";
@@ -50,6 +71,7 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
             <Badge variant={getMarketBadgeVariant(candidate.market)}>{getMarketLabel(candidate.market)}</Badge>
             <Badge variant="positive">{actionBiasLabel(candidate.actionBias)}</Badge>
             <Badge variant="neutral">{timeHorizonLabel(candidate.timeHorizon)}</Badge>
+            <Badge variant={entryQualityVariant(candidate.entryQuality)}>{entryQualityLabel(candidate.entryQuality)}</Badge>
           </div>
           <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950">{candidate.companyName}</h3>
           <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{candidate.ticker} · {candidate.sector}</p>
@@ -91,7 +113,7 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
               {confidenceLabel(candidate.confidenceLevel)}
             </p>
             <p className="mt-1 line-clamp-2 text-xs text-slate-500">
-              {candidate.confidenceReason ?? `${candidate.snapshotHealth ?? "snapshot"} data`}
+              {candidate.confidenceReason ?? `${candidate.snapshotHealth ?? "snapshot"} data`} · 타이밍 {signalTimingLabel(candidate.signalTiming)}
             </p>
           </div>
         </div>

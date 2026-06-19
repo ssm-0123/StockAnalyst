@@ -1,0 +1,373 @@
+{
+  "reportDate": "2026-06-19",
+  "lastUpdated": "2026-06-19T07:01:56+09:00",
+  "evaluationWindow": {
+    "startDate": "2026-06-13",
+    "endDate": "2026-06-19",
+    "label": "2026년 6월 3주차"
+  },
+  "overallVerdict": "US AI 리더와 소프트웨어 caution은 맞았지만 KR 반도체 과밀 경고와 중소형 후발주는 타이밍이 틀렸습니다.",
+  "summary": "최근 7개 대표본은 모두 가격 스냅샷이 있어 평가 가능 종목을 verified/snapshot 기준으로만 골랐습니다. late risk-on이 이어지면서 AVGO와 VST 같은 AI 리더는 초과성과를 냈고, CRM 소프트웨어 caution도 맞았습니다. 반면 EXPE 여행 caution, SK하이닉스 과밀 경고, 테크윙 후공정 중소형 follow-through는 가격이 반대로 움직여 교훈을 낮췄습니다.",
+  "benchmarkNote": "외부 시세 없이 로컬 JSON에 반복 저장된 같은 섹터 peer, 대표 ETF, 대표주 스냅샷만 사용해 보수적으로 비교했습니다.",
+  "scorecard": {
+    "evaluatedCount": 8,
+    "workedCount": 3,
+    "mixedCount": 2,
+    "failedCount": 3,
+    "averageCallAlphaPct": -1,
+    "bestCall": "AVGO AI 반도체 네트워킹 선별 재진입",
+    "weakestCall": "SK하이닉스 HBM 과밀 caution"
+  },
+  "smallCapScorecard": {
+    "evaluatedCount": 3,
+    "workedCount": 0,
+    "mixedCount": 2,
+    "failedCount": 1,
+    "averageCallAlphaPct": -1.9
+  },
+  "evaluatedInsights": [
+    {
+      "ticker": "AVGO",
+      "companyName": "Broadcom",
+      "market": "US",
+      "sector": "US AI 반도체 네트워킹 선별 재진입",
+      "stance": "promising",
+      "entryDate": "2026-06-13",
+      "evaluationDate": "2026-06-19",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 반도체 안에서 가속기보다 네트워킹·커스텀 ASIC 확산을 확인하는 후보였습니다.",
+      "priceReturnPct": 7.9,
+      "benchmarkReturnPct": 3.8,
+      "benchmarkLabel": "로컬 NVDA·AMD AI 반도체 peer 평균",
+      "callAlphaPct": 4.1,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "381.85달러에서 412.00달러로 +7.9% 상승해 NVDA·AMD peer 평균 +3.8%를 앞섰습니다.",
+      "lesson": "AI 리더십은 가장 큰 서사보다 상대적으로 덜 붐비는 밸류체인 리더가 가격 모멘텀과 사업 질을 동시에 보여줄 때 더 좋은 손익비를 냅니다.",
+      "lessonId": "US-AVGO-ai-networking-leader-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.7,
+      "lessonValidUntil": "2026-07-03",
+      "lessonConditions": [
+        "395달러 위에서 NVDA·AMD 대비 상대강도를 유지할 때만 선별 재진입 교훈을 적용합니다.",
+        "395달러 이탈 또는 AI 반도체 breadth 동반 약세가 나오면 리더 가점을 철회합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "이번 주 신규 평가에서 AVGO가 반도체 peer를 뚜렷하게 앞서 선별 리더 교훈을 새로 등록했습니다.",
+      "attribution": {
+        "category": "stock-selection",
+        "primaryCause": "AI 반도체 국면은 맞았고, GPU 단일 리더보다 네트워킹·ASIC 리더를 고른 선택이 초과성과를 만들었습니다.",
+        "whatToChange": "다음 Market Intelligence는 반도체를 GPU, 네트워킹, ASIC, 메모리로 나눠 상대강도 1위 후보를 먼저 표시합니다."
+      }
+    },
+    {
+      "ticker": "VST",
+      "companyName": "Vistra",
+      "market": "US",
+      "sector": "US AI 전력 인프라 품질주·전력 파트너",
+      "stance": "promising",
+      "entryDate": "2026-06-13",
+      "evaluationDate": "2026-06-19",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 데이터센터 전력 병목에서 직접 가격 반응을 확인할 고베타 전력 파트너 후보였습니다.",
+      "priceReturnPct": 10.4,
+      "benchmarkReturnPct": 7.3,
+      "benchmarkLabel": "로컬 CEG·ETN AI 전력 peer 평균",
+      "callAlphaPct": 3.1,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "148.38달러에서 163.87달러로 +10.4% 상승해 CEG·ETN peer 평균 +7.3%를 앞섰습니다.",
+      "lesson": "강한 테마에서는 정적인 밸류에이션보다 실제 가격 리더십과 하방 기준선이 같이 살아 있는 고베타 리더를 우선해야 합니다.",
+      "lessonId": "US-VST-ai-power-beta-followthrough-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.71,
+      "lessonValidUntil": "2026-07-03",
+      "lessonConditions": [
+        "155달러 위에서 CEG·ETN 대비 상대강도가 유지될 때만 전력 베타 가점을 유지합니다.",
+        "155달러 이탈 또는 CEG·ETN 동반 약세가 나오면 buy를 hold로 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 교훈이 7일 평가에서도 유지됐고, VST가 전력 peer를 계속 앞서 조건을 유지합니다.",
+      "attribution": {
+        "category": "market-regime",
+        "primaryCause": "AI capex가 소프트웨어보다 전력 인프라로 먼저 이동하는 late risk-on 국면이 가격으로 확인됐습니다.",
+        "whatToChange": "다음 Market Intelligence는 AI 전력 섹터에서 품질주와 고베타 발전주를 분리해 리더십 지속 여부를 비교합니다."
+      }
+    },
+    {
+      "ticker": "CRM",
+      "companyName": "Salesforce",
+      "market": "US",
+      "sector": "US 소프트웨어 AI monetization 디레이팅",
+      "stance": "caution",
+      "entryDate": "2026-06-13",
+      "evaluationDate": "2026-06-19",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 인수와 에이전트 스토리보다 통합 비용과 가격 전환 불확실성이 더 빠르게 반영될 caution 후보였습니다.",
+      "priceReturnPct": -8.2,
+      "benchmarkReturnPct": -6,
+      "benchmarkLabel": "로컬 ADBE·FDS 소프트웨어 caution peer 평균",
+      "callAlphaPct": 2.2,
+      "verdict": "worked",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "166.02달러에서 152.40달러로 -8.2% 하락해 ADBE·FDS peer 평균 -6.0%보다 더 약했습니다.",
+      "lesson": "품질 소프트웨어라도 AI 수익화가 숫자로 확인되기 전에는 좋은 브랜드보다 마진·통합비용 리스크가 먼저 가격에 반영됩니다.",
+      "lessonId": "US-CRM-ai-software-derating-2026-06",
+      "lessonStatus": "active",
+      "lessonConfidence": 0.7,
+      "lessonValidUntil": "2026-07-03",
+      "lessonConditions": [
+        "165달러 아래에서 ADBE·FDS도 약하면 소프트웨어 디레이팅 caution을 유지합니다.",
+        "165달러 회복과 ADBE 205달러 회복이 동시에 나오면 reduce를 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 교훈이 7일 평가에서도 반복 확인돼 소프트웨어 수익화 검증 조건을 유지합니다.",
+      "attribution": {
+        "category": "sector-selection",
+        "primaryCause": "소프트웨어 AI monetization 불확실성을 낮춰 본 섹터 판단이 개별 CRM 약세로도 확인됐습니다.",
+        "whatToChange": "다음 Market Intelligence는 소프트웨어 반등을 가격 저점만으로 상향하지 말고 AI 매출 전환과 peer 회복을 같이 요구합니다."
+      }
+    },
+    {
+      "ticker": "EXPE",
+      "companyName": "Expedia",
+      "market": "US",
+      "sector": "US 항공·온라인여행 유가 완화 고점권 추격",
+      "stance": "caution",
+      "entryDate": "2026-06-13",
+      "evaluationDate": "2026-06-19",
+      "holdingPeriodDays": 6,
+      "thesis": "온라인 여행 수요는 남아도 항공·유가 변동성이 커지는 구간에서는 후순위라는 caution 후보였습니다.",
+      "priceReturnPct": 7,
+      "benchmarkReturnPct": 2,
+      "benchmarkLabel": "로컬 DAL·UAL 항공 peer 평균",
+      "callAlphaPct": -5,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "225.04달러에서 240.90달러로 +7.0% 상승해 DAL·UAL peer 평균 +2.0%보다 강했고, caution 콜은 -5.0%p 뒤졌습니다.",
+      "lesson": "순환 소비주는 과열처럼 보여도 유가 relief와 리스크온이 남아 있으면 가격 붕괴 확인 전까지 회피 강도를 높이면 안 됩니다.",
+      "lessonId": "US-EXPE-travel-relief-caution-timing-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.72,
+      "lessonValidUntil": "2026-06-30",
+      "lessonConditions": [
+        "EXPE가 250달러에 근접하고 DAL·UAL도 동반 상승하면 caution 대신 추격 제한으로만 표현합니다.",
+        "EXPE가 225달러 아래로 재이탈하거나 항공주가 동반 약세로 바뀔 때만 caution을 다시 높입니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 contradicted 교훈이 더 강해졌고, EXPE가 항공 peer를 앞서 caution 타이밍 실패가 확대됐습니다.",
+      "attribution": {
+        "category": "timing",
+        "primaryCause": "유가 완화와 risk-on relief가 남아 있는데 고점권 피로를 너무 빨리 caution으로 전환했습니다.",
+        "whatToChange": "다음 Market Intelligence는 여행·항공 caution을 내기 전에 EXPE와 항공 peer의 동반 하락 확인을 요구합니다."
+      }
+    },
+    {
+      "ticker": "APLD",
+      "companyName": "Applied Digital",
+      "market": "US",
+      "sector": "AI 데이터센터 인프라",
+      "stance": "small-cap",
+      "entryDate": "2026-06-13",
+      "evaluationDate": "2026-06-19",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 데이터센터 병목이 소형 인프라 옵션주에도 확산되는지 확인할 고위험 후보였습니다.",
+      "priceReturnPct": 8.7,
+      "benchmarkReturnPct": 8.3,
+      "benchmarkLabel": "로컬 VST·CEG·ETN AI 전력 peer 평균",
+      "callAlphaPct": 0.4,
+      "verdict": "mixed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "42.75달러에서 46.46달러로 +8.7% 상승했지만 VST·CEG·ETN peer 평균 +8.3%와의 차이는 작았습니다.",
+      "followThroughReview": "7일 내내 small-cap 후보로 유지됐고 45달러 기준선은 방어했지만, 대형 전력 peer 대비 확실한 초과성과는 아직 제한적입니다.",
+      "lesson": "혁신 옵션주는 가격 기준선을 지켜도 자금조달 fragility가 남아 있으면 대형 리더 대비 초과성과를 확인한 뒤 비중을 키워야 합니다.",
+      "lessonId": "US-APLD-datacenter-option-followthrough-2026-06",
+      "lessonStatus": "softened",
+      "lessonConfidence": 0.62,
+      "lessonValidUntil": "2026-07-03",
+      "lessonConditions": [
+        "45달러 위에서 VST·CEG 대비 2거래일 이상 상대강도를 유지할 때만 small-cap 가점을 적용합니다.",
+        "45달러 이탈 또는 자금조달 부담 뉴스가 나오면 옵션주 교훈을 철회합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 active 교훈은 방향은 맞았지만 이번 주 초과성과가 0.4%p로 줄어 조건부로 완화했습니다.",
+      "attribution": {
+        "category": "stock-selection",
+        "primaryCause": "AI 데이터센터 테마는 맞았지만 고베타 옵션주가 대형 전력 리더를 뚜렷하게 앞서지는 못했습니다.",
+        "whatToChange": "다음 Market Intelligence는 APLD를 단독 buy가 아니라 45달러 방어와 VST·CEG 대비 상대강도 조건부 후보로 둡니다."
+      }
+    },
+    {
+      "ticker": "OKLO",
+      "companyName": "Oklo",
+      "market": "US",
+      "sector": "SMR·원전 옵션",
+      "stance": "small-cap",
+      "entryDate": "2026-06-13",
+      "evaluationDate": "2026-06-19",
+      "holdingPeriodDays": 6,
+      "thesis": "AI 전력 병목이 SMR 옵션주 관심을 살릴 수 있지만 가격과 규제 검증이 약한 관찰 후보였습니다.",
+      "priceReturnPct": 5.9,
+      "benchmarkReturnPct": 8.3,
+      "benchmarkLabel": "로컬 VST·CEG·ETN AI 전력 peer 평균",
+      "callAlphaPct": -2.4,
+      "verdict": "mixed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "57.70달러에서 61.10달러로 +5.9% 상승했지만 AI 전력 peer 평균 +8.3%에는 못 미쳤습니다.",
+      "followThroughReview": "7일 반복 관찰 중 58달러 방어는 성공했지만, 이벤트 신선도만으로 대형 전력주를 앞선다는 증거는 부족했습니다.",
+      "lesson": "원전 옵션주는 이벤트가 신선해도 규제·연료·계약 불확실성이 남으면 가격 추종보다 방어선과 거래 지속성을 먼저 검증해야 합니다.",
+      "lessonId": "US-OKLO-smr-event-option-2026-06",
+      "lessonStatus": "softened",
+      "lessonConfidence": 0.58,
+      "lessonValidUntil": "2026-06-26",
+      "lessonConditions": [
+        "58달러 위에서 원전 소형주 거래대금이 유지될 때만 이벤트 옵션 교훈을 적용합니다.",
+        "58달러 이탈 또는 계약이 장기 옵션으로만 해석되면 buy를 해제합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "신규 교훈이지만 peer 대비 알파가 음수라 이벤트 옵션주 적용 강도를 낮게 시작합니다.",
+      "attribution": {
+        "category": "event-risk",
+        "primaryCause": "Centrus 연료 계약 이벤트는 가격을 지지했지만 대형 전력주보다 큰 비대칭성은 만들지 못했습니다.",
+        "whatToChange": "다음 Market Intelligence는 OKLO 같은 이벤트 옵션주를 58달러 방어와 거래대금 지속 조건이 충족될 때만 상향합니다."
+      }
+    },
+    {
+      "ticker": "089030",
+      "companyName": "테크윙",
+      "market": "KR",
+      "sector": "반도체 후공정 검사장비",
+      "stance": "small-cap",
+      "entryDate": "2026-06-13",
+      "evaluationDate": "2026-06-19",
+      "holdingPeriodDays": 6,
+      "thesis": "HBM 테스트·검사장비 수요에 직접 연결된 후공정 상대강도 중소형 후보였습니다.",
+      "priceReturnPct": -7.4,
+      "benchmarkReturnPct": -3.8,
+      "benchmarkLabel": "로컬 036810·222800 KR 후공정 small-cap peer 평균",
+      "callAlphaPct": -3.6,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "65,300원에서 60,500원으로 -7.4% 하락해 036810·222800 후공정 peer 평균 -3.8%보다 더 약했습니다.",
+      "followThroughReview": "반복 관찰 후보였지만 64,000원 회복 실패와 60,000원 근접으로 follow-through 교훈이 이번 주에는 반박됐습니다.",
+      "lesson": "후공정 중소형은 업황 스토리보다 기준선 회복과 peer 상대강도가 먼저이며, 기준선 실패 후에는 교훈을 자동 연장하지 않습니다.",
+      "lessonId": "KR-089030-backend-test-threshold-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.7,
+      "lessonValidUntil": "2026-07-03",
+      "lessonConditions": [
+        "64,000원 회복과 036810·222800 대비 상대강도 개선이 같이 나올 때만 재평가합니다.",
+        "60,000원 이탈 또는 2거래일 연속 peer 대비 약세면 small-cap 관찰을 낮춥니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "반복 관찰에도 가격 기준선이 무너져 후공정 중소형 follow-through 교훈을 반박했습니다.",
+      "attribution": {
+        "category": "thesis-invalidated",
+        "primaryCause": "HBM 후공정 수요 논리는 남았지만 64,000원 기준선 실패가 종목별 상대강도 훼손을 먼저 보여줬습니다.",
+        "whatToChange": "다음 Market Intelligence는 KR 후공정 중소형을 테마 반복 등장보다 가격 기준선 회복 순서로 재정렬합니다."
+      }
+    },
+    {
+      "ticker": "000660",
+      "companyName": "SK하이닉스",
+      "market": "KR",
+      "sector": "KR HBM·반도체 ETF crowded unwind 위험",
+      "stance": "caution",
+      "entryDate": "2026-06-17",
+      "evaluationDate": "2026-06-19",
+      "holdingPeriodDays": 2,
+      "thesis": "AI 메모리 리더십은 유지되지만 가격 위치가 crowded trade에 가까워 caution이 필요하다는 후보였습니다.",
+      "priceReturnPct": 12.7,
+      "benchmarkReturnPct": 6.2,
+      "benchmarkLabel": "로컬 KODEX 반도체 091160 같은 기간 스냅샷",
+      "callAlphaPct": -6.5,
+      "verdict": "failed",
+      "priceEvidence": "snapshot",
+      "dataQuality": "verified",
+      "outcomeSummary": "2,382,000원에서 2,685,000원으로 +12.7% 상승해 KODEX 반도체 +6.2%보다 강했고, 과밀 caution은 -6.5%p 실패했습니다.",
+      "lesson": "주도주 과밀 경고는 붕괴 신호가 없으면 매도 콜이 아니라 추격 제한과 리스크 온도계로 표현해야 합니다.",
+      "lessonId": "KR-000660-hbm-crowded-caution-timing-2026-06",
+      "lessonStatus": "contradicted",
+      "lessonConfidence": 0.73,
+      "lessonValidUntil": "2026-06-26",
+      "lessonConditions": [
+        "2,738,000원 돌파 후 2개 세션 유지와 KODEX 반도체 180,000원 위 안착이 나오면 caution을 낮춥니다.",
+        "KODEX 반도체가 180,000원을 잃고 후발주도 동반 약세일 때만 crowded unwind 경고를 강화합니다."
+      ],
+      "lessonSupersedes": [],
+      "lessonUpdateReason": "직전 softened 교훈보다 가격 반박이 커져 과밀 caution을 contradicted로 낮췄습니다.",
+      "attribution": {
+        "category": "crowded-trade",
+        "primaryCause": "late risk-on에서 crowded 리더가 더 강해졌고, 붕괴 확인 없는 caution이 주도주 모멘텀을 과소평가했습니다.",
+        "whatToChange": "다음 Market Intelligence는 SK하이닉스 같은 주도주를 붕괴 전에는 exit가 아니라 추격 제한과 기준선 경고로 표현합니다."
+      }
+    }
+  ],
+  "sectorReviews": [
+    {
+      "sectorName": "US AI 반도체 네트워킹",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "worked",
+      "callAlphaPct": 4.1,
+      "detail": "AI 반도체 재진입 국면은 맞았고 AVGO가 NVDA·AMD peer 평균을 앞섰습니다. 주도 테마 안에서도 GPU 단일 리더보다 네트워킹·ASIC 쪽의 덜 붐빈 리더를 고른 실행이 성과를 만들었습니다."
+    },
+    {
+      "sectorName": "US AI 전력·원전 인프라",
+      "market": "US",
+      "priorView": "promising",
+      "verdict": "mixed",
+      "callAlphaPct": 0.4,
+      "detail": "국면 판단은 맞았지만 종목 선택이 틀림: AI 전력 병목은 VST와 CEG를 밀어 올렸지만 APLD·OKLO 같은 옵션주는 대형 전력 peer를 뚜렷하게 앞서지 못했습니다."
+    },
+    {
+      "sectorName": "US 소프트웨어 AI monetization",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "worked",
+      "callAlphaPct": 2.2,
+      "detail": "AI 수익화가 숫자로 확인되지 않은 소프트웨어를 낮춰 본 판단은 CRM 약세로 확인됐습니다. 저점권 숏커버 위험은 남지만, 165달러와 peer 회복 전까지 caution 근거는 유지됩니다."
+    },
+    {
+      "sectorName": "US 항공·온라인여행",
+      "market": "US",
+      "priorView": "caution",
+      "verdict": "failed",
+      "callAlphaPct": -5,
+      "detail": "국면 판단 자체가 틀림: 유가 완화와 risk-on relief가 아직 남아 있었는데 고점권 피로를 너무 빨리 caution으로 전환했습니다. EXPE가 항공 peer보다 강해 가격 붕괴 확인 전 회피 콜은 과했습니다."
+    },
+    {
+      "sectorName": "KR HBM 대표주·반도체 ETF 과밀",
+      "market": "KR",
+      "priorView": "caution",
+      "verdict": "failed",
+      "callAlphaPct": -6.5,
+      "detail": "과밀 경고는 리스크 관리 문구로는 맞았지만 가격 판정은 실패했습니다. SK하이닉스와 KODEX 반도체가 함께 강해 붕괴 확인 없는 caution보다 추격 제한 표현이 더 정확했습니다."
+    },
+    {
+      "sectorName": "KR 후공정·중소형 반도체",
+      "market": "KR",
+      "priorView": "promising",
+      "verdict": "failed",
+      "callAlphaPct": -3.6,
+      "detail": "후공정 확산 스토리는 남았지만 테크윙이 64,000원 기준선을 회복하지 못했고 036810·222800 peer보다도 약했습니다. 반복 등장 자체보다 기준선 회복 순서가 먼저입니다."
+    }
+  ],
+  "processTakeaways": [
+    "반복 관측과 스냅샷 가격 2회 이상이 없는 후보는 성과 평가에 넣지 않고, 이번처럼 verified 후보가 충분하면 fallback은 쓰지 않습니다.",
+    "late risk-on에서는 crowded trade를 바로 실패로 단정하기보다 붕괴 신호 전까지 추격 제한과 기준선 경고로 분리합니다.",
+    "중소형 follow-through는 테마 반복 등장보다 가격 기준선, peer 상대강도, 이벤트 지속성 세 조건을 동시에 통과해야 유지합니다."
+  ],
+  "nextWeekFocus": [
+    "US AI 반도체는 AVGO 395달러, NVDA 205달러, AMD 520달러 기준선과 세 종목 상대강도 순서를 매일 비교합니다.",
+    "US AI 전력은 VST·CEG 품질 리더와 APLD·OKLO 옵션주를 분리하고, APLD 45달러·OKLO 58달러 방어 없이는 small-cap 가점을 낮춥니다.",
+    "KR 반도체는 SK하이닉스·KODEX 강세를 추격 신호와 과밀 경고로 분리하고, 테크윙 64,000원 회복 전 후공정 중소형 교훈을 자동 연장하지 않습니다."
+  ]
+}

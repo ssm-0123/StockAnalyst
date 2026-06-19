@@ -28,6 +28,9 @@ export type ThemeEventType =
   | "conference"
   | "other";
 export type ThemeTradability = "actionable" | "watch_after_spike" | "wait_for_confirmation" | "avoid_chase";
+export type SignalTiming = "early" | "constructive" | "extended" | "exhausted" | "unclear";
+export type EntryQuality = "actionable" | "wait-for-pullback" | "avoid-chase" | "insufficient-data";
+export type ThemeLifecycleStage = "emerging" | "developing" | "confirmed" | "crowded" | "exhausted" | "unclear";
 
 export interface MarketRegimeAssessment {
   stage: MarketCycleStage;
@@ -96,6 +99,10 @@ export interface StockIdea {
   confidenceLevel?: ConfidenceLevel;
   snapshotHealth?: SnapshotHealth;
   validationIssues?: ValidationIssue[];
+  signalTiming?: SignalTiming;
+  entryQuality?: EntryQuality;
+  moveAlreadyHappenedPct?: number;
+  high52wDistancePct?: number;
 }
 
 export interface SectorEntry {
@@ -187,6 +194,10 @@ export interface SmallCapIdea {
   confidenceLevel?: ConfidenceLevel;
   snapshotHealth?: SnapshotHealth;
   validationIssues?: ValidationIssue[];
+  signalTiming?: SignalTiming;
+  entryQuality?: EntryQuality;
+  moveAlreadyHappenedPct?: number;
+  high52wDistancePct?: number;
 }
 
 export interface ThemeRadarItem {
@@ -205,6 +216,7 @@ export interface ThemeRadarItem {
   alreadyPriced?: string;
   invalidation?: string;
   evidence?: string[];
+  lifecycleStage?: ThemeLifecycleStage;
 }
 
 export interface SmallCapTrackingMeta {
