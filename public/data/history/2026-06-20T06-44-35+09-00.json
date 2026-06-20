@@ -1,7 +1,7 @@
 {
-  "date": "2026-06-21",
-  "lastUpdated": "2026-06-21T06:44:53+09:00",
-  "priceSnapshotGeneratedAt": "2026-06-20T21:42:54.475Z",
+  "date": "2026-06-20",
+  "lastUpdated": "2026-06-20T06:44:35+09:00",
+  "priceSnapshotGeneratedAt": "2026-06-19T21:41:53.289Z",
   "priceSnapshotSummary": {
     "total": 32,
     "fresh": 32,
@@ -12,16 +12,16 @@
     "tradable": 32,
     "noTrade": 0
   },
-  "marketTone": "6월 21일 KST 주말 스냅샷 기준으로 신규 거래 가격은 없지만 32개 가격 입력이 모두 fresh로 갱신됐습니다. 다음 3~10거래일 관심은 Micron 6월 24일 실적을 앞둔 AVGO·NVDA 선별 리더, Oklo-Centrus HALEU LOI 이후 CEG·OKLO 중심 AI 전력·원전, 그리고 KDDX 후속 절차가 남은 한화오션·현대로템 눌림 기준선입니다. KR 반도체 대표주와 ETF는 리더십을 인정하되 52주 고점권이라 신규 추격보다 기준선 확인으로 낮춰 봅니다.",
+  "marketTone": "6월 20일 KST 주말 스냅샷 기준으로 AI 리스크온은 유지되지만 KR 반도체 대표주와 ETF는 고점권 과밀이 더 커졌습니다. 다음 3~10거래일 관심은 신고가 추격보다 AVGO·NVDA 선별 리더, CEG·OKLO 중심 AI 전력·원전 이벤트, 한화오션·현대로템의 수주형 눌림 기준선으로 압축합니다. 소프트웨어와 KR 후공정 중소형은 가격이 싸 보이는 구간이어도 기준선 회복 전까지 상향하지 않습니다.",
   "marketRegime": {
     "stage": "late",
-    "regime": "AI capex 리더십이 지수를 지지하는 late risk-on이지만 Fed 동결·PCE 대기, 반도체 ETF 신고가, 중소형 기준선 실패가 겹친 순환매 국면입니다.",
-    "crowdedness": 85,
-    "riskReward": 56,
-    "rotationProbability": 77,
-    "fragilityScore": 80,
-    "breadth": "스냅샷상 US는 AVGO +4.70%, NVDA +2.95%, CEG +2.58%, VST +3.10%, OKLO +4.00%로 AI 반도체와 전력 인프라 breadth가 같이 살아 있습니다. KR은 SK하이닉스가 52주 고점 4.4% 아래, KODEX 반도체가 4.1% 아래, TIGER 필라델피아반도체가 52주 고점이라 breadth보다 추격 위험이 더 큽니다.",
-    "positioning": "기관·외국인 세부 플로 데이터는 없으므로 fresh 가격 breadth와 최근 Results만 사용합니다. 반도체 대표주·ETF는 crowded trade로 보고 신규 관심은 52주 고점 여유와 촉매가 같이 남은 AVGO·NVDA·CEG·OKLO·한화오션·현대로템으로 제한합니다.",
+    "regime": "AI capex 리더십이 지수를 지지하는 late risk-on이지만 금리 재가격, 반도체 ETF 신고가, 후발주 기준선 실패가 함께 나타나는 순환매 국면입니다.",
+    "crowdedness": 84,
+    "riskReward": 57,
+    "rotationProbability": 76,
+    "fragilityScore": 79,
+    "breadth": "스냅샷상 US는 AVGO +4.70%, NVDA +2.95%, CEG +2.58%, VST +3.10%, OKLO +4.00%로 AI 반도체와 전력 인프라 breadth가 같이 살아 있습니다. 반면 KR은 SK하이닉스가 52주 고점 4.4% 아래, KODEX 반도체가 4.1% 아래, TIGER 필라델피아반도체가 52주 고점이라 breadth보다 추격 위험이 더 큽니다.",
+    "positioning": "기관·외국인 세부 플로 데이터는 없으므로 가격 breadth와 최근 Results만 사용합니다. 반도체 대표주·ETF는 crowded trade로 보고 신규 관심은 52주 고점 여유가 남은 AVGO·NVDA·CEG·OKLO·한화오션·현대로템처럼 기준선과 무효화 조건이 분명한 후보로 제한합니다.",
     "nextRotation": [
       "KR | 반도체 대표주 추격에서 조선·방산 눌림 기준선으로 회전",
       "US | AI 반도체 ETF형 베타에서 AVGO·NVDA 선별 리더로 회전",
@@ -32,11 +32,11 @@
   },
   "topOpportunity": "US | AI 전력·원전 인프라",
   "topRisk": "KR | 반도체 대표주·ETF 신고가 추격 과밀",
-  "newPicksToday": 6,
+  "newPicksToday": 7,
   "newCautionsToday": 8,
   "biggestChangeToday": {
-    "label": "주말 가격 갱신, 전력·원전 우선 유지",
-    "detail": "32개 가격 입력이 모두 fresh로 갱신됐고 신규 거래 가격 부재 속에서도 CEG·OKLO·AVGO·NVDA의 기준선은 유지됐습니다. KR 후공정은 여전히 기준선 아래라 buy가 아니라 reenter-watch로 두고, KR HBM 대표주 경고는 매도 신호가 아니라 신규 추격 제한으로 낮춰 표현합니다."
+    "label": "전력·원전 이벤트 상향, KR 후공정은 기준선 실패",
+    "detail": "Oklo-Centrus HALEU LOI와 CEG·VST 강세가 AI 전력 테마를 다시 밀어 올렸고, AVGO·NVDA는 고점 여유가 남아 선별 buy로 유지합니다. 반대로 SK하이닉스·반도체 ETF는 고점권이고 에프에스티·테크윙·심텍은 핵심 기준선 아래라 KR 반도체는 대표주 추격과 후발주 회복을 분리했습니다."
   },
   "promisingSectors": [
     {
@@ -44,7 +44,7 @@
       "market": "US",
       "rank": 1,
       "confidenceScore": 82,
-      "thesis": "AI capex 논쟁은 남아 있지만 AVGO·NVDA가 가격과 촉매를 동시에 유지하면서 3~10거래일 선별 리더십은 계속 유효합니다. Micron 6월 24일 실적이 HBM·메모리 가격을 확인해 주면 네트워킹과 GPU 리더로 자금이 더 붙을 수 있습니다. AVGO 395달러 또는 NVDA 205달러 이탈이면 이 판단을 접습니다.",
+      "thesis": "AI capex 논쟁은 남아 있지만 AVGO·NVDA가 가격과 촉매를 동시에 회복하면서 3~10거래일 선별 리더십은 유지됩니다. Micron 6월 24일 실적이 HBM·메모리 가격을 확인해 주면 네트워킹과 GPU 리더로 자금이 더 붙을 수 있습니다. AVGO 395달러 또는 NVDA 205달러 이탈이면 이 판단을 접습니다.",
       "keyDrivers": [
         "Micron 2026-06-24 실적 전 AI 메모리 수요 확인 기대",
         "AVGO·NVDA는 52주 고점 대비 각각 16.9%, 10.9% 여유",
@@ -86,7 +86,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 411.35,
             "previousCloseChangePct": 4.7,
             "week52High": 495,
@@ -126,7 +126,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 210.69,
             "previousCloseChangePct": 2.95,
             "week52High": 236.54,
@@ -166,7 +166,7 @@
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 537.37,
             "previousCloseChangePct": 4.86,
             "week52High": 558.37,
@@ -224,7 +224,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 274.06,
             "previousCloseChangePct": 2.58,
             "week52High": 412.7,
@@ -265,7 +265,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 61.17,
             "previousCloseChangePct": 4,
             "week52High": 193.84,
@@ -305,7 +305,7 @@
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 163.75,
             "previousCloseChangePct": 3.1,
             "week52High": 219.82,
@@ -364,7 +364,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 128400,
             "previousClose": 125100,
             "previousCloseChangeAmount": 3300,
@@ -408,7 +408,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 207000,
             "previousClose": 211500,
             "previousCloseChangeAmount": -4500,
@@ -451,7 +451,7 @@
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 667000,
             "previousClose": 684000,
             "previousCloseChangeAmount": -17000,
@@ -514,7 +514,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 2764000,
             "previousClose": 2685000,
             "previousCloseChangeAmount": 79000,
@@ -557,7 +557,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 181015,
             "previousClose": 182500,
             "previousCloseChangeAmount": -1485,
@@ -600,7 +600,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 56600,
             "previousClose": 55030,
             "previousCloseChangeAmount": 1570,
@@ -661,7 +661,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 195.16,
             "previousCloseChangePct": -0.57,
             "week52High": 392.58,
@@ -701,7 +701,7 @@
           "actionBias": "exit",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 151.78,
             "previousCloseChangePct": -2.09,
             "week52High": 276.8,
@@ -741,7 +741,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 221.29,
             "previousCloseChangePct": -3.07,
             "week52High": 453.41,
@@ -799,7 +799,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 30100,
             "previousClose": 31350,
             "previousCloseChangeAmount": -1250,
@@ -842,7 +842,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 60200,
             "previousClose": 60500,
             "previousCloseChangeAmount": -300,
@@ -885,7 +885,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 124300,
             "previousClose": 127500,
             "previousCloseChangeAmount": -3200,
@@ -903,8 +903,8 @@
   "changesSinceYesterday": [
     {
       "type": "upgrade",
-      "title": "US AI 전력·원전 우선 유지",
-      "detail": "Oklo-Centrus HALEU LOI와 fresh 가격에서 CEG·VST·OKLO 동반 강세가 유지돼 전력 인프라를 방어주가 아니라 AI capex 이벤트 섹터로 계속 봅니다."
+      "title": "US AI 전력·원전 상향",
+      "detail": "Oklo-Centrus HALEU LOI와 CEG·VST 동반 강세로 전력 인프라를 단순 방어주가 아니라 AI capex 수혜 이벤트로 다시 올립니다."
     },
     {
       "type": "downgrade",
@@ -919,15 +919,15 @@
     {
       "type": "fading-theme",
       "title": "항공·여행 caution 강도 축소",
-      "detail": "US-Iran 유가 relief가 이어져 UAL·DAL은 강한 회피보다 고점권 신규 추격 제한으로만 표현합니다."
+      "detail": "US-Iran 유가 relief가 이어져 UAL·DAL은 숏성 회피보다 고점권 신규 추격 제한으로만 표현합니다."
     }
   ],
   "reasons": {
     "macro": {
       "title": "거시",
       "summary": [
-        "Fed는 2026-06-17 회의에서 기준금리를 3.50~3.75%로 동결했고, 인플레이션이 2% 목표보다 높다고 재확인했습니다.",
-        "2026-06-25 PCE 전까지 성장주 멀티플은 실적 촉매와 금리 재가격을 동시에 통과해야 하므로 late risk-on 안에서도 종목 선별이 필요합니다."
+        "Fed는 2026-06-17 회의에서 기준금리를 3.50~3.75%로 동결했지만 인플레이션이 2% 목표보다 높다고 재확인했습니다.",
+        "BEA의 다음 PCE 발표가 2026-06-25라서 성장주 멀티플은 실적 촉매와 금리 재가격을 동시에 통과해야 합니다."
       ],
       "affectedSectors": [
         "US | AI 반도체 메모리·네트워킹",
@@ -1142,7 +1142,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 61.17,
             "previousCloseChangePct": 4,
             "week52High": 193.84,
@@ -1182,7 +1182,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 274.06,
             "previousCloseChangePct": 2.58,
             "week52High": 412.7,
@@ -1222,7 +1222,7 @@
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 163.75,
             "previousCloseChangePct": 3.1,
             "week52High": 219.82,
@@ -1240,8 +1240,8 @@
       "alreadyPriced": "일부 반영",
       "invalidation": "OKLO 58달러 이탈 또는 LOI 후속 일정 부재",
       "evidence": [
-        "Centrus 2026-06-18 release: LOI covers enough domestic HALEU for up to five Aurora powerhouses, with deliveries scheduled to begin in 2029 and a future definitive agreement still required. https://www.centrusenergy.com/news/oklo-centrus-sign-letter-of-intent-to-purchase-nuclear-fuel-for-aurora-powerhouse-deployment-in-southern-ohio/",
-        "prices_snapshot.json: OKLO +4.00%, CEG +2.58%, VST +3.10%, all fresh as of 2026-06-21."
+        "Centrus 2026-06-18 release: HALEU LOI covers up to five Aurora powerhouses and scheduled deliveries from 2029. https://www.centrusenergy.com/news/oklo-centrus-sign-letter-of-intent-to-purchase-nuclear-fuel-for-aurora-powerhouse-deployment-in-southern-ohio/",
+        "prices_snapshot.json: OKLO +4.00%, CEG +2.58%, VST +3.10%, all fresh as of 2026-06-20."
       ]
     },
     {
@@ -1284,7 +1284,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 411.35,
             "previousCloseChangePct": 4.7,
             "week52High": 495,
@@ -1324,7 +1324,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 210.69,
             "previousCloseChangePct": 2.95,
             "week52High": 236.54,
@@ -1364,7 +1364,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 2764000,
             "previousClose": 2685000,
             "previousCloseChangeAmount": 79000,
@@ -1407,7 +1407,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 56600,
             "previousClose": 55030,
             "previousCloseChangeAmount": 1570,
@@ -1428,7 +1428,7 @@
       "alreadyPriced": "일부 반영",
       "invalidation": "Micron 이벤트 후 반도체 breadth가 좁아지고 AVGO 395달러·NVDA 205달러가 깨지는 경우",
       "evidence": [
-        "Micron IR: fiscal Q3 earnings call scheduled for 2026-06-24 at 2:30 p.m. Mountain time. https://investors.micron.com/news-releases/news-release-details/micron-technology-report-fiscal-third-quarter-results-june-24",
+        "Micron IR: fiscal Q3 earnings call scheduled for 2026-06-24 2:30 p.m. Mountain time. https://investors.micron.com/news-releases/news-release-details/micron-technology-report-fiscal-third-quarter-results-june-24",
         "prices_snapshot.json: AVGO +4.70%, NVDA +2.95%, SK하이닉스 +2.94%, TIGER 필라델피아반도체 52주 고점."
       ]
     },
@@ -1472,7 +1472,7 @@
           "actionBias": "exit",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 151.78,
             "previousCloseChangePct": -2.09,
             "week52High": 276.8,
@@ -1512,7 +1512,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 195.16,
             "previousCloseChangePct": -0.57,
             "week52High": 392.58,
@@ -1552,7 +1552,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 221.29,
             "previousCloseChangePct": -3.07,
             "week52High": 453.41,
@@ -1570,8 +1570,8 @@
       "alreadyPriced": "상당 부분 반영",
       "invalidation": "회복 기준선 2개 이상 돌파와 AI 매출 가이던스 개선",
       "evidence": [
-        "Federal Reserve 2026-06-17 FOMC statement: target range maintained at 3.50%-3.75%; inflation remains elevated relative to the 2% goal. https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
-        "prices_snapshot.json: CRM -2.09%, FDS -3.07%, ADBE -0.57%, all fresh as of 2026-06-21."
+        "Federal Reserve 2026-06-17 statement: target range maintained at 3.50%-3.75%, inflation remains above 2% goal. https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+        "BEA PCE page: next release listed as 2026-06-25. https://www.bea.gov/data/personal-consumption-expenditures-price-index"
       ]
     },
     {
@@ -1615,7 +1615,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 128400,
             "previousClose": 125100,
             "previousCloseChangeAmount": 3300,
@@ -1659,7 +1659,7 @@
           "actionBias": "buy",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 207000,
             "previousClose": 211500,
             "previousCloseChangeAmount": -4500,
@@ -1702,7 +1702,7 @@
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 667000,
             "previousClose": 684000,
             "previousCloseChangeAmount": -17000,
@@ -1723,18 +1723,18 @@
       "alreadyPriced": "일부 반영",
       "invalidation": "125,000원 이탈 또는 KDDX 절차 지연",
       "evidence": [
-        "Asian Military Review 2026-06-18: Hanwha Ocean was reportedly selected by DAPA as preferred KDDX shipbuilder; program value about KRW7.8tn. https://www.asianmilitaryreview.com/2026/06/hanwha-ocean-reportedly-secures-kddx-destroyer-construction-contract-foc/",
-        "prices_snapshot.json: 한화오션 +2.64%, 현대로템 -2.13%, HD현대중공업 -2.49%, all fresh as of 2026-06-21."
+        "Naval News: Hanwha Ocean selected for KDDX detailed design and lead ship construction after DAPA bid evaluation. https://www.navalnews.com/naval-news/2026/06/hanwha-ocean-selected-for-south-koreas-kddx-destroyer-program/",
+        "prices_snapshot.json: 한화오션 +2.64%, HD현대중공업 -2.49%, 현대로템 -2.13%."
       ]
     },
     {
       "theme": "US-Iran 유가 relief와 항공·여행 추격 제한",
       "market": "US",
       "eventType": "geopolitics",
-      "signalStrength": 72,
-      "sourceFreshness": "today",
-      "lifecycleStage": "confirmed",
-      "narrative": "US-Iran deal 이후 유가 relief가 이어지며 항공·여행주의 회피 논리는 약해졌지만, UAL·DAL은 52주 고점 5% 안팎이라 신규 추격 신호로 보기는 어렵습니다.",
+      "signalStrength": 70,
+      "sourceFreshness": "1-3d",
+      "lifecycleStage": "crowded",
+      "narrative": "US-Iran 긴장 완화와 유가 하락은 항공·여행주에 relief를 줬지만, UAL·DAL은 이미 52주 고점권에 가까워 신규 긍정보다 추격 제한입니다.",
       "affectedStocks": [
         {
           "ticker": "UAL",
@@ -1766,7 +1766,7 @@
           "actionBias": "reduce",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 118.32,
             "previousCloseChangePct": 2.15,
             "week52High": 124.79,
@@ -1805,7 +1805,7 @@
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 84.18,
             "previousCloseChangePct": 2.35,
             "week52High": 87.39,
@@ -1845,7 +1845,7 @@
           "actionBias": "hold",
           "timeHorizon": "1-3w",
           "priceSnapshot": {
-            "priceDate": "2026-06-21",
+            "priceDate": "2026-06-20",
             "currentPrice": 240.9,
             "previousCloseChangePct": 0.6,
             "week52High": 303.8,
@@ -1855,17 +1855,16 @@
           }
         }
       ],
-      "marketReaction": "UAL +2.15%, DAL +2.35%, EXPE +0.60%로 유가 안정 기대에는 반응했지만 UAL·DAL은 고점권입니다.",
+      "marketReaction": "UAL +2.15%, DAL +2.35%, EXPE +0.60%로 항공 중심 relief가 확인됐습니다.",
       "tradability": "watch_after_spike",
-      "risk": "유가 하락이 이미 항공주에 반영됐고 협상 실패나 Strait of Hormuz 정상화 지연 시 변동성이 다시 커질 수 있습니다.",
-      "whatToWatch": "Brent 재반등, Strait of Hormuz traffic 정상화, UAL 120달러·DAL 84달러 안착 여부를 확인합니다.",
+      "risk": "지정학 뉴스가 되돌려지거나 유가가 반등하면 항공 고점권 가격이 빠르게 취약해질 수 있습니다.",
+      "whatToWatch": "UAL 120달러·DAL 84달러 방어와 유가 재반등 여부를 확인합니다.",
       "watchDate": "다음 지정학 뉴스",
       "alreadyPriced": "상당 부분 반영",
-      "invalidation": "유가가 안정되고 UAL·DAL이 52주 고점을 거래대금과 함께 돌파하면 caution을 해제합니다.",
+      "invalidation": "UAL 120달러와 DAL 84달러가 동시 안착하고 유가가 추가 하락하는 경우",
       "evidence": [
-        "Times of Israel/AFP 2026-06-17: US-Iran deal optimism pushed crude down more than 10% for the week and equities advanced. https://www.timesofisrael.com/oil-prices-fall-stocks-rise-amid-optimism-over-us-iran-deal-reopening-of-hormuz/",
-        "Guardian 2026-06-21: oil crisis pressure eased, but inventories and damaged refining infrastructure remain risks. https://www.theguardian.com/australia-news/2026/jun/21/oil-price-petrol-prices-australia-fuel-crisis-us-iran-war-lower",
-        "prices_snapshot.json: UAL +2.15%, DAL +2.35%, EXPE +0.60%, all fresh as of 2026-06-21."
+        "Recent market news described travel shares rallying after US-Iran agreement and lower oil; use as thematic context, not price source.",
+        "prices_snapshot.json: UAL +2.15%, DAL +2.35%, EXPE +0.60%, UAL·DAL near 52-week highs."
       ]
     }
   ],
@@ -1881,7 +1880,7 @@
       "whyNow": "Centrus HALEU LOI가 2029년 인도 일정과 최대 5기 Aurora powerhouse를 구체화했습니다.",
       "followThroughNote": "전일 +4.00%지만 52주 고점보다 68.4% 낮아 이벤트 옵션은 남아 있습니다. 다만 58달러 방어와 본계약 일정이 없으면 단기 추격은 바로 낮춥니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-21",
+        "priceDate": "2026-06-20",
         "currentPrice": 61.17,
         "previousCloseChangePct": 4,
         "week52High": 193.84,
@@ -1924,9 +1923,9 @@
       "theme": "AI compute capacity 후발 베타",
       "thesis": "AI 데이터센터 용량 수요에 직접 노출된 고베타 후보지만 52주 고점 8.1% 아래라 추격 부담도 큽니다.",
       "whyNow": "45달러 기준선 위에서 CEG·VST와 같은 AI 전력·데이터센터 자금 흐름을 확인하고 있습니다.",
-      "followThroughNote": "7일 반복 추적에서 방향성은 맞았지만 52주 고점 8.1% 아래라 small-cap 추격은 제한합니다. VST·CEG 대비 2거래일 이상 상대강도가 확인될 때만 다시 상향합니다.",
+      "followThroughNote": "전일 +2.24%이고 52주 고점과 거리가 8.1%뿐이라 신규 관심은 돌파 추격보다 45달러 방어 확인으로 제한합니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-21",
+        "priceDate": "2026-06-20",
         "currentPrice": 46.59,
         "previousCloseChangePct": 2.24,
         "week52High": 50.72,
@@ -1946,13 +1945,13 @@
         "고점권 추격",
         "계약 일정 지연"
       ],
-      "alreadyPriced": "일부 반영, 52주 고점 근접 부담",
+      "alreadyPriced": "일부 반영",
       "watchDate": "다음 capacity 업데이트",
       "watchCondition": "45달러 위에서 VST·CEG 대비 2거래일 이상 상대강도를 유지해야 합니다.",
-      "confidenceReason": "fresh 가격과 45달러 기준선은 유효하지만 Results 교훈이 softened이고 대형 전력 peer 대비 알파가 약해 확신도를 낮춥니다.",
+      "confidenceReason": "fresh 가격이나 52주 고점 10% 이내라 확신도는 medium으로 낮춥니다.",
       "invalidation": "45달러 이탈 또는 전력주 대비 상대약세",
-      "positioningNote": "관찰 유지, 45달러 방어와 대형 전력주 대비 상대강도 확인 전 확대 제한",
-      "actionBias": "hold",
+      "positioningNote": "분할 관찰, 눌림 시 1차 확인",
+      "actionBias": "buy",
       "timeHorizon": "1-3w",
       "signalTiming": "extended",
       "entryQuality": "wait-for-pullback",
@@ -1971,7 +1970,7 @@
       "whyNow": "현재가 60,200원은 52주 고점보다 18.6% 낮아 가격 여유는 있으나 Results 기준선을 아직 통과하지 못했습니다.",
       "followThroughNote": "며칠째 추적 중이지만 이번에는 buy가 아니라 reenter-watch입니다. 64,000원 위 2세션 유지가 없으면 반복 관찰의 효율이 낮습니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-21",
+        "priceDate": "2026-06-20",
         "currentPrice": 60200,
         "previousClose": 60500,
         "previousCloseChangeAmount": -300,
@@ -2018,7 +2017,7 @@
       "whyNow": "현재가 30,100원은 전일 대비 -3.99%이고 52주 고점보다 41.0% 낮아 싸 보이지만 하락 중인 가격은 긍정 근거가 아닙니다.",
       "followThroughNote": "전일 small-cap 추적 후보였지만 오늘은 32,000원 회복 전까지 buy를 해제합니다. 반등이 나오더라도 거래대금이 붙어야 재진입합니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-21",
+        "priceDate": "2026-06-20",
         "currentPrice": 30100,
         "previousClose": 31350,
         "previousCloseChangeAmount": -1250,
@@ -2065,7 +2064,7 @@
       "whyNow": "현재가 124,300원은 전일 대비 -2.51%이고 52주 고점보다 13.3% 낮아 가격 여유와 기준선 실패가 동시에 있습니다.",
       "followThroughNote": "반복 추적은 유지하지만 오늘은 소액 탐색도 보류합니다. 130,000원 회복 없이는 대표 반도체 강세가 PCB로 확산됐다고 보기 어렵습니다.",
       "priceSnapshot": {
-        "priceDate": "2026-06-21",
+        "priceDate": "2026-06-20",
         "currentPrice": 124300,
         "previousClose": 127500,
         "previousCloseChangeAmount": -3200,
