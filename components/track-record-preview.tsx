@@ -16,6 +16,7 @@ function attributionLabel(category?: ResultsAttributionCategory) {
   if (category === "timing") return "타이밍";
   if (category === "late-entry") return "후행 진입";
   if (category === "crowded-trade") return "혼잡 거래";
+  if (category === "trend-continuation") return "추세 지속";
   if (category === "weak-catalyst") return "약한 촉매";
   if (category === "price-data") return "가격 데이터";
   if (category === "macro-headwind") return "매크로 역풍";

@@ -1,6 +1,6 @@
 import { Activity, AlertCircle, CheckCircle2, Shield } from "lucide-react";
 
-import { ActionCommandPanel, type DashboardActionCandidate } from "@/components/action-command-panel";
+import type { DashboardActionCandidate } from "@/components/action-command-panel";
 import { AnalysisSuggestionPanel } from "@/components/analysis-suggestion-panel";
 import { ChangeList } from "@/components/change-list";
 import { CheckpointList } from "@/components/checkpoint-list";
@@ -8,7 +8,6 @@ import { ForwardViewPanel } from "@/components/forward-view-panel";
 import { MarketMemoryPanel } from "@/components/market-memory-panel";
 import { MarketRegimeConsole } from "@/components/market-regime-console";
 import { ReasonPanel } from "@/components/reason-panel";
-import { RegimeChangePanel } from "@/components/regime-change-panel";
 import { ResearchMethodology } from "@/components/research-methodology";
 import { ResearchOpportunities } from "@/components/research-opportunities";
 import { RiskRadar } from "@/components/risk-radar";
@@ -149,12 +148,9 @@ export default async function HomePage() {
 
   return (
     <main className="dashboard-shell">
-      <ForwardViewPanel latest={latest} />
-      <MarketRegimeConsole latest={latest} history={history} />
-      <RegimeChangePanel latest={latest} previousDay={previousDay} />
+      <ForwardViewPanel latest={latest} buyCandidates={buyCandidates} riskCandidates={riskCandidates} />
+      <MarketRegimeConsole latest={latest} history={history} previousDay={previousDay} />
       <MarketMemoryPanel report={latestResults} legacyDecisions={legacySectorDecisions} />
-      <RotationMap latest={latest} />
-      <ActionCommandPanel latest={latest} buyCandidates={buyCandidates} riskCandidates={riskCandidates} />
       <ThemeRadarPanel themes={latest.themeRadar} />
       <ResearchOpportunities candidates={buyCandidates} />
       <RiskRadar latest={latest} />
@@ -171,6 +167,8 @@ export default async function HomePage() {
         </summary>
 
         <div className="mt-6">
+          <RotationMap latest={latest} />
+
           <section>
             <div className="space-y-4">
               <div className="section-heading mb-0">

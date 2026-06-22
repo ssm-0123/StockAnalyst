@@ -56,12 +56,17 @@ export function selectLatestEntriesPerDate(entries: DailyAnalysis[]) {
 export async function getLatestAnalysis() {
   const latest = enrichDailyAnalysis(await readJsonFile(path.join(DATA_DIR, "latest.json"), normalizeDailyAnalysis));
   const history = await getHistoryAnalyses();
+  const resultsReports = await getResultsReportsForLessons();
+  const resultsAwareSuggestions = buildResultsAwareSuggestions(latest.analysisSuggestions, resultsReports);
   const dailyEntries = selectLatestEntriesPerDate([latest, ...history]);
   const previousDay = dailyEntries.find((entry) => entry.date !== latest.date) ?? null;
   const smallCapTracking = computeSmallCapTracking(dailyEntries.slice(0, 7));
 
   return {
-    latest,
+    latest: {
+      ...latest,
+      analysisSuggestions: resultsAwareSuggestions,
+    },
     history,
     previousDay,
     smallCapTracking,
@@ -95,6 +100,15 @@ export async function getLatestResultsReport() {
     latest,
     history,
   };
+}
+
+async function getResultsReportsForLessons() {
+  const latest = enrichWeeklyResultsReport(
+    await readJsonFile(path.join(RESULTS_DIR, "latest.json"), normalizeWeeklyResultsReport),
+  );
+  const history = await getResultsHistory();
+
+  return [latest, ...history];
 }
 
 function suggestionActionWeight(action: AnalysisSuggestion["action"]) {

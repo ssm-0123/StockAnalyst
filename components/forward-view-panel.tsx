@@ -1,5 +1,6 @@
 import { ArrowRight, Compass, Gauge, MoveRight } from "lucide-react";
 
+import type { DashboardActionCandidate } from "@/components/action-command-panel";
 import { TermHint } from "@/components/term-hint";
 import { Badge } from "@/components/ui/badge";
 import { buildForwardConfidence } from "@/lib/research-confidence";
@@ -40,18 +41,18 @@ function sentence(value?: string) {
 function viewBuckets(latest: DailyAnalysis) {
   const rotations = unique(latest.marketRegime?.nextRotation ?? []);
   const promising = unique(latest.promisingSectors.map((sector) => sector.sectorName));
-  const favor = unique([...rotations, ...promising]).slice(0, 4);
+  const favor = unique([...rotations, ...promising]).slice(0, 3);
   const neutral = unique(
     latest.themeRadar
       ?.filter((theme) => theme.tradability === "wait_for_confirmation" || theme.tradability === "watch_after_spike")
       .map((theme) => theme.theme) ?? [],
-  ).slice(0, 3);
+  ).slice(0, 2);
   const avoid = unique([
     ...latest.cautionSectors.map((sector) => sector.sectorName),
     ...(latest.themeRadar
       ?.filter((theme) => theme.tradability === "avoid_chase")
       .map((theme) => theme.theme) ?? []),
-  ]).slice(0, 4);
+  ]).slice(0, 3);
 
   return {
     favor,
@@ -86,15 +87,12 @@ function moneyFlows(latest: DailyAnalysis) {
   return flows.slice(0, 3);
 }
 
-function actionSummary(latest: DailyAnalysis) {
-  const buckets = viewBuckets(latest);
-  const favor = buckets.favor.slice(0, 2).join(", ") || "clearer rotation candidates";
-  const neutral = buckets.neutral[0] ?? "confirmation-only themes";
-  const avoid = buckets.avoid.slice(0, 2).join(", ") || "crowded trades";
-  return `우선 관찰: ${favor}. ${neutral}은 확인 대기, ${avoid}는 회복 조건 전 추격 금지.`;
+function primaryTicker(candidate?: DashboardActionCandidate) {
+  if (!candidate) return "후보 확인 중";
+  return `${candidate.ticker} · ${candidate.companyName}`;
 }
 
-function Bucket({
+function BriefBucket({
   title,
   items,
   variant,
@@ -104,17 +102,17 @@ function Bucket({
   variant: "positive" | "neutral" | "caution";
 }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/10 p-4">
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">{title}</p>
-      <div className="mt-3 flex flex-wrap gap-2">
+    <div className="rounded-xl border border-white/10 bg-white/10 p-3">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-300">{title}</p>
+      <div className="mt-2 flex flex-wrap gap-1.5">
         {items.length ? (
           items.map((item) => (
-            <Badge key={`${title}-${item}`} variant={variant} className="border-white/10">
+            <Badge key={`${title}-${item}`} variant={variant} className="border-white/10 px-2 py-0.5 text-[11px]">
               {item}
             </Badge>
           ))
         ) : (
-          <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
+          <Badge variant="neutral" className="border-white/10 bg-white/10 px-2 py-0.5 text-[11px] text-slate-200">
             No clear signal
           </Badge>
         )}
@@ -123,100 +121,118 @@ function Bucket({
   );
 }
 
-export function ForwardViewPanel({ latest }: { latest: DailyAnalysis }) {
+export function ForwardViewPanel({
+  latest,
+  buyCandidates = [],
+  riskCandidates = [],
+}: {
+  latest: DailyAnalysis;
+  buyCandidates?: DashboardActionCandidate[];
+  riskCandidates?: DashboardActionCandidate[];
+}) {
   const buckets = viewBuckets(latest);
   const confidence = buildForwardConfidence(latest);
   const reasons = rationale(latest);
   const flows = moneyFlows(latest);
-  const summary = actionSummary(latest);
+  const focus = buyCandidates[0];
+  const risk = riskCandidates[0];
+  const monitorTheme =
+    latest.themeRadar?.find((theme) => theme.tradability === "wait_for_confirmation") ?? latest.themeRadar?.[0];
 
   return (
     <section className="rounded-2xl border border-slate-900 bg-slate-950 p-5 text-white shadow-panel sm:p-6">
-      <div className="grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <Badge variant="positive">Next 1-2 Weeks</Badge>
+          <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
+            AI Market Brief
+          </Badge>
+          <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
+            {latest.date}
+          </Badge>
+        </div>
+        <a
+          href={withBasePath("/Results")}
+          className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:bg-white/15"
+        >
+          판단 결과
+        </a>
+      </div>
+
+      <div className="mt-5 grid gap-5 xl:grid-cols-[0.85fr_1.15fr]">
         <div>
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge variant="positive">다음 1-2주 관점</Badge>
-              <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
-                단기 리서치 기준
-              </Badge>
-            </div>
-            <a
-              href={withBasePath("/Results")}
-              className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:bg-white/15"
-            >
-              판단 결과
-            </a>
-          </div>
-          <h1 className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl">
-            다음 자금 이동은 어디로 향하는가
-          </h1>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-200">
-            뉴스 요약이 아니라 현재 국면, 변화, 테마 반응을 묶어 다음 1-2주 리서치 우선순위를 제시합니다.
+          <h1 className="max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl">다음 자금 이동은 어디로 향하는가</h1>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
+            현재 국면, 변화, 테마 반응을 하나의 단기 리서치 관점으로 압축합니다.
           </p>
 
           <div className="mt-5 rounded-xl border border-emerald-300/30 bg-emerald-300/10 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">핵심 행동 요약</p>
-            <p className="mt-2 text-base font-semibold leading-7 text-white">{summary}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">핵심 결론</p>
+            <p className="mt-2 text-lg font-semibold leading-7 text-white">{latest.topOpportunity}</p>
+            <p className="mt-1 text-sm leading-6 text-slate-200">핵심 리스크: {latest.topRisk}</p>
           </div>
 
-          <div className="mt-6 rounded-xl border border-white/10 bg-white/10 p-4">
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
-                <Gauge className="size-4" />
-                <TermHint
-                  label="판단 신뢰도"
-                  description="근거의 신선도, 국면 점수, 테마 강도를 종합한 리서치 확신도입니다. 맞을 확률이나 매수 지시는 아닙니다."
-                  tooltipClassName="border-white/10 bg-slate-900 text-slate-100"
-                />
-              </div>
-              <div className="text-right">
-                <p className="text-3xl font-semibold text-white">{confidence.score}%</p>
-                <p className="mt-1 text-xs font-semibold text-emerald-200">{confidence.label}</p>
-              </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-white/10 bg-white/10 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-300">Focus</p>
+              <p className="mt-2 text-sm font-semibold leading-5 text-white">{primaryTicker(focus)}</p>
             </div>
-            <div className="mt-3 h-2 rounded-full bg-white/10">
-              <div className="h-full rounded-full bg-emerald-400" style={{ width: `${confidence.score}%` }} />
+            <div className="rounded-xl border border-white/10 bg-white/10 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-300">Watch</p>
+              <p className="mt-2 text-sm font-semibold leading-5 text-white">{monitorTheme?.theme ?? "확인 대기"}</p>
             </div>
-            <p className="mt-3 text-xs leading-5 text-slate-300">
-              리서치 근거의 강도입니다. 맞을 확률이나 매수 신호가 아닙니다.
-            </p>
-            <div className="mt-3 grid gap-2 sm:grid-cols-2">
-              <div className="rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-2">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-200">올린 요인</p>
-                <p className="mt-1 text-xs leading-5 text-slate-200">
-                  {confidence.positives.length ? confidence.positives.join(" · ") : "강한 가산 요인 없음"}
-                </p>
-              </div>
-              <div className="rounded-lg border border-rose-300/20 bg-rose-300/10 p-2">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-200">낮춘 요인</p>
-                <p className="mt-1 text-xs leading-5 text-slate-200">
-                  {confidence.negatives.length ? confidence.negatives.join(" · ") : "큰 감점 요인 없음"}
-                </p>
-              </div>
+            <div className="rounded-xl border border-white/10 bg-white/10 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-300">Avoid</p>
+              <p className="mt-2 text-sm font-semibold leading-5 text-white">{risk ? primaryTicker(risk) : buckets.avoid[0]}</p>
             </div>
           </div>
         </div>
 
         <div className="grid gap-3">
           <div className="grid gap-3 lg:grid-cols-3">
-            <Bucket title="우선 관찰" items={buckets.favor} variant="positive" />
-            <Bucket title="확인 대기" items={buckets.neutral} variant="neutral" />
-            <Bucket title="추격 금지" items={buckets.avoid} variant="caution" />
+            <BriefBucket title="Favor" items={buckets.favor} variant="positive" />
+            <BriefBucket title="Watch" items={buckets.neutral} variant="neutral" />
+            <BriefBucket title="Avoid" items={buckets.avoid} variant="caution" />
           </div>
 
-          <div className="rounded-xl border border-white/10 bg-white/10 p-4">
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
-              <Compass className="size-4" />
-              핵심 근거
-            </div>
-            <div className="mt-3 grid gap-2">
-              {reasons.map((item, index) => (
-                <div key={`forward-rationale-${index}`} className="flex gap-2 text-sm leading-6 text-slate-100">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-emerald-300" />
-                  <p>{item}</p>
+          <div className="grid gap-3 lg:grid-cols-[0.75fr_1.25fr]">
+            <div className="rounded-xl border border-white/10 bg-white/10 p-4">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
+                  <Gauge className="size-4" />
+                  <TermHint
+                    label="판단 신뢰도"
+                    description="근거의 신선도, 국면 점수, 테마 강도를 종합한 리서치 확신도입니다. 맞을 확률이나 매수 지시는 아닙니다."
+                    tooltipClassName="border-white/10 bg-slate-900 text-slate-100"
+                  />
                 </div>
-              ))}
+                <div className="text-right">
+                  <p className="text-3xl font-semibold text-white">{confidence.score}%</p>
+                  <p className="mt-1 text-xs font-semibold text-emerald-200">{confidence.label}</p>
+                </div>
+              </div>
+              <div className="mt-3 h-2 rounded-full bg-white/10">
+                <div className="h-full rounded-full bg-emerald-400" style={{ width: `${confidence.score}%` }} />
+              </div>
+              <p className="mt-3 text-xs leading-5 text-slate-300">
+                + {confidence.positives.join(" · ") || "강한 가산 요인 없음"}
+                {confidence.negatives.length ? ` / - ${confidence.negatives.join(" · ")}` : ""}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-white/10 bg-white/10 p-4">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
+                <Compass className="size-4" />
+                핵심 근거
+              </div>
+              <div className="mt-3 grid gap-2">
+                {reasons.map((item, index) => (
+                  <div key={`forward-rationale-${index}`} className="flex gap-2 text-sm leading-6 text-slate-100">
+                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-emerald-300" />
+                    <p>{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

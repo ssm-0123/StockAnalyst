@@ -18,7 +18,7 @@ export function RiskRadar({ latest }: { latest: DailyAnalysis }) {
   const cautionSectors = latest.cautionSectors.slice(0, 3);
 
   return (
-    <section className="mt-4 rounded-2xl border border-rose-100 bg-rose-50/60 p-5 shadow-panel">
+    <section className="mt-4 rounded-2xl border border-white/70 bg-white/90 p-5 shadow-panel">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-rose-700">

@@ -1,4 +1,4 @@
-import { CalendarClock, CheckCircle2, RadioTower, ShieldAlert, Sparkles } from "lucide-react";
+import { CalendarClock, CheckCircle2, RadioTower, Scale, ShieldAlert } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { actionBiasLabel } from "@/lib/public-display";
@@ -37,156 +37,147 @@ function formatSignal(value: number) {
   return Math.round(Math.min(100, Math.max(0, value)));
 }
 
-function freshnessLabel(value: ThemeRadarItem["sourceFreshness"]) {
-  if (value === "today") return "오늘";
-  if (value === "1-3d") return "1-3일";
-  if (value === "stale") return "오래됨";
-  return "미확인";
-}
-
-function pricedLabel(value: ThemeRadarItem["tradability"]) {
-  if (value === "watch_after_spike") return "상당 부분 반영";
-  if (value === "avoid_chase") return "추격 부담 큼";
-  if (value === "actionable") return "아직 실행 후보";
-  return "추가 확인 필요";
-}
-
-function pricedText(theme: ThemeRadarItem) {
-  return theme.alreadyPriced ?? pricedLabel(theme.tradability);
-}
-
 function watchText(theme: ThemeRadarItem) {
   if (theme.watchDate) return `${theme.watchDate}: ${theme.whatToWatch}`;
   return theme.invalidation ?? theme.whatToWatch;
 }
 
-function ThemeCard({ theme, featured }: { theme: ThemeRadarItem; featured?: boolean }) {
+function pricedText(theme: ThemeRadarItem) {
+  if (theme.alreadyPriced) return theme.alreadyPriced;
+  if (theme.tradability === "watch_after_spike") return "상당 부분 반영";
+  if (theme.tradability === "avoid_chase") return "추격 부담 큼";
+  if (theme.tradability === "actionable") return "아직 실행 후보";
+  return "추가 확인 필요";
+}
+
+function ThemeRow({ theme }: { theme: ThemeRadarItem }) {
   return (
-    <article className={`rounded-2xl border bg-white p-4 ${featured ? "border-sky-200 shadow-sm" : "border-sky-100"}`}>
+    <div className="grid gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3 lg:grid-cols-[0.7fr_1.3fr_0.9fr] lg:items-center">
+      <div>
+        <div className="flex flex-wrap gap-1.5">
+          <Badge variant="neutral">{theme.market}</Badge>
+          <Badge variant={tradabilityVariant(theme.tradability)}>{tradabilityLabel(theme.tradability)}</Badge>
+          <Badge variant="neutral">강도 {formatSignal(theme.signalStrength)}</Badge>
+        </div>
+        <p className="mt-2 text-sm font-semibold leading-5 text-slate-950">{theme.theme}</p>
+      </div>
+      <div>
+        <p className="line-clamp-2 text-sm leading-6 text-slate-600">{theme.marketReaction || theme.narrative}</p>
+        <p className="mt-1 text-xs font-semibold text-amber-700">반영도: {pricedText(theme)}</p>
+      </div>
+      <div>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">확인 조건</p>
+        <p className="mt-1 line-clamp-2 text-sm leading-5 text-slate-700">{watchText(theme)}</p>
+      </div>
+    </div>
+  );
+}
+
+function FeaturedTheme({ theme }: { theme: ThemeRadarItem }) {
+  return (
+    <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
       <div className="flex flex-wrap items-start justify-between gap-3">
-        <div className="min-w-0">
-          <div className="flex flex-wrap items-center gap-1.5">
+        <div>
+          <div className="flex flex-wrap gap-1.5">
             <Badge variant="neutral">{theme.market}</Badge>
             <Badge variant="neutral">{eventTypeLabel(theme.eventType)}</Badge>
             <Badge variant={tradabilityVariant(theme.tradability)}>{tradabilityLabel(theme.tradability)}</Badge>
             <Badge variant="neutral">테마 강도 {formatSignal(theme.signalStrength)}</Badge>
-            <Badge variant="neutral">출처 {freshnessLabel(theme.sourceFreshness)}</Badge>
           </div>
           <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950">{theme.theme}</h3>
         </div>
-        <div className="rounded-xl bg-sky-50 p-2 text-sky-700">
-          <Sparkles className="size-5" />
+        <Badge variant="neutral">{pricedText(theme)}</Badge>
+      </div>
+
+      <div className="mt-4 grid gap-3 xl:grid-cols-[1fr_1fr_0.9fr]">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Catalyst</p>
+          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-700">{theme.narrative}</p>
+        </div>
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Market Reaction</p>
+          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-700">{theme.marketReaction}</p>
+        </div>
+        <div className="rounded-xl border border-amber-100 bg-amber-50/70 p-3">
+          <div className="flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-700">
+            <Scale className="size-3.5" />
+            Priced-in Check
+          </div>
+          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-700">{pricedText(theme)}</p>
         </div>
       </div>
 
-      <div className="mt-4 grid gap-3 xl:grid-cols-[1.15fr_0.85fr]">
-        <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">움직인 이유</p>
-          <p className="mt-1 line-clamp-4 text-sm leading-6 text-slate-700">{theme.narrative}</p>
+      <div className="mt-3 grid gap-3 lg:grid-cols-[1fr_1fr_1fr]">
+        <div className="rounded-xl border border-white bg-white p-3">
+          <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+            <CheckCircle2 className="size-3.5" />
+            Beneficiaries
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {theme.affectedStocks.slice(0, 5).map((stock) => (
+              <Badge key={`${theme.theme}-${stock.market}-${stock.ticker}`} variant="neutral">
+                {stock.ticker} {stock.actionBias ? `· ${actionBiasLabel(stock.actionBias)}` : ""}
+              </Badge>
+            ))}
+          </div>
         </div>
-        <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">시장 반응</p>
-          <p className="mt-1 line-clamp-4 text-sm leading-6 text-slate-700">{theme.marketReaction}</p>
-        </div>
-      </div>
-
-      <div className="mt-3 rounded-xl border border-slate-200 bg-white p-3">
-        <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
-          <CheckCircle2 className="size-3.5" />
-          수혜 후보
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {theme.affectedStocks.slice(0, 8).map((stock) => (
-            <Badge key={`${theme.theme}-${stock.market}-${stock.ticker}`} variant="neutral">
-              {stock.ticker} {stock.actionBias ? `· ${actionBiasLabel(stock.actionBias)}` : ""}
-            </Badge>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-3 grid gap-3 lg:grid-cols-3">
-        <div className="rounded-xl border border-rose-100 bg-rose-50/70 p-3 text-sm leading-6 text-slate-700">
-          <div className="mb-1 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-700">
+        <div className="rounded-xl border border-rose-100 bg-rose-50/70 p-3">
+          <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-700">
             <ShieldAlert className="size-3.5" />
-            틀릴 수 있는 조건
+            Consensus Risk
           </div>
-          <p className="line-clamp-4">{theme.risk}</p>
+          <p className="line-clamp-2 text-sm leading-6 text-slate-700">{theme.risk}</p>
         </div>
-        <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-6 text-slate-700">
-          <div className="mb-1 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+        <div className="rounded-xl border border-white bg-white p-3">
+          <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
             <CalendarClock className="size-3.5" />
-            확인 조건 / 무효화 조건
+            Watch
           </div>
-          <p className="line-clamp-4">{watchText(theme)}</p>
-        </div>
-        <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-6 text-slate-700">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">이미 가격에 반영됐나</p>
-          <p className="mt-1 font-semibold text-slate-950">{pricedText(theme)}</p>
+          <p className="line-clamp-1 text-sm leading-6 text-slate-700">{watchText(theme)}</p>
         </div>
       </div>
-
-      {theme.evidence?.length ? (
-        <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">근거</p>
-          <p className="mt-1 text-xs leading-5 text-slate-500">{theme.evidence.slice(0, 3).join(" / ")}</p>
-        </div>
-      ) : null}
-      <details className="mt-3 rounded-xl border border-slate-200 bg-white px-3 py-2">
-        <summary className="cursor-pointer list-none text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-          전체 테마 메모
-        </summary>
-        <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
-          <p>{theme.narrative}</p>
-          <p><span className="font-semibold text-slate-950">반응: </span>{theme.marketReaction}</p>
-          <p><span className="font-semibold text-slate-950">리스크: </span>{theme.risk}</p>
-          <p><span className="font-semibold text-slate-950">확인 조건: </span>{watchText(theme)}</p>
-        </div>
-      </details>
     </article>
   );
 }
 
 export function ThemeRadarPanel({ themes }: { themes?: ThemeRadarItem[] }) {
   const items = (themes ?? []).slice(0, 5);
-  const visibleItems = items.slice(0, 2);
-  const hiddenItems = items.slice(2);
+  const featured = items[0];
+  const secondary = items.slice(1, 4);
+  const hidden = items.slice(4);
 
-  if (!items.length) {
-    return null;
-  }
+  if (!items.length || !featured) return null;
 
   return (
-    <section className="mt-4 rounded-2xl border border-sky-100 bg-sky-50/70 p-5 shadow-panel">
+    <section className="mt-4 rounded-2xl border border-white/70 bg-white/90 p-5 shadow-panel">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <RadioTower className="size-4" />
-            테마 분석
+            Theme Intelligence
           </div>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
-            테마를 사건, 수혜자, 리스크로 해석합니다.
-          </h2>
-          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-            접힌 목록이 아니라 바로 읽을 수 있는 리서치 카드로 핵심 테마를 보여줍니다.
-          </p>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">핵심 테마 하나와 후속 후보만 보여줍니다.</h2>
         </div>
-        <Badge variant="neutral">{visibleItems.length}/{items.length} 표시</Badge>
+        <Badge variant="neutral">{items.length}개 감지</Badge>
       </div>
 
       <div className="mt-5 grid gap-4">
-        {visibleItems.map((theme, index) => (
-          <ThemeCard key={`${theme.market}-${theme.theme}-${index}`} theme={theme} featured />
-        ))}
+        <FeaturedTheme theme={featured} />
+        {secondary.length ? (
+          <div className="grid gap-3">
+            {secondary.map((theme) => (
+              <ThemeRow key={`${theme.market}-${theme.theme}`} theme={theme} />
+            ))}
+          </div>
+        ) : null}
       </div>
 
-      {hiddenItems.length ? (
-        <details className="mt-4 rounded-2xl border border-sky-100 bg-white/70 p-4">
-          <summary className="cursor-pointer list-none text-sm font-semibold text-sky-800">
-            테마 신호 {hiddenItems.length}개 더 보기
-          </summary>
-          <div className="mt-4 grid gap-4 xl:grid-cols-3">
-            {hiddenItems.map((theme, index) => (
-              <ThemeCard key={`${theme.market}-${theme.theme}-${index + 2}`} theme={theme} />
+      {hidden.length ? (
+        <details className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-3">
+          <summary className="cursor-pointer list-none text-sm font-semibold text-slate-700">테마 신호 {hidden.length}개 더 보기</summary>
+          <div className="mt-3 grid gap-3">
+            {hidden.map((theme) => (
+              <ThemeRow key={`${theme.market}-${theme.theme}`} theme={theme} />
             ))}
           </div>
         </details>

@@ -251,6 +251,7 @@ export type ResultsAttributionCategory =
   | "timing"
   | "late-entry"
   | "crowded-trade"
+  | "trend-continuation"
   | "weak-catalyst"
   | "price-data"
   | "macro-headwind"
@@ -282,6 +283,7 @@ export interface EvaluatedInsight {
   dataQuality: "verified" | "limited" | "stale-excluded";
   benchmarkLabel?: string;
   outcomeSummary: string;
+  postMortemEvidence?: string[];
   followThroughReview?: string;
   lesson: string;
   lessonId?: string;

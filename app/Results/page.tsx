@@ -142,8 +142,14 @@ function attributionLabel(category?: string) {
   if (category === "sector-selection") return "섹터 선택";
   if (category === "stock-selection") return "종목 선택";
   if (category === "timing") return "타이밍";
+  if (category === "late-entry") return "후행 진입";
+  if (category === "crowded-trade") return "혼잡 거래";
+  if (category === "trend-continuation") return "추세 지속";
+  if (category === "weak-catalyst") return "약한 촉매";
   if (category === "price-data") return "가격 데이터";
   if (category === "event-risk") return "이벤트 리스크";
+  if (category === "macro-headwind") return "매크로 역풍";
+  if (category === "thesis-invalidated") return "논리 훼손";
   if (category === "risk-management") return "리스크 관리";
   return "귀인 미분류";
 }
@@ -398,6 +404,18 @@ export default async function ResultsPage() {
                       유지 판단 복기
                     </p>
                     <p className="mt-1 text-sm leading-6 text-slate-700">{item.followThroughReview}</p>
+                  </div>
+                ) : null}
+                {item.postMortemEvidence?.length ? (
+                  <div className="mt-3 rounded-2xl border border-indigo-100 bg-indigo-50/70 p-3">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-800">
+                      사후 원인 근거
+                    </p>
+                    <ul className="mt-2 space-y-1 text-sm leading-6 text-slate-700">
+                      {item.postMortemEvidence.slice(0, 3).map((evidence, evidenceIndex) => (
+                        <li key={`post-mortem-${item.ticker}-${evidenceIndex}`}>- {evidence}</li>
+                      ))}
+                    </ul>
                   </div>
                 ) : null}
                 {item.attribution ? (
