@@ -29,12 +29,20 @@ function attributionLabel(category?: ResultsAttributionCategory) {
 function buildFailureAttribution(report: WeeklyResultsReport) {
   const counts = new Map<string, number>();
   for (const item of report.evaluatedInsights) {
-    if (item.verdict !== "failed") continue;
+    if (item.verdict !== "failed" && item.verdict !== "mixed") continue;
     const label = attributionLabel(item.attribution?.category);
     counts.set(label, (counts.get(label) ?? 0) + 1);
   }
   return Array.from(counts.entries())
     .sort((a, b) => b[1] - a[1])
+    .slice(0, 3);
+}
+
+function buildLearningActions(report: WeeklyResultsReport) {
+  return report.evaluatedInsights
+    .filter((item) => item.verdict === "failed" || item.verdict === "mixed")
+    .map((item) => item.attribution?.whatToChange || item.lesson)
+    .filter(Boolean)
     .slice(0, 3);
 }
 
@@ -52,6 +60,7 @@ export function TrackRecordPreview({
     .filter((item, index, arr) => arr.findIndex((candidate) => candidate.reportDate === item.reportDate) === index)
     .slice(0, 4);
   const failureAttribution = buildFailureAttribution(report);
+  const learningActions = buildLearningActions(report);
 
   return (
     <section className="mt-4 rounded-2xl border border-white/70 bg-white/90 p-5 shadow-panel">
@@ -136,7 +145,7 @@ export function TrackRecordPreview({
           </div>
         </div>
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">실패 원인</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">실패/혼재 원인</p>
           <div className="mt-3 grid gap-2">
             {failureAttribution.length ? (
               failureAttribution.map(([label, count]) => (
@@ -146,11 +155,24 @@ export function TrackRecordPreview({
                 </div>
               ))
             ) : (
-              <p className="rounded-lg bg-white px-3 py-2 text-sm text-slate-600">이번 평가에는 구조화된 실패 귀인이 없습니다.</p>
+              <p className="rounded-lg bg-white px-3 py-2 text-sm text-slate-600">이번 평가에는 구조화된 실패/혼재 귀인이 없습니다.</p>
             )}
           </div>
         </div>
       </div>
+
+      {learningActions.length ? (
+        <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">다음 판단에서 바꿀 점</p>
+          <div className="mt-3 grid gap-2 md:grid-cols-3">
+            {learningActions.map((item, index) => (
+              <p key={`learning-action-${index}`} className="rounded-lg bg-white px-3 py-2 text-sm leading-6 text-slate-700">
+                {item}
+              </p>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

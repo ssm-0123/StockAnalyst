@@ -69,6 +69,15 @@ const THEME_EVENT_TYPES = new Set([
   "conference",
   "other",
 ]);
+const EXTERNAL_CATALYST_EVENT_TYPES = new Set([
+  "person_visit",
+  "policy",
+  "regulation",
+  "geopolitics",
+  "social_issue",
+  "product_launch",
+  "conference",
+]);
 const THEME_SOURCE_FRESHNESS = new Set(["today", "1-3d", "stale", "unverified"]);
 const THEME_TRADABILITY = new Set(["actionable", "watch_after_spike", "wait_for_confirmation", "avoid_chase"]);
 const ACTION_BIASES = new Set(["buy", "hold", "reduce", "exit"]);
@@ -519,6 +528,59 @@ function validateMarketRegime(input: JsonRecord, issues: MarketIntelligenceValid
   }
 }
 
+function hasResearchIdeas(input: JsonRecord) {
+  const sectorStocks = [...asArray(input.promisingSectors), ...asArray(input.cautionSectors)].some((sector) => {
+    if (!isRecord(sector)) return false;
+    return asArray(sector.stocks).length > 0;
+  });
+  return sectorStocks || asArray(input.smallCapIdeas).length > 0;
+}
+
+function validateExternalCatalystCoverage(input: JsonRecord, issues: MarketIntelligenceValidationIssue[]) {
+  const themes = asArray(input.themeRadar).filter(isRecord);
+  if (!hasResearchIdeas(input)) {
+    return;
+  }
+
+  if (themes.length === 0) {
+    issues.push(
+      issue(
+        "missing-external-catalyst-radar",
+        "warn",
+        "themeRadar",
+        "Public research ideas need a theme/event radar so the engine does not stay trapped in its own internal shortlist.",
+      ),
+    );
+    return;
+  }
+
+  const externalEventThemes = themes.filter((theme) => EXTERNAL_CATALYST_EVENT_TYPES.has(asString(theme.eventType)));
+  const freshExternalEventThemes = externalEventThemes.filter((theme) => {
+    const freshness = asString(theme.sourceFreshness);
+    return freshness === "today" || freshness === "1-3d" || !freshness;
+  });
+
+  if (externalEventThemes.length === 0) {
+    issues.push(
+      issue(
+        "external-catalyst-coverage-thin",
+        "warn",
+        "themeRadar",
+        "Theme radar should explicitly check external catalysts such as policy, public events, conferences, geopolitics, product launches, or social issue flows.",
+      ),
+    );
+  } else if (freshExternalEventThemes.length === 0) {
+    issues.push(
+      issue(
+        "external-catalyst-stale",
+        "warn",
+        "themeRadar",
+        "External catalyst themes are present but stale or unverified; recent event-driven flows should be verified before they drive the public view.",
+      ),
+    );
+  }
+}
+
 function validatePriceSnapshot(
   snapshot: unknown,
   path: string,
@@ -909,6 +971,7 @@ export function validateMarketIntelligenceOutput(value: unknown, options: Market
 
   validateMarketRegime(value, issues);
   validateEvidenceArray(value.evidence, "evidence", issues);
+  validateExternalCatalystCoverage(value, issues);
   validateSectors(value, analysisDate, referenceTimestamp, canonicalPrices, pricesGeneratedAt, issues);
   validateSmallCaps(value, analysisDate, referenceTimestamp, canonicalPrices, pricesGeneratedAt, issues);
   validateThemeRadar(value, analysisDate, referenceTimestamp, canonicalPrices, pricesGeneratedAt, issues);

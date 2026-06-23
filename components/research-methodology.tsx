@@ -81,6 +81,27 @@ export function ResearchMethodology({ latest }: { latest: DailyAnalysis }) {
           </p>
         </div>
       </div>
+
+      <div className="mt-3 grid gap-3 md:grid-cols-3">
+        <div className="rounded-xl border border-slate-200 bg-white p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Favor</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            즉시 매수 지시가 아니라, 앞으로 자금이 이동할 가능성이 높은 관찰 축입니다. 가격 위치와 무효화 조건을 함께 봅니다.
+          </p>
+        </div>
+        <div className="rounded-xl border border-slate-200 bg-white p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Confidence</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            맞을 확률이 아니라 근거 품질 점수입니다. 외부 이벤트, 가격 신선도, 테마 확산, 리스크 조건이 약하면 올라가기 어렵습니다.
+          </p>
+        </div>
+        <div className="rounded-xl border border-slate-200 bg-white p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Already Priced</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            모두가 아는 호재인지 확인하는 장치입니다. 좋은 뉴스라도 이미 가격에 반영됐다면 추격보다 확인/눌림 조건이 우선입니다.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
