@@ -1,14 +1,14 @@
 {
   "reportDate": "2026-06-19",
-  "lastUpdated": "2026-06-25T07:01:58+09:00",
+  "lastUpdated": "2026-06-24T06:58:34+09:00",
   "evaluationWindow": {
     "startDate": "2026-06-15",
     "endDate": "2026-06-19",
     "label": "2026년 6월 3주차"
   },
   "overallVerdict": "유망 섹터는 AI 전력·반도체 리더가 맞았지만, KR HBM caution과 여행 caution은 추세 지속을 과소평가했습니다.",
-  "summary": "월~금 목표 평가창인 2026년 6월 15일부터 6월 19일까지 대표본 5개가 모두 확보되어 로컬 스냅샷만으로 평가했습니다. VST·AVGO 유망 콜과 FDS 소프트웨어 caution은 검증 가능한 초과성과를 냈지만, SK하이닉스 HBM 과밀 경고와 EXPE 여행 caution은 주도 추세 지속에 밀렸습니다. 중소형은 APLD만 follow-through가 확인됐고, OKLO는 방향은 맞았으나 품질 전력주보다 약했으며 에프에스티는 기준선 회복 실패로 반박됐습니다. evaluatedInsights 8개는 모두 snapshot/verified 근거이며 외부 근거는 failed/mixed 귀인 보조에만 사용했습니다.",
-  "benchmarkNote": "벤치마크와 알파는 같은 평가창 로컬 priceSnapshot 반복 관측만 사용했고, caution은 비교 대상보다 더 약할수록 양의 callAlpha로 계산했으며, 외부 근거는 가격 판정에 반영하지 않았습니다.",
+  "summary": "월~금 목표 평가창인 2026년 6월 15일부터 6월 19일까지 대표본 5개가 모두 확보되어 로컬 스냅샷만으로 평가했습니다. VST·AVGO 유망 콜과 FDS 소프트웨어 caution은 검증 가능한 초과성과를 냈지만, SK하이닉스 HBM 과밀 경고와 EXPE 여행 caution은 주도 추세 지속에 밀렸습니다. 중소형은 APLD만 follow-through가 확인됐고, OKLO는 방향은 맞았으나 품질 전력주보다 약했으며 에프에스티는 기준선 회복 실패로 반박됐습니다. evaluatedInsights 8개는 모두 snapshot/verified 근거이며 fallback 가격은 사용하지 않았습니다.",
+  "benchmarkNote": "벤치마크와 알파는 같은 평가창 로컬 priceSnapshot 반복 관측만 사용했고, caution은 비교 대상보다 더 약할수록 양의 callAlpha로 계산했습니다.",
   "scorecard": {
     "evaluatedCount": 8,
     "workedCount": 4,
@@ -189,7 +189,7 @@
       "dataQuality": "verified",
       "outcomeSummary": "57.49달러에서 61.10달러로 +6.3% 올랐지만 CEG·VST 품질 전력주 평균 +9.4%에는 3.1%p 뒤졌습니다.",
       "postMortemEvidence": [
-        "Centrus의 2026-06-18 발표는 Oklo와 HALEU 공급 LOI를 공개했지만 인도 시작이 2029년이라 단기 이벤트와 상업화 검증 사이의 간극이 남았습니다.",
+        "외부 근거 제한으로 가격 판정은 로컬 스냅샷만 사용했으며, 6월 19일 대표본은 Centrus 연료 계약 이벤트가 있더라도 58달러 이탈 시 buy 해제를 명시했습니다.",
         "로컬 평가창 전반에서 OKLO는 65달러 회복 전까지 품질 전력주보다 낮은 확신의 옵션주로 반복 분류됐습니다."
       ],
       "followThroughReview": "60달러 회복과 58달러 방어는 확인됐지만, 며칠째 유지한 관찰형 판단은 품질주 대비 초과성과까지는 만들지 못했습니다.",
@@ -229,7 +229,7 @@
       "dataQuality": "verified",
       "outcomeSummary": "2,382,000원에서 2,685,000원으로 +12.7% 급등해 KODEX 반도체 +6.2%를 크게 앞섰고, caution 방향이 틀렸습니다.",
       "postMortemEvidence": [
-        "연합인포맥스는 2026-06-12 S&P 보고서를 인용해 메모리 호황과 삼성전자·SK하이닉스 수혜 전망을 전했고, 이는 HBM 리더 continuation 근거를 강화했습니다.",
+        "외부 근거 제한으로 가격 판정은 로컬 스냅샷만 사용했으며, 6월 19일 대표본은 HBM4 기대와 신고가 근접을 동시에 인정했습니다.",
         "로컬 무효화 조건은 2,738,000원 돌파 후 2개 세션 유지와 후발주 동반 강세였으나, 평가창 안에서는 이 조건을 기다리기 전부터 caution 알파가 크게 악화됐습니다."
       ],
       "followThroughReview": "3회 반복 관측 모두 가격이 상승했고 KODEX 반도체보다 강해, crowded caution을 붕괴 콜처럼 표현한 점이 잘못됐습니다.",
@@ -310,8 +310,7 @@
       "dataQuality": "verified",
       "outcomeSummary": "224.89달러에서 240.90달러로 +7.1% 상승해 UAL·DAL 항공 peer 평균 +1.9%보다 더 강했고, caution 방향이 틀렸습니다.",
       "postMortemEvidence": [
-        "Guardian의 2026-06-15 시장 보도는 이란 평화 기대 속 유가 하락과 주식시장 relief를 전해 여행·항공 베타의 추세 지속 배경을 뒷받침했습니다.",
-        "Expedia의 2026-06-04 자체 데이터는 항공권 가격 상승에도 축구 여행 검색 수요가 강하다고 밝혀, 온라인여행 caution을 약화시키는 수요 근거가 있었습니다.",
+        "외부 근거 제한으로 가격 판정은 로컬 스냅샷만 사용했으며, 6월 16~17일 대표본은 유가 완화와 여행 심리 개선의 2차 수혜 가능성을 이미 반영했습니다.",
         "로컬 무효화 조건은 230달러 회복과 항공주 동반 안정이었는데, EXPE는 6월 16일 236.94달러로 회복한 뒤 평가 종료일까지 230달러 위에 머물렀습니다."
       ],
       "followThroughReview": "초기 reduce 문구는 6월 16일 이후 hold로 완화됐지만, 결과적으로 230달러 회복을 빠르게 인정하지 못해 caution 알파가 악화됐습니다.",
@@ -365,7 +364,7 @@
       "priorView": "caution",
       "verdict": "failed",
       "callAlphaPct": -6.5,
-      "detail": "국면 판단 자체가 틀림에 가깝습니다. 과밀과 고점권은 맞았지만 SK하이닉스의 HBM 리더십 continuation이 KODEX 반도체보다 훨씬 강했고, 평가 직전 S&P의 메모리 호황 전망도 리더 회피보다 continuation 쪽 근거를 강화했습니다."
+      "detail": "국면 판단 자체가 틀림에 가깝습니다. 과밀과 고점권은 맞았지만 SK하이닉스의 HBM 리더십 continuation이 KODEX 반도체보다 훨씬 강해 caution을 붕괴 콜처럼 표현하면 안 됐습니다."
     },
     {
       "sectorName": "KR 조선·방산·기계 수주형 순환매",
