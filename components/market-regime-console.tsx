@@ -86,12 +86,14 @@ function Metric({
   previous,
   inverse,
   help,
+  direction,
 }: {
   label: string;
   value?: number;
   previous?: number;
   inverse?: boolean;
   help: string;
+  direction: string;
 }) {
   const score = clampScore(value);
   const delta = metricDelta(value, previous);
@@ -99,7 +101,10 @@ function Metric({
   return (
     <div className="rounded-xl border border-slate-200 bg-slate-50 p-3" title={help}>
       <div className="flex items-center justify-between gap-3">
-        <TermHint label={label} description={help} className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500" />
+        <div>
+          <TermHint label={label} description={help} className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500" />
+          <p className="mt-1 text-[11px] font-medium text-slate-500">{direction}</p>
+        </div>
         <Delta value={delta} inverse={inverse} />
       </div>
       <div className="mt-3 flex items-end justify-between gap-3">
@@ -152,19 +157,27 @@ export function MarketRegimeConsole({
   const topRotation = splitLabel(regime.nextRotation?.[0] ?? latest.topOpportunity);
 
   return (
-    <section className="mt-4 rounded-2xl border border-white/70 bg-white/90 p-5 shadow-panel">
+    <section className="mt-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
       <div className="grid gap-4 xl:grid-cols-[0.8fr_1.2fr]">
         <div>
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
             <Gauge className="size-4" />
-            Regime & Change
+            Current Regime
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
-            {stageLabel(regime.stage)} 시장 국면 · {riskLabel(risk)}
+            {stageLabel(regime.stage)} 국면 · {riskLabel(risk)}
           </h2>
           <p className="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">{regime.summary}</p>
 
-          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+          <div className="mt-4 hidden rounded-xl border border-slate-200 bg-slate-950 p-4 text-white sm:block">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-300">What this means</p>
+            <p className="mt-2 text-sm leading-6 text-slate-100">
+              지금은 방향성 자체보다 <span className="font-semibold text-emerald-200">다음 순환 후보</span>와{" "}
+              <span className="font-semibold text-rose-200">추격 부담</span>을 같이 봐야 하는 구간입니다.
+            </p>
+          </div>
+
+          <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
               <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
                 <Shield className="size-4" />
@@ -192,25 +205,28 @@ export function MarketRegimeConsole({
         </div>
 
         <div className="grid gap-3">
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
             <Metric
               label="쏠림도"
               value={regime.crowdedness}
               previous={previous?.crowdedness}
               inverse
               help="주도 테마에 가격과 관심이 얼마나 몰려 있는지 봅니다. 높을수록 추격 부담이 큽니다."
+              direction="낮을수록 추격 부담 작음"
             />
             <Metric
               label="위험 대비 보상"
               value={regime.riskReward}
               previous={previous?.riskReward}
               help="현재 가격에서 남은 상승 여지와 하락 위험의 균형입니다. 높을수록 관찰 자리가 낫습니다."
+              direction="높을수록 진입 여지 우호적"
             />
             <Metric
               label="자금 이동 가능성"
               value={regime.rotationProbability}
               previous={previous?.rotationProbability}
               help="다음 섹터나 테마로 자금이 옮겨갈 가능성입니다."
+              direction="높을수록 순환 가능성 큼"
             />
             <Metric
               label="취약도"
@@ -218,6 +234,7 @@ export function MarketRegimeConsole({
               previous={previous?.fragilityScore}
               inverse
               help="작은 충격에 시장이 흔들릴 가능성입니다. 높을수록 무효화 조건이 중요합니다."
+              direction="낮을수록 시장 품질 안정"
             />
           </div>
 

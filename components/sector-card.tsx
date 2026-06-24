@@ -37,7 +37,7 @@ export function SectorCard({
     previousRank == null ? null : previousRank > sector.rank ? "up" : previousRank < sector.rank ? "down" : "flat";
 
   return (
-    <Card className="h-full border-white/70 bg-white/90 backdrop-blur">
+    <Card className="h-full min-w-0 overflow-hidden border-white/70 bg-white/90 backdrop-blur">
       <CardHeader className="space-y-3 pb-4">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
@@ -56,7 +56,7 @@ export function SectorCard({
           </div>
         </div>
         <div
-          className={`flex items-center gap-2 rounded-2xl px-3 py-2 text-sm ${
+          className={`flex flex-wrap items-center gap-2 rounded-2xl px-3 py-2 text-sm ${
             rankDelta === "up"
               ? "bg-emerald-50 text-emerald-700"
               : rankDelta === "down"
@@ -67,7 +67,7 @@ export function SectorCard({
           <span className="font-medium">
             전일: {previousRank ? `#${previousRank}` : "순위 밖"}
           </span>
-          <ArrowRight className="size-4" />
+          <ArrowRight className="size-4 shrink-0" />
           <span className="font-semibold">오늘: #{sector.rank}</span>
         </div>
         <p className="line-clamp-2 text-sm leading-6 text-slate-600">{sector.thesis}</p>

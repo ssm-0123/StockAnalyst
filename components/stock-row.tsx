@@ -131,7 +131,7 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
     <details className="group rounded-2xl border border-slate-200/80 bg-white/70">
       <summary className="flex cursor-pointer list-none items-start justify-between gap-3 px-3 py-3">
         <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm font-semibold tracking-[0.18em] text-slate-900">{stock.ticker}</span>
             <Badge variant={getMarketBadgeVariant(stock.market)} className="px-2 py-0.5 text-[10px]">
               {getMarketLabel(stock.market)}
@@ -145,7 +145,7 @@ export function StockRow({ stock, caution = false }: { stock: StockIdea; caution
             <Badge variant="neutral" className="px-2 py-0.5 text-[10px]">
               {timeHorizonLabel(stock.timeHorizon)}
             </Badge>
-            <p className="truncate text-sm font-medium text-slate-500">{stock.companyName}</p>
+            <p className="break-words text-sm font-medium leading-5 text-slate-500">{stock.companyName}</p>
           </div>
           <p className={cn("mt-1 text-sm leading-5 text-slate-600", caution && "text-slate-700")}>
             {stock.rationale}

@@ -69,7 +69,7 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
             <Badge variant={getMarketBadgeVariant(candidate.market)}>{getMarketLabel(candidate.market)}</Badge>
             <Badge variant={entryQualityVariant(candidate.entryQuality)}>{entryQualityLabel(candidate.entryQuality)}</Badge>
           </div>
-          <h3 className="mt-3 truncate text-lg font-semibold tracking-tight text-slate-950">{candidate.companyName}</h3>
+          <h3 className="mt-3 break-words text-lg font-semibold leading-6 tracking-tight text-slate-950">{candidate.companyName}</h3>
           <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{candidate.ticker}</p>
         </div>
         <Badge variant="positive">{actionBiasLabel(candidate.actionBias)}</Badge>
@@ -78,7 +78,7 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
       <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
         <span className="font-semibold text-slate-900">{formatPrice(snapshot?.currentPrice, candidate.market, snapshot?.currency)}</span>
         <span>·</span>
-        <span className="truncate">{candidate.sector}</span>
+        <span className="break-words">{candidate.sector}</span>
       </div>
 
       <div className="mt-4 grid flex-1 gap-3">

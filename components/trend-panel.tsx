@@ -27,7 +27,7 @@ function MiniBars({
       {data.map((item, index) => (
         <div key={`${tone}-${item.sector}-${index}`} className="space-y-1">
           <div className="flex items-center justify-between gap-3 text-sm">
-            <span className="truncate text-slate-700">{item.sector}</span>
+            <span className="break-words text-slate-700">{item.sector}</span>
             <span className="font-medium text-slate-500">{item.count}일</span>
           </div>
           <div className="h-2 rounded-full bg-slate-100">
