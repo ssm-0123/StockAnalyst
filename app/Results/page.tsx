@@ -1,7 +1,9 @@
-import { BarChart3, CheckCircle2, Clock3, Shield, TrendingDown, TrendingUp, TriangleAlert } from "lucide-react";
+import { BarChart3, CheckCircle2, Clock3, GitCompareArrows, Shield, TrendingDown, TrendingUp, TriangleAlert } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { getLatestResultsReport, formatTimestamp } from "@/lib/dashboard";
+import { cn } from "@/lib/utils";
+import type { EvaluatedInsight } from "@/lib/types";
 
 function verdictTone(verdict: "worked" | "mixed" | "failed") {
   if (verdict === "worked") {
@@ -154,9 +156,102 @@ function attributionLabel(category?: string) {
   return "귀인 미분류";
 }
 
+function signedPercent(value: number) {
+  return `${value > 0 ? "+" : ""}${value.toFixed(1)}%`;
+}
+
+function clampBarPercent(value: number, scale: number) {
+  if (!Number.isFinite(value) || scale <= 0) return "0%";
+  return `${Math.min(50, Math.max(2, (Math.abs(value) / scale) * 50)).toFixed(1)}%`;
+}
+
+function returnToneClass(value: number) {
+  if (value > 0) return "bg-emerald-500";
+  if (value < 0) return "bg-rose-500";
+  return "bg-slate-400";
+}
+
+function alphaToneClass(value: number) {
+  if (value > 0) return "text-emerald-700";
+  if (value < 0) return "text-rose-700";
+  return "text-slate-700";
+}
+
+function PerformanceBar({ label, value, scale }: { label: string; value: number; scale: number }) {
+  return (
+    <div className="grid grid-cols-[4.5rem_minmax(0,1fr)_4rem] items-center gap-3">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">{label}</span>
+      <div className="relative h-7 overflow-hidden rounded-full bg-slate-100">
+        <div className="absolute left-1/2 top-0 h-full w-px bg-slate-300" />
+        <div
+          className={cn(
+            "absolute top-1/2 h-2.5 -translate-y-1/2 rounded-full",
+            value >= 0 ? "left-1/2" : "right-1/2",
+            returnToneClass(value),
+          )}
+          style={{ width: clampBarPercent(value, scale) }}
+        />
+      </div>
+      <span className={cn("text-right text-sm font-semibold", alphaToneClass(value))}>{signedPercent(value)}</span>
+    </div>
+  );
+}
+
+function PerformanceVisualCard({ item, scale }: { item: EvaluatedInsight; scale: number }) {
+  return (
+    <article className="rounded-3xl border border-slate-200/80 bg-white/90 p-4">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant={item.verdict === "worked" ? "positive" : item.verdict === "failed" ? "caution" : "neutral"}>
+              {verdictLabel(item.verdict)}
+            </Badge>
+            <Badge variant="neutral">{stanceLabel(item.stance)}</Badge>
+            <span className="text-sm font-semibold text-slate-950">{item.companyName}</span>
+            <span className="text-sm text-slate-500">{item.ticker}</span>
+          </div>
+          <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+            <span>최초 콜 {item.entryDate}</span>
+            <span className="text-slate-300">→</span>
+            <span>평가 {item.evaluationDate}</span>
+            <span className="rounded-full bg-slate-100 px-2 py-0.5 font-semibold text-slate-700">{item.holdingPeriodDays}일</span>
+          </div>
+        </div>
+        <div
+          className={cn(
+            "rounded-full px-3 py-1 text-sm font-semibold",
+            item.callAlphaPct >= 0 ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700",
+          )}
+        >
+          알파 {signedPercent(item.callAlphaPct)}
+        </div>
+      </div>
+      <div className="mt-4 space-y-2">
+        <PerformanceBar label="종목" value={item.priceReturnPct} scale={scale} />
+        <PerformanceBar label="비교" value={item.benchmarkReturnPct} scale={scale} />
+      </div>
+      <div className="mt-4 rounded-2xl border border-slate-200/80 bg-slate-50/80 p-3">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">비교 기준</p>
+        <p className="mt-1 text-sm leading-5 text-slate-700">{item.benchmarkLabel}</p>
+      </div>
+    </article>
+  );
+}
+
 export default async function ResultsPage() {
   const { latest } = await getLatestResultsReport();
   const smallCapInsights = latest.evaluatedInsights.filter((item) => item.stance === "small-cap");
+  const visualInsights = [...latest.evaluatedInsights].sort((a, b) => Math.abs(b.callAlphaPct) - Math.abs(a.callAlphaPct));
+  const visualScale = Math.max(
+    10,
+    ...visualInsights.flatMap((item) => [
+      Math.abs(item.priceReturnPct),
+      Math.abs(item.benchmarkReturnPct),
+      Math.abs(item.callAlphaPct),
+    ]),
+  );
+  const strongestAlpha = [...latest.evaluatedInsights].sort((a, b) => b.callAlphaPct - a.callAlphaPct).slice(0, 3);
+  const weakestAlpha = [...latest.evaluatedInsights].sort((a, b) => a.callAlphaPct - b.callAlphaPct).slice(0, 3);
   const smallCapScorecard = latest.smallCapScorecard ?? {
     evaluatedCount: smallCapInsights.length,
     workedCount: smallCapInsights.filter((item) => item.verdict === "worked").length,
@@ -323,6 +418,51 @@ export default async function ResultsPage() {
         </section>
       ) : null}
 
+      <section className="mt-10 rounded-[1.75rem] border border-white/70 bg-white/90 p-6 shadow-panel">
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
+              <GitCompareArrows className="size-4" />
+              성과 시각화
+            </div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">최초 콜 이후 실제 성과와 알파를 비교합니다.</h2>
+            <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-500">
+              각 막대는 평가창 안에서 최초로 콜을 낸 날부터 평가일까지의 종목 수익률과 비교군 수익률입니다.
+              알파는 원래 판단 방향 기준의 초과성과로 계산합니다.
+            </p>
+          </div>
+          <div className="grid gap-2 sm:grid-cols-2 lg:min-w-[24rem]">
+            <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-800">가장 강한 알파</p>
+              <div className="mt-2 space-y-1">
+                {strongestAlpha.map((item) => (
+                  <div key={`strong-alpha-${item.market}-${item.ticker}`} className="flex items-center justify-between gap-2 text-sm">
+                    <span className="truncate font-semibold text-slate-800">{item.companyName}</span>
+                    <span className="shrink-0 font-semibold text-emerald-700">{signedPercent(item.callAlphaPct)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl border border-rose-100 bg-rose-50/70 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rose-800">가장 약한 알파</p>
+              <div className="mt-2 space-y-1">
+                {weakestAlpha.map((item) => (
+                  <div key={`weak-alpha-${item.market}-${item.ticker}`} className="flex items-center justify-between gap-2 text-sm">
+                    <span className="truncate font-semibold text-slate-800">{item.companyName}</span>
+                    <span className="shrink-0 font-semibold text-rose-700">{signedPercent(item.callAlphaPct)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-4 xl:grid-cols-2">
+          {visualInsights.map((item) => (
+            <PerformanceVisualCard key={`visual-${item.market}-${item.ticker}-${item.entryDate}`} item={item} scale={visualScale} />
+          ))}
+        </div>
+      </section>
+
       <section className="mt-10 grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-[1.75rem] border border-white/70 bg-white/90 p-6 shadow-panel">
           <h2 className="text-lg font-semibold text-slate-950">평가된 인사이트</h2>
@@ -396,6 +536,10 @@ export default async function ResultsPage() {
                     {item.priceReturnPct.toFixed(1)}% vs 벤치마크 {item.benchmarkReturnPct > 0 ? "+" : ""}
                     {item.benchmarkReturnPct.toFixed(1)}%
                   </p>
+                  <div className="mt-3 space-y-2">
+                    <PerformanceBar label="종목" value={item.priceReturnPct} scale={visualScale} />
+                    <PerformanceBar label="비교" value={item.benchmarkReturnPct} scale={visualScale} />
+                  </div>
                 </div>
                 <p className="mt-4 text-sm leading-6 text-slate-700">{item.outcomeSummary}</p>
                 {item.followThroughReview ? (
