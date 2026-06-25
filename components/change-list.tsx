@@ -73,7 +73,7 @@ export function ChangeList({ changes }: { changes: ChangeEvent[] }) {
                         </div>
                         <div className="min-w-0">
                           <p className="text-sm font-semibold text-slate-900">{change.title}</p>
-                          <p className="line-clamp-1 text-sm text-slate-500">{change.detail}</p>
+                          <p className="break-words text-sm text-slate-500">{change.detail}</p>
                         </div>
                       </div>
                     );

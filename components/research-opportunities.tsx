@@ -84,13 +84,13 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
       <div className="mt-4 grid flex-1 gap-3">
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Thesis</p>
-          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-700">
+          <p className="mt-1 break-words text-sm leading-6 text-slate-700">
             {candidate.stockThesis ?? candidate.thesis ?? candidate.rationale}
           </p>
         </div>
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Catalyst</p>
-          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-700">{pickCatalyst(candidate)}</p>
+          <p className="mt-1 break-words text-sm leading-6 text-slate-700">{pickCatalyst(candidate)}</p>
         </div>
       </div>
 
@@ -100,18 +100,18 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
             <Scale className="size-4 text-slate-700" />
             Edge
           </div>
-          <p className="mt-1 line-clamp-2 text-xs leading-5 text-slate-600">{pickEdge(candidate)}</p>
+          <p className="mt-1 break-words text-xs leading-5 text-slate-600">{pickEdge(candidate)}</p>
         </div>
         <div className="rounded-lg border border-amber-100 bg-amber-50/70 p-2">
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-700">Priced-in / Consensus Risk</p>
-          <p className="mt-1 line-clamp-2 text-xs leading-5 text-slate-600">{pricedInText(candidate)}</p>
+          <p className="mt-1 break-words text-xs leading-5 text-slate-600">{pricedInText(candidate)}</p>
         </div>
         <div className="rounded-lg border border-white bg-white p-2">
           <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
             <BadgeCheck className="size-4 text-emerald-700" />
             Confidence
           </div>
-          <p className="mt-1 line-clamp-1 text-xs leading-5 text-slate-500">
+          <p className="mt-1 break-words text-xs leading-5 text-slate-500">
             {confidenceLabel(candidate.confidenceLevel)} · {candidate.confidenceReason ?? "가격 스냅샷 기준 확인 중"}
           </p>
         </div>
@@ -120,7 +120,7 @@ function OpportunityCard({ candidate }: { candidate: DashboardActionCandidate })
             <ShieldAlert className="size-4" />
             Risk
           </div>
-          <p className="mt-1 line-clamp-2 text-xs leading-5 text-slate-600">{candidate.invalidation ?? pickRisk(candidate)}</p>
+          <p className="mt-1 break-words text-xs leading-5 text-slate-600">{candidate.invalidation ?? pickRisk(candidate)}</p>
         </div>
       </div>
 

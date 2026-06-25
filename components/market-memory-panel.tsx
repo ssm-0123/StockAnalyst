@@ -4,9 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { withBasePath } from "@/lib/site";
 import type { LegacySectorDecision, WeeklyResultsReport } from "@/lib/types";
 
-function shortText(value: string, maxLength = 118) {
-  if (value.length <= maxLength) return value;
-  return `${value.slice(0, maxLength).trim()}...`;
+function shortText(value: string) {
+  return value;
 }
 
 function pickSignal(report: WeeklyResultsReport) {

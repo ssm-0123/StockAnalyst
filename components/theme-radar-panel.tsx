@@ -62,12 +62,12 @@ function ThemeRow({ theme }: { theme: ThemeRadarItem }) {
         <p className="mt-2 text-sm font-semibold leading-5 text-slate-950">{theme.theme}</p>
       </div>
       <div>
-        <p className="line-clamp-2 text-sm leading-6 text-slate-600">{theme.marketReaction || theme.narrative}</p>
+        <p className="break-words text-sm leading-6 text-slate-600">{theme.marketReaction || theme.narrative}</p>
         <p className="mt-1 text-xs font-semibold text-amber-700">반영도: {pricedText(theme)}</p>
       </div>
       <div>
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">확인 조건</p>
-        <p className="mt-1 line-clamp-2 text-sm leading-5 text-slate-700">{watchText(theme)}</p>
+        <p className="mt-1 break-words text-sm leading-5 text-slate-700">{watchText(theme)}</p>
       </div>
     </div>
   );
@@ -92,18 +92,18 @@ function FeaturedTheme({ theme }: { theme: ThemeRadarItem }) {
       <div className="mt-4 grid gap-3 xl:grid-cols-[1fr_1fr_0.9fr]">
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Catalyst</p>
-          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-700">{theme.narrative}</p>
+          <p className="mt-1 break-words text-sm leading-6 text-slate-700">{theme.narrative}</p>
         </div>
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Market Reaction</p>
-          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-700">{theme.marketReaction}</p>
+          <p className="mt-1 break-words text-sm leading-6 text-slate-700">{theme.marketReaction}</p>
         </div>
         <div className="rounded-xl border border-amber-100 bg-amber-50/70 p-3">
           <div className="flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-700">
             <Scale className="size-3.5" />
             Priced-in Check
           </div>
-          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-700">{pricedText(theme)}</p>
+          <p className="mt-1 break-words text-sm leading-6 text-slate-700">{pricedText(theme)}</p>
         </div>
       </div>
 
@@ -126,14 +126,14 @@ function FeaturedTheme({ theme }: { theme: ThemeRadarItem }) {
             <ShieldAlert className="size-3.5" />
             Consensus Risk
           </div>
-          <p className="line-clamp-2 text-sm leading-6 text-slate-700">{theme.risk}</p>
+          <p className="break-words text-sm leading-6 text-slate-700">{theme.risk}</p>
         </div>
         <div className="rounded-xl border border-white bg-white p-3">
           <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
             <CalendarClock className="size-3.5" />
             Watch
           </div>
-          <p className="line-clamp-1 text-sm leading-6 text-slate-700">{watchText(theme)}</p>
+          <p className="break-words text-sm leading-6 text-slate-700">{watchText(theme)}</p>
         </div>
       </div>
     </article>

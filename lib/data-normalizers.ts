@@ -10,6 +10,7 @@ import {
   LessonLifecycleStatus,
   MarketRegimeAssessment,
   MarketCode,
+  NextCycleCandidate,
   ReasonBlock,
   SectorEntry,
   SignalTiming,
@@ -478,6 +479,31 @@ function normalizeMarketRegime(value: unknown): MarketRegimeAssessment | undefin
   };
 }
 
+function normalizeNextCycleCandidate(value: unknown): NextCycleCandidate {
+  const input = asRecord(value);
+  const stance =
+    input.stance === "favor" || input.stance === "watch" || input.stance === "avoid"
+      ? input.stance
+      : undefined;
+
+  return {
+    from: asString(input.from, "기존 관심 영역"),
+    to: asString(input.to, "다음 확인 영역"),
+    stance,
+    stocks: asArray(input.stocks).map((stock) => {
+      const row = asRecord(stock);
+      return {
+        ticker: asString(row.ticker, "N/A"),
+        companyName: asOptionalString(row.companyName),
+        market: asOptionalMarketCode(row.market),
+        reason: asOptionalString(row.reason),
+      };
+    }),
+    condition: asOptionalString(input.condition),
+    risk: asOptionalString(input.risk),
+  };
+}
+
 export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
   const input = asRecord(value);
   const reasons = asRecord(input.reasons);
@@ -510,6 +536,7 @@ export function normalizeDailyAnalysis(value: unknown): DailyAnalysis {
     analysisSuggestions: asArray(input.analysisSuggestions).map(normalizeAnalysisSuggestion),
     legacySectorDecisions: asArray(input.legacySectorDecisions).map(normalizeLegacySectorDecision),
     themeRadar: asArray(input.themeRadar).map(normalizeThemeRadarItem),
+    nextCycle: asArray(input.nextCycle).map(normalizeNextCycleCandidate),
     smallCapIdeas: asArray(input.smallCapIdeas).map(normalizeSmallCapIdea),
     trendSummary: normalizeTrendSummary(input.trendSummary),
   };

@@ -45,6 +45,20 @@ export interface MarketRegimeAssessment {
   summary: string;
 }
 
+export interface NextCycleCandidate {
+  from: string;
+  to: string;
+  stance?: "favor" | "watch" | "avoid";
+  stocks?: Array<{
+    ticker: string;
+    companyName?: string;
+    market?: MarketCode;
+    reason?: string;
+  }>;
+  condition?: string;
+  risk?: string;
+}
+
 export interface ValidationIssue {
   code: string;
   label: string;
@@ -354,6 +368,7 @@ export interface DailyAnalysis {
   analysisSuggestions?: AnalysisSuggestion[];
   legacySectorDecisions?: LegacySectorDecision[];
   themeRadar?: ThemeRadarItem[];
+  nextCycle?: NextCycleCandidate[];
   smallCapIdeas?: SmallCapIdea[];
   trendSummary?: TrendSummary;
   validationSummary?: ValidationSummary;

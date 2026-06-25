@@ -5,7 +5,24 @@ import { TermHint } from "@/components/term-hint";
 import { Badge } from "@/components/ui/badge";
 import { buildForwardConfidence } from "@/lib/research-confidence";
 import { withBasePath } from "@/lib/site";
-import type { DailyAnalysis } from "@/lib/types";
+import type { ConfidenceLevel, DailyAnalysis, EntryQuality, MarketCode } from "@/lib/types";
+
+type NextCycleStock = {
+  ticker: string;
+  companyName: string;
+  market: MarketCode;
+  confidenceLevel?: ConfidenceLevel;
+  entryQuality?: EntryQuality;
+  reason?: string;
+};
+
+type NextCycleRow = {
+  from: string;
+  to: string;
+  condition?: string;
+  risk?: string;
+  stocks: NextCycleStock[];
+};
 
 function splitLabel(value: string) {
   return value.includes("|") ? value.split("|").map((part) => part.trim()).filter(Boolean).at(-1) ?? value : value;
@@ -27,7 +44,7 @@ function compactLabel(value: string) {
   ];
   const matched = rules.find(([pattern]) => pattern.test(label));
   if (matched) return matched[1];
-  return label.length > 18 ? `${label.slice(0, 18).trim()}...` : label;
+  return label;
 }
 
 function unique(items: string[]) {
@@ -161,7 +178,27 @@ function recommendedForCycleLabel(
   return Array.from(new Map(merged.map((stock) => [`${stock.market}-${stock.ticker}`, stock])).values()).slice(0, 3);
 }
 
-function cycleRows(latest: DailyAnalysis, buyCandidates: DashboardActionCandidate[]) {
+function cycleRows(latest: DailyAnalysis, buyCandidates: DashboardActionCandidate[]): NextCycleRow[] {
+  if (latest.nextCycle?.length) {
+    return latest.nextCycle
+      .filter((row) => row.to)
+      .slice(0, 3)
+      .map((row) => ({
+        from: row.from,
+        to: row.to,
+        condition: row.condition,
+        risk: row.risk,
+        stocks: (row.stocks ?? [])
+          .filter((stock) => stock.ticker)
+          .map((stock) => ({
+            ticker: stock.ticker,
+            companyName: stock.companyName ?? "종목명 확인 필요",
+            market: stock.market ?? "GLOBAL",
+            reason: stock.reason,
+          })),
+      }));
+  }
+
   const flows = moneyFlows(latest);
   const rotations = unique(latest.marketRegime?.nextRotation ?? []);
   const rows = flows.length
@@ -176,7 +213,13 @@ function cycleRows(latest: DailyAnalysis, buyCandidates: DashboardActionCandidat
     .slice(0, 3)
     .map((row) => ({
       ...row,
-      stocks: recommendedForCycleLabel(row.to, latest, buyCandidates),
+      stocks: recommendedForCycleLabel(row.to, latest, buyCandidates).map((stock) => ({
+        ticker: stock.ticker,
+        companyName: stock.companyName,
+        market: stock.market,
+        confidenceLevel: stock.confidenceLevel,
+        entryQuality: stock.entryQuality,
+      })),
     }));
 }
 
@@ -193,6 +236,20 @@ function compactSentence(value?: string, maxLength = 140) {
 
 function topLine(latest: DailyAnalysis) {
   return compactSentence(latest.topOpportunity || latest.marketRegime?.summary || latest.promisingSectors[0]?.thesis);
+}
+
+function formatKstDateTime(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).format(date);
 }
 
 function DecisionTile({
@@ -217,12 +274,12 @@ function DecisionTile({
     <div className={`min-w-0 rounded-xl border p-3 ${toneClass}`}>
       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] opacity-75">{label}</p>
       <p className="mt-2 break-words text-sm font-semibold leading-5">{title}</p>
-      <p className="mt-1 hidden line-clamp-2 text-xs leading-5 opacity-80 sm:block">{body}</p>
+      <p className="mt-1 hidden break-words text-xs leading-5 opacity-80 sm:block">{body}</p>
     </div>
   );
 }
 
-function stockLabel(stock: ReturnType<typeof recommendedForCycleLabel>[number]) {
+function stockLabel(stock: NextCycleStock) {
   return `${stock.ticker} · ${stock.companyName}`;
 }
 
@@ -261,6 +318,13 @@ function NextCyclePanel({
                 <Badge variant="neutral">종목 후보 확인 필요</Badge>
               )}
             </div>
+            {row.condition || row.risk ? (
+              <p className="mt-2 text-xs leading-5 text-slate-600">
+                {row.condition ? `조건: ${row.condition}` : ""}
+                {row.condition && row.risk ? " / " : ""}
+                {row.risk ? `리스크: ${row.risk}` : ""}
+              </p>
+            ) : null}
           </div>
         ))}
       </div>
@@ -283,6 +347,13 @@ function NextCyclePanel({
                 <Badge variant="neutral">종목 후보 확인 필요</Badge>
               )}
             </div>
+            {row.condition || row.risk ? (
+              <p className="mt-2 text-xs leading-5 text-slate-600">
+                {row.condition ? `조건: ${row.condition}` : ""}
+                {row.condition && row.risk ? " / " : ""}
+                {row.risk ? `리스크: ${row.risk}` : ""}
+              </p>
+            ) : null}
           </div>
         ))}
       </div>
@@ -318,6 +389,9 @@ export function ForwardViewPanel({
             </Badge>
             <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
               {latest.date}
+            </Badge>
+            <Badge variant="neutral" className="border-white/10 bg-white/10 text-slate-200">
+              기준 {formatKstDateTime(latest.lastUpdated)} KST
             </Badge>
           </div>
           <a

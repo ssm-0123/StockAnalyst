@@ -167,7 +167,7 @@ export function MarketRegimeConsole({
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
             {stageLabel(regime.stage)} 국면 · {riskLabel(risk)}
           </h2>
-          <p className="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">{regime.summary}</p>
+          <p className="mt-2 break-words text-sm leading-6 text-slate-600">{regime.summary}</p>
 
           <div className="mt-4 hidden rounded-xl border border-slate-200 bg-slate-950 p-4 text-white sm:block">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-300">What this means</p>
@@ -199,7 +199,7 @@ export function MarketRegimeConsole({
                 <GitCompareArrows className="size-4" />
                 변화 해석
               </div>
-              <p className="mt-2 line-clamp-3 text-sm font-semibold leading-5 text-slate-950">{interpretation(regime, previous)}</p>
+              <p className="mt-2 break-words text-sm font-semibold leading-5 text-slate-950">{interpretation(regime, previous)}</p>
             </div>
           </div>
         </div>

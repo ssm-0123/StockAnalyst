@@ -70,7 +70,7 @@ export function SectorCard({
           <ArrowRight className="size-4 shrink-0" />
           <span className="font-semibold">오늘: #{sector.rank}</span>
         </div>
-        <p className="line-clamp-2 text-sm leading-6 text-slate-600">{sector.thesis}</p>
+        <p className="break-words text-sm leading-6 text-slate-600">{sector.thesis}</p>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
