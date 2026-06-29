@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-28T21:43:42.378Z",
-  "analysisDate": "2026-06-29",
+  "generatedAt": "2026-06-29T21:45:13.317Z",
+  "analysisDate": "2026-06-30",
   "staleThresholdDays": 5,
   "mode": "normal",
   "summary": {
@@ -20,11 +20,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 2673000,
-        "previousClose": 2917000,
-        "previousCloseChangeAmount": -244000,
-        "previousCloseChangePct": -8.36,
+        "priceDate": "2026-06-30",
+        "currentPrice": 2628000,
+        "previousClose": 2673000,
+        "previousCloseChangeAmount": -45000,
+        "previousCloseChangePct": -1.68,
         "priceSession": "previous_close",
         "week52High": 2987000,
         "week52Low": 245000,
@@ -36,7 +36,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:31.893Z",
+      "fetchedAt": "2026-06-29T21:45:04.193Z",
       "issues": []
     },
     {
@@ -45,11 +45,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 339500,
-        "previousClose": 358500,
-        "previousCloseChangeAmount": -19000,
-        "previousCloseChangePct": -5.3,
+        "priceDate": "2026-06-30",
+        "currentPrice": 323000,
+        "previousClose": 339500,
+        "previousCloseChangeAmount": -16500,
+        "previousCloseChangePct": -4.86,
         "priceSession": "previous_close",
         "week52High": 374500,
         "week52Low": 59800,
@@ -61,7 +61,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:41.019Z",
+      "fetchedAt": "2026-06-29T21:45:03.839Z",
       "issues": []
     },
     {
@@ -70,11 +70,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 24250,
-        "previousClose": 25650,
-        "previousCloseChangeAmount": -1400,
-        "previousCloseChangePct": -5.46,
+        "priceDate": "2026-06-30",
+        "currentPrice": 25900,
+        "previousClose": 24250,
+        "previousCloseChangeAmount": 1650,
+        "previousCloseChangePct": 6.8,
         "priceSession": "previous_close",
         "week52High": 51000,
         "week52Low": 17572,
@@ -86,7 +86,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:37.489Z",
+      "fetchedAt": "2026-06-29T21:45:08.410Z",
       "issues": []
     },
     {
@@ -95,11 +95,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 98000,
-        "previousClose": 105600,
-        "previousCloseChangeAmount": -7600,
-        "previousCloseChangePct": -7.2,
+        "priceDate": "2026-06-30",
+        "currentPrice": 105500,
+        "previousClose": 98000,
+        "previousCloseChangeAmount": 7500,
+        "previousCloseChangePct": 7.65,
         "priceSession": "previous_close",
         "week52High": 154800,
         "week52Low": 71500,
@@ -111,7 +111,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:36.095Z",
+      "fetchedAt": "2026-06-29T21:45:06.987Z",
       "issues": []
     },
     {
@@ -120,11 +120,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 257500,
-        "previousClose": 273000,
-        "previousCloseChangeAmount": -15500,
-        "previousCloseChangePct": -5.68,
+        "priceDate": "2026-06-30",
+        "currentPrice": 258000,
+        "previousClose": 257500,
+        "previousCloseChangeAmount": 500,
+        "previousCloseChangePct": 0.19,
         "priceSession": "previous_close",
         "week52High": 426000,
         "week52Low": 81400,
@@ -136,7 +136,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:32.247Z",
+      "fetchedAt": "2026-06-29T21:45:11.923Z",
       "issues": []
     },
     {
@@ -145,11 +145,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 169800,
-        "previousClose": 183000,
-        "previousCloseChangeAmount": -13200,
-        "previousCloseChangePct": -7.21,
+        "priceDate": "2026-06-30",
+        "currentPrice": 184900,
+        "previousClose": 169800,
+        "previousCloseChangeAmount": 15100,
+        "previousCloseChangePct": 8.89,
         "priceSession": "previous_close",
         "week52High": 282000,
         "week52Low": 162000,
@@ -161,7 +161,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:36.450Z",
+      "fetchedAt": "2026-06-29T21:45:07.341Z",
       "issues": []
     },
     {
@@ -170,11 +170,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 51800,
-        "previousClose": 52300,
-        "previousCloseChangeAmount": -500,
-        "previousCloseChangePct": -0.96,
+        "priceDate": "2026-06-30",
+        "currentPrice": 51600,
+        "previousClose": 51800,
+        "previousCloseChangeAmount": -200,
+        "previousCloseChangePct": -0.39,
         "priceSession": "previous_close",
         "week52High": 74000,
         "week52Low": 26050,
@@ -186,7 +186,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:32.533Z",
+      "fetchedAt": "2026-06-29T21:45:08.038Z",
       "issues": []
     },
     {
@@ -195,11 +195,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 171695,
-        "previousClose": 182185,
-        "previousCloseChangeAmount": -10490,
-        "previousCloseChangePct": -5.76,
+        "priceDate": "2026-06-30",
+        "currentPrice": 169105,
+        "previousClose": 171695,
+        "previousCloseChangeAmount": -2590,
+        "previousCloseChangePct": -1.51,
         "priceSession": "previous_close",
         "week52High": 188760,
         "week52Low": 35475,
@@ -211,7 +211,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:39.261Z",
+      "fetchedAt": "2026-06-29T21:45:10.179Z",
       "issues": []
     },
     {
@@ -220,11 +220,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 114500,
+        "priceDate": "2026-06-30",
+        "currentPrice": 114530,
         "previousClose": 114500,
-        "previousCloseChangeAmount": 0,
-        "previousCloseChangePct": 0,
+        "previousCloseChangeAmount": 30,
+        "previousCloseChangePct": 0.03,
         "priceSession": "previous_close",
         "week52High": 117000,
         "week52Low": 114400,
@@ -236,7 +236,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:39.969Z",
+      "fetchedAt": "2026-06-29T21:45:10.889Z",
       "issues": []
     },
     {
@@ -245,11 +245,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 124800,
-        "previousClose": 126200,
-        "previousCloseChangeAmount": -1400,
-        "previousCloseChangePct": -1.11,
+        "priceDate": "2026-06-30",
+        "currentPrice": 124300,
+        "previousClose": 124800,
+        "previousCloseChangeAmount": -500,
+        "previousCloseChangePct": -0.4,
         "priceSession": "previous_close",
         "week52High": 143300,
         "week52Low": 21400,
@@ -261,7 +261,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:37.185Z",
+      "fetchedAt": "2026-06-29T21:45:04.507Z",
       "issues": []
     },
     {
@@ -270,11 +270,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 56775,
-        "previousClose": 56765,
-        "previousCloseChangeAmount": 10,
-        "previousCloseChangePct": 0.02,
+        "priceDate": "2026-06-30",
+        "currentPrice": 56765,
+        "previousClose": 56775,
+        "previousCloseChangeAmount": -10,
+        "previousCloseChangePct": -0.02,
         "priceSession": "previous_close",
         "week52High": 56790,
         "week52Low": 55855,
@@ -286,7 +286,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:39.604Z",
+      "fetchedAt": "2026-06-29T21:45:10.492Z",
       "issues": []
     },
     {
@@ -295,11 +295,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 564000,
-        "previousClose": 582000,
-        "previousCloseChangeAmount": -18000,
-        "previousCloseChangePct": -3.09,
+        "priceDate": "2026-06-30",
+        "currentPrice": 592000,
+        "previousClose": 564000,
+        "previousCloseChangeAmount": 28000,
+        "previousCloseChangePct": 4.96,
         "priceSession": "previous_close",
         "week52High": 765000,
         "week52Low": 370000,
@@ -311,7 +311,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:36.797Z",
+      "fetchedAt": "2026-06-29T21:45:07.685Z",
       "issues": []
     },
     {
@@ -320,14 +320,14 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 27890,
-        "previousClose": 28395,
-        "previousCloseChangeAmount": -505,
-        "previousCloseChangePct": -1.78,
+        "priceDate": "2026-06-30",
+        "currentPrice": 28325,
+        "previousClose": 27890,
+        "previousCloseChangeAmount": 435,
+        "previousCloseChangePct": 1.56,
         "priceSession": "previous_close",
         "week52High": 29000,
-        "week52Low": 20685,
+        "week52Low": 20755,
         "currency": "KRW",
         "sourceNote": "가격 출처: Naver Finance 국내 시세"
       },
@@ -336,7 +336,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:38.917Z",
+      "fetchedAt": "2026-06-29T21:45:09.820Z",
       "issues": []
     },
     {
@@ -345,14 +345,14 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 29615,
-        "previousClose": 30510,
-        "previousCloseChangeAmount": -895,
-        "previousCloseChangePct": -2.93,
+        "priceDate": "2026-06-30",
+        "currentPrice": 30105,
+        "previousClose": 29615,
+        "previousCloseChangeAmount": 490,
+        "previousCloseChangePct": 1.65,
         "priceSession": "previous_close",
         "week52High": 31010,
-        "week52Low": 20300,
+        "week52Low": 20350,
         "currency": "KRW",
         "sourceNote": "가격 출처: Naver Finance 국내 시세"
       },
@@ -361,7 +361,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:38.584Z",
+      "fetchedAt": "2026-06-29T21:45:09.478Z",
       "issues": []
     },
     {
@@ -370,11 +370,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 54475,
-        "previousClose": 57100,
-        "previousCloseChangeAmount": -2625,
-        "previousCloseChangePct": -4.6,
+        "priceDate": "2026-06-30",
+        "currentPrice": 54210,
+        "previousClose": 54475,
+        "previousCloseChangeAmount": -265,
+        "previousCloseChangePct": -0.49,
         "priceSession": "previous_close",
         "week52High": 58950,
         "week52Low": 19610,
@@ -386,7 +386,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:38.196Z",
+      "fetchedAt": "2026-06-29T21:45:09.111Z",
       "issues": []
     },
     {
@@ -395,11 +395,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 110870,
-        "previousClose": 110845,
-        "previousCloseChangeAmount": 25,
-        "previousCloseChangePct": 0.02,
+        "priceDate": "2026-06-30",
+        "currentPrice": 110635,
+        "previousClose": 110625,
+        "previousCloseChangeAmount": 10,
+        "previousCloseChangePct": 0.01,
         "priceSession": "previous_close",
         "week52High": 110875,
         "week52Low": 110600,
@@ -411,7 +411,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:40.326Z",
+      "fetchedAt": "2026-06-29T21:45:11.221Z",
       "issues": []
     },
     {
@@ -420,11 +420,11 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 37690,
-        "previousClose": 40415,
-        "previousCloseChangeAmount": -2725,
-        "previousCloseChangePct": -6.74,
+        "priceDate": "2026-06-30",
+        "currentPrice": 40850,
+        "previousClose": 37690,
+        "previousCloseChangeAmount": 3160,
+        "previousCloseChangePct": 8.38,
         "priceSession": "previous_close",
         "week52High": 64630,
         "week52Low": 13745,
@@ -436,7 +436,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:37.849Z",
+      "fetchedAt": "2026-06-29T21:45:08.763Z",
       "issues": []
     },
     {
@@ -445,13 +445,13 @@
       "market": "KR",
       "currency": "KRW",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 104740,
-        "previousClose": 104715,
-        "previousCloseChangeAmount": 25,
-        "previousCloseChangePct": 0.02,
+        "priceDate": "2026-06-30",
+        "currentPrice": 104745,
+        "previousClose": 104740,
+        "previousCloseChangeAmount": 5,
+        "previousCloseChangePct": 0,
         "priceSession": "previous_close",
-        "week52High": 104740,
+        "week52High": 104745,
         "week52Low": 102925,
         "currency": "KRW",
         "sourceNote": "가격 출처: Naver Finance 국내 시세"
@@ -461,7 +461,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:40.656Z",
+      "fetchedAt": "2026-06-29T21:45:11.574Z",
       "issues": []
     },
     {
@@ -470,9 +470,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 202.73,
-        "previousCloseChangePct": 4.82,
+        "priceDate": "2026-06-30",
+        "currentPrice": 206.71,
+        "previousCloseChangePct": 1.96,
         "week52High": 392.58,
         "week52Low": 190.12,
         "currency": "USD",
@@ -483,7 +483,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:33.299Z",
+      "fetchedAt": "2026-06-29T21:45:03.136Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -494,9 +494,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 521.58,
-        "previousCloseChangePct": -2.06,
+        "priceDate": "2026-06-30",
+        "currentPrice": 537.97,
+        "previousCloseChangePct": 3.14,
         "week52High": 562.99,
         "week52Low": 133.5,
         "currency": "USD",
@@ -507,7 +507,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:35.746Z",
+      "fetchedAt": "2026-06-29T21:45:05.588Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -518,9 +518,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 39.16,
-        "previousCloseChangePct": -4.37,
+        "priceDate": "2026-06-30",
+        "currentPrice": 37.8,
+        "previousCloseChangePct": -3.47,
         "week52High": 50.72,
         "week52Low": 9.02,
         "currency": "USD",
@@ -531,7 +531,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:35.396Z",
+      "fetchedAt": "2026-06-29T21:45:05.263Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -542,9 +542,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 365.02,
-        "previousCloseChangePct": -3.67,
+        "priceDate": "2026-06-30",
+        "currentPrice": 372.25,
+        "previousCloseChangePct": 1.98,
         "week52High": 495,
         "week52Low": 262.66,
         "currency": "USD",
@@ -555,7 +555,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:41.378Z",
+      "fetchedAt": "2026-06-29T21:45:12.278Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -566,9 +566,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 264.02,
-        "previousCloseChangePct": -1.74,
+        "priceDate": "2026-06-30",
+        "currentPrice": 259.68,
+        "previousCloseChangePct": -1.64,
         "week52High": 412.7,
         "week52Low": 240.51,
         "currency": "USD",
@@ -579,7 +579,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:31.385Z",
+      "fetchedAt": "2026-06-29T21:45:02.315Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -590,9 +590,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 158.37,
-        "previousCloseChangePct": 5.45,
+        "priceDate": "2026-06-30",
+        "currentPrice": 158.5,
+        "previousCloseChangePct": 0.08,
         "week52High": 276.8,
         "week52Low": 146.32,
         "currency": "USD",
@@ -603,7 +603,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:32.945Z",
+      "fetchedAt": "2026-06-29T21:45:02.787Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -614,9 +614,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 92.57,
-        "previousCloseChangePct": 0.5,
+        "priceDate": "2026-06-30",
+        "currentPrice": 92.97,
+        "previousCloseChangePct": 0.43,
         "week52High": 95.14,
         "week52Low": 48.24,
         "currency": "USD",
@@ -627,7 +627,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:34.351Z",
+      "fetchedAt": "2026-06-29T21:45:06.287Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -638,9 +638,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 402.68,
-        "previousCloseChangePct": -4.09,
+        "priceDate": "2026-06-30",
+        "currentPrice": 408.26,
+        "previousCloseChangePct": 1.39,
         "week52High": 436.74,
         "week52Low": 311.92,
         "currency": "USD",
@@ -651,7 +651,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:31.385Z",
+      "fetchedAt": "2026-06-29T21:45:02.315Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -662,11 +662,11 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 262.8,
-        "previousCloseChangePct": 4.72,
+        "priceDate": "2026-06-30",
+        "currentPrice": 265.28,
+        "previousCloseChangePct": 0.94,
         "week52High": 303.8,
-        "week52Low": 166.22,
+        "week52Low": 167.35,
         "currency": "USD",
         "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
@@ -675,7 +675,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:34.694Z",
+      "fetchedAt": "2026-06-29T21:45:06.643Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -686,9 +686,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 231.74,
-        "previousCloseChangePct": 10.97,
+        "priceDate": "2026-06-30",
+        "currentPrice": 233.62,
+        "previousCloseChangePct": 0.81,
         "week52High": 453.41,
         "week52Low": 185,
         "currency": "USD",
@@ -699,7 +699,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:33.643Z",
+      "fetchedAt": "2026-06-29T21:45:03.488Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -710,9 +710,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 192.53,
-        "previousCloseChangePct": -1.64,
+        "priceDate": "2026-06-30",
+        "currentPrice": 194.93,
+        "previousCloseChangePct": 1.25,
         "week52High": 236.54,
         "week52Low": 151.49,
         "currency": "USD",
@@ -723,7 +723,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:41.623Z",
+      "fetchedAt": "2026-06-29T21:45:12.609Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -734,9 +734,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 50,
-        "previousCloseChangePct": -1.98,
+        "priceDate": "2026-06-30",
+        "currentPrice": 52.86,
+        "previousCloseChangePct": 5.72,
         "week52High": 193.84,
         "week52Low": 44.88,
         "currency": "USD",
@@ -747,7 +747,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:35.046Z",
+      "fetchedAt": "2026-06-29T21:45:04.835Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -758,11 +758,11 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 136.11,
-        "previousCloseChangePct": 1.12,
+        "priceDate": "2026-06-30",
+        "currentPrice": 135.06,
+        "previousCloseChangePct": -0.77,
         "week52High": 138.44,
-        "week52Low": 77.36,
+        "week52Low": 78.33,
         "currency": "USD",
         "sourceNote": "가격 출처: 저장 가격 스냅샷"
       },
@@ -771,7 +771,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:33.996Z",
+      "fetchedAt": "2026-06-29T21:45:05.936Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
@@ -782,9 +782,9 @@
       "market": "US",
       "currency": "USD",
       "snapshot": {
-        "priceDate": "2026-06-29",
-        "currentPrice": 163.49,
-        "previousCloseChangePct": -2.55,
+        "priceDate": "2026-06-30",
+        "currentPrice": 162.9,
+        "previousCloseChangePct": -0.36,
         "week52High": 219.82,
         "week52Low": 132.66,
         "currency": "USD",
@@ -795,7 +795,7 @@
       "staleDays": 0,
       "tradable": true,
       "mode": "normal",
-      "fetchedAt": "2026-06-28T21:43:31.748Z",
+      "fetchedAt": "2026-06-29T21:45:02.608Z",
       "issues": [
         "Yahoo fetch failed: 가격 소스 응답 제한"
       ]
