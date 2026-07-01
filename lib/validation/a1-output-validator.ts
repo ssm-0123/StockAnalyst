@@ -86,6 +86,8 @@ const SIGNAL_TIMINGS = new Set(["early", "constructive", "extended", "exhausted"
 const ENTRY_QUALITIES = new Set(["actionable", "wait-for-pullback", "avoid-chase", "insufficient-data"]);
 const THEME_LIFECYCLE_STAGES = new Set(["emerging", "developing", "confirmed", "crowded", "exhausted", "unclear"]);
 const EXHAUSTED_DAILY_MOVE_PCT = 12;
+const EXTENDED_DAILY_MOVE_PCT = 5;
+const NEAR_52W_HIGH_DISTANCE_PCT = 5;
 
 function isRecord(value: unknown): value is JsonRecord {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -421,6 +423,51 @@ function hasPricePositionText(text: string) {
   ]);
 }
 
+function pctDistanceFrom52wHigh(snapshot: JsonRecord) {
+  if (!hasFiniteNumber(snapshot.currentPrice) || !hasFiniteNumber(snapshot.week52High) || snapshot.week52High <= 0) {
+    return null;
+  }
+
+  return ((snapshot.currentPrice - snapshot.week52High) / snapshot.week52High) * 100;
+}
+
+function hasTrendPersistenceAuditText(text: string) {
+  return textIncludesAny(text, [
+    "trend persistence",
+    "continuation",
+    "relative strength",
+    "volume",
+    "breadth",
+    "peer",
+    "institution",
+    "foreign",
+    "earnings revision",
+    "guidance",
+    "contract",
+    "order",
+    "follow-through",
+    "추세 지속",
+    "상방",
+    "상승 지속",
+    "상대강도",
+    "거래대금",
+    "거래량",
+    "수급",
+    "기관",
+    "외국인",
+    "실적 상향",
+    "가이던스",
+    "수주",
+    "계약",
+    "피어",
+    "동종",
+    "확산",
+    "후속 촉매",
+    "눌림 대기",
+    "추격 제한",
+  ]);
+}
+
 function validateResearchFrame(candidate: JsonRecord, path: string, issues: MarketIntelligenceValidationIssue[]) {
   const actionBias = asString(candidate.actionBias);
   if (!ACTION_BIASES.has(actionBias)) {
@@ -454,6 +501,40 @@ function validateResearchFrame(candidate: JsonRecord, path: string, issues: Mark
     .map(asString)
     .filter(Boolean)
     .join(" ");
+  const auditText = [
+    candidate.rationale,
+    candidate.whyNow,
+    candidate.thesis,
+    candidate.positioningNote,
+    candidate.confidenceReason,
+    candidate.invalidation,
+    ...asArray(candidate.risks).map(asString),
+  ]
+    .map(asString)
+    .filter(Boolean)
+    .join(" ");
+  const snapshot = isRecord(candidate.priceSnapshot) ? candidate.priceSnapshot : {};
+  const changePct = snapshot.previousCloseChangePct;
+  const highDistancePct = pctDistanceFrom52wHigh(snapshot);
+  const isExtendedLeader =
+    (hasFiniteNumber(changePct) && changePct >= EXTENDED_DAILY_MOVE_PCT) ||
+    (highDistancePct !== null && highDistancePct >= -NEAR_52W_HIGH_DISTANCE_PCT);
+
+  if (
+    isExtendedLeader &&
+    (actionBias === "buy" || actionBias === "reduce" || actionBias === "exit" || entryQuality === "avoid-chase" || signalTiming === "exhausted") &&
+    !hasTrendPersistenceAuditText(auditText)
+  ) {
+    issues.push(
+      issue(
+        "missing-trend-persistence-audit",
+        "warn",
+        path,
+        "Extended or 52-week-high leaders need a trend-persistence audit before buy/reduce/exit/avoid-chase conclusions.",
+      ),
+    );
+  }
+
   if ((candidate.actionBias === "buy" || candidate.isNew === true) && !hasPricePositionText(decisionText)) {
     issues.push(
       issue(
